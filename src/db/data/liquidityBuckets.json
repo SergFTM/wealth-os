@@ -1,0 +1,14 @@
+[
+  {"id":"lq-bucket-001","clientId":"client-001","bucket":"today","inflows":0,"outflows":0,"net":7879000,"asOf":"2026-01-31T00:00:00Z","status":"ok","createdAt":"2026-01-31T00:00:00Z","updatedAt":"2026-01-31T00:00:00Z"},
+  {"id":"lq-bucket-002","clientId":"client-001","bucket":"7d","inflows":165000,"outflows":205000,"net":-40000,"asOf":"2026-01-31T00:00:00Z","status":"ok","createdAt":"2026-01-31T00:00:00Z","updatedAt":"2026-01-31T00:00:00Z"},
+  {"id":"lq-bucket-003","clientId":"client-001","bucket":"30d","inflows":285000,"outflows":885000,"net":-600000,"asOf":"2026-01-31T00:00:00Z","status":"warning","createdAt":"2026-01-31T00:00:00Z","updatedAt":"2026-01-31T00:00:00Z"},
+  {"id":"lq-bucket-004","clientId":"client-001","bucket":"90d","inflows":785000,"outflows":1685000,"net":-900000,"asOf":"2026-01-31T00:00:00Z","status":"warning","createdAt":"2026-01-31T00:00:00Z","updatedAt":"2026-01-31T00:00:00Z"},
+  {"id":"lq-bucket-005","clientId":"client-002","bucket":"today","inflows":0,"outflows":0,"net":6622000,"asOf":"2026-01-31T00:00:00Z","status":"ok","createdAt":"2026-01-31T00:00:00Z","updatedAt":"2026-01-31T00:00:00Z"},
+  {"id":"lq-bucket-006","clientId":"client-002","bucket":"7d","inflows":0,"outflows":310000,"net":-310000,"asOf":"2026-01-31T00:00:00Z","status":"warning","createdAt":"2026-01-31T00:00:00Z","updatedAt":"2026-01-31T00:00:00Z"},
+  {"id":"lq-bucket-007","clientId":"client-002","bucket":"30d","inflows":500000,"outflows":560000,"net":-60000,"asOf":"2026-01-31T00:00:00Z","status":"ok","createdAt":"2026-01-31T00:00:00Z","updatedAt":"2026-01-31T00:00:00Z"},
+  {"id":"lq-bucket-008","clientId":"client-002","bucket":"90d","inflows":1200000,"outflows":1100000,"net":100000,"asOf":"2026-01-31T00:00:00Z","status":"ok","createdAt":"2026-01-31T00:00:00Z","updatedAt":"2026-01-31T00:00:00Z"},
+  {"id":"lq-bucket-009","clientId":"client-003","bucket":"today","inflows":0,"outflows":0,"net":2383000,"asOf":"2026-01-31T00:00:00Z","status":"warning","createdAt":"2026-01-31T00:00:00Z","updatedAt":"2026-01-31T00:00:00Z"},
+  {"id":"lq-bucket-010","clientId":"client-003","bucket":"7d","inflows":0,"outflows":16500,"net":-16500,"asOf":"2026-01-31T00:00:00Z","status":"ok","createdAt":"2026-01-31T00:00:00Z","updatedAt":"2026-01-31T00:00:00Z"},
+  {"id":"lq-bucket-011","clientId":"client-003","bucket":"30d","inflows":350000,"outflows":416500,"net":-66500,"asOf":"2026-01-31T00:00:00Z","status":"warning","createdAt":"2026-01-31T00:00:00Z","updatedAt":"2026-01-31T00:00:00Z"},
+  {"id":"lq-bucket-012","clientId":"client-003","bucket":"90d","inflows":600000,"outflows":520000,"net":80000,"asOf":"2026-01-31T00:00:00Z","status":"ok","createdAt":"2026-01-31T00:00:00Z","updatedAt":"2026-01-31T00:00:00Z"}
+]

@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PerformanceView",
+  "type": "object",
+  "required": ["id", "clientId", "portfolioId", "name", "method", "timeframe", "status"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "clientId": { "type": "string" },
+    "portfolioId": { "type": "string" },
+    "name": { "type": "string", "minLength": 1 },
+    "method": { "type": "string", "enum": ["TWR", "MWR"] },
+    "timeframe": { "type": "string", "enum": ["1M", "3M", "6M", "YTD", "1Y", "3Y", "ALL"] },
+    "benchmarkId": { "type": ["string", "null"] },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "assetClass": { "type": "array", "items": { "type": "string" } },
+        "geography": { "type": "array", "items": { "type": "string" } },
+        "liquidity": { "type": "array", "items": { "type": "string" } },
+        "strategy": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "status": { "type": "string", "enum": ["draft", "active", "archived"] },
+    "isShared": { "type": "boolean", "default": false },
+    "lastGeneratedAt": { "type": ["string", "null"], "format": "date-time" },
+    "notes": { "type": ["string", "null"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

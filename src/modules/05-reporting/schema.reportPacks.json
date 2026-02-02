@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ReportPack",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "scopeType": { "type": "string", "enum": ["household", "entity", "portfolio", "all"] },
+    "scopeId": { "type": ["string", "null"] },
+    "templateId": { "type": "string" },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "in_review", "approved", "published", "archived"] },
+    "asOf": { "type": "string", "format": "date" },
+    "owner": { "type": "string" },
+    "isClientSafePublished": { "type": "boolean", "default": false },
+    "distributionListId": { "type": ["string", "null"] },
+    "currentVersion": { "type": "integer", "default": 1 },
+    "notes": { "type": "string" },
+    "slaDeadline": { "type": ["string", "null"], "format": "date-time" },
+    "approvedBy": { "type": ["string", "null"] },
+    "approvedAt": { "type": ["string", "null"], "format": "date-time" },
+    "publishedAt": { "type": ["string", "null"], "format": "date-time" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "templateId", "name", "status", "asOf", "owner"]
+}

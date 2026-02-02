@@ -1,0 +1,17 @@
+[
+  { "id": "ips1", "client": "Aurora Family", "rule": "Максимальная аллокация в акции 60%", "current": "65%", "threshold": "60%", "severity": "warning", "detectedAt": "2026-01-28T08:00:00Z" },
+  { "id": "ips2", "client": "North Star Trust", "rule": "Single name concentration < 5%", "current": "7.2%", "threshold": "5%", "severity": "critical", "detectedAt": "2026-01-28T07:30:00Z" },
+  { "id": "ips3", "client": "Limassol Holdings", "rule": "Минимум 10% в ликвидных активах", "current": "8.5%", "threshold": "10%", "severity": "warning", "detectedAt": "2026-01-27T16:00:00Z" },
+  { "id": "ips4", "client": "Vega Partners", "rule": "Запрет на tobacco stocks", "current": "Holding PM", "threshold": "0%", "severity": "critical", "detectedAt": "2026-01-28T06:00:00Z" },
+  { "id": "ips5", "client": "Cedar Legacy", "rule": "Duration портфеля < 7 лет", "current": "7.8 лет", "threshold": "7 лет", "severity": "warning", "detectedAt": "2026-01-26T14:00:00Z" },
+  { "id": "ips6", "client": "Orion Family", "rule": "Emerging markets < 15%", "current": "18%", "threshold": "15%", "severity": "warning", "detectedAt": "2026-01-28T05:00:00Z" },
+  { "id": "ips7", "client": "Aurora Family", "rule": "High yield bonds < 10%", "current": "12%", "threshold": "10%", "severity": "warning", "detectedAt": "2026-01-25T10:00:00Z" },
+  { "id": "ips8", "client": "North Star Trust", "rule": "Minimum ESG score > 70", "current": "65", "threshold": "70", "severity": "warning", "detectedAt": "2026-01-27T12:00:00Z" },
+  { "id": "ips9", "client": "Limassol Holdings", "rule": "Real estate < 20%", "current": "22%", "threshold": "20%", "severity": "info", "detectedAt": "2026-01-24T09:00:00Z" },
+  { "id": "ips10", "client": "Vega Partners", "rule": "Leverage ratio < 1.5x", "current": "1.7x", "threshold": "1.5x", "severity": "critical", "detectedAt": "2026-01-28T04:00:00Z" },
+  { "id": "ips11", "client": "Cedar Legacy", "rule": "Volatility target < 12%", "current": "14%", "threshold": "12%", "severity": "warning", "detectedAt": "2026-01-27T08:00:00Z" },
+  { "id": "ips12", "client": "Orion Family", "rule": "Crypto exposure < 3%", "current": "4.5%", "threshold": "3%", "severity": "warning", "detectedAt": "2026-01-26T11:00:00Z" },
+  { "id": "ips13", "client": "Aurora Family", "rule": "Sector concentration < 25%", "current": "28%", "threshold": "25%", "severity": "warning", "detectedAt": "2026-01-23T15:00:00Z" },
+  { "id": "ips14", "client": "North Star Trust", "rule": "Credit quality BBB+", "current": "BBB-", "threshold": "BBB+", "severity": "critical", "detectedAt": "2026-01-28T03:00:00Z" },
+  { "id": "ips15", "client": "Limassol Holdings", "rule": "Currency hedge > 80%", "current": "72%", "threshold": "80%", "severity": "warning", "detectedAt": "2026-01-22T10:00:00Z" }
+]

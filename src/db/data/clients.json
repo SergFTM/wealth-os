@@ -1,0 +1,56 @@
+[
+  {
+    "id": "c1",
+    "name": "Aurora Family",
+    "type": "family",
+    "aum": 125000000,
+    "status": "active",
+    "createdAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "c2",
+    "name": "Limassol Holdings",
+    "type": "corporate",
+    "aum": 85000000,
+    "status": "active",
+    "createdAt": "2024-02-20T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "c3",
+    "name": "North Star Trust",
+    "type": "trust",
+    "aum": 45000000,
+    "status": "active",
+    "createdAt": "2024-03-10T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "c4",
+    "name": "Vega Partners",
+    "type": "partnership",
+    "aum": 67000000,
+    "status": "active",
+    "createdAt": "2024-04-05T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "c5",
+    "name": "Orion Family",
+    "type": "family",
+    "aum": 75000000,
+    "status": "active",
+    "createdAt": "2024-05-01T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "c6",
+    "name": "Cedar Legacy",
+    "type": "trust",
+    "aum": 90500000,
+    "status": "active",
+    "createdAt": "2024-06-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  }
+]

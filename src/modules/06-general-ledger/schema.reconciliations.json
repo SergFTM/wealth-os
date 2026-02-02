@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GL Reconciliation",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "type": "string", "enum": ["bank", "custodian"] },
+    "entityId": { "type": "string" },
+    "accountId": { "type": "string" },
+    "periodId": { "type": "string" },
+    "status": { "type": "string", "enum": ["open", "in_progress", "completed"] },
+    "openItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "txId": { "type": "string" },
+          "amount": { "type": "number" },
+          "date": { "type": "string" },
+          "description": { "type": "string" },
+          "status": { "type": "string", "enum": ["open", "matched", "issue"] }
+        }
+      }
+    },
+    "matchedCount": { "type": "number", "default": 0 },
+    "totalItems": { "type": "number", "default": 0 },
+    "sourceRef": { "type": ["string", "null"], "description": "Link to reconciliation module" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "type", "entityId", "accountId", "periodId", "status"]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LiquidityBucket",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "bucket": { "type": "string", "enum": ["today", "7d", "30d", "90d"] },
+    "inflows": { "type": "number" },
+    "outflows": { "type": "number" },
+    "net": { "type": "number" },
+    "asOf": { "type": "string", "format": "date-time" },
+    "status": { "type": "string", "enum": ["ok", "warning", "critical"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "bucket", "inflows", "outflows", "net", "asOf"]
+}

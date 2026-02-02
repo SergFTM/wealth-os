@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AttributionRow",
+  "type": "object",
+  "required": ["id", "viewId", "period", "dimension", "segment"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "viewId": { "type": "string" },
+    "period": { "type": "string", "format": "date" },
+    "dimension": { "type": "string", "enum": ["assetClass", "strategy", "geography", "liquidity", "advisor"] },
+    "segment": { "type": "string" },
+    "weightAvg": { "type": ["number", "null"] },
+    "returnPct": { "type": ["number", "null"] },
+    "contributionPct": { "type": ["number", "null"] },
+    "flowImpactPct": { "type": ["number", "null"] },
+    "feesImpactPct": { "type": ["number", "null"] },
+    "status": { "type": "string", "enum": ["calculated", "estimated", "pending"] },
+    "notes": { "type": ["string", "null"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

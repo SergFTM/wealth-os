@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GL Account",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "entityId": { "type": ["string", "null"], "description": "null = global account" },
+    "code": { "type": "string", "description": "Account code e.g. 1010" },
+    "name": { "type": "string" },
+    "type": { "type": "string", "enum": ["asset", "liability", "equity", "income", "expense"] },
+    "parentId": { "type": ["string", "null"] },
+    "functionalCurrency": { "type": "string", "default": "USD" },
+    "isActive": { "type": "boolean", "default": true },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "code", "name", "type"]
+}

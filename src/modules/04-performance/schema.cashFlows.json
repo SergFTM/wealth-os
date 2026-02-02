@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CashFlow",
+  "type": "object",
+  "required": ["id", "portfolioId", "date", "type", "amount", "currency"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "portfolioId": { "type": "string" },
+    "clientId": { "type": ["string", "null"] },
+    "date": { "type": "string", "format": "date" },
+    "type": { "type": "string", "enum": ["inflow", "outflow", "dividend", "fee"] },
+    "amount": { "type": "number" },
+    "currency": { "type": "string" },
+    "sourceType": { "type": ["string", "null"], "enum": ["custodian", "gl", "manual", null] },
+    "sourceRef": { "type": ["string", "null"] },
+    "notes": { "type": ["string", "null"] },
+    "documentId": { "type": ["string", "null"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

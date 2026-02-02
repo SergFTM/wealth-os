@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PCFund",
+  "type": "object",
+  "required": ["id", "clientId", "name", "strategy", "vintageYear", "currency", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string" },
+    "strategy": { 
+      "type": "string",
+      "enum": ["pe", "vc", "real_estate", "private_credit", "infrastructure", "secondaries", "fund_of_funds"]
+    },
+    "vintageYear": { "type": "integer" },
+    "manager": { "type": "string" },
+    "currency": { "type": "string", "default": "USD" },
+    "status": { 
+      "type": "string",
+      "enum": ["active", "fully_invested", "harvesting", "liquidated"]
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "notes": { "type": ["string", "null"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

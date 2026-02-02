@@ -1,0 +1,8 @@
+[
+  { "id": "c1", "name": "Aurora Family", "type": "Family Office", "totalNetWorth": 125000000, "entities": 3, "accounts": 5, "status": "active" },
+  { "id": "c2", "name": "Limassol Holdings", "type": "Holding Company", "totalNetWorth": 89000000, "entities": 2, "accounts": 3, "status": "active" },
+  { "id": "c3", "name": "North Star Trust", "type": "Trust", "totalNetWorth": 67000000, "entities": 2, "accounts": 3, "status": "active" },
+  { "id": "c4", "name": "Vega Partners", "type": "Partnership", "totalNetWorth": 45000000, "entities": 2, "accounts": 3, "status": "active" },
+  { "id": "c5", "name": "Orion Family", "type": "Family Office", "totalNetWorth": 156000000, "entities": 2, "accounts": 2, "status": "active" },
+  { "id": "c6", "name": "Cedar Legacy", "type": "Trust", "totalNetWorth": 78000000, "entities": 1, "accounts": 2, "status": "active" }
+]

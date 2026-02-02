@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PCCapitalCall",
+  "type": "object",
+  "required": ["id", "fundId", "commitmentId", "entityId", "dueDate", "amount", "currency", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "fundId": { "type": "string" },
+    "commitmentId": { "type": "string" },
+    "entityId": { "type": "string" },
+    "dueDate": { "type": "string", "format": "date" },
+    "amount": { "type": "number" },
+    "currency": { "type": "string", "default": "USD" },
+    "status": { 
+      "type": "string",
+      "enum": ["planned", "sent", "paid", "overdue"]
+    },
+    "paidDate": { "type": ["string", "null"], "format": "date" },
+    "docIds": { "type": "array", "items": { "type": "string" } },
+    "sourceRef": { "type": ["string", "null"] },
+    "notes": { "type": ["string", "null"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

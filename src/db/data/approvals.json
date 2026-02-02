@@ -1,0 +1,7 @@
+[
+  {"id": "ap1", "taskId": "t7", "clientId": "c1", "type": "wire_transfer", "amount": 500000, "requestedBy": "Алексей П.", "approvers": ["Мария К.", "Иван С."], "status": "pending", "dueDate": "2026-01-29", "createdAt": "2026-01-27T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
+  {"id": "ap2", "taskId": "t1", "clientId": "c1", "type": "report_release", "amount": 0, "requestedBy": "Дмитрий Н.", "approvers": ["Алексей П."], "status": "approved", "dueDate": "2026-02-01", "createdAt": "2026-01-20T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
+  {"id": "ap3", "taskId": "t4", "clientId": "c4", "type": "rebalance", "amount": 0, "requestedBy": "Елена В.", "approvers": ["Мария К."], "status": "pending", "dueDate": "2026-02-03", "createdAt": "2026-01-25T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
+  {"id": "ap4", "taskId": "t8", "clientId": "c2", "type": "capital_call", "amount": 750000, "requestedBy": "Иван С.", "approvers": ["Алексей П.", "Мария К."], "status": "in_review", "dueDate": "2026-02-10", "createdAt": "2026-01-24T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
+  {"id": "ap5", "taskId": "t2", "clientId": "c2", "type": "kyc_update", "amount": 0, "requestedBy": "Мария К.", "approvers": ["Compliance"], "status": "pending", "dueDate": "2026-01-30", "createdAt": "2026-01-22T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"}
+]

@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DataFeed",
+  "description": "Data source configuration for custodian, bank, or advisor feeds",
+  "type": "object",
+  "required": ["id", "providerName", "type", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "providerName": { "type": "string", "description": "Name of the data provider" },
+    "type": { 
+      "type": "string", 
+      "enum": ["custodian", "bank", "advisor", "manual"],
+      "description": "Type of data source"
+    },
+    "coverage": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["positions", "transactions", "cash"] },
+      "description": "What data this feed provides"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["ok", "stale", "error"],
+      "description": "Current health status of the feed"
+    },
+    "lastSyncAt": { "type": "string", "format": "date-time" },
+    "authStatus": { 
+      "type": "string", 
+      "enum": ["active", "expired", "pending", "revoked"],
+      "description": "Authentication status (internal only)"
+    },
+    "region": { "type": "string", "description": "Geographic region (internal only)" },
+    "clientId": { "type": "string", "description": "Optional client filter" },
+    "connectionConfig": { "type": "object", "description": "Connection configuration (internal)" },
+    "notes": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

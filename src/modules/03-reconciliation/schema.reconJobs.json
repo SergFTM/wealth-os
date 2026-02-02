@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ReconJob",
+  "description": "Reconciliation job run record",
+  "type": "object",
+  "required": ["id", "feedId", "asOf", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string", "description": "Client filter for the job" },
+    "feedId": { "type": "string", "description": "Reference to the data feed" },
+    "asOf": { "type": "string", "format": "date", "description": "As-of date for reconciliation" },
+    "scope": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["positions", "transactions", "cash"] },
+      "description": "What was reconciled"
+    },
+    "matchPct": { "type": "number", "minimum": 0, "maximum": 100, "description": "Match percentage" },
+    "totalRecords": { "type": "integer", "description": "Total records processed" },
+    "matchedRecords": { "type": "integer", "description": "Number of matched records" },
+    "breaksCount": { "type": "integer", "description": "Number of breaks found" },
+    "status": {
+      "type": "string",
+      "enum": ["running", "completed", "failed"],
+      "description": "Job status"
+    },
+    "startedAt": { "type": "string", "format": "date-time" },
+    "finishedAt": { "type": "string", "format": "date-time" },
+    "triggeredBy": { "type": "string", "description": "Who triggered the job" },
+    "linkedBreakId": { "type": "string", "description": "If re-run from a break" },
+    "errorMessage": { "type": "string" },
+    "notes": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

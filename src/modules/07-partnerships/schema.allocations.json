@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Allocation",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "partnershipId": { "type": "string" },
+    "dimension": { "type": "string", "enum": ["assetClass", "strategy", "geo", "sector"] },
+    "segment": { "type": "string" },
+    "value": { "type": "number" },
+    "currency": { "type": "string" },
+    "weight": { "type": "number", "minimum": 0, "maximum": 100 },
+    "asOf": { "type": "string", "format": "date" }
+  },
+  "required": ["id", "partnershipId", "dimension", "segment", "value", "currency", "weight", "asOf"]
+}

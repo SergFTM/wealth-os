@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Journal Entry",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "entityId": { "type": "string" },
+    "clientId": { "type": "string" },
+    "date": { "type": "string", "format": "date" },
+    "periodId": { "type": "string" },
+    "memo": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "pending_approval", "posted", "rejected"] },
+    "totalDebit": { "type": "number" },
+    "totalCredit": { "type": "number" },
+    "currency": { "type": "string", "default": "USD" },
+    "createdBy": { "type": "string" },
+    "postedBy": { "type": ["string", "null"] },
+    "postedAt": { "type": ["string", "null"], "format": "date-time" },
+    "sourceRefs": { "type": "array", "items": { "type": "string" } },
+    "docIds": { "type": "array", "items": { "type": "string" } },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "entityId", "date", "periodId", "status"]
+}

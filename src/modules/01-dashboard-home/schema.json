@@ -1,0 +1,90 @@
+{
+  "id": "01",
+  "slug": "dashboard-home",
+  "title": { "ru": "Домой", "en": "Home", "uk": "Домів" },
+  "queues": {
+    "tasks": {
+      "columns": [
+        { "key": "title", "header": "Название", "type": "text" },
+        { "key": "clientId", "header": "Клиент", "type": "relation" },
+        { "key": "assignee", "header": "Ответственный", "type": "text" },
+        { "key": "status", "header": "Статус", "type": "status" },
+        { "key": "dueDate", "header": "SLA срок", "type": "date" },
+        { "key": "updatedAt", "header": "Обновлено", "type": "datetime" }
+      ]
+    },
+    "approvals": {
+      "columns": [
+        { "key": "title", "header": "Объект", "type": "text" },
+        { "key": "type", "header": "Тип", "type": "badge" },
+        { "key": "clientId", "header": "Клиент", "type": "relation" },
+        { "key": "requestedBy", "header": "Инициатор", "type": "text" },
+        { "key": "status", "header": "Статус", "type": "status" },
+        { "key": "dueDate", "header": "Срок", "type": "date" }
+      ]
+    },
+    "riskAlerts": {
+      "columns": [
+        { "key": "title", "header": "Алерт", "type": "text" },
+        { "key": "severity", "header": "Severity", "type": "badge" },
+        { "key": "clientId", "header": "Клиент", "type": "relation" },
+        { "key": "object", "header": "Объект", "type": "text" },
+        { "key": "status", "header": "Статус", "type": "status" },
+        { "key": "createdAt", "header": "Время", "type": "datetime" }
+      ]
+    },
+    "dataQuality": {
+      "columns": [
+        { "key": "issue", "header": "Проблема", "type": "text" },
+        { "key": "provider", "header": "Коннектор", "type": "text" },
+        { "key": "clientId", "header": "Клиент", "type": "relation" },
+        { "key": "severity", "header": "Severity", "type": "badge" },
+        { "key": "status", "header": "Статус", "type": "status" },
+        { "key": "lastSync", "header": "Обнаружено", "type": "datetime" }
+      ]
+    },
+    "messages": {
+      "columns": [
+        { "key": "subject", "header": "Тема", "type": "text" },
+        { "key": "clientId", "header": "Клиент", "type": "relation" },
+        { "key": "status", "header": "Статус", "type": "status" },
+        { "key": "sla", "header": "SLA", "type": "text" },
+        { "key": "lastMessageAt", "header": "Последнее", "type": "datetime" }
+      ]
+    }
+  },
+  "createForms": {
+    "task": {
+      "fields": [
+        { "key": "title", "label": "Название", "type": "text", "required": true },
+        { "key": "description", "label": "Описание", "type": "textarea" },
+        { "key": "clientId", "label": "Клиент", "type": "select", "collection": "clients", "required": true },
+        { "key": "priority", "label": "Приоритет", "type": "select", "options": ["low", "medium", "high", "critical"], "required": true },
+        { "key": "dueDate", "label": "Срок", "type": "date", "required": true },
+        { "key": "assignee", "label": "Ответственный", "type": "text" }
+      ]
+    },
+    "thread": {
+      "fields": [
+        { "key": "subject", "label": "Тема", "type": "text", "required": true },
+        { "key": "clientId", "label": "Клиент", "type": "select", "collection": "clients", "required": true },
+        { "key": "message", "label": "Сообщение", "type": "textarea", "required": true }
+      ]
+    },
+    "document": {
+      "fields": [
+        { "key": "title", "label": "Название", "type": "text", "required": true },
+        { "key": "type", "label": "Тип", "type": "select", "options": ["report", "legal", "tax", "ips", "banking"], "required": true },
+        { "key": "clientId", "label": "Клиент", "type": "select", "collection": "clients" }
+      ]
+    },
+    "invoice": {
+      "fields": [
+        { "key": "type", "label": "Тип", "type": "select", "options": ["management_fee", "performance_fee", "advisory_fee", "admin_fee"], "required": true },
+        { "key": "amount", "label": "Сумма", "type": "number", "required": true },
+        { "key": "clientId", "label": "Клиент", "type": "select", "collection": "clients", "required": true },
+        { "key": "dueDate", "label": "Срок оплаты", "type": "date", "required": true }
+      ]
+    }
+  }
+}

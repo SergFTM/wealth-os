@@ -1,0 +1,60 @@
+{
+  "currentUser": {
+    "name": "Alex Advisor",
+    "role": "ADVISOR",
+    "avatar": "https://i.pravatar.cc/150?u=alex"
+  },
+  "clients": [
+    { "id": "c1", "name": "Aurora Family", "type": "Family" },
+    { "id": "c2", "name": "Limassol Holdings", "type": "Holding" },
+    { "id": "c3", "name": "North Star Trust", "type": "Trust" },
+    { "id": "c4", "name": "Vega Partners", "type": "Partnership" },
+    { "id": "c5", "name": "Orion Family", "type": "Family" },
+    { "id": "c6", "name": "Cedar Legacy", "type": "Foundation" }
+  ],
+  "netWorth": [
+    {
+      "id": "1",
+      "entity": "Aurora Trust 1",
+      "currency": "USD",
+      "assets": 52000000,
+      "liabilities": 2000000,
+      "nav": 50000000,
+      "ytd": 8.5
+    },
+    {
+      "id": "2",
+      "entity": "Limassol Corp",
+      "currency": "EUR",
+      "assets": 12500000,
+      "liabilities": 500000,
+      "nav": 12000000,
+      "ytd": 4.2
+    },
+    {
+      "id": "3",
+      "entity": "North Star Fund",
+      "currency": "USD",
+      "assets": 98000000,
+      "liabilities": 0,
+      "nav": 98000000,
+      "ytd": 12.1
+    }
+  ],
+  "kpis": [
+    {
+      "label": "Total AUM",
+      "value": "$160.0M",
+      "change": "+5.2%",
+      "status": "ok"
+    },
+    {
+      "label": "Open Tasks",
+      "value": "12",
+      "change": "3 critical",
+      "status": "warning"
+    },
+    { "label": "Compliance", "value": "98%", "change": "-2%", "status": "ok" },
+    { "label": "YTD Perf", "value": "+8.4%", "change": "+1.2%", "status": "ok" }
+  ]
+}

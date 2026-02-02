@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Document",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string" },
+    "category": { 
+      "type": "string", 
+      "enum": ["invoice", "statement", "agreement", "quarterly_report", "kyc", "tax", "misc", "contract", "bank_statement", "payment_confirmation"] 
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "fileType": { "type": "string" },
+    "fileSize": { "type": "number" },
+    "filePath": { "type": "string" },
+    "currentVersionId": { "type": ["string", "null"] },
+    "confidentiality": { "type": "string", "enum": ["internal", "client_safe"] },
+    "linkedCount": { "type": "number", "default": 0 },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "createdBy": { "type": "string" },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "status": { "type": "string", "enum": ["active", "deleted", "archived"] }
+  },
+  "required": ["id", "clientId", "name", "category", "fileType", "createdAt", "createdBy", "status"]
+}

@@ -1,0 +1,20 @@
+[
+  { "id": "a1", "name": "Инвестиционный счет Schwab", "client": "Aurora Family", "entity": "Aurora Holdings LLC", "type": "brokerage", "custodian": "Charles Schwab", "balance": 15000000, "currency": "USD" },
+  { "id": "a2", "name": "Сберегательный счет", "client": "Aurora Family", "entity": "Aurora Holdings LLC", "type": "savings", "custodian": "JP Morgan", "balance": 2500000, "currency": "USD" },
+  { "id": "a3", "name": "Основной счет Fidelity", "client": "Aurora Family", "entity": "Aurora Trust", "type": "brokerage", "custodian": "Fidelity", "balance": 28000000, "currency": "USD" },
+  { "id": "a4", "name": "Европейский счет", "client": "Aurora Family", "entity": "Aurora Trust", "type": "brokerage", "custodian": "UBS", "balance": 8500000, "currency": "EUR" },
+  { "id": "a5", "name": "Криптовалютный счет", "client": "Aurora Family", "entity": "Aurora Digital LLC", "type": "crypto", "custodian": "Coinbase", "balance": 1200000, "currency": "USD" },
+  { "id": "a6", "name": "Инвестиционный IB", "client": "Limassol Holdings", "entity": "Limassol Investments", "type": "brokerage", "custodian": "Interactive Brokers", "balance": 35000000, "currency": "USD" },
+  { "id": "a7", "name": "Операционный счет", "client": "Limassol Holdings", "entity": "Limassol Investments", "type": "checking", "custodian": "Goldman Sachs", "balance": 4500000, "currency": "USD" },
+  { "id": "a8", "name": "Real Estate Fund", "client": "Limassol Holdings", "entity": "Limassol RE LLC", "type": "alternative", "custodian": "Northern Trust", "balance": 12000000, "currency": "USD" },
+  { "id": "a9", "name": "Trust Account", "client": "North Star Trust", "entity": "North Star Irrevocable", "type": "trust", "custodian": "BNY Mellon", "balance": 22000000, "currency": "USD" },
+  { "id": "a10", "name": "Charitable Account", "client": "North Star Trust", "entity": "North Star Foundation", "type": "foundation", "custodian": "Vanguard", "balance": 8500000, "currency": "USD" },
+  { "id": "a11", "name": "Fixed Income", "client": "North Star Trust", "entity": "North Star Irrevocable", "type": "brokerage", "custodian": "Morgan Stanley", "balance": 15000000, "currency": "USD" },
+  { "id": "a12", "name": "Partnership Account", "client": "Vega Partners", "entity": "Vega LP", "type": "partnership", "custodian": "State Street", "balance": 18000000, "currency": "USD" },
+  { "id": "a13", "name": "GP Account", "client": "Vega Partners", "entity": "Vega GP LLC", "type": "brokerage", "custodian": "Pershing", "balance": 5500000, "currency": "USD" },
+  { "id": "a14", "name": "Operating Account", "client": "Vega Partners", "entity": "Vega GP LLC", "type": "checking", "custodian": "Bank of America", "balance": 1200000, "currency": "USD" },
+  { "id": "a15", "name": "Dynasty Trust", "client": "Cedar Legacy", "entity": "Cedar Dynasty Trust", "type": "trust", "custodian": "Northern Trust", "balance": 45000000, "currency": "USD" },
+  { "id": "a16", "name": "Generation Skip Trust", "client": "Cedar Legacy", "entity": "Cedar GST", "type": "trust", "custodian": "US Trust", "balance": 18000000, "currency": "USD" },
+  { "id": "a17", "name": "Family Office Account", "client": "Orion Family", "entity": "Orion FO LLC", "type": "brokerage", "custodian": "Goldman Sachs", "balance": 65000000, "currency": "USD" },
+  { "id": "a18", "name": "Alternative Investments", "client": "Orion Family", "entity": "Orion Alternatives LP", "type": "alternative", "custodian": "Citadel", "balance": 42000000, "currency": "USD" }
+]

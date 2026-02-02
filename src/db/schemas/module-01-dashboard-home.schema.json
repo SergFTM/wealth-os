@@ -1,0 +1,52 @@
+{
+  "id": "01",
+  "slug": "dashboard-home",
+  "title": { "ru": "Домой", "en": "Home", "uk": "Домів" },
+  "description": { "ru": "Обзор состояния и ключевых показателей", "en": "Overview of status and key metrics", "uk": "Огляд стану та ключових показників" },
+  "collections": ["tasks", "alerts", "approvals"],
+  "kpis": [
+    { "key": "netWorth", "title": "Единый капитал", "format": "currency", "collection": "portfolios", "aggregation": "sum", "field": "value" },
+    { "key": "openTasks", "title": "Открытые задачи", "format": "number", "collection": "tasks", "aggregation": "count", "filter": { "status": ["pending", "in_progress"] } },
+    { "key": "pendingApprovals", "title": "Ожидают согласования", "format": "number", "collection": "approvals", "aggregation": "count", "filter": { "status": "pending" } },
+    { "key": "alerts", "title": "Алерты", "format": "number", "collection": "alerts", "aggregation": "count", "filter": { "status": "open" } }
+  ],
+  "listColumns": [
+    { "key": "title", "header": "Задача", "type": "text" },
+    { "key": "clientId", "header": "Клиент", "type": "relation", "relation": "clients" },
+    { "key": "priority", "header": "Приоритет", "type": "badge" },
+    { "key": "status", "header": "Статус", "type": "status" },
+    { "key": "dueDate", "header": "Срок", "type": "date" }
+  ],
+  "filters": [
+    { "key": "status", "label": "Статус", "type": "select", "options": ["pending", "in_progress", "completed"] },
+    { "key": "priority", "label": "Приоритет", "type": "select", "options": ["low", "medium", "high", "critical"] }
+  ],
+  "createFields": [
+    { "key": "title", "label": "Название", "type": "text", "required": true },
+    { "key": "description", "label": "Описание", "type": "textarea" },
+    { "key": "clientId", "label": "Клиент", "type": "select", "collection": "clients", "required": true },
+    { "key": "priority", "label": "Приоритет", "type": "select", "options": ["low", "medium", "high", "critical"], "required": true },
+    { "key": "dueDate", "label": "Срок", "type": "date", "required": true },
+    { "key": "assignee", "label": "Исполнитель", "type": "text" }
+  ],
+  "help": {
+    "title": "Главная панель",
+    "description": "Централизованный обзор всех ключевых показателей и задач Family Office.",
+    "features": [
+      "Обзор единого капитала по всем клиентам",
+      "Список открытых задач с приоритетами",
+      "Уведомления о критических алертах",
+      "Быстрый доступ к согласованиям"
+    ],
+    "scenarios": [
+      "Утренний обзор статуса всех клиентов",
+      "Проверка срочных задач и алертов",
+      "Быстрое создание новой задачи"
+    ],
+    "dataSources": [
+      "Портфели и счета клиентов",
+      "Система задач и workflow",
+      "Интеграции с депозитариями"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collection": "valuations",
+  "title": { "ru": "Оценки", "en": "Valuations", "uk": "Оцінки" },
+  "fields": [
+    { "key": "id", "type": "string", "required": true, "hidden": true },
+    { "key": "objectType", "label": { "ru": "Тип объекта", "en": "Object Type" }, "type": "select", "options": ["holding", "liability"], "required": true },
+    { "key": "objectId", "label": { "ru": "ID объекта", "en": "Object ID" }, "type": "text", "required": true },
+    { "key": "value", "label": { "ru": "Стоимость", "en": "Value" }, "type": "number", "required": true },
+    { "key": "currency", "label": { "ru": "Валюта", "en": "Currency" }, "type": "select", "options": ["USD", "EUR", "GBP", "CHF", "RUB"], "required": true },
+    { "key": "method", "label": { "ru": "Метод оценки", "en": "Valuation Method" }, "type": "select", "options": ["market", "appraised", "manual", "model"], "required": true },
+    { "key": "asOf", "label": { "ru": "На дату", "en": "As-of" }, "type": "date", "required": true },
+    { "key": "status", "label": { "ru": "Статус", "en": "Status" }, "type": "select", "options": ["priced", "estimated", "stale", "missing"], "required": true },
+    { "key": "sourceType", "label": { "ru": "Тип источника", "en": "Source Type" }, "type": "select", "options": ["custodian", "appraiser", "manual", "pricing"] },
+    { "key": "sourceRef", "label": { "ru": "Ссылка на источник", "en": "Source Ref" }, "type": "text" },
+    { "key": "notes", "label": { "ru": "Заметки", "en": "Notes" }, "type": "textarea", "clientSafeHidden": true }
+  ],
+  "columns": [
+    { "key": "objectId", "header": { "ru": "Объект", "en": "Object" }, "type": "text" },
+    { "key": "value", "header": { "ru": "Стоимость", "en": "Value" }, "type": "currency", "sortable": true },
+    { "key": "method", "header": { "ru": "Метод", "en": "Method" }, "type": "badge" },
+    { "key": "asOf", "header": { "ru": "На дату", "en": "As-of" }, "type": "date", "sortable": true },
+    { "key": "sourceType", "header": { "ru": "Источник", "en": "Source" }, "type": "badge" },
+    { "key": "status", "header": { "ru": "Статус", "en": "Status" }, "type": "status" }
+  ]
+}

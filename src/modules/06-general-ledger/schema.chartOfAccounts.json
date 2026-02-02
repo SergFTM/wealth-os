@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Chart of Accounts",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "entityId": { "type": ["string", "null"], "description": "null = global CoA" },
+    "functionalCurrency": { "type": "string", "default": "USD" },
+    "accountIds": { "type": "array", "items": { "type": "string" } },
+    "isActive": { "type": "boolean", "default": true },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "name"]
+}

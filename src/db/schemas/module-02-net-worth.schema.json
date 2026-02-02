@@ -1,0 +1,32 @@
+{
+  "id": "02",
+  "slug": "net-worth",
+  "title": { "ru": "Единый капитал", "en": "Net Worth", "uk": "Єдиний капітал" },
+  "description": { "ru": "Консолидированный обзор активов и обязательств", "en": "Consolidated assets and liabilities overview", "uk": "Консолідований огляд активів та зобов'язань" },
+  "collections": ["portfolios", "accounts", "entities"],
+  "kpis": [
+    { "key": "totalAssets", "title": "Активы", "format": "currency" },
+    { "key": "liabilities", "title": "Обязательства", "format": "currency" },
+    { "key": "netWorth", "title": "Чистая стоимость", "format": "currency" },
+    { "key": "changeMonth", "title": "Изменение за месяц", "format": "percent" }
+  ],
+  "listColumns": [
+    { "key": "name", "header": "Счёт", "type": "text" },
+    { "key": "custodian", "header": "Депозитарий", "type": "text" },
+    { "key": "type", "header": "Тип", "type": "badge" },
+    { "key": "value", "header": "Стоимость", "type": "currency" }
+  ],
+  "createFields": [
+    { "key": "name", "label": "Название", "type": "text", "required": true },
+    { "key": "custodian", "label": "Депозитарий", "type": "text", "required": true },
+    { "key": "type", "label": "Тип счёта", "type": "select", "options": ["brokerage", "prime", "managed", "custody", "ira", "401k"], "required": true },
+    { "key": "portfolioId", "label": "Портфель", "type": "select", "collection": "portfolios" }
+  ],
+  "help": {
+    "title": "Единый капитал",
+    "description": "Полная картина активов и обязательств по всем структурам.",
+    "features": ["Агрегация по всем счетам и депозитариям", "Разбивка по классам активов", "Историческая динамика", "Drill-down до отдельных позиций"],
+    "scenarios": ["Ежемесячный отчёт для клиента", "Анализ allocation", "Сравнение с benchmark"],
+    "dataSources": ["Депозитарии через API", "Ручной ввод для альтернатив", "Market data feeds"]
+  }
+}

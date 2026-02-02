@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ReconMapping",
+  "description": "Mapping between external and internal identifiers",
+  "type": "object",
+  "required": ["id", "feedId", "externalKey", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "feedId": { "type": "string", "description": "Reference to the data feed" },
+    "mappingType": {
+      "type": "string",
+      "enum": ["symbol", "account", "entity"],
+      "description": "What type of mapping"
+    },
+    "externalKey": { "type": "string", "description": "External identifier from feed" },
+    "internalKey": { "type": "string", "description": "Internal identifier in system" },
+    "externalName": { "type": "string", "description": "Human-readable external name" },
+    "internalName": { "type": "string", "description": "Human-readable internal name" },
+    "entityMap": { "type": "string", "description": "Entity mapping reference" },
+    "accountMap": { "type": "string", "description": "Account mapping reference" },
+    "status": {
+      "type": "string",
+      "enum": ["mapped", "unmapped", "pending"],
+      "description": "Mapping status"
+    },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 100, "description": "Auto-match confidence" },
+    "approvedBy": { "type": "string", "description": "Who approved the mapping" },
+    "approvedAt": { "type": "string", "format": "date-time" },
+    "notes": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

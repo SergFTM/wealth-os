@@ -1,0 +1,32 @@
+{
+  "id": "21",
+  "slug": "communications",
+  "title": { "ru": "Коммуникации", "en": "Communications", "uk": "Комунікації" },
+  "description": { "ru": "Общение с клиентами и обработка запросов", "en": "Client communication and request handling", "uk": "Спілкування з клієнтами та обробка запитів" },
+  "collections": ["threads", "messages"],
+  "kpis": [
+    { "key": "openThreads", "title": "Открытые диалоги", "format": "number" },
+    { "key": "sentMonth", "title": "Отправлено за месяц", "format": "number" },
+    { "key": "pendingRequests", "title": "Ожидают ответа", "format": "number" },
+    { "key": "avgResponseTime", "title": "Среднее время ответа", "format": "text" }
+  ],
+  "listColumns": [
+    { "key": "subject", "header": "Тема", "type": "text" },
+    { "key": "clientId", "header": "Клиент", "type": "relation" },
+    { "key": "status", "header": "Статус", "type": "status" },
+    { "key": "messageCount", "header": "Сообщений", "type": "number" },
+    { "key": "lastMessageAt", "header": "Последнее сообщение", "type": "datetime" }
+  ],
+  "createFields": [
+    { "key": "subject", "label": "Тема", "type": "text", "required": true },
+    { "key": "clientId", "label": "Клиент", "type": "select", "collection": "clients", "required": true },
+    { "key": "message", "label": "Сообщение", "type": "textarea", "required": true }
+  ],
+  "help": {
+    "title": "Коммуникации",
+    "description": "Централизованный канал общения с клиентами и обработки запросов.",
+    "features": ["Диалоги с клиентами", "Прикрепление документов", "Создание задач из запросов", "История переписки"],
+    "scenarios": ["Ответ на вопрос клиента", "Отправка отчёта", "Эскалация запроса в задачу"],
+    "dataSources": ["Email интеграция", "Портал клиента", "Внутренние сообщения"]
+  }
+}

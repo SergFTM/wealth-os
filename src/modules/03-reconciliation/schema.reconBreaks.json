@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ReconBreak",
+  "description": "Reconciliation break/discrepancy record",
+  "type": "object",
+  "required": ["id", "jobId", "breakType", "severity", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "jobId": { "type": "string", "description": "Reference to the recon job" },
+    "clientId": { "type": "string" },
+    "entityId": { "type": "string" },
+    "accountId": { "type": "string" },
+    "instrument": { "type": "string", "description": "Symbol or instrument name" },
+    "breakType": {
+      "type": "string",
+      "enum": ["quantity_mismatch", "price_mismatch", "missing_transaction", "cash_mismatch", "unmapped_symbol", "unmapped_account", "unmapped_entity"],
+      "description": "Type of break"
+    },
+    "expected": { "type": ["string", "number"], "description": "Expected value from internal system" },
+    "actual": { "type": ["string", "number"], "description": "Actual value from feed" },
+    "delta": { "type": "number", "description": "Calculated difference" },
+    "currency": { "type": "string" },
+    "severity": {
+      "type": "string",
+      "enum": ["critical", "high", "medium", "low"],
+      "description": "Break severity"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["open", "investigating", "resolved", "ignored"],
+      "description": "Current status"
+    },
+    "owner": { "type": "string", "description": "Assigned owner" },
+    "resolution": { "type": "string", "description": "How it was resolved" },
+    "evidenceDocIds": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "References to supporting documents"
+    },
+    "linkedTaskId": { "type": "string", "description": "Reference to workflow task" },
+    "linkedIssueId": { "type": "string", "description": "Reference to data quality issue" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

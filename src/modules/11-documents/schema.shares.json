@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DocShare",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string" },
+    "audience": { "type": "string", "enum": ["client", "advisor"] },
+    "status": { "type": "string", "enum": ["active", "revoked", "expired"] },
+    "expiresAt": { "type": ["string", "null"], "format": "date-time" },
+    "documentIds": { "type": "array", "items": { "type": "string" } },
+    "evidencePackId": { "type": ["string", "null"] },
+    "accessToken": { "type": "string" },
+    "watermark": { "type": "boolean", "default": false },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "createdBy": { "type": "string" },
+    "revokedAt": { "type": ["string", "null"], "format": "date-time" },
+    "revokedBy": { "type": ["string", "null"] },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "name", "audience", "status", "documentIds", "accessToken", "createdAt", "createdBy"]
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "ae1",
+    "ts": "2026-01-28T10:00:00Z",
+    "actorRole": "admin",
+    "actorName": "Алексей П.",
+    "action": "update",
+    "collection": "tasks",
+    "recordId": "t1",
+    "summary": "Изменён статус задачи на in_progress",
+    "severity": "info"
+  },
+  {
+    "id": "ae2",
+    "ts": "2026-01-27T16:00:00Z",
+    "actorRole": "operations",
+    "actorName": "Мария К.",
+    "action": "create",
+    "collection": "approvals",
+    "recordId": "ap1",
+    "summary": "Создан запрос на согласование wire transfer",
+    "severity": "info"
+  },
+  {
+    "id": "ae3",
+    "ts": "2026-01-27T14:00:00Z",
+    "actorRole": "cio",
+    "actorName": "Иван С.",
+    "action": "approve",
+    "collection": "approvals",
+    "recordId": "ap2",
+    "summary": "Одобрен release отчета Q4",
+    "severity": "info"
+  },
+  {
+    "id": "ae4",
+    "ts": "2026-01-26T10:00:00Z",
+    "actorRole": "system",
+    "actorName": "Система",
+    "action": "create",
+    "collection": "breaches",
+    "recordId": "b3",
+    "summary": "Обнаружено нарушение IPS: min_fixed_income",
+    "severity": "warning"
+  },
+  {
+    "id": "ae5",
+    "ts": "2026-01-25T11:00:00Z",
+    "actorRole": "compliance",
+    "actorName": "Compliance",
+    "action": "update",
+    "collection": "alerts",
+    "recordId": "al6",
+    "summary": "Алерт отмечен как acknowledged",
+    "severity": "info"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "create",
+    "collection": "tasks",
+    "recordId": "1769635730028-06megdzne",
+    "summary": "Created tasks record",
+    "id": "1769635730033-9ea5er5i9",
+    "ts": "2026-01-28T21:28:50.033Z"
+  }
+]

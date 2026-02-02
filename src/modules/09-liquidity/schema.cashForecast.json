@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CashForecast",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "entityId": { "type": "string" },
+    "dateOrWeek": { "type": "string" },
+    "category": { "type": "string", "enum": ["rent", "dividend", "coupon", "capital_call", "distribution", "bill", "tax", "salary", "other"] },
+    "direction": { "type": "string", "enum": ["in", "out"] },
+    "amount": { "type": "number" },
+    "currency": { "type": "string" },
+    "accountId": { "type": ["string", "null"] },
+    "confidence": { "type": "string", "enum": ["high", "medium", "low"] },
+    "sourceType": { "type": "string", "enum": ["pc_call", "pc_distribution", "billpay", "manual", "recurring"] },
+    "sourceRef": { "type": ["string", "null"] },
+    "notes": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "dateOrWeek", "category", "direction", "amount", "currency"]
+}

@@ -1,0 +1,49 @@
+{
+  "collection": "holdings",
+  "title": { "ru": "Активы", "en": "Holdings", "uk": "Активи" },
+  "fields": [
+    { "key": "id", "type": "string", "required": true, "hidden": true },
+    { "key": "clientId", "label": { "ru": "Клиент", "en": "Client" }, "type": "relation", "collection": "clients", "required": true },
+    { "key": "entityId", "label": { "ru": "Юр. лицо", "en": "Entity" }, "type": "relation", "collection": "entities" },
+    { "key": "accountId", "label": { "ru": "Счёт", "en": "Account" }, "type": "relation", "collection": "accounts" },
+    { "key": "name", "label": { "ru": "Название", "en": "Name" }, "type": "text", "required": true },
+    { "key": "ticker", "label": { "ru": "Тикер", "en": "Ticker" }, "type": "text" },
+    { "key": "assetClass", "label": { "ru": "Класс актива", "en": "Asset Class" }, "type": "select", "options": ["Public", "Private", "RealEstate", "Cash", "Personal", "Other"], "required": true },
+    { "key": "liquidity", "label": { "ru": "Ликвидность", "en": "Liquidity" }, "type": "select", "options": ["liquid", "illiquid"], "required": true },
+    { "key": "currency", "label": { "ru": "Валюта", "en": "Currency" }, "type": "select", "options": ["USD", "EUR", "GBP", "CHF", "RUB"], "required": true },
+    { "key": "quantity", "label": { "ru": "Количество", "en": "Quantity" }, "type": "number" },
+    { "key": "price", "label": { "ru": "Цена", "en": "Price" }, "type": "number" },
+    { "key": "value", "label": { "ru": "Стоимость", "en": "Value" }, "type": "number", "required": true },
+    { "key": "valuationStatus", "label": { "ru": "Статус оценки", "en": "Valuation Status" }, "type": "select", "options": ["priced", "estimated", "stale", "missing"], "required": true },
+    { "key": "asOf", "label": { "ru": "На дату", "en": "As-of" }, "type": "date", "required": true },
+    { "key": "sourceType", "label": { "ru": "Тип источника", "en": "Source Type" }, "type": "select", "options": ["custodian", "bank", "manual", "pricing"] },
+    { "key": "sourceRef", "label": { "ru": "Ссылка на источник", "en": "Source Ref" }, "type": "text", "clientSafeHidden": true },
+    { "key": "reconStatus", "label": { "ru": "Статус сверки", "en": "Recon Status" }, "type": "select", "options": ["ok", "issue", "pending"], "clientSafeHidden": true },
+    { "key": "tags", "label": { "ru": "Теги", "en": "Tags" }, "type": "tags" }
+  ],
+  "columns": [
+    { "key": "name", "header": { "ru": "Актив", "en": "Asset" }, "type": "text", "sortable": true },
+    { "key": "ticker", "header": { "ru": "Тикер", "en": "Ticker" }, "type": "text" },
+    { "key": "assetClass", "header": { "ru": "Класс", "en": "Class" }, "type": "badge" },
+    { "key": "entityId", "header": { "ru": "Юр. лицо", "en": "Entity" }, "type": "relation" },
+    { "key": "accountId", "header": { "ru": "Счёт", "en": "Account" }, "type": "relation", "clientSafeHidden": true },
+    { "key": "quantity", "header": { "ru": "Кол-во", "en": "Qty" }, "type": "number" },
+    { "key": "price", "header": { "ru": "Цена", "en": "Price" }, "type": "currency" },
+    { "key": "value", "header": { "ru": "Стоимость", "en": "Value" }, "type": "currency", "sortable": true },
+    { "key": "asOf", "header": { "ru": "На дату", "en": "As-of" }, "type": "date" },
+    { "key": "valuationStatus", "header": { "ru": "Оценка", "en": "Valuation" }, "type": "status" },
+    { "key": "sourceType", "header": { "ru": "Источник", "en": "Source" }, "type": "badge" },
+    { "key": "reconStatus", "header": { "ru": "Сверка", "en": "Recon" }, "type": "status", "clientSafeHidden": true }
+  ],
+  "filters": [
+    { "key": "clientId", "label": "Клиент", "type": "relation" },
+    { "key": "entityId", "label": "Юр. лицо", "type": "relation" },
+    { "key": "assetClass", "label": "Класс актива", "type": "multiselect" },
+    { "key": "liquidity", "label": "Ликвидность", "type": "select" },
+    { "key": "valuationStatus", "label": "Статус оценки", "type": "multiselect" },
+    { "key": "sourceType", "label": "Источник", "type": "multiselect" },
+    { "key": "currency", "label": "Валюта", "type": "multiselect" },
+    { "key": "reconStatus", "label": "Сверка", "type": "select", "clientSafeHidden": true },
+    { "key": "search", "label": "Поиск", "type": "search" }
+  ]
+}

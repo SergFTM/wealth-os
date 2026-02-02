@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PartnershipInterest",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "partnershipId": { "type": "string" },
+    "ownerId": { "type": "string" },
+    "ownershipPct": { "type": "number", "minimum": 0, "maximum": 100 },
+    "profitSharePct": { "type": "number", "minimum": 0, "maximum": 100 },
+    "effectiveDate": { "type": "string", "format": "date" },
+    "status": { "type": "string", "enum": ["active", "pending_change", "terminated"] },
+    "approved": { "type": "boolean" },
+    "approvedBy": { "type": ["string", "null"] },
+    "approvedAt": { "type": ["string", "null"], "format": "date-time" },
+    "changeReason": { "type": ["string", "null"] },
+    "previousInterestId": { "type": ["string", "null"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "partnershipId", "ownerId", "ownershipPct", "profitSharePct", "effectiveDate", "status", "approved"]
+}

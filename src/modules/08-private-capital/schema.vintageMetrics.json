@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PCVintageMetrics",
+  "type": "object",
+  "required": ["id", "vintageYear", "clientId"],
+  "properties": {
+    "id": { "type": "string" },
+    "vintageYear": { "type": "integer" },
+    "clientId": { "type": "string" },
+    "dpi": { "type": "number", "description": "Distributions to Paid-In" },
+    "rvpi": { "type": "number", "description": "Residual Value to Paid-In" },
+    "tvpi": { "type": "number", "description": "Total Value to Paid-In" },
+    "dvpi": { "type": "number", "description": "Distributed Value to Paid-In" },
+    "irr": { "type": "number", "description": "Internal Rate of Return %" },
+    "flag": { 
+      "type": "string",
+      "enum": ["ok", "underperform", "outperform"]
+    },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

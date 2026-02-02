@@ -1,0 +1,43 @@
+{
+  "cashAccounts": "@db/data/cashAccounts.json",
+  "obligations": "@db/data/obligations.json",
+  "cashForecast": "@db/data/cashForecast.json",
+  "liquidityAlerts": "@db/data/liquidityAlerts.json",
+  "liquidityBuckets": "@db/data/liquidityBuckets.json",
+  "documents": [
+    {"id":"doc-lq-001","name":"Vendor Payment Confirmation","type":"payment_confirmation","linkedTo":"lq-mov-002","fundId":null,"isShared":false,"status":"linked","createdAt":"2026-01-29T14:00:00Z"},
+    {"id":"doc-lq-002","name":"Dividend Statement Q4","type":"statement","linkedTo":"lq-mov-005","fundId":null,"isShared":true,"status":"linked","createdAt":"2026-01-30T08:00:00Z"},
+    {"id":"doc-lq-003","name":"Office Lease Agreement","type":"contract","linkedTo":"lq-obl-001","fundId":null,"isShared":false,"status":"linked","createdAt":"2024-01-01T00:00:00Z"},
+    {"id":"doc-lq-004","name":"Tax Assessment Q4","type":"tax_document","linkedTo":"lq-obl-003","fundId":null,"isShared":false,"status":"linked","createdAt":"2026-01-10T00:00:00Z"},
+    {"id":"doc-lq-005","name":"Property Tax Bill","type":"tax_document","linkedTo":"lq-obl-013","fundId":null,"isShared":false,"status":"linked","createdAt":"2025-12-15T00:00:00Z"},
+    {"id":"doc-lq-006","name":"Credit Facility Agreement","type":"contract","linkedTo":"lq-obl-015","fundId":null,"isShared":false,"status":"linked","createdAt":"2023-06-01T00:00:00Z"},
+    {"id":"doc-lq-007","name":"Bank Statement Jan 2026 - CS","type":"bank_statement","linkedTo":"lq-acc-001","fundId":null,"isShared":false,"status":"linked","createdAt":"2026-01-30T10:00:00Z"},
+    {"id":"doc-lq-008","name":"Bank Statement Jan 2026 - JPM","type":"bank_statement","linkedTo":"lq-acc-002","fundId":null,"isShared":false,"status":"linked","createdAt":"2026-01-30T09:00:00Z"},
+    {"id":"doc-lq-009","name":"Loan Schedule 2026","type":"amortization","linkedTo":"loan-001","fundId":null,"isShared":false,"status":"linked","createdAt":"2026-01-02T00:00:00Z"},
+    {"id":"doc-lq-010","name":"Insurance Policy 2026","type":"contract","linkedTo":"lq-obl-004","fundId":null,"isShared":false,"status":"linked","createdAt":"2025-12-01T00:00:00Z"}
+  ],
+  "tasks": [
+    {"id":"task-lq-001","clientId":"client-001","title":"Review liquidity position Q1","type":"review","priority":"medium","status":"open","assignee":"cfo@wealth.os","dueDate":"2026-02-15","linkedTo":"lq-bucket-003","module":"liquidity","createdAt":"2026-01-15T00:00:00Z","updatedAt":"2026-01-15T00:00:00Z"},
+    {"id":"task-lq-002","clientId":"client-003","title":"Resolve overdue Zeta Fund call","type":"payment","priority":"high","status":"in_progress","assignee":"ops@wealth.os","dueDate":"2026-02-01","linkedTo":"lq-obl-009","module":"liquidity","createdAt":"2026-01-21T00:00:00Z","updatedAt":"2026-01-29T15:00:00Z"},
+    {"id":"task-lq-003","clientId":"client-001","title":"Missing bank feed - CHF Deposit","type":"integration","priority":"low","status":"open","assignee":"tech@wealth.os","dueDate":"2026-02-05","linkedTo":"lq-acc-010","module":"liquidity","createdAt":"2026-01-29T12:00:00Z","updatedAt":"2026-01-29T12:00:00Z"},
+    {"id":"task-lq-004","clientId":"client-001","title":"Reschedule insurance payment","type":"payment","priority":"high","status":"open","assignee":"ops@wealth.os","dueDate":"2026-01-31","linkedTo":"lq-obl-004","module":"liquidity","createdAt":"2026-01-26T00:00:00Z","updatedAt":"2026-01-26T00:00:00Z"},
+    {"id":"task-lq-005","clientId":"client-002","title":"Fund transfer to CHF Operating","type":"transfer","priority":"medium","status":"open","assignee":"ops@wealth.os","dueDate":"2026-02-01","linkedTo":"lq-acc-011","module":"liquidity","createdAt":"2026-01-28T15:00:00Z","updatedAt":"2026-01-28T15:00:00Z"},
+    {"id":"task-lq-006","clientId":"client-003","title":"Transfer funds to USD Holdings","type":"transfer","priority":"high","status":"open","assignee":"ops@wealth.os","dueDate":"2026-01-31","linkedTo":"lq-acc-009","module":"liquidity","createdAt":"2026-01-30T03:00:00Z","updatedAt":"2026-01-30T03:00:00Z"},
+    {"id":"task-lq-007","clientId":"client-002","title":"Verify property tax payment","type":"verification","priority":"high","status":"open","assignee":"ops@wealth.os","dueDate":"2026-01-31","linkedTo":"lq-obl-013","module":"liquidity","createdAt":"2026-01-29T00:00:00Z","updatedAt":"2026-01-29T00:00:00Z"},
+    {"id":"task-lq-008","clientId":"client-001","title":"Review Q1 capital call schedule","type":"review","priority":"medium","status":"open","assignee":"cfo@wealth.os","dueDate":"2026-02-10","linkedTo":"lq-alert-010","module":"liquidity","createdAt":"2026-01-25T00:00:00Z","updatedAt":"2026-01-25T00:00:00Z"},
+    {"id":"task-lq-009","clientId":"client-002","title":"Reconnect CHF Operating bank feed","type":"integration","priority":"medium","status":"open","assignee":"tech@wealth.os","dueDate":"2026-02-03","linkedTo":"lq-alert-011","module":"liquidity","createdAt":"2026-01-30T00:00:00Z","updatedAt":"2026-01-30T00:00:00Z"},
+    {"id":"task-lq-010","clientId":"client-003","title":"Reconnect EUR Savings bank feed","type":"integration","priority":"low","status":"open","assignee":"tech@wealth.os","dueDate":"2026-02-05","linkedTo":"lq-alert-012","module":"liquidity","createdAt":"2026-01-30T00:00:00Z","updatedAt":"2026-01-30T00:00:00Z"},
+    {"id":"task-lq-011","clientId":"client-001","title":"Prepare Q1 liquidity report","type":"reporting","priority":"medium","status":"open","assignee":"ops@wealth.os","dueDate":"2026-02-20","linkedTo":"lq-alert-013","module":"liquidity","createdAt":"2026-01-15T00:00:00Z","updatedAt":"2026-01-15T00:00:00Z"},
+    {"id":"task-lq-012","clientId":"client-003","title":"Confirm property sale proceeds","type":"verification","priority":"medium","status":"open","assignee":"ops@wealth.os","dueDate":"2026-02-08","linkedTo":"lq-mov-008","module":"liquidity","createdAt":"2026-01-25T16:00:00Z","updatedAt":"2026-01-25T16:00:00Z"}
+  ],
+  "auditEvents": [
+    {"id":"audit-lq-001","action":"create","collection":"cashAccounts","recordId":"lq-acc-001","summary":"Создан счет Operating EUR","actorRole":"Admin","actor":"admin@wealth.os","ts":"2024-01-15T10:00:00Z","scope":"liquidity"},
+    {"id":"audit-lq-002","action":"update","collection":"cashAccounts","recordId":"lq-acc-001","summary":"Обновлен баланс Operating EUR: €2,450,000","actorRole":"System","actor":"bank_feed","ts":"2026-01-30T10:00:00Z","scope":"liquidity"},
+    {"id":"audit-lq-003","action":"create","collection":"obligations","recordId":"lq-obl-001","summary":"Создано обязательство: Office Rent London","actorRole":"Ops","actor":"ops@wealth.os","ts":"2024-01-01T09:00:00Z","scope":"liquidity"},
+    {"id":"audit-lq-004","action":"update","collection":"obligations","recordId":"lq-obl-004","summary":"Обязательство отмечено как просроченное","actorRole":"System","actor":"scheduler","ts":"2026-01-26T00:00:00Z","scope":"liquidity"},
+    {"id":"audit-lq-005","action":"create","collection":"liquidityAlerts","recordId":"lq-alert-001","summary":"Создан критический алерт: Account below threshold","actorRole":"System","actor":"monitor","ts":"2026-01-30T03:00:00Z","scope":"liquidity"},
+    {"id":"audit-lq-006","action":"acknowledge","collection":"liquidityAlerts","recordId":"lq-alert-005","summary":"Алерт подтвержден пользователем","actorRole":"Ops","actor":"ops@wealth.os","ts":"2026-01-30T09:00:00Z","scope":"liquidity"},
+    {"id":"audit-lq-007","action":"create","collection":"cashMovements","recordId":"lq-mov-003","summary":"Создано планируемое движение: Office rent Feb €50K","actorRole":"Ops","actor":"ops@wealth.os","ts":"2026-01-25T09:00:00Z","scope":"liquidity"},
+    {"id":"audit-lq-008","action":"post","collection":"cashMovements","recordId":"lq-mov-001","summary":"Движение проведено: Client distribution €150K","actorRole":"System","actor":"bank_feed","ts":"2026-01-28T10:00:00Z","scope":"liquidity"}
+  ]
+}

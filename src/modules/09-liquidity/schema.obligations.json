@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Obligation",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "entityId": { "type": "string" },
+    "name": { "type": "string" },
+    "type": { "type": "string", "enum": ["loan", "rent", "fee", "bill", "tax", "salary", "other"] },
+    "dueDate": { "type": "string", "format": "date" },
+    "amount": { "type": "number" },
+    "currency": { "type": "string" },
+    "frequency": { "type": "string", "enum": ["one-time", "monthly", "quarterly", "annual"] },
+    "status": { "type": "string", "enum": ["scheduled", "paid", "overdue", "cancelled"] },
+    "paidDate": { "type": ["string", "null"], "format": "date" },
+    "sourceType": { "type": "string", "enum": ["billpay", "loan", "pc", "manual"] },
+    "sourceRef": { "type": ["string", "null"] },
+    "docIds": { "type": "array", "items": { "type": "string" } },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "entityId", "name", "type", "dueDate", "amount", "currency", "status"]
+}

@@ -1,0 +1,14 @@
+[
+  { "id": "app1", "title": "Перевод $500K в Fidelity", "client": "Aurora Family", "type": "transfer", "requestedBy": "Алексей П.", "status": "pending", "amount": 500000, "createdAt": "2026-01-28T09:00:00Z" },
+  { "id": "app2", "title": "Новая инвестиция в PE Fund", "client": "Limassol Holdings", "type": "investment", "requestedBy": "Мария К.", "status": "pending", "amount": 2000000, "createdAt": "2026-01-27T14:00:00Z" },
+  { "id": "app3", "title": "Изменение IPS", "client": "North Star Trust", "type": "policy", "requestedBy": "Дмитрий С.", "status": "pending", "amount": null, "createdAt": "2026-01-26T11:00:00Z" },
+  { "id": "app4", "title": "Добавление бенефициара", "client": "Vega Partners", "type": "legal", "requestedBy": "Елена В.", "status": "pending", "amount": null, "createdAt": "2026-01-28T08:00:00Z" },
+  { "id": "app5", "title": "Продажа недвижимости", "client": "Cedar Legacy", "type": "transaction", "requestedBy": "Игорь М.", "status": "pending", "amount": 1500000, "createdAt": "2026-01-25T16:00:00Z" },
+  { "id": "app6", "title": "Ребалансировка портфеля", "client": "Orion Family", "type": "rebalance", "requestedBy": "Алексей П.", "status": "pending", "amount": null, "createdAt": "2026-01-28T07:00:00Z" },
+  { "id": "app7", "title": "Выдача кредита", "client": "Aurora Family", "type": "loan", "requestedBy": "Мария К.", "status": "pending", "amount": 750000, "createdAt": "2026-01-24T10:00:00Z" },
+  { "id": "app8", "title": "Закрытие счета", "client": "Limassol Holdings", "type": "account", "requestedBy": "Дмитрий С.", "status": "pending", "amount": null, "createdAt": "2026-01-27T09:00:00Z" },
+  { "id": "app9", "title": "Распределение дивидендов", "client": "North Star Trust", "type": "distribution", "requestedBy": "Елена В.", "status": "pending", "amount": 125000, "createdAt": "2026-01-28T06:00:00Z" },
+  { "id": "app10", "title": "Покупка hedge fund", "client": "Vega Partners", "type": "investment", "requestedBy": "Игорь М.", "status": "pending", "amount": 3000000, "createdAt": "2026-01-23T15:00:00Z" },
+  { "id": "app11", "title": "Изменение доверенности", "client": "Cedar Legacy", "type": "legal", "requestedBy": "Алексей П.", "status": "pending", "amount": null, "createdAt": "2026-01-26T14:00:00Z" },
+  { "id": "app12", "title": "Оплата налогов", "client": "Orion Family", "type": "payment", "requestedBy": "Мария К.", "status": "pending", "amount": 450000, "createdAt": "2026-01-28T05:00:00Z" }
+]

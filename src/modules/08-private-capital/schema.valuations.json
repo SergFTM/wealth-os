@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PCValuation",
+  "type": "object",
+  "required": ["id", "fundId", "asOf", "nav", "currency", "method", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "fundId": { "type": "string" },
+    "asOf": { "type": "string", "format": "date" },
+    "nav": { "type": "number" },
+    "currency": { "type": "string", "default": "USD" },
+    "method": { 
+      "type": "string",
+      "enum": ["gp_report", "appraisal", "manual", "model"]
+    },
+    "status": { 
+      "type": "string",
+      "enum": ["ok", "stale", "missing"]
+    },
+    "docIds": { "type": "array", "items": { "type": "string" } },
+    "notes": { "type": ["string", "null"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

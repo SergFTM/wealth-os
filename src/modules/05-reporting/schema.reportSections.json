@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ReportSection",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "packId": { "type": "string" },
+    "type": { 
+      "type": "string", 
+      "enum": ["kpi_summary", "net_worth", "performance", "benchmark", "risk", "private_capital", "liquidity", "fees", "tax", "trust", "custom"]
+    },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "order": { "type": "integer" },
+    "visibility": { "type": "string", "enum": ["internal", "client"] },
+    "sourceRefs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "module": { "type": "string" },
+          "collection": { "type": "string" },
+          "itemId": { "type": "string" },
+          "asOf": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "asOf": { "type": "string", "format": "date" },
+    "status": { "type": "string", "enum": ["ok", "stale", "missing"] },
+    "contentDraft": { "type": "string" },
+    "disclaimers": { "type": "array", "items": { "type": "string" } },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "packId", "type", "title", "order", "visibility"]
+}

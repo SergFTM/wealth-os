@@ -1,0 +1,90 @@
+[
+  {
+    "id": "p1",
+    "clientId": "c1",
+    "entityId": "e1",
+    "name": "Aurora Growth",
+    "strategy": "growth",
+    "value": 45000000,
+    "status": "active",
+    "createdAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "p2",
+    "clientId": "c1",
+    "entityId": "e2",
+    "name": "Aurora Conservative",
+    "strategy": "conservative",
+    "value": 35000000,
+    "status": "active",
+    "createdAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "p3",
+    "clientId": "c2",
+    "entityId": "e3",
+    "name": "Limassol RE Fund",
+    "strategy": "real_estate",
+    "value": 28000000,
+    "status": "active",
+    "createdAt": "2024-02-20T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "p4",
+    "clientId": "c3",
+    "entityId": "e5",
+    "name": "North Star Balanced",
+    "strategy": "balanced",
+    "value": 25000000,
+    "status": "active",
+    "createdAt": "2024-03-10T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "p5",
+    "clientId": "c4",
+    "entityId": "e8",
+    "name": "Vega Aggressive",
+    "strategy": "aggressive",
+    "value": 32000000,
+    "status": "active",
+    "createdAt": "2024-04-05T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "p6",
+    "clientId": "c5",
+    "entityId": "e9",
+    "name": "Orion Income",
+    "strategy": "income",
+    "value": 40000000,
+    "status": "active",
+    "createdAt": "2024-05-01T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "p7",
+    "clientId": "c6",
+    "entityId": "e11",
+    "name": "Cedar Multi-Asset",
+    "strategy": "multi_asset",
+    "value": 50000000,
+    "status": "active",
+    "createdAt": "2024-06-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "p8",
+    "clientId": "c6",
+    "entityId": "e12",
+    "name": "Cedar ESG",
+    "strategy": "esg",
+    "value": 15000000,
+    "status": "active",
+    "createdAt": "2024-06-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Partnership",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "entityId": { "type": ["string", "null"] },
+    "name": { "type": "string" },
+    "type": { "type": "string", "enum": ["LP", "LLC", "Trust", "SPV", "Family", "JV"] },
+    "splitMode": { "type": "string", "enum": ["ownership", "profit"] },
+    "nav": { "type": "number" },
+    "currency": { "type": "string" },
+    "asOf": { "type": "string", "format": "date" },
+    "status": { "type": "string", "enum": ["active", "inactive", "liquidating"] },
+    "notes": { "type": ["string", "null"] },
+    "docIds": { "type": "array", "items": { "type": "string" } },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "name", "type", "splitMode", "currency", "status"]
+}

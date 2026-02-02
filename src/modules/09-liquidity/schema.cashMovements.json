@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CashMovement",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "entityId": { "type": "string" },
+    "accountId": { "type": "string" },
+    "date": { "type": "string", "format": "date" },
+    "type": { "type": "string", "enum": ["inflow", "outflow", "transfer"] },
+    "amount": { "type": "number" },
+    "currency": { "type": "string" },
+    "status": { "type": "string", "enum": ["planned", "posted", "cancelled"] },
+    "description": { "type": "string" },
+    "sourceType": { "type": "string", "enum": ["gl", "billpay", "manual", "bank_feed"] },
+    "sourceRef": { "type": ["string", "null"] },
+    "docIds": { "type": "array", "items": { "type": "string" } },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "accountId", "date", "type", "amount", "currency", "status"]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Return",
+  "type": "object",
+  "required": ["id", "objectType", "objectId", "period", "returnPct", "method"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "objectType": { "type": "string", "enum": ["portfolio", "benchmark"] },
+    "objectId": { "type": "string" },
+    "period": { "type": "string", "format": "date" },
+    "returnPct": { "type": "number" },
+    "method": { "type": "string", "enum": ["TWR", "MWR"] },
+    "asOf": { "type": "string", "format": "date-time" },
+    "sourceType": { "type": ["string", "null"] },
+    "sourceRef": { "type": ["string", "null"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

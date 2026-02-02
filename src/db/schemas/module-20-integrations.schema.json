@@ -1,0 +1,35 @@
+{
+  "id": "20",
+  "slug": "integrations",
+  "title": { "ru": "Интеграции", "en": "Integrations", "uk": "Інтеграції" },
+  "description": { "ru": "Управление подключениями и синхронизацией данных", "en": "Connection and data sync management", "uk": "Управління підключеннями та синхронізацією даних" },
+  "collections": ["connections", "syncJobs", "dataQualityIssues"],
+  "adminOnly": true,
+  "kpis": [
+    { "key": "total", "title": "Всего подключений", "format": "number" },
+    { "key": "syncHealth", "title": "Здоровье синхронизации", "format": "percent" },
+    { "key": "errors", "title": "Ошибки", "format": "number" },
+    { "key": "warnings", "title": "Предупреждения", "format": "number" }
+  ],
+  "listColumns": [
+    { "key": "provider", "header": "Провайдер", "type": "text" },
+    { "key": "clientId", "header": "Клиент", "type": "relation" },
+    { "key": "status", "header": "Статус", "type": "status" },
+    { "key": "lastSync", "header": "Последняя синхр.", "type": "datetime" },
+    { "key": "frequency", "header": "Частота", "type": "badge" }
+  ],
+  "createFields": [
+    { "key": "provider", "label": "Провайдер", "type": "select", "options": ["Charles Schwab", "Goldman Sachs", "UBS", "JP Morgan", "Fidelity", "Interactive Brokers", "Coinbase", "Other"], "required": true },
+    { "key": "clientId", "label": "Клиент", "type": "select", "collection": "clients", "required": true },
+    { "key": "frequency", "label": "Частота синхронизации", "type": "select", "options": ["hourly", "daily", "weekly"], "required": true },
+    { "key": "apiKey", "label": "API Key", "type": "text" },
+    { "key": "apiSecret", "label": "API Secret", "type": "text" }
+  ],
+  "help": {
+    "title": "Интеграции и синхронизация",
+    "description": "Управление подключениями к внешним системам и мониторинг качества данных.",
+    "features": ["Подключение депозитариев", "Автоматическая синхронизация", "Мониторинг ошибок", "Data quality checks"],
+    "scenarios": ["Добавление нового депозитария", "Диагностика ошибки синхронизации", "Запуск ручной синхронизации"],
+    "dataSources": ["API депозитариев", "SFTP feeds", "Manual uploads"]
+  }
+}

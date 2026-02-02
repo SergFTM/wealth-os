@@ -1,0 +1,122 @@
+[
+  {
+    "id": "e1",
+    "clientId": "c1",
+    "name": "Aurora Holdings LLC",
+    "type": "llc",
+    "jurisdiction": "Delaware",
+    "status": "active",
+    "createdAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "e2",
+    "clientId": "c1",
+    "name": "Aurora Dynasty Trust",
+    "type": "trust",
+    "jurisdiction": "Nevada",
+    "status": "active",
+    "createdAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "e3",
+    "clientId": "c2",
+    "name": "Limassol RE LLC",
+    "type": "llc",
+    "jurisdiction": "Cyprus",
+    "status": "active",
+    "createdAt": "2024-02-20T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "e4",
+    "clientId": "c2",
+    "name": "Limassol Investments",
+    "type": "corp",
+    "jurisdiction": "Delaware",
+    "status": "active",
+    "createdAt": "2024-02-20T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "e5",
+    "clientId": "c3",
+    "name": "North Star GRAT",
+    "type": "grat",
+    "jurisdiction": "South Dakota",
+    "status": "active",
+    "createdAt": "2024-03-10T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "e6",
+    "clientId": "c3",
+    "name": "North Star Foundation",
+    "type": "foundation",
+    "jurisdiction": "Delaware",
+    "status": "active",
+    "createdAt": "2024-03-10T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "e7",
+    "clientId": "c4",
+    "name": "Vega GP LLC",
+    "type": "llc",
+    "jurisdiction": "Delaware",
+    "status": "active",
+    "createdAt": "2024-04-05T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "e8",
+    "clientId": "c4",
+    "name": "Vega LP",
+    "type": "lp",
+    "jurisdiction": "Delaware",
+    "status": "active",
+    "createdAt": "2024-04-05T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "e9",
+    "clientId": "c5",
+    "name": "Orion Holdings",
+    "type": "corp",
+    "jurisdiction": "Nevada",
+    "status": "active",
+    "createdAt": "2024-05-01T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "e10",
+    "clientId": "c5",
+    "name": "Orion QPRT",
+    "type": "qprt",
+    "jurisdiction": "Nevada",
+    "status": "active",
+    "createdAt": "2024-05-01T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "e11",
+    "clientId": "c6",
+    "name": "Cedar Trust",
+    "type": "trust",
+    "jurisdiction": "Delaware",
+    "status": "active",
+    "createdAt": "2024-06-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "e12",
+    "clientId": "c6",
+    "name": "Cedar Charitable",
+    "type": "foundation",
+    "jurisdiction": "Delaware",
+    "status": "active",
+    "createdAt": "2024-06-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  { "id": "e1", "name": "Aurora Holdings LLC", "client": "Aurora Family", "type": "llc", "jurisdiction": "Delaware", "taxId": "XX-XXXXXXX", "status": "active" },
+  { "id": "e2", "name": "Aurora Trust", "client": "Aurora Family", "type": "trust", "jurisdiction": "Nevada", "taxId": "XX-XXXXXXX", "status": "active" },
+  { "id": "e3", "name": "Aurora Digital LLC", "client": "Aurora Family", "type": "llc", "jurisdiction": "Wyoming", "taxId": "XX-XXXXXXX", "status": "active" },
+  { "id": "e4", "name": "Limassol Investments", "client": "Limassol Holdings", "type": "llc", "jurisdiction": "Cyprus", "taxId": "CY-XXXXXXX", "status": "active" },
+  { "id": "e5", "name": "Limassol RE LLC", "client": "Limassol Holdings", "type": "llc", "jurisdiction": "Delaware", "taxId": "XX-XXXXXXX", "status": "active" },
+  { "id": "e6", "name": "North Star Irrevocable", "client": "North Star Trust", "type": "trust", "jurisdiction": "South Dakota", "taxId": "XX-XXXXXXX", "status": "active" },
+  { "id": "e7", "name": "North Star Foundation", "client": "North Star Trust", "type": "foundation", "jurisdiction": "Delaware", "taxId": "XX-XXXXXXX", "status": "active" },
+  { "id": "e8", "name": "Vega LP", "client": "Vega Partners", "type": "lp", "jurisdiction": "Cayman Islands", "taxId": "N/A", "status": "active" },
+  { "id": "e9", "name": "Vega GP LLC", "client": "Vega Partners", "type": "llc", "jurisdiction": "Delaware", "taxId": "XX-XXXXXXX", "status": "active" },
+  { "id": "e10", "name": "Cedar Dynasty Trust", "client": "Cedar Legacy", "type": "trust", "jurisdiction": "Nevada", "taxId": "XX-XXXXXXX", "status": "active" },
+  { "id": "e11", "name": "Orion FO LLC", "client": "Orion Family", "type": "llc", "jurisdiction": "Delaware", "taxId": "XX-XXXXXXX", "status": "active" },
+  { "id": "e12", "name": "Orion Alternatives LP", "client": "Orion Family", "type": "lp", "jurisdiction": "Delaware", "taxId": "XX-XXXXXXX", "status": "active" }
+]

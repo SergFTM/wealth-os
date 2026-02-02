@@ -1,0 +1,8 @@
+[
+  {"id": "sj1", "connectionId": "conn1", "provider": "Charles Schwab", "status": "success", "recordsProcessed": 1250, "startedAt": "2026-01-28T08:00:00Z", "completedAt": "2026-01-28T08:05:00Z", "createdAt": "2026-01-28T08:00:00Z", "updatedAt": "2026-01-28T08:05:00Z"},
+  {"id": "sj2", "connectionId": "conn2", "provider": "Goldman Sachs", "status": "error", "recordsProcessed": 0, "errorMessage": "Authentication failed", "startedAt": "2026-01-27T22:00:00Z", "completedAt": "2026-01-27T22:01:00Z", "createdAt": "2026-01-27T22:00:00Z", "updatedAt": "2026-01-27T22:01:00Z"},
+  {"id": "sj3", "connectionId": "conn3", "provider": "UBS", "status": "warning", "recordsProcessed": 890, "warningMessage": "3 records skipped", "startedAt": "2026-01-28T06:00:00Z", "completedAt": "2026-01-28T06:08:00Z", "createdAt": "2026-01-28T06:00:00Z", "updatedAt": "2026-01-28T06:08:00Z"},
+  {"id": "sj4", "connectionId": "conn4", "provider": "JP Morgan", "status": "success", "recordsProcessed": 2100, "startedAt": "2026-01-28T07:30:00Z", "completedAt": "2026-01-28T07:42:00Z", "createdAt": "2026-01-28T07:30:00Z", "updatedAt": "2026-01-28T07:42:00Z"},
+  {"id": "sj5", "connectionId": "conn5", "provider": "Fidelity", "status": "success", "recordsProcessed": 650, "startedAt": "2026-01-28T08:15:00Z", "completedAt": "2026-01-28T08:20:00Z", "createdAt": "2026-01-28T08:15:00Z", "updatedAt": "2026-01-28T08:20:00Z"},
+  {"id": "sj6", "connectionId": "conn6", "provider": "Interactive Brokers", "status": "running", "recordsProcessed": 450, "startedAt": "2026-01-28T10:00:00Z", "completedAt": null, "createdAt": "2026-01-28T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"}
+]

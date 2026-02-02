@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EvidencePack",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string" },
+    "scopeType": { "type": "string", "enum": ["entity", "portfolio", "fund", "period", "audit", "kyc", "custom"] },
+    "scopeId": { "type": ["string", "null"] },
+    "periodStart": { "type": ["string", "null"], "format": "date" },
+    "periodEnd": { "type": ["string", "null"], "format": "date" },
+    "purpose": { "type": ["string", "null"] },
+    "status": { "type": "string", "enum": ["draft", "locked", "shared"] },
+    "documentIds": { "type": "array", "items": { "type": "string" } },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "createdBy": { "type": "string" },
+    "lockedAt": { "type": ["string", "null"], "format": "date-time" },
+    "lockedBy": { "type": ["string", "null"] },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "name", "status", "documentIds", "createdAt", "createdBy"]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PartnerTransaction",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "partnershipId": { "type": "string" },
+    "ownerId": { "type": "string" },
+    "date": { "type": "string", "format": "date" },
+    "type": { "type": "string", "enum": ["contribution", "subscription", "redemption", "buy_interest", "sell_interest"] },
+    "amount": { "type": "number" },
+    "currency": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "pending", "posted", "rejected"] },
+    "sourceType": { "type": ["string", "null"] },
+    "sourceRef": { "type": ["string", "null"] },
+    "docIds": { "type": "array", "items": { "type": "string" } },
+    "notes": { "type": ["string", "null"] },
+    "createdBy": { "type": "string" },
+    "postedBy": { "type": ["string", "null"] },
+    "postedAt": { "type": ["string", "null"], "format": "date-time" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "partnershipId", "ownerId", "date", "type", "amount", "currency", "status"]
+}

@@ -1,0 +1,30 @@
+{
+  "collection": "liabilities",
+  "title": { "ru": "Обязательства", "en": "Liabilities", "uk": "Зобов'язання" },
+  "fields": [
+    { "key": "id", "type": "string", "required": true, "hidden": true },
+    { "key": "clientId", "label": { "ru": "Клиент", "en": "Client" }, "type": "relation", "collection": "clients", "required": true },
+    { "key": "entityId", "label": { "ru": "Юр. лицо", "en": "Entity" }, "type": "relation", "collection": "entities" },
+    { "key": "type", "label": { "ru": "Тип", "en": "Type" }, "type": "select", "options": ["Loan", "Mortgage", "CreditLine", "Other"], "required": true },
+    { "key": "name", "label": { "ru": "Название", "en": "Name" }, "type": "text", "required": true },
+    { "key": "balance", "label": { "ru": "Баланс", "en": "Balance" }, "type": "number", "required": true },
+    { "key": "rate", "label": { "ru": "Ставка %", "en": "Rate %" }, "type": "number" },
+    { "key": "currency", "label": { "ru": "Валюта", "en": "Currency" }, "type": "select", "options": ["USD", "EUR", "GBP", "CHF", "RUB"], "required": true },
+    { "key": "frequency", "label": { "ru": "Частота платежа", "en": "Payment Frequency" }, "type": "select", "options": ["monthly", "quarterly", "annually", "bullet"] },
+    { "key": "nextPaymentDate", "label": { "ru": "Следующий платёж", "en": "Next Payment" }, "type": "date" },
+    { "key": "status", "label": { "ru": "Статус", "en": "Status" }, "type": "select", "options": ["active", "paid", "defaulted"], "required": true },
+    { "key": "sourceType", "label": { "ru": "Тип источника", "en": "Source Type" }, "type": "select", "options": ["bank", "manual", "statement"] },
+    { "key": "sourceRef", "label": { "ru": "Ссылка на источник", "en": "Source Ref" }, "type": "text", "clientSafeHidden": true }
+  ],
+  "columns": [
+    { "key": "name", "header": { "ru": "Обязательство", "en": "Liability" }, "type": "text", "sortable": true },
+    { "key": "type", "header": { "ru": "Тип", "en": "Type" }, "type": "badge" },
+    { "key": "entityId", "header": { "ru": "Юр. лицо", "en": "Entity" }, "type": "relation" },
+    { "key": "balance", "header": { "ru": "Баланс", "en": "Balance" }, "type": "currency", "sortable": true },
+    { "key": "rate", "header": { "ru": "Ставка", "en": "Rate" }, "type": "percent" },
+    { "key": "frequency", "header": { "ru": "Частота", "en": "Frequency" }, "type": "text" },
+    { "key": "nextPaymentDate", "header": { "ru": "След. платёж", "en": "Next Payment" }, "type": "date" },
+    { "key": "status", "header": { "ru": "Статус", "en": "Status" }, "type": "status" },
+    { "key": "sourceType", "header": { "ru": "Источник", "en": "Source" }, "type": "badge" }
+  ]
+}

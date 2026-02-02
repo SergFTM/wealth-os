@@ -1,0 +1,37 @@
+{
+  "id": "14",
+  "slug": "workflow",
+  "title": { "ru": "Workflow и согласования", "en": "Workflow & Approvals", "uk": "Workflow та погодження" },
+  "description": { "ru": "Управление задачами и процессами согласования", "en": "Task and approval process management", "uk": "Управління завданнями та процесами погодження" },
+  "collections": ["tasks", "approvals"],
+  "kpis": [
+    { "key": "openTasks", "title": "Открытые задачи", "format": "number" },
+    { "key": "highPriority", "title": "Высокий приоритет", "format": "number" },
+    { "key": "pendingApprovals", "title": "На согласовании", "format": "number" },
+    { "key": "completedWeek", "title": "Завершено за неделю", "format": "number" }
+  ],
+  "listColumns": [
+    { "key": "title", "header": "Задача", "type": "text" },
+    { "key": "clientId", "header": "Клиент", "type": "relation" },
+    { "key": "assignee", "header": "Исполнитель", "type": "text" },
+    { "key": "priority", "header": "Приоритет", "type": "badge" },
+    { "key": "status", "header": "Статус", "type": "status" },
+    { "key": "dueDate", "header": "Срок", "type": "date" }
+  ],
+  "createFields": [
+    { "key": "title", "label": "Название", "type": "text", "required": true },
+    { "key": "description", "label": "Описание", "type": "textarea" },
+    { "key": "clientId", "label": "Клиент", "type": "select", "collection": "clients", "required": true },
+    { "key": "priority", "label": "Приоритет", "type": "select", "options": ["low", "medium", "high", "critical"], "required": true },
+    { "key": "dueDate", "label": "Срок", "type": "date", "required": true },
+    { "key": "assignee", "label": "Исполнитель", "type": "text" },
+    { "key": "module", "label": "Модуль", "type": "select", "options": ["reporting", "onboarding", "ips", "tax", "billpay-checks", "private-capital"] }
+  ],
+  "help": {
+    "title": "Workflow и согласования",
+    "description": "Централизованное управление всеми задачами и процессами согласования.",
+    "features": ["Создание и назначение задач", "Многоуровневые согласования", "Трекинг сроков и приоритетов", "Audit trail всех действий"],
+    "scenarios": ["Создание задачи из другого модуля", "Согласование wire transfer", "Эскалация просроченных задач"],
+    "dataSources": ["Все модули системы", "Пользователи и роли", "Календарь и дедлайны"]
+  }
+}
