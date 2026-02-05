@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CommThreadPin",
+  "type": "object",
+  "required": ["id", "threadId", "userId", "pinnedAt"],
+  "properties": {
+    "id": { "type": "string", "description": "Unique pin record ID" },
+    "threadId": { "type": "string", "description": "Thread ID" },
+    "userId": { "type": "string", "description": "User who pinned" },
+    "pinnedAt": { "type": "string", "format": "date-time" }
+  }
+}

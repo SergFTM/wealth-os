@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CaseReport",
+  "type": "object",
+  "required": ["id", "clientId", "periodStart", "periodEnd", "metricsJson", "createdAt"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "clientId": { "type": "string", "format": "uuid" },
+    "reportType": {
+      "type": "string",
+      "enum": ["weekly", "monthly", "quarterly", "custom"],
+      "default": "weekly"
+    },
+    "periodStart": { "type": "string", "format": "date" },
+    "periodEnd": { "type": "string", "format": "date" },
+    "metricsJson": { "type": "string" },
+    "summaryJson": { "type": ["string", "null"] },
+    "totalCases": { "type": "integer", "default": 0 },
+    "resolvedCases": { "type": "integer", "default": 0 },
+    "slaMetCount": { "type": "integer", "default": 0 },
+    "slaBreachedCount": { "type": "integer", "default": 0 },
+    "avgResolutionHours": { "type": ["number", "null"] },
+    "byTypeJson": { "type": ["string", "null"] },
+    "byPriorityJson": { "type": ["string", "null"] },
+    "byAssigneeJson": { "type": ["string", "null"] },
+    "generatedByUserId": { "type": ["string", "null"] },
+    "generatedByUserName": { "type": ["string", "null"] },
+    "createdAt": { "type": "string", "format": "date-time" }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "escalation.schema.json",
+  "title": "Escalation",
+  "description": "An escalation record",
+  "type": "object",
+  "required": ["id", "clientId", "notificationId", "level", "status", "createdAt", "updatedAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the escalation"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/tenant identifier"
+    },
+    "notificationId": {
+      "type": "string",
+      "description": "Original notification that was escalated"
+    },
+    "notificationTitle": {
+      "type": "string",
+      "description": "Title of the original notification"
+    },
+    "ruleId": {
+      "type": ["string", "null"],
+      "description": "Rule that triggered escalation"
+    },
+    "level": {
+      "type": "number",
+      "minimum": 1,
+      "description": "Escalation level (1, 2, 3...)"
+    },
+    "escalatedFromUserId": {
+      "type": "string",
+      "description": "User who was originally notified"
+    },
+    "escalatedFromName": {
+      "type": "string"
+    },
+    "escalatedToUserId": {
+      "type": "string",
+      "description": "User escalated to"
+    },
+    "escalatedToName": {
+      "type": "string"
+    },
+    "escalatedToRole": {
+      "type": ["string", "null"],
+      "description": "Role escalated to (if role-based)"
+    },
+    "reason": {
+      "type": "string",
+      "enum": ["no_response", "sla_breach", "manual", "threshold", "critical"],
+      "description": "Reason for escalation"
+    },
+    "reasonDetail": {
+      "type": "string",
+      "description": "Detailed reason description"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "acknowledged", "resolved", "expired"],
+      "description": "Escalation status"
+    },
+    "acknowledgedAt": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "acknowledgedByUserId": {
+      "type": ["string", "null"]
+    },
+    "acknowledgedByName": {
+      "type": ["string", "null"]
+    },
+    "resolvedAt": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "resolvedByUserId": {
+      "type": ["string", "null"]
+    },
+    "resolvedByName": {
+      "type": ["string", "null"]
+    },
+    "resolutionNotes": {
+      "type": ["string", "null"]
+    },
+    "slaDeadline": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "SLA deadline for resolution"
+    },
+    "slaBreach": {
+      "type": "boolean",
+      "description": "Whether SLA was breached"
+    },
+    "nextEscalationAt": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "When next escalation will occur if not resolved"
+    },
+    "maxLevel": {
+      "type": "number",
+      "description": "Maximum escalation level"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

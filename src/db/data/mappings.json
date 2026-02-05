@@ -1,0 +1,602 @@
+[
+  {
+    "id": "map-001",
+    "clientId": "client-001",
+    "mappingType": "coa",
+    "sourceKey": "JPM_CHECKING_1234",
+    "targetKey": "1010-Cash-Operating",
+    "status": "mapped",
+    "notes": "Primary operating account",
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "map-002",
+    "clientId": "client-001",
+    "mappingType": "coa",
+    "sourceKey": "JPM_SAVINGS_5678",
+    "targetKey": "1020-Cash-Savings",
+    "status": "mapped",
+    "notes": null,
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "map-003",
+    "clientId": "client-001",
+    "mappingType": "coa",
+    "sourceKey": "SCHWAB_MARGIN_9012",
+    "targetKey": "1110-Investments-Brokerage",
+    "status": "mapped",
+    "notes": "Schwab margin account",
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "map-004",
+    "clientId": "client-001",
+    "mappingType": "coa",
+    "sourceKey": "FIDELITY_401K",
+    "targetKey": "1120-Investments-Retirement",
+    "status": "mapped",
+    "notes": "401k",
+    "updatedAt": "2025-01-20T10:00:00Z"
+  },
+  {
+    "id": "map-005",
+    "clientId": "client-001",
+    "mappingType": "coa",
+    "sourceKey": "FIDELITY_IRA",
+    "targetKey": "1121-Investments-IRA",
+    "status": "mapped",
+    "notes": "Traditional IRA",
+    "updatedAt": "2025-01-20T10:00:00Z"
+  },
+  {
+    "id": "map-006",
+    "clientId": "client-001",
+    "mappingType": "coa",
+    "sourceKey": "QBO_REVENUE_4000",
+    "targetKey": "4000-Revenue-Services",
+    "status": "mapped",
+    "notes": null,
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-007",
+    "clientId": "client-001",
+    "mappingType": "coa",
+    "sourceKey": "QBO_EXPENSE_5000",
+    "targetKey": null,
+    "status": "gap",
+    "notes": "Need to create expense category",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-008",
+    "clientId": "client-001",
+    "mappingType": "coa",
+    "sourceKey": "QBO_EXPENSE_5100",
+    "targetKey": null,
+    "status": "gap",
+    "notes": "Travel expenses - unmapped",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-009",
+    "clientId": "client-002",
+    "mappingType": "coa",
+    "sourceKey": "UBS_CHF_MAIN",
+    "targetKey": "1010-Cash-CHF",
+    "status": "mapped",
+    "notes": "Swiss franc account",
+    "updatedAt": "2025-01-20T10:00:00Z"
+  },
+  {
+    "id": "map-010",
+    "clientId": "client-002",
+    "mappingType": "coa",
+    "sourceKey": "UBS_USD_TRADING",
+    "targetKey": "1110-Investments-Trading",
+    "status": "mapped",
+    "notes": null,
+    "updatedAt": "2025-01-20T10:00:00Z"
+  },
+  {
+    "id": "map-011",
+    "clientId": "client-001",
+    "mappingType": "instrument",
+    "sourceKey": "SCHWAB:AAPL",
+    "targetKey": "US0378331005",
+    "status": "mapped",
+    "notes": "Apple Inc - ISIN",
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "map-012",
+    "clientId": "client-001",
+    "mappingType": "instrument",
+    "sourceKey": "SCHWAB:MSFT",
+    "targetKey": "US5949181045",
+    "status": "mapped",
+    "notes": "Microsoft - ISIN",
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "map-013",
+    "clientId": "client-001",
+    "mappingType": "instrument",
+    "sourceKey": "SCHWAB:GOOGL",
+    "targetKey": "US02079K3059",
+    "status": "mapped",
+    "notes": "Alphabet Class A",
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "map-014",
+    "clientId": "client-001",
+    "mappingType": "instrument",
+    "sourceKey": "FIDELITY:SPY",
+    "targetKey": "US78462F1030",
+    "status": "mapped",
+    "notes": "SPDR S&P 500 ETF",
+    "updatedAt": "2025-01-20T10:00:00Z"
+  },
+  {
+    "id": "map-015",
+    "clientId": "client-001",
+    "mappingType": "instrument",
+    "sourceKey": "FIDELITY:BND",
+    "targetKey": "US9219378356",
+    "status": "mapped",
+    "notes": "Vanguard Total Bond",
+    "updatedAt": "2025-01-20T10:00:00Z"
+  },
+  {
+    "id": "map-016",
+    "clientId": "client-001",
+    "mappingType": "instrument",
+    "sourceKey": "IBKR:NVDA",
+    "targetKey": "US67066G1040",
+    "status": "mapped",
+    "notes": "NVIDIA Corp",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-017",
+    "clientId": "client-001",
+    "mappingType": "instrument",
+    "sourceKey": "IBKR:TSLA",
+    "targetKey": "US88160R1014",
+    "status": "mapped",
+    "notes": "Tesla Inc",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-018",
+    "clientId": "client-001",
+    "mappingType": "instrument",
+    "sourceKey": "SCHWAB:XYZ123",
+    "targetKey": null,
+    "status": "gap",
+    "notes": "Unknown security - needs research",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-019",
+    "clientId": "client-001",
+    "mappingType": "instrument",
+    "sourceKey": "IBKR:PRIVATE_FUND_A",
+    "targetKey": null,
+    "status": "gap",
+    "notes": "Private fund - manual entry needed",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-020",
+    "clientId": "client-002",
+    "mappingType": "instrument",
+    "sourceKey": "UBS:NESN.VX",
+    "targetKey": "CH0038863350",
+    "status": "mapped",
+    "notes": "Nestle SA",
+    "updatedAt": "2025-01-20T10:00:00Z"
+  },
+  {
+    "id": "map-021",
+    "clientId": "client-002",
+    "mappingType": "instrument",
+    "sourceKey": "UBS:ROG.VX",
+    "targetKey": "CH0012032048",
+    "status": "mapped",
+    "notes": "Roche Holding",
+    "updatedAt": "2025-01-20T10:00:00Z"
+  },
+  {
+    "id": "map-022",
+    "clientId": "client-002",
+    "mappingType": "instrument",
+    "sourceKey": "CS:NOVN.VX",
+    "targetKey": "CH0012005267",
+    "status": "mapped",
+    "notes": "Novartis AG",
+    "updatedAt": "2025-01-20T10:00:00Z"
+  },
+  {
+    "id": "map-023",
+    "clientId": "client-003",
+    "mappingType": "coa",
+    "sourceKey": "BARCLAYS_GBP_CURRENT",
+    "targetKey": "1010-Cash-GBP",
+    "status": "mapped",
+    "notes": "UK current account",
+    "updatedAt": "2025-02-15T10:00:00Z"
+  },
+  {
+    "id": "map-024",
+    "clientId": "client-004",
+    "mappingType": "coa",
+    "sourceKey": "DBS_SGD_MAIN",
+    "targetKey": "1010-Cash-SGD",
+    "status": "mapped",
+    "notes": "Singapore dollar account",
+    "updatedAt": "2025-03-15T10:00:00Z"
+  },
+  {
+    "id": "map-025",
+    "clientId": "client-001",
+    "mappingType": "entity",
+    "sourceKey": "QBO:PETROV_FAMILY_LLC",
+    "targetKey": "entity-001",
+    "status": "mapped",
+    "notes": "Family LLC",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-026",
+    "clientId": "client-001",
+    "mappingType": "entity",
+    "sourceKey": "QBO:PETROV_TRUST",
+    "targetKey": "entity-002",
+    "status": "mapped",
+    "notes": "Family trust",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-027",
+    "clientId": "client-001",
+    "mappingType": "entity",
+    "sourceKey": "BILL:VENDOR_ABC",
+    "targetKey": null,
+    "status": "gap",
+    "notes": "New vendor - needs entity setup",
+    "updatedAt": "2025-02-03T10:00:00Z"
+  },
+  {
+    "id": "map-028",
+    "clientId": "client-002",
+    "mappingType": "entity",
+    "sourceKey": "XERO:HOLDING_CO",
+    "targetKey": "entity-010",
+    "status": "mapped",
+    "notes": "Swiss holding company",
+    "updatedAt": "2025-01-20T10:00:00Z"
+  },
+  {
+    "id": "map-029",
+    "clientId": "client-005",
+    "mappingType": "instrument",
+    "sourceKey": "IBKR:EUR.USD",
+    "targetKey": "FX:EURUSD",
+    "status": "mapped",
+    "notes": "EUR/USD forex",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-030",
+    "clientId": "client-005",
+    "mappingType": "instrument",
+    "sourceKey": "IBKR:GBP.USD",
+    "targetKey": "FX:GBPUSD",
+    "status": "mapped",
+    "notes": "GBP/USD forex",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-031",
+    "clientId": "client-006",
+    "mappingType": "coa",
+    "sourceKey": "NT_CUSTODY_USD",
+    "targetKey": "1110-Investments-Custody",
+    "status": "mapped",
+    "notes": "Northern Trust custody",
+    "updatedAt": "2025-01-10T10:00:00Z"
+  },
+  {
+    "id": "map-032",
+    "clientId": "client-006",
+    "mappingType": "instrument",
+    "sourceKey": "NT:US_TREASURY_10Y",
+    "targetKey": "US912828ZT58",
+    "status": "mapped",
+    "notes": "10Y Treasury",
+    "updatedAt": "2025-01-10T10:00:00Z"
+  },
+  {
+    "id": "map-033",
+    "clientId": "client-007",
+    "mappingType": "coa",
+    "sourceKey": "GS_PB_USD",
+    "targetKey": "1110-Investments-PrimeBrokerage",
+    "status": "mapped",
+    "notes": "Goldman prime brokerage",
+    "updatedAt": "2025-06-01T10:00:00Z"
+  },
+  {
+    "id": "map-034",
+    "clientId": "client-001",
+    "mappingType": "coa",
+    "sourceKey": "ARCH_PE_FUND_I",
+    "targetKey": "1200-Investments-PrivateEquity",
+    "status": "mapped",
+    "notes": "PE Fund I commitment",
+    "updatedAt": "2025-05-01T10:00:00Z"
+  },
+  {
+    "id": "map-035",
+    "clientId": "client-001",
+    "mappingType": "coa",
+    "sourceKey": "ARCH_VC_FUND_II",
+    "targetKey": null,
+    "status": "gap",
+    "notes": "New VC fund - needs COA setup",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-036",
+    "clientId": "client-001",
+    "mappingType": "instrument",
+    "sourceKey": "SCHWAB:AMZN",
+    "targetKey": "US0231351067",
+    "status": "mapped",
+    "notes": "Amazon.com Inc",
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "map-037",
+    "clientId": "client-001",
+    "mappingType": "instrument",
+    "sourceKey": "SCHWAB:META",
+    "targetKey": "US30303M1027",
+    "status": "mapped",
+    "notes": "Meta Platforms",
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "map-038",
+    "clientId": "client-002",
+    "mappingType": "coa",
+    "sourceKey": "CS_EUR_TRADING",
+    "targetKey": null,
+    "status": "gap",
+    "notes": "Credit Suisse EUR - pending migration",
+    "updatedAt": "2025-01-25T10:00:00Z"
+  },
+  {
+    "id": "map-039",
+    "clientId": "client-001",
+    "mappingType": "entity",
+    "sourceKey": "SCHWAB:JOINT_ACCT",
+    "targetKey": null,
+    "status": "gap",
+    "notes": "Joint account - ownership TBD",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-040",
+    "clientId": "client-003",
+    "mappingType": "instrument",
+    "sourceKey": "BARCLAYS:HSBA.L",
+    "targetKey": "GB0005405286",
+    "status": "mapped",
+    "notes": "HSBC Holdings",
+    "updatedAt": "2025-02-15T10:00:00Z"
+  },
+  {
+    "id": "map-041",
+    "clientId": "client-003",
+    "mappingType": "instrument",
+    "sourceKey": "BARCLAYS:BP.L",
+    "targetKey": "GB0007980591",
+    "status": "mapped",
+    "notes": "BP PLC",
+    "updatedAt": "2025-02-15T10:00:00Z"
+  },
+  {
+    "id": "map-042",
+    "clientId": "client-004",
+    "mappingType": "instrument",
+    "sourceKey": "DBS:D05.SI",
+    "targetKey": "SG1L01001701",
+    "status": "mapped",
+    "notes": "DBS Group Holdings",
+    "updatedAt": "2025-03-15T10:00:00Z"
+  },
+  {
+    "id": "map-043",
+    "clientId": "client-005",
+    "mappingType": "coa",
+    "sourceKey": "IBKR_MARGIN_USD",
+    "targetKey": "1110-Investments-Margin",
+    "status": "mapped",
+    "notes": "IBKR margin account",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-044",
+    "clientId": "client-005",
+    "mappingType": "instrument",
+    "sourceKey": "IBKR:VIX_FUTURE",
+    "targetKey": null,
+    "status": "gap",
+    "notes": "VIX future - needs derivative setup",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-045",
+    "clientId": "client-001",
+    "mappingType": "coa",
+    "sourceKey": "BILL_PAYABLE_2000",
+    "targetKey": "2000-AP-Trade",
+    "status": "mapped",
+    "notes": "Trade payables",
+    "updatedAt": "2025-04-01T10:00:00Z"
+  },
+  {
+    "id": "map-046",
+    "clientId": "client-001",
+    "mappingType": "coa",
+    "sourceKey": "BILL_EXPENSE_LEGAL",
+    "targetKey": "5200-Expense-Legal",
+    "status": "mapped",
+    "notes": "Legal expenses",
+    "updatedAt": "2025-04-01T10:00:00Z"
+  },
+  {
+    "id": "map-047",
+    "clientId": "client-006",
+    "mappingType": "instrument",
+    "sourceKey": "NT:CORP_BOND_XYZ",
+    "targetKey": null,
+    "status": "gap",
+    "notes": "Corporate bond - CUSIP pending",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-048",
+    "clientId": "client-007",
+    "mappingType": "instrument",
+    "sourceKey": "GS:SWAP_IRS_5Y",
+    "targetKey": "SWAP:IRS:5Y:USD",
+    "status": "mapped",
+    "notes": "5Y interest rate swap",
+    "updatedAt": "2025-06-01T10:00:00Z"
+  },
+  {
+    "id": "map-049",
+    "clientId": "client-001",
+    "mappingType": "entity",
+    "sourceKey": "ARCH:GP_ENTITY",
+    "targetKey": "entity-005",
+    "status": "mapped",
+    "notes": "GP entity for PE",
+    "updatedAt": "2025-05-01T10:00:00Z"
+  },
+  {
+    "id": "map-050",
+    "clientId": "client-002",
+    "mappingType": "entity",
+    "sourceKey": "UBS:FOUNDATION",
+    "targetKey": "entity-012",
+    "status": "mapped",
+    "notes": "Family foundation",
+    "updatedAt": "2025-01-20T10:00:00Z"
+  },
+  {
+    "id": "map-051",
+    "clientId": "client-001",
+    "mappingType": "coa",
+    "sourceKey": "QBO_AR_1200",
+    "targetKey": "1200-AR-Trade",
+    "status": "mapped",
+    "notes": "Trade receivables",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-052",
+    "clientId": "client-001",
+    "mappingType": "coa",
+    "sourceKey": "QBO_PREPAID_1300",
+    "targetKey": "1300-Prepaid-Insurance",
+    "status": "mapped",
+    "notes": "Prepaid insurance",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-053",
+    "clientId": "client-001",
+    "mappingType": "instrument",
+    "sourceKey": "FIDELITY:VTI",
+    "targetKey": "US9229087690",
+    "status": "mapped",
+    "notes": "Vanguard Total Stock Market ETF",
+    "updatedAt": "2025-01-20T10:00:00Z"
+  },
+  {
+    "id": "map-054",
+    "clientId": "client-001",
+    "mappingType": "instrument",
+    "sourceKey": "FIDELITY:VXUS",
+    "targetKey": "US9219438580",
+    "status": "mapped",
+    "notes": "Vanguard Total Intl Stock ETF",
+    "updatedAt": "2025-01-20T10:00:00Z"
+  },
+  {
+    "id": "map-055",
+    "clientId": "client-002",
+    "mappingType": "instrument",
+    "sourceKey": "UBS:STRUCTURED_NOTE_A",
+    "targetKey": null,
+    "status": "gap",
+    "notes": "Structured note - manual valuation",
+    "updatedAt": "2025-01-25T10:00:00Z"
+  },
+  {
+    "id": "map-056",
+    "clientId": "client-001",
+    "mappingType": "entity",
+    "sourceKey": "SCHWAB:IRA_BENEFICIARY",
+    "targetKey": "entity-003",
+    "status": "mapped",
+    "notes": "IRA beneficiary trust",
+    "updatedAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "map-057",
+    "clientId": "client-005",
+    "mappingType": "instrument",
+    "sourceKey": "IBKR:OPTION_SPY_CALL",
+    "targetKey": null,
+    "status": "gap",
+    "notes": "SPY call option - needs derivative setup",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "map-058",
+    "clientId": "client-006",
+    "mappingType": "coa",
+    "sourceKey": "NT_INCOME_DIV",
+    "targetKey": "4100-Income-Dividends",
+    "status": "mapped",
+    "notes": "Dividend income",
+    "updatedAt": "2025-01-10T10:00:00Z"
+  },
+  {
+    "id": "map-059",
+    "clientId": "client-006",
+    "mappingType": "coa",
+    "sourceKey": "NT_INCOME_INT",
+    "targetKey": "4200-Income-Interest",
+    "status": "mapped",
+    "notes": "Interest income",
+    "updatedAt": "2025-01-10T10:00:00Z"
+  },
+  {
+    "id": "map-060",
+    "clientId": "client-007",
+    "mappingType": "coa",
+    "sourceKey": "GS_MARGIN_INTEREST",
+    "targetKey": "5300-Expense-MarginInterest",
+    "status": "mapped",
+    "notes": "Margin interest expense",
+    "updatedAt": "2025-06-01T10:00:00Z"
+  }
+]

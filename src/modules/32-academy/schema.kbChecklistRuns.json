@@ -1,0 +1,16 @@
+{
+  "collection": "kbChecklistRuns",
+  "description": "User progress on checklists",
+  "fields": {
+    "id": { "type": "string", "required": true, "primary": true },
+    "clientId": { "type": "string", "required": true },
+    "checklistId": { "type": "string", "required": true },
+    "userId": { "type": "string", "required": true },
+    "stepStatesJson": { "type": "array", "items": "object", "description": "Array of step states with stepId, completed, completedAt, evidenceDocId" },
+    "completionPct": { "type": "number", "default": 0 },
+    "status": { "type": "enum", "values": ["in_progress", "completed", "abandoned"], "default": "in_progress" },
+    "startedAt": { "type": "datetime", "required": true },
+    "completedAt": { "type": "datetime" }
+  },
+  "indexes": ["clientId", "checklistId", "userId", "status"]
+}

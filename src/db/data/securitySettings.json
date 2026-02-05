@@ -1,0 +1,18 @@
+[
+  {
+    "id": "settings-001",
+    "clientId": "global",
+    "awsRegion": "eu-central-1",
+    "dedicatedUrl": "wealthos.aurora-family.com",
+    "tenantIsolationMode": "shared",
+    "dataRetentionDays": 2555,
+    "passwordPolicyJson": "{\"minLength\": 12, \"requireUppercase\": true, \"requireLowercase\": true, \"requireNumbers\": true, \"requireSpecial\": true, \"maxAge\": 90, \"historyCount\": 12}",
+    "ssoJson": "{\"enabled\": false, \"provider\": null, \"domain\": null}",
+    "clientSafeDefaultsJson": "{\"hideInternalNotes\": true, \"allowedModules\": [\"networth\", \"portfolio\", \"performance\", \"reporting\", \"comms\"], \"maxExportRows\": 100}",
+    "mfaRequired": true,
+    "sessionTimeoutMinutes": 30,
+    "ipWhitelistEnabled": false,
+    "ipWhitelist": [],
+    "updatedAt": "2025-01-15T10:00:00Z"
+  }
+]

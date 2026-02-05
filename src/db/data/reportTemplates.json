@@ -1,0 +1,571 @@
+[
+  {
+    "id": "tpl-001",
+    "name": "Executive Quarterly Report",
+    "description": "Standard quarterly report template for executive leadership with performance, allocation, and commentary sections",
+    "packType": "executive",
+    "defaultPeriodType": "quarterly",
+    "sections": [
+      {
+        "sectionType": "cover",
+        "title": "Executive Report",
+        "order": 1,
+        "displayConfig": { "showTitle": true },
+        "isRequired": true,
+        "helpText": "Automatically generated cover page"
+      },
+      {
+        "sectionType": "executive-summary",
+        "title": "Executive Summary",
+        "order": 2,
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true,
+        "helpText": "High-level summary of key metrics and highlights"
+      },
+      {
+        "sectionType": "performance",
+        "title": "Portfolio Performance",
+        "order": 3,
+        "dataSource": { "moduleKey": "performance" },
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true,
+        "helpText": "Performance data pulled from Performance module"
+      },
+      {
+        "sectionType": "allocation",
+        "title": "Asset Allocation",
+        "order": 4,
+        "dataSource": { "moduleKey": "net-worth" },
+        "displayConfig": { "showTitle": true },
+        "isRequired": true,
+        "helpText": "Asset allocation breakdown"
+      },
+      {
+        "sectionType": "risk",
+        "title": "Risk Overview",
+        "order": 5,
+        "dataSource": { "moduleKey": "risk" },
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true,
+        "helpText": "Risk summary and key metrics"
+      },
+      {
+        "sectionType": "liquidity",
+        "title": "Liquidity Summary",
+        "order": 6,
+        "dataSource": { "moduleKey": "liquidity" },
+        "displayConfig": { "showTitle": true },
+        "isRequired": false,
+        "helpText": "Cash and liquidity forecast"
+      },
+      {
+        "sectionType": "fees",
+        "title": "Fee Summary",
+        "order": 7,
+        "dataSource": { "moduleKey": "fees" },
+        "displayConfig": { "showTitle": true },
+        "isRequired": false,
+        "helpText": "Fee breakdown"
+      },
+      {
+        "sectionType": "commentary",
+        "title": "Market Commentary",
+        "order": 8,
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": false,
+        "helpText": "Optional market commentary section"
+      }
+    ],
+    "footerHtml": "<p>Confidential - For Internal Use Only</p>",
+    "primaryColor": "#1a5f4a",
+    "isGlobal": true,
+    "roleAccess": ["admin", "manager", "cfo", "cio"],
+    "isActive": true,
+    "version": 2,
+    "category": "standard",
+    "tags": ["executive", "quarterly"],
+    "createdBy": "usr-001",
+    "createdAt": "2024-10-01T00:00:00Z",
+    "updatedAt": "2025-01-10T00:00:00Z"
+  },
+  {
+    "id": "tpl-002",
+    "name": "Investment Committee Pack",
+    "description": "Monthly investment committee meeting materials with IPS status, risk analysis, and performance review",
+    "packType": "committee",
+    "defaultPeriodType": "monthly",
+    "sections": [
+      {
+        "sectionType": "cover",
+        "title": "Investment Committee Meeting",
+        "order": 1,
+        "displayConfig": { "showTitle": true },
+        "isRequired": true,
+        "helpText": "Cover page with meeting details"
+      },
+      {
+        "sectionType": "toc",
+        "title": "Agenda",
+        "order": 2,
+        "displayConfig": { "showTitle": true },
+        "isRequired": true,
+        "helpText": "Auto-generated table of contents"
+      },
+      {
+        "sectionType": "executive-summary",
+        "title": "Summary of Key Issues",
+        "order": 3,
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true,
+        "helpText": "Key items for committee attention"
+      },
+      {
+        "sectionType": "ips-status",
+        "title": "IPS Compliance Status",
+        "subtitle": "Active Breaches and Waivers",
+        "order": 4,
+        "dataSource": { "moduleKey": "ips" },
+        "displayConfig": { "showTitle": true, "showSubtitle": true, "pageBreakBefore": true },
+        "isRequired": true,
+        "helpText": "IPS breach and waiver summary"
+      },
+      {
+        "sectionType": "risk",
+        "title": "Risk Analysis",
+        "order": 5,
+        "dataSource": { "moduleKey": "risk" },
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true,
+        "helpText": "Risk metrics and alerts"
+      },
+      {
+        "sectionType": "performance",
+        "title": "Performance Review",
+        "order": 6,
+        "dataSource": { "moduleKey": "performance" },
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true,
+        "helpText": "Performance vs benchmarks"
+      },
+      {
+        "sectionType": "custom",
+        "title": "Recommendations",
+        "order": 7,
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": false,
+        "helpText": "Recommendations for committee decision"
+      },
+      {
+        "sectionType": "appendix",
+        "title": "Appendix",
+        "subtitle": "Supporting Documentation",
+        "order": 8,
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": false,
+        "helpText": "Supporting documents and detail reports"
+      }
+    ],
+    "footerHtml": "<p>Confidential - Investment Committee Materials</p>",
+    "primaryColor": "#4f46e5",
+    "isGlobal": true,
+    "roleAccess": ["admin", "manager", "analyst", "cio"],
+    "isActive": true,
+    "version": 2,
+    "category": "committee",
+    "tags": ["committee", "monthly", "compliance"],
+    "createdBy": "usr-002",
+    "createdAt": "2024-10-01T00:00:00Z",
+    "updatedAt": "2025-01-05T00:00:00Z"
+  },
+  {
+    "id": "tpl-003",
+    "name": "Client Quarterly Statement",
+    "description": "Standard client-facing quarterly report with performance, holdings, transactions, and fees",
+    "packType": "client",
+    "defaultPeriodType": "quarterly",
+    "sections": [
+      {
+        "sectionType": "cover",
+        "title": "Quarterly Statement",
+        "order": 1,
+        "displayConfig": { "showTitle": true },
+        "isRequired": true,
+        "helpText": "Personalized cover page"
+      },
+      {
+        "sectionType": "executive-summary",
+        "title": "Portfolio Overview",
+        "order": 2,
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true,
+        "helpText": "Portfolio summary for client"
+      },
+      {
+        "sectionType": "performance",
+        "title": "Portfolio Performance",
+        "order": 3,
+        "dataSource": { "moduleKey": "performance" },
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true,
+        "helpText": "Client portfolio performance"
+      },
+      {
+        "sectionType": "allocation",
+        "title": "Asset Allocation",
+        "order": 4,
+        "dataSource": { "moduleKey": "net-worth" },
+        "displayConfig": { "showTitle": true },
+        "isRequired": true,
+        "helpText": "Current asset allocation"
+      },
+      {
+        "sectionType": "holdings",
+        "title": "Holdings Summary",
+        "order": 5,
+        "dataSource": { "moduleKey": "net-worth" },
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true,
+        "helpText": "Holdings detail"
+      },
+      {
+        "sectionType": "transactions",
+        "title": "Transaction Summary",
+        "order": 6,
+        "dataSource": { "moduleKey": "general-ledger" },
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true,
+        "helpText": "Period transactions"
+      },
+      {
+        "sectionType": "fees",
+        "title": "Fee Summary",
+        "order": 7,
+        "dataSource": { "moduleKey": "fees" },
+        "displayConfig": { "showTitle": true },
+        "isRequired": true,
+        "helpText": "Fee breakdown for the period"
+      }
+    ],
+    "footerHtml": "<p>Questions? Contact your relationship manager.</p>",
+    "primaryColor": "#0d9488",
+    "isGlobal": true,
+    "roleAccess": ["admin", "manager", "rm"],
+    "isActive": true,
+    "version": 1,
+    "category": "client",
+    "tags": ["client", "quarterly", "statement"],
+    "createdBy": "usr-004",
+    "createdAt": "2024-10-01T00:00:00Z",
+    "updatedAt": "2024-12-15T00:00:00Z"
+  },
+  {
+    "id": "tpl-004",
+    "name": "Compliance Annual Review",
+    "description": "Annual compliance review template with IPS status, breach history, and regulatory compliance",
+    "packType": "compliance",
+    "defaultPeriodType": "annual",
+    "sections": [
+      {
+        "sectionType": "cover",
+        "title": "Annual Compliance Review",
+        "order": 1,
+        "displayConfig": { "showTitle": true },
+        "isRequired": true,
+        "helpText": "Cover page"
+      },
+      {
+        "sectionType": "toc",
+        "title": "Table of Contents",
+        "order": 2,
+        "displayConfig": { "showTitle": true },
+        "isRequired": true,
+        "helpText": "Auto-generated TOC"
+      },
+      {
+        "sectionType": "executive-summary",
+        "title": "Compliance Overview",
+        "order": 3,
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true,
+        "helpText": "Overall compliance status"
+      },
+      {
+        "sectionType": "ips-status",
+        "title": "IPS Breach Summary",
+        "subtitle": "Annual Review",
+        "order": 4,
+        "dataSource": { "moduleKey": "ips" },
+        "displayConfig": { "showTitle": true, "showSubtitle": true, "pageBreakBefore": true },
+        "isRequired": true,
+        "helpText": "IPS breach history and resolution"
+      },
+      {
+        "sectionType": "risk",
+        "title": "Risk Assessment",
+        "order": 5,
+        "dataSource": { "moduleKey": "risk" },
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true,
+        "helpText": "Risk metrics and trends"
+      },
+      {
+        "sectionType": "appendix",
+        "title": "Supporting Documentation",
+        "order": 6,
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": false,
+        "helpText": "Attach supporting documents"
+      }
+    ],
+    "footerHtml": "<p>Confidential - Compliance Documentation</p>",
+    "primaryColor": "#ea580c",
+    "isGlobal": true,
+    "roleAccess": ["admin", "compliance"],
+    "isActive": true,
+    "version": 1,
+    "category": "compliance",
+    "tags": ["compliance", "annual", "regulatory"],
+    "createdBy": "usr-005",
+    "createdAt": "2024-10-01T00:00:00Z",
+    "updatedAt": "2024-11-01T00:00:00Z"
+  },
+  {
+    "id": "tpl-005",
+    "name": "Investor Demo Pack",
+    "description": "Quick demo pack for prospective investors showing capabilities and sample data",
+    "packType": "executive",
+    "defaultPeriodType": "quarterly",
+    "sections": [
+      {
+        "sectionType": "cover",
+        "title": "Wealth Management Platform Demo",
+        "order": 1,
+        "displayConfig": { "showTitle": true },
+        "isRequired": true
+      },
+      {
+        "sectionType": "executive-summary",
+        "title": "Platform Overview",
+        "order": 2,
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true
+      },
+      {
+        "sectionType": "performance",
+        "title": "Performance Analytics",
+        "order": 3,
+        "dataSource": { "moduleKey": "performance" },
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true
+      },
+      {
+        "sectionType": "allocation",
+        "title": "Portfolio Intelligence",
+        "order": 4,
+        "dataSource": { "moduleKey": "net-worth" },
+        "displayConfig": { "showTitle": true },
+        "isRequired": true
+      },
+      {
+        "sectionType": "risk",
+        "title": "Risk Management",
+        "order": 5,
+        "dataSource": { "moduleKey": "risk" },
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true
+      },
+      {
+        "sectionType": "ai-narrative",
+        "title": "AI-Powered Insights",
+        "order": 6,
+        "dataSource": { "moduleKey": "ai" },
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": false
+      }
+    ],
+    "footerHtml": "<p>Demo Data - For Illustration Purposes Only</p>",
+    "primaryColor": "#059669",
+    "isGlobal": true,
+    "roleAccess": ["admin", "manager"],
+    "isActive": true,
+    "version": 1,
+    "category": "demo",
+    "tags": ["demo", "investor", "presentation"],
+    "createdBy": "usr-001",
+    "createdAt": "2024-11-01T00:00:00Z",
+    "updatedAt": "2025-01-15T00:00:00Z"
+  },
+  {
+    "id": "tpl-006",
+    "name": "Tax Planning Report",
+    "description": "Annual tax planning report with gains summary, harvesting opportunities, and deadlines",
+    "packType": "client",
+    "defaultPeriodType": "annual",
+    "sections": [
+      {
+        "sectionType": "cover",
+        "title": "Tax Planning Report",
+        "order": 1,
+        "displayConfig": { "showTitle": true },
+        "isRequired": true
+      },
+      {
+        "sectionType": "executive-summary",
+        "title": "Tax Summary",
+        "order": 2,
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true
+      },
+      {
+        "sectionType": "tax-summary",
+        "title": "Realized Gains & Losses",
+        "order": 3,
+        "dataSource": { "moduleKey": "tax" },
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true
+      },
+      {
+        "sectionType": "custom",
+        "title": "Tax Loss Harvesting Opportunities",
+        "order": 4,
+        "dataSource": { "moduleKey": "tax" },
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": false
+      },
+      {
+        "sectionType": "custom",
+        "title": "Upcoming Deadlines",
+        "order": 5,
+        "dataSource": { "moduleKey": "tax" },
+        "displayConfig": { "showTitle": true },
+        "isRequired": true
+      },
+      {
+        "sectionType": "commentary",
+        "title": "Tax Advisor Notes",
+        "order": 6,
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": false
+      }
+    ],
+    "footerHtml": "<p>Not tax advice. Consult your tax professional.</p>",
+    "primaryColor": "#7c3aed",
+    "isGlobal": true,
+    "roleAccess": ["admin", "manager", "tax-advisor"],
+    "isActive": true,
+    "version": 1,
+    "category": "tax",
+    "tags": ["tax", "planning", "annual"],
+    "createdBy": "usr-003",
+    "createdAt": "2024-11-15T00:00:00Z",
+    "updatedAt": "2025-01-08T00:00:00Z"
+  },
+  {
+    "id": "tpl-007",
+    "name": "Trust Distribution Report",
+    "description": "Periodic trust distribution report for beneficiaries",
+    "packType": "client",
+    "defaultPeriodType": "quarterly",
+    "sections": [
+      {
+        "sectionType": "cover",
+        "title": "Trust Distribution Report",
+        "order": 1,
+        "displayConfig": { "showTitle": true },
+        "isRequired": true
+      },
+      {
+        "sectionType": "executive-summary",
+        "title": "Trust Overview",
+        "order": 2,
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true
+      },
+      {
+        "sectionType": "trusts",
+        "title": "Distribution Summary",
+        "order": 3,
+        "dataSource": { "moduleKey": "trusts" },
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true
+      },
+      {
+        "sectionType": "custom",
+        "title": "Upcoming Distributions",
+        "order": 4,
+        "dataSource": { "moduleKey": "trusts" },
+        "displayConfig": { "showTitle": true },
+        "isRequired": false
+      },
+      {
+        "sectionType": "performance",
+        "title": "Trust Performance",
+        "order": 5,
+        "dataSource": { "moduleKey": "performance" },
+        "displayConfig": { "showTitle": true, "pageBreakBefore": true },
+        "isRequired": true
+      }
+    ],
+    "footerHtml": "<p>Not legal advice. Consult your attorney.</p>",
+    "primaryColor": "#0891b2",
+    "isGlobal": true,
+    "roleAccess": ["admin", "trustee"],
+    "isActive": true,
+    "version": 1,
+    "category": "trusts",
+    "tags": ["trust", "distribution", "beneficiary"],
+    "createdBy": "usr-003",
+    "createdAt": "2024-12-01T00:00:00Z",
+    "updatedAt": "2025-01-12T00:00:00Z"
+  },
+  {
+    "id": "tpl-008",
+    "name": "Monthly Performance Flash",
+    "description": "Quick monthly performance update for stakeholders",
+    "packType": "executive",
+    "defaultPeriodType": "monthly",
+    "sections": [
+      {
+        "sectionType": "cover",
+        "title": "Monthly Performance Flash",
+        "order": 1,
+        "displayConfig": { "showTitle": true },
+        "isRequired": true
+      },
+      {
+        "sectionType": "performance",
+        "title": "Month Performance",
+        "order": 2,
+        "dataSource": { "moduleKey": "performance" },
+        "displayConfig": { "showTitle": true },
+        "isRequired": true
+      },
+      {
+        "sectionType": "allocation",
+        "title": "Current Allocation",
+        "order": 3,
+        "dataSource": { "moduleKey": "net-worth" },
+        "displayConfig": { "showTitle": true },
+        "isRequired": true
+      },
+      {
+        "sectionType": "commentary",
+        "title": "Key Highlights",
+        "order": 4,
+        "displayConfig": { "showTitle": true },
+        "isRequired": false
+      }
+    ],
+    "footerHtml": "<p>Internal Use Only</p>",
+    "primaryColor": "#2563eb",
+    "isGlobal": true,
+    "roleAccess": ["admin", "manager", "analyst"],
+    "isActive": true,
+    "version": 1,
+    "category": "standard",
+    "tags": ["monthly", "performance", "flash"],
+    "createdBy": "usr-001",
+    "createdAt": "2024-12-15T00:00:00Z",
+    "updatedAt": "2025-01-18T00:00:00Z"
+  }
+]

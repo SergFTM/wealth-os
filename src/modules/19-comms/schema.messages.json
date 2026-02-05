@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CommMessage",
+  "type": "object",
+  "required": ["id", "threadId", "authorId", "authorRole", "messageType", "content", "createdAt"],
+  "properties": {
+    "id": { "type": "string", "description": "Unique message identifier" },
+    "threadId": { "type": "string", "description": "Parent thread ID" },
+    "authorId": { "type": "string", "description": "Author user ID" },
+    "authorRole": {
+      "type": "string",
+      "enum": ["owner", "admin", "rm", "compliance", "operations", "advisor", "client"],
+      "description": "Author role at time of posting"
+    },
+    "messageType": {
+      "type": "string",
+      "enum": ["normal", "system", "internal_note"],
+      "description": "Type of message"
+    },
+    "content": { "type": "string", "description": "Message content (markdown supported)" },
+    "attachmentIds": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Array of attachment IDs"
+    },
+    "linkedRefsJson": { "type": "string", "description": "JSON array of linked object references" },
+    "createdAt": { "type": "string", "format": "date-time" }
+  }
+}

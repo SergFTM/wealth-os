@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sandbox Sync Job",
+  "description": "Sync job execution in sandbox environment",
+  "type": "object",
+  "required": ["id", "clientId", "envId", "connectorId", "jobType", "status", "createdAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/tenant identifier"
+    },
+    "envId": {
+      "type": "string",
+      "description": "Sandbox environment ID"
+    },
+    "connectorId": {
+      "type": "string",
+      "description": "Mock connector ID"
+    },
+    "jobType": {
+      "type": "string",
+      "enum": ["pull", "push", "sync", "validate"],
+      "default": "pull"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "running", "completed", "failed", "cancelled"],
+      "default": "pending"
+    },
+    "entityType": {
+      "type": "string",
+      "description": "Entity type being synced (transactions, positions, invoices, etc.)"
+    },
+    "startedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "finishedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "recordsProcessed": {
+      "type": "number",
+      "default": 0
+    },
+    "recordsCreated": {
+      "type": "number",
+      "default": 0
+    },
+    "recordsUpdated": {
+      "type": "number",
+      "default": 0
+    },
+    "errorCount": {
+      "type": "number",
+      "default": 0
+    },
+    "summaryJson": {
+      "type": "object",
+      "description": "Job execution summary",
+      "properties": {
+        "durationMs": { "type": "number" },
+        "payloadIds": { "type": "array", "items": { "type": "string" } },
+        "mappingApplied": { "type": "boolean" },
+        "errorDetails": { "type": "array", "items": { "type": "object" } }
+      }
+    },
+    "triggeredBy": {
+      "type": "string",
+      "description": "User or system that triggered the job"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

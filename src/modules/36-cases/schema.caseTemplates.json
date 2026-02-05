@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CaseTemplate",
+  "type": "object",
+  "required": ["id", "clientId", "name", "defaultType", "defaultPriority", "createdAt", "updatedAt"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "clientId": { "type": "string", "format": "uuid" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "nameRu": { "type": ["string", "null"] },
+    "nameUk": { "type": ["string", "null"] },
+    "description": { "type": ["string", "null"], "maxLength": 2000 },
+    "descriptionRu": { "type": ["string", "null"] },
+    "descriptionUk": { "type": ["string", "null"] },
+    "defaultType": {
+      "type": "string",
+      "enum": ["request", "incident", "change", "problem"]
+    },
+    "defaultPriority": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"]
+    },
+    "defaultSlaPolicyId": { "type": ["string", "null"], "format": "uuid" },
+    "defaultRoutingRole": { "type": ["string", "null"] },
+    "defaultAssigneeUserId": { "type": ["string", "null"], "format": "uuid" },
+    "defaultScopeType": {
+      "type": ["string", "null"],
+      "enum": ["household", "entity", "portfolio", "account", null]
+    },
+    "defaultClientVisible": { "type": "boolean", "default": false },
+    "titleTemplate": { "type": ["string", "null"], "maxLength": 500 },
+    "descriptionTemplate": { "type": ["string", "null"], "maxLength": 5000 },
+    "fieldsJson": { "type": ["string", "null"] },
+    "tagsJson": { "type": ["string", "null"] },
+    "isActive": { "type": "boolean", "default": true },
+    "usageCount": { "type": "integer", "default": 0 },
+    "category": { "type": ["string", "null"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

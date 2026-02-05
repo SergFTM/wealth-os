@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CapitalEvent",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/tenant ID" },
+    "scopeType": { "type": "string", "enum": ["fund", "vehicle", "commitment", "portfolio"], "description": "Scope type" },
+    "scopeId": { "type": "string", "description": "Scope entity ID" },
+    "vehicleName": { "type": "string", "description": "Fund/vehicle name" },
+    "eventDate": { "type": "string", "format": "date-time", "description": "Event date" },
+    "dueDate": { "type": "string", "format": "date-time", "description": "Due date for capital call" },
+    "eventType": { "type": "string", "enum": ["capital_call", "distribution", "valuation", "funding_round"], "description": "Event type" },
+    "amount": { "type": "number", "description": "Event amount" },
+    "currency": { "type": "string", "default": "USD" },
+    "status": { "type": "string", "enum": ["announced", "open", "partially_funded", "closed", "cancelled"], "default": "open" },
+    "linkedRefsJson": { "type": "string", "description": "JSON array of linked commitment/deal refs" },
+    "sourceRefsJson": { "type": "string", "description": "JSON array of source references" },
+    "glRefId": { "type": "string", "description": "GL transaction reference ID" },
+    "notes": { "type": "string", "description": "Notes" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "vehicleName", "eventDate", "eventType", "amount", "currency", "status"]
+}

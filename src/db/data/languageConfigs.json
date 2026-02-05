@@ -1,0 +1,16 @@
+[
+  {
+    "id": "lang_001",
+    "clientId": "client_001",
+    "defaultLanguage": "ru",
+    "enabledLanguages": ["ru", "en", "uk"],
+    "overrides": [
+      { "key": "dashboard.title", "valueRu": "Главная", "valueEn": "Home", "valueUk": "Головна" },
+      { "key": "netWorth.title", "valueRu": "Единый капитал", "valueEn": "Net Worth", "valueUk": "Єдиний капітал" },
+      { "key": "documents.title", "valueRu": "Документы", "valueEn": "Documents", "valueUk": "Документи" },
+      { "key": "reports.title", "valueRu": "Отчеты", "valueEn": "Reports", "valueUk": "Звіти" },
+      { "key": "tasks.title", "valueRu": "Задачи", "valueEn": "Tasks", "valueUk": "Задачі" }
+    ],
+    "updatedAt": "2025-02-01T10:00:00Z"
+  }
+]

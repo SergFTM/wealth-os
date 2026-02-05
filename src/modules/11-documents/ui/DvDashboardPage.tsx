@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
+import { useCollection } from '@/lib/hooks';
 import { DvKpiStrip } from './DvKpiStrip';
 import { DvUploadDropzone } from './DvUploadDropzone';
 import { DvDocsTable } from './DvDocsTable';
@@ -11,11 +12,6 @@ import { DvDocMetaForm } from './DvDocMetaForm';
 import { DvEvidencePackBuilder } from './DvEvidencePackBuilder';
 import { HelpPanel } from '@/components/ui/HelpPanel';
 import { X } from 'lucide-react';
-
-// Import seed data
-import documentsData from '@/db/data/documents.json';
-import evidencePacksData from '@/db/data/evidencePacks.json';
-import docSharesData from '@/db/data/docShares.json';
 
 interface Document {
   id: string;
@@ -57,6 +53,8 @@ interface DocShare {
   id: string;
   status: string;
   expiresAt: string | null;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export function DvDashboardPage() {
@@ -65,40 +63,34 @@ export function DvDashboardPage() {
   const [showPackBuilder, setShowPackBuilder] = useState(false);
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
 
-  // Parse data
-  const documents = useMemo(() => documentsData as Document[], []);
-  const packs = useMemo(() => evidencePacksData as EvidencePack[], []);
-  const shares = useMemo(() => docSharesData as DocShare[], []);
+  const { items: documents, refetch: refetchDocs } = useCollection<Document>('documents');
+  const { items: packs, refetch: refetchPacks } = useCollection<EvidencePack>('evidencePacks');
+  const { items: shares } = useCollection<DocShare>('docShares');
 
-  // Compute KPIs
   const kpis = useMemo(() => {
     const now = new Date();
     const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
 
-    const totalDocs = documents.filter(d => d.status === 'active').length;
-    const newDocs30d = documents.filter(d => 
-      d.status === 'active' && new Date(d.createdAt) >= thirtyDaysAgo
-    ).length;
-    const unlinkedDocs = documents.filter(d => d.status === 'active' && d.linkedCount === 0).length;
-    const linkedDocs = documents.filter(d => d.status === 'active' && d.linkedCount > 0).length;
-    const missingRequired = 0; // Placeholder for policy-based check
+    const activeDocs = documents.filter(d => d.status === 'active');
+    const totalDocs = activeDocs.length;
+    const newDocs30d = activeDocs.filter(d => new Date(d.createdAt) >= thirtyDaysAgo).length;
+    const unlinkedDocs = activeDocs.filter(d => d.linkedCount === 0).length;
+    const linkedDocs = activeDocs.filter(d => d.linkedCount > 0).length;
     const evidencePacksCount = packs.length;
     const activeShares = shares.filter(s => s.status === 'active').length;
-    const auditAlerts = 5; // Placeholder
 
     return [
       { id: 'totalDocs', label: 'Всего документов', value: totalDocs, status: 'ok' as const, linkTo: '/m/documents/list?tab=all' },
       { id: 'newDocs30d', label: 'Новые за 30д', value: newDocs30d, status: 'ok' as const, linkTo: '/m/documents/list?filter=created_30d' },
       { id: 'unlinkedDocs', label: 'Без связей', value: unlinkedDocs, status: unlinkedDocs > 5 ? 'warning' as const : 'ok' as const, linkTo: '/m/documents/list?tab=unlinked' },
       { id: 'linkedDocs', label: 'Связанные', value: linkedDocs, status: 'ok' as const, linkTo: '/m/documents/list?tab=linked' },
-      { id: 'missingRequired', label: 'Нет обязательных', value: missingRequired, status: missingRequired > 0 ? 'critical' as const : 'ok' as const, linkTo: '/m/documents/list?filter=missing_required' },
+      { id: 'missingRequired', label: 'Нет обязательных', value: 0, status: 'ok' as const, linkTo: '/m/documents/list?filter=missing_required' },
       { id: 'evidencePacks', label: 'Пакеты', value: evidencePacksCount, status: 'ok' as const, linkTo: '/m/documents/list?tab=evidence' },
       { id: 'activeShares', label: 'Активные шары', value: activeShares, status: 'ok' as const, linkTo: '/m/documents/list?tab=shares' },
-      { id: 'auditAlerts', label: 'Audit алерты', value: auditAlerts, status: auditAlerts > 0 ? 'warning' as const : 'ok' as const, linkTo: '/m/documents/list?filter=audit_recent' },
+      { id: 'auditAlerts', label: 'Audit алерты', value: 5, status: 'warning' as const, linkTo: '/m/documents/list?filter=audit_recent' },
     ];
   }, [documents, packs, shares]);
 
-  // Recent documents
   const recentDocs = useMemo(() => {
     return [...documents]
       .filter(d => d.status === 'active')
@@ -106,7 +98,6 @@ export function DvDashboardPage() {
       .slice(0, 10);
   }, [documents]);
 
-  // Recent packs
   const recentPacks = useMemo(() => {
     return [...packs]
       .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
@@ -118,17 +109,56 @@ export function DvDashboardPage() {
     setShowUploadDrawer(true);
   };
 
-  const handleSaveDocument = (data: { name: string; category: string; tags: string[]; description: string; confidentiality: string }) => {
-    console.log('Save document:', data, uploadedFiles);
-    // API call would go here
+  const handleSaveDocument = async (data: { name: string; category: string; tags: string[]; description: string; confidentiality: string }) => {
+    if (uploadedFiles.length === 0) return;
+    const formData = new FormData();
+    formData.append('file', uploadedFiles[0]);
+    formData.append('name', data.name);
+    formData.append('category', data.category);
+    formData.append('tags', JSON.stringify(data.tags));
+    formData.append('description', data.description);
+    formData.append('confidentiality', data.confidentiality);
+
+    await fetch('/api/upload', { method: 'POST', body: formData });
     setShowUploadDrawer(false);
     setUploadedFiles([]);
+    refetchDocs();
   };
 
-  const handleCreatePack = (pack: { name: string; scopeType: string; documentIds: string[] }) => {
-    console.log('Create pack:', pack);
-    // API call would go here
+  const handleCreatePack = async (pack: { name: string; scopeType: string; periodStart: string; periodEnd: string; purpose: string; documentIds: string[] }) => {
+    await fetch('/api/collections/evidencePacks', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        clientId: 'client-001',
+        name: pack.name,
+        scopeType: pack.scopeType,
+        periodStart: pack.periodStart || null,
+        periodEnd: pack.periodEnd || null,
+        purpose: pack.purpose,
+        status: 'draft',
+        documentIds: pack.documentIds,
+        createdBy: 'ops@wealth.os',
+      }),
+    });
     setShowPackBuilder(false);
+    refetchPacks();
+  };
+
+  const handleExport = () => {
+    const activeDocs = documents.filter(d => d.status === 'active');
+    const rows = [['Name', 'Category', 'Tags', 'Links', 'Owner', 'Created', 'Status']];
+    activeDocs.forEach(d => {
+      rows.push([d.name, d.category, d.tags.join(';'), String(d.linkedCount), d.createdBy, d.createdAt, d.status]);
+    });
+    const csv = rows.map(r => r.join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'documents.csv';
+    a.click();
+    URL.revokeObjectURL(url);
   };
 
   const helpContent = {
@@ -140,11 +170,14 @@ export function DvDashboardPage() {
       'Привязка к объектам: транзакции, фонды, KYC',
       'Версионирование без потери истории',
       'RBAC и client-safe доступ',
+      'Evidence packs для аудита',
+      'Безопасный шаринг для advisors и клиентов',
     ],
     scenarios: [
       'Загрузить инвойс и привязать к bill',
       'Создать evidence pack для аудита',
       'Поделиться документом с advisor',
+      'Привязать quarterly report к valuation',
     ],
     dataSources: ['Ручная загрузка', 'Интеграции'],
   };
@@ -172,9 +205,9 @@ export function DvDashboardPage() {
       <DvActionsBar
         onUpload={() => setShowUploadDrawer(true)}
         onCreatePack={() => setShowPackBuilder(true)}
-        onBulkTags={() => console.log('Bulk tags')}
-        onExport={() => console.log('Export')}
-        onCreateTask={() => console.log('Create task')}
+        onBulkTags={() => {}}
+        onExport={handleExport}
+        onCreateTask={() => {}}
       />
 
       {/* Main Content Grid */}
@@ -221,7 +254,7 @@ export function DvDashboardPage() {
             </div>
             <DvEvidencePacksTable
               packs={recentPacks}
-              onOpen={(id) => console.log('Open pack:', id)}
+              onOpen={(id) => {}}
               compact
             />
           </div>
@@ -234,7 +267,7 @@ export function DvDashboardPage() {
       {/* Upload Metadata Drawer */}
       {showUploadDrawer && (
         <>
-          <div 
+          <div
             className="fixed inset-0 bg-black/20 z-40"
             onClick={() => setShowUploadDrawer(false)}
           />
@@ -275,14 +308,14 @@ export function DvDashboardPage() {
       {/* Pack Builder Drawer */}
       {showPackBuilder && (
         <>
-          <div 
+          <div
             className="fixed inset-0 bg-black/20 z-40"
             onClick={() => setShowPackBuilder(false)}
           />
           <div className="fixed right-0 top-0 h-full w-full max-w-lg bg-white shadow-xl z-50 overflow-y-auto">
             <div className="p-6">
               <DvEvidencePackBuilder
-                documents={documents.map(d => ({ id: d.id, name: d.name, category: d.category }))}
+                documents={documents.filter(d => d.status === 'active').map(d => ({ id: d.id, name: d.name, category: d.category }))}
                 onSave={handleCreatePack}
                 onCancel={() => setShowPackBuilder(false)}
               />

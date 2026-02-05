@@ -1,0 +1,15 @@
+{
+  "collection": "ipsVersions",
+  "fields": {
+    "id": { "type": "string", "required": true },
+    "policyId": { "type": "string", "required": true },
+    "versionNumber": { "type": "number", "required": true },
+    "status": { "type": "enum", "values": ["draft", "submitted", "approved"], "required": true },
+    "createdAt": { "type": "datetime", "auto": true },
+    "approvedAt": { "type": "datetime", "required": false },
+    "approvedBy": { "type": "string", "required": false },
+    "summaryNotes": { "type": "string", "required": false },
+    "docIds": { "type": "array", "items": "string", "required": false },
+    "updatedAt": { "type": "datetime", "auto": true }
+  }
+}

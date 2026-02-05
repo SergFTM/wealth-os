@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CommAttachment",
+  "type": "object",
+  "required": ["id", "threadId", "title", "clientVisible", "createdAt"],
+  "properties": {
+    "id": { "type": "string", "description": "Unique attachment ID" },
+    "threadId": { "type": "string", "description": "Thread ID" },
+    "docId": { "type": ["string", "null"], "description": "Document Vault document ID" },
+    "linkType": {
+      "type": ["string", "null"],
+      "enum": ["document", "account", "transaction", "approval", "task", null],
+      "description": "Type of linked object"
+    },
+    "linkId": { "type": ["string", "null"], "description": "ID of linked object" },
+    "title": { "type": "string", "description": "Attachment title" },
+    "clientVisible": { "type": "boolean", "description": "Whether visible to clients" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "createdBy": { "type": "string", "description": "User who added attachment" }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CashForecast",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client reference" },
+    "name": { "type": "string", "description": "Forecast name" },
+    "scopeType": { "type": "string", "enum": ["household", "entity", "portfolio", "account"], "description": "Scope level" },
+    "scopeId": { "type": "string", "description": "Reference to scope object" },
+    "horizonDays": { "type": "integer", "minimum": 30, "maximum": 730, "description": "Forecast horizon in days" },
+    "baseScenarioId": { "type": "string", "description": "Reference to base scenario" },
+    "status": { "type": "string", "enum": ["active", "draft", "archived"], "description": "Forecast status" },
+    "assumptionsJson": {
+      "type": "object",
+      "description": "Assumptions used for forecast",
+      "properties": {
+        "inflowGrowth": { "type": "number" },
+        "outflowGrowth": { "type": "number" },
+        "minCashThreshold": { "type": "number" },
+        "includeRecurring": { "type": "boolean" },
+        "includePlanned": { "type": "boolean" }
+      }
+    },
+    "resultsJson": {
+      "type": "object",
+      "description": "Computed forecast results",
+      "properties": {
+        "dailyBalances": { "type": "array", "items": { "type": "object" } },
+        "minBalance": { "type": "number" },
+        "minBalanceDate": { "type": "string" },
+        "maxBalance": { "type": "number" },
+        "totalInflows": { "type": "number" },
+        "totalOutflows": { "type": "number" },
+        "deficitDays": { "type": "integer" },
+        "computedAt": { "type": "string" }
+      }
+    },
+    "asOf": { "type": "string", "format": "date-time", "description": "Forecast as-of date" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "name", "scopeType", "horizonDays", "status", "createdAt"]
+}

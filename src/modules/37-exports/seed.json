@@ -1,0 +1,76 @@
+{
+  "description": "Seed data for Exports and Audit Packs module",
+  "collections": {
+    "exportPacks": {
+      "count": 40,
+      "generator": "packGenerator",
+      "fields": {
+        "packType": ["audit", "tax", "bank", "ops"],
+        "scopeType": ["client", "entity", "portfolio", "fund"],
+        "status": ["draft", "published", "archived"],
+        "clientSafe": [true, false]
+      }
+    },
+    "exportTemplates": {
+      "count": 16,
+      "generator": "templateGenerator",
+      "systemTemplates": [
+        "Annual Audit Pack",
+        "Quarterly Net Worth Pack",
+        "Bank KYC Pack",
+        "Tax Advisor Pack",
+        "Private Capital Schedule",
+        "Monthly Operations Report",
+        "Client-Safe Summary",
+        "Compliance Pack"
+      ]
+    },
+    "exportRuns": {
+      "count": 80,
+      "generator": "runGenerator",
+      "fields": {
+        "status": ["queued", "running", "success", "failed"]
+      }
+    },
+    "exportFiles": {
+      "count": 240,
+      "generator": "fileGenerator",
+      "fields": {
+        "format": ["csv", "pdf"]
+      }
+    },
+    "exportShares": {
+      "count": 40,
+      "generator": "shareGenerator",
+      "fields": {
+        "audienceType": ["advisor", "auditor", "client", "bank", "regulator"],
+        "status": ["active", "expired", "revoked"]
+      }
+    },
+    "exportSchedules": {
+      "count": 20,
+      "generator": "scheduleGenerator",
+      "fields": {
+        "frequency": ["daily", "weekly", "monthly", "quarterly", "yearly"],
+        "status": ["active", "paused"]
+      }
+    },
+    "auditEvents": {
+      "count": 140,
+      "generator": "auditGenerator",
+      "filter": "module:exports"
+    }
+  },
+  "disclaimers": {
+    "tax": {
+      "ru": "Данный отчет не является налоговой консультацией. Обратитесь к лицензированному налоговому консультанту.",
+      "en": "This report is not tax advice. Consult a licensed tax professional.",
+      "uk": "Цей звіт не є податковою консультацією. Зверніться до ліцензованого податкового консультанта."
+    },
+    "audit": {
+      "ru": "Audit pack демонстрационный. Для production требуется контроль форматов и цифровых подписей.",
+      "en": "Audit pack is for demonstration. Production use requires format controls and digital signatures.",
+      "uk": "Audit pack демонстраційний. Для production потрібен контроль форматів і цифрових підписів."
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "userNotificationPref.schema.json",
+  "title": "UserNotificationPref",
+  "description": "User notification preferences",
+  "type": "object",
+  "required": ["id", "clientId", "userId", "createdAt", "updatedAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the preference record"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/tenant identifier"
+    },
+    "userId": {
+      "type": "string",
+      "description": "User ID"
+    },
+    "userName": {
+      "type": "string",
+      "description": "User display name"
+    },
+    "globalEnabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Master switch for all notifications"
+    },
+    "quietHoursEnabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enable quiet hours"
+    },
+    "quietHoursStart": {
+      "type": ["string", "null"],
+      "description": "Quiet hours start time (HH:mm)"
+    },
+    "quietHoursEnd": {
+      "type": ["string", "null"],
+      "description": "Quiet hours end time (HH:mm)"
+    },
+    "quietHoursTimezone": {
+      "type": "string",
+      "default": "Europe/Moscow",
+      "description": "Timezone for quiet hours"
+    },
+    "channelPrefs": {
+      "type": "object",
+      "properties": {
+        "inbox": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "categories": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "email": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "address": { "type": "string" },
+            "categories": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "sms": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "phone": { "type": "string" },
+            "urgentOnly": { "type": "boolean" }
+          }
+        },
+        "push": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "categories": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "slack": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "slackUserId": { "type": "string" }
+          }
+        },
+        "teams": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "teamsUserId": { "type": "string" }
+          }
+        }
+      },
+      "description": "Per-channel preferences"
+    },
+    "categoryPrefs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "enabled": { "type": "boolean" },
+          "channels": { "type": "array", "items": { "type": "string" } },
+          "digestOnly": { "type": "boolean" }
+        }
+      },
+      "description": "Per-category preferences"
+    },
+    "digestPrefs": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "frequency": { "type": "string", "enum": ["hourly", "daily", "weekly"] },
+        "sendTime": { "type": "string" },
+        "sendDay": { "type": "number" },
+        "channel": { "type": "string" }
+      },
+      "description": "Digest preferences"
+    },
+    "escalationPrefs": {
+      "type": "object",
+      "properties": {
+        "autoAcknowledge": { "type": "boolean" },
+        "defaultDelegate": { "type": "string" }
+      },
+      "description": "Escalation preferences"
+    },
+    "locale": {
+      "type": "string",
+      "enum": ["ru", "en", "uk"],
+      "default": "ru",
+      "description": "Preferred notification locale"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

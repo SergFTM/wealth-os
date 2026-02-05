@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DemoSeed",
+  "type": "object",
+  "required": ["id", "demoInitialized", "seedVersion"],
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "demoInitialized": { "type": "boolean", "description": "Whether demo data has been initialized" },
+    "seedVersion": { "type": "string", "description": "Current seed version" },
+    "seedProfile": { "type": "string", "enum": ["small", "medium", "full"], "description": "Seed data profile" },
+    "personaRole": { "type": "string", "description": "Current persona role for RBAC" },
+    "lastResetAt": { "type": "string", "format": "date-time" },
+    "lastGenerateAt": { "type": "string", "format": "date-time" },
+    "totalsJson": { "type": "string", "description": "JSON object with collection totals" },
+    "collectionsSeeded": { "type": "array", "items": { "type": "string" } },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

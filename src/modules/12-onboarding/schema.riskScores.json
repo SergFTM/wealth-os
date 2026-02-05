@@ -1,0 +1,14 @@
+{
+  "collection": "riskScores",
+  "fields": {
+    "id": { "type": "string", "required": true },
+    "caseId": { "type": "string", "required": true },
+    "score": { "type": "number", "min": 0, "max": 100, "required": true },
+    "tier": { "type": "enum", "values": ["low", "medium", "high"], "required": true },
+    "drivers": { "type": "array", "items": "string", "required": true },
+    "lastCalculatedAt": { "type": "datetime", "required": true },
+    "notes": { "type": "string", "required": false },
+    "createdAt": { "type": "datetime", "auto": true },
+    "updatedAt": { "type": "datetime", "auto": true }
+  }
+}

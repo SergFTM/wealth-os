@@ -1,0 +1,19 @@
+{
+  "collection": "ipsBreaches",
+  "fields": {
+    "id": { "type": "string", "required": true },
+    "policyId": { "type": "string", "required": true },
+    "constraintId": { "type": "string", "required": true },
+    "detectedAt": { "type": "datetime", "required": true },
+    "measuredValue": { "type": "number", "required": true },
+    "limitValue": { "type": "number", "required": true },
+    "severity": { "type": "enum", "values": ["ok", "warning", "critical"], "required": true },
+    "status": { "type": "enum", "values": ["open", "in_review", "resolved"], "required": true },
+    "sourceType": { "type": "enum", "values": ["auto", "manual"], "required": true },
+    "explanation": { "type": "string", "required": false },
+    "owner": { "type": "string", "required": false },
+    "docIds": { "type": "array", "items": "string", "required": false },
+    "createdAt": { "type": "datetime", "auto": true },
+    "updatedAt": { "type": "datetime", "auto": true }
+  }
+}

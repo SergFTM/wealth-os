@@ -1,0 +1,15 @@
+{
+  "collection": "complianceTasks",
+  "fields": {
+    "id": { "type": "string", "required": true },
+    "caseId": { "type": "string", "required": true },
+    "title": { "type": "string", "required": true },
+    "dueAt": { "type": "datetime", "required": true },
+    "assignee": { "type": "string", "required": true },
+    "status": { "type": "enum", "values": ["open", "in_progress", "done"], "required": true },
+    "slaRisk": { "type": "boolean", "required": false },
+    "notes": { "type": "string", "required": false },
+    "createdAt": { "type": "datetime", "auto": true },
+    "updatedAt": { "type": "datetime", "auto": true }
+  }
+}

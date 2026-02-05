@@ -1,4 +1,28 @@
 import { ModuleConfig } from './types';
+import { trustsConfig } from './16-trusts/config';
+import { feesConfig } from './17-fees/config';
+import { integrationsConfig } from './18-integrations/config';
+import { commsConfig } from './19-comms/config';
+import { aiConfig } from './20-ai/config';
+import { securityConfig } from './21-security/config';
+import { platformConfig } from './22-platform/config';
+import { reportsConfig } from './23-reports/config';
+import { apiConfig } from './24-api/config';
+import { adminConfig } from './25-admin/config';
+import { planningConfig } from './26-planning/config';
+import { dataQualityConfig } from './27-data-quality/config';
+import { committeeConfig } from './28-committee/config';
+import { dealsConfig } from './29-deals/config';
+import { portalConfig } from './30-portal/config';
+import { mobileConfig } from './31-mobile/config';
+import { academyConfig } from './32-academy/config';
+import { sandboxConfig } from './33-sandbox/config';
+import { consentsConfig } from './34-consents/config';
+import { notificationsConfig } from './35-notifications/config';
+import { casesConfig } from './36-cases/config';
+import { exportsConfig } from './37-exports/config';
+import { ideasConfig } from './38-ideas/config';
+import { liquidityPlanningConfig } from './39-liquidity/config';
 
 // 01: dashboard-home
 export const dashboardHome: ModuleConfig = {
@@ -215,28 +239,41 @@ export const liquidity: ModuleConfig = {
   actions: [],
 };
 
-// 10: document-vault
+// 10: documents (Document Vault — Module 11)
 export const documentVault: ModuleConfig = {
   id: '10',
-  slug: 'document-vault',
+  slug: 'documents',
   order: 10,
-  icon: 'folder',
-  title: { ru: 'Хранилище документов', en: 'Document Vault', uk: 'Сховище документів' },
+  icon: 'file-text',
+  title: { ru: 'Документы', en: 'Documents', uk: 'Документи' },
+  description: {
+    ru: 'Хранилище документов, версии, шаринг, пакеты доказательств для аудита',
+    en: 'Document vault, versions, sharing, evidence packs for audit',
+    uk: 'Сховище документів, версії, шарінг, пакети доказів для аудиту',
+  },
   kpis: [
-    { key: 'total', title: { ru: 'Всего', en: 'Total', uk: 'Всього' }, format: 'number', status: 'ok' },
-    { key: 'pendingSignature', title: { ru: 'Ожидают подписи', en: 'Pending Signature', uk: 'Очікують підпису' }, format: 'number', status: 'warning', linkToList: true },
-    { key: 'expiringSoon', title: { ru: 'Истекают скоро', en: 'Expiring Soon', uk: 'Закінчуються скоро' }, format: 'number', status: 'warning' },
-    { key: 'recentUploads', title: { ru: 'Загружено (7д)', en: 'Uploads (7d)', uk: 'Завантажено (7д)' }, format: 'number', status: 'ok' },
+    { key: 'totalDocs', title: { ru: 'Всего документов', en: 'Total Documents', uk: 'Всього документів' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'newDocs30d', title: { ru: 'Новые за 30д', en: 'New 30d', uk: 'Нові за 30д' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'unlinkedDocs', title: { ru: 'Без связей', en: 'Unlinked', uk: 'Без зв\'язків' }, format: 'number', status: 'warning', linkToList: true },
+    { key: 'linkedDocs', title: { ru: 'Связанные', en: 'Linked', uk: 'Пов\'язані' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'missingRequired', title: { ru: 'Нет обязательных', en: 'Missing Required', uk: 'Немає обов\'язкових' }, format: 'number', status: 'critical', linkToList: true },
+    { key: 'evidencePacks', title: { ru: 'Пакеты', en: 'Evidence Packs', uk: 'Пакети доказів' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'activeShares', title: { ru: 'Активные шары', en: 'Active Shares', uk: 'Активні шари' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'auditAlerts', title: { ru: 'Audit алерты', en: 'Audit Alerts', uk: 'Audit алерти' }, format: 'number', status: 'warning', linkToList: true },
   ],
   columns: [
-    { key: 'name', header: { ru: 'Документ', en: 'Document', uk: 'Документ' } },
-    { key: 'client', header: { ru: 'Клиент', en: 'Client', uk: 'Клієнт' } },
-    { key: 'type', header: { ru: 'Тип', en: 'Type', uk: 'Тип' } },
+    { key: 'name', header: { ru: 'Имя', en: 'Name', uk: 'Ім\'я' } },
+    { key: 'category', header: { ru: 'Категория', en: 'Category', uk: 'Категорія' } },
+    { key: 'tags', header: { ru: 'Теги', en: 'Tags', uk: 'Теги' } },
+    { key: 'linkedCount', header: { ru: 'Связи', en: 'Links', uk: 'Зв\'язки' } },
+    { key: 'createdBy', header: { ru: 'Владелец', en: 'Owner', uk: 'Власник' } },
+    { key: 'createdAt', header: { ru: 'Создан', en: 'Created', uk: 'Створено' }, type: 'date' },
     { key: 'status', header: { ru: 'Статус', en: 'Status', uk: 'Статус' }, type: 'status' },
-    { key: 'uploadedAt', header: { ru: 'Загружен', en: 'Uploaded', uk: 'Завантажено' }, type: 'date' },
   ],
   actions: [
-    { key: 'upload', label: { ru: 'Загрузить', en: 'Upload', uk: 'Завантажити' }, variant: 'primary' },
+    { key: 'uploadDoc', label: { ru: 'Загрузить документ', en: 'Upload Document', uk: 'Завантажити документ' }, variant: 'primary' },
+    { key: 'createPack', label: { ru: 'Создать пакет', en: 'Create Pack', uk: 'Створити пакет' }, variant: 'secondary' },
+    { key: 'exportList', label: { ru: 'Экспорт CSV', en: 'Export CSV', uk: 'Експорт CSV' }, variant: 'ghost' },
   ],
 };
 
@@ -342,22 +379,43 @@ export const onboarding: ModuleConfig = {
   slug: 'onboarding',
   order: 15,
   icon: 'user-plus',
-  title: { ru: 'Onboarding и KYC', en: 'Onboarding & KYC', uk: 'Onboarding і KYC' },
+  title: { ru: 'Онбординг и комплаенс', en: 'Onboarding & Compliance', uk: 'Онбординг і комплаєнс' },
+  description: {
+    ru: 'Intake, KYC/KYB, AML-скрининг, риск-оценка, кейс-менеджмент и финальное согласование',
+    en: 'Intake, KYC/KYB, AML screening, risk scoring, case management and final approval',
+    uk: 'Intake, KYC/KYB, AML-скринінг, ризик-оцінка, кейс-менеджмент і фінальне погодження',
+  },
+  disclaimer: {
+    ru: 'Комплаенс функции информационные, не являются юридической консультацией',
+    en: 'Compliance features are informational and do not constitute legal advice',
+    uk: 'Комплаєнс функції інформаційні, не є юридичною консультацією',
+  },
   kpis: [
-    { key: 'active', title: { ru: 'Активные', en: 'Active', uk: 'Активні' }, format: 'number', status: 'ok', linkToList: true },
-    { key: 'pendingDocs', title: { ru: 'Ожидают документы', en: 'Pending Docs', uk: 'Очікують документи' }, format: 'number', status: 'warning' },
-    { key: 'kycReview', title: { ru: 'KYC на проверке', en: 'KYC Review', uk: 'KYC на перевірці' }, format: 'number', status: 'info' },
-    { key: 'completedMonth', title: { ru: 'Завершено (мес)', en: 'Completed (month)', uk: 'Завершено (міс)' }, format: 'number', status: 'ok' },
+    { key: 'activeCases', title: { ru: 'Активные кейсы', en: 'Active Cases', uk: 'Активні кейси' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'newIntakes30d', title: { ru: 'Новые intake 30д', en: 'New Intakes 30d', uk: 'Нові intake 30д' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'screeningPending', title: { ru: 'Скрининг ожидает', en: 'Screening Pending', uk: 'Скринінг очікує' }, format: 'number', status: 'warning', linkToList: true },
+    { key: 'highRisk', title: { ru: 'Высокий риск', en: 'High Risk', uk: 'Високий ризик' }, format: 'number', status: 'critical', linkToList: true },
+    { key: 'slaAtRisk', title: { ru: 'SLA под угрозой', en: 'SLA at Risk', uk: 'SLA під загрозою' }, format: 'number', status: 'warning', linkToList: true },
+    { key: 'missingDocs', title: { ru: 'Нет документов', en: 'Missing Docs', uk: 'Немає документів' }, format: 'number', status: 'warning', linkToList: true },
+    { key: 'pendingApproval', title: { ru: 'Ожидают согласования', en: 'Pending Approval', uk: 'Очікують погодження' }, format: 'number', status: 'warning', linkToList: true },
+    { key: 'onHold', title: { ru: 'На удержании', en: 'On Hold', uk: 'На утриманні' }, format: 'number', status: 'critical', linkToList: true },
   ],
   columns: [
-    { key: 'name', header: { ru: 'Название', en: 'Name', uk: 'Назва' } },
-    { key: 'stage', header: { ru: 'Этап', en: 'Stage', uk: 'Етап' } },
-    { key: 'progress', header: { ru: 'Прогресс', en: 'Progress', uk: 'Прогрес' } },
+    { key: 'name', header: { ru: 'Кейс', en: 'Case', uk: 'Кейс' } },
+    { key: 'caseType', header: { ru: 'Тип', en: 'Type', uk: 'Тип' } },
+    { key: 'stage', header: { ru: 'Этап', en: 'Stage', uk: 'Етап' }, type: 'badge' },
     { key: 'status', header: { ru: 'Статус', en: 'Status', uk: 'Статус' }, type: 'status' },
-    { key: 'dueDate', header: { ru: 'Срок', en: 'Due Date', uk: 'Термін' }, type: 'date' },
+    { key: 'riskTier', header: { ru: 'Риск', en: 'Risk', uk: 'Ризик' }, type: 'badge' },
+    { key: 'assignee', header: { ru: 'Ответственный', en: 'Assignee', uk: 'Відповідальний' } },
+    { key: 'createdAt', header: { ru: 'Создан', en: 'Created', uk: 'Створено' }, type: 'date' },
   ],
   actions: [
-    { key: 'start', label: { ru: 'Начать онбординг', en: 'Start Onboarding', uk: 'Почати онбординг' }, variant: 'primary' },
+    { key: 'createCase', label: { ru: 'Создать кейс', en: 'Create Case', uk: 'Створити кейс' }, variant: 'primary' },
+    { key: 'createIntake', label: { ru: 'Создать intake', en: 'Create Intake', uk: 'Створити intake' }, variant: 'secondary' },
+    { key: 'createScreening', label: { ru: 'Скрининг', en: 'Screening', uk: 'Скринінг' }, variant: 'secondary' },
+    { key: 'calcRisk', label: { ru: 'Рассчитать риск', en: 'Calculate Risk', uk: 'Розрахувати ризик' }, variant: 'ghost' },
+    { key: 'submitApproval', label: { ru: 'На согласование', en: 'Submit Approval', uk: 'На погодження' }, variant: 'ghost' },
+    { key: 'createEvidence', label: { ru: 'Evidence pack', en: 'Evidence Pack', uk: 'Evidence pack' }, variant: 'ghost' },
   ],
 };
 
@@ -368,20 +426,42 @@ export const ips: ModuleConfig = {
   order: 16,
   icon: 'shield',
   title: { ru: 'IPS и ограничения', en: 'IPS & Constraints', uk: 'IPS і обмеження' },
+  description: {
+    ru: 'Инвестиционная политика, ограничения, нарушения, исключения и комитет',
+    en: 'Investment Policy Statement, constraints, breaches, waivers and committee',
+    uk: 'Інвестиційна політика, обмеження, порушення, винятки і комітет',
+  },
+  disclaimer: {
+    ru: 'Информация об IPS носит справочный характер и требует подтверждения инвестиционным комитетом',
+    en: 'IPS information is for reference only and requires investment committee confirmation',
+    uk: 'Інформація про IPS носить довідковий характер і потребує підтвердження інвестиційним комітетом',
+  },
   kpis: [
-    { key: 'breaches', title: { ru: 'Нарушения', en: 'Breaches', uk: 'Порушення' }, format: 'number', status: 'critical', linkToList: true },
-    { key: 'critical', title: { ru: 'Критические', en: 'Critical', uk: 'Критичні' }, format: 'number', status: 'critical' },
-    { key: 'warnings', title: { ru: 'Предупреждения', en: 'Warnings', uk: 'Попередження' }, format: 'number', status: 'warning' },
-    { key: 'compliance', title: { ru: 'Compliance', en: 'Compliance', uk: 'Compliance' }, format: 'percent', status: 'ok' },
+    { key: 'activePolicies', title: { ru: 'Активные политики', en: 'Active Policies', uk: 'Активні політики' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'constraintsCount', title: { ru: 'Ограничения', en: 'Constraints', uk: 'Обмеження' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'breachesOpen', title: { ru: 'Нарушения открытые', en: 'Breaches Open', uk: 'Порушення відкриті' }, format: 'number', status: 'warning', linkToList: true },
+    { key: 'breachesCritical', title: { ru: 'Критические', en: 'Critical', uk: 'Критичні' }, format: 'number', status: 'critical', linkToList: true },
+    { key: 'waiversActive', title: { ru: 'Исключения активные', en: 'Waivers Active', uk: 'Винятки активні' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'waiversExpiring', title: { ru: 'Истекают 30д', en: 'Expiring 30d', uk: 'Закінчуються 30д' }, format: 'number', status: 'warning', linkToList: true },
+    { key: 'meetingsCount', title: { ru: 'Заседания 90д', en: 'Meetings 90d', uk: 'Засідання 90д' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'missingDocs', title: { ru: 'Нет документов', en: 'Missing Docs', uk: 'Немає документів' }, format: 'number', status: 'warning', linkToList: true },
   ],
   columns: [
-    { key: 'rule', header: { ru: 'Правило', en: 'Rule', uk: 'Правило' } },
-    { key: 'client', header: { ru: 'Клиент', en: 'Client', uk: 'Клієнт' } },
-    { key: 'current', header: { ru: 'Текущее', en: 'Current', uk: 'Поточне' } },
-    { key: 'threshold', header: { ru: 'Лимит', en: 'Threshold', uk: 'Ліміт' } },
-    { key: 'severity', header: { ru: 'Уровень', en: 'Severity', uk: 'Рівень' }, type: 'status' },
+    { key: 'name', header: { ru: 'Название', en: 'Name', uk: 'Назва' } },
+    { key: 'scopeType', header: { ru: 'Scope', en: 'Scope', uk: 'Scope' } },
+    { key: 'status', header: { ru: 'Статус', en: 'Status', uk: 'Статус' }, type: 'status' },
+    { key: 'constraintsCount', header: { ru: 'Ограничения', en: 'Constraints', uk: 'Обмеження' } },
+    { key: 'breachesOpen', header: { ru: 'Нарушения', en: 'Breaches', uk: 'Порушення' } },
+    { key: 'updatedAt', header: { ru: 'Обновлено', en: 'Updated', uk: 'Оновлено' }, type: 'date' },
   ],
-  actions: [],
+  actions: [
+    { key: 'createPolicy', label: { ru: 'Создать политику', en: 'Create Policy', uk: 'Створити політику' }, variant: 'primary' },
+    { key: 'addConstraint', label: { ru: 'Добавить ограничение', en: 'Add Constraint', uk: 'Додати обмеження' }, variant: 'secondary' },
+    { key: 'createBreach', label: { ru: 'Зафиксировать breach', en: 'Record Breach', uk: 'Зафіксувати breach' }, variant: 'secondary' },
+    { key: 'createWaiver', label: { ru: 'Создать waiver', en: 'Create Waiver', uk: 'Створити waiver' }, variant: 'ghost' },
+    { key: 'createMeeting', label: { ru: 'Создать meeting', en: 'Create Meeting', uk: 'Створити meeting' }, variant: 'ghost' },
+    { key: 'checkConstraints', label: { ru: 'Проверить ограничения', en: 'Check Constraints', uk: 'Перевірити обмеження' }, variant: 'ghost' },
+  ],
 };
 
 // 17: risk
@@ -431,53 +511,12 @@ export const tax: ModuleConfig = {
   actions: [],
 };
 
-// 19: trust-estate
-export const trustEstate: ModuleConfig = {
-  id: '19',
-  slug: 'trust-estate',
-  order: 19,
-  icon: 'landmark',
-  title: { ru: 'Трасты и наследование', en: 'Trust & Estate', uk: 'Трасти і спадкування' },
-  disclaimer: { ru: 'Не является юридической консультацией', en: 'Not legal advice', uk: 'Не є юридичною консультацією' },
-  kpis: [
-    { key: 'trusts', title: { ru: 'Трастов', en: 'Trusts', uk: 'Трастів' }, format: 'number', status: 'ok' },
-    { key: 'trustAssets', title: { ru: 'Активы в трастах', en: 'Trust Assets', uk: 'Активи в трастах' }, format: 'currency', status: 'ok' },
-    { key: 'beneficiaries', title: { ru: 'Бенефициаров', en: 'Beneficiaries', uk: 'Бенефіціарів' }, format: 'number', status: 'ok' },
-    { key: 'jurisdictions', title: { ru: 'Юрисдикций', en: 'Jurisdictions', uk: 'Юрисдикцій' }, format: 'number', status: 'ok' },
-  ],
-  columns: [
-    { key: 'name', header: { ru: 'Траст', en: 'Trust', uk: 'Траст' } },
-    { key: 'jurisdiction', header: { ru: 'Юрисдикция', en: 'Jurisdiction', uk: 'Юрисдикція' } },
-    { key: 'assets', header: { ru: 'Активы', en: 'Assets', uk: 'Активи' }, type: 'currency' },
-    { key: 'beneficiaries', header: { ru: 'Бенефициары', en: 'Beneficiaries', uk: 'Бенефіціари' } },
-    { key: 'status', header: { ru: 'Статус', en: 'Status', uk: 'Статус' }, type: 'status' },
-  ],
-  actions: [],
-};
+// 19: trust-estate (now using comprehensive trusts module)
+export const trusts = trustsConfig;
+export const trustEstate = trustsConfig; // alias for backwards compatibility
 
-// 20: integrations
-export const integrations: ModuleConfig = {
-  id: '20',
-  slug: 'integrations',
-  order: 20,
-  icon: 'plug',
-  title: { ru: 'Интеграции и синхронизация данных', en: 'Integrations', uk: 'Інтеграції і синхронізація даних' },
-  clientSafeHidden: true,
-  kpis: [
-    { key: 'total', title: { ru: 'Интеграций', en: 'Integrations', uk: 'Інтеграцій' }, format: 'number', status: 'ok' },
-    { key: 'syncHealth', title: { ru: 'Sync Health', en: 'Sync Health', uk: 'Sync Health' }, format: 'percent', status: 'ok' },
-    { key: 'errors', title: { ru: 'Ошибки', en: 'Errors', uk: 'Помилки' }, format: 'number', status: 'critical', linkToList: true },
-    { key: 'warnings', title: { ru: 'Предупреждения', en: 'Warnings', uk: 'Попередження' }, format: 'number', status: 'warning' },
-  ],
-  columns: [
-    { key: 'provider', header: { ru: 'Провайдер', en: 'Provider', uk: 'Провайдер' } },
-    { key: 'client', header: { ru: 'Клиент', en: 'Client', uk: 'Клієнт' } },
-    { key: 'status', header: { ru: 'Статус', en: 'Status', uk: 'Статус' }, type: 'status' },
-    { key: 'records', header: { ru: 'Записей', en: 'Records', uk: 'Записів' } },
-    { key: 'lastSync', header: { ru: 'Последняя синхр.', en: 'Last Sync', uk: 'Остання синхр.' }, type: 'date' },
-  ],
-  actions: [],
-};
+// 20: integrations (comprehensive integrations hub module)
+export const integrations = integrationsConfig;
 
 // 21: communications
 export const communications: ModuleConfig = {
@@ -503,3 +542,69 @@ export const communications: ModuleConfig = {
     { key: 'compose', label: { ru: 'Написать', en: 'Compose', uk: 'Написати' }, variant: 'primary' },
   ],
 };
+
+// 22: fees (comprehensive fee billing module)
+export const fees = feesConfig;
+
+// 23: comms (secure communications module)
+export const comms = commsConfig;
+
+// 24: ai (AI Advisory Layer module)
+export const ai = aiConfig;
+
+// 25: security (Security Center module)
+export const security = securityConfig;
+
+// 26: platform (Platform Shell and Demo Mode)
+export const platform = platformConfig;
+
+// 27: reports (Reporting Studio)
+export const reports = reportsConfig;
+
+// 28: api (Public API, Webhooks and Developer Console)
+export const api = apiConfig;
+
+// 29: admin (Tenant Admin and White Label)
+export const admin = adminConfig;
+
+// 30: planning (Financial Planning and Scenarios)
+export const planning = planningConfig;
+
+// 31: data-quality (Data Quality and Observability)
+export const dataQuality = dataQualityConfig;
+
+// 32: committee (Investment Committee and Decisions Log)
+export const committee = committeeConfig;
+
+// 33: deals (Deals, Corporate Actions and Capital Events)
+export const deals = dealsConfig;
+
+// 34: portal (Client Portal and Self Service)
+export const portal = portalConfig;
+
+// 35: mobile (Mobile PWA and Offline)
+export const mobile = mobileConfig;
+
+// 36: academy (Academy and Knowledge Base)
+export const academy = academyConfig;
+
+// 37: sandbox (Integration Sandbox)
+export const sandbox = sandboxConfig;
+
+// 38: consents (Consents and Data Sharing)
+export const consents = consentsConfig;
+
+// 39: notifications (Notifications and Escalations Center)
+export const notifications = notificationsConfig;
+
+// 40: cases (Service Desk and Cases)
+export const cases = casesConfig;
+
+// 41: exports (Exports and Audit Packs)
+export const exports = exportsConfig;
+
+// 42: ideas (Investment Ideas and Research Hub)
+export const ideas = ideasConfig;
+
+// 43: liquidity-planning (Liquidity Planning and Cash Forecast)
+export const liquidityPlanning = liquidityPlanningConfig;

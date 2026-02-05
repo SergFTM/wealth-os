@@ -1,0 +1,17 @@
+{
+  "collection": "beneficialOwners",
+  "fields": {
+    "id": { "type": "string", "required": true },
+    "caseId": { "type": "string", "required": true },
+    "entityId": { "type": "string", "required": false },
+    "parentOwnerId": { "type": "string", "required": false },
+    "name": { "type": "string", "required": true },
+    "ownerType": { "type": "enum", "values": ["person", "entity"], "required": true },
+    "ownershipPct": { "type": "number", "min": 0, "max": 100, "required": true },
+    "controlPerson": { "type": "boolean", "required": true },
+    "docStatus": { "type": "enum", "values": ["missing", "uploaded", "verified"], "required": true },
+    "notes": { "type": "string", "required": false },
+    "createdAt": { "type": "datetime", "auto": true },
+    "updatedAt": { "type": "datetime", "auto": true }
+  }
+}

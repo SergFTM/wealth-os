@@ -1,0 +1,13 @@
+export { TrKpiStrip } from './TrKpiStrip';
+export { TrTrustsTable } from './TrTrustsTable';
+export { TrBeneficiariesTable } from './TrBeneficiariesTable';
+export { TrDistributionsTable } from './TrDistributionsTable';
+export { TrEventsTable } from './TrEventsTable';
+export { TrCalendarPanel } from './TrCalendarPanel';
+export { TrDocumentsPanel } from './TrDocumentsPanel';
+export { TrActionsBar } from './TrActionsBar';
+export { TrPowersPanel } from './TrPowersPanel';
+export { TrTrustDetail } from './TrTrustDetail';
+export { TrDistributionDetail } from './TrDistributionDetail';
+export { TrEventDetail } from './TrEventDetail';
+export { TrDashboardPage } from './TrDashboardPage';

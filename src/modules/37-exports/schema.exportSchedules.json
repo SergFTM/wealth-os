@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExportSchedule",
+  "type": "object",
+  "required": ["id", "clientId", "templateId", "frequency", "status", "createdAt"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string" },
+    "templateId": { "type": "string" },
+    "packId": { "type": "string" },
+    "scopeType": {
+      "type": "string",
+      "enum": ["client", "entity", "portfolio", "fund", "all"],
+      "default": "client"
+    },
+    "scopeId": { "type": "string" },
+    "frequency": {
+      "type": "string",
+      "enum": ["daily", "weekly", "monthly", "quarterly", "yearly", "on_demand"],
+      "default": "monthly"
+    },
+    "cronExpression": { "type": "string" },
+    "timezone": { "type": "string", "default": "Europe/Moscow" },
+    "nextRunAt": { "type": "string", "format": "date-time" },
+    "lastRunAt": { "type": "string", "format": "date-time" },
+    "lastRunId": { "type": "string" },
+    "runCount": { "type": "number", "default": 0 },
+    "status": {
+      "type": "string",
+      "enum": ["active", "paused", "completed"],
+      "default": "active"
+    },
+    "autoShare": { "type": "boolean", "default": false },
+    "shareConfig": {
+      "type": "object",
+      "properties": {
+        "audienceType": { "type": "string" },
+        "audienceId": { "type": "string" },
+        "expiresInDays": { "type": "number" }
+      }
+    },
+    "notifyOnComplete": { "type": "boolean", "default": true },
+    "notifyEmails": {
+      "type": "array",
+      "items": { "type": "string", "format": "email" }
+    },
+    "createdBy": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

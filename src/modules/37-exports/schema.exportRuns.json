@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExportRun",
+  "type": "object",
+  "required": ["id", "clientId", "packId", "status", "createdAt"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "clientId": { "type": "string" },
+    "packId": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["queued", "running", "success", "failed"],
+      "default": "queued"
+    },
+    "startedAt": { "type": "string", "format": "date-time" },
+    "finishedAt": { "type": "string", "format": "date-time" },
+    "progress": { "type": "number", "minimum": 0, "maximum": 100 },
+    "sectionsProcessed": { "type": "number" },
+    "sectionsTotal": { "type": "number" },
+    "filesCount": { "type": "number" },
+    "totalSizeBytes": { "type": "number" },
+    "errorsJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sectionId": { "type": "string" },
+          "message": { "type": "string" },
+          "timestamp": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "lineageSnapshotJson": {
+      "type": "object",
+      "properties": {
+        "sources": { "type": "array" },
+        "asOf": { "type": "string", "format": "date-time" },
+        "dqScore": { "type": "number" },
+        "connectors": { "type": "array" }
+      }
+    },
+    "triggeredBy": { "type": "string" },
+    "scheduleId": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" }
+  }
+}

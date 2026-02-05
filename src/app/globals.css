@@ -30,33 +30,63 @@
   :root {
     --background: 60 30% 98%;
     --foreground: 30 10% 15%;
-    
+
     --card: 0 0% 100%;
     --card-foreground: 30 10% 15%;
-    
+
     --popover: 0 0% 100%;
     --popover-foreground: 30 10% 15%;
-    
+
     --primary: 152 45% 40%;
     --primary-foreground: 60 30% 98%;
-    
+
     --secondary: 42 35% 88%;
     --secondary-foreground: 30 10% 25%;
-    
+
     --muted: 60 20% 94%;
     --muted-foreground: 30 10% 45%;
-    
+
     --accent: 42 45% 75%;
     --accent-foreground: 30 10% 20%;
-    
+
     --destructive: 12 60% 55%;
     --destructive-foreground: 60 30% 98%;
-    
+
     --border: 40 20% 88%;
     --input: 40 20% 88%;
     --ring: 152 45% 40%;
-    
+
     --radius: 0.625rem;
+  }
+
+  .dark {
+    --background: 220 15% 10%;
+    --foreground: 60 10% 92%;
+
+    --card: 220 15% 13%;
+    --card-foreground: 60 10% 92%;
+
+    --popover: 220 15% 13%;
+    --popover-foreground: 60 10% 92%;
+
+    --primary: 152 45% 45%;
+    --primary-foreground: 220 15% 10%;
+
+    --secondary: 220 12% 22%;
+    --secondary-foreground: 60 10% 85%;
+
+    --muted: 220 12% 18%;
+    --muted-foreground: 60 10% 60%;
+
+    --accent: 42 40% 35%;
+    --accent-foreground: 60 10% 92%;
+
+    --destructive: 12 55% 50%;
+    --destructive-foreground: 60 10% 95%;
+
+    --border: 220 12% 22%;
+    --input: 220 12% 22%;
+    --ring: 152 45% 45%;
   }
 }
 
@@ -75,12 +105,20 @@
   body {
     @apply bg-background text-foreground;
     font-family: inherit;
-    background: linear-gradient(135deg, 
-      hsl(150, 30%, 97%) 0%, 
+    background: linear-gradient(135deg,
+      hsl(150, 30%, 97%) 0%,
       hsl(45, 40%, 97%) 50%,
       hsl(40, 35%, 96%) 100%
     );
     min-height: 100vh;
+  }
+
+  .dark body {
+    background: linear-gradient(135deg,
+      hsl(220, 15%, 10%) 0%,
+      hsl(220, 12%, 11%) 50%,
+      hsl(220, 15%, 10%) 100%
+    );
   }
 
   input, button, textarea, select {
@@ -104,4 +142,12 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(30, 10%, 70%);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: hsl(220, 12%, 30%);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: hsl(220, 12%, 40%);
 }

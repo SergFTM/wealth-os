@@ -1,0 +1,18 @@
+{
+  "collection": "ipsPolicies",
+  "fields": {
+    "id": { "type": "string", "required": true },
+    "clientId": { "type": "string", "required": true },
+    "name": { "type": "string", "required": true },
+    "scopeType": { "type": "enum", "values": ["household", "entity", "portfolio"], "required": true },
+    "scopeId": { "type": "string", "required": false },
+    "status": { "type": "enum", "values": ["draft", "active", "archived"], "required": true },
+    "currentVersionId": { "type": "string", "required": false },
+    "objectivesJson": { "type": "object", "required": false },
+    "riskTolerance": { "type": "enum", "values": ["conservative", "moderate", "aggressive"], "required": false },
+    "liquidityNeeds": { "type": "enum", "values": ["low", "medium", "high"], "required": false },
+    "timeHorizon": { "type": "string", "required": false },
+    "createdAt": { "type": "datetime", "auto": true },
+    "updatedAt": { "type": "datetime", "auto": true }
+  }
+}

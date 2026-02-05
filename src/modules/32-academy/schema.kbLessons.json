@@ -1,0 +1,24 @@
+{
+  "collection": "kbLessons",
+  "description": "Individual lessons within courses",
+  "fields": {
+    "id": { "type": "string", "required": true, "primary": true },
+    "clientId": { "type": "string", "required": true },
+    "courseId": { "type": "string" },
+    "titleRu": { "type": "string", "required": true },
+    "titleEn": { "type": "string" },
+    "titleUk": { "type": "string" },
+    "bodyRu": { "type": "string", "required": true },
+    "bodyEn": { "type": "string" },
+    "bodyUk": { "type": "string" },
+    "durationMin": { "type": "number", "default": 15 },
+    "quizJson": { "type": "object", "description": "Quiz questions array with answers" },
+    "audience": { "type": "enum", "values": ["staff", "client", "both"], "default": "staff" },
+    "orderIndex": { "type": "number", "default": 0 },
+    "attachmentsDocIdsJson": { "type": "array", "items": "string" },
+    "relatedScreensJson": { "type": "array", "items": "string" },
+    "createdAt": { "type": "datetime", "required": true },
+    "updatedAt": { "type": "datetime" }
+  },
+  "indexes": ["clientId", "courseId", "audience"]
+}

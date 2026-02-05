@@ -112,5 +112,16 @@
     "id": "1769635730028-06megdzne",
     "createdAt": "2026-01-28T21:28:50.028Z",
     "updatedAt": "2026-01-28T21:28:50.028Z"
+  },
+  {
+    "title": "Задача: London Office Building",
+    "description": "Проверить актив London Office Building",
+    "status": "open",
+    "priority": "medium",
+    "linkedCollection": "holdings",
+    "linkedId": "h9",
+    "id": "1770245669632-q7lutgqli",
+    "createdAt": "2026-02-04T22:54:29.632Z",
+    "updatedAt": "2026-02-04T22:54:29.632Z"
   }
 ]

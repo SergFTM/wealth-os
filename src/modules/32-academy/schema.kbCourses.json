@@ -1,0 +1,23 @@
+{
+  "collection": "kbCourses",
+  "description": "Training courses containing lessons",
+  "fields": {
+    "id": { "type": "string", "required": true, "primary": true },
+    "clientId": { "type": "string", "required": true },
+    "titleRu": { "type": "string", "required": true },
+    "titleEn": { "type": "string" },
+    "titleUk": { "type": "string" },
+    "descriptionRu": { "type": "string" },
+    "descriptionEn": { "type": "string" },
+    "descriptionUk": { "type": "string" },
+    "audience": { "type": "enum", "values": ["staff", "client", "both"], "default": "staff" },
+    "lessonIdsJson": { "type": "array", "items": "string" },
+    "status": { "type": "enum", "values": ["draft", "active", "archived"], "default": "draft" },
+    "estimatedDurationMin": { "type": "number" },
+    "coverImageUrl": { "type": "string" },
+    "relatedChecklistId": { "type": "string" },
+    "createdAt": { "type": "datetime", "required": true },
+    "updatedAt": { "type": "datetime" }
+  },
+  "indexes": ["clientId", "status", "audience"]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SavedView",
+  "type": "object",
+  "required": ["id", "name", "moduleKey", "route", "filtersJson"],
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client scope (global if empty)" },
+    "name": { "type": "string", "description": "View name" },
+    "moduleKey": { "type": "string", "description": "Module slug" },
+    "route": { "type": "string", "description": "Full route path" },
+    "filtersJson": { "type": "string", "description": "JSON string of filters" },
+    "columnsJson": { "type": "string", "description": "JSON string of column settings" },
+    "sortJson": { "type": "string", "description": "JSON string of sort settings" },
+    "isPinned": { "type": "boolean", "description": "Show in sidebar favorites" },
+    "isDefault": { "type": "boolean", "description": "Default view for module" },
+    "createdBy": { "type": "string", "description": "User who created the view" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

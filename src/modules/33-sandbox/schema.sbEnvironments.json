@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sandbox Environment",
+  "description": "Isolated sandbox environment for integration testing",
+  "type": "object",
+  "required": ["id", "clientId", "name", "status", "createdAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/tenant identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Environment name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Environment description"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "archived", "paused"],
+      "default": "active"
+    },
+    "envType": {
+      "type": "string",
+      "enum": ["sandbox", "staging", "integration"],
+      "default": "sandbox"
+    },
+    "linkedDatasetId": {
+      "type": "string",
+      "description": "Reference to dataset template"
+    },
+    "connectorIds": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of attached connectors"
+    },
+    "configJson": {
+      "type": "object",
+      "description": "Environment configuration"
+    },
+    "createdBy": {
+      "type": "string",
+      "description": "User who created the environment"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PushMessage",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "clientId": { "type": "string", "format": "uuid" },
+    "userId": { "type": "string", "format": "uuid" },
+    "deviceId": { "type": "string", "format": "uuid" },
+    "subscriptionId": { "type": "string", "format": "uuid" },
+    "topic": {
+      "type": "string",
+      "enum": ["approvals", "reports", "risk", "invoices", "messages", "tasks", "alerts", "documents"]
+    },
+    "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "body": { "type": "string", "maxLength": 1000 },
+    "icon": { "type": "string" },
+    "deepLink": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["unread", "read", "archived"],
+      "default": "unread"
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["low", "normal", "high", "urgent"],
+      "default": "normal"
+    },
+    "dataJson": { "type": "object" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "readAt": { "type": "string", "format": "date-time" },
+    "expiresAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "userId", "topic", "title", "body", "status", "createdAt"]
+}

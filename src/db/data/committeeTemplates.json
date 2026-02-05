@@ -1,0 +1,175 @@
+[
+  {
+    "id": "cm-tmpl-001",
+    "name": "Квартальный обзор",
+    "description": "Шаблон повестки для квартального обзора комитета",
+    "type": "agenda",
+    "sections": [
+      {
+        "title": "Обзор результатов",
+        "category": "other",
+        "defaultDuration": 20,
+        "description": "Анализ результатов портфелей за квартал"
+      },
+      {
+        "title": "Обзор рисков",
+        "category": "risk",
+        "defaultDuration": 25,
+        "description": "Квартальный обзор рисков и метрик"
+      },
+      {
+        "title": "Вопросы аллокации",
+        "category": "allocation",
+        "defaultDuration": 30,
+        "description": "Обсуждение стратегической аллокации"
+      },
+      {
+        "title": "Обзор соответствия IPS",
+        "category": "ips_waiver",
+        "defaultDuration": 20,
+        "description": "Проверка соответствия политикам IPS"
+      },
+      {
+        "title": "Текущие вопросы",
+        "category": "other",
+        "defaultDuration": 15,
+        "description": "Разное и оперативные вопросы"
+      }
+    ],
+    "isActive": true,
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "cm-tmpl-002",
+    "name": "Экстренное заседание",
+    "description": "Шаблон для срочных заседаний по рыночным событиям",
+    "type": "agenda",
+    "sections": [
+      {
+        "title": "Текущая ситуация",
+        "category": "risk",
+        "defaultDuration": 15,
+        "description": "Обзор текущей рыночной ситуации"
+      },
+      {
+        "title": "Оценка воздействия",
+        "category": "risk",
+        "defaultDuration": 20,
+        "description": "Анализ влияния на портфели"
+      },
+      {
+        "title": "Предлагаемые меры",
+        "category": "rebalancing",
+        "defaultDuration": 30,
+        "description": "Обсуждение защитных мер"
+      },
+      {
+        "title": "Голосование и решения",
+        "category": "other",
+        "defaultDuration": 15,
+        "description": "Принятие решений"
+      }
+    ],
+    "isActive": true,
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "cm-tmpl-003",
+    "name": "Выбор менеджера",
+    "description": "Шаблон для заседания по выбору инвестиционного менеджера",
+    "type": "agenda",
+    "sections": [
+      {
+        "title": "Обзор кандидатов",
+        "category": "manager_selection",
+        "defaultDuration": 30,
+        "description": "Презентация кандидатов и due diligence"
+      },
+      {
+        "title": "Сравнительный анализ",
+        "category": "manager_selection",
+        "defaultDuration": 25,
+        "description": "Сравнение стратегий, комиссий, результатов"
+      },
+      {
+        "title": "Вопросы и обсуждение",
+        "category": "other",
+        "defaultDuration": 20,
+        "description": "Вопросы членов комитета"
+      },
+      {
+        "title": "Голосование",
+        "category": "other",
+        "defaultDuration": 15,
+        "description": "Голосование по выбору менеджера"
+      }
+    ],
+    "isActive": true,
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "cm-tmpl-004",
+    "name": "Стандартный протокол",
+    "description": "Шаблон протокола заседания комитета",
+    "type": "minutes",
+    "content": "# Протокол заседания Инвестиционного Комитета\n\n**Дата:** {{date}}\n**Время:** {{time}}\n**Место:** {{location}}\n\n## Присутствовали\n{{attendees}}\n\n## Повестка дня\n{{agenda}}\n\n## Ход заседания\n{{discussion}}\n\n## Принятые решения\n{{decisions}}\n\n## Результаты голосований\n{{votes}}\n\n## Задачи на исполнение\n{{followUps}}\n\n---\n\n**Председатель:** {{chair}}\n**Секретарь:** {{secretary}}\n**Дата публикации:** {{publishDate}}",
+    "isActive": true,
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "cm-tmpl-005",
+    "name": "Клиентская версия протокола",
+    "description": "Шаблон протокола для предоставления клиентам",
+    "type": "minutes",
+    "content": "# Выписка из протокола Инвестиционного Комитета\n\n**Дата заседания:** {{date}}\n\n## Рассмотренные вопросы\n{{publicAgenda}}\n\n## Принятые решения\n{{publicDecisions}}\n\n---\n\n*Решения комитета фиксируются для отчетности. Не является индивидуальной инвестиционной рекомендацией.*\n\n**Заверено:** {{chair}}\n**Дата:** {{publishDate}}",
+    "isClientSafe": true,
+    "isActive": true,
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "cm-tmpl-006",
+    "name": "Годовой обзор",
+    "description": "Шаблон для годового обзора деятельности",
+    "type": "agenda",
+    "sections": [
+      {
+        "title": "Итоги года",
+        "category": "other",
+        "defaultDuration": 30,
+        "description": "Обзор результатов за год"
+      },
+      {
+        "title": "Анализ решений",
+        "category": "other",
+        "defaultDuration": 20,
+        "description": "Обзор принятых за год решений"
+      },
+      {
+        "title": "Стратегический обзор",
+        "category": "allocation",
+        "defaultDuration": 40,
+        "description": "Стратегический обзор аллокации"
+      },
+      {
+        "title": "План на следующий год",
+        "category": "allocation",
+        "defaultDuration": 30,
+        "description": "Утверждение плана на следующий год"
+      },
+      {
+        "title": "Обзор процедур",
+        "category": "other",
+        "defaultDuration": 20,
+        "description": "Обзор и улучшение процедур комитета"
+      }
+    ],
+    "isActive": true,
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  }
+]

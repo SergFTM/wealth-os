@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ClientRequest",
+  "description": "Client service requests from portal",
+  "type": "object",
+  "required": ["id", "clientId", "householdId", "requestedByUserId", "requestType", "title", "status", "createdAt"],
+  "properties": {
+    "id": { "type": "string", "description": "Unique request identifier" },
+    "clientId": { "type": "string", "description": "Client ID" },
+    "householdId": { "type": "string", "description": "Household ID" },
+    "requestedByUserId": { "type": "string", "description": "User who created the request" },
+    "requestType": {
+      "type": "string",
+      "enum": ["document_request", "payment_request", "change_request", "question"],
+      "description": "Type of request"
+    },
+    "title": { "type": "string", "description": "Request title" },
+    "description": { "type": "string", "description": "Detailed description" },
+    "priority": {
+      "type": "string",
+      "enum": ["low", "normal", "high", "urgent"],
+      "default": "normal"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["submitted", "triaged", "in_progress", "awaiting_client", "completed", "cancelled"],
+      "default": "submitted"
+    },
+    "slaDueAt": { "type": "string", "format": "date-time", "description": "SLA due datetime" },
+    "linkedThreadId": { "type": "string", "description": "Linked communication thread ID" },
+    "linkedTaskId": { "type": "string", "description": "Linked task ID for ops" },
+    "attachmentDocIds": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Array of attached document IDs"
+    },
+    "assignedToUserId": { "type": "string", "description": "Assigned staff user ID" },
+    "resolvedAt": { "type": "string", "format": "date-time" },
+    "clientNotes": { "type": "string", "description": "Notes visible to client" },
+    "internalNotes": { "type": "string", "description": "Staff-only notes" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

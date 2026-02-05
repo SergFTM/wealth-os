@@ -13,6 +13,7 @@ import { PsAllocationPanel } from '@/modules/07-partnerships/ui/PsAllocationPane
 import { PsStructureGraph } from '@/modules/07-partnerships/ui/PsStructureGraph';
 import { PsDocumentsTable } from '@/modules/07-partnerships/ui/PsDocumentsTable';
 import { PsAuditPanel } from '@/modules/07-partnerships/ui/PsAuditPanel';
+import type { AuditEvent } from '@/db/storage/storage.types';
 import seedData from '@/modules/07-partnerships/seed.json';
 
 const partnershipTabs = [
@@ -124,7 +125,7 @@ export default function PartnershipsItemPage({ params }: { params: Promise<{ id:
         {activeTab === 'distributions' && <PsDistributionsTable distributions={psDist} onOpen={did => router.push(`/m/partnerships/item/${did}?type=dist`)} />}
         {activeTab === 'allocations' && <PsAllocationPanel allocations={psAlloc} partnershipName={partnership.name} />}
         {activeTab === 'documents' && <PsDocumentsTable documents={psDocs} linkedToName={partnership.name} onAttach={() => console.log('Attach')} />}
-        {activeTab === 'audit' && <PsAuditPanel events={psAudit} filterRecordId={id} />}
+        {activeTab === 'audit' && <PsAuditPanel events={psAudit as AuditEvent[]} filterRecordId={id} />}
       </div>
     );
   }
@@ -190,7 +191,7 @@ export default function PartnershipsItemPage({ params }: { params: Promise<{ id:
         {activeTab === 'transactions' && <PsTransactionsTable transactions={ownerTxs} onOpen={tid => router.push(`/m/partnerships/item/${tid}?type=tx`)} />}
         {activeTab === 'distributions' && <PsDistributionsTable distributions={ownerDists} onOpen={did => router.push(`/m/partnerships/item/${did}?type=dist`)} />}
         {activeTab === 'documents' && <PsDocumentsTable documents={[]} linkedToName={ownerData.name} onAttach={() => console.log('Attach')} />}
-        {activeTab === 'audit' && <PsAuditPanel events={ownerAudit} />}
+        {activeTab === 'audit' && <PsAuditPanel events={ownerAudit as AuditEvent[]} />}
       </div>
     );
   }
@@ -253,7 +254,7 @@ export default function PartnershipsItemPage({ params }: { params: Promise<{ id:
     }
     const psName = seedData.partnerships.find(p => p.id === txData.partnershipId)?.name || '';
     const ownerName = seedData.owners.find(o => o.id === txData.ownerId)?.name || '';
-    const txDocs = seedData.documents.filter(d => txData.docIds?.includes(d.id));
+    const txDocs = seedData.documents.filter(d => (txData.docIds as string[])?.includes(d.id));
 
     const typeLabels: Record<string, string> = {
       contribution: 'Взнос', subscription: 'Подписка', redemption: 'Выкуп',
@@ -309,7 +310,7 @@ export default function PartnershipsItemPage({ params }: { params: Promise<{ id:
     }
     const psName = seedData.partnerships.find(p => p.id === distData.partnershipId)?.name || '';
     const ownerName = seedData.owners.find(o => o.id === distData.ownerId)?.name || '';
-    const distDocs = seedData.documents.filter(d => distData.docIds?.includes(d.id));
+    const distDocs = seedData.documents.filter(d => (distData.docIds as string[])?.includes(d.id));
 
     const typeLabels: Record<string, string> = {
       cash: 'Cash', in_kind: 'In-kind', return_of_capital: 'Возврат капитала', fee: 'Комиссия'

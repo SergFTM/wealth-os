@@ -1,0 +1,20 @@
+{
+  "collection": "watchlists",
+  "description": "Investment watchlists for tracking tickers, funds, deals",
+  "fields": [
+    { "name": "id", "type": "string", "required": true, "description": "Unique identifier" },
+    { "name": "clientId", "type": "string", "required": true, "description": "Client/household ID" },
+    { "name": "name", "type": "string", "required": true, "description": "Watchlist name" },
+    { "name": "description", "type": "text", "description": "Watchlist description" },
+    { "name": "listType", "type": "enum", "values": ["tickers", "funds", "deals", "managers", "custom"], "required": true },
+    { "name": "ownerUserId", "type": "string", "required": true, "description": "User who created the watchlist" },
+    { "name": "scopeType", "type": "enum", "values": ["household", "entity", "portfolio", "account"], "description": "Scope level" },
+    { "name": "scopeId", "type": "string", "description": "ID of scoped entity" },
+    { "name": "isShared", "type": "boolean", "default": false, "description": "Shared with team" },
+    { "name": "tagsJson", "type": "json", "description": "Array of tags" },
+    { "name": "alertsEnabled", "type": "boolean", "default": false, "description": "Price alerts enabled" },
+    { "name": "createdAt", "type": "datetime", "required": true },
+    { "name": "updatedAt", "type": "datetime", "required": true }
+  ],
+  "indexes": ["clientId", "listType", "ownerUserId"]
+}

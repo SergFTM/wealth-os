@@ -1,0 +1,23 @@
+{
+  "collection": "kbChecklists",
+  "description": "Training and onboarding checklists",
+  "fields": {
+    "id": { "type": "string", "required": true, "primary": true },
+    "clientId": { "type": "string", "required": true },
+    "nameRu": { "type": "string", "required": true },
+    "nameEn": { "type": "string" },
+    "nameUk": { "type": "string" },
+    "descriptionRu": { "type": "string" },
+    "descriptionEn": { "type": "string" },
+    "descriptionUk": { "type": "string" },
+    "roleTarget": { "type": "enum", "values": ["admin", "operations", "compliance", "rm", "advisor", "client", "any"], "default": "any" },
+    "stepsJson": { "type": "array", "items": "object", "description": "Array of step objects with id, title, required flag" },
+    "audience": { "type": "enum", "values": ["staff", "client", "both"], "default": "staff" },
+    "enforceOrder": { "type": "boolean", "default": false },
+    "allowEvidenceUpload": { "type": "boolean", "default": true },
+    "status": { "type": "enum", "values": ["draft", "active", "archived"], "default": "draft" },
+    "createdAt": { "type": "datetime", "required": true },
+    "updatedAt": { "type": "datetime" }
+  },
+  "indexes": ["clientId", "roleTarget", "status"]
+}

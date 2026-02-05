@@ -1,0 +1,30 @@
+{
+  "id": { "type": "string", "primary": true },
+  "clientId": { "type": "string", "required": true },
+  "name": { "type": "string", "required": true },
+  "description": { "type": "string" },
+  "appliesTo": { "type": "enum", "values": ["documents", "reports", "both"], "required": true },
+  "status": { "type": "enum", "values": ["active", "paused"], "default": "active" },
+  "priority": { "type": "number", "default": 100, "description": "Lower = higher priority" },
+  "rules": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "condition": { "type": "string", "description": "Match expression" },
+        "matchScopeType": { "type": "array", "items": { "type": "string" } },
+        "matchDocTags": { "type": "array", "items": { "type": "string" } },
+        "matchReportType": { "type": "array", "items": { "type": "string" } },
+        "matchRole": { "type": "array", "items": { "type": "string" } },
+        "allowActions": { "type": "array", "items": { "type": "string" } },
+        "denyActions": { "type": "array", "items": { "type": "string" } },
+        "enforceWatermark": { "type": "boolean" },
+        "enforceClientSafe": { "type": "boolean" }
+      }
+    }
+  },
+  "createdByUserId": { "type": "string" },
+  "createdAt": { "type": "date" },
+  "updatedAt": { "type": "date" }
+}

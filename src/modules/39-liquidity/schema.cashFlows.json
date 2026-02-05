@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CashFlow",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client reference" },
+    "scopeType": { "type": "string", "enum": ["household", "entity", "portfolio", "account"], "description": "Scope level" },
+    "scopeId": { "type": "string", "description": "Reference to scope object" },
+    "flowType": { "type": "string", "enum": ["inflow", "outflow"], "description": "Flow direction" },
+    "categoryKey": {
+      "type": "string",
+      "enum": ["payroll", "rent", "tax", "capital_call", "distribution", "invoice", "debt", "dividend", "interest", "fee", "other"],
+      "description": "Flow category"
+    },
+    "flowDate": { "type": "string", "format": "date", "description": "Expected date of flow" },
+    "amount": { "type": "number", "minimum": 0, "description": "Flow amount" },
+    "currency": { "type": "string", "description": "Currency code" },
+    "description": { "type": "string", "description": "Flow description" },
+    "recurrenceJson": {
+      "type": "object",
+      "description": "Recurrence settings",
+      "properties": {
+        "pattern": { "type": "string", "enum": ["once", "weekly", "biweekly", "monthly", "quarterly", "annually"] },
+        "endDate": { "type": "string", "format": "date" },
+        "occurrences": { "type": "integer" }
+      }
+    },
+    "isConfirmed": { "type": "boolean", "description": "Whether flow is confirmed" },
+    "sourceType": { "type": "string", "enum": ["manual", "invoice", "capital_call", "distribution", "tax_deadline", "gl"], "description": "Source type" },
+    "sourceId": { "type": "string", "description": "Reference to source record" },
+    "notes": { "type": "string", "description": "Additional notes" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "scopeType", "flowType", "categoryKey", "flowDate", "amount", "currency", "createdAt"]
+}

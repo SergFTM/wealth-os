@@ -1,0 +1,22 @@
+{
+  "collection": "researchNotes",
+  "description": "Research notes linked to investment ideas",
+  "fields": [
+    { "name": "id", "type": "string", "required": true, "description": "Unique identifier" },
+    { "name": "clientId", "type": "string", "required": true, "description": "Client/household ID" },
+    { "name": "title", "type": "string", "required": true, "description": "Note title" },
+    { "name": "linkedIdeaId", "type": "string", "description": "Linked idea ID if any" },
+    { "name": "sourceType", "type": "enum", "values": ["article", "doc", "call", "meeting", "report", "screenshot"], "required": true },
+    { "name": "sourceUrl", "type": "string", "description": "Source URL if applicable" },
+    { "name": "sourceAuthor", "type": "string", "description": "Author or source name" },
+    { "name": "sourceDate", "type": "date", "description": "Date of source material" },
+    { "name": "bodyMd", "type": "text", "required": true, "description": "Markdown content" },
+    { "name": "summaryText", "type": "text", "description": "AI-generated or manual summary" },
+    { "name": "tagsJson", "type": "json", "description": "Array of tags" },
+    { "name": "attachmentDocIdsJson", "type": "json", "description": "Array of linked document IDs" },
+    { "name": "ownerUserId", "type": "string", "required": true, "description": "User who created the note" },
+    { "name": "createdAt", "type": "datetime", "required": true },
+    { "name": "updatedAt", "type": "datetime", "required": true }
+  ],
+  "indexes": ["clientId", "linkedIdeaId", "sourceType", "ownerUserId"]
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CommThread",
+  "type": "object",
+  "required": ["id", "clientId", "title", "threadType", "status", "scopeType", "scopeId", "clientSafe", "createdAt"],
+  "properties": {
+    "id": { "type": "string", "description": "Unique thread identifier" },
+    "clientId": { "type": "string", "description": "Client/household ID" },
+    "title": { "type": "string", "description": "Thread subject/title" },
+    "threadType": {
+      "type": "string",
+      "enum": ["request", "approval", "incident", "advisor", "client_service"],
+      "description": "Type of thread"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["open", "escalated", "closed", "archived"],
+      "description": "Thread status"
+    },
+    "scopeType": {
+      "type": "string",
+      "enum": ["household", "entity", "portfolio", "account"],
+      "description": "Scope type"
+    },
+    "scopeId": { "type": "string", "description": "ID of the scoped object" },
+    "clientSafe": { "type": "boolean", "description": "Whether thread is visible to clients" },
+    "slaDueAt": { "type": ["string", "null"], "format": "date-time", "description": "SLA deadline" },
+    "lastMessageAt": { "type": ["string", "null"], "format": "date-time", "description": "Last message timestamp" },
+    "unreadCountByUserJson": { "type": "string", "description": "JSON map of userId -> unread count" },
+    "linkedRefsJson": { "type": "string", "description": "JSON array of linked object references" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

@@ -12,7 +12,39 @@ const VALID_COLLECTIONS: Collection[] = [
   'pcValuations', 'pcVintageMetrics', 'pcForecasts',
   // Liquidity collections
   'cashAccounts', 'cashMovements', 'cashForecast', 'obligations',
-  'liquidityAlerts', 'liquidityBuckets'
+  'liquidityAlerts', 'liquidityBuckets',
+  // Document Vault collections
+  'documentVersions', 'documentLinks', 'evidencePacks', 'docShares', 'docTags',
+  // Onboarding & Compliance collections
+  'onboardingCases', 'intakeForms', 'beneficialOwners',
+  'screeningChecks', 'riskScores', 'complianceTasks',
+  // IPS & Constraints collections
+  'ipsPolicies', 'ipsVersions', 'ipsConstraints', 'ipsBreaches',
+  'ipsWaivers', 'committeeMeetings', 'committeeDecisions',
+  // Risk Oversight collections
+  'riskExposures', 'riskConcentrations', 'riskMetrics',
+  'stressScenarios', 'stressRuns', 'riskAlerts', 'riskActions',
+  // Tax Center collections
+  'taxLots', 'taxGains', 'taxHarvesting', 'taxDeadlines',
+  'taxAdvisorPacks', 'taxProfiles',
+  // Trust & Estate collections
+  'trusts', 'beneficiaries', 'trustees', 'trustDistributions',
+  'trustEvents', 'trustCalendars', 'trustPowers',
+  // Fee Billing & Invoicing collections
+  'feeContracts', 'feeSchedules', 'feeRuns', 'feeInvoices',
+  'arPayments', 'feePolicies',
+  // Data Integrations Hub collections
+  'connectors', 'connectorCredentials', 'syncRuns', 'mappings',
+  'dataQualityIssues', 'reconciliations', 'errorLogs',
+  // Secure Communications collections
+  'commThreads', 'commMessages', 'commParticipants',
+  'commAttachments', 'commSlaPolicies', 'commThreadPins',
+  // AI Advisory Layer collections
+  'aiEvents', 'aiNarratives', 'aiDrafts',
+  'aiTriageItems', 'aiFeedback', 'aiPolicies',
+  // Deals & Corporate Actions collections
+  'deals', 'dealStages', 'dealTransactions',
+  'corporateActions', 'capitalEvents', 'dealApprovals', 'dealDocuments'
 ];
 
 type RouteParams = Promise<{ collection: string }>;

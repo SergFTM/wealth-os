@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "digest.schema.json",
+  "title": "Digest",
+  "description": "A notification digest bundle",
+  "type": "object",
+  "required": ["id", "clientId", "userId", "frequency", "status", "createdAt", "updatedAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the digest"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/tenant identifier"
+    },
+    "userId": {
+      "type": "string",
+      "description": "Target user ID"
+    },
+    "userName": {
+      "type": "string",
+      "description": "Target user display name"
+    },
+    "title": {
+      "type": "string",
+      "description": "Digest title"
+    },
+    "frequency": {
+      "type": "string",
+      "enum": ["hourly", "daily", "weekly"],
+      "description": "Digest frequency"
+    },
+    "periodStart": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Start of the digest period"
+    },
+    "periodEnd": {
+      "type": "string",
+      "format": "date-time",
+      "description": "End of the digest period"
+    },
+    "notificationIds": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Notifications included in this digest"
+    },
+    "notificationCount": {
+      "type": "number",
+      "description": "Total notifications in digest"
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "byCategory": {
+          "type": "object",
+          "additionalProperties": { "type": "number" }
+        },
+        "byPriority": {
+          "type": "object",
+          "additionalProperties": { "type": "number" }
+        },
+        "highlights": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "description": "Digest summary statistics"
+    },
+    "channel": {
+      "type": "string",
+      "enum": ["inbox", "email", "slack", "teams"],
+      "description": "Delivery channel for the digest"
+    },
+    "templateId": {
+      "type": ["string", "null"],
+      "description": "Template used for rendering"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "sent", "delivered", "read", "failed"],
+      "description": "Digest delivery status"
+    },
+    "sentAt": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "deliveredAt": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "readAt": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "scheduledFor": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Scheduled send time"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

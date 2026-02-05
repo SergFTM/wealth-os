@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Draft",
+  "type": "object",
+  "required": ["id", "clientId", "draftType", "title", "contentText", "status", "createdAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "draftType": { "type": "string", "enum": ["message", "committee_pack", "policy_summary", "report_section", "client_update", "email"] },
+    "title": { "type": "string" },
+    "contentText": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "reviewed", "sent", "archived"] },
+    "targetModule": { "type": ["string", "null"], "enum": ["comms", "reporting", "ips", "workflow", null] },
+    "linkedRefsJson": { "type": "string", "description": "JSON array of linked object references" },
+    "createdBy": { "type": "string" },
+    "reviewedBy": { "type": ["string", "null"] },
+    "reviewedAt": { "type": ["string", "null"], "format": "date-time" },
+    "createdAt": { "type": "string", "format": "date-time" }
+  }
+}

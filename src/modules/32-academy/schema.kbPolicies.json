@@ -1,0 +1,24 @@
+{
+  "collection": "kbPolicies",
+  "description": "Company policies requiring acknowledgement",
+  "fields": {
+    "id": { "type": "string", "required": true, "primary": true },
+    "clientId": { "type": "string", "required": true },
+    "titleRu": { "type": "string", "required": true },
+    "titleEn": { "type": "string" },
+    "titleUk": { "type": "string" },
+    "bodyRu": { "type": "string", "required": true },
+    "bodyEn": { "type": "string" },
+    "bodyUk": { "type": "string" },
+    "categoryKey": { "type": "enum", "values": ["security", "data", "compliance", "operational", "hr", "other"], "default": "other" },
+    "audience": { "type": "enum", "values": ["staff", "client", "both"], "default": "staff" },
+    "version": { "type": "string", "default": "1.0" },
+    "status": { "type": "enum", "values": ["draft", "active", "archived"], "default": "draft" },
+    "requiresAck": { "type": "boolean", "default": true },
+    "ackDeadlineDays": { "type": "number" },
+    "attachmentsDocIdsJson": { "type": "array", "items": "string" },
+    "createdAt": { "type": "datetime", "required": true },
+    "updatedAt": { "type": "datetime", "required": true }
+  },
+  "indexes": ["clientId", "categoryKey", "status", "audience"]
+}

@@ -1,0 +1,26 @@
+{
+  "collection": "ideaMemos",
+  "description": "Investment memos generated from ideas for committee review",
+  "fields": [
+    { "name": "id", "type": "string", "required": true, "description": "Unique identifier" },
+    { "name": "clientId", "type": "string", "required": true, "description": "Client/household ID" },
+    { "name": "ideaId", "type": "string", "required": true, "description": "Source idea ID" },
+    { "name": "title", "type": "string", "required": true, "description": "Memo title" },
+    { "name": "bodyMd", "type": "text", "required": true, "description": "Full memo content in markdown" },
+    { "name": "executiveSummary", "type": "text", "description": "Executive summary section" },
+    { "name": "thesisSection", "type": "text", "description": "Thesis section" },
+    { "name": "risksSection", "type": "text", "description": "Risks section" },
+    { "name": "ipsFitSection", "type": "text", "description": "IPS fit analysis section" },
+    { "name": "recommendationSection", "type": "text", "description": "Recommendation section" },
+    { "name": "sourcesSection", "type": "text", "description": "Sources section" },
+    { "name": "audience", "type": "enum", "values": ["staff", "client_safe"], "required": true, "default": "staff" },
+    { "name": "status", "type": "enum", "values": ["draft", "published"], "required": true, "default": "draft" },
+    { "name": "publishedAt", "type": "datetime", "description": "When memo was published" },
+    { "name": "publishedTo", "type": "json", "description": "Where published: committee_pack, report_pack, etc" },
+    { "name": "aiMetaJson", "type": "json", "description": "AI generation metadata: confidence, assumptions, sources" },
+    { "name": "ownerUserId", "type": "string", "required": true, "description": "User who created the memo" },
+    { "name": "createdAt", "type": "datetime", "required": true },
+    { "name": "updatedAt", "type": "datetime", "required": true }
+  ],
+  "indexes": ["clientId", "ideaId", "status", "audience"]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SecuritySettings",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "awsRegion": { "type": "string" },
+    "dedicatedUrl": { "type": "string" },
+    "tenantIsolationMode": { "type": "string", "enum": ["shared", "dedicated"] },
+    "dataRetentionDays": { "type": "integer" },
+    "passwordPolicyJson": { "type": "string" },
+    "ssoJson": { "type": "string" },
+    "clientSafeDefaultsJson": { "type": "string" },
+    "mfaRequired": { "type": "boolean" },
+    "sessionTimeoutMinutes": { "type": "integer" },
+    "ipWhitelistEnabled": { "type": "boolean" },
+    "ipWhitelist": { "type": "array", "items": { "type": "string" } },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id"]
+}

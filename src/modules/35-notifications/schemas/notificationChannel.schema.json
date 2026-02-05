@@ -1,0 +1,134 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "notificationChannel.schema.json",
+  "title": "NotificationChannel",
+  "description": "A notification delivery channel configuration",
+  "type": "object",
+  "required": ["id", "clientId", "type", "name", "status", "createdAt", "updatedAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the channel"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/tenant identifier"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["inbox", "email", "sms", "push", "slack", "teams", "webhook"],
+      "description": "Channel type"
+    },
+    "name": {
+      "type": "string",
+      "description": "Channel display name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Channel description"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "paused", "error", "disabled"],
+      "description": "Channel status"
+    },
+    "config": {
+      "type": "object",
+      "description": "Channel-specific configuration",
+      "properties": {
+        "email": {
+          "type": "object",
+          "properties": {
+            "smtpHost": { "type": "string" },
+            "smtpPort": { "type": "number" },
+            "fromAddress": { "type": "string" },
+            "fromName": { "type": "string" },
+            "replyTo": { "type": "string" }
+          }
+        },
+        "sms": {
+          "type": "object",
+          "properties": {
+            "provider": { "type": "string" },
+            "fromNumber": { "type": "string" }
+          }
+        },
+        "slack": {
+          "type": "object",
+          "properties": {
+            "webhookUrl": { "type": "string" },
+            "channel": { "type": "string" },
+            "botToken": { "type": "string" }
+          }
+        },
+        "teams": {
+          "type": "object",
+          "properties": {
+            "webhookUrl": { "type": "string" },
+            "tenantId": { "type": "string" }
+          }
+        },
+        "webhook": {
+          "type": "object",
+          "properties": {
+            "url": { "type": "string" },
+            "method": { "type": "string" },
+            "headers": { "type": "object" },
+            "authType": { "type": "string" }
+          }
+        },
+        "push": {
+          "type": "object",
+          "properties": {
+            "provider": { "type": "string" },
+            "vapidPublicKey": { "type": "string" }
+          }
+        }
+      }
+    },
+    "rateLimits": {
+      "type": "object",
+      "properties": {
+        "perMinute": { "type": "number" },
+        "perHour": { "type": "number" },
+        "perDay": { "type": "number" }
+      },
+      "description": "Rate limiting configuration"
+    },
+    "retryConfig": {
+      "type": "object",
+      "properties": {
+        "maxRetries": { "type": "number" },
+        "retryDelayMs": { "type": "number" },
+        "backoffMultiplier": { "type": "number" }
+      },
+      "description": "Retry configuration"
+    },
+    "stats": {
+      "type": "object",
+      "properties": {
+        "sentCount": { "type": "number" },
+        "deliveredCount": { "type": "number" },
+        "failedCount": { "type": "number" },
+        "lastSentAt": { "type": ["string", "null"] },
+        "lastErrorAt": { "type": ["string", "null"] },
+        "lastError": { "type": ["string", "null"] }
+      },
+      "description": "Channel statistics"
+    },
+    "createdByUserId": {
+      "type": "string"
+    },
+    "createdByName": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

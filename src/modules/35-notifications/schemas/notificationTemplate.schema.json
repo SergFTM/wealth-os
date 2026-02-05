@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "notificationTemplate.schema.json",
+  "title": "NotificationTemplate",
+  "description": "A notification template",
+  "type": "object",
+  "required": ["id", "clientId", "name", "category", "status", "createdAt", "updatedAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the template"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/tenant identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Template name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Template description"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["task", "approval", "alert", "reminder", "system", "compliance", "report", "message", "escalation", "digest"],
+      "description": "Template category"
+    },
+    "locale": {
+      "type": "string",
+      "enum": ["ru", "en", "uk"],
+      "default": "ru",
+      "description": "Template locale"
+    },
+    "channels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["inbox", "email", "sms", "push", "slack", "teams", "webhook"]
+      },
+      "description": "Supported channels"
+    },
+    "titleTemplate": {
+      "type": "string",
+      "description": "Title template with {{variables}}"
+    },
+    "bodyTemplate": {
+      "type": "string",
+      "description": "Body template with {{variables}}"
+    },
+    "htmlTemplate": {
+      "type": ["string", "null"],
+      "description": "HTML template for email channel"
+    },
+    "pushTemplate": {
+      "type": ["string", "null"],
+      "description": "Short template for push notifications"
+    },
+    "slackTemplate": {
+      "type": ["object", "null"],
+      "description": "Slack block kit template"
+    },
+    "teamsTemplate": {
+      "type": ["object", "null"],
+      "description": "Teams adaptive card template"
+    },
+    "variables": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "type": { "type": "string" },
+          "required": { "type": "boolean" },
+          "default": {}
+        }
+      },
+      "description": "Template variables"
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": { "type": "string" },
+          "labelTemplate": { "type": "string" },
+          "urlTemplate": { "type": "string" },
+          "style": { "type": "string" }
+        }
+      },
+      "description": "Action button templates"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "draft", "archived"],
+      "description": "Template status"
+    },
+    "version": {
+      "type": "number",
+      "description": "Template version"
+    },
+    "usageCount": {
+      "type": "number",
+      "description": "Number of times template was used"
+    },
+    "createdByUserId": {
+      "type": "string"
+    },
+    "createdByName": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

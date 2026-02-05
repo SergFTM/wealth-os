@@ -63,5 +63,120 @@
     "summary": "Created tasks record",
     "id": "1769635730033-9ea5er5i9",
     "ts": "2026-01-28T21:28:50.033Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "admin@wealth.os",
+    "action": "view",
+    "collection": "documents",
+    "recordId": "doc-032",
+    "summary": "Downloaded document: Bank Statement HSBC Jan 2026",
+    "severity": "info",
+    "id": "1770053723035-au3pohx0t",
+    "createdAt": "2026-02-02T17:35:23.035Z",
+    "updatedAt": "2026-02-02T17:35:23.035Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "create",
+    "collection": "auditEvents",
+    "recordId": "1770053723035-au3pohx0t",
+    "summary": "Created auditEvents record",
+    "id": "1770053723040-n9vfu1tri",
+    "ts": "2026-02-02T17:35:23.040Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "update",
+    "collection": "ipsBreaches",
+    "recordId": "ips-br-002",
+    "summary": "Updated ipsBreaches record",
+    "id": "1770118975076-sd5nohzxb",
+    "ts": "2026-02-03T11:42:55.076Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "update",
+    "collection": "docShares",
+    "recordId": "share-001",
+    "summary": "Updated docShares record",
+    "id": "1770226292641-d23s125tj",
+    "ts": "2026-02-04T17:31:32.641Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "update",
+    "collection": "docShares",
+    "recordId": "share-002",
+    "summary": "Updated docShares record",
+    "id": "1770226293039-lz7jfq9nz",
+    "ts": "2026-02-04T17:31:33.039Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "update",
+    "collection": "docShares",
+    "recordId": "share-004",
+    "summary": "Updated docShares record",
+    "id": "1770226294616-7t56y6o81",
+    "ts": "2026-02-04T17:31:34.616Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "update",
+    "collection": "docShares",
+    "recordId": "share-002",
+    "summary": "Updated docShares record",
+    "id": "1770226298989-b0z8gd2pr",
+    "ts": "2026-02-04T17:31:38.989Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "ops@wealth.os",
+    "action": "create",
+    "collection": "documents",
+    "recordId": "1770233667430-q9zmcc9h0",
+    "summary": "Uploaded document: ТЗ (2)",
+    "severity": "info",
+    "id": "1770233667442-4j0t34y61",
+    "ts": "2026-02-04T19:34:27.442Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "create",
+    "collection": "tasks",
+    "recordId": "1770245669632-q7lutgqli",
+    "summary": "Created tasks record",
+    "id": "1770245669635-d4lel2gf8",
+    "ts": "2026-02-04T22:54:29.635Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "admin@wealth.os",
+    "action": "view",
+    "collection": "documents",
+    "recordId": "1770233667430-q9zmcc9h0",
+    "summary": "Downloaded document: ТЗ (2)",
+    "severity": "info",
+    "id": "1770315961422-nrv72lger",
+    "createdAt": "2026-02-05T18:26:01.422Z",
+    "updatedAt": "2026-02-05T18:26:01.422Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "create",
+    "collection": "auditEvents",
+    "recordId": "1770315961422-nrv72lger",
+    "summary": "Created auditEvents record",
+    "id": "1770315961426-l4qchkxke",
+    "ts": "2026-02-05T18:26:01.426Z"
   }
 ]

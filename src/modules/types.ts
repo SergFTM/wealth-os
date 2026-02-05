@@ -22,6 +22,11 @@ export interface ModuleAction {
   variant?: 'primary' | 'secondary' | 'ghost';
 }
 
+export interface ModuleTab {
+  key: string;
+  label: Record<Locale, string>;
+}
+
 export interface ModuleConfig {
   id: string;
   slug: string;
@@ -29,12 +34,18 @@ export interface ModuleConfig {
   icon: string;
   title: Record<Locale, string>;
   description?: Record<Locale, string>;
-  kpis: ModuleKpi[];
-  columns: ModuleColumn[];
-  actions: ModuleAction[];
+  kpis?: ModuleKpi[];
+  columns?: ModuleColumn[];
+  actions?: ModuleAction[];
   disclaimer?: Record<Locale, string>;
   adminOnly?: boolean;
   clientSafeHidden?: boolean;
+  // Extended properties for comprehensive modules
+  color?: string;
+  enabled?: boolean;
+  collections?: string[];
+  routes?: Record<string, string>;
+  tabs?: ModuleTab[];
 }
 
 export interface ModuleDataItem {

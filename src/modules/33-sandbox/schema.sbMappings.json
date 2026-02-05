@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sandbox Mapping",
+  "description": "Field mapping rules for data transformation",
+  "type": "object",
+  "required": ["id", "clientId", "connectorId", "entityType", "updatedAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/tenant identifier"
+    },
+    "connectorId": {
+      "type": "string",
+      "description": "Connector ID this mapping applies to"
+    },
+    "entityType": {
+      "type": "string",
+      "enum": ["transactions", "positions", "invoices", "accounts", "contacts", "documents", "prices", "tax_lots", "capital_calls", "distributions"],
+      "description": "Entity type"
+    },
+    "name": {
+      "type": "string",
+      "description": "Mapping name"
+    },
+    "description": {
+      "type": "string"
+    },
+    "rulesJson": {
+      "type": "array",
+      "description": "Mapping rules",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sourceField": { "type": "string" },
+          "targetField": { "type": "string" },
+          "required": { "type": "boolean" },
+          "defaultValue": {}
+        }
+      }
+    },
+    "transformsJson": {
+      "type": "array",
+      "description": "Transform functions",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": { "type": "string" },
+          "transform": {
+            "type": "string",
+            "enum": ["toNumber", "toDate", "toString", "toBoolean", "normalizeCurrency", "uppercase", "lowercase", "trim", "split", "join", "lookup", "calculate"]
+          },
+          "params": { "type": "object" }
+        }
+      }
+    },
+    "validationRulesJson": {
+      "type": "array",
+      "description": "Validation rules",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": { "type": "string" },
+          "rule": { "type": "string" },
+          "params": { "type": "object" }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "draft", "archived"],
+      "default": "active"
+    },
+    "version": {
+      "type": "number",
+      "default": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

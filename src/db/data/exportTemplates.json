@@ -1,0 +1,129 @@
+[
+  {
+    "id": "template-001",
+    "clientId": "system",
+    "name": "Annual Audit Pack",
+    "description": "Полный годовой аудиторский пакет со всеми секциями",
+    "defaultPackType": "audit",
+    "defaultClientSafe": false,
+    "sectionsJson": [
+      {"sectionId": "gl_journal", "enabled": true, "label": "GL Journal", "format": "csv"},
+      {"sectionId": "net_worth", "enabled": true, "label": "Net Worth Snapshot", "format": "csv"},
+      {"sectionId": "positions", "enabled": true, "label": "Positions", "format": "csv"},
+      {"sectionId": "private_capital", "enabled": true, "label": "Private Capital Schedule", "format": "csv"},
+      {"sectionId": "payments", "enabled": true, "label": "Payments Summary", "format": "csv"},
+      {"sectionId": "documents", "enabled": true, "label": "Documents Index", "format": "csv"}
+    ],
+    "isSystem": true,
+    "category": "Audit",
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "template-002",
+    "clientId": "system",
+    "name": "Quarterly Net Worth Pack",
+    "description": "Квартальный отчет о чистой стоимости активов",
+    "defaultPackType": "audit",
+    "defaultClientSafe": false,
+    "sectionsJson": [
+      {"sectionId": "net_worth", "enabled": true, "label": "Net Worth Snapshot", "format": "csv"},
+      {"sectionId": "positions", "enabled": true, "label": "Positions", "format": "csv"}
+    ],
+    "isSystem": true,
+    "category": "Reporting",
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "template-003",
+    "clientId": "system",
+    "name": "Bank KYC Pack",
+    "description": "Пакет для банковского KYC/AML",
+    "defaultPackType": "bank",
+    "defaultClientSafe": true,
+    "sectionsJson": [
+      {"sectionId": "net_worth", "enabled": true, "label": "Net Worth Snapshot", "format": "csv"},
+      {"sectionId": "positions", "enabled": true, "label": "Positions", "format": "csv"},
+      {"sectionId": "documents", "enabled": true, "label": "Documents Index", "format": "csv"}
+    ],
+    "isSystem": true,
+    "category": "Compliance",
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "template-004",
+    "clientId": "system",
+    "name": "Tax Advisor Pack",
+    "description": "Пакет для налогового консультанта",
+    "defaultPackType": "tax",
+    "defaultClientSafe": true,
+    "sectionsJson": [
+      {"sectionId": "positions", "enabled": true, "label": "Positions", "format": "csv"},
+      {"sectionId": "payments", "enabled": true, "label": "Payments Summary", "format": "csv"},
+      {"sectionId": "documents", "enabled": true, "label": "Tax Documents", "format": "csv"}
+    ],
+    "isSystem": true,
+    "category": "Tax",
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "template-005",
+    "clientId": "system",
+    "name": "Private Capital Schedule",
+    "description": "Отчет по частным инвестициям",
+    "defaultPackType": "audit",
+    "defaultClientSafe": false,
+    "sectionsJson": [
+      {"sectionId": "private_capital", "enabled": true, "label": "Private Capital Schedule", "format": "csv"},
+      {"sectionId": "documents", "enabled": true, "label": "Fund Documents", "format": "csv"}
+    ],
+    "isSystem": true,
+    "category": "Investments",
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "template-006",
+    "clientId": "system",
+    "name": "Monthly Operations Report",
+    "description": "Ежемесячный операционный отчет",
+    "defaultPackType": "ops",
+    "defaultClientSafe": false,
+    "sectionsJson": [
+      {"sectionId": "payments", "enabled": true, "label": "Payments Summary", "format": "csv"},
+      {"sectionId": "documents", "enabled": true, "label": "Documents Index", "format": "csv"}
+    ],
+    "isSystem": true,
+    "category": "Operations",
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "template-007",
+    "clientId": "client-001",
+    "name": "Custom Family Report",
+    "description": "Пользовательский отчет для семьи",
+    "defaultPackType": "audit",
+    "defaultClientSafe": true,
+    "sectionsJson": [
+      {"sectionId": "net_worth", "enabled": true, "label": "Net Worth", "format": "csv"},
+      {"sectionId": "positions", "enabled": true, "label": "Holdings", "format": "csv"}
+    ],
+    "isSystem": false,
+    "category": "Custom",
+    "createdBy": "user-001",
+    "createdAt": "2024-06-15T10:00:00Z"
+  },
+  {
+    "id": "template-008",
+    "clientId": "system",
+    "name": "Client-Safe Summary",
+    "description": "Безопасная версия отчета для клиентов",
+    "defaultPackType": "audit",
+    "defaultClientSafe": true,
+    "sectionsJson": [
+      {"sectionId": "net_worth", "enabled": true, "label": "Net Worth Summary", "format": "csv"},
+      {"sectionId": "positions", "enabled": true, "label": "Position Summary", "format": "csv"}
+    ],
+    "isSystem": true,
+    "category": "Client",
+    "createdAt": "2024-01-01T00:00:00Z"
+  }
+]

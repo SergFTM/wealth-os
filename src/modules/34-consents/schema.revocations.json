@@ -1,0 +1,17 @@
+{
+  "id": { "type": "string", "primary": true },
+  "clientId": { "type": "string", "required": true },
+  "consentId": { "type": "string", "required": true },
+  "subjectType": { "type": "string" },
+  "subjectId": { "type": "string" },
+  "subjectName": { "type": "string" },
+  "scopeType": { "type": "string" },
+  "scopeId": { "type": "string" },
+  "scopeName": { "type": "string" },
+  "revokedByUserId": { "type": "string", "required": true },
+  "revokedByName": { "type": "string" },
+  "reason": { "type": "string", "required": true },
+  "revokedAt": { "type": "date", "required": true },
+  "createdAt": { "type": "date" },
+  "updatedAt": { "type": "date" }
+}

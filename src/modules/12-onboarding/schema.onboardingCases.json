@@ -1,0 +1,18 @@
+{
+  "collection": "onboardingCases",
+  "fields": {
+    "id": { "type": "string", "required": true },
+    "clientId": { "type": "string", "required": true },
+    "name": { "type": "string", "required": true },
+    "caseType": { "type": "enum", "values": ["household", "entity", "trust", "advisor"], "required": true },
+    "stage": { "type": "enum", "values": ["intake", "docs", "screening", "risk", "review"], "required": true },
+    "status": { "type": "enum", "values": ["active", "on_hold", "ready_for_approval", "approved", "rejected"], "required": true },
+    "assignee": { "type": "string", "required": true },
+    "slaDueAt": { "type": "datetime", "required": false },
+    "riskTier": { "type": "enum", "values": ["low", "medium", "high"], "required": false },
+    "linkedEntityId": { "type": "string", "required": false },
+    "notes": { "type": "string", "required": false },
+    "createdAt": { "type": "datetime", "auto": true },
+    "updatedAt": { "type": "datetime", "auto": true }
+  }
+}

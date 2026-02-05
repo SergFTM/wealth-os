@@ -1,0 +1,14 @@
+{
+  "id": { "type": "string", "primary": true },
+  "clientId": { "type": "string", "required": true },
+  "roomId": { "type": "string", "required": true },
+  "itemType": { "type": "enum", "values": ["document", "report"], "required": true },
+  "itemId": { "type": "string", "required": true },
+  "itemName": { "type": "string" },
+  "tags": { "type": "array", "items": { "type": "string" } },
+  "addedByUserId": { "type": "string" },
+  "addedByName": { "type": "string" },
+  "addedAt": { "type": "date" },
+  "createdAt": { "type": "date" },
+  "updatedAt": { "type": "date" }
+}

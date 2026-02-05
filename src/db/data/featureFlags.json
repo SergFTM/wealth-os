@@ -1,0 +1,122 @@
+[
+  {
+    "id": "flag_001",
+    "clientId": "client_001",
+    "key": "showAiAdvanced",
+    "description": "Show advanced AI features like draft generation and narrative creation",
+    "descriptionRu": "Показывать продвинутые AI функции: генерация черновиков, создание нарративов",
+    "descriptionUk": "Показувати продвинуті AI функції: генерація чернеток, створення наративів",
+    "enabled": true,
+    "audience": "staff",
+    "rolloutPct": 100,
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "flag_002",
+    "clientId": "client_001",
+    "key": "showApiModule",
+    "description": "Show API and Developer Console module in sidebar",
+    "descriptionRu": "Показывать модуль API и Developer Console в сайдбаре",
+    "descriptionUk": "Показувати модуль API та Developer Console в сайдбарі",
+    "enabled": true,
+    "audience": "staff",
+    "rolloutPct": 100,
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "flag_003",
+    "clientId": "client_001",
+    "key": "showReportingStudio",
+    "description": "Show Reporting Studio module with pack composer",
+    "descriptionRu": "Показывать модуль Reporting Studio с конструктором пакетов",
+    "descriptionUk": "Показувати модуль Reporting Studio з конструктором пакетів",
+    "enabled": true,
+    "audience": "both",
+    "rolloutPct": 100,
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "flag_004",
+    "clientId": "client_001",
+    "key": "showRiskAnalytics",
+    "description": "Show advanced risk analytics and stress testing",
+    "descriptionRu": "Показывать продвинутую аналитику рисков и стресс-тестирование",
+    "descriptionUk": "Показувати продвинуту аналітику ризиків та стрес-тестування",
+    "enabled": true,
+    "audience": "staff",
+    "rolloutPct": 100,
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "flag_005",
+    "clientId": "client_001",
+    "key": "showTaxHarvesting",
+    "description": "Show tax-loss harvesting opportunities",
+    "descriptionRu": "Показывать возможности налоговой оптимизации (tax-loss harvesting)",
+    "descriptionUk": "Показувати можливості податкової оптимізації (tax-loss harvesting)",
+    "enabled": true,
+    "audience": "staff",
+    "rolloutPct": 100,
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "flag_006",
+    "clientId": "client_001",
+    "key": "enableDarkMode",
+    "description": "Enable dark mode toggle in user preferences",
+    "descriptionRu": "Включить переключатель темной темы в настройках",
+    "descriptionUk": "Увімкнути перемикач темної теми в налаштуваннях",
+    "enabled": false,
+    "audience": "both",
+    "rolloutPct": 0,
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "flag_007",
+    "clientId": "client_001",
+    "key": "enableExportPdf",
+    "description": "Enable PDF export functionality",
+    "descriptionRu": "Включить функцию экспорта в PDF",
+    "descriptionUk": "Увімкнути функцію експорту в PDF",
+    "enabled": true,
+    "audience": "both",
+    "rolloutPct": 100,
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "flag_008",
+    "clientId": "client_001",
+    "key": "enableBulkActions",
+    "description": "Enable bulk actions in tables (select multiple rows)",
+    "descriptionRu": "Включить массовые действия в таблицах (выбор нескольких строк)",
+    "descriptionUk": "Увімкнути масові дії в таблицях (вибір кількох рядків)",
+    "enabled": true,
+    "audience": "staff",
+    "rolloutPct": 100,
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "flag_009",
+    "clientId": "client_001",
+    "key": "showBetaFeatures",
+    "description": "Show features marked as beta",
+    "descriptionRu": "Показывать функции в статусе бета",
+    "descriptionUk": "Показувати функції в статусі бета",
+    "enabled": false,
+    "audience": "staff",
+    "rolloutPct": 50,
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "flag_010",
+    "clientId": "client_001",
+    "key": "enableWebhooks",
+    "description": "Enable webhook notifications for events",
+    "descriptionRu": "Включить вебхук уведомления для событий",
+    "descriptionUk": "Увімкнути вебхук сповіщення для подій",
+    "enabled": true,
+    "audience": "staff",
+    "rolloutPct": 100,
+    "updatedAt": "2025-02-01T10:00:00Z"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Deal",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/tenant ID" },
+    "scopeType": { "type": "string", "enum": ["client", "entity", "portfolio", "fund"], "description": "Scope type" },
+    "scopeId": { "type": "string", "description": "Scope entity ID" },
+    "dealNumber": { "type": "string", "description": "Human-readable deal number DL-YYYY-####" },
+    "name": { "type": "string", "description": "Deal name" },
+    "assetType": { "type": "string", "enum": ["private-equity", "venture", "real-estate", "public", "debt", "infrastructure"], "description": "Asset type" },
+    "stageId": { "type": "string", "description": "Current stage ID" },
+    "status": { "type": "string", "enum": ["active", "on-hold", "closed", "cancelled"], "default": "active" },
+    "estimatedValue": { "type": "number", "description": "Estimated deal value" },
+    "currency": { "type": "string", "default": "USD" },
+    "expectedCloseAt": { "type": "string", "format": "date-time", "description": "Expected close date" },
+    "ownerUserId": { "type": "string", "description": "Deal owner user ID" },
+    "description": { "type": "string", "description": "Deal description" },
+    "counterparty": { "type": "string", "description": "Counterparty name" },
+    "linkedEntityId": { "type": "string", "description": "Linked entity/asset ID" },
+    "keyTermsJson": { "type": "string", "description": "JSON string of key terms" },
+    "sourceRefsJson": { "type": "string", "description": "JSON array of source references" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "dealNumber", "name", "assetType", "stageId", "status"]
+}

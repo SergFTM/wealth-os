@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Notification",
+  "type": "object",
+  "required": ["id", "type", "title", "status"],
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "type": { "type": "string", "enum": ["alert", "task", "message", "system", "approval", "sync"], "description": "Notification type" },
+    "severity": { "type": "string", "enum": ["info", "warning", "critical", "success"], "description": "Severity level" },
+    "title": { "type": "string", "description": "Notification title" },
+    "body": { "type": "string", "description": "Notification body text" },
+    "link": { "type": "string", "description": "Deep link to related object" },
+    "moduleKey": { "type": "string", "description": "Source module" },
+    "recordId": { "type": "string", "description": "Related record ID" },
+    "status": { "type": "string", "enum": ["unread", "read", "archived"], "description": "Read status" },
+    "userId": { "type": "string", "description": "Target user ID" },
+    "createdAt": { "type": "string", "format": "date-time" }
+  }
+}

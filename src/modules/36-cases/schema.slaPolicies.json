@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SlaPolicy",
+  "type": "object",
+  "required": ["id", "clientId", "name", "appliesToType", "resolutionHours", "createdAt", "updatedAt"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "clientId": { "type": "string", "format": "uuid" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "nameRu": { "type": ["string", "null"] },
+    "nameUk": { "type": ["string", "null"] },
+    "description": { "type": ["string", "null"], "maxLength": 2000 },
+    "appliesToType": {
+      "type": ["string", "null"],
+      "enum": ["request", "incident", "change", "problem", "all", null]
+    },
+    "appliesToPriority": {
+      "type": ["string", "null"],
+      "enum": ["low", "medium", "high", "critical", "all", null]
+    },
+    "priorityRulesJson": { "type": ["string", "null"] },
+    "responseHours": { "type": ["number", "null"], "minimum": 0 },
+    "resolutionHours": { "type": "number", "minimum": 0 },
+    "escalationJson": { "type": ["string", "null"] },
+    "businessHoursOnly": { "type": "boolean", "default": false },
+    "businessHoursStart": { "type": ["string", "null"], "pattern": "^\\d{2}:\\d{2}$" },
+    "businessHoursEnd": { "type": ["string", "null"], "pattern": "^\\d{2}:\\d{2}$" },
+    "businessDaysJson": { "type": ["string", "null"] },
+    "isDefault": { "type": "boolean", "default": false },
+    "isActive": { "type": "boolean", "default": true },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

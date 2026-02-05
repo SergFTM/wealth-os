@@ -1,0 +1,15 @@
+{
+  "collection": "intakeForms",
+  "fields": {
+    "id": { "type": "string", "required": true },
+    "caseId": { "type": "string", "required": true },
+    "formType": { "type": "enum", "values": ["household", "entity", "trust", "advisor"], "required": true },
+    "status": { "type": "enum", "values": ["draft", "sent", "completed"], "required": true },
+    "completionPct": { "type": "number", "min": 0, "max": 100, "required": true },
+    "payloadJson": { "type": "object", "required": false },
+    "sentAt": { "type": "datetime", "required": false },
+    "completedAt": { "type": "datetime", "required": false },
+    "createdAt": { "type": "datetime", "auto": true },
+    "updatedAt": { "type": "datetime", "auto": true }
+  }
+}

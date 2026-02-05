@@ -1,0 +1,456 @@
+[
+  {
+    "id": "cm-ai-001",
+    "meetingId": "cm-mtg-001",
+    "title": "Ребалансировка портфеля Smith Family",
+    "category": "rebalancing",
+    "status": "completed",
+    "orderIndex": 1,
+    "proposedBy": "u-002",
+    "proposedByName": "Мария Сидорова",
+    "description": "Рассмотреть план ребалансировки для приведения аллокации акций в соответствие с IPS",
+    "sourceRefs": [
+      { "type": "household", "id": "hh-001", "label": "Smith Family" },
+      { "type": "ips", "id": "ips-001", "label": "IPS v2" }
+    ],
+    "materialUrls": [
+      { "label": "Анализ аллокации", "url": "/docs/allocation-analysis-q4.pdf" },
+      { "label": "Предложение по ребалансировке", "url": "/docs/rebal-proposal-001.pdf" }
+    ],
+    "estimatedMinutes": 15,
+    "actualMinutes": 18,
+    "linkedDecisionId": "cm-dec-001",
+    "linkedVoteId": "cm-vote-001",
+    "createdAt": "2024-12-10T09:00:00Z",
+    "updatedAt": "2024-12-15T12:00:00Z"
+  },
+  {
+    "id": "cm-ai-002",
+    "meetingId": "cm-mtg-001",
+    "title": "Обзор рисков Q4 2024",
+    "category": "risk",
+    "status": "completed",
+    "orderIndex": 2,
+    "proposedBy": "u-002",
+    "proposedByName": "Мария Сидорова",
+    "description": "Квартальный обзор рисков портфелей клиентов",
+    "sourceRefs": [
+      { "type": "report", "id": "rp-risk-q4", "label": "Отчёт по рискам Q4" }
+    ],
+    "materialUrls": [
+      { "label": "Отчёт по рискам", "url": "/docs/risk-report-q4.pdf" }
+    ],
+    "estimatedMinutes": 20,
+    "actualMinutes": 25,
+    "linkedDecisionId": "cm-dec-002",
+    "createdAt": "2024-12-10T09:00:00Z",
+    "updatedAt": "2024-12-15T12:00:00Z"
+  },
+  {
+    "id": "cm-ai-003",
+    "meetingId": "cm-mtg-001",
+    "title": "Выбор нового менеджера PE",
+    "category": "manager_selection",
+    "status": "completed",
+    "orderIndex": 3,
+    "proposedBy": "u-003",
+    "proposedByName": "Алексей Козлов",
+    "description": "Рассмотреть кандидатов для управления позицией в private equity",
+    "sourceRefs": [
+      { "type": "manager", "id": "mgr-pe-001", "label": "Sequoia Capital" },
+      { "type": "manager", "id": "mgr-pe-002", "label": "Andreessen Horowitz" }
+    ],
+    "materialUrls": [
+      { "label": "Due Diligence отчёт", "url": "/docs/pe-dd-report.pdf" },
+      { "label": "Сравнение менеджеров", "url": "/docs/manager-comparison.xlsx" }
+    ],
+    "estimatedMinutes": 30,
+    "actualMinutes": 35,
+    "linkedDecisionId": "cm-dec-003",
+    "linkedVoteId": "cm-vote-002",
+    "createdAt": "2024-12-10T09:00:00Z",
+    "updatedAt": "2024-12-15T12:00:00Z"
+  },
+  {
+    "id": "cm-ai-004",
+    "meetingId": "cm-mtg-001",
+    "title": "Обзор ликвидности портфелей",
+    "category": "liquidity",
+    "status": "completed",
+    "orderIndex": 4,
+    "proposedBy": "u-002",
+    "proposedByName": "Мария Сидорова",
+    "description": "Анализ ликвидности для обеспечения потребностей клиентов",
+    "estimatedMinutes": 15,
+    "actualMinutes": 12,
+    "createdAt": "2024-12-10T09:00:00Z",
+    "updatedAt": "2024-12-15T12:00:00Z"
+  },
+  {
+    "id": "cm-ai-005",
+    "meetingId": "cm-mtg-002",
+    "title": "Экстренная ребалансировка - Волатильность рынка",
+    "category": "rebalancing",
+    "status": "completed",
+    "orderIndex": 1,
+    "proposedBy": "u-002",
+    "proposedByName": "Мария Сидорова",
+    "description": "Срочное рассмотрение ребалансировки в связи с рыночной волатильностью",
+    "sourceRefs": [
+      { "type": "alert", "id": "alert-vol-001", "label": "Алерт волатильности" }
+    ],
+    "materialUrls": [
+      { "label": "Рыночный анализ", "url": "/docs/market-analysis-jan.pdf" }
+    ],
+    "estimatedMinutes": 45,
+    "actualMinutes": 50,
+    "linkedDecisionId": "cm-dec-004",
+    "linkedVoteId": "cm-vote-003",
+    "createdAt": "2025-01-08T11:00:00Z",
+    "updatedAt": "2025-01-10T15:30:00Z"
+  },
+  {
+    "id": "cm-ai-006",
+    "meetingId": "cm-mtg-002",
+    "title": "Обзор хеджирования",
+    "category": "risk",
+    "status": "completed",
+    "orderIndex": 2,
+    "proposedBy": "u-003",
+    "proposedByName": "Алексей Козлов",
+    "description": "Рассмотреть текущие хеджирующие позиции",
+    "estimatedMinutes": 20,
+    "actualMinutes": 18,
+    "createdAt": "2025-01-08T11:00:00Z",
+    "updatedAt": "2025-01-10T15:30:00Z"
+  },
+  {
+    "id": "cm-ai-007",
+    "meetingId": "cm-mtg-003",
+    "title": "Аллокация в альтернативные активы",
+    "category": "allocation",
+    "status": "in_progress",
+    "orderIndex": 1,
+    "proposedBy": "u-002",
+    "proposedByName": "Мария Сидорова",
+    "description": "Рассмотреть увеличение аллокации в альтернативные активы",
+    "sourceRefs": [
+      { "type": "proposal", "id": "prop-alt-001", "label": "Предложение по альтернативам" }
+    ],
+    "materialUrls": [
+      { "label": "Анализ альтернатив", "url": "/docs/alt-analysis.pdf" }
+    ],
+    "estimatedMinutes": 25,
+    "linkedVoteId": "cm-vote-004",
+    "createdAt": "2025-01-20T09:00:00Z",
+    "updatedAt": "2025-02-03T10:30:00Z"
+  },
+  {
+    "id": "cm-ai-008",
+    "meetingId": "cm-mtg-003",
+    "title": "Запрос на вейвер IPS - Johnson Family",
+    "category": "ips_waiver",
+    "status": "in_progress",
+    "orderIndex": 2,
+    "proposedBy": "u-003",
+    "proposedByName": "Алексей Козлов",
+    "description": "Рассмотреть запрос на временный вейвер ограничений IPS",
+    "sourceRefs": [
+      { "type": "household", "id": "hh-002", "label": "Johnson Family" },
+      { "type": "waiver", "id": "wv-001", "label": "Запрос на вейвер" }
+    ],
+    "materialUrls": [
+      { "label": "Запрос клиента", "url": "/docs/waiver-request-johnson.pdf" }
+    ],
+    "estimatedMinutes": 20,
+    "linkedVoteId": "cm-vote-005",
+    "createdAt": "2025-01-20T09:00:00Z",
+    "updatedAt": "2025-02-03T10:30:00Z"
+  },
+  {
+    "id": "cm-ai-009",
+    "meetingId": "cm-mtg-003",
+    "title": "Обзор результатов Q4 2024",
+    "category": "other",
+    "status": "in_progress",
+    "orderIndex": 3,
+    "proposedBy": "u-002",
+    "proposedByName": "Мария Сидорова",
+    "description": "Анализ результатов портфелей за Q4 2024",
+    "sourceRefs": [
+      { "type": "report", "id": "rp-002", "label": "Отчёт Q4 2024" }
+    ],
+    "estimatedMinutes": 15,
+    "createdAt": "2025-01-20T09:00:00Z",
+    "updatedAt": "2025-02-03T10:30:00Z"
+  },
+  {
+    "id": "cm-ai-010",
+    "meetingId": "cm-mtg-004",
+    "title": "Стратегический обзор Q1 2025",
+    "category": "allocation",
+    "status": "pending",
+    "orderIndex": 1,
+    "proposedBy": "u-002",
+    "proposedByName": "Мария Сидорова",
+    "description": "Квартальный стратегический обзор и корректировка аллокации",
+    "estimatedMinutes": 30,
+    "createdAt": "2025-02-01T09:00:00Z",
+    "updatedAt": "2025-02-01T09:00:00Z"
+  },
+  {
+    "id": "cm-ai-011",
+    "meetingId": "cm-mtg-004",
+    "title": "Обзор соответствия IPS",
+    "category": "ips_waiver",
+    "status": "pending",
+    "orderIndex": 2,
+    "proposedBy": "u-003",
+    "proposedByName": "Алексей Козлов",
+    "description": "Обзор соответствия портфелей политикам IPS",
+    "estimatedMinutes": 20,
+    "createdAt": "2025-02-01T09:00:00Z",
+    "updatedAt": "2025-02-01T09:00:00Z"
+  },
+  {
+    "id": "cm-ai-012",
+    "meetingId": "cm-mtg-004",
+    "title": "Обзор рисков - Геополитика",
+    "category": "risk",
+    "status": "pending",
+    "orderIndex": 3,
+    "proposedBy": "u-002",
+    "proposedByName": "Мария Сидорова",
+    "description": "Оценка влияния геополитических рисков на портфели",
+    "estimatedMinutes": 25,
+    "createdAt": "2025-02-01T09:00:00Z",
+    "updatedAt": "2025-02-01T09:00:00Z"
+  },
+  {
+    "id": "cm-ai-013",
+    "meetingId": "cm-mtg-005",
+    "title": "Обзор рисков - Февраль",
+    "category": "risk",
+    "status": "pending",
+    "orderIndex": 1,
+    "proposedBy": "u-002",
+    "proposedByName": "Мария Сидорова",
+    "description": "Ежемесячный обзор рисков портфелей",
+    "estimatedMinutes": 30,
+    "createdAt": "2025-02-01T12:00:00Z",
+    "updatedAt": "2025-02-01T12:00:00Z"
+  },
+  {
+    "id": "cm-ai-014",
+    "meetingId": "cm-mtg-005",
+    "title": "Концентрация в секторе технологий",
+    "category": "risk",
+    "status": "pending",
+    "orderIndex": 2,
+    "proposedBy": "u-003",
+    "proposedByName": "Алексей Козлов",
+    "description": "Анализ концентрации в технологическом секторе",
+    "estimatedMinutes": 20,
+    "createdAt": "2025-02-01T12:00:00Z",
+    "updatedAt": "2025-02-01T12:00:00Z"
+  },
+  {
+    "id": "cm-ai-015",
+    "meetingId": "cm-mtg-006",
+    "title": "Годовой обзор стратегии",
+    "category": "allocation",
+    "status": "completed",
+    "orderIndex": 1,
+    "proposedBy": "u-001",
+    "proposedByName": "Иван Петров",
+    "description": "Годовой обзор инвестиционной стратегии",
+    "sourceRefs": [
+      { "type": "report", "id": "rp-003", "label": "Годовой отчёт 2024" }
+    ],
+    "materialUrls": [
+      { "label": "Годовой отчёт", "url": "/docs/annual-report-2024.pdf" }
+    ],
+    "estimatedMinutes": 45,
+    "actualMinutes": 50,
+    "linkedDecisionId": "cm-dec-005",
+    "createdAt": "2024-11-01T09:00:00Z",
+    "updatedAt": "2024-11-20T14:00:00Z"
+  },
+  {
+    "id": "cm-ai-016",
+    "meetingId": "cm-mtg-006",
+    "title": "Обзор мандатов клиентов",
+    "category": "other",
+    "status": "completed",
+    "orderIndex": 2,
+    "proposedBy": "u-002",
+    "proposedByName": "Мария Сидорова",
+    "description": "Обзор инвестиционных мандатов ключевых клиентов",
+    "estimatedMinutes": 30,
+    "actualMinutes": 35,
+    "createdAt": "2024-11-01T09:00:00Z",
+    "updatedAt": "2024-11-20T14:00:00Z"
+  },
+  {
+    "id": "cm-ai-017",
+    "meetingId": "cm-mtg-006",
+    "title": "Планирование на 2025 год",
+    "category": "allocation",
+    "status": "completed",
+    "orderIndex": 3,
+    "proposedBy": "u-001",
+    "proposedByName": "Иван Петров",
+    "description": "Утверждение плана инвестиционной деятельности на 2025 год",
+    "materialUrls": [
+      { "label": "План 2025", "url": "/docs/investment-plan-2025.pdf" }
+    ],
+    "estimatedMinutes": 40,
+    "actualMinutes": 45,
+    "linkedDecisionId": "cm-dec-006",
+    "linkedVoteId": "cm-vote-006",
+    "createdAt": "2024-11-01T09:00:00Z",
+    "updatedAt": "2024-11-20T14:00:00Z"
+  },
+  {
+    "id": "cm-ai-018",
+    "meetingId": "cm-mtg-007",
+    "title": "Обзор IPS - Household Alpha",
+    "category": "ips_waiver",
+    "status": "completed",
+    "orderIndex": 1,
+    "proposedBy": "u-002",
+    "proposedByName": "Мария Сидорова",
+    "description": "Периодический обзор IPS для Household Alpha",
+    "sourceRefs": [
+      { "type": "household", "id": "hh-001", "label": "Household Alpha" },
+      { "type": "ips", "id": "ips-001", "label": "IPS Alpha" }
+    ],
+    "estimatedMinutes": 30,
+    "actualMinutes": 28,
+    "linkedDecisionId": "cm-dec-007",
+    "createdAt": "2024-10-10T09:00:00Z",
+    "updatedAt": "2024-10-25T12:30:00Z"
+  },
+  {
+    "id": "cm-ai-019",
+    "meetingId": "cm-mtg-007",
+    "title": "Анализ соответствия ограничениям",
+    "category": "risk",
+    "status": "completed",
+    "orderIndex": 2,
+    "proposedBy": "u-003",
+    "proposedByName": "Алексей Козлов",
+    "description": "Проверка соответствия портфеля ограничениям IPS",
+    "estimatedMinutes": 20,
+    "actualMinutes": 22,
+    "createdAt": "2024-10-10T09:00:00Z",
+    "updatedAt": "2024-10-25T12:30:00Z"
+  },
+  {
+    "id": "cm-ai-020",
+    "meetingId": "cm-mtg-008",
+    "title": "Due Diligence - PE Manager Candidates",
+    "category": "manager_selection",
+    "status": "completed",
+    "orderIndex": 1,
+    "proposedBy": "u-003",
+    "proposedByName": "Алексей Козлов",
+    "description": "Финальный отбор менеджера для private equity аллокации",
+    "sourceRefs": [
+      { "type": "manager", "id": "mgr-pe-003", "label": "KKR" },
+      { "type": "manager", "id": "mgr-pe-004", "label": "Blackstone" }
+    ],
+    "materialUrls": [
+      { "label": "DD Report - KKR", "url": "/docs/dd-kkr.pdf" },
+      { "label": "DD Report - Blackstone", "url": "/docs/dd-blackstone.pdf" }
+    ],
+    "estimatedMinutes": 45,
+    "actualMinutes": 55,
+    "linkedDecisionId": "cm-dec-008",
+    "linkedVoteId": "cm-vote-007",
+    "createdAt": "2024-09-01T09:00:00Z",
+    "updatedAt": "2024-09-15T16:00:00Z"
+  },
+  {
+    "id": "cm-ai-021",
+    "meetingId": "cm-mtg-008",
+    "title": "Обзор комиссий менеджеров",
+    "category": "other",
+    "status": "completed",
+    "orderIndex": 2,
+    "proposedBy": "u-004",
+    "proposedByName": "Елена Волкова",
+    "description": "Анализ структуры комиссий рассматриваемых менеджеров",
+    "estimatedMinutes": 20,
+    "actualMinutes": 18,
+    "createdAt": "2024-09-01T09:00:00Z",
+    "updatedAt": "2024-09-15T16:00:00Z"
+  },
+  {
+    "id": "cm-ai-022",
+    "meetingId": "cm-mtg-009",
+    "title": "Обзор результатов августа",
+    "category": "other",
+    "status": "completed",
+    "orderIndex": 1,
+    "proposedBy": "u-002",
+    "proposedByName": "Мария Сидорова",
+    "description": "Анализ результатов портфелей за август",
+    "estimatedMinutes": 20,
+    "actualMinutes": 22,
+    "createdAt": "2024-08-05T09:00:00Z",
+    "updatedAt": "2024-08-20T12:00:00Z"
+  },
+  {
+    "id": "cm-ai-023",
+    "meetingId": "cm-mtg-009",
+    "title": "Корректировка валютных позиций",
+    "category": "risk",
+    "status": "completed",
+    "orderIndex": 2,
+    "proposedBy": "u-003",
+    "proposedByName": "Алексей Козлов",
+    "description": "Обзор и корректировка валютного хеджирования",
+    "estimatedMinutes": 25,
+    "actualMinutes": 28,
+    "linkedDecisionId": "cm-dec-009",
+    "createdAt": "2024-08-05T09:00:00Z",
+    "updatedAt": "2024-08-20T12:00:00Z"
+  },
+  {
+    "id": "cm-ai-024",
+    "meetingId": "cm-mtg-010",
+    "title": "Обзор ликвидности - Специальный",
+    "category": "liquidity",
+    "status": "completed",
+    "orderIndex": 1,
+    "proposedBy": "u-001",
+    "proposedByName": "Иван Петров",
+    "description": "Специальный обзор ликвидности портфелей",
+    "materialUrls": [
+      { "label": "Анализ ликвидности", "url": "/docs/liquidity-special.pdf" }
+    ],
+    "estimatedMinutes": 30,
+    "actualMinutes": 35,
+    "linkedDecisionId": "cm-dec-010",
+    "createdAt": "2024-07-01T09:00:00Z",
+    "updatedAt": "2024-07-10T10:30:00Z"
+  },
+  {
+    "id": "cm-ai-025",
+    "meetingId": "cm-mtg-010",
+    "title": "План действий при кризисе ликвидности",
+    "category": "risk",
+    "status": "completed",
+    "orderIndex": 2,
+    "proposedBy": "u-002",
+    "proposedByName": "Мария Сидорова",
+    "description": "Утверждение плана действий при кризисе ликвидности",
+    "estimatedMinutes": 25,
+    "actualMinutes": 20,
+    "linkedDecisionId": "cm-dec-011",
+    "linkedVoteId": "cm-vote-008",
+    "createdAt": "2024-07-01T09:00:00Z",
+    "updatedAt": "2024-07-10T10:30:00Z"
+  }
+]

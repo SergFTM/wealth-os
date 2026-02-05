@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "User",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "status": { "type": "string", "enum": ["active", "suspended"] },
+    "lastLoginAt": { "type": "string", "format": "date-time" },
+    "mfaEnabled": { "type": "boolean" },
+    "clientSafeDefault": { "type": "boolean" },
+    "avatarUrl": { "type": "string" },
+    "department": { "type": "string" },
+    "jobTitle": { "type": "string" },
+    "phone": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "name", "email", "status"]
+}

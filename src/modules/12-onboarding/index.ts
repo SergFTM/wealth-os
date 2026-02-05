@@ -1,0 +1,1 @@
+export { onboardingConfig } from './config';

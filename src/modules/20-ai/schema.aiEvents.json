@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Event",
+  "type": "object",
+  "required": ["id", "clientId", "userId", "userRole", "promptType", "promptText", "responseText", "confidencePct", "clientSafe", "blocked", "createdAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "userId": { "type": "string" },
+    "userRole": { "type": "string", "enum": ["owner", "cio", "cfo", "ops", "compliance", "advisor", "client", "admin"] },
+    "promptType": { "type": "string", "enum": ["explain_change", "summarize_risk", "summarize_performance", "draft_message", "draft_committee_pack", "draft_policy_summary", "triage_tasks", "check_data_quality", "general_query"] },
+    "promptText": { "type": "string" },
+    "responseText": { "type": "string" },
+    "sourcesJson": { "type": "string", "description": "JSON array of source references" },
+    "assumptionsJson": { "type": "string", "description": "JSON array of assumptions made" },
+    "confidencePct": { "type": "number", "minimum": 0, "maximum": 100 },
+    "clientSafe": { "type": "boolean" },
+    "blocked": { "type": "boolean" },
+    "blockedReason": { "type": ["string", "null"] },
+    "createdAt": { "type": "string", "format": "date-time" }
+  }
+}

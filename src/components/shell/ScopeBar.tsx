@@ -13,16 +13,16 @@ export function ScopeBar() {
   return (
     <div className="flex items-center gap-4 mb-6">
       {/* Scope Switcher */}
-      <div className="flex items-center gap-1 bg-stone-100 rounded-lg p-1">
+      <div className="flex items-center gap-1 bg-stone-100 dark:bg-stone-800 rounded-lg p-1">
         {scopes.map((s) => (
           <button
             key={s}
             onClick={() => setScope(s)}
             className={cn(
               "px-3 py-1.5 text-xs font-medium rounded-md transition-all",
-              scope === s 
-                ? "bg-white shadow-sm text-emerald-700" 
-                : "text-stone-500 hover:text-stone-700"
+              scope === s
+                ? "bg-white dark:bg-stone-700 shadow-sm text-emerald-700 dark:text-emerald-400"
+                : "text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200"
             )}
           >
             {t.scope[s]}
@@ -32,12 +32,12 @@ export function ScopeBar() {
 
       {/* As-of Date */}
       <div className="flex items-center gap-2">
-        <span className="text-xs text-stone-500">As of:</span>
+        <span className="text-xs text-stone-500 dark:text-stone-400">As of:</span>
         <input
           type="date"
           value={asOfDate}
           onChange={(e) => setAsOfDate(e.target.value)}
-          className="px-2 py-1 text-xs border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
+          className="px-2 py-1 text-xs border border-stone-200 dark:border-stone-700 rounded-lg bg-white dark:bg-stone-800 text-stone-800 dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
         />
       </div>
     </div>

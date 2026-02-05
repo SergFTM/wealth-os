@@ -1,0 +1,9 @@
+[
+  {"id":"stage-1","clientId":"demo","name":"Sourcing","nameRu":"Поиск","nameEn":"Sourcing","orderIndex":1,"isClosedStage":false,"color":"#94a3b8","createdAt":"2024-01-01T00:00:00Z","updatedAt":"2024-01-01T00:00:00Z"},
+  {"id":"stage-2","clientId":"demo","name":"Screening","nameRu":"Скрининг","nameEn":"Screening","orderIndex":2,"isClosedStage":false,"color":"#60a5fa","createdAt":"2024-01-01T00:00:00Z","updatedAt":"2024-01-01T00:00:00Z"},
+  {"id":"stage-3","clientId":"demo","name":"IC Review","nameRu":"Комитет","nameEn":"IC Review","orderIndex":3,"isClosedStage":false,"color":"#a78bfa","createdAt":"2024-01-01T00:00:00Z","updatedAt":"2024-01-01T00:00:00Z"},
+  {"id":"stage-4","clientId":"demo","name":"Legal","nameRu":"Юридическая","nameEn":"Legal","orderIndex":4,"isClosedStage":false,"color":"#f472b6","createdAt":"2024-01-01T00:00:00Z","updatedAt":"2024-01-01T00:00:00Z"},
+  {"id":"stage-5","clientId":"demo","name":"Closing","nameRu":"Закрытие","nameEn":"Closing","orderIndex":5,"isClosedStage":false,"color":"#fb923c","createdAt":"2024-01-01T00:00:00Z","updatedAt":"2024-01-01T00:00:00Z"},
+  {"id":"stage-6","clientId":"demo","name":"Post-close","nameRu":"Пост-закрытие","nameEn":"Post-close","orderIndex":6,"isClosedStage":false,"color":"#4ade80","createdAt":"2024-01-01T00:00:00Z","updatedAt":"2024-01-01T00:00:00Z"},
+  {"id":"stage-7","clientId":"demo","name":"Closed","nameRu":"Закрыто","nameEn":"Closed","orderIndex":7,"isClosedStage":true,"color":"#22c55e","createdAt":"2024-01-01T00:00:00Z","updatedAt":"2024-01-01T00:00:00Z"}
+]

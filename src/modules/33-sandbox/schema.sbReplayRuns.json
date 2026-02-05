@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sandbox Replay Run",
+  "description": "Event replay execution in sandbox",
+  "type": "object",
+  "required": ["id", "clientId", "envId", "eventType", "count", "status", "createdAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/tenant identifier"
+    },
+    "envId": {
+      "type": "string",
+      "description": "Sandbox environment ID"
+    },
+    "eventType": {
+      "type": "string",
+      "enum": ["invoice.paid", "invoice.created", "sync.completed", "sync.failed", "risk.breach", "document.uploaded", "position.changed", "capital_call.due", "distribution.received", "webhook.test"],
+      "description": "Event type to replay"
+    },
+    "count": {
+      "type": "number",
+      "description": "Number of events to replay"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "running", "completed", "failed"],
+      "default": "pending"
+    },
+    "webhookTargetJson": {
+      "type": "object",
+      "description": "Webhook target configuration (sandbox only)",
+      "properties": {
+        "url": { "type": "string" },
+        "headers": { "type": "object" },
+        "simulate": { "type": "boolean", "default": true }
+      }
+    },
+    "eventsGenerated": {
+      "type": "number",
+      "default": 0
+    },
+    "deliveriesCreated": {
+      "type": "number",
+      "default": 0
+    },
+    "logsCreated": {
+      "type": "number",
+      "default": 0
+    },
+    "startedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "finishedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "summaryJson": {
+      "type": "object",
+      "description": "Execution summary"
+    },
+    "triggeredBy": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

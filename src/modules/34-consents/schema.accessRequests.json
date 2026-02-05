@@ -1,0 +1,22 @@
+{
+  "id": { "type": "string", "primary": true },
+  "clientId": { "type": "string", "required": true },
+  "requestedBySubjectType": { "type": "enum", "values": ["user", "advisor", "client"], "required": true },
+  "requestedById": { "type": "string", "required": true },
+  "requestedByName": { "type": "string" },
+  "scopeType": { "type": "enum", "values": ["household", "entity", "account", "document", "report"], "required": true },
+  "scopeId": { "type": "string" },
+  "scopeName": { "type": "string" },
+  "permissions": { "type": "array", "items": { "type": "string" }, "description": "view, download, export, api" },
+  "clientSafeRequested": { "type": "boolean", "default": false },
+  "reason": { "type": "string", "required": true },
+  "status": { "type": "enum", "values": ["pending", "approved", "rejected"], "default": "pending" },
+  "slaDueAt": { "type": "date" },
+  "decidedByUserId": { "type": "string" },
+  "decidedByName": { "type": "string" },
+  "decidedAt": { "type": "date" },
+  "decisionNotes": { "type": "string" },
+  "consentId": { "type": "string", "description": "Created consent ID if approved" },
+  "createdAt": { "type": "date" },
+  "updatedAt": { "type": "date" }
+}

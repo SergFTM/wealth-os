@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sandbox Payload",
+  "description": "Captured payload from sync job execution",
+  "type": "object",
+  "required": ["id", "clientId", "jobId", "connectorId", "entityType", "createdAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/tenant identifier"
+    },
+    "jobId": {
+      "type": "string",
+      "description": "Sync job ID"
+    },
+    "connectorId": {
+      "type": "string",
+      "description": "Connector ID"
+    },
+    "entityType": {
+      "type": "string",
+      "enum": ["transactions", "positions", "invoices", "accounts", "contacts", "documents", "prices", "tax_lots", "capital_calls", "distributions"],
+      "description": "Entity type"
+    },
+    "direction": {
+      "type": "string",
+      "enum": ["inbound", "outbound"],
+      "default": "inbound"
+    },
+    "payloadJson": {
+      "type": "object",
+      "description": "Raw payload data"
+    },
+    "payloadSize": {
+      "type": "number",
+      "description": "Payload size in bytes"
+    },
+    "recordCount": {
+      "type": "number",
+      "description": "Number of records in payload"
+    },
+    "validationJson": {
+      "type": "object",
+      "description": "Schema validation results",
+      "properties": {
+        "valid": { "type": "boolean" },
+        "errors": { "type": "array", "items": { "type": "object" } },
+        "warnings": { "type": "array", "items": { "type": "object" } }
+      }
+    },
+    "mappingOutputJson": {
+      "type": "object",
+      "description": "Output after mapping transformation"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

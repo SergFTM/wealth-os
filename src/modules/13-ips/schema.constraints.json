@@ -1,0 +1,19 @@
+{
+  "collection": "ipsConstraints",
+  "fields": {
+    "id": { "type": "string", "required": true },
+    "policyId": { "type": "string", "required": true },
+    "versionId": { "type": "string", "required": false },
+    "type": { "type": "enum", "values": ["asset_limit", "concentration", "geo", "sector", "liquidity", "leverage", "esg"], "required": true },
+    "metric": { "type": "enum", "values": ["weight", "value", "exposure", "count"], "required": true },
+    "dimension": { "type": "string", "required": false },
+    "segment": { "type": "string", "required": false },
+    "limitMin": { "type": "number", "required": false },
+    "limitMax": { "type": "number", "required": false },
+    "unit": { "type": "enum", "values": ["pct", "value", "count"], "required": true },
+    "status": { "type": "enum", "values": ["active", "disabled"], "required": true },
+    "asOf": { "type": "datetime", "required": false },
+    "createdAt": { "type": "datetime", "auto": true },
+    "updatedAt": { "type": "datetime", "auto": true }
+  }
+}

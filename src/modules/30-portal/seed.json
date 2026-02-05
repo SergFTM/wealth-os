@@ -1,0 +1,70 @@
+{
+  "description": "Seed data for Portal module (Module 30)",
+  "collections": {
+    "portalAnnouncements": {
+      "count": 10,
+      "source": "../../db/data/portalAnnouncements.json"
+    },
+    "clientRequests": {
+      "count": 20,
+      "source": "../../db/data/clientRequests.json"
+    },
+    "clientPreferences": {
+      "count": 12,
+      "source": "../../db/data/clientPreferences.json"
+    },
+    "clientSubscriptions": {
+      "count": 12,
+      "source": "../../db/data/clientSubscriptions.json"
+    }
+  },
+  "dependencies": {
+    "reportShares": {
+      "description": "Published reports for client viewing",
+      "filter": { "status": "published" },
+      "clientSafe": true
+    },
+    "documents": {
+      "description": "Client-visible documents from vault",
+      "filter": { "clientVisible": true },
+      "clientSafe": true
+    },
+    "feeInvoices": {
+      "description": "Invoices for client billing",
+      "clientSafe": true
+    },
+    "commThreads": {
+      "description": "Communication threads",
+      "filter": { "hasClientParticipant": true },
+      "clientSafe": true
+    },
+    "tasks": {
+      "description": "Tasks linked to client requests",
+      "filter": { "category": "client_request" }
+    },
+    "auditEvents": {
+      "description": "Audit events for portal actions"
+    },
+    "users": {
+      "description": "Users with portal access",
+      "filter": { "portalAccess": true }
+    },
+    "sessions": {
+      "description": "Active client sessions"
+    },
+    "mfaEnrollments": {
+      "description": "MFA status for portal users"
+    }
+  },
+  "roles": {
+    "allowed": ["Client User", "External Advisor", "Trustee"],
+    "adminPreview": true
+  },
+  "sla": {
+    "question": { "hours": 24 },
+    "document_request": { "hours": 48 },
+    "change_request": { "hours": 72 },
+    "payment_request": { "hours": 48 },
+    "urgent": { "hours": 4 }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DealApproval",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/tenant ID" },
+    "dealId": { "type": "string", "description": "Associated deal ID" },
+    "approvalType": { "type": "string", "enum": ["ic", "legal", "cfo", "compliance", "cio"], "description": "Approval type" },
+    "requestedByUserId": { "type": "string", "description": "User who requested approval" },
+    "requestedByName": { "type": "string", "description": "Requester name for display" },
+    "status": { "type": "string", "enum": ["pending", "approved", "rejected", "escalated"], "default": "pending" },
+    "dueAt": { "type": "string", "format": "date-time", "description": "Due date" },
+    "decidedByUserId": { "type": "string", "description": "User who decided" },
+    "decidedByName": { "type": "string", "description": "Decider name for display" },
+    "decidedAt": { "type": "string", "format": "date-time", "description": "Decision timestamp" },
+    "notes": { "type": "string", "description": "Notes/comments" },
+    "autoMoveStage": { "type": "boolean", "default": false, "description": "Auto-move deal stage on approval" },
+    "targetStageId": { "type": "string", "description": "Target stage on approval" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "dealId", "approvalType", "requestedByUserId", "status"]
+}

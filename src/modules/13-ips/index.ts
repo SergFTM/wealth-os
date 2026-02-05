@@ -1,0 +1,1 @@
+export { ipsConfig } from './config';

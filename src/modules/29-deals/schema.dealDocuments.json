@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DealDocument",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/tenant ID" },
+    "dealId": { "type": "string", "description": "Associated deal ID" },
+    "docType": { "type": "string", "enum": ["term-sheet", "spa", "memo", "diligence", "legal-opinion", "valuation", "closing-docs"], "description": "Document type" },
+    "docName": { "type": "string", "description": "Document name" },
+    "status": { "type": "string", "enum": ["missing", "draft", "received", "reviewed", "approved"], "default": "missing" },
+    "docId": { "type": "string", "description": "Reference to documents vault" },
+    "vaultPath": { "type": "string", "description": "Path in document vault" },
+    "uploadedByUserId": { "type": "string", "description": "User who uploaded" },
+    "uploadedAt": { "type": "string", "format": "date-time", "description": "Upload timestamp" },
+    "reviewedByUserId": { "type": "string", "description": "User who reviewed" },
+    "reviewedAt": { "type": "string", "format": "date-time", "description": "Review timestamp" },
+    "notes": { "type": "string", "description": "Notes" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "dealId", "docType", "status"]
+}

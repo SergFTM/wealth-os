@@ -1,0 +1,16 @@
+{
+  "collection": "kbTags",
+  "description": "Tags for categorizing KB content",
+  "fields": {
+    "id": { "type": "string", "required": true, "primary": true },
+    "clientId": { "type": "string", "required": true },
+    "tagKey": { "type": "string", "required": true },
+    "labelRu": { "type": "string", "required": true },
+    "labelEn": { "type": "string" },
+    "labelUk": { "type": "string" },
+    "colorKey": { "type": "enum", "values": ["emerald", "amber", "blue", "purple", "rose", "stone"], "default": "stone" },
+    "usageCount": { "type": "number", "default": 0 },
+    "createdAt": { "type": "datetime", "required": true }
+  },
+  "indexes": ["clientId", "tagKey"]
+}

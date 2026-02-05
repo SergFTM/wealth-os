@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RoleBinding",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "userId": { "type": "string" },
+    "roleId": { "type": "string" },
+    "scopeType": { "type": "string", "enum": ["global", "household", "entity", "portfolio"] },
+    "scopeId": { "type": "string" },
+    "status": { "type": "string", "enum": ["active", "revoked"] },
+    "expiresAt": { "type": "string", "format": "date-time" },
+    "createdAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "userId", "roleId", "status"]
+}

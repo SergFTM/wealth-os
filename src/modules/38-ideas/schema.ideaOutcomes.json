@@ -1,0 +1,23 @@
+{
+  "collection": "ideaOutcomes",
+  "description": "Outcome tracking for investment ideas",
+  "fields": [
+    { "name": "id", "type": "string", "required": true, "description": "Unique identifier" },
+    { "name": "clientId", "type": "string", "required": true, "description": "Client/household ID" },
+    { "name": "ideaId", "type": "string", "required": true, "description": "Source idea ID" },
+    { "name": "outcomeType", "type": "enum", "values": ["monitored", "implemented", "closed"], "required": true },
+    { "name": "startAt", "type": "datetime", "required": true, "description": "When tracking started" },
+    { "name": "endAt", "type": "datetime", "description": "When outcome was closed" },
+    { "name": "entryPrice", "type": "number", "description": "Entry price if implemented" },
+    { "name": "exitPrice", "type": "number", "description": "Exit price if closed" },
+    { "name": "realizedPct", "type": "number", "description": "Realized return percentage" },
+    { "name": "unrealizedPct", "type": "number", "description": "Unrealized return percentage" },
+    { "name": "notes", "type": "text", "description": "Lessons learned, what worked, what not" },
+    { "name": "linkedRefsJson", "type": "json", "description": "Links to positions, trades, decisions" },
+    { "name": "linkedDecisionId", "type": "string", "description": "Linked committee decision ID" },
+    { "name": "updatedBy", "type": "string", "description": "User who last updated" },
+    { "name": "createdAt", "type": "datetime", "required": true },
+    { "name": "updatedAt", "type": "datetime", "required": true }
+  ],
+  "indexes": ["clientId", "ideaId", "outcomeType"]
+}

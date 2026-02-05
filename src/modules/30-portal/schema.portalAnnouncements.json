@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PortalAnnouncement",
+  "description": "Portal announcements for clients",
+  "type": "object",
+  "required": ["id", "titleRu", "titleEn", "severity", "status", "startsAt"],
+  "properties": {
+    "id": { "type": "string", "description": "Unique announcement ID" },
+    "clientId": { "type": "string", "description": "Optional: limit to specific client" },
+    "titleRu": { "type": "string", "description": "Title in Russian" },
+    "titleEn": { "type": "string", "description": "Title in English" },
+    "titleUk": { "type": "string", "description": "Title in Ukrainian" },
+    "bodyRu": { "type": "string", "description": "Body text in Russian" },
+    "bodyEn": { "type": "string", "description": "Body text in English" },
+    "bodyUk": { "type": "string", "description": "Body text in Ukrainian" },
+    "severity": {
+      "type": "string",
+      "enum": ["info", "warning", "maintenance", "feature"],
+      "description": "Announcement severity/type"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "active", "archived"],
+      "default": "draft"
+    },
+    "dismissible": { "type": "boolean", "default": true },
+    "actionUrl": { "type": "string", "description": "Optional action link" },
+    "actionLabelRu": { "type": "string" },
+    "actionLabelEn": { "type": "string" },
+    "actionLabelUk": { "type": "string" },
+    "startsAt": { "type": "string", "format": "date-time" },
+    "endsAt": { "type": "string", "format": "date-time" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "createdByUserId": { "type": "string" }
+  }
+}

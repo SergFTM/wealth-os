@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Feedback",
+  "type": "object",
+  "required": ["id", "clientId", "eventId", "userId", "rating", "createdAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "eventId": { "type": "string" },
+    "userId": { "type": "string" },
+    "rating": { "type": "string", "enum": ["up", "down"] },
+    "comment": { "type": ["string", "null"] },
+    "addressed": { "type": "boolean", "default": false },
+    "addressedBy": { "type": ["string", "null"] },
+    "addressedAt": { "type": ["string", "null"], "format": "date-time" },
+    "createdAt": { "type": "string", "format": "date-time" }
+  }
+}

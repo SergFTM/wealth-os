@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(md \"c:\\\\Users\\\\user\\\\.gemini\\\\antigravity\\\\scratch\\\\wealth-os\\\\src\\\\app\\\\api\\\\ai\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\user\\.gemini\\antigravity\\scratch\\wealth-os\\src\\app\\(dashboard)\\m\\tax\\item"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CommParticipant",
+  "type": "object",
+  "required": ["id", "threadId", "userId", "role", "isClientVisible", "joinedAt"],
+  "properties": {
+    "id": { "type": "string", "description": "Unique participant record ID" },
+    "threadId": { "type": "string", "description": "Thread ID" },
+    "userId": { "type": "string", "description": "User ID" },
+    "userName": { "type": "string", "description": "User display name" },
+    "role": {
+      "type": "string",
+      "enum": ["owner", "admin", "rm", "compliance", "operations", "advisor", "client"],
+      "description": "User role"
+    },
+    "isClientVisible": { "type": "boolean", "description": "Whether participant is visible to clients" },
+    "joinedAt": { "type": "string", "format": "date-time" },
+    "leftAt": { "type": ["string", "null"], "format": "date-time" }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CashStressTest",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client reference" },
+    "forecastId": { "type": "string", "description": "Reference to forecast" },
+    "scenarioId": { "type": "string", "description": "Reference to scenario used" },
+    "name": { "type": "string", "description": "Stress test name" },
+    "stressType": {
+      "type": "string",
+      "enum": ["market_drawdown", "delayed_distributions", "tax_spike", "debt_rate_shock", "capital_call_acceleration"],
+      "description": "Type of stress test"
+    },
+    "paramsJson": {
+      "type": "object",
+      "description": "Stress test parameters",
+      "properties": {
+        "severity": { "type": "string", "enum": ["mild", "moderate", "severe"] },
+        "drawdownPercent": { "type": "number" },
+        "delayDays": { "type": "integer" },
+        "rateShockBps": { "type": "integer" },
+        "taxIncreasePercent": { "type": "number" },
+        "accelerationDays": { "type": "integer" }
+      }
+    },
+    "resultsJson": {
+      "type": "object",
+      "description": "Stress test results",
+      "properties": {
+        "minCashReached": { "type": "number" },
+        "minCashDate": { "type": "string" },
+        "breachesCount": { "type": "integer" },
+        "breachDays": { "type": "array", "items": { "type": "string" } },
+        "totalShortfall": { "type": "number" },
+        "impactSummary": { "type": "string" },
+        "alertsGenerated": { "type": "integer" }
+      }
+    },
+    "runAt": { "type": "string", "format": "date-time", "description": "When the test was run" },
+    "runBy": { "type": "string", "description": "Who ran the test" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "forecastId", "name", "stressType", "paramsJson", "createdAt"]
+}

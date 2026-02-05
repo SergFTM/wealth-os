@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "notificationRule.schema.json",
+  "title": "NotificationRule",
+  "description": "A notification routing rule",
+  "type": "object",
+  "required": ["id", "clientId", "name", "triggerType", "status", "priority", "createdAt", "updatedAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the rule"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/tenant identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Rule name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Rule description"
+    },
+    "triggerType": {
+      "type": "string",
+      "enum": ["event", "schedule", "condition", "threshold", "manual"],
+      "description": "What triggers this rule"
+    },
+    "triggerEvent": {
+      "type": "string",
+      "description": "Event type that triggers this rule (if triggerType=event)"
+    },
+    "triggerSchedule": {
+      "type": "string",
+      "description": "Cron expression for scheduled triggers"
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": { "type": "string" },
+          "operator": { "type": "string", "enum": ["eq", "neq", "gt", "lt", "gte", "lte", "contains", "in", "notIn"] },
+          "value": {}
+        }
+      },
+      "description": "Conditions that must be met"
+    },
+    "targetRoles": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Target roles for notification"
+    },
+    "targetUsers": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Specific target user IDs"
+    },
+    "targetGroups": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Target group IDs"
+    },
+    "channels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["inbox", "email", "sms", "push", "slack", "teams", "webhook"]
+      },
+      "description": "Delivery channels for this rule"
+    },
+    "templateId": {
+      "type": "string",
+      "description": "Template to use for notifications"
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["low", "normal", "high", "urgent"],
+      "description": "Priority assigned to generated notifications"
+    },
+    "category": {
+      "type": "string",
+      "description": "Category assigned to generated notifications"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "paused", "disabled"],
+      "description": "Rule status"
+    },
+    "escalateAfterMinutes": {
+      "type": ["number", "null"],
+      "description": "Minutes after which to escalate if not acknowledged"
+    },
+    "escalateTo": {
+      "type": ["string", "null"],
+      "description": "User/role to escalate to"
+    },
+    "bundleInDigest": {
+      "type": "boolean",
+      "description": "Whether to bundle in digest instead of immediate delivery"
+    },
+    "digestFrequency": {
+      "type": ["string", "null"],
+      "enum": ["hourly", "daily", "weekly", null],
+      "description": "Digest bundling frequency"
+    },
+    "cooldownMinutes": {
+      "type": ["number", "null"],
+      "description": "Minimum minutes between notifications from this rule"
+    },
+    "maxPerDay": {
+      "type": ["number", "null"],
+      "description": "Maximum notifications per day from this rule"
+    },
+    "firedCount": {
+      "type": "number",
+      "description": "Total times this rule has fired"
+    },
+    "lastFiredAt": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Last time this rule fired"
+    },
+    "createdByUserId": {
+      "type": "string"
+    },
+    "createdByName": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

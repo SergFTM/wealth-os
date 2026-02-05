@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Narrative",
+  "type": "object",
+  "required": ["id", "clientId", "scopeType", "scopeId", "category", "periodStart", "periodEnd", "title", "narrativeText", "confidencePct", "createdAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "scopeType": { "type": "string", "enum": ["household", "entity", "portfolio", "account", "global"] },
+    "scopeId": { "type": "string" },
+    "category": { "type": "string", "enum": ["net_worth", "performance", "risk", "liquidity", "compliance", "tax", "fees"] },
+    "periodStart": { "type": "string", "format": "date" },
+    "periodEnd": { "type": "string", "format": "date" },
+    "title": { "type": "string" },
+    "narrativeText": { "type": "string" },
+    "sourcesJson": { "type": "string", "description": "JSON array of source references" },
+    "confidencePct": { "type": "number", "minimum": 0, "maximum": 100 },
+    "createdAt": { "type": "string", "format": "date-time" }
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ds-001",
+    "name": "Investor Demo",
+    "description": "Walkthrough for potential investors showing portfolio performance, reports, and transparency features",
+    "stepsJson": "[{\"step\": 1, \"action\": \"Navigate to Net Worth dashboard\"}, {\"step\": 2, \"action\": \"Review portfolio performance\"}, {\"step\": 3, \"action\": \"Open reporting module\"}, {\"step\": 4, \"action\": \"Generate quarterly report\"}, {\"step\": 5, \"action\": \"Access document vault\"}]",
+    "category": "investor",
+    "duration": "15 min",
+    "persona": "client",
+    "isActive": false,
+    "completedSteps": 0,
+    "createdAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": "ds-002",
+    "name": "Operations Day",
+    "description": "Daily operations workflow: tasks, reconciliation, alerts, and sync monitoring",
+    "stepsJson": "[{\"step\": 1, \"action\": \"Check open tasks in Workflow\"}, {\"step\": 2, \"action\": \"Review reconciliation breaks\"}, {\"step\": 3, \"action\": \"Address open alerts\"}, {\"step\": 4, \"action\": \"Monitor sync jobs\"}, {\"step\": 5, \"action\": \"Complete pending approvals\"}]",
+    "category": "operations",
+    "duration": "20 min",
+    "persona": "operations",
+    "isActive": false,
+    "completedSteps": 0,
+    "createdAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": "ds-003",
+    "name": "Month End Close",
+    "description": "End of month procedures: fee calculation, invoice generation, report packages",
+    "stepsJson": "[{\"step\": 1, \"action\": \"Run fee calculation\"}, {\"step\": 2, \"action\": \"Review fee invoices\"}, {\"step\": 3, \"action\": \"Generate client reports\"}, {\"step\": 4, \"action\": \"Approve and send invoices\"}, {\"step\": 5, \"action\": \"Archive month data\"}]",
+    "category": "finance",
+    "duration": "30 min",
+    "persona": "cfo",
+    "isActive": false,
+    "completedSteps": 0,
+    "createdAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": "ds-004",
+    "name": "Risk Event Response",
+    "description": "Handling a critical risk alert: investigation, escalation, and resolution",
+    "stepsJson": "[{\"step\": 1, \"action\": \"Review critical alert\"}, {\"step\": 2, \"action\": \"Investigate IPS breach\"}, {\"step\": 3, \"action\": \"Document findings\"}, {\"step\": 4, \"action\": \"Request waiver or remediation\"}, {\"step\": 5, \"action\": \"Close alert with resolution\"}]",
+    "category": "compliance",
+    "duration": "25 min",
+    "persona": "compliance",
+    "isActive": false,
+    "completedSteps": 0,
+    "createdAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": "ds-005",
+    "name": "Document Request",
+    "description": "Client requesting documents: search, share, audit trail",
+    "stepsJson": "[{\"step\": 1, \"action\": \"Receive thread message\"}, {\"step\": 2, \"action\": \"Search document vault\"}, {\"step\": 3, \"action\": \"Create evidence pack\"}, {\"step\": 4, \"action\": \"Share via secure link\"}, {\"step\": 5, \"action\": \"Log audit event\"}]",
+    "category": "operations",
+    "duration": "10 min",
+    "persona": "rm",
+    "isActive": false,
+    "completedSteps": 0,
+    "createdAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": "ds-006",
+    "name": "Invoice Approval Flow",
+    "description": "CFO approving invoices: review, edit, approve, send",
+    "stepsJson": "[{\"step\": 1, \"action\": \"Navigate to Fee Billing\"}, {\"step\": 2, \"action\": \"Review pending invoices\"}, {\"step\": 3, \"action\": \"Verify calculations\"}, {\"step\": 4, \"action\": \"Approve selected invoices\"}, {\"step\": 5, \"action\": \"Send to clients\"}]",
+    "category": "finance",
+    "duration": "15 min",
+    "persona": "cfo",
+    "isActive": false,
+    "completedSteps": 0,
+    "createdAt": "2025-01-01T00:00:00Z"
+  }
+]

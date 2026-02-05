@@ -1,0 +1,8 @@
+[
+  {"id": "grp-001", "clientId": "global", "name": "Executive Team", "description": "C-level executives and owners", "memberIds": ["usr-001", "usr-002", "usr-003"], "defaultRoleId": "role-002", "createdAt": "2024-01-15T10:00:00Z"},
+  {"id": "grp-002", "clientId": "global", "name": "Operations Team", "description": "Operations and back-office staff", "memberIds": ["usr-004", "usr-010", "usr-022"], "defaultRoleId": "role-004", "createdAt": "2024-02-01T10:00:00Z"},
+  {"id": "grp-003", "clientId": "global", "name": "Compliance Team", "description": "Compliance and legal", "memberIds": ["usr-005", "usr-017"], "defaultRoleId": "role-005", "createdAt": "2024-03-01T10:00:00Z"},
+  {"id": "grp-004", "clientId": "global", "name": "Client Relations", "description": "Relationship managers and advisors", "memberIds": ["usr-006", "usr-007", "usr-008"], "defaultRoleId": "role-006", "createdAt": "2024-03-15T10:00:00Z"},
+  {"id": "grp-005", "clientId": "global", "name": "Client Users", "description": "External client portal users", "memberIds": ["usr-011", "usr-012", "usr-013", "usr-014", "usr-015", "usr-019", "usr-020"], "defaultRoleId": "role-008", "createdAt": "2024-01-20T10:00:00Z"},
+  {"id": "grp-006", "clientId": "aurora", "name": "IT & Security", "description": "IT administrators and security team", "memberIds": ["usr-016"], "defaultRoleId": "role-009", "createdAt": "2024-06-01T10:00:00Z"}
+]

@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Case",
+  "type": "object",
+  "required": ["id", "clientId", "caseNumber", "title", "caseType", "priority", "status", "sourceType", "createdAt", "updatedAt"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "clientId": { "type": "string", "format": "uuid" },
+    "caseNumber": { "type": "string", "pattern": "^CS-\\d{4}-\\d{4,}$" },
+    "title": { "type": "string", "minLength": 1, "maxLength": 500 },
+    "description": { "type": ["string", "null"], "maxLength": 10000 },
+    "caseType": {
+      "type": "string",
+      "enum": ["request", "incident", "change", "problem"]
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["open", "in_progress", "awaiting_client", "resolved", "closed"]
+    },
+    "sourceType": {
+      "type": "string",
+      "enum": ["portal", "internal", "dq", "sync", "billing", "email", "api"]
+    },
+    "sourceId": { "type": ["string", "null"] },
+    "sourceName": { "type": ["string", "null"] },
+    "reporterSubjectType": {
+      "type": ["string", "null"],
+      "enum": ["user", "client", "system", null]
+    },
+    "reporterId": { "type": ["string", "null"] },
+    "reporterName": { "type": ["string", "null"] },
+    "reporterEmail": { "type": ["string", "null"], "format": "email" },
+    "assignedToUserId": { "type": ["string", "null"], "format": "uuid" },
+    "assignedToUserName": { "type": ["string", "null"] },
+    "assignedToRole": { "type": ["string", "null"] },
+    "scopeType": {
+      "type": ["string", "null"],
+      "enum": ["household", "entity", "portfolio", "account", null]
+    },
+    "scopeId": { "type": ["string", "null"], "format": "uuid" },
+    "scopeName": { "type": ["string", "null"] },
+    "clientVisible": { "type": "boolean", "default": false },
+    "clientSafeSummary": { "type": ["string", "null"], "maxLength": 2000 },
+    "clientSafeUpdates": { "type": ["string", "null"], "maxLength": 5000 },
+    "threadId": { "type": ["string", "null"], "format": "uuid" },
+    "slaPolicyId": { "type": ["string", "null"], "format": "uuid" },
+    "slaPolicyName": { "type": ["string", "null"] },
+    "responseDueAt": { "type": ["string", "null"], "format": "date-time" },
+    "dueAt": { "type": ["string", "null"], "format": "date-time" },
+    "slaBreached": { "type": "boolean", "default": false },
+    "slaBreachedAt": { "type": ["string", "null"], "format": "date-time" },
+    "escalationLevel": { "type": "integer", "default": 0 },
+    "lastEscalationAt": { "type": ["string", "null"], "format": "date-time" },
+    "resolvedAt": { "type": ["string", "null"], "format": "date-time" },
+    "closedAt": { "type": ["string", "null"], "format": "date-time" },
+    "resolutionNotes": { "type": ["string", "null"], "maxLength": 5000 },
+    "tagsJson": { "type": ["string", "null"] },
+    "metadataJson": { "type": ["string", "null"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

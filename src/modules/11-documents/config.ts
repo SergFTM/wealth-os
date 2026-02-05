@@ -29,7 +29,7 @@ export const documentsConfig: ModuleConfig = {
     { key: 'name', header: { ru: 'Имя', en: 'Name', uk: 'Ім\'я' } },
     { key: 'category', header: { ru: 'Категория', en: 'Category', uk: 'Категорія' } },
     { key: 'tags', header: { ru: 'Теги', en: 'Tags', uk: 'Теги' } },
-    { key: 'linkedCount', header: { ru: 'Связи', en: 'Links', uk: 'Зв\'язки' }, type: 'number' },
+    { key: 'linkedCount', header: { ru: 'Связи', en: 'Links', uk: 'Зв\'язки' }, type: 'text' },
     { key: 'createdBy', header: { ru: 'Владелец', en: 'Owner', uk: 'Власник' } },
     { key: 'createdAt', header: { ru: 'Создан', en: 'Created', uk: 'Створено' }, type: 'date' },
     { key: 'status', header: { ru: 'Статус', en: 'Status', uk: 'Статус' }, type: 'status' }

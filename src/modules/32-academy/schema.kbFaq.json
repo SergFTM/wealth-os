@@ -1,0 +1,22 @@
+{
+  "collection": "kbFaq",
+  "description": "Frequently asked questions",
+  "fields": {
+    "id": { "type": "string", "required": true, "primary": true },
+    "clientId": { "type": "string", "required": true },
+    "questionRu": { "type": "string", "required": true },
+    "questionEn": { "type": "string" },
+    "questionUk": { "type": "string" },
+    "answerRu": { "type": "string", "required": true },
+    "answerEn": { "type": "string" },
+    "answerUk": { "type": "string" },
+    "tagsJson": { "type": "array", "items": "string" },
+    "audience": { "type": "enum", "values": ["staff", "client", "both"], "default": "both" },
+    "categoryKey": { "type": "string" },
+    "orderIndex": { "type": "number", "default": 0 },
+    "viewCount": { "type": "number", "default": 0 },
+    "createdAt": { "type": "datetime", "required": true },
+    "updatedAt": { "type": "datetime" }
+  },
+  "indexes": ["clientId", "audience", "categoryKey", "tagsJson"]
+}

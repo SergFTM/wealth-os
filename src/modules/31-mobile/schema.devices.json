@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MobileDevice",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "clientId": { "type": "string", "format": "uuid" },
+    "userId": { "type": "string", "format": "uuid" },
+    "deviceName": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "platform": {
+      "type": "string",
+      "enum": ["ios", "android", "desktop", "web"]
+    },
+    "browser": {
+      "type": "string",
+      "enum": ["chrome", "safari", "firefox", "edge", "other"]
+    },
+    "userAgent": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["active", "revoked", "inactive"],
+      "default": "active"
+    },
+    "pushToken": { "type": "string" },
+    "biometricEnabled": { "type": "boolean", "default": false },
+    "lastSeenAt": { "type": "string", "format": "date-time" },
+    "lastIp": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "userId", "deviceName", "platform", "browser", "status", "createdAt"]
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ClientSubscription",
+  "description": "Client notification subscriptions",
+  "type": "object",
+  "required": ["id", "clientId", "userId", "channel", "status"],
+  "properties": {
+    "id": { "type": "string", "description": "Unique subscription ID" },
+    "clientId": { "type": "string", "description": "Client ID" },
+    "userId": { "type": "string", "description": "User ID" },
+    "channel": {
+      "type": "string",
+      "enum": ["email", "push", "sms"],
+      "description": "Notification channel"
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "request_updates",
+          "report_published",
+          "document_added",
+          "invoice_issued",
+          "message_received",
+          "security_alerts",
+          "announcements",
+          "portfolio_alerts"
+        ]
+      },
+      "description": "Subscribed topics"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "paused", "unsubscribed"],
+      "default": "active"
+    },
+    "frequency": {
+      "type": "string",
+      "enum": ["instant", "daily_digest", "weekly_digest"],
+      "default": "instant"
+    },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

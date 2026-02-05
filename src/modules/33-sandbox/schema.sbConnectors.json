@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sandbox Mock Connector",
+  "description": "Mock connector for sandbox integration testing",
+  "type": "object",
+  "required": ["id", "clientId", "connectorKey", "name", "status", "createdAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/tenant identifier"
+    },
+    "connectorKey": {
+      "type": "string",
+      "enum": ["bank_mock", "custodian_mock", "bill_mock", "docvault_mock", "pricing_mock", "crm_mock", "accounting_mock", "tax_mock", "portfolio_mock", "custom_mock"],
+      "description": "Connector type key"
+    },
+    "name": {
+      "type": "string",
+      "description": "Connector display name"
+    },
+    "description": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "paused", "error"],
+      "default": "active"
+    },
+    "configJson": {
+      "type": "object",
+      "description": "Connector configuration",
+      "properties": {
+        "responseDelayMs": { "type": "number" },
+        "batchSize": { "type": "number" },
+        "entityTypes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "errorInjectionJson": {
+      "type": "object",
+      "description": "Error injection settings for testing",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "failureRate": { "type": "number", "minimum": 0, "maximum": 100 },
+        "errorTypes": { "type": "array", "items": { "type": "string" } },
+        "invalidFieldRate": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "mappingIdsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Attached mapping IDs"
+    },
+    "lastJobId": {
+      "type": "string",
+      "description": "Last sync job ID"
+    },
+    "lastJobAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

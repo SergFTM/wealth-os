@@ -1,0 +1,33 @@
+{
+  "collection": "ideas",
+  "description": "Investment ideas with thesis, catalysts, risks and entry plans",
+  "fields": [
+    { "name": "id", "type": "string", "required": true, "description": "Unique identifier" },
+    { "name": "clientId", "type": "string", "required": true, "description": "Client/household ID" },
+    { "name": "ideaNumber", "type": "string", "required": true, "description": "Human-readable ID-YYYY-#### format" },
+    { "name": "scopeType", "type": "enum", "values": ["household", "entity", "portfolio", "account"], "description": "Scope level" },
+    { "name": "scopeId", "type": "string", "description": "ID of scoped entity" },
+    { "name": "title", "type": "string", "required": true, "description": "Idea title" },
+    { "name": "assetKey", "type": "string", "description": "Specific asset identifier (ticker, ISIN, etc)" },
+    { "name": "assetClass", "type": "enum", "values": ["equity", "fixed_income", "alternatives", "real_estate", "commodities", "crypto", "cash", "multi_asset"], "required": true },
+    { "name": "horizonKey", "type": "enum", "values": ["tactical", "short", "medium", "long", "strategic"], "required": true },
+    { "name": "thesisText", "type": "text", "required": true, "description": "Investment thesis" },
+    { "name": "catalystsJson", "type": "json", "description": "Array of catalyst objects with description and timing" },
+    { "name": "risksJson", "type": "json", "description": "Array of risk objects with description and severity" },
+    { "name": "ipsRefsJson", "type": "json", "description": "Array of IPS constraint references" },
+    { "name": "entryPlanJson", "type": "json", "description": "Entry zones, triggers, conditions" },
+    { "name": "sizingJson", "type": "json", "description": "Position sizing recommendation" },
+    { "name": "exitPlanJson", "type": "json", "description": "Exit strategy, stops, targets" },
+    { "name": "status", "type": "enum", "values": ["draft", "active", "in_committee", "approved", "rejected", "archived"], "required": true, "default": "draft" },
+    { "name": "riskLevel", "type": "enum", "values": ["low", "medium", "high", "very_high"], "required": true },
+    { "name": "ownerUserId", "type": "string", "required": true, "description": "User who created/owns the idea" },
+    { "name": "sourceRefsJson", "type": "json", "description": "Array of source references (note IDs, document IDs, URLs)" },
+    { "name": "tagsJson", "type": "json", "description": "Array of tags for categorization" },
+    { "name": "discussionThreadId", "type": "string", "description": "Linked comm thread for discussions" },
+    { "name": "committeeAgendaItemId", "type": "string", "description": "Linked committee agenda item" },
+    { "name": "committeeDecisionId", "type": "string", "description": "Linked committee decision" },
+    { "name": "createdAt", "type": "datetime", "required": true },
+    { "name": "updatedAt", "type": "datetime", "required": true }
+  ],
+  "indexes": ["clientId", "status", "assetClass", "riskLevel", "ownerUserId", "ideaNumber"]
+}

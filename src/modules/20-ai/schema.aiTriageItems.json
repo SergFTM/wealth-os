@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Triage Item",
+  "type": "object",
+  "required": ["id", "clientId", "category", "title", "severity", "suggestedAction", "status", "createdAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "category": { "type": "string", "enum": ["sla", "data_quality", "breaches", "fees", "compliance", "risk", "reconciliation"] },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "severity": { "type": "string", "enum": ["critical", "high", "medium", "low"] },
+    "suggestedAction": { "type": "string" },
+    "linkedRefsJson": { "type": "string", "description": "JSON array of linked object references" },
+    "status": { "type": "string", "enum": ["open", "accepted", "dismissed", "completed"] },
+    "taskId": { "type": ["string", "null"], "description": "Created task ID if accepted" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "resolvedAt": { "type": ["string", "null"], "format": "date-time" }
+  }
+}

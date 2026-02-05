@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExportPack",
+  "type": "object",
+  "required": ["id", "clientId", "name", "packType", "status", "createdAt"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "packType": {
+      "type": "string",
+      "enum": ["audit", "tax", "bank", "ops"]
+    },
+    "scopeType": {
+      "type": "string",
+      "enum": ["client", "entity", "portfolio", "fund", "all"],
+      "default": "client"
+    },
+    "scopeId": { "type": "string" },
+    "asOf": { "type": "string", "format": "date" },
+    "clientSafe": { "type": "boolean", "default": false },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "published", "archived"],
+      "default": "draft"
+    },
+    "sectionsJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sectionId": { "type": "string" },
+          "enabled": { "type": "boolean" },
+          "filters": { "type": "object" },
+          "columns": { "type": "array", "items": { "type": "string" } },
+          "format": { "type": "string", "enum": ["csv", "pdf"] }
+        }
+      }
+    },
+    "lastRunId": { "type": "string" },
+    "templateId": { "type": "string" },
+    "description": { "type": "string" },
+    "approvalStatus": {
+      "type": "string",
+      "enum": ["pending", "approved", "rejected"],
+      "default": "pending"
+    },
+    "approvedBy": { "type": "string" },
+    "approvedAt": { "type": "string", "format": "date-time" },
+    "createdBy": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

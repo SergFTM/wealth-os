@@ -38,30 +38,30 @@ export function Modal({ open, onClose, title, children, size = 'md' }: ModalProp
     <>
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+        className="fixed inset-0 bg-black/30 dark:bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
         onClick={onClose}
       >
         {/* Modal */}
         <div
           className={cn(
-            "bg-white rounded-2xl shadow-2xl w-full transform transition-all",
+            "bg-white dark:bg-stone-800 rounded-2xl shadow-2xl w-full transform transition-all",
             sizes[size]
           )}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header */}
-          <div className="flex items-center justify-between px-6 py-4 border-b border-stone-200">
-            <h2 className="text-lg font-semibold text-stone-800">{title}</h2>
+          <div className="flex items-center justify-between px-6 py-4 border-b border-stone-200 dark:border-stone-700">
+            <h2 className="text-lg font-semibold text-stone-800 dark:text-stone-200">{title}</h2>
             <button
               onClick={onClose}
-              className="p-2 rounded-lg hover:bg-stone-100 transition-colors text-stone-500 hover:text-stone-700"
+              className="p-2 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
-          
+
           {/* Content */}
           <div className="p-6">
             {children}

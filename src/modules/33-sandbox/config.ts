@@ -1,0 +1,83 @@
+import { ModuleConfig } from '../types';
+
+export const sandboxConfig: ModuleConfig = {
+  id: '33',
+  slug: 'sandbox',
+  order: 33,
+  icon: 'flask',
+  color: '#6366F1',
+  title: {
+    ru: 'Sandbox',
+    en: 'Sandbox',
+    uk: 'Sandbox',
+  },
+  description: {
+    ru: 'Песочница интеграций, тестовые подключения и mock-коннекторы',
+    en: 'Integration Sandbox, test connections and mock connectors',
+    uk: 'Пісочниця інтеграцій, тестові підключення та mock-конектори',
+  },
+  disclaimer: {
+    ru: 'Sandbox в MVP демонстрационный. Для production требуется изоляция инфраструктуры и секретов.',
+    en: 'Sandbox in MVP is demonstrational. Production requires infrastructure and secrets isolation.',
+    uk: 'Sandbox в MVP демонстраційний. Для production потрібна ізоляція інфраструктури та секретів.',
+  },
+  collections: [
+    'sbEnvironments',
+    'sbDatasets',
+    'sbConnectors',
+    'sbSyncJobs',
+    'sbPayloads',
+    'sbMappings',
+    'sbReplayRuns',
+    'sbLogs',
+  ],
+  routes: {
+    dashboard: '/m/sandbox',
+    list: '/m/sandbox/list',
+    env: '/m/sandbox/env',
+    dataset: '/m/sandbox/dataset',
+    connector: '/m/sandbox/connector',
+    job: '/m/sandbox/job',
+    payload: '/m/sandbox/payload',
+  },
+  tabs: [
+    { key: 'environments', label: { ru: 'Среды', en: 'Environments', uk: 'Середовища' } },
+    { key: 'datasets', label: { ru: 'Датасеты', en: 'Datasets', uk: 'Датасети' } },
+    { key: 'connectors', label: { ru: 'Коннекторы', en: 'Connectors', uk: 'Конектори' } },
+    { key: 'jobs', label: { ru: 'Sync Jobs', en: 'Sync Jobs', uk: 'Sync Jobs' } },
+    { key: 'payloads', label: { ru: 'Payloads', en: 'Payloads', uk: 'Payloads' } },
+    { key: 'mapping', label: { ru: 'Маппинг', en: 'Mapping', uk: 'Маппінг' } },
+    { key: 'replay', label: { ru: 'Replay', en: 'Replay', uk: 'Replay' } },
+    { key: 'logs', label: { ru: 'Логи', en: 'Logs', uk: 'Логи' } },
+    { key: 'audit', label: { ru: 'Audit', en: 'Audit', uk: 'Audit' } },
+  ],
+  kpis: [
+    { key: 'envCount', title: { ru: 'Sandbox сред', en: 'Sandbox Envs', uk: 'Sandbox середовищ' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'activeDatasets', title: { ru: 'Активных датасетов', en: 'Active Datasets', uk: 'Активних датасетів' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'mockConnectors', title: { ru: 'Mock коннекторов', en: 'Mock Connectors', uk: 'Mock конекторів' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'jobs7d', title: { ru: 'Jobs 7д', en: 'Jobs 7d', uk: 'Jobs 7д' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'failedJobs', title: { ru: 'Failed jobs', en: 'Failed Jobs', uk: 'Failed jobs' }, format: 'number', status: 'critical', linkToList: true },
+    { key: 'payloadsCaptured', title: { ru: 'Payloads', en: 'Payloads Captured', uk: 'Payloads' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'mappingErrors', title: { ru: 'Ошибки маппинга', en: 'Mapping Errors', uk: 'Помилки маппінгу' }, format: 'number', status: 'warning', linkToList: true },
+    { key: 'replayRuns', title: { ru: 'Replay runs', en: 'Replay Runs', uk: 'Replay runs' }, format: 'number', status: 'ok', linkToList: true },
+  ],
+  columns: [
+    { key: 'name', header: { ru: 'Название', en: 'Name', uk: 'Назва' } },
+    { key: 'type', header: { ru: 'Тип', en: 'Type', uk: 'Тип' } },
+    { key: 'status', header: { ru: 'Статус', en: 'Status', uk: 'Статус' }, type: 'status' },
+    { key: 'connectorKey', header: { ru: 'Коннектор', en: 'Connector', uk: 'Конектор' } },
+    { key: 'updatedAt', header: { ru: 'Обновлено', en: 'Updated', uk: 'Оновлено' }, type: 'date' },
+  ],
+  actions: [
+    { key: 'createEnv', label: { ru: 'Создать среду', en: 'Create Environment', uk: 'Створити середовище' }, variant: 'primary' },
+    { key: 'cloneDataset', label: { ru: 'Клонировать датасет', en: 'Clone Dataset', uk: 'Клонувати датасет' }, variant: 'secondary' },
+    { key: 'createConnector', label: { ru: 'Создать mock коннектор', en: 'Create Mock Connector', uk: 'Створити mock конектор' }, variant: 'secondary' },
+    { key: 'runJob', label: { ru: 'Запустить sync job', en: 'Run Sync Job', uk: 'Запустити sync job' }, variant: 'secondary' },
+    { key: 'replayEvents', label: { ru: 'Re-play события', en: 'Replay Events', uk: 'Re-play події' }, variant: 'ghost' },
+    { key: 'generateDemo', label: { ru: 'Сгенерировать demo sandbox', en: 'Generate Demo Sandbox', uk: 'Згенерувати demo sandbox' }, variant: 'ghost' },
+  ],
+  adminOnly: false,
+  clientSafeHidden: true,
+};
+
+export default sandboxConfig;

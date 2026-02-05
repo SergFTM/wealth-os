@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Policy",
+  "type": "object",
+  "required": ["id", "clientId", "role", "allowedPromptTypesJson", "actionRequiresConfirm"],
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "role": { "type": "string", "enum": ["owner", "cio", "cfo", "ops", "compliance", "advisor", "client", "admin"] },
+    "allowedPromptTypesJson": { "type": "string", "description": "JSON array of allowed prompt types" },
+    "clientSafeRedactionsJson": { "type": "string", "description": "JSON array of fields to redact in client-safe mode" },
+    "allowedModulesJson": { "type": "string", "description": "JSON array of modules this role can query" },
+    "actionRequiresConfirm": { "type": "boolean" },
+    "maxConfidenceOverride": { "type": ["number", "null"], "description": "Max confidence % to show for this role" },
+    "notes": { "type": ["string", "null"] },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

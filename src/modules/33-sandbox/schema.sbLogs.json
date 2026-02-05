@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sandbox Log",
+  "description": "Sandbox execution logs",
+  "type": "object",
+  "required": ["id", "clientId", "envId", "level", "message", "createdAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/tenant identifier"
+    },
+    "envId": {
+      "type": "string",
+      "description": "Sandbox environment ID"
+    },
+    "level": {
+      "type": "string",
+      "enum": ["debug", "info", "warn", "error", "critical"],
+      "default": "info"
+    },
+    "source": {
+      "type": "string",
+      "enum": ["connector", "job", "mapping", "replay", "system"],
+      "description": "Log source"
+    },
+    "message": {
+      "type": "string",
+      "description": "Log message"
+    },
+    "refsJson": {
+      "type": "object",
+      "description": "References to related entities",
+      "properties": {
+        "jobId": { "type": "string" },
+        "connectorId": { "type": "string" },
+        "payloadId": { "type": "string" },
+        "replayRunId": { "type": "string" },
+        "mappingId": { "type": "string" }
+      }
+    },
+    "detailsJson": {
+      "type": "object",
+      "description": "Additional log details"
+    },
+    "stackTrace": {
+      "type": "string",
+      "description": "Error stack trace if applicable"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CorporateAction",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/tenant ID" },
+    "effectiveAt": { "type": "string", "format": "date-time", "description": "Effective date" },
+    "exDate": { "type": "string", "format": "date-time", "description": "Ex-dividend date" },
+    "recordDate": { "type": "string", "format": "date-time", "description": "Record date" },
+    "paymentDate": { "type": "string", "format": "date-time", "description": "Payment date" },
+    "assetKey": { "type": "string", "description": "Asset symbol or identifier" },
+    "assetName": { "type": "string", "description": "Asset name" },
+    "actionType": { "type": "string", "enum": ["dividend", "split", "merger", "spin-off", "rights-issue", "tender"], "description": "Action type" },
+    "termsJson": { "type": "string", "description": "JSON object with action terms (ratio, amount, etc)" },
+    "status": { "type": "string", "enum": ["announced", "planned", "applied", "cancelled"], "default": "announced" },
+    "impactedRefsJson": { "type": "string", "description": "JSON array of impacted position/account refs" },
+    "sourceRefsJson": { "type": "string", "description": "JSON array of source references" },
+    "notes": { "type": "string", "description": "Notes" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "effectiveAt", "assetKey", "actionType", "status"]
+}

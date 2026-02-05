@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OfflineCachePlan",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "clientId": { "type": "string", "format": "uuid" },
+    "userId": { "type": "string", "format": "uuid" },
+    "planName": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "audience": {
+      "type": "string",
+      "enum": ["portal", "staff", "both"],
+      "default": "portal"
+    },
+    "routesJson": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "cacheStrategy": {
+      "type": "string",
+      "enum": ["static", "stale-while-revalidate", "network-first"],
+      "default": "stale-while-revalidate"
+    },
+    "payloadJson": {
+      "type": "object",
+      "description": "Client-safe snapshot of data for offline access"
+    },
+    "payloadSizeBytes": { "type": "integer" },
+    "maxAgeDays": { "type": "integer", "minimum": 1, "maximum": 30, "default": 7 },
+    "status": {
+      "type": "string",
+      "enum": ["active", "stale", "syncing", "error"],
+      "default": "active"
+    },
+    "lastSyncedAt": { "type": "string", "format": "date-time" },
+    "nextSyncAt": { "type": "string", "format": "date-time" },
+    "syncErrorMessage": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "userId", "planName", "audience", "routesJson", "createdAt"]
+}

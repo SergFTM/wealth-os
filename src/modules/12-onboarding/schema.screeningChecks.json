@@ -1,0 +1,15 @@
+{
+  "collection": "screeningChecks",
+  "fields": {
+    "id": { "type": "string", "required": true },
+    "caseId": { "type": "string", "required": true },
+    "subjectName": { "type": "string", "required": true },
+    "checkType": { "type": "enum", "values": ["sanctions", "pep", "adverse"], "required": true },
+    "provider": { "type": "string", "required": false },
+    "status": { "type": "enum", "values": ["pending", "clear", "match", "needs_info"], "required": true },
+    "resultRef": { "type": "string", "required": false },
+    "notes": { "type": "string", "required": false },
+    "updatedAt": { "type": "datetime", "auto": true },
+    "createdAt": { "type": "datetime", "auto": true }
+  }
+}

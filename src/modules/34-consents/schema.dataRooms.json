@@ -1,0 +1,29 @@
+{
+  "id": { "type": "string", "primary": true },
+  "clientId": { "type": "string", "required": true },
+  "name": { "type": "string", "required": true },
+  "description": { "type": "string" },
+  "purpose": { "type": "enum", "values": ["audit", "legal", "trustee_review", "advisor_pack", "other"], "default": "other" },
+  "status": { "type": "enum", "values": ["active", "closed"], "default": "active" },
+  "expiresAt": { "type": "date" },
+  "createdByUserId": { "type": "string" },
+  "createdByName": { "type": "string" },
+  "audience": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "subjectType": { "type": "string" },
+        "subjectId": { "type": "string" },
+        "subjectName": { "type": "string" },
+        "consentId": { "type": "string" }
+      }
+    }
+  },
+  "watermarkText": { "type": "string", "description": "e.g., Confidential, ClientId, Date" },
+  "itemsCount": { "type": "number", "default": 0 },
+  "viewsCount": { "type": "number", "default": 0 },
+  "downloadsCount": { "type": "number", "default": 0 },
+  "createdAt": { "type": "date" },
+  "updatedAt": { "type": "date" }
+}

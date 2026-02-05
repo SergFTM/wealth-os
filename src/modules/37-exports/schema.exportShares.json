@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExportShare",
+  "type": "object",
+  "required": ["id", "clientId", "name", "packId", "audienceType", "status", "createdAt"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "packId": { "type": "string" },
+    "runId": { "type": "string" },
+    "audienceType": {
+      "type": "string",
+      "enum": ["advisor", "auditor", "client", "bank", "regulator"]
+    },
+    "audienceId": { "type": "string" },
+    "audienceName": { "type": "string" },
+    "audienceEmail": { "type": "string", "format": "email" },
+    "clientSafe": { "type": "boolean", "default": true },
+    "status": {
+      "type": "string",
+      "enum": ["active", "expired", "revoked"],
+      "default": "active"
+    },
+    "accessToken": { "type": "string" },
+    "expiresAt": { "type": "string", "format": "date-time" },
+    "maxDownloads": { "type": "number" },
+    "downloadCount": { "type": "number", "default": 0 },
+    "lastAccessAt": { "type": "string", "format": "date-time" },
+    "consentId": { "type": "string" },
+    "notifyOnAccess": { "type": "boolean", "default": true },
+    "password": { "type": "string" },
+    "ipWhitelist": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "revokedAt": { "type": "string", "format": "date-time" },
+    "revokedBy": { "type": "string" },
+    "revokeReason": { "type": "string" },
+    "createdByUserId": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

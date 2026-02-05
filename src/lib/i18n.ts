@@ -1,4 +1,25 @@
+'use client';
+
+import { createContext, useContext } from 'react';
+
 export type Locale = 'ru' | 'en' | 'uk';
+
+// Context for i18n
+const I18nContext = createContext<{ lang: Locale }>({ lang: 'ru' });
+
+export const I18nProvider = I18nContext.Provider;
+
+export function useI18n() {
+  return useContext(I18nContext);
+}
+
+// Inline translation helper for multi-locale strings
+export function useTranslation() {
+  const { lang } = useI18n();
+  return function t(_key: string, translations: Record<string, string>): string {
+    return translations[lang] || translations.ru || translations.en || _key;
+  };
+}
 
 export interface Dictionary {
   nav: {
@@ -20,6 +41,14 @@ export interface Dictionary {
     comms: string;
     ai: string;
     security: string;
+    platform: string;
+    reports: string;
+    deals: string;
+    mobile: string;
+    academy: string;
+    sandbox: string;
+    cases: string;
+    exports: string;
   };
   common: {
     search: string;
@@ -114,6 +143,23 @@ export interface Dictionary {
     trust: string;
     ai: string;
   };
+  portal: {
+    title: string;
+    home: string;
+    netWorth: string;
+    reports: string;
+    documents: string;
+    invoices: string;
+    requests: string;
+    messages: string;
+    profile: string;
+    createRequest: string;
+    submit: string;
+    attach: string;
+    status: string;
+    deadline: string;
+    noData: string;
+  };
 }
 
 export const dictionaries: Record<Locale, Dictionary> = {
@@ -137,6 +183,14 @@ export const dictionaries: Record<Locale, Dictionary> = {
       comms: 'Коммуникации',
       ai: 'AI Copilot',
       security: 'Безопасность',
+      platform: 'Платформа',
+      reports: 'Студия отчетов',
+      deals: 'Сделки',
+      mobile: 'Мобильный режим',
+      academy: 'Академия',
+      sandbox: 'Песочница',
+      cases: 'Кейсы',
+      exports: 'Экспорты',
     },
     common: {
       search: 'Поиск...',
@@ -231,6 +285,23 @@ export const dictionaries: Record<Locale, Dictionary> = {
       trust: 'Не является юридической консультацией',
       ai: 'AI выводы информационные и требуют проверки человеком',
     },
+    portal: {
+      title: 'Портал',
+      home: 'Главная',
+      netWorth: 'Капитал',
+      reports: 'Отчеты',
+      documents: 'Документы',
+      invoices: 'Счета',
+      requests: 'Запросы',
+      messages: 'Сообщения',
+      profile: 'Профиль',
+      createRequest: 'Создать запрос',
+      submit: 'Отправить',
+      attach: 'Прикрепить',
+      status: 'Статус',
+      deadline: 'Срок',
+      noData: 'Недостаточно данных',
+    },
   },
   en: {
     nav: {
@@ -252,6 +323,14 @@ export const dictionaries: Record<Locale, Dictionary> = {
       comms: 'Communications',
       ai: 'AI Copilot',
       security: 'Security',
+      platform: 'Platform',
+      reports: 'Reporting Studio',
+      deals: 'Deals',
+      mobile: 'Mobile Mode',
+      academy: 'Academy',
+      sandbox: 'Sandbox',
+      cases: 'Cases',
+      exports: 'Exports',
     },
     common: {
       search: 'Search...',
@@ -346,6 +425,23 @@ export const dictionaries: Record<Locale, Dictionary> = {
       trust: 'Not legal advice',
       ai: 'AI outputs are informational and require human verification',
     },
+    portal: {
+      title: 'Portal',
+      home: 'Home',
+      netWorth: 'Net Worth',
+      reports: 'Reports',
+      documents: 'Documents',
+      invoices: 'Invoices',
+      requests: 'Requests',
+      messages: 'Messages',
+      profile: 'Profile',
+      createRequest: 'Create Request',
+      submit: 'Submit',
+      attach: 'Attach',
+      status: 'Status',
+      deadline: 'Deadline',
+      noData: 'Insufficient data',
+    },
   },
   uk: {
     nav: {
@@ -367,6 +463,14 @@ export const dictionaries: Record<Locale, Dictionary> = {
       comms: 'Комунікації',
       ai: 'AI Copilot',
       security: 'Безпека',
+      platform: 'Платформа',
+      reports: 'Студія звітів',
+      deals: 'Угоди',
+      mobile: 'Мобільний режим',
+      academy: 'Академія',
+      sandbox: 'Пісочниця',
+      cases: 'Кейси',
+      exports: 'Експорти',
     },
     common: {
       search: 'Пошук...',
@@ -460,6 +564,23 @@ export const dictionaries: Record<Locale, Dictionary> = {
       tax: 'Не є податковою консультацією',
       trust: 'Не є юридичною консультацією',
       ai: 'AI висновки інформаційні та потребують перевірки людиною',
+    },
+    portal: {
+      title: 'Портал',
+      home: 'Головна',
+      netWorth: 'Капітал',
+      reports: 'Звіти',
+      documents: 'Документи',
+      invoices: 'Рахунки',
+      requests: 'Запити',
+      messages: 'Повідомлення',
+      profile: 'Профіль',
+      createRequest: 'Створити запит',
+      submit: 'Відправити',
+      attach: 'Прикріпити',
+      status: 'Статус',
+      deadline: 'Термін',
+      noData: 'Недостатньо даних',
     },
   },
 };

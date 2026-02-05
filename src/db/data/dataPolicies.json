@@ -1,0 +1,15 @@
+[
+  {
+    "id": "data_001",
+    "clientId": "client_001",
+    "retentionDays": 2555,
+    "exportAllowed": true,
+    "residencyRegion": "us",
+    "privacyMode": "standard",
+    "backupsEnabled": true,
+    "encryptionAtRest": true,
+    "auditLogRetentionDays": 365,
+    "piiMaskingEnabled": false,
+    "updatedAt": "2025-02-01T10:00:00Z"
+  }
+]

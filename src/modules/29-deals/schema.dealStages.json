@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DealStage",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/tenant ID" },
+    "name": { "type": "string", "description": "Stage name" },
+    "nameRu": { "type": "string", "description": "Stage name in Russian" },
+    "nameEn": { "type": "string", "description": "Stage name in English" },
+    "nameUk": { "type": "string", "description": "Stage name in Ukrainian" },
+    "orderIndex": { "type": "integer", "description": "Display order" },
+    "isClosedStage": { "type": "boolean", "default": false, "description": "Is this a closed stage" },
+    "color": { "type": "string", "description": "Stage color code" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "name", "orderIndex"]
+}

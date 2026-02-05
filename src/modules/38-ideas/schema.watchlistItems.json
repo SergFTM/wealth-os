@@ -1,0 +1,20 @@
+{
+  "collection": "watchlistItems",
+  "description": "Individual items in a watchlist",
+  "fields": [
+    { "name": "id", "type": "string", "required": true, "description": "Unique identifier" },
+    { "name": "clientId", "type": "string", "required": true, "description": "Client/household ID" },
+    { "name": "watchlistId", "type": "string", "required": true, "description": "Parent watchlist ID" },
+    { "name": "itemType", "type": "enum", "values": ["ticker", "fund", "deal", "asset", "manager", "custom"], "required": true },
+    { "name": "itemKey", "type": "string", "required": true, "description": "Identifier (ticker symbol, fund ID, etc)" },
+    { "name": "itemName", "type": "string", "description": "Display name" },
+    { "name": "notes", "type": "text", "description": "Notes about this item" },
+    { "name": "alertThresholdJson", "type": "json", "description": "Alert threshold settings" },
+    { "name": "metadataJson", "type": "json", "description": "Additional metadata (price, change, etc)" },
+    { "name": "linkedIdeaId", "type": "string", "description": "Linked idea if any" },
+    { "name": "addedBy", "type": "string", "description": "User who added the item" },
+    { "name": "createdAt", "type": "datetime", "required": true },
+    { "name": "updatedAt", "type": "datetime", "required": true }
+  ],
+  "indexes": ["clientId", "watchlistId", "itemType", "itemKey"]
+}

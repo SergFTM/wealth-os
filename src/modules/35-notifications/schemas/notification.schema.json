@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "notification.schema.json",
+  "title": "Notification",
+  "description": "A notification record in the system",
+  "type": "object",
+  "required": ["id", "clientId", "userId", "title", "category", "priority", "channel", "status", "createdAt", "updatedAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the notification"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/tenant identifier"
+    },
+    "userId": {
+      "type": "string",
+      "description": "Target user ID"
+    },
+    "userName": {
+      "type": "string",
+      "description": "Target user display name"
+    },
+    "title": {
+      "type": "string",
+      "description": "Notification title"
+    },
+    "body": {
+      "type": "string",
+      "description": "Notification body/content"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["task", "approval", "alert", "reminder", "system", "compliance", "report", "message", "escalation"],
+      "description": "Notification category"
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["low", "normal", "high", "urgent"],
+      "description": "Notification priority level"
+    },
+    "channel": {
+      "type": "string",
+      "enum": ["inbox", "email", "sms", "push", "slack", "teams", "webhook"],
+      "description": "Delivery channel"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "sent", "delivered", "read", "failed", "snoozed", "archived"],
+      "description": "Notification delivery status"
+    },
+    "readAt": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "When the notification was read"
+    },
+    "deliveredAt": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "When the notification was delivered"
+    },
+    "snoozedUntil": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Snooze until timestamp"
+    },
+    "sourceType": {
+      "type": "string",
+      "description": "Source entity type (task, document, etc.)"
+    },
+    "sourceId": {
+      "type": "string",
+      "description": "Source entity ID"
+    },
+    "sourceName": {
+      "type": "string",
+      "description": "Source entity display name"
+    },
+    "sourceUrl": {
+      "type": "string",
+      "description": "Deep link to source entity"
+    },
+    "templateId": {
+      "type": ["string", "null"],
+      "description": "Template used for rendering"
+    },
+    "ruleId": {
+      "type": ["string", "null"],
+      "description": "Rule that triggered this notification"
+    },
+    "escalationId": {
+      "type": ["string", "null"],
+      "description": "Associated escalation if any"
+    },
+    "digestId": {
+      "type": ["string", "null"],
+      "description": "Digest this notification was bundled into"
+    },
+    "aiScore": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 100,
+      "description": "AI-assigned importance score"
+    },
+    "aiTags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "AI-generated tags"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Additional metadata"
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": { "type": "string" },
+          "label": { "type": "string" },
+          "url": { "type": "string" },
+          "style": { "type": "string" }
+        }
+      },
+      "description": "Available actions for the notification"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

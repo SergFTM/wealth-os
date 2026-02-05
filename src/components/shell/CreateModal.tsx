@@ -40,12 +40,12 @@ export function CreateModal() {
             <button
               key={key}
               onClick={() => setSelectedType(key)}
-              className="flex items-center gap-3 p-4 rounded-xl border border-stone-200 hover:border-emerald-300 hover:bg-emerald-50/50 transition-all text-left"
+              className="flex items-center gap-3 p-4 rounded-xl border border-stone-200 dark:border-stone-700 hover:border-emerald-300 dark:hover:border-emerald-600 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/20 transition-all text-left"
             >
-              <div className="p-2 rounded-lg bg-gradient-to-br from-emerald-50 to-amber-50 text-emerald-600">
+              <div className="p-2 rounded-lg bg-gradient-to-br from-emerald-50 to-amber-50 dark:from-emerald-900/30 dark:to-amber-900/30 text-emerald-600 dark:text-emerald-400">
                 {icon}
               </div>
-              <span className="font-medium text-stone-700">
+              <span className="font-medium text-stone-700 dark:text-stone-300">
                 {t.create[key as keyof typeof t.create]}
               </span>
             </button>
@@ -55,35 +55,35 @@ export function CreateModal() {
         <div className="space-y-4">
           <button
             onClick={() => setSelectedType(null)}
-            className="text-sm text-stone-500 hover:text-stone-700 flex items-center gap-1"
+            className="text-sm text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 flex items-center gap-1"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             Назад
           </button>
-          
+
           <div>
-            <label className="block text-sm font-medium text-stone-700 mb-1">
+            <label className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-1">
               Название
             </label>
             <input
               type="text"
               value={formData.title}
               onChange={(e) => setFormData(prev => ({ ...prev, title: e.target.value }))}
-              className="w-full px-3 py-2 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
+              className="w-full px-3 py-2 border border-stone-200 dark:border-stone-700 rounded-lg bg-white dark:bg-stone-900 text-stone-800 dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
               placeholder={`Новый ${t.create[selectedType as keyof typeof t.create].toLowerCase()}`}
             />
           </div>
-          
+
           <div>
-            <label className="block text-sm font-medium text-stone-700 mb-1">
+            <label className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-1">
               Клиент
             </label>
             <select
               value={formData.client}
               onChange={(e) => setFormData(prev => ({ ...prev, client: e.target.value }))}
-              className="w-full px-3 py-2 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
+              className="w-full px-3 py-2 border border-stone-200 dark:border-stone-700 rounded-lg bg-white dark:bg-stone-900 text-stone-800 dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
             >
               <option value="">Выберите клиента</option>
               <option value="Aurora Family">Aurora Family</option>
@@ -94,19 +94,19 @@ export function CreateModal() {
               <option value="Cedar Legacy">Cedar Legacy</option>
             </select>
           </div>
-          
+
           <div>
-            <label className="block text-sm font-medium text-stone-700 mb-1">
+            <label className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-1">
               Описание
             </label>
             <textarea
               value={formData.description}
               onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
-              className="w-full px-3 py-2 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/30 h-24 resize-none"
+              className="w-full px-3 py-2 border border-stone-200 dark:border-stone-700 rounded-lg bg-white dark:bg-stone-900 text-stone-800 dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 h-24 resize-none"
               placeholder="Опишите подробности..."
             />
           </div>
-          
+
           <div className="flex justify-end gap-3 pt-4">
             <Button variant="secondary" onClick={handleClose}>
               {t.common.cancel}

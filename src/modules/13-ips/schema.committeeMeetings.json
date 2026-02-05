@@ -1,0 +1,16 @@
+{
+  "collection": "committeeMeetings",
+  "fields": {
+    "id": { "type": "string", "required": true },
+    "clientId": { "type": "string", "required": true },
+    "scopeType": { "type": "enum", "values": ["household", "entity", "all"], "required": true },
+    "scopeId": { "type": "string", "required": false },
+    "date": { "type": "datetime", "required": true },
+    "status": { "type": "enum", "values": ["draft", "held", "published"], "required": true },
+    "agendaItemIds": { "type": "array", "items": "string", "required": false },
+    "minutesText": { "type": "string", "required": false },
+    "docIds": { "type": "array", "items": "string", "required": false },
+    "createdAt": { "type": "datetime", "auto": true },
+    "updatedAt": { "type": "datetime", "auto": true }
+  }
+}

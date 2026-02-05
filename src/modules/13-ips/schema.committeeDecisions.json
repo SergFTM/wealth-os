@@ -1,0 +1,18 @@
+{
+  "collection": "committeeDecisions",
+  "fields": {
+    "id": { "type": "string", "required": true },
+    "meetingId": { "type": "string", "required": true },
+    "title": { "type": "string", "required": true },
+    "decisionType": { "type": "enum", "values": ["approve_waiver", "revise_ips", "rebalance", "other"], "required": true },
+    "relatedBreachId": { "type": "string", "required": false },
+    "relatedWaiverId": { "type": "string", "required": false },
+    "voteYes": { "type": "number", "required": false },
+    "voteNo": { "type": "number", "required": false },
+    "voteAbstain": { "type": "number", "required": false },
+    "result": { "type": "enum", "values": ["approved", "rejected", "deferred"], "required": true },
+    "notes": { "type": "string", "required": false },
+    "createdAt": { "type": "datetime", "auto": true },
+    "updatedAt": { "type": "datetime", "auto": true }
+  }
+}

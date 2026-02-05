@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ClientPreferences",
+  "description": "Client portal preferences",
+  "type": "object",
+  "required": ["id", "clientId", "userId"],
+  "properties": {
+    "id": { "type": "string", "description": "Unique preferences ID" },
+    "clientId": { "type": "string", "description": "Client ID" },
+    "userId": { "type": "string", "description": "User ID" },
+    "language": {
+      "type": "string",
+      "enum": ["ru", "en", "uk"],
+      "default": "ru"
+    },
+    "currency": {
+      "type": "string",
+      "enum": ["USD", "EUR", "GBP", "CHF", "RUB", "UAH"],
+      "default": "USD"
+    },
+    "dismissedAnnouncements": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "IDs of dismissed announcements"
+    },
+    "notificationPrefs": {
+      "type": "object",
+      "properties": {
+        "emailEnabled": { "type": "boolean", "default": true },
+        "pushEnabled": { "type": "boolean", "default": false },
+        "requestUpdates": { "type": "boolean", "default": true },
+        "reportPublished": { "type": "boolean", "default": true },
+        "newDocument": { "type": "boolean", "default": true },
+        "invoiceIssued": { "type": "boolean", "default": true },
+        "messageReceived": { "type": "boolean", "default": true }
+      }
+    },
+    "privacySettings": {
+      "type": "object",
+      "properties": {
+        "hideBalancesFromFamily": { "type": "boolean", "default": false },
+        "showActivityToAdvisor": { "type": "boolean", "default": true }
+      }
+    },
+    "dashboardLayout": {
+      "type": "string",
+      "enum": ["compact", "standard", "detailed"],
+      "default": "standard"
+    },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

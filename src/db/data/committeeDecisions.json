@@ -1,0 +1,217 @@
+[
+  {
+    "id": "cm-dec-001",
+    "meetingId": "cm-mtg-001",
+    "agendaItemId": "cm-ai-001",
+    "voteId": "cm-vote-001",
+    "title": "Утверждение ребалансировки Smith Family",
+    "summary": "Комитет утвердил план ребалансировки портфеля Smith Family для приведения аллокации акций в соответствие с IPS",
+    "result": "approved",
+    "executionStatus": "executed",
+    "executionPlan": "Снизить долю акций с 65% до 60% в течение 2 недель через продажу позиций в технологическом секторе",
+    "linkedRefs": [
+      { "type": "household", "id": "hh-001", "label": "Smith Family" },
+      { "type": "ips", "id": "ips-001", "label": "IPS v2" }
+    ],
+    "rationale": "Текущая аллокация акций превышает верхнюю границу IPS на 5%. Необходима корректировка для соответствия инвестиционной политике.",
+    "isClientSafe": true,
+    "createdAt": "2024-12-15T10:50:00Z",
+    "updatedAt": "2024-12-28T15:00:00Z"
+  },
+  {
+    "id": "cm-dec-002",
+    "meetingId": "cm-mtg-001",
+    "agendaItemId": "cm-ai-002",
+    "voteId": "cm-vote-009",
+    "title": "Принятие отчёта по рискам Q4 2024",
+    "summary": "Комитет принял к сведению квартальный отчёт по рискам и утвердил план мониторинга",
+    "result": "approved",
+    "executionStatus": "executed",
+    "linkedRefs": [
+      { "type": "report", "id": "rp-risk-q4", "label": "Отчёт по рискам Q4" }
+    ],
+    "rationale": "Отчёт демонстрирует приемлемый уровень рисков с рекомендациями по мониторингу концентрации в отдельных секторах.",
+    "isClientSafe": true,
+    "createdAt": "2024-12-15T11:05:00Z",
+    "updatedAt": "2025-01-08T10:00:00Z"
+  },
+  {
+    "id": "cm-dec-003",
+    "meetingId": "cm-mtg-001",
+    "agendaItemId": "cm-ai-003",
+    "voteId": "cm-vote-002",
+    "title": "Назначение Sequoia Capital менеджером PE",
+    "summary": "Комитет выбрал Sequoia Capital для управления аллокацией в private equity",
+    "result": "approved",
+    "executionStatus": "in_progress",
+    "executionPlan": "1. Подписание договора до 15.01.2025\n2. Перечисление первого транша $5M до 15.02.2025\n3. Квартальный обзор результатов",
+    "linkedRefs": [
+      { "type": "manager", "id": "mgr-pe-001", "label": "Sequoia Capital" }
+    ],
+    "rationale": "По итогам due diligence Sequoia демонстрирует лучшие показатели доходности при сопоставимом уровне риска.",
+    "riskConsideration": "Концентрация в венчурном секторе. Рекомендуется диверсификация по стадиям.",
+    "isClientSafe": true,
+    "createdAt": "2024-12-15T11:35:00Z",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  },
+  {
+    "id": "cm-dec-004",
+    "meetingId": "cm-mtg-002",
+    "agendaItemId": "cm-ai-005",
+    "voteId": "cm-vote-003",
+    "title": "Экстренная ребалансировка - Снижение риска",
+    "summary": "Единогласно принято решение о защитном снижении риска в связи с повышенной волатильностью рынка",
+    "result": "approved",
+    "executionStatus": "executed",
+    "executionPlan": "Немедленное снижение доли акций на 10% во всех портфелях с переводом в краткосрочные облигации",
+    "linkedRefs": [
+      { "type": "alert", "id": "alert-vol-001", "label": "Алерт волатильности" }
+    ],
+    "rationale": "Рыночная волатильность превысила пороговые значения. Защитные меры необходимы для сохранения капитала.",
+    "riskConsideration": "Возможное упущение роста при быстром восстановлении рынка.",
+    "isClientSafe": true,
+    "createdAt": "2025-01-10T14:35:00Z",
+    "updatedAt": "2025-01-31T17:00:00Z"
+  },
+  {
+    "id": "cm-dec-005",
+    "meetingId": "cm-mtg-006",
+    "agendaItemId": "cm-ai-015",
+    "voteId": "cm-vote-010",
+    "title": "Принятие годового отчёта 2024",
+    "summary": "Комитет утвердил годовой инвестиционный отчёт за 2024 год",
+    "result": "approved",
+    "executionStatus": "executed",
+    "linkedRefs": [
+      { "type": "report", "id": "rp-003", "label": "Годовой отчёт 2024" }
+    ],
+    "rationale": "Отчёт демонстрирует выполнение целей и соответствие инвестиционным политикам.",
+    "isClientSafe": true,
+    "createdAt": "2024-11-20T11:35:00Z",
+    "updatedAt": "2024-12-10T11:00:00Z"
+  },
+  {
+    "id": "cm-dec-006",
+    "meetingId": "cm-mtg-006",
+    "agendaItemId": "cm-ai-017",
+    "voteId": "cm-vote-006",
+    "title": "Утверждение инвестиционного плана 2025",
+    "summary": "Комитет утвердил план инвестиционной деятельности на 2025 год",
+    "result": "approved",
+    "executionStatus": "executed",
+    "executionPlan": "Реализация плана в соответствии с утверждённым графиком. Квартальные обзоры выполнения.",
+    "linkedRefs": [],
+    "rationale": "План соответствует долгосрочным целям клиентов и учитывает текущую рыночную конъюнктуру.",
+    "isClientSafe": true,
+    "createdAt": "2024-11-20T12:40:00Z",
+    "updatedAt": "2025-01-14T12:00:00Z"
+  },
+  {
+    "id": "cm-dec-007",
+    "meetingId": "cm-mtg-007",
+    "agendaItemId": "cm-ai-018",
+    "title": "Обзор IPS Household Alpha",
+    "summary": "Комитет рассмотрел IPS и рекомендовал внести корректировки",
+    "result": "approved",
+    "executionStatus": "executed",
+    "linkedRefs": [
+      { "type": "household", "id": "hh-001", "label": "Household Alpha" },
+      { "type": "ips", "id": "ips-001", "label": "IPS Alpha" }
+    ],
+    "rationale": "Периодический обзор выявил необходимость корректировки ограничений по ликвидности.",
+    "isClientSafe": true,
+    "createdAt": "2024-10-25T12:00:00Z",
+    "updatedAt": "2024-11-12T10:00:00Z"
+  },
+  {
+    "id": "cm-dec-008",
+    "meetingId": "cm-mtg-008",
+    "agendaItemId": "cm-ai-020",
+    "voteId": "cm-vote-007",
+    "title": "Назначение Blackstone менеджером PE",
+    "summary": "Комитет выбрал Blackstone для дополнительной PE аллокации",
+    "result": "approved",
+    "executionStatus": "executed",
+    "linkedRefs": [
+      { "type": "manager", "id": "mgr-pe-004", "label": "Blackstone" }
+    ],
+    "rationale": "Due diligence подтвердил соответствие стратегии Blackstone инвестиционным целям.",
+    "isClientSafe": true,
+    "createdAt": "2024-09-15T15:35:00Z",
+    "updatedAt": "2024-10-12T14:00:00Z"
+  },
+  {
+    "id": "cm-dec-009",
+    "meetingId": "cm-mtg-009",
+    "agendaItemId": "cm-ai-023",
+    "title": "Корректировка валютного хеджирования",
+    "summary": "Комитет утвердил стратегию валютного хеджирования",
+    "result": "approved",
+    "executionStatus": "executed",
+    "rationale": "Волатильность валютных курсов требует более активного хеджирования EUR и GBP экспозиции.",
+    "isClientSafe": true,
+    "createdAt": "2024-08-20T11:30:00Z",
+    "updatedAt": "2024-08-28T16:00:00Z"
+  },
+  {
+    "id": "cm-dec-010",
+    "meetingId": "cm-mtg-010",
+    "agendaItemId": "cm-ai-024",
+    "title": "Увеличение резерва ликвидности",
+    "summary": "Комитет принял решение о наращивании денежных позиций",
+    "result": "approved",
+    "executionStatus": "executed",
+    "executionPlan": "Увеличить денежные позиции до 15% от портфеля в течение 10 дней",
+    "rationale": "Рыночные условия требуют повышенной ликвидности для защиты портфелей.",
+    "isClientSafe": true,
+    "createdAt": "2024-07-10T10:00:00Z",
+    "updatedAt": "2024-07-18T11:00:00Z"
+  },
+  {
+    "id": "cm-dec-011",
+    "meetingId": "cm-mtg-010",
+    "agendaItemId": "cm-ai-025",
+    "voteId": "cm-vote-008",
+    "title": "Утверждение плана действий при кризисе ликвидности",
+    "summary": "Комитет утвердил план реагирования на кризис ликвидности",
+    "result": "approved",
+    "executionStatus": "executed",
+    "linkedRefs": [],
+    "rationale": "Необходимость формализации процедур реагирования на кризисные ситуации.",
+    "isClientSafe": false,
+    "createdAt": "2024-07-10T10:05:00Z",
+    "updatedAt": "2024-07-25T15:00:00Z"
+  },
+  {
+    "id": "cm-dec-012",
+    "meetingId": "cm-mtg-003",
+    "agendaItemId": "cm-ai-007",
+    "voteId": "cm-vote-004",
+    "title": "Увеличение аллокации в альтернативы",
+    "summary": "Решение отложено до завершения голосования",
+    "result": "deferred",
+    "executionStatus": "pending",
+    "rationale": "Голосование продолжается, кворум не достигнут.",
+    "isClientSafe": true,
+    "createdAt": "2025-02-03T10:30:00Z",
+    "updatedAt": "2025-02-03T10:30:00Z"
+  },
+  {
+    "id": "cm-dec-013",
+    "meetingId": "cm-mtg-003",
+    "agendaItemId": "cm-ai-008",
+    "voteId": "cm-vote-005",
+    "title": "Вейвер IPS для Johnson Family",
+    "summary": "Решение отложено до завершения голосования и сбора документов",
+    "result": "deferred",
+    "executionStatus": "pending",
+    "linkedRefs": [
+      { "type": "household", "id": "hh-002", "label": "Johnson Family" },
+      { "type": "waiver", "id": "wv-001", "label": "Запрос на вейвер" }
+    ],
+    "rationale": "Требуется подтверждение клиента и юридическое заключение.",
+    "isClientSafe": true,
+    "createdAt": "2025-02-03T10:45:00Z",
+    "updatedAt": "2025-02-03T10:45:00Z"
+  }
+]

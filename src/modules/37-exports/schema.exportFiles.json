@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExportFile",
+  "type": "object",
+  "required": ["id", "clientId", "runId", "packId", "fileName", "format", "createdAt"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "clientId": { "type": "string" },
+    "runId": { "type": "string" },
+    "packId": { "type": "string" },
+    "sectionId": { "type": "string" },
+    "fileName": { "type": "string" },
+    "format": {
+      "type": "string",
+      "enum": ["csv", "pdf", "xlsx", "zip"]
+    },
+    "sizeBytes": { "type": "number" },
+    "rowCount": { "type": "number" },
+    "documentId": { "type": "string" },
+    "checksum": { "type": "string" },
+    "contentPreview": { "type": "string" },
+    "isClientSafe": { "type": "boolean", "default": false },
+    "expiresAt": { "type": "string", "format": "date-time" },
+    "downloadCount": { "type": "number", "default": 0 },
+    "lastDownloadAt": { "type": "string", "format": "date-time" },
+    "createdAt": { "type": "string", "format": "date-time" }
+  }
+}

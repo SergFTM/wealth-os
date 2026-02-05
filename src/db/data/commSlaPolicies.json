@@ -1,0 +1,42 @@
+[
+  {
+    "id": "sla-001",
+    "clientId": null,
+    "threadType": "request",
+    "slaHours": 48,
+    "escalationHours": 72,
+    "isActive": true
+  },
+  {
+    "id": "sla-002",
+    "clientId": null,
+    "threadType": "approval",
+    "slaHours": 24,
+    "escalationHours": 48,
+    "isActive": true
+  },
+  {
+    "id": "sla-003",
+    "clientId": null,
+    "threadType": "incident",
+    "slaHours": 4,
+    "escalationHours": 8,
+    "isActive": true
+  },
+  {
+    "id": "sla-004",
+    "clientId": null,
+    "threadType": "advisor",
+    "slaHours": 72,
+    "escalationHours": 96,
+    "isActive": true
+  },
+  {
+    "id": "sla-005",
+    "clientId": null,
+    "threadType": "client_service",
+    "slaHours": 48,
+    "escalationHours": 72,
+    "isActive": true
+  }
+]

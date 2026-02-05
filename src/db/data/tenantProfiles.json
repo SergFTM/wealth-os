@@ -1,0 +1,15 @@
+[
+  {
+    "id": "tenant_001",
+    "clientId": "client_001",
+    "tenantName": "Wealth OS Demo",
+    "tenantNameRu": "Wealth OS Демо",
+    "tenantNameUk": "Wealth OS Демо",
+    "primaryContactEmail": "admin@wealthos.demo",
+    "primaryContactName": "Demo Admin",
+    "tier": "enterprise",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  }
+]

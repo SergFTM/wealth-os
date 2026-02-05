@@ -1,0 +1,176 @@
+[
+  {
+    "id": "dqc-001",
+    "conflictType": "duplicate_tx",
+    "severity": "warning",
+    "status": "open",
+    "title": "Возможный дубликат транзакции",
+    "description": "Две транзакции с одинаковой суммой и датой",
+    "leftRef": {
+      "collection": "glTransactions",
+      "recordId": "glt-100",
+      "displayLabel": "Transfer $10,000 2026-02-01",
+      "keyFields": { "amount": 10000, "date": "2026-02-01", "description": "Wire transfer" }
+    },
+    "rightRef": {
+      "collection": "glTransactions",
+      "recordId": "glt-101",
+      "displayLabel": "Transfer $10,000 2026-02-01",
+      "keyFields": { "amount": 10000, "date": "2026-02-01", "description": "Wire transfer from bank" }
+    },
+    "createdAt": "2026-02-04T10:30:00Z",
+    "updatedAt": "2026-02-04T10:30:00Z"
+  },
+  {
+    "id": "dqc-002",
+    "conflictType": "currency_mismatch",
+    "severity": "critical",
+    "status": "open",
+    "title": "Несовпадение валют в счёте ACC-001",
+    "description": "Обнаружены транзакции в разных валютах",
+    "leftRef": {
+      "collection": "glTransactions",
+      "recordId": "glt-200",
+      "displayLabel": "Transaction USD",
+      "keyFields": { "accountId": "ACC-001", "currency": "USD", "amount": 5000 }
+    },
+    "rightRef": {
+      "collection": "glTransactions",
+      "recordId": "glt-201",
+      "displayLabel": "Transaction EUR",
+      "keyFields": { "accountId": "ACC-001", "currency": "EUR", "amount": 4500 }
+    },
+    "createdAt": "2026-02-04T10:30:00Z",
+    "updatedAt": "2026-02-04T10:30:00Z"
+  },
+  {
+    "id": "dqc-003",
+    "conflictType": "owner_missing",
+    "severity": "warning",
+    "status": "open",
+    "title": "Отсутствует владелец документа",
+    "leftRef": {
+      "collection": "documents",
+      "recordId": "doc-050",
+      "displayLabel": "Investment Report Q4 2025",
+      "keyFields": { "title": "Investment Report Q4 2025", "ownerId": null }
+    },
+    "rightRef": {
+      "collection": "users",
+      "recordId": "unassigned",
+      "displayLabel": "Не назначен",
+      "keyFields": {}
+    },
+    "createdAt": "2026-02-04T10:30:00Z",
+    "updatedAt": "2026-02-04T10:30:00Z"
+  },
+  {
+    "id": "dqc-004",
+    "conflictType": "position_mismatch",
+    "severity": "critical",
+    "status": "open",
+    "title": "Расхождение позиции AAPL",
+    "description": "Позиция в системе не совпадает с выпиской",
+    "leftRef": {
+      "collection": "positions",
+      "recordId": "pos-100",
+      "displayLabel": "Позиция AAPL",
+      "keyFields": { "securityId": "AAPL", "quantity": 1000, "marketValue": 175000 }
+    },
+    "rightRef": {
+      "collection": "statements",
+      "recordId": "stmt-100",
+      "displayLabel": "Выписка AAPL",
+      "keyFields": { "securityId": "AAPL", "quantity": 1050, "marketValue": 183750 }
+    },
+    "createdAt": "2026-02-04T10:30:00Z",
+    "updatedAt": "2026-02-04T10:30:00Z"
+  },
+  {
+    "id": "dqc-005",
+    "conflictType": "amount_discrepancy",
+    "severity": "warning",
+    "status": "open",
+    "title": "Расхождение суммы инвойса",
+    "leftRef": {
+      "collection": "invoices",
+      "recordId": "inv-100",
+      "displayLabel": "Invoice #100",
+      "keyFields": { "amount": 15000, "currency": "USD" }
+    },
+    "rightRef": {
+      "collection": "payments",
+      "recordId": "pay-100",
+      "displayLabel": "Payment #100",
+      "keyFields": { "amount": 14500, "currency": "USD" }
+    },
+    "createdAt": "2026-02-04T10:30:00Z",
+    "updatedAt": "2026-02-04T10:30:00Z"
+  },
+  {
+    "id": "dqc-006",
+    "conflictType": "duplicate_tx",
+    "severity": "warning",
+    "status": "resolved",
+    "resolution": "keep_left",
+    "title": "Дубликат транзакции (решён)",
+    "leftRef": {
+      "collection": "glTransactions",
+      "recordId": "glt-300",
+      "displayLabel": "Fee payment $500",
+      "keyFields": { "amount": 500, "date": "2026-01-15" }
+    },
+    "rightRef": {
+      "collection": "glTransactions",
+      "recordId": "glt-301",
+      "displayLabel": "Fee payment $500",
+      "keyFields": { "amount": 500, "date": "2026-01-15" }
+    },
+    "resolvedAt": "2026-02-03T14:00:00Z",
+    "resolvedByUserId": "user-001",
+    "createdAt": "2026-02-01T10:30:00Z",
+    "updatedAt": "2026-02-03T14:00:00Z"
+  },
+  {
+    "id": "dqc-007",
+    "conflictType": "position_mismatch",
+    "severity": "critical",
+    "status": "open",
+    "title": "Расхождение позиции MSFT",
+    "leftRef": {
+      "collection": "positions",
+      "recordId": "pos-101",
+      "displayLabel": "Позиция MSFT",
+      "keyFields": { "securityId": "MSFT", "quantity": 500, "marketValue": 200000 }
+    },
+    "rightRef": {
+      "collection": "statements",
+      "recordId": "stmt-101",
+      "displayLabel": "Выписка MSFT",
+      "keyFields": { "securityId": "MSFT", "quantity": 500, "marketValue": 198500 }
+    },
+    "createdAt": "2026-02-04T10:30:00Z",
+    "updatedAt": "2026-02-04T10:30:00Z"
+  },
+  {
+    "id": "dqc-008",
+    "conflictType": "owner_missing",
+    "severity": "warning",
+    "status": "open",
+    "title": "Отсутствует владелец счёта",
+    "leftRef": {
+      "collection": "glAccounts",
+      "recordId": "acc-050",
+      "displayLabel": "Cash Account EUR",
+      "keyFields": { "name": "Cash Account EUR", "ownerId": null }
+    },
+    "rightRef": {
+      "collection": "users",
+      "recordId": "unassigned",
+      "displayLabel": "Не назначен",
+      "keyFields": {}
+    },
+    "createdAt": "2026-02-04T10:30:00Z",
+    "updatedAt": "2026-02-04T10:30:00Z"
+  }
+]

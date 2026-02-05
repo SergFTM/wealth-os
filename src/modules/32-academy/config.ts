@@ -1,0 +1,80 @@
+import { ModuleConfig } from '../types';
+
+export const academyConfig: ModuleConfig = {
+  id: '32',
+  slug: 'academy',
+  order: 32,
+  icon: 'graduation-cap',
+  color: '#8B5CF6',
+  title: {
+    ru: 'Академия',
+    en: 'Academy',
+    uk: 'Академія',
+  },
+  description: {
+    ru: 'Обучение, Knowledge Base, курсы и чек-листы для MFO и клиентов',
+    en: 'Training, Knowledge Base, courses and checklists for MFO and clients',
+    uk: 'Навчання, Knowledge Base, курси та чек-листи для MFO та клієнтів',
+  },
+  disclaimer: {
+    ru: 'Материалы носят информационный характер. Tax и Trust разделы не заменяют профессиональные консультации.',
+    en: 'Materials are for informational purposes only. Tax and Trust sections do not replace professional advice.',
+    uk: 'Матеріали носять інформаційний характер. Tax і Trust розділи не замінюють професійні консультації.',
+  },
+  collections: [
+    'kbArticles',
+    'kbCourses',
+    'kbLessons',
+    'kbChecklists',
+    'kbChecklistRuns',
+    'kbFaq',
+    'kbPolicies',
+    'kbTags',
+  ],
+  routes: {
+    dashboard: '/m/academy',
+    list: '/m/academy/list',
+    article: '/m/academy/article',
+    course: '/m/academy/course',
+    lesson: '/m/academy/lesson',
+    checklist: '/m/academy/checklist',
+    search: '/m/academy/search',
+  },
+  tabs: [
+    { key: 'articles', label: { ru: 'Статьи', en: 'Articles', uk: 'Статті' } },
+    { key: 'courses', label: { ru: 'Курсы', en: 'Courses', uk: 'Курси' } },
+    { key: 'lessons', label: { ru: 'Уроки', en: 'Lessons', uk: 'Уроки' } },
+    { key: 'checklists', label: { ru: 'Чек-листы', en: 'Checklists', uk: 'Чек-листи' } },
+    { key: 'policies', label: { ru: 'Политики', en: 'Policies', uk: 'Політики' } },
+    { key: 'faq', label: { ru: 'FAQ', en: 'FAQ', uk: 'FAQ' } },
+    { key: 'library', label: { ru: 'Библиотека', en: 'Library', uk: 'Бібліотека' } },
+    { key: 'audit', label: { ru: 'Audit', en: 'Audit', uk: 'Audit' } },
+  ],
+  kpis: [
+    { key: 'articlesPublished', title: { ru: 'Статей опубликовано', en: 'Articles Published', uk: 'Статей опубліковано' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'coursesActive', title: { ru: 'Курсов активно', en: 'Courses Active', uk: 'Курсів активно' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'lessonsTotal', title: { ru: 'Всего уроков', en: 'Lessons Total', uk: 'Всього уроків' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'checklistsRunning', title: { ru: 'Чек-листов в работе', en: 'Checklists Running', uk: 'Чек-листів в роботі' }, format: 'number', status: 'warning', linkToList: true },
+    { key: 'faqItems', title: { ru: 'FAQ ответов', en: 'FAQ Items', uk: 'FAQ відповідей' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'policiesUpdated', title: { ru: 'Политик обновлено 30д', en: 'Policies Updated 30d', uk: 'Політик оновлено 30д' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'clientSafeContent', title: { ru: 'Client-safe контент', en: 'Client-safe Content', uk: 'Client-safe контент' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'searches7d', title: { ru: 'Поисков 7д', en: 'Searches 7d', uk: 'Пошуків 7д' }, format: 'number', status: 'ok', linkToList: true },
+  ],
+  columns: [
+    { key: 'title', header: { ru: 'Название', en: 'Title', uk: 'Назва' } },
+    { key: 'tags', header: { ru: 'Теги', en: 'Tags', uk: 'Теги' } },
+    { key: 'audience', header: { ru: 'Аудитория', en: 'Audience', uk: 'Аудиторія' } },
+    { key: 'status', header: { ru: 'Статус', en: 'Status', uk: 'Статус' }, type: 'status' },
+    { key: 'updatedAt', header: { ru: 'Обновлено', en: 'Updated', uk: 'Оновлено' }, type: 'date' },
+  ],
+  actions: [
+    { key: 'createArticle', label: { ru: 'Создать статью', en: 'Create Article', uk: 'Створити статтю' }, variant: 'primary' },
+    { key: 'createCourse', label: { ru: 'Создать курс', en: 'Create Course', uk: 'Створити курс' }, variant: 'secondary' },
+    { key: 'createLesson', label: { ru: 'Создать урок', en: 'Create Lesson', uk: 'Створити урок' }, variant: 'secondary' },
+    { key: 'createChecklist', label: { ru: 'Создать чек-лист', en: 'Create Checklist', uk: 'Створити чек-лист' }, variant: 'secondary' },
+    { key: 'rebuildIndex', label: { ru: 'Перестроить индекс', en: 'Rebuild Index', uk: 'Перебудувати індекс' }, variant: 'ghost' },
+    { key: 'generateDemo', label: { ru: 'Сгенерировать demo', en: 'Generate Demo', uk: 'Згенерувати demo' }, variant: 'ghost' },
+  ],
+};
+
+export default academyConfig;

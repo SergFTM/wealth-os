@@ -1,0 +1,16 @@
+[
+  {
+    "id": "portal_001",
+    "clientId": "client_001",
+    "portalEnabled": true,
+    "allowedModules": ["net-worth-summary", "documents", "communications", "reports-share", "invoices-view", "tasks-view"],
+    "clientMenuLabels": [],
+    "clientSafeDefault": true,
+    "showOnlyPublishedPacks": true,
+    "showWelcomeMessage": true,
+    "welcomeMessageRu": "Добро пожаловать в портал Wealth OS! Здесь вы можете просматривать свои активы и документы.",
+    "welcomeMessageEn": "Welcome to Wealth OS Portal! Here you can view your assets and documents.",
+    "welcomeMessageUk": "Ласкаво просимо до порталу Wealth OS! Тут ви можете переглядати свої активи та документи.",
+    "updatedAt": "2025-02-01T10:00:00Z"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExportTemplate",
+  "type": "object",
+  "required": ["id", "clientId", "name", "createdAt"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "description": { "type": "string" },
+    "defaultPackType": {
+      "type": "string",
+      "enum": ["audit", "tax", "bank", "ops"],
+      "default": "audit"
+    },
+    "defaultClientSafe": { "type": "boolean", "default": false },
+    "sectionsJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sectionId": { "type": "string" },
+          "enabled": { "type": "boolean" },
+          "filters": { "type": "object" },
+          "columns": { "type": "array", "items": { "type": "string" } },
+          "format": { "type": "string", "enum": ["csv", "pdf"] }
+        }
+      }
+    },
+    "isSystem": { "type": "boolean", "default": false },
+    "category": { "type": "string" },
+    "createdBy": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

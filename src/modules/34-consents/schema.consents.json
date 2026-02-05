@@ -1,0 +1,22 @@
+{
+  "id": { "type": "string", "primary": true },
+  "clientId": { "type": "string", "required": true },
+  "subjectType": { "type": "enum", "values": ["user", "advisor", "client"], "required": true },
+  "subjectId": { "type": "string", "required": true },
+  "subjectName": { "type": "string" },
+  "scopeType": { "type": "enum", "values": ["household", "entity", "account", "document", "report"], "required": true },
+  "scopeId": { "type": "string" },
+  "scopeName": { "type": "string" },
+  "permissions": { "type": "array", "items": { "type": "string" }, "description": "view, download, export, api" },
+  "clientSafe": { "type": "boolean", "default": false },
+  "validFrom": { "type": "date", "required": true },
+  "validUntil": { "type": "date" },
+  "status": { "type": "enum", "values": ["active", "expired", "revoked"], "default": "active" },
+  "grantedByUserId": { "type": "string" },
+  "grantedByName": { "type": "string" },
+  "reason": { "type": "string" },
+  "requestId": { "type": "string", "description": "Link to access request if created from approval" },
+  "watermarkRequired": { "type": "boolean", "default": false },
+  "createdAt": { "type": "date" },
+  "updatedAt": { "type": "date" }
+}

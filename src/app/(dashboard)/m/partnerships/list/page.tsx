@@ -13,6 +13,7 @@ import { PsAllocationPanel } from '@/modules/07-partnerships/ui/PsAllocationPane
 import { PsSplitModeToggle } from '@/modules/07-partnerships/ui/PsSplitModeToggle';
 import { PsDocumentsTable } from '@/modules/07-partnerships/ui/PsDocumentsTable';
 import { PsAuditPanel } from '@/modules/07-partnerships/ui/PsAuditPanel';
+import type { AuditEvent } from '@/db/storage/storage.types';
 import seedData from '@/modules/07-partnerships/seed.json';
 
 const tabs = [
@@ -195,7 +196,7 @@ export default function PartnershipsListPage() {
               )}
             </div>
           </div>
-          <PsAuditPanel events={seedData.auditEvents} title="Последние действия" compact />
+          <PsAuditPanel events={seedData.auditEvents as AuditEvent[]} title="Последние действия" compact />
         </div>
       )}
     </div>
