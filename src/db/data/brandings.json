@@ -1,0 +1,18 @@
+[
+  {
+    "id": "brand_001",
+    "palette": {
+      "sage": "#9CAF88",
+      "gold": "#D4AF37",
+      "ivory": "#FFFFF0",
+      "gray": "#6B7280"
+    },
+    "gradientPreset": "sage-to-gold",
+    "density": "comfortable",
+    "stickyHeader": true,
+    "stickyFirstColumn": true,
+    "showBreadcrumbs": true,
+    "tenantDisplayName": "Fintechme",
+    "updatedAt": "2026-02-08T20:58:39.023Z"
+  }
+]

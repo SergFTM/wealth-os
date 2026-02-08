@@ -105,6 +105,54 @@ export function useCollection<T extends BaseRecord>(
   };
 }
 
+/**
+ * Batch-load multiple collections in a single render cycle.
+ * Prevents the re-render storm caused by N separate useCollection calls.
+ *
+ * @example
+ * const { data, loading } = useCollections(['cashForecasts', 'cashPositions', 'liquidityAlerts']);
+ * const forecasts = data.cashForecasts ?? [];
+ */
+export function useCollections<T extends BaseRecord = BaseRecord>(
+  collections: string[]
+): { data: Record<string, T[]>; loading: boolean; error: string | null; refetch: () => void } {
+  const [data, setData] = useState<Record<string, T[]>>({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const fetchingRef = useRef(false);
+  const key = collections.join(',');
+
+  const fetchAll = useCallback(async () => {
+    if (fetchingRef.current) return;
+    fetchingRef.current = true;
+    setLoading(true);
+    setError(null);
+
+    try {
+      const results = await Promise.all(
+        collections.map(c => getCollection<T>(c, {}).then(r => [c, r.items] as const))
+      );
+      const map: Record<string, T[]> = {};
+      for (const [name, items] of results) {
+        map[name] = items;
+      }
+      setData(map);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Failed to load collections');
+    } finally {
+      setLoading(false);
+      fetchingRef.current = false;
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key]);
+
+  useEffect(() => {
+    fetchAll();
+  }, [fetchAll]);
+
+  return { data, loading, error, refetch: fetchAll };
+}
+
 export function useRecord<T extends BaseRecord>(collection: string, id: string | null) {
   const [record, setRecord] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
@@ -232,35 +280,92 @@ const roleHierarchy: Record<string, number> = {
   client: 10,
 };
 
+// Shared role groups for DRY module access definitions
+const ALL_ROLES = ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm', 'advisor', 'client'] as const;
+const INTERNAL_ROLES = ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm'] as const;
+const FINANCE_ROLES = ['admin', 'cio', 'cfo', 'operations'] as const;
+const BACKOFFICE_ROLES = ['admin', 'cfo', 'operations'] as const;
+
 // Module access rules: which roles can access which modules
 const moduleAccess: Record<string, string[]> = {
-  'dashboard-home': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm', 'advisor', 'client'],
-  'net-worth': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm', 'advisor', 'client'],
-  'reconciliation': ['admin', 'cio', 'cfo', 'operations'],
-  'performance': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm', 'advisor', 'client'],
-  'reporting': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm', 'advisor', 'client'],
-  'general-ledger': ['admin', 'cio', 'cfo', 'operations'],
-  'partnerships': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm'],
-  'private-capital': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm'],
+  // Core Wealth (M01–M09)
+  'dashboard-home': [...ALL_ROLES],
+  'net-worth': [...ALL_ROLES],
+  'reconciliation': [...FINANCE_ROLES],
+  'performance': [...ALL_ROLES],
+  'reporting': [...ALL_ROLES],
+  'general-ledger': [...FINANCE_ROLES],
+  'partnerships': [...INTERNAL_ROLES],
+  'private-capital': [...INTERNAL_ROLES],
   'liquidity': ['admin', 'cio', 'cfo', 'operations', 'rm'],
-  'documents': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm', 'advisor', 'client'],
-  'billpay-checks': ['admin', 'cfo', 'operations'],
-  'ar-revenue': ['admin', 'cfo', 'operations'],
-  'fee-billing': ['admin', 'cfo', 'operations'],
-  'workflow': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm'],
+  'documents': [...ALL_ROLES],
+  'billpay-checks': [...BACKOFFICE_ROLES],
+  'ar-revenue': [...BACKOFFICE_ROLES],
+  'fee-billing': [...BACKOFFICE_ROLES],
+  'workflow': [...INTERNAL_ROLES],
   'onboarding': ['admin', 'cio', 'compliance', 'operations', 'rm'],
   'ips': ['admin', 'cio', 'compliance', 'operations', 'rm'],
   'risk': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm'],
   'tax': ['admin', 'cio', 'cfo', 'operations', 'advisor'],
   'trusts': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm', 'advisor'],
-  'fees': ['admin', 'cfo', 'operations'],
+  'fees': [...BACKOFFICE_ROLES],
   'integrations': ['admin', 'cio', 'operations'],
-  'communications': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm', 'advisor', 'client'],
-  'comms': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm', 'advisor', 'client'],
-  'ai': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm', 'advisor', 'client'],
+  'communications': [...ALL_ROLES],
+  'comms': [...ALL_ROLES],
+  'ai': [...ALL_ROLES],
   'security': ['admin'],
+  // Operations (M22–M33)
+  'platform': ['admin', 'operations'],
+  'reports': [...ALL_ROLES],
+  'api': ['admin'],
+  'admin': ['admin'],
+  'planning': ['admin', 'cio', 'cfo', 'operations'],
+  'data-quality': ['admin', 'cio', 'operations'],
+  'committee': ['admin', 'cio', 'compliance', 'operations'],
+  'deals': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm'],
+  'portal': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm'],
+  'mobile': [...ALL_ROLES],
+  'academy': [...INTERNAL_ROLES],
+  'sandbox': ['admin', 'operations'],
+  'consents': ['admin', 'compliance', 'operations', 'rm'],
+  'notifications': [...ALL_ROLES],
+  'cases': [...INTERNAL_ROLES],
+  'exports': [...INTERNAL_ROLES],
+  'ideas': ['admin', 'cio', 'cfo', 'operations', 'rm'],
+  // Liquidity Planning (M39)
+  'liquidity-planning': ['admin', 'cio', 'cfo', 'operations', 'rm'],
+  // Governance (M40)
+  'governance': ['admin', 'cio', 'compliance', 'operations'],
+  // Calendar (M41)
+  'calendar': [...INTERNAL_ROLES],
+  // Deals & Corp Actions (M42)
+  'deals-corp-actions': ['admin', 'cio', 'cfo', 'compliance', 'operations'],
+  // Vendors (M43)
+  'vendors': ['admin', 'cfo', 'compliance', 'operations'],
+  // Policies (M44)
+  'policies': ['admin', 'compliance', 'operations'],
+  // MDM (M46)
+  'mdm': ['admin', 'operations'],
+  // Ownership (M47)
+  'ownership': ['admin', 'cio', 'compliance', 'operations', 'rm'],
+  // Exceptions (M48)
+  'exceptions': ['admin', 'cio', 'operations'],
+  // Philanthropy (M49)
+  'philanthropy': ['admin', 'cio', 'cfo', 'operations', 'rm', 'advisor'],
+  // Credit (M50)
+  'credit': ['admin', 'cio', 'cfo', 'operations', 'rm'],
+  // Data Governance (M51)
+  'data-governance': ['admin', 'cio', 'operations'],
+  'governance-data': ['admin', 'cio', 'operations'],
+  // Packs (M52)
+  'packs': ['admin', 'cio', 'cfo', 'operations', 'rm'],
+  // Relationships (M53)
+  'relationships': ['admin', 'cio', 'cfo', 'operations', 'rm'],
+  // Consent & Privacy (M54)
   'consent': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm', 'advisor', 'client'],
-  'client-portal': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm'],
+  'consent-privacy': ['admin', 'compliance', 'operations'],
+  // Client Portal (M55)
+  'client-portal': [...INTERNAL_ROLES],
 };
 
 // Actions allowed per role for each module type
@@ -291,7 +396,7 @@ const actionPermissions: Record<string, Record<string, RbacAction[]>> = {
   },
 };
 
-// Modules hidden in client-safe mode
+// Modules hidden in client-safe mode (backoffice / internal-only)
 const clientSafeHiddenModules = [
   'reconciliation',
   'general-ledger',
@@ -301,6 +406,19 @@ const clientSafeHiddenModules = [
   'fees',
   'integrations',
   'security',
+  'admin',
+  'api',
+  'platform',
+  'sandbox',
+  'data-quality',
+  'mdm',
+  'data-governance',
+  'governance-data',
+  'exceptions',
+  'policies',
+  'deals-corp-actions',
+  'client-portal',
+  'consent-privacy',
 ];
 
 /**
