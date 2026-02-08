@@ -1,0 +1,61 @@
+[
+  {
+    "id": "own-view-001",
+    "clientId": "client-001",
+    "scopeHouseholdNodeId": "own-node-001",
+    "publishedAt": "2024-11-01T10:00:00Z",
+    "publishedByUserId": "user-001",
+    "maskRulesJson": {
+      "maskAccountNumbers": true,
+      "maskAssetValues": true,
+      "excludeNodeTypes": [],
+      "simplifyPercentages": false,
+      "hideInternalNotes": true
+    },
+    "snapshotJson": {
+      "nodes": [],
+      "links": []
+    },
+    "clientSafe": true
+  },
+  {
+    "id": "own-view-002",
+    "clientId": "client-002",
+    "scopeHouseholdNodeId": "own-node-026",
+    "publishedAt": "2024-11-15T14:00:00Z",
+    "publishedByUserId": "user-003",
+    "maskRulesJson": {
+      "maskAccountNumbers": true,
+      "maskAssetValues": false,
+      "excludeNodeTypes": [
+        "account"
+      ],
+      "simplifyPercentages": true,
+      "hideInternalNotes": true
+    },
+    "snapshotJson": {
+      "nodes": [],
+      "links": []
+    },
+    "clientSafe": true
+  },
+  {
+    "id": "own-view-003",
+    "clientId": "client-003",
+    "scopeHouseholdNodeId": "own-node-036",
+    "publishedAt": "2024-12-01T09:00:00Z",
+    "publishedByUserId": "user-004",
+    "maskRulesJson": {
+      "maskAccountNumbers": true,
+      "maskAssetValues": true,
+      "excludeNodeTypes": [],
+      "simplifyPercentages": false,
+      "hideInternalNotes": true
+    },
+    "snapshotJson": {
+      "nodes": [],
+      "links": []
+    },
+    "clientSafe": true
+  }
+]

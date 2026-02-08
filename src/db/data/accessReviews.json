@@ -1,8 +1,2458 @@
 [
-  {"id": "rev-001", "clientId": "global", "name": "Q4 2024 Admin Access Review", "description": "Quarterly review of administrative and privileged access", "scopeType": "role", "scopeId": "role-001", "periodStart": "2024-10-01", "periodEnd": "2024-12-31", "dueAt": "2025-01-15", "status": "closed", "completionPct": 100, "reviewerIds": ["usr-001", "usr-005"], "createdAt": "2024-12-15T10:00:00Z", "closedAt": "2025-01-14T16:00:00Z"},
-  {"id": "rev-002", "clientId": "global", "name": "Q1 2025 Client Access Review", "description": "Review of all client portal users", "scopeType": "role", "scopeId": "role-008", "periodStart": "2025-01-01", "periodEnd": "2025-03-31", "dueAt": "2025-02-28", "status": "active", "completionPct": 35, "reviewerIds": ["usr-006", "usr-005"], "createdAt": "2025-01-05T10:00:00Z"},
-  {"id": "rev-003", "clientId": "global", "name": "Investment Module Access Review", "description": "Review access to investment and portfolio modules", "scopeType": "module", "scopeId": "portfolio", "periodStart": "2025-01-01", "periodEnd": "2025-01-31", "dueAt": "2025-02-15", "status": "active", "completionPct": 60, "reviewerIds": ["usr-002", "usr-005"], "createdAt": "2025-01-10T10:00:00Z"},
-  {"id": "rev-004", "clientId": "global", "name": "Operations Team Review", "description": "Annual review of operations team access", "scopeType": "role", "scopeId": "role-004", "periodStart": "2024-01-01", "periodEnd": "2024-12-31", "dueAt": "2025-01-31", "status": "draft", "completionPct": 0, "reviewerIds": ["usr-004", "usr-005"], "createdAt": "2025-01-20T10:00:00Z"},
-  {"id": "rev-005", "clientId": "global", "name": "Security Module Access Review", "description": "Review of security and admin access", "scopeType": "module", "scopeId": "security", "periodStart": "2025-01-01", "periodEnd": "2025-03-31", "dueAt": "2025-03-15", "status": "draft", "completionPct": 0, "reviewerIds": ["usr-001", "usr-016"], "createdAt": "2025-01-25T10:00:00Z"},
-  {"id": "rev-006", "clientId": "global", "name": "Financial Access Review", "description": "Review CFO and finance team access", "scopeType": "role", "scopeId": "role-003", "periodStart": "2024-07-01", "periodEnd": "2024-12-31", "dueAt": "2025-01-10", "status": "closed", "completionPct": 100, "reviewerIds": ["usr-001", "usr-005"], "createdAt": "2024-12-20T10:00:00Z", "closedAt": "2025-01-09T14:00:00Z"}
+  {
+    "id": "ar-001",
+    "clientId": "client-1",
+    "name": "Q4 2024 Access Review",
+    "scopeHouseholdId": null,
+    "statusKey": "open",
+    "dueAt": "2025-03-20",
+    "startedAt": "2025-05-05T11:58:00Z",
+    "closedAt": null,
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "user-5",
+          "granteeLabel": "Margaret Harrington (COO)",
+          "granteeType": "user",
+          "permissions": [
+            "module:billing"
+          ],
+          "consentIds": [
+            "co-045",
+            "co-152",
+            "co-063"
+          ]
+        },
+        {
+          "granteeId": "advisor-13",
+          "granteeLabel": "Thomas Keller (BNP Paribas)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:documents",
+            "module:billing"
+          ],
+          "consentIds": [
+            "co-130"
+          ]
+        },
+        {
+          "granteeId": "advisor-5",
+          "granteeLabel": "David Tanaka (EY)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:transactions",
+            "module:compliance",
+            "module:reporting",
+            "module:risk"
+          ],
+          "consentIds": [
+            "co-139"
+          ]
+        },
+        {
+          "granteeId": "advisor-16",
+          "granteeLabel": "Isabella Romano (Lombard Odier)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:reporting"
+          ],
+          "consentIds": [
+            "co-179",
+            "co-079",
+            "co-047"
+          ]
+        },
+        {
+          "granteeId": "user-3",
+          "granteeLabel": "Jessica Palmer (CFO)",
+          "granteeType": "user",
+          "permissions": [
+            "module:portfolios",
+            "module:risk",
+            "module:compliance",
+            "module:entities"
+          ],
+          "consentIds": [
+            "co-109"
+          ]
+        },
+        {
+          "granteeId": "vendor-4",
+          "granteeLabel": "FIS Global",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:risk",
+            "module:trusts",
+            "module:portfolios",
+            "module:tax"
+          ],
+          "consentIds": [
+            "co-160"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "user-5",
+        "action": "confirm",
+        "notes": "Revoked: vendor contract expired"
+      },
+      {
+        "granteeId": "advisor-13",
+        "action": "restrict",
+        "notes": "Confirmed: active advisory relationship"
+      },
+      {
+        "granteeId": "advisor-5",
+        "action": "revoke",
+        "notes": "Confirmed with reduced scope"
+      },
+      {
+        "granteeId": "advisor-16",
+        "action": "confirm",
+        "notes": null
+      },
+      {
+        "granteeId": "user-3",
+        "action": "revoke",
+        "notes": "Access confirmed - still required for ongoing engagement"
+      },
+      {
+        "granteeId": "vendor-4",
+        "action": "restrict",
+        "notes": "Revoked: engagement ended Q4 2025"
+      }
+    ],
+    "createdAt": "2025-05-05T11:58:00Z"
+  },
+  {
+    "id": "ar-002",
+    "clientId": "client-2",
+    "name": "Q1 2025 Access Review",
+    "scopeHouseholdId": "entity-1",
+    "statusKey": "closed",
+    "dueAt": "2025-12-15",
+    "startedAt": "2024-12-15T08:58:00Z",
+    "closedAt": "2025-09-09T14:17:00Z",
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "advisor-13",
+          "granteeLabel": "Thomas Keller (BNP Paribas)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:portfolios",
+            "module:net-worth"
+          ],
+          "consentIds": [
+            "co-124"
+          ]
+        },
+        {
+          "granteeId": "user-16",
+          "granteeLabel": "Jonathan Pemberton (Junior Analyst)",
+          "granteeType": "user",
+          "permissions": [
+            "module:documents"
+          ],
+          "consentIds": [
+            "co-074"
+          ]
+        },
+        {
+          "granteeId": "user-14",
+          "granteeLabel": "Martin Waverly (Analyst)",
+          "granteeType": "user",
+          "permissions": [
+            "module:reporting",
+            "module:portfolios"
+          ],
+          "consentIds": [
+            "co-051",
+            "co-093"
+          ]
+        },
+        {
+          "granteeId": "vendor-8",
+          "granteeLabel": "BNY Mellon Pershing",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:compliance",
+            "module:documents"
+          ],
+          "consentIds": [
+            "co-075",
+            "co-087"
+          ]
+        },
+        {
+          "granteeId": "vendor-6",
+          "granteeLabel": "Northern Trust Asset Servicing",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:documents",
+            "module:risk"
+          ],
+          "consentIds": [
+            "co-081",
+            "co-073"
+          ]
+        },
+        {
+          "granteeId": "advisor-8",
+          "granteeLabel": "Olivia Pearson (Credit Suisse)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:compliance",
+            "module:cash-flow",
+            "module:tax"
+          ],
+          "consentIds": [
+            "co-064",
+            "co-013"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "advisor-13",
+        "action": "revoke",
+        "notes": "Restricted to view-only per new policy"
+      },
+      {
+        "granteeId": "user-16",
+        "action": "confirm",
+        "notes": "Restricted: removed download permissions"
+      },
+      {
+        "granteeId": "user-14",
+        "action": "confirm",
+        "notes": "Restricted to view-only per new policy"
+      },
+      {
+        "granteeId": "vendor-8",
+        "action": "confirm",
+        "notes": "Restricted to view-only per new policy"
+      },
+      {
+        "granteeId": "vendor-6",
+        "action": "restrict",
+        "notes": "Confirmed: required for annual audit cycle"
+      },
+      {
+        "granteeId": "advisor-8",
+        "action": "confirm",
+        "notes": "Access confirmed - still required for ongoing engagement"
+      }
+    ],
+    "createdAt": "2024-12-15T08:58:00Z"
+  },
+  {
+    "id": "ar-003",
+    "clientId": "client-3",
+    "name": "Q2 2025 Access Review",
+    "scopeHouseholdId": null,
+    "statusKey": "closed",
+    "dueAt": "2025-04-17",
+    "startedAt": "2024-09-10T14:44:00Z",
+    "closedAt": "2025-09-04T13:32:00Z",
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "vendor-8",
+          "granteeLabel": "BNY Mellon Pershing",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:documents"
+          ],
+          "consentIds": [
+            "co-010"
+          ]
+        },
+        {
+          "granteeId": "user-17",
+          "granteeLabel": "Diane Cavendish (Client Liaison)",
+          "granteeType": "user",
+          "permissions": [
+            "module:compliance"
+          ],
+          "consentIds": [
+            "co-122"
+          ]
+        },
+        {
+          "granteeId": "vendor-7",
+          "granteeLabel": "State Street Alpha",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:tax"
+          ],
+          "consentIds": [
+            "co-120",
+            "co-127",
+            "co-012"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "vendor-8",
+        "action": "confirm",
+        "notes": "Restricted to view-only per new policy"
+      },
+      {
+        "granteeId": "user-17",
+        "action": "confirm",
+        "notes": null
+      },
+      {
+        "granteeId": "vendor-7",
+        "action": "confirm",
+        "notes": "Restricted to view-only per new policy"
+      }
+    ],
+    "createdAt": "2024-09-10T14:44:00Z"
+  },
+  {
+    "id": "ar-004",
+    "clientId": "client-4",
+    "name": "Q3 2025 Access Review",
+    "scopeHouseholdId": null,
+    "statusKey": "open",
+    "dueAt": "2025-07-21",
+    "startedAt": "2025-06-16T08:13:00Z",
+    "closedAt": null,
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "user-5",
+          "granteeLabel": "Margaret Harrington (COO)",
+          "granteeType": "user",
+          "permissions": [
+            "module:transactions",
+            "module:documents",
+            "module:billing",
+            "module:tax"
+          ],
+          "consentIds": [
+            "co-153"
+          ]
+        },
+        {
+          "granteeId": "vendor-1",
+          "granteeLabel": "Addepar Platform Services",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:documents",
+            "module:entities",
+            "module:risk"
+          ],
+          "consentIds": [
+            "co-106",
+            "co-061"
+          ]
+        },
+        {
+          "granteeId": "vendor-10",
+          "granteeLabel": "Bloomberg Terminal Services",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:risk",
+            "module:compliance",
+            "module:portfolios",
+            "module:trusts"
+          ],
+          "consentIds": [
+            "co-047",
+            "co-131",
+            "co-059"
+          ]
+        },
+        {
+          "granteeId": "advisor-4",
+          "granteeLabel": "Emma Blackwell (KPMG)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:trusts"
+          ],
+          "consentIds": [
+            "co-177",
+            "co-159"
+          ]
+        },
+        {
+          "granteeId": "user-12",
+          "granteeLabel": "Stephen Beaumont (IT Director)",
+          "granteeType": "user",
+          "permissions": [
+            "module:portfolios",
+            "module:trusts",
+            "module:billing"
+          ],
+          "consentIds": [
+            "co-136",
+            "co-022"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "user-5",
+        "action": "restrict",
+        "notes": "Revoked: engagement ended Q4 2025"
+      },
+      {
+        "granteeId": "vendor-1",
+        "action": "confirm",
+        "notes": "Confirmed with reduced scope"
+      },
+      {
+        "granteeId": "vendor-10",
+        "action": "confirm",
+        "notes": "Confirmed: active advisory relationship"
+      },
+      {
+        "granteeId": "advisor-4",
+        "action": "confirm",
+        "notes": "Access confirmed - still required for ongoing engagement"
+      },
+      {
+        "granteeId": "user-12",
+        "action": "revoke",
+        "notes": "Confirmed: required for annual audit cycle"
+      }
+    ],
+    "createdAt": "2025-06-16T08:13:00Z"
+  },
+  {
+    "id": "ar-005",
+    "clientId": "client-5",
+    "name": "Q4 2025 Access Review",
+    "scopeHouseholdId": "entity-15",
+    "statusKey": "open",
+    "dueAt": "2026-05-19",
+    "startedAt": "2025-09-16T14:48:00Z",
+    "closedAt": null,
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "vendor-12",
+          "granteeLabel": "DocuSign CLM",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:reporting",
+            "module:trusts",
+            "module:documents",
+            "module:risk"
+          ],
+          "consentIds": [
+            "co-045",
+            "co-009"
+          ]
+        },
+        {
+          "granteeId": "advisor-29",
+          "granteeLabel": "Patrick Sullivan (RSM)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:reporting",
+            "module:documents",
+            "module:portfolios",
+            "module:transactions"
+          ],
+          "consentIds": [
+            "co-046"
+          ]
+        },
+        {
+          "granteeId": "advisor-4",
+          "granteeLabel": "Emma Blackwell (KPMG)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:net-worth"
+          ],
+          "consentIds": [
+            "co-042"
+          ]
+        },
+        {
+          "granteeId": "user-11",
+          "granteeLabel": "Caroline Devonshire (Risk Manager)",
+          "granteeType": "user",
+          "permissions": [
+            "module:cash-flow"
+          ],
+          "consentIds": [
+            "co-025",
+            "co-163",
+            "co-048"
+          ]
+        },
+        {
+          "granteeId": "user-8",
+          "granteeLabel": "Philip Montague (Tax Director)",
+          "granteeType": "user",
+          "permissions": [
+            "module:portfolios",
+            "module:net-worth",
+            "module:billing",
+            "module:reporting"
+          ],
+          "consentIds": [
+            "co-031",
+            "co-033"
+          ]
+        },
+        {
+          "granteeId": "user-15",
+          "granteeLabel": "Rebecca Sterling (Reporting Lead)",
+          "granteeType": "user",
+          "permissions": [
+            "module:billing",
+            "module:reporting",
+            "module:entities"
+          ],
+          "consentIds": [
+            "co-033"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "vendor-12",
+        "action": "confirm",
+        "notes": "Revoked: engagement ended Q4 2025"
+      },
+      {
+        "granteeId": "advisor-29",
+        "action": "restrict",
+        "notes": null
+      },
+      {
+        "granteeId": "advisor-4",
+        "action": "revoke",
+        "notes": null
+      },
+      {
+        "granteeId": "user-11",
+        "action": "restrict",
+        "notes": null
+      },
+      {
+        "granteeId": "user-8",
+        "action": "restrict",
+        "notes": null
+      },
+      {
+        "granteeId": "user-15",
+        "action": "revoke",
+        "notes": "Confirmed: active advisory relationship"
+      }
+    ],
+    "createdAt": "2025-09-16T14:48:00Z"
+  },
+  {
+    "id": "ar-006",
+    "clientId": "client-1",
+    "name": "Q1 2026 Access Review",
+    "scopeHouseholdId": "entity-13",
+    "statusKey": "closed",
+    "dueAt": "2025-09-06",
+    "startedAt": "2025-04-04T16:32:00Z",
+    "closedAt": "2025-11-19T14:56:00Z",
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "advisor-8",
+          "granteeLabel": "Olivia Pearson (Credit Suisse)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:risk",
+            "module:trusts",
+            "module:net-worth"
+          ],
+          "consentIds": [
+            "co-166"
+          ]
+        },
+        {
+          "granteeId": "advisor-27",
+          "granteeLabel": "Christopher Wells (Grant Thornton)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:compliance",
+            "module:cash-flow",
+            "module:transactions"
+          ],
+          "consentIds": [
+            "co-062",
+            "co-111"
+          ]
+        },
+        {
+          "granteeId": "advisor-13",
+          "granteeLabel": "Thomas Keller (BNP Paribas)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:entities"
+          ],
+          "consentIds": [
+            "co-045",
+            "co-158"
+          ]
+        },
+        {
+          "granteeId": "user-17",
+          "granteeLabel": "Diane Cavendish (Client Liaison)",
+          "granteeType": "user",
+          "permissions": [
+            "module:documents"
+          ],
+          "consentIds": [
+            "co-002",
+            "co-091",
+            "co-004"
+          ]
+        },
+        {
+          "granteeId": "advisor-7",
+          "granteeLabel": "James Mortimer (JP Morgan)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:billing",
+            "module:entities"
+          ],
+          "consentIds": [
+            "co-047"
+          ]
+        },
+        {
+          "granteeId": "user-6",
+          "granteeLabel": "Edward Lancaster (Controller)",
+          "granteeType": "user",
+          "permissions": [
+            "module:portfolios",
+            "module:risk",
+            "module:trusts"
+          ],
+          "consentIds": [
+            "co-009",
+            "co-157",
+            "co-034"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "advisor-8",
+        "action": "confirm",
+        "notes": "Confirmed with reduced scope"
+      },
+      {
+        "granteeId": "advisor-27",
+        "action": "confirm",
+        "notes": "Restricted: removed download permissions"
+      },
+      {
+        "granteeId": "advisor-13",
+        "action": "revoke",
+        "notes": "Revoked: engagement ended Q4 2025"
+      },
+      {
+        "granteeId": "user-17",
+        "action": "restrict",
+        "notes": "Revoked: engagement ended Q4 2025"
+      },
+      {
+        "granteeId": "advisor-7",
+        "action": "confirm",
+        "notes": "Revoked: vendor contract expired"
+      },
+      {
+        "granteeId": "user-6",
+        "action": "confirm",
+        "notes": "Restricted to view-only per new policy"
+      }
+    ],
+    "createdAt": "2025-04-04T16:32:00Z"
+  },
+  {
+    "id": "ar-007",
+    "clientId": "client-2",
+    "name": "Annual External Advisor Review 2024",
+    "scopeHouseholdId": "entity-14",
+    "statusKey": "closed",
+    "dueAt": "2026-04-06",
+    "startedAt": "2024-08-18T11:59:00Z",
+    "closedAt": "2025-11-23T13:17:00Z",
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "advisor-4",
+          "granteeLabel": "Emma Blackwell (KPMG)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:tax",
+            "module:entities",
+            "module:net-worth"
+          ],
+          "consentIds": [
+            "co-024",
+            "co-100"
+          ]
+        },
+        {
+          "granteeId": "vendor-14",
+          "granteeLabel": "Clearwater Analytics",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:reporting",
+            "module:risk",
+            "module:trusts",
+            "module:tax"
+          ],
+          "consentIds": [
+            "co-074",
+            "co-139",
+            "co-115"
+          ]
+        },
+        {
+          "granteeId": "vendor-15",
+          "granteeLabel": "Canoe Intelligence",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:portfolios"
+          ],
+          "consentIds": [
+            "co-172"
+          ]
+        },
+        {
+          "granteeId": "advisor-17",
+          "granteeLabel": "Henrik Johansson (SEB Private Banking)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:cash-flow",
+            "module:reporting",
+            "module:portfolios"
+          ],
+          "consentIds": [
+            "co-102",
+            "co-077",
+            "co-017"
+          ]
+        },
+        {
+          "granteeId": "vendor-1",
+          "granteeLabel": "Addepar Platform Services",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:transactions",
+            "module:cash-flow",
+            "module:documents",
+            "module:trusts"
+          ],
+          "consentIds": [
+            "co-032",
+            "co-014"
+          ]
+        },
+        {
+          "granteeId": "advisor-2",
+          "granteeLabel": "Sarah Chen (Deloitte)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:documents"
+          ],
+          "consentIds": [
+            "co-049",
+            "co-046",
+            "co-154"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "advisor-4",
+        "action": "restrict",
+        "notes": "Revoked: engagement ended Q4 2025"
+      },
+      {
+        "granteeId": "vendor-14",
+        "action": "restrict",
+        "notes": "Revoked: engagement ended Q4 2025"
+      },
+      {
+        "granteeId": "vendor-15",
+        "action": "confirm",
+        "notes": "Restricted to view-only per new policy"
+      },
+      {
+        "granteeId": "advisor-17",
+        "action": "confirm",
+        "notes": "Confirmed: active advisory relationship"
+      },
+      {
+        "granteeId": "vendor-1",
+        "action": "confirm",
+        "notes": "Restricted: removed download permissions"
+      },
+      {
+        "granteeId": "advisor-2",
+        "action": "confirm",
+        "notes": null
+      }
+    ],
+    "createdAt": "2024-08-18T11:59:00Z"
+  },
+  {
+    "id": "ar-008",
+    "clientId": "client-3",
+    "name": "Annual External Advisor Review 2025",
+    "scopeHouseholdId": "entity-15",
+    "statusKey": "closed",
+    "dueAt": "2025-03-18",
+    "startedAt": "2025-07-21T10:38:00Z",
+    "closedAt": "2025-12-04T15:01:00Z",
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "user-20",
+          "granteeLabel": "Leonard Alpine (Operations Analyst)",
+          "granteeType": "user",
+          "permissions": [
+            "module:compliance",
+            "module:documents"
+          ],
+          "consentIds": [
+            "co-112",
+            "co-061"
+          ]
+        },
+        {
+          "granteeId": "advisor-7",
+          "granteeLabel": "James Mortimer (JP Morgan)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:documents"
+          ],
+          "consentIds": [
+            "co-156",
+            "co-046",
+            "co-121"
+          ]
+        },
+        {
+          "granteeId": "advisor-9",
+          "granteeLabel": "Robert Ashworth (Morgan Stanley)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:portfolios"
+          ],
+          "consentIds": [
+            "co-039",
+            "co-083"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "user-20",
+        "action": "restrict",
+        "notes": null
+      },
+      {
+        "granteeId": "advisor-7",
+        "action": "restrict",
+        "notes": "Confirmed: required for annual audit cycle"
+      },
+      {
+        "granteeId": "advisor-9",
+        "action": "confirm",
+        "notes": null
+      }
+    ],
+    "createdAt": "2025-07-21T10:38:00Z"
+  },
+  {
+    "id": "ar-009",
+    "clientId": "client-4",
+    "name": "Annual Vendor Access Review 2024",
+    "scopeHouseholdId": "entity-11",
+    "statusKey": "open",
+    "dueAt": "2025-12-18",
+    "startedAt": "2024-12-20T11:21:00Z",
+    "closedAt": null,
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "vendor-5",
+          "granteeLabel": "Broadridge Financial",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:compliance",
+            "module:billing"
+          ],
+          "consentIds": [
+            "co-160",
+            "co-100",
+            "co-097"
+          ]
+        },
+        {
+          "granteeId": "advisor-4",
+          "granteeLabel": "Emma Blackwell (KPMG)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:portfolios",
+            "module:compliance",
+            "module:risk"
+          ],
+          "consentIds": [
+            "co-092",
+            "co-031"
+          ]
+        },
+        {
+          "granteeId": "advisor-13",
+          "granteeLabel": "Thomas Keller (BNP Paribas)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:portfolios",
+            "module:net-worth"
+          ],
+          "consentIds": [
+            "co-097",
+            "co-119"
+          ]
+        },
+        {
+          "granteeId": "vendor-14",
+          "granteeLabel": "Clearwater Analytics",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:transactions",
+            "module:cash-flow"
+          ],
+          "consentIds": [
+            "co-119",
+            "co-158",
+            "co-168"
+          ]
+        },
+        {
+          "granteeId": "vendor-2",
+          "granteeLabel": "Black Diamond (SS&C)",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:transactions"
+          ],
+          "consentIds": [
+            "co-034",
+            "co-158",
+            "co-041"
+          ]
+        },
+        {
+          "granteeId": "vendor-8",
+          "granteeLabel": "BNY Mellon Pershing",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:risk",
+            "module:reporting",
+            "module:documents",
+            "module:trusts"
+          ],
+          "consentIds": [
+            "co-026",
+            "co-076",
+            "co-004"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "vendor-5",
+        "action": "confirm",
+        "notes": "Revoked: vendor contract expired"
+      },
+      {
+        "granteeId": "advisor-4",
+        "action": "restrict",
+        "notes": "Restricted to view-only per new policy"
+      },
+      {
+        "granteeId": "advisor-13",
+        "action": "confirm",
+        "notes": "Access confirmed - still required for ongoing engagement"
+      },
+      {
+        "granteeId": "vendor-14",
+        "action": "restrict",
+        "notes": "Confirmed with reduced scope"
+      },
+      {
+        "granteeId": "vendor-2",
+        "action": "revoke",
+        "notes": "Confirmed with reduced scope"
+      },
+      {
+        "granteeId": "vendor-8",
+        "action": "revoke",
+        "notes": "Restricted to view-only per new policy"
+      }
+    ],
+    "createdAt": "2024-12-20T11:21:00Z"
+  },
+  {
+    "id": "ar-010",
+    "clientId": "client-5",
+    "name": "Annual Vendor Access Review 2025",
+    "scopeHouseholdId": "entity-5",
+    "statusKey": "open",
+    "dueAt": "2025-12-29",
+    "startedAt": "2025-03-31T09:07:00Z",
+    "closedAt": null,
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "vendor-13",
+          "granteeLabel": "Iron Mountain Digital",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:reporting",
+            "module:risk",
+            "module:net-worth",
+            "module:transactions"
+          ],
+          "consentIds": [
+            "co-136",
+            "co-072"
+          ]
+        },
+        {
+          "granteeId": "vendor-1",
+          "granteeLabel": "Addepar Platform Services",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:net-worth",
+            "module:tax",
+            "module:risk"
+          ],
+          "consentIds": [
+            "co-129",
+            "co-046",
+            "co-100"
+          ]
+        },
+        {
+          "granteeId": "advisor-5",
+          "granteeLabel": "David Tanaka (EY)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:billing",
+            "module:portfolios"
+          ],
+          "consentIds": [
+            "co-060",
+            "co-091"
+          ]
+        },
+        {
+          "granteeId": "user-16",
+          "granteeLabel": "Jonathan Pemberton (Junior Analyst)",
+          "granteeType": "user",
+          "permissions": [
+            "module:cash-flow",
+            "module:documents",
+            "module:trusts",
+            "module:compliance"
+          ],
+          "consentIds": [
+            "co-091",
+            "co-139"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "vendor-13",
+        "action": "confirm",
+        "notes": "Revoked: vendor contract expired"
+      },
+      {
+        "granteeId": "vendor-1",
+        "action": "confirm",
+        "notes": null
+      },
+      {
+        "granteeId": "advisor-5",
+        "action": "confirm",
+        "notes": "Restricted to view-only per new policy"
+      },
+      {
+        "granteeId": "user-16",
+        "action": "confirm",
+        "notes": "Confirmed: required for annual audit cycle"
+      }
+    ],
+    "createdAt": "2025-03-31T09:07:00Z"
+  },
+  {
+    "id": "ar-011",
+    "clientId": "client-1",
+    "name": "Semi-Annual Privileged Access Review H1-2025",
+    "scopeHouseholdId": "entity-1",
+    "statusKey": "open",
+    "dueAt": "2026-06-13",
+    "startedAt": "2024-06-22T13:39:00Z",
+    "closedAt": null,
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "user-19",
+          "granteeLabel": "Victoria Rothschild (Investment Analyst)",
+          "granteeType": "user",
+          "permissions": [
+            "module:compliance",
+            "module:cash-flow"
+          ],
+          "consentIds": [
+            "co-130",
+            "co-018",
+            "co-083"
+          ]
+        },
+        {
+          "granteeId": "user-10",
+          "granteeLabel": "Andrew Fairfax (Operations Manager)",
+          "granteeType": "user",
+          "permissions": [
+            "module:transactions",
+            "module:billing",
+            "module:risk",
+            "module:tax"
+          ],
+          "consentIds": [
+            "co-026",
+            "co-046",
+            "co-127"
+          ]
+        },
+        {
+          "granteeId": "user-3",
+          "granteeLabel": "Jessica Palmer (CFO)",
+          "granteeType": "user",
+          "permissions": [
+            "module:entities",
+            "module:portfolios"
+          ],
+          "consentIds": [
+            "co-114",
+            "co-022"
+          ]
+        },
+        {
+          "granteeId": "user-1",
+          "granteeLabel": "Anna Whitfield (Family Principal)",
+          "granteeType": "user",
+          "permissions": [
+            "module:risk"
+          ],
+          "consentIds": [
+            "co-027",
+            "co-078"
+          ]
+        },
+        {
+          "granteeId": "user-15",
+          "granteeLabel": "Rebecca Sterling (Reporting Lead)",
+          "granteeType": "user",
+          "permissions": [
+            "module:portfolios",
+            "module:transactions"
+          ],
+          "consentIds": [
+            "co-023",
+            "co-072",
+            "co-062"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "user-19",
+        "action": "confirm",
+        "notes": "Access confirmed - still required for ongoing engagement"
+      },
+      {
+        "granteeId": "user-10",
+        "action": "revoke",
+        "notes": "Restricted: removed download permissions"
+      },
+      {
+        "granteeId": "user-3",
+        "action": "restrict",
+        "notes": "Revoked: engagement ended Q4 2025"
+      },
+      {
+        "granteeId": "user-1",
+        "action": "confirm",
+        "notes": "Revoked: vendor contract expired"
+      },
+      {
+        "granteeId": "user-15",
+        "action": "restrict",
+        "notes": "Restricted to view-only per new policy"
+      }
+    ],
+    "createdAt": "2024-06-22T13:39:00Z"
+  },
+  {
+    "id": "ar-012",
+    "clientId": "client-2",
+    "name": "Semi-Annual Privileged Access Review H2-2025",
+    "scopeHouseholdId": null,
+    "statusKey": "closed",
+    "dueAt": "2025-03-11",
+    "startedAt": "2025-10-31T14:10:00Z",
+    "closedAt": "2026-01-02T15:33:00Z",
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "vendor-7",
+          "granteeLabel": "State Street Alpha",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:risk",
+            "module:tax"
+          ],
+          "consentIds": [
+            "co-113",
+            "co-051"
+          ]
+        },
+        {
+          "granteeId": "user-15",
+          "granteeLabel": "Rebecca Sterling (Reporting Lead)",
+          "granteeType": "user",
+          "permissions": [
+            "module:portfolios",
+            "module:cash-flow",
+            "module:net-worth"
+          ],
+          "consentIds": [
+            "co-008",
+            "co-166"
+          ]
+        },
+        {
+          "granteeId": "advisor-15",
+          "granteeLabel": "William Drake (Linklaters)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:compliance",
+            "module:risk",
+            "module:tax",
+            "module:documents"
+          ],
+          "consentIds": [
+            "co-053",
+            "co-021",
+            "co-165"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "vendor-7",
+        "action": "confirm",
+        "notes": "Confirmed: required for annual audit cycle"
+      },
+      {
+        "granteeId": "user-15",
+        "action": "confirm",
+        "notes": "Restricted: removed download permissions"
+      },
+      {
+        "granteeId": "advisor-15",
+        "action": "revoke",
+        "notes": "Confirmed with reduced scope"
+      }
+    ],
+    "createdAt": "2025-10-31T14:10:00Z"
+  },
+  {
+    "id": "ar-013",
+    "clientId": "client-3",
+    "name": "Post-Merger Integration Access Review",
+    "scopeHouseholdId": null,
+    "statusKey": "open",
+    "dueAt": "2025-04-27",
+    "startedAt": "2025-02-06T16:12:00Z",
+    "closedAt": null,
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "user-11",
+          "granteeLabel": "Caroline Devonshire (Risk Manager)",
+          "granteeType": "user",
+          "permissions": [
+            "module:reporting",
+            "module:tax"
+          ],
+          "consentIds": [
+            "co-120",
+            "co-113",
+            "co-105"
+          ]
+        },
+        {
+          "granteeId": "advisor-25",
+          "granteeLabel": "Nicholas Pemberton (Freshfields)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:net-worth",
+            "module:transactions"
+          ],
+          "consentIds": [
+            "co-151",
+            "co-094",
+            "co-118"
+          ]
+        },
+        {
+          "granteeId": "vendor-1",
+          "granteeLabel": "Addepar Platform Services",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:documents",
+            "module:reporting"
+          ],
+          "consentIds": [
+            "co-115"
+          ]
+        },
+        {
+          "granteeId": "advisor-20",
+          "granteeLabel": "Margaret Chen (Withers LLP)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:trusts",
+            "module:portfolios",
+            "module:risk"
+          ],
+          "consentIds": [
+            "co-052",
+            "co-009",
+            "co-026"
+          ]
+        },
+        {
+          "granteeId": "user-3",
+          "granteeLabel": "Jessica Palmer (CFO)",
+          "granteeType": "user",
+          "permissions": [
+            "module:portfolios"
+          ],
+          "consentIds": [
+            "co-053"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "user-11",
+        "action": "confirm",
+        "notes": "Access confirmed - still required for ongoing engagement"
+      },
+      {
+        "granteeId": "advisor-25",
+        "action": "confirm",
+        "notes": "Confirmed with reduced scope"
+      },
+      {
+        "granteeId": "vendor-1",
+        "action": "confirm",
+        "notes": "Confirmed with reduced scope"
+      },
+      {
+        "granteeId": "advisor-20",
+        "action": "confirm",
+        "notes": "Restricted: removed download permissions"
+      },
+      {
+        "granteeId": "user-3",
+        "action": "confirm",
+        "notes": "Restricted to view-only per new policy"
+      }
+    ],
+    "createdAt": "2025-02-06T16:12:00Z"
+  },
+  {
+    "id": "ar-014",
+    "clientId": "client-4",
+    "name": "New Client Onboarding Access Validation",
+    "scopeHouseholdId": "entity-1",
+    "statusKey": "closed",
+    "dueAt": "2025-07-13",
+    "startedAt": "2025-05-19T14:53:00Z",
+    "closedAt": "2026-01-22T08:24:00Z",
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "vendor-12",
+          "granteeLabel": "DocuSign CLM",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:trusts",
+            "module:cash-flow"
+          ],
+          "consentIds": [
+            "co-086",
+            "co-067"
+          ]
+        },
+        {
+          "granteeId": "user-15",
+          "granteeLabel": "Rebecca Sterling (Reporting Lead)",
+          "granteeType": "user",
+          "permissions": [
+            "module:transactions"
+          ],
+          "consentIds": [
+            "co-066"
+          ]
+        },
+        {
+          "granteeId": "advisor-22",
+          "granteeLabel": "Amelia Worthington (HSBC Private Bank)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:net-worth"
+          ],
+          "consentIds": [
+            "co-151"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "vendor-12",
+        "action": "confirm",
+        "notes": "Restricted to view-only per new policy"
+      },
+      {
+        "granteeId": "user-15",
+        "action": "revoke",
+        "notes": "Revoked: engagement ended Q4 2025"
+      },
+      {
+        "granteeId": "advisor-22",
+        "action": "revoke",
+        "notes": "Revoked: engagement ended Q4 2025"
+      }
+    ],
+    "createdAt": "2025-05-19T14:53:00Z"
+  },
+  {
+    "id": "ar-015",
+    "clientId": "client-5",
+    "name": "Regulatory Compliance Access Audit Q2-2025",
+    "scopeHouseholdId": "entity-6",
+    "statusKey": "open",
+    "dueAt": "2025-01-09",
+    "startedAt": "2025-04-07T10:12:00Z",
+    "closedAt": null,
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "vendor-12",
+          "granteeLabel": "DocuSign CLM",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:billing",
+            "module:cash-flow",
+            "module:documents"
+          ],
+          "consentIds": [
+            "co-072"
+          ]
+        },
+        {
+          "granteeId": "user-15",
+          "granteeLabel": "Rebecca Sterling (Reporting Lead)",
+          "granteeType": "user",
+          "permissions": [
+            "module:compliance",
+            "module:trusts"
+          ],
+          "consentIds": [
+            "co-046",
+            "co-120"
+          ]
+        },
+        {
+          "granteeId": "advisor-18",
+          "granteeLabel": "Sophia Laurent (Pictet)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:portfolios",
+            "module:tax"
+          ],
+          "consentIds": [
+            "co-056"
+          ]
+        },
+        {
+          "granteeId": "advisor-13",
+          "granteeLabel": "Thomas Keller (BNP Paribas)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:cash-flow",
+            "module:portfolios",
+            "module:net-worth",
+            "module:trusts"
+          ],
+          "consentIds": [
+            "co-138"
+          ]
+        },
+        {
+          "granteeId": "user-1",
+          "granteeLabel": "Anna Whitfield (Family Principal)",
+          "granteeType": "user",
+          "permissions": [
+            "module:billing",
+            "module:compliance"
+          ],
+          "consentIds": [
+            "co-059",
+            "co-023",
+            "co-065"
+          ]
+        },
+        {
+          "granteeId": "user-10",
+          "granteeLabel": "Andrew Fairfax (Operations Manager)",
+          "granteeType": "user",
+          "permissions": [
+            "module:reporting",
+            "module:portfolios",
+            "module:cash-flow",
+            "module:entities"
+          ],
+          "consentIds": [
+            "co-086"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "vendor-12",
+        "action": "confirm",
+        "notes": "Confirmed with reduced scope"
+      },
+      {
+        "granteeId": "user-15",
+        "action": "restrict",
+        "notes": "Revoked: engagement ended Q4 2025"
+      },
+      {
+        "granteeId": "advisor-18",
+        "action": "confirm",
+        "notes": "Confirmed with reduced scope"
+      },
+      {
+        "granteeId": "advisor-13",
+        "action": "revoke",
+        "notes": "Confirmed with reduced scope"
+      },
+      {
+        "granteeId": "user-1",
+        "action": "restrict",
+        "notes": "Confirmed: required for annual audit cycle"
+      },
+      {
+        "granteeId": "user-10",
+        "action": "restrict",
+        "notes": "Access confirmed - still required for ongoing engagement"
+      }
+    ],
+    "createdAt": "2025-04-07T10:12:00Z"
+  },
+  {
+    "id": "ar-016",
+    "clientId": "client-1",
+    "name": "Regulatory Compliance Access Audit Q4-2025",
+    "scopeHouseholdId": "entity-16",
+    "statusKey": "open",
+    "dueAt": "2025-11-08",
+    "startedAt": "2025-01-19T10:16:00Z",
+    "closedAt": null,
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "user-16",
+          "granteeLabel": "Jonathan Pemberton (Junior Analyst)",
+          "granteeType": "user",
+          "permissions": [
+            "module:net-worth",
+            "module:transactions",
+            "module:reporting",
+            "module:trusts"
+          ],
+          "consentIds": [
+            "co-176",
+            "co-084",
+            "co-026"
+          ]
+        },
+        {
+          "granteeId": "advisor-22",
+          "granteeLabel": "Amelia Worthington (HSBC Private Bank)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:trusts"
+          ],
+          "consentIds": [
+            "co-012",
+            "co-137"
+          ]
+        },
+        {
+          "granteeId": "user-3",
+          "granteeLabel": "Jessica Palmer (CFO)",
+          "granteeType": "user",
+          "permissions": [
+            "module:compliance",
+            "module:documents"
+          ],
+          "consentIds": [
+            "co-007",
+            "co-012"
+          ]
+        },
+        {
+          "granteeId": "advisor-14",
+          "granteeLabel": "Rachel Montgomery (Clifford Chance)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:portfolios",
+            "module:net-worth",
+            "module:risk",
+            "module:compliance"
+          ],
+          "consentIds": [
+            "co-121",
+            "co-004",
+            "co-076"
+          ]
+        },
+        {
+          "granteeId": "vendor-3",
+          "granteeLabel": "Eze Software (SS&C)",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:trusts",
+            "module:cash-flow",
+            "module:documents",
+            "module:reporting"
+          ],
+          "consentIds": [
+            "co-098"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "user-16",
+        "action": "confirm",
+        "notes": "Confirmed: active advisory relationship"
+      },
+      {
+        "granteeId": "advisor-22",
+        "action": "confirm",
+        "notes": "Restricted: removed download permissions"
+      },
+      {
+        "granteeId": "user-3",
+        "action": "confirm",
+        "notes": null
+      },
+      {
+        "granteeId": "advisor-14",
+        "action": "restrict",
+        "notes": "Confirmed: active advisory relationship"
+      },
+      {
+        "granteeId": "vendor-3",
+        "action": "confirm",
+        "notes": "Restricted: removed download permissions"
+      }
+    ],
+    "createdAt": "2025-01-19T10:16:00Z"
+  },
+  {
+    "id": "ar-017",
+    "clientId": "client-2",
+    "name": "Trust Beneficiary Access Certification 2025",
+    "scopeHouseholdId": null,
+    "statusKey": "closed",
+    "dueAt": "2026-06-04",
+    "startedAt": "2025-07-07T12:53:00Z",
+    "closedAt": "2026-01-22T08:16:00Z",
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "advisor-23",
+          "granteeLabel": "George Castellano (Barclays Wealth)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:portfolios",
+            "module:documents",
+            "module:risk",
+            "module:cash-flow"
+          ],
+          "consentIds": [
+            "co-167"
+          ]
+        },
+        {
+          "granteeId": "user-12",
+          "granteeLabel": "Stephen Beaumont (IT Director)",
+          "granteeType": "user",
+          "permissions": [
+            "module:risk",
+            "module:net-worth",
+            "module:reporting"
+          ],
+          "consentIds": [
+            "co-143"
+          ]
+        },
+        {
+          "granteeId": "vendor-3",
+          "granteeLabel": "Eze Software (SS&C)",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:tax",
+            "module:portfolios"
+          ],
+          "consentIds": [
+            "co-150",
+            "co-004"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "advisor-23",
+        "action": "confirm",
+        "notes": "Confirmed: required for annual audit cycle"
+      },
+      {
+        "granteeId": "user-12",
+        "action": "confirm",
+        "notes": null
+      },
+      {
+        "granteeId": "vendor-3",
+        "action": "confirm",
+        "notes": "Confirmed: active advisory relationship"
+      }
+    ],
+    "createdAt": "2025-07-07T12:53:00Z"
+  },
+  {
+    "id": "ar-018",
+    "clientId": "client-3",
+    "name": "Estate Planning Team Access Review",
+    "scopeHouseholdId": "entity-8",
+    "statusKey": "closed",
+    "dueAt": "2025-04-11",
+    "startedAt": "2025-02-05T15:32:00Z",
+    "closedAt": "2026-01-02T16:47:00Z",
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "advisor-18",
+          "granteeLabel": "Sophia Laurent (Pictet)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:transactions",
+            "module:trusts"
+          ],
+          "consentIds": [
+            "co-090",
+            "co-141",
+            "co-159"
+          ]
+        },
+        {
+          "granteeId": "advisor-9",
+          "granteeLabel": "Robert Ashworth (Morgan Stanley)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:cash-flow",
+            "module:documents",
+            "module:compliance",
+            "module:risk"
+          ],
+          "consentIds": [
+            "co-093",
+            "co-028",
+            "co-023"
+          ]
+        },
+        {
+          "granteeId": "user-6",
+          "granteeLabel": "Edward Lancaster (Controller)",
+          "granteeType": "user",
+          "permissions": [
+            "module:net-worth"
+          ],
+          "consentIds": [
+            "co-012",
+            "co-118",
+            "co-068"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "advisor-18",
+        "action": "restrict",
+        "notes": "Access confirmed - still required for ongoing engagement"
+      },
+      {
+        "granteeId": "advisor-9",
+        "action": "confirm",
+        "notes": "Restricted: removed download permissions"
+      },
+      {
+        "granteeId": "user-6",
+        "action": "confirm",
+        "notes": "Confirmed with reduced scope"
+      }
+    ],
+    "createdAt": "2025-02-05T15:32:00Z"
+  },
+  {
+    "id": "ar-019",
+    "clientId": "client-4",
+    "name": "Tax Season Temporary Access Cleanup",
+    "scopeHouseholdId": null,
+    "statusKey": "open",
+    "dueAt": "2026-03-04",
+    "startedAt": "2025-08-22T14:24:00Z",
+    "closedAt": null,
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "advisor-9",
+          "granteeLabel": "Robert Ashworth (Morgan Stanley)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:tax",
+            "module:net-worth"
+          ],
+          "consentIds": [
+            "co-118"
+          ]
+        },
+        {
+          "granteeId": "advisor-24",
+          "granteeLabel": "Victoria Stanton (Schroders)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:documents",
+            "module:risk",
+            "module:net-worth"
+          ],
+          "consentIds": [
+            "co-007"
+          ]
+        },
+        {
+          "granteeId": "advisor-18",
+          "granteeLabel": "Sophia Laurent (Pictet)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:tax"
+          ],
+          "consentIds": [
+            "co-029",
+            "co-100"
+          ]
+        },
+        {
+          "granteeId": "advisor-28",
+          "granteeLabel": "Diana Petrova (BDO)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:risk",
+            "module:documents"
+          ],
+          "consentIds": [
+            "co-022",
+            "co-063"
+          ]
+        },
+        {
+          "granteeId": "advisor-20",
+          "granteeLabel": "Margaret Chen (Withers LLP)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:trusts",
+            "module:reporting"
+          ],
+          "consentIds": [
+            "co-136"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "advisor-9",
+        "action": "confirm",
+        "notes": "Confirmed: required for annual audit cycle"
+      },
+      {
+        "granteeId": "advisor-24",
+        "action": "confirm",
+        "notes": "Revoked: engagement ended Q4 2025"
+      },
+      {
+        "granteeId": "advisor-18",
+        "action": "revoke",
+        "notes": "Revoked: engagement ended Q4 2025"
+      },
+      {
+        "granteeId": "advisor-28",
+        "action": "confirm",
+        "notes": "Revoked: vendor contract expired"
+      },
+      {
+        "granteeId": "advisor-20",
+        "action": "confirm",
+        "notes": "Confirmed: active advisory relationship"
+      }
+    ],
+    "createdAt": "2025-08-22T14:24:00Z"
+  },
+  {
+    "id": "ar-020",
+    "clientId": "client-5",
+    "name": "Year-End Access Reconciliation 2025",
+    "scopeHouseholdId": "entity-17",
+    "statusKey": "closed",
+    "dueAt": "2025-02-14",
+    "startedAt": "2025-08-07T12:14:00Z",
+    "closedAt": "2025-12-20T09:39:00Z",
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "vendor-4",
+          "granteeLabel": "FIS Global",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:cash-flow",
+            "module:transactions"
+          ],
+          "consentIds": [
+            "co-092"
+          ]
+        },
+        {
+          "granteeId": "vendor-5",
+          "granteeLabel": "Broadridge Financial",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:trusts",
+            "module:documents",
+            "module:reporting"
+          ],
+          "consentIds": [
+            "co-100"
+          ]
+        },
+        {
+          "granteeId": "vendor-7",
+          "granteeLabel": "State Street Alpha",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:cash-flow",
+            "module:portfolios",
+            "module:tax"
+          ],
+          "consentIds": [
+            "co-049",
+            "co-048"
+          ]
+        },
+        {
+          "granteeId": "advisor-26",
+          "granteeLabel": "Elena Kowalski (Mazars)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:documents"
+          ],
+          "consentIds": [
+            "co-030",
+            "co-021",
+            "co-167"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "vendor-4",
+        "action": "confirm",
+        "notes": "Revoked: engagement ended Q4 2025"
+      },
+      {
+        "granteeId": "vendor-5",
+        "action": "revoke",
+        "notes": null
+      },
+      {
+        "granteeId": "vendor-7",
+        "action": "restrict",
+        "notes": "Confirmed: required for annual audit cycle"
+      },
+      {
+        "granteeId": "advisor-26",
+        "action": "confirm",
+        "notes": "Access confirmed - still required for ongoing engagement"
+      }
+    ],
+    "createdAt": "2025-08-07T12:14:00Z"
+  },
+  {
+    "id": "ar-021",
+    "clientId": "client-1",
+    "name": "Client Portal Access Certification Q3-2025",
+    "scopeHouseholdId": "entity-1",
+    "statusKey": "open",
+    "dueAt": "2026-02-03",
+    "startedAt": "2024-09-18T08:59:00Z",
+    "closedAt": null,
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "user-1",
+          "granteeLabel": "Anna Whitfield (Family Principal)",
+          "granteeType": "user",
+          "permissions": [
+            "module:entities",
+            "module:documents",
+            "module:risk",
+            "module:compliance"
+          ],
+          "consentIds": [
+            "co-017",
+            "co-122",
+            "co-070"
+          ]
+        },
+        {
+          "granteeId": "vendor-1",
+          "granteeLabel": "Addepar Platform Services",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:documents",
+            "module:entities",
+            "module:portfolios"
+          ],
+          "consentIds": [
+            "co-023"
+          ]
+        },
+        {
+          "granteeId": "vendor-12",
+          "granteeLabel": "DocuSign CLM",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:documents",
+            "module:portfolios"
+          ],
+          "consentIds": [
+            "co-051",
+            "co-157",
+            "co-180"
+          ]
+        },
+        {
+          "granteeId": "advisor-26",
+          "granteeLabel": "Elena Kowalski (Mazars)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:cash-flow",
+            "module:portfolios"
+          ],
+          "consentIds": [
+            "co-116",
+            "co-086",
+            "co-059"
+          ]
+        },
+        {
+          "granteeId": "user-13",
+          "granteeLabel": "Patricia Kensington (Admin)",
+          "granteeType": "user",
+          "permissions": [
+            "module:trusts"
+          ],
+          "consentIds": [
+            "co-160",
+            "co-143"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "user-1",
+        "action": "confirm",
+        "notes": "Access confirmed - still required for ongoing engagement"
+      },
+      {
+        "granteeId": "vendor-1",
+        "action": "restrict",
+        "notes": "Restricted: removed download permissions"
+      },
+      {
+        "granteeId": "vendor-12",
+        "action": "confirm",
+        "notes": "Confirmed with reduced scope"
+      },
+      {
+        "granteeId": "advisor-26",
+        "action": "restrict",
+        "notes": null
+      },
+      {
+        "granteeId": "user-13",
+        "action": "revoke",
+        "notes": "Revoked: engagement ended Q4 2025"
+      }
+    ],
+    "createdAt": "2024-09-18T08:59:00Z"
+  },
+  {
+    "id": "ar-022",
+    "clientId": "client-2",
+    "name": "Vendor Offboarding Access Removal",
+    "scopeHouseholdId": "entity-16",
+    "statusKey": "open",
+    "dueAt": "2025-03-24",
+    "startedAt": "2025-09-21T16:57:00Z",
+    "closedAt": null,
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "vendor-8",
+          "granteeLabel": "BNY Mellon Pershing",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:compliance",
+            "module:billing",
+            "module:trusts"
+          ],
+          "consentIds": [
+            "co-058"
+          ]
+        },
+        {
+          "granteeId": "user-5",
+          "granteeLabel": "Margaret Harrington (COO)",
+          "granteeType": "user",
+          "permissions": [
+            "module:documents",
+            "module:tax",
+            "module:risk"
+          ],
+          "consentIds": [
+            "co-178"
+          ]
+        },
+        {
+          "granteeId": "advisor-12",
+          "granteeLabel": "Natalie Bergström (Citi Private Bank)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:net-worth"
+          ],
+          "consentIds": [
+            "co-171",
+            "co-046",
+            "co-047"
+          ]
+        },
+        {
+          "granteeId": "user-19",
+          "granteeLabel": "Victoria Rothschild (Investment Analyst)",
+          "granteeType": "user",
+          "permissions": [
+            "module:documents",
+            "module:reporting",
+            "module:tax"
+          ],
+          "consentIds": [
+            "co-177",
+            "co-013",
+            "co-096"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "vendor-8",
+        "action": "confirm",
+        "notes": "Confirmed: required for annual audit cycle"
+      },
+      {
+        "granteeId": "user-5",
+        "action": "revoke",
+        "notes": "Restricted to view-only per new policy"
+      },
+      {
+        "granteeId": "advisor-12",
+        "action": "confirm",
+        "notes": "Confirmed with reduced scope"
+      },
+      {
+        "granteeId": "user-19",
+        "action": "confirm",
+        "notes": "Confirmed: active advisory relationship"
+      }
+    ],
+    "createdAt": "2025-09-21T16:57:00Z"
+  },
+  {
+    "id": "ar-023",
+    "clientId": "client-3",
+    "name": "Family Governance Committee Access Review",
+    "scopeHouseholdId": "entity-18",
+    "statusKey": "closed",
+    "dueAt": "2025-02-10",
+    "startedAt": "2025-05-17T17:45:00Z",
+    "closedAt": "2025-12-15T10:55:00Z",
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "advisor-22",
+          "granteeLabel": "Amelia Worthington (HSBC Private Bank)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:trusts",
+            "module:billing"
+          ],
+          "consentIds": [
+            "co-083",
+            "co-159",
+            "co-096"
+          ]
+        },
+        {
+          "granteeId": "user-10",
+          "granteeLabel": "Andrew Fairfax (Operations Manager)",
+          "granteeType": "user",
+          "permissions": [
+            "module:cash-flow",
+            "module:billing",
+            "module:portfolios"
+          ],
+          "consentIds": [
+            "co-102",
+            "co-076"
+          ]
+        },
+        {
+          "granteeId": "vendor-1",
+          "granteeLabel": "Addepar Platform Services",
+          "granteeType": "vendor",
+          "permissions": [
+            "module:transactions",
+            "module:reporting",
+            "module:entities",
+            "module:billing"
+          ],
+          "consentIds": [
+            "co-052",
+            "co-139"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "advisor-22",
+        "action": "confirm",
+        "notes": "Access confirmed - still required for ongoing engagement"
+      },
+      {
+        "granteeId": "user-10",
+        "action": "restrict",
+        "notes": "Restricted to view-only per new policy"
+      },
+      {
+        "granteeId": "vendor-1",
+        "action": "revoke",
+        "notes": "Revoked: engagement ended Q4 2025"
+      }
+    ],
+    "createdAt": "2025-05-17T17:45:00Z"
+  },
+  {
+    "id": "ar-024",
+    "clientId": "client-4",
+    "name": "Incident Response Access Lockdown Review",
+    "scopeHouseholdId": null,
+    "statusKey": "open",
+    "dueAt": "2025-06-10",
+    "startedAt": "2025-03-23T09:04:00Z",
+    "closedAt": null,
+    "snapshotJson": {
+      "grantees": [
+        {
+          "granteeId": "advisor-9",
+          "granteeLabel": "Robert Ashworth (Morgan Stanley)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:documents",
+            "module:billing"
+          ],
+          "consentIds": [
+            "co-157",
+            "co-008",
+            "co-089"
+          ]
+        },
+        {
+          "granteeId": "advisor-21",
+          "granteeLabel": "Frederick Hartmann (Deutsche Bank)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:portfolios",
+            "module:trusts"
+          ],
+          "consentIds": [
+            "co-061"
+          ]
+        },
+        {
+          "granteeId": "advisor-28",
+          "granteeLabel": "Diana Petrova (BDO)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:trusts",
+            "module:documents",
+            "module:transactions"
+          ],
+          "consentIds": [
+            "co-011"
+          ]
+        },
+        {
+          "granteeId": "user-10",
+          "granteeLabel": "Andrew Fairfax (Operations Manager)",
+          "granteeType": "user",
+          "permissions": [
+            "module:billing",
+            "module:cash-flow",
+            "module:transactions",
+            "module:documents"
+          ],
+          "consentIds": [
+            "co-105",
+            "co-075"
+          ]
+        },
+        {
+          "granteeId": "user-16",
+          "granteeLabel": "Jonathan Pemberton (Junior Analyst)",
+          "granteeType": "user",
+          "permissions": [
+            "module:documents"
+          ],
+          "consentIds": [
+            "co-148",
+            "co-060"
+          ]
+        },
+        {
+          "granteeId": "advisor-4",
+          "granteeLabel": "Emma Blackwell (KPMG)",
+          "granteeType": "advisor",
+          "permissions": [
+            "module:risk",
+            "module:trusts",
+            "module:transactions"
+          ],
+          "consentIds": [
+            "co-001",
+            "co-053",
+            "co-049"
+          ]
+        }
+      ]
+    },
+    "decisionsJson": [
+      {
+        "granteeId": "advisor-9",
+        "action": "confirm",
+        "notes": "Restricted to view-only per new policy"
+      },
+      {
+        "granteeId": "advisor-21",
+        "action": "revoke",
+        "notes": "Confirmed: active advisory relationship"
+      },
+      {
+        "granteeId": "advisor-28",
+        "action": "confirm",
+        "notes": null
+      },
+      {
+        "granteeId": "user-10",
+        "action": "restrict",
+        "notes": "Restricted: removed download permissions"
+      },
+      {
+        "granteeId": "user-16",
+        "action": "confirm",
+        "notes": "Revoked: engagement ended Q4 2025"
+      },
+      {
+        "granteeId": "advisor-4",
+        "action": "revoke",
+        "notes": "Confirmed with reduced scope"
+      }
+    ],
+    "createdAt": "2025-03-23T09:04:00Z"
+  }
 ]

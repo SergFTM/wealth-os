@@ -1,0 +1,1095 @@
+[
+  {
+    "id": "mdp-001",
+    "clientId": "c1",
+    "recordType": "person",
+    "personType": "client",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Александр",
+      "lastName": "Петров",
+      "middleName": "Иванович",
+      "email": "a.petrov@aurora.com",
+      "phone": "+7 495 123-45-67",
+      "birthDate": "1975-03-15",
+      "taxId": "123456789012",
+      "citizenship": "RU",
+      "address": "Москва, ул. Тверская, 10"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "CRM",
+        "sourceId": "crm-001",
+        "fetchedAt": "2026-01-15T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Александр",
+          "lastName": "Петров",
+          "email": "a.petrov@aurora.com",
+          "phone": "+74951234567"
+        }
+      },
+      {
+        "sourceSystem": "KYC",
+        "sourceId": "kyc-001",
+        "fetchedAt": "2026-01-20T09:00:00Z",
+        "fieldsJson": {
+          "firstName": "Александр",
+          "lastName": "Петров",
+          "middleName": "Иванович",
+          "birthDate": "1975-03-15",
+          "taxId": "123456789012"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99,
+      "email": 0.95,
+      "phone": 0.9,
+      "birthDate": 0.98
+    },
+    "overridesJson": {},
+    "relationshipsJson": [
+      {
+        "type": "spouse",
+        "targetId": "mdp-002"
+      },
+      {
+        "type": "child",
+        "targetId": "mdp-003"
+      }
+    ],
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-002",
+    "clientId": "c1",
+    "recordType": "person",
+    "personType": "family_member",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Елена",
+      "lastName": "Петрова",
+      "middleName": "Сергеевна",
+      "email": "e.petrova@aurora.com",
+      "phone": "+7 495 123-45-68",
+      "birthDate": "1978-07-22",
+      "taxId": "123456789013",
+      "citizenship": "RU",
+      "address": "Москва, ул. Тверская, 10"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "CRM",
+        "sourceId": "crm-002",
+        "fetchedAt": "2026-01-15T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Елена",
+          "lastName": "Петрова",
+          "email": "e.petrova@aurora.com"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99,
+      "email": 0.95
+    },
+    "overridesJson": {},
+    "relationshipsJson": [
+      {
+        "type": "spouse",
+        "targetId": "mdp-001"
+      }
+    ],
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-003",
+    "clientId": "c1",
+    "recordType": "person",
+    "personType": "family_member",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Дмитрий",
+      "lastName": "Петров",
+      "middleName": "Александрович",
+      "email": "d.petrov@aurora.com",
+      "phone": "+7 495 123-45-69",
+      "birthDate": "2002-11-05",
+      "citizenship": "RU"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "CRM",
+        "sourceId": "crm-003",
+        "fetchedAt": "2026-01-15T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Дмитрий",
+          "lastName": "Петров"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99
+    },
+    "overridesJson": {},
+    "relationshipsJson": [
+      {
+        "type": "parent",
+        "targetId": "mdp-001"
+      }
+    ],
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-004",
+    "clientId": "c1",
+    "recordType": "person",
+    "personType": "advisor",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Михаил",
+      "lastName": "Сидоров",
+      "email": "m.sidorov@advisory.com",
+      "phone": "+7 495 234-56-78",
+      "title": "Senior Advisor"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "HR",
+        "sourceId": "hr-001",
+        "fetchedAt": "2026-01-10T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Михаил",
+          "lastName": "Сидоров",
+          "email": "m.sidorov@advisory.com"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99,
+      "email": 0.99
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2025-01-10T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-005",
+    "clientId": "c2",
+    "recordType": "person",
+    "personType": "client",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Николай",
+      "lastName": "Козлов",
+      "middleName": "Владимирович",
+      "email": "n.kozlov@limassol.cy",
+      "phone": "+357 25 123456",
+      "birthDate": "1968-05-20",
+      "taxId": "CY12345678",
+      "citizenship": "CY",
+      "address": "Limassol, Cyprus"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "CRM",
+        "sourceId": "crm-005",
+        "fetchedAt": "2026-01-15T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Nikolay",
+          "lastName": "Kozlov",
+          "email": "n.kozlov@limassol.cy"
+        }
+      },
+      {
+        "sourceSystem": "KYC",
+        "sourceId": "kyc-005",
+        "fetchedAt": "2026-01-18T09:00:00Z",
+        "fieldsJson": {
+          "firstName": "Николай",
+          "lastName": "Козлов",
+          "middleName": "Владимирович",
+          "birthDate": "1968-05-20"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.85,
+      "lastName": 0.99,
+      "email": 0.95
+    },
+    "overridesJson": {
+      "firstName": {
+        "value": "Николай",
+        "overriddenAt": "2026-01-20T10:00:00Z",
+        "overriddenBy": "admin",
+        "reason": "Normalized to Cyrillic"
+      }
+    },
+    "relationshipsJson": [],
+    "createdAt": "2025-02-20T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-006",
+    "clientId": "c2",
+    "recordType": "person",
+    "personType": "ubo",
+    "status": "pending",
+    "chosenJson": {
+      "firstName": "Анна",
+      "lastName": "Козлова",
+      "email": "a.kozlova@limassol.cy",
+      "ownershipPercent": 35
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "KYC",
+        "sourceId": "kyc-006",
+        "fetchedAt": "2026-01-18T09:00:00Z",
+        "fieldsJson": {
+          "firstName": "Anna",
+          "lastName": "Kozlova",
+          "ownershipPercent": 35
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.8,
+      "lastName": 0.95
+    },
+    "overridesJson": {},
+    "relationshipsJson": [
+      {
+        "type": "spouse",
+        "targetId": "mdp-005"
+      }
+    ],
+    "createdAt": "2025-02-20T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-007",
+    "clientId": "c3",
+    "recordType": "person",
+    "personType": "beneficiary",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Ольга",
+      "lastName": "Новикова",
+      "middleName": "Петровна",
+      "email": "o.novikova@northstar.com",
+      "birthDate": "1982-09-12",
+      "beneficiaryPercent": 50
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Trust",
+        "sourceId": "tr-001",
+        "fetchedAt": "2026-01-12T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Ольга",
+          "lastName": "Новикова",
+          "beneficiaryPercent": 50
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2025-03-10T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-008",
+    "clientId": "c3",
+    "recordType": "person",
+    "personType": "beneficiary",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Сергей",
+      "lastName": "Новиков",
+      "middleName": "Александрович",
+      "email": "s.novikov@northstar.com",
+      "birthDate": "1980-04-25",
+      "beneficiaryPercent": 50
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Trust",
+        "sourceId": "tr-002",
+        "fetchedAt": "2026-01-12T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Сергей",
+          "lastName": "Новиков",
+          "beneficiaryPercent": 50
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99
+    },
+    "overridesJson": {},
+    "relationshipsJson": [
+      {
+        "type": "spouse",
+        "targetId": "mdp-007"
+      }
+    ],
+    "createdAt": "2025-03-10T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-009",
+    "clientId": "c4",
+    "recordType": "person",
+    "personType": "partner",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Виктор",
+      "lastName": "Морозов",
+      "email": "v.morozov@vega.com",
+      "phone": "+7 495 345-67-89",
+      "partnershipPercent": 40
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Partnership",
+        "sourceId": "prt-001",
+        "fetchedAt": "2026-01-14T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Виктор",
+          "lastName": "Морозов",
+          "partnershipPercent": 40
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2025-04-05T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-010",
+    "clientId": "c4",
+    "recordType": "person",
+    "personType": "partner",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Андрей",
+      "lastName": "Волков",
+      "email": "a.volkov@vega.com",
+      "phone": "+7 495 345-67-90",
+      "partnershipPercent": 30
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Partnership",
+        "sourceId": "prt-002",
+        "fetchedAt": "2026-01-14T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Андрей",
+          "lastName": "Волков",
+          "partnershipPercent": 30
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2025-04-05T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-011",
+    "clientId": "c5",
+    "recordType": "person",
+    "personType": "client",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Игорь",
+      "lastName": "Федоров",
+      "middleName": "Николаевич",
+      "email": "i.fedorov@orion.com",
+      "phone": "+7 495 456-78-90",
+      "birthDate": "1970-12-08",
+      "taxId": "987654321098",
+      "citizenship": "RU"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "CRM",
+        "sourceId": "crm-011",
+        "fetchedAt": "2026-01-15T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Игорь",
+          "lastName": "Федоров",
+          "email": "i.fedorov@orion.com"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99,
+      "email": 0.95
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2025-05-01T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-012",
+    "clientId": "c6",
+    "recordType": "person",
+    "personType": "trustee",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Татьяна",
+      "lastName": "Соколова",
+      "email": "t.sokolova@cedar.com",
+      "title": "Trustee",
+      "firm": "Cedar Trust Services"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Trust",
+        "sourceId": "tr-012",
+        "fetchedAt": "2026-01-16T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Татьяна",
+          "lastName": "Соколова",
+          "title": "Trustee"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2025-06-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-013",
+    "clientId": "c1",
+    "recordType": "person",
+    "personType": "client",
+    "status": "suspect_duplicate",
+    "chosenJson": {
+      "firstName": "Александр",
+      "lastName": "Петров",
+      "email": "alex.petrov@gmail.com",
+      "phone": "+7 916 123-45-67"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "External",
+        "sourceId": "ext-001",
+        "fetchedAt": "2026-01-25T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Alex",
+          "lastName": "Petrov",
+          "email": "alex.petrov@gmail.com"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.75,
+      "lastName": 0.85
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2026-01-25T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-014",
+    "clientId": "c1",
+    "recordType": "person",
+    "personType": "family_member",
+    "status": "suspect_duplicate",
+    "chosenJson": {
+      "firstName": "Елена",
+      "lastName": "Петрова",
+      "email": "elena.p@mail.ru"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "External",
+        "sourceId": "ext-002",
+        "fetchedAt": "2026-01-25T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Elena",
+          "lastName": "Petrova",
+          "email": "elena.p@mail.ru"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.75,
+      "lastName": 0.85
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2026-01-25T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-015",
+    "clientId": "c2",
+    "recordType": "person",
+    "personType": "client",
+    "status": "suspect_duplicate",
+    "chosenJson": {
+      "firstName": "N.",
+      "lastName": "Kozlov",
+      "email": "nkozlov@business.cy"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Banking",
+        "sourceId": "bank-015",
+        "fetchedAt": "2026-01-22T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "N.",
+          "lastName": "Kozlov",
+          "email": "nkozlov@business.cy"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.6,
+      "lastName": 0.95
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2026-01-22T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-016",
+    "clientId": "c1",
+    "recordType": "person",
+    "personType": "contact",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Павел",
+      "lastName": "Смирнов",
+      "email": "p.smirnov@bank.com",
+      "phone": "+7 495 567-89-01",
+      "title": "Relationship Manager",
+      "firm": "Sberbank"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "CRM",
+        "sourceId": "crm-016",
+        "fetchedAt": "2026-01-10T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Павел",
+          "lastName": "Смирнов",
+          "email": "p.smirnov@bank.com"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99,
+      "email": 0.99
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2025-01-10T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-017",
+    "clientId": "c1",
+    "recordType": "person",
+    "personType": "contact",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Мария",
+      "lastName": "Иванова",
+      "email": "m.ivanova@lawyer.ru",
+      "phone": "+7 495 678-90-12",
+      "title": "Partner",
+      "firm": "Baker McKenzie"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "CRM",
+        "sourceId": "crm-017",
+        "fetchedAt": "2026-01-10T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Мария",
+          "lastName": "Иванова",
+          "email": "m.ivanova@lawyer.ru"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99,
+      "email": 0.99
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2025-01-10T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-018",
+    "clientId": "c3",
+    "recordType": "person",
+    "personType": "grantor",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Владимир",
+      "lastName": "Новиков",
+      "middleName": "Сергеевич",
+      "email": "v.novikov@northstar.com",
+      "birthDate": "1955-02-18",
+      "taxId": "555666777888"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Trust",
+        "sourceId": "tr-018",
+        "fetchedAt": "2026-01-12T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Владимир",
+          "lastName": "Новиков",
+          "birthDate": "1955-02-18"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99
+    },
+    "overridesJson": {},
+    "relationshipsJson": [
+      {
+        "type": "child",
+        "targetId": "mdp-007"
+      },
+      {
+        "type": "child",
+        "targetId": "mdp-008"
+      }
+    ],
+    "createdAt": "2025-03-10T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-019",
+    "clientId": "c4",
+    "recordType": "person",
+    "personType": "partner",
+    "status": "pending",
+    "chosenJson": {
+      "firstName": "Константин",
+      "lastName": "Белов",
+      "email": "k.belov@vega.com",
+      "partnershipPercent": 30
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Partnership",
+        "sourceId": "prt-019",
+        "fetchedAt": "2026-01-14T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Константин",
+          "lastName": "Белов"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.95,
+      "lastName": 0.95
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2025-04-05T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-020",
+    "clientId": "c5",
+    "recordType": "person",
+    "personType": "family_member",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Наталья",
+      "lastName": "Федорова",
+      "email": "n.fedorova@orion.com",
+      "birthDate": "1975-08-30"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "CRM",
+        "sourceId": "crm-020",
+        "fetchedAt": "2026-01-15T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Наталья",
+          "lastName": "Федорова"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99
+    },
+    "overridesJson": {},
+    "relationshipsJson": [
+      {
+        "type": "spouse",
+        "targetId": "mdp-011"
+      }
+    ],
+    "createdAt": "2025-05-01T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-021",
+    "clientId": "c6",
+    "recordType": "person",
+    "personType": "beneficiary",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Артем",
+      "lastName": "Соколов",
+      "email": "a.sokolov@cedar.com",
+      "birthDate": "1995-11-22",
+      "beneficiaryPercent": 33.33
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Trust",
+        "sourceId": "tr-021",
+        "fetchedAt": "2026-01-16T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Артем",
+          "lastName": "Соколов"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2025-06-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-022",
+    "clientId": "c6",
+    "recordType": "person",
+    "personType": "beneficiary",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Алина",
+      "lastName": "Соколова",
+      "email": "alina.s@cedar.com",
+      "birthDate": "1998-03-14",
+      "beneficiaryPercent": 33.33
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Trust",
+        "sourceId": "tr-022",
+        "fetchedAt": "2026-01-16T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Алина",
+          "lastName": "Соколова"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2025-06-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-023",
+    "clientId": "c6",
+    "recordType": "person",
+    "personType": "beneficiary",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Максим",
+      "lastName": "Соколов",
+      "email": "m.sokolov@cedar.com",
+      "birthDate": "2001-07-05",
+      "beneficiaryPercent": 33.34
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Trust",
+        "sourceId": "tr-023",
+        "fetchedAt": "2026-01-16T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Максим",
+          "lastName": "Соколов"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2025-06-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-024",
+    "clientId": "c1",
+    "recordType": "person",
+    "personType": "advisor",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Евгений",
+      "lastName": "Кузнецов",
+      "email": "e.kuznetsov@tax.ru",
+      "title": "Tax Advisor",
+      "firm": "PwC"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "CRM",
+        "sourceId": "crm-024",
+        "fetchedAt": "2026-01-10T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Евгений",
+          "lastName": "Кузнецов"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2025-01-10T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-025",
+    "clientId": "c2",
+    "recordType": "person",
+    "personType": "director",
+    "status": "golden",
+    "chosenJson": {
+      "firstName": "Георгий",
+      "lastName": "Антонов",
+      "email": "g.antonov@limassol.cy",
+      "title": "Director"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Corporate",
+        "sourceId": "corp-025",
+        "fetchedAt": "2026-01-18T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Георгий",
+          "lastName": "Антонов"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.99,
+      "lastName": 0.99
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2025-02-20T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-026",
+    "clientId": "c1",
+    "recordType": "person",
+    "personType": "family_member",
+    "status": "suspect_duplicate",
+    "chosenJson": {
+      "firstName": "Dmitry",
+      "lastName": "Petrov",
+      "email": "dmitry.petrov@personal.com"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "External",
+        "sourceId": "ext-026",
+        "fetchedAt": "2026-01-26T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Dmitry",
+          "lastName": "Petrov"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.7,
+      "lastName": 0.9
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2026-01-26T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-027",
+    "clientId": "c3",
+    "recordType": "person",
+    "personType": "beneficiary",
+    "status": "suspect_duplicate",
+    "chosenJson": {
+      "firstName": "O.",
+      "lastName": "Novikova",
+      "email": "olga.n@personal.ru"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "External",
+        "sourceId": "ext-027",
+        "fetchedAt": "2026-01-24T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "O.",
+          "lastName": "Novikova"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.5,
+      "lastName": 0.9
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2026-01-24T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-028",
+    "clientId": "c4",
+    "recordType": "person",
+    "personType": "partner",
+    "status": "suspect_duplicate",
+    "chosenJson": {
+      "firstName": "Viktor",
+      "lastName": "Morozov",
+      "email": "v.morozov@personal.com"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Banking",
+        "sourceId": "bank-028",
+        "fetchedAt": "2026-01-23T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Viktor",
+          "lastName": "Morozov"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.75,
+      "lastName": 0.95
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2026-01-23T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-029",
+    "clientId": "c5",
+    "recordType": "person",
+    "personType": "client",
+    "status": "suspect_duplicate",
+    "chosenJson": {
+      "firstName": "Igor",
+      "lastName": "Fedorov",
+      "email": "igor.f@business.ru"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Banking",
+        "sourceId": "bank-029",
+        "fetchedAt": "2026-01-22T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Igor",
+          "lastName": "Fedorov"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.75,
+      "lastName": 0.95
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2026-01-22T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdp-030",
+    "clientId": "c6",
+    "recordType": "person",
+    "personType": "trustee",
+    "status": "suspect_duplicate",
+    "chosenJson": {
+      "firstName": "Tatiana",
+      "lastName": "Sokolova",
+      "email": "t.sokolova@trust.com"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "External",
+        "sourceId": "ext-030",
+        "fetchedAt": "2026-01-21T10:00:00Z",
+        "fieldsJson": {
+          "firstName": "Tatiana",
+          "lastName": "Sokolova"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "firstName": 0.75,
+      "lastName": 0.95
+    },
+    "overridesJson": {},
+    "relationshipsJson": [],
+    "createdAt": "2026-01-21T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SOP",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "title": { "type": "string" },
+    "processKey": {
+      "type": "string",
+      "enum": ["bill_pay", "onboarding", "approvals", "incident_response", "data_backup", "client_reporting", "vendor_review", "reconciliation"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "archived"],
+      "default": "active"
+    },
+    "currentVersionId": { "type": "string" },
+    "currentVersionLabel": { "type": "string" },
+    "stepsJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "orderIndex": { "type": "integer" },
+          "title": { "type": "string" },
+          "description": { "type": "string" },
+          "responsibleRole": { "type": "string" },
+          "estimatedMinutes": { "type": "integer" }
+        }
+      }
+    },
+    "bodyMdRu": { "type": "string" },
+    "bodyMdEn": { "type": "string" },
+    "bodyMdUk": { "type": "string" },
+    "clientSafePublished": { "type": "boolean", "default": false },
+    "ownerUserId": { "type": "string" },
+    "ownerName": { "type": "string" },
+    "linkedPolicyId": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "title", "processKey", "status"]
+}

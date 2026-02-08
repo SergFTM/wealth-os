@@ -1,0 +1,11 @@
+{
+  "_note": "Seed data is in src/db/seed/seed-module-55.json",
+  "_collections": ["portalUsers", "portalSessions", "portalViews", "portalRequests", "portalAnnouncements"],
+  "_counts": {
+    "portalUsers": 5,
+    "portalSessions": 3,
+    "portalAnnouncements": 12,
+    "portalViews": 200,
+    "portalRequests": 80
+  }
+}

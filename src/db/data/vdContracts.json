@@ -1,0 +1,115 @@
+[
+  {
+    "id": "vc-001",
+    "clientId": "c1",
+    "vendorId": "vd-001",
+    "name": "UBS Private Banking Agreement",
+    "contractNumber": "UBS-2024-001",
+    "startAt": "2024-01-01T00:00:00Z",
+    "endAt": "2026-12-31T23:59:59Z",
+    "renewalAt": "2026-09-30T23:59:59Z",
+    "autoRenewal": true,
+    "status": "active",
+    "feeModelKey": "aum",
+    "feeRulesJson": {
+      "baseFee": 0,
+      "currency": "USD",
+      "frequency": "quarterly",
+      "aumRate": 0.0075,
+      "minimumFee": 25000,
+      "maximumFee": 500000
+    },
+    "terminationNotice": 90,
+    "scopeOfServices": "Full-service private banking including custody, advisory, and reporting services.",
+    "createdAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2024-06-01T14:30:00Z"
+  },
+  {
+    "id": "vc-002",
+    "clientId": "c1",
+    "vendorId": "vd-003",
+    "name": "Goldman Sachs Brokerage Agreement",
+    "contractNumber": "GS-2024-042",
+    "startAt": "2024-02-01T00:00:00Z",
+    "endAt": "2025-01-31T23:59:59Z",
+    "renewalAt": "2024-11-30T23:59:59Z",
+    "autoRenewal": false,
+    "status": "expiring",
+    "feeModelKey": "transaction",
+    "feeRulesJson": {
+      "baseFee": 5000,
+      "currency": "USD",
+      "frequency": "monthly"
+    },
+    "terminationNotice": 30,
+    "createdAt": "2024-02-01T08:00:00Z",
+    "updatedAt": "2024-10-15T16:45:00Z"
+  },
+  {
+    "id": "vc-003",
+    "clientId": "c1",
+    "vendorId": "vd-005",
+    "name": "KPMG Annual Audit Engagement",
+    "contractNumber": "KPMG-AUD-2024",
+    "startAt": "2024-01-01T00:00:00Z",
+    "endAt": "2024-12-31T23:59:59Z",
+    "renewalAt": "2024-10-31T23:59:59Z",
+    "autoRenewal": false,
+    "status": "active",
+    "feeModelKey": "fixed",
+    "feeRulesJson": {
+      "baseFee": 175000,
+      "currency": "USD",
+      "frequency": "annually"
+    },
+    "terminationNotice": 60,
+    "scopeOfServices": "Annual audit of family office consolidated financial statements and trust entities.",
+    "createdAt": "2024-01-05T11:00:00Z",
+    "updatedAt": "2024-09-20T14:15:00Z"
+  },
+  {
+    "id": "vc-004",
+    "clientId": "c1",
+    "vendorId": "vd-007",
+    "name": "Baker McKenzie Legal Retainer",
+    "contractNumber": "BM-RET-2024",
+    "startAt": "2024-01-01T00:00:00Z",
+    "endAt": "2025-12-31T23:59:59Z",
+    "renewalAt": "2025-09-30T23:59:59Z",
+    "autoRenewal": true,
+    "status": "active",
+    "feeModelKey": "retainer",
+    "feeRulesJson": {
+      "baseFee": 15000,
+      "currency": "USD",
+      "frequency": "monthly"
+    },
+    "terminationNotice": 60,
+    "scopeOfServices": "General corporate counsel, M&A advisory, and estate planning support.",
+    "createdAt": "2024-01-10T14:00:00Z",
+    "updatedAt": "2024-11-05T16:30:00Z"
+  },
+  {
+    "id": "vc-005",
+    "clientId": "c1",
+    "vendorId": "vd-009",
+    "name": "PwC Tax Advisory Services",
+    "contractNumber": "PWC-TAX-2024",
+    "startAt": "2024-01-01T00:00:00Z",
+    "endAt": "2025-12-31T23:59:59Z",
+    "renewalAt": "2025-10-31T23:59:59Z",
+    "autoRenewal": true,
+    "status": "active",
+    "feeModelKey": "hourly",
+    "feeRulesJson": {
+      "baseFee": 0,
+      "currency": "USD",
+      "hourlyRate": 650,
+      "minimumFee": 50000
+    },
+    "terminationNotice": 30,
+    "scopeOfServices": "International tax planning, compliance, and transfer pricing advisory.",
+    "createdAt": "2024-01-25T10:15:00Z",
+    "updatedAt": "2024-09-20T13:45:00Z"
+  }
+]

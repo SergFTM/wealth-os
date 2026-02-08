@@ -1,0 +1,766 @@
+[
+  {
+    "id": "rh-001",
+    "clientId": "client-001",
+    "name": "Семья Петровых",
+    "tierKey": "A",
+    "primaryRmUserId": "user-rm-008",
+    "membersMdmIdsJson": [
+      "mdm-p-001",
+      "mdm-p-002",
+      "mdm-p-003",
+      "mdm-p-004",
+      "mdm-p-005",
+      "mdm-p-006"
+    ],
+    "notesInternal": "Регулярные квартальные обзоры",
+    "clientSafeSummary": "Портфель в рамках целевых параметров",
+    "clientSafePublished": true,
+    "publishedAt": "2025-07-17T12:44:00Z",
+    "createdAt": "2024-09-17T11:36:00Z",
+    "updatedAt": "2024-10-01T11:36:00Z"
+  },
+  {
+    "id": "rh-002",
+    "clientId": "client-002",
+    "name": "Семья Ивановых",
+    "tierKey": "A",
+    "primaryRmUserId": "user-rm-004",
+    "membersMdmIdsJson": [
+      "mdm-p-007",
+      "mdm-p-008"
+    ],
+    "notesInternal": "Стандартное обслуживание",
+    "clientSafeSummary": "Регулярные обзоры портфеля запланированы",
+    "clientSafePublished": true,
+    "publishedAt": "2025-09-04T18:37:00Z",
+    "createdAt": "2024-12-23T17:24:00Z",
+    "updatedAt": "2024-12-30T17:24:00Z"
+  },
+  {
+    "id": "rh-003",
+    "clientId": "client-003",
+    "name": "Семья Козловых",
+    "tierKey": "A",
+    "primaryRmUserId": "user-rm-002",
+    "membersMdmIdsJson": [
+      "mdm-p-009",
+      "mdm-p-010"
+    ],
+    "notesInternal": "Особые требования к отчетности",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-11-06T13:33:00Z",
+    "updatedAt": "2024-11-16T13:33:00Z"
+  },
+  {
+    "id": "rh-004",
+    "clientId": "client-004",
+    "name": "Семья Романовых",
+    "tierKey": "A",
+    "primaryRmUserId": "user-rm-007",
+    "membersMdmIdsJson": [
+      "mdm-p-011",
+      "mdm-p-012",
+      "mdm-p-013",
+      "mdm-p-014"
+    ],
+    "notesInternal": "Консервативный профиль",
+    "clientSafeSummary": "Портфель в рамках целевых параметров",
+    "clientSafePublished": true,
+    "publishedAt": "2025-11-12T12:39:00Z",
+    "createdAt": "2024-01-03T18:06:00Z",
+    "updatedAt": "2024-01-16T18:06:00Z"
+  },
+  {
+    "id": "rh-005",
+    "clientId": "client-005",
+    "name": "Семья Воронцовых",
+    "tierKey": "A",
+    "primaryRmUserId": "user-rm-003",
+    "membersMdmIdsJson": [
+      "mdm-p-015",
+      "mdm-p-016",
+      "mdm-p-017",
+      "mdm-p-018",
+      "mdm-p-019",
+      "mdm-p-020"
+    ],
+    "notesInternal": "Предпочитает личные встречи",
+    "clientSafeSummary": "Ваш выделенный менеджер готов помочь",
+    "clientSafePublished": true,
+    "publishedAt": "2024-08-11T10:41:00Z",
+    "createdAt": "2024-01-27T18:46:00Z",
+    "updatedAt": "2024-02-16T18:46:00Z"
+  },
+  {
+    "id": "rh-006",
+    "clientId": "client-006",
+    "name": "Семья Соколовых",
+    "tierKey": "A",
+    "primaryRmUserId": "user-rm-004",
+    "membersMdmIdsJson": [
+      "mdm-p-021",
+      "mdm-p-022",
+      "mdm-p-023"
+    ],
+    "notesInternal": "Регулярные квартальные обзоры",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-10-23T09:40:00Z",
+    "updatedAt": "2024-11-20T10:40:00Z"
+  },
+  {
+    "id": "rh-007",
+    "clientId": "client-001",
+    "name": "Семья Морозовых",
+    "tierKey": "A",
+    "primaryRmUserId": "user-rm-003",
+    "membersMdmIdsJson": [
+      "mdm-p-024",
+      "mdm-p-025",
+      "mdm-p-026",
+      "mdm-p-027"
+    ],
+    "notesInternal": "Особые требования к отчетности",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-08-09T07:49:00Z",
+    "updatedAt": "2024-09-03T07:49:00Z"
+  },
+  {
+    "id": "rh-008",
+    "clientId": "client-002",
+    "name": "Семья Волковых",
+    "tierKey": "A",
+    "primaryRmUserId": "user-rm-002",
+    "membersMdmIdsJson": [
+      "mdm-p-028",
+      "mdm-p-029",
+      "mdm-p-030"
+    ],
+    "notesInternal": "Предпочитает общение на английском",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-12-08T16:04:00Z",
+    "updatedAt": "2025-01-07T16:04:00Z"
+  },
+  {
+    "id": "rh-009",
+    "clientId": "client-003",
+    "name": "Семья Лебедевых",
+    "tierKey": "A",
+    "primaryRmUserId": "user-rm-001",
+    "membersMdmIdsJson": [
+      "mdm-p-031",
+      "mdm-p-032"
+    ],
+    "notesInternal": "Консервативный профиль",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-12-19T18:32:00Z",
+    "updatedAt": "2024-12-31T18:32:00Z"
+  },
+  {
+    "id": "rh-010",
+    "clientId": "client-004",
+    "name": "Семья Новиковых",
+    "tierKey": "A",
+    "primaryRmUserId": "user-rm-002",
+    "membersMdmIdsJson": [
+      "mdm-p-033",
+      "mdm-p-034",
+      "mdm-p-035",
+      "mdm-p-036"
+    ],
+    "notesInternal": "Семья с международными активами",
+    "clientSafeSummary": "Следующий обзор запланирован",
+    "clientSafePublished": true,
+    "publishedAt": "2024-07-08T10:42:00Z",
+    "createdAt": "2024-11-18T10:48:00Z",
+    "updatedAt": "2024-12-01T10:48:00Z"
+  },
+  {
+    "id": "rh-011",
+    "clientId": "client-005",
+    "name": "Семья Орловых",
+    "tierKey": "A",
+    "primaryRmUserId": "user-rm-006",
+    "membersMdmIdsJson": [
+      "mdm-p-037",
+      "mdm-p-038",
+      "mdm-p-039",
+      "mdm-p-040",
+      "mdm-p-041",
+      "mdm-p-042"
+    ],
+    "notesInternal": "Новый клиент, в процессе онбординга",
+    "clientSafeSummary": "Новые возможности доступны для обсуждения",
+    "clientSafePublished": true,
+    "publishedAt": "2025-02-23T07:45:00Z",
+    "createdAt": "2024-04-13T15:33:00Z",
+    "updatedAt": "2024-05-13T15:33:00Z"
+  },
+  {
+    "id": "rh-012",
+    "clientId": "client-006",
+    "name": "Семья Кузнецовых",
+    "tierKey": "A",
+    "primaryRmUserId": "user-rm-003",
+    "membersMdmIdsJson": [
+      "mdm-p-043",
+      "mdm-p-044"
+    ],
+    "notesInternal": "Планируется расширение портфеля",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-10-03T07:20:00Z",
+    "updatedAt": "2024-10-23T07:20:00Z"
+  },
+  {
+    "id": "rh-013",
+    "clientId": "client-001",
+    "name": "Семья Смирновых",
+    "tierKey": "B",
+    "primaryRmUserId": "user-rm-007",
+    "membersMdmIdsJson": [
+      "mdm-p-045",
+      "mdm-p-046",
+      "mdm-p-047",
+      "mdm-p-048",
+      "mdm-p-049",
+      "mdm-p-050"
+    ],
+    "notesInternal": "Регулярные квартальные обзоры",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-05-03T18:18:00Z",
+    "updatedAt": "2024-05-05T18:18:00Z"
+  },
+  {
+    "id": "rh-014",
+    "clientId": "client-002",
+    "name": "Семья Попова",
+    "tierKey": "B",
+    "primaryRmUserId": "user-rm-006",
+    "membersMdmIdsJson": [
+      "mdm-p-051",
+      "mdm-p-052",
+      "mdm-p-053",
+      "mdm-p-054",
+      "mdm-p-055",
+      "mdm-p-056"
+    ],
+    "notesInternal": "Планируется расширение портфеля",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-01-17T14:32:00Z",
+    "updatedAt": "2024-01-18T14:32:00Z"
+  },
+  {
+    "id": "rh-015",
+    "clientId": "client-003",
+    "name": "Семья Васильевых",
+    "tierKey": "B",
+    "primaryRmUserId": "user-rm-004",
+    "membersMdmIdsJson": [
+      "mdm-p-057",
+      "mdm-p-058",
+      "mdm-p-059",
+      "mdm-p-060",
+      "mdm-p-061",
+      "mdm-p-062"
+    ],
+    "notesInternal": "Регулярные квартальные обзоры",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-01-15T17:12:00Z",
+    "updatedAt": "2024-01-21T17:12:00Z"
+  },
+  {
+    "id": "rh-016",
+    "clientId": "client-004",
+    "name": "Семья Зайцевых",
+    "tierKey": "B",
+    "primaryRmUserId": "user-rm-002",
+    "membersMdmIdsJson": [
+      "mdm-p-063",
+      "mdm-p-064",
+      "mdm-p-065",
+      "mdm-p-066",
+      "mdm-p-067",
+      "mdm-p-068"
+    ],
+    "notesInternal": "Новый клиент, в процессе онбординга",
+    "clientSafeSummary": "Контактная информация актуальна",
+    "clientSafePublished": true,
+    "publishedAt": "2024-01-19T11:24:00Z",
+    "createdAt": "2024-11-26T17:10:00Z",
+    "updatedAt": "2024-12-16T17:10:00Z"
+  },
+  {
+    "id": "rh-017",
+    "clientId": "client-005",
+    "name": "Семья Павловых",
+    "tierKey": "B",
+    "primaryRmUserId": "user-rm-004",
+    "membersMdmIdsJson": [
+      "mdm-p-069",
+      "mdm-p-070",
+      "mdm-p-071"
+    ],
+    "notesInternal": "VIP-клиент с 2018 года",
+    "clientSafeSummary": "Контактная информация актуальна",
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-05-06T17:02:00Z",
+    "updatedAt": "2024-05-23T17:02:00Z"
+  },
+  {
+    "id": "rh-018",
+    "clientId": "client-006",
+    "name": "Семья Семёновых",
+    "tierKey": "B",
+    "primaryRmUserId": "user-rm-007",
+    "membersMdmIdsJson": [
+      "mdm-p-072",
+      "mdm-p-073"
+    ],
+    "notesInternal": "Новый клиент, в процессе онбординга",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-02-28T16:22:00Z",
+    "updatedAt": "2024-03-07T16:22:00Z"
+  },
+  {
+    "id": "rh-019",
+    "clientId": "client-001",
+    "name": "Семья Голубевых",
+    "tierKey": "B",
+    "primaryRmUserId": "user-rm-006",
+    "membersMdmIdsJson": [
+      "mdm-p-074",
+      "mdm-p-075",
+      "mdm-p-076",
+      "mdm-p-077",
+      "mdm-p-078"
+    ],
+    "notesInternal": "Планируется расширение портфеля",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-12-04T09:01:00Z",
+    "updatedAt": "2024-12-23T09:01:00Z"
+  },
+  {
+    "id": "rh-020",
+    "clientId": "client-002",
+    "name": "Семья Виноградовых",
+    "tierKey": "B",
+    "primaryRmUserId": "user-rm-006",
+    "membersMdmIdsJson": [
+      "mdm-p-079",
+      "mdm-p-080"
+    ],
+    "notesInternal": "Требуется согласование с юристами",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-11-18T09:11:00Z",
+    "updatedAt": "2024-12-17T09:11:00Z"
+  },
+  {
+    "id": "rh-021",
+    "clientId": "client-003",
+    "name": "Семья Богдановых",
+    "tierKey": "B",
+    "primaryRmUserId": "user-rm-004",
+    "membersMdmIdsJson": [
+      "mdm-p-081",
+      "mdm-p-082",
+      "mdm-p-083",
+      "mdm-p-084"
+    ],
+    "notesInternal": "Требует повышенного внимания",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-08-06T13:19:00Z",
+    "updatedAt": "2024-08-11T13:19:00Z"
+  },
+  {
+    "id": "rh-022",
+    "clientId": "client-004",
+    "name": "Семья Воробьёвых",
+    "tierKey": "B",
+    "primaryRmUserId": "user-rm-004",
+    "membersMdmIdsJson": [
+      "mdm-p-085",
+      "mdm-p-086",
+      "mdm-p-087"
+    ],
+    "notesInternal": "Требуется согласование с юристами",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-11-07T12:15:00Z",
+    "updatedAt": "2024-11-21T12:15:00Z"
+  },
+  {
+    "id": "rh-023",
+    "clientId": "client-005",
+    "name": "Семья Фёдоровых",
+    "tierKey": "B",
+    "primaryRmUserId": "user-rm-002",
+    "membersMdmIdsJson": [
+      "mdm-p-088",
+      "mdm-p-089"
+    ],
+    "notesInternal": "VIP-клиент с 2018 года",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-11-06T10:49:00Z",
+    "updatedAt": "2024-11-27T10:49:00Z"
+  },
+  {
+    "id": "rh-024",
+    "clientId": "client-006",
+    "name": "Семья Михайловых",
+    "tierKey": "B",
+    "primaryRmUserId": "user-rm-006",
+    "membersMdmIdsJson": [
+      "mdm-p-090",
+      "mdm-p-091",
+      "mdm-p-092",
+      "mdm-p-093"
+    ],
+    "notesInternal": "Консервативный профиль",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-01-06T14:03:00Z",
+    "updatedAt": "2024-01-14T14:03:00Z"
+  },
+  {
+    "id": "rh-025",
+    "clientId": "client-001",
+    "name": "Семья Беляевых",
+    "tierKey": "B",
+    "primaryRmUserId": "user-rm-001",
+    "membersMdmIdsJson": [
+      "mdm-p-094",
+      "mdm-p-095",
+      "mdm-p-096",
+      "mdm-p-097",
+      "mdm-p-098",
+      "mdm-p-099"
+    ],
+    "notesInternal": "Активный инвестор, частые ребалансировки",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-01-26T11:20:00Z",
+    "updatedAt": "2024-02-10T11:20:00Z"
+  },
+  {
+    "id": "rh-026",
+    "clientId": "client-002",
+    "name": "Семья Тарасовых",
+    "tierKey": "B",
+    "primaryRmUserId": "user-rm-002",
+    "membersMdmIdsJson": [
+      "mdm-p-100",
+      "mdm-p-101",
+      "mdm-p-102",
+      "mdm-p-103"
+    ],
+    "notesInternal": "Планируется расширение портфеля",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-04-17T11:27:00Z",
+    "updatedAt": "2024-04-24T11:27:00Z"
+  },
+  {
+    "id": "rh-027",
+    "clientId": "client-003",
+    "name": "Семья Белоусовых",
+    "tierKey": "B",
+    "primaryRmUserId": "user-rm-004",
+    "membersMdmIdsJson": [
+      "mdm-p-104",
+      "mdm-p-105",
+      "mdm-p-106",
+      "mdm-p-107",
+      "mdm-p-108"
+    ],
+    "notesInternal": "Семья с международными активами",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-05-27T13:03:00Z",
+    "updatedAt": "2024-06-03T13:03:00Z"
+  },
+  {
+    "id": "rh-028",
+    "clientId": "client-004",
+    "name": "Семья Комаровых",
+    "tierKey": "C",
+    "primaryRmUserId": "user-rm-006",
+    "membersMdmIdsJson": [
+      "mdm-p-109",
+      "mdm-p-110",
+      "mdm-p-111",
+      "mdm-p-112"
+    ],
+    "notesInternal": "Сложная структура владения",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-09-25T16:00:00Z",
+    "updatedAt": "2024-10-19T16:00:00Z"
+  },
+  {
+    "id": "rh-029",
+    "clientId": "client-005",
+    "name": "Семья Жуковых",
+    "tierKey": "C",
+    "primaryRmUserId": "user-rm-008",
+    "membersMdmIdsJson": [
+      "mdm-p-113",
+      "mdm-p-114",
+      "mdm-p-115",
+      "mdm-p-116",
+      "mdm-p-117",
+      "mdm-p-118"
+    ],
+    "notesInternal": "Предпочитает личные встречи",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-03-20T15:31:00Z",
+    "updatedAt": "2024-04-01T14:31:00Z"
+  },
+  {
+    "id": "rh-030",
+    "clientId": "client-006",
+    "name": "Семья Баранова",
+    "tierKey": "C",
+    "primaryRmUserId": "user-rm-001",
+    "membersMdmIdsJson": [
+      "mdm-p-119",
+      "mdm-p-120",
+      "mdm-p-121",
+      "mdm-p-122",
+      "mdm-p-123"
+    ],
+    "notesInternal": "Предпочитает общение на английском",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-03-13T07:11:00Z",
+    "updatedAt": "2024-03-24T07:11:00Z"
+  },
+  {
+    "id": "rh-031",
+    "clientId": "client-001",
+    "name": "Семья Никитиных",
+    "tierKey": "C",
+    "primaryRmUserId": "user-rm-008",
+    "membersMdmIdsJson": [
+      "mdm-p-124",
+      "mdm-p-125",
+      "mdm-p-126",
+      "mdm-p-127",
+      "mdm-p-128",
+      "mdm-p-129"
+    ],
+    "notesInternal": "Основной контакт — супруга",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-02-01T13:42:00Z",
+    "updatedAt": "2024-02-13T13:42:00Z"
+  },
+  {
+    "id": "rh-032",
+    "clientId": "client-002",
+    "name": "Семья Алексеевых",
+    "tierKey": "C",
+    "primaryRmUserId": "user-rm-003",
+    "membersMdmIdsJson": [
+      "mdm-p-130",
+      "mdm-p-131"
+    ],
+    "notesInternal": "Требует повышенного внимания",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-02-20T12:51:00Z",
+    "updatedAt": "2024-02-24T12:51:00Z"
+  },
+  {
+    "id": "rh-033",
+    "clientId": "client-003",
+    "name": "Семья Захаровых",
+    "tierKey": "C",
+    "primaryRmUserId": "user-rm-004",
+    "membersMdmIdsJson": [
+      "mdm-p-132",
+      "mdm-p-133"
+    ],
+    "notesInternal": "Стандартное обслуживание",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-11-06T13:40:00Z",
+    "updatedAt": "2024-11-20T13:40:00Z"
+  },
+  {
+    "id": "rh-034",
+    "clientId": "client-004",
+    "name": "Семья Макаровых",
+    "tierKey": "C",
+    "primaryRmUserId": "user-rm-005",
+    "membersMdmIdsJson": [
+      "mdm-p-134",
+      "mdm-p-135",
+      "mdm-p-136"
+    ],
+    "notesInternal": "Новый клиент, в процессе онбординга",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-03-25T14:06:00Z",
+    "updatedAt": "2024-04-22T13:06:00Z"
+  },
+  {
+    "id": "rh-035",
+    "clientId": "client-005",
+    "name": "Семья Давыдовых",
+    "tierKey": "C",
+    "primaryRmUserId": "user-rm-002",
+    "membersMdmIdsJson": [
+      "mdm-p-137",
+      "mdm-p-138",
+      "mdm-p-139",
+      "mdm-p-140",
+      "mdm-p-141"
+    ],
+    "notesInternal": "Требуется согласование с юристами",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-08-26T11:55:00Z",
+    "updatedAt": "2024-09-24T11:55:00Z"
+  },
+  {
+    "id": "rh-036",
+    "clientId": "client-006",
+    "name": "Семья Шубиных",
+    "tierKey": "C",
+    "primaryRmUserId": "user-rm-005",
+    "membersMdmIdsJson": [
+      "mdm-p-142",
+      "mdm-p-143",
+      "mdm-p-144",
+      "mdm-p-145",
+      "mdm-p-146",
+      "mdm-p-147"
+    ],
+    "notesInternal": "Основной контакт — супруга",
+    "clientSafeSummary": "Регулярные обзоры портфеля запланированы",
+    "clientSafePublished": true,
+    "publishedAt": "2024-06-25T09:03:00Z",
+    "createdAt": "2024-01-06T10:07:00Z",
+    "updatedAt": "2024-01-11T10:07:00Z"
+  },
+  {
+    "id": "rh-037",
+    "clientId": "client-001",
+    "name": "Семья Ковалёвых",
+    "tierKey": "C",
+    "primaryRmUserId": "user-rm-006",
+    "membersMdmIdsJson": [
+      "mdm-p-148",
+      "mdm-p-149",
+      "mdm-p-150",
+      "mdm-p-151",
+      "mdm-p-152",
+      "mdm-p-153"
+    ],
+    "notesInternal": "Активный инвестор, частые ребалансировки",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-08-17T15:12:00Z",
+    "updatedAt": "2024-09-09T15:12:00Z"
+  },
+  {
+    "id": "rh-038",
+    "clientId": "client-002",
+    "name": "Семья Ильиных",
+    "tierKey": "C",
+    "primaryRmUserId": "user-rm-003",
+    "membersMdmIdsJson": [
+      "mdm-p-154",
+      "mdm-p-155",
+      "mdm-p-156",
+      "mdm-p-157",
+      "mdm-p-158"
+    ],
+    "notesInternal": "Стандартное обслуживание",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-02-19T12:24:00Z",
+    "updatedAt": "2024-02-25T12:24:00Z"
+  },
+  {
+    "id": "rh-039",
+    "clientId": "client-003",
+    "name": "Семья Гусевых",
+    "tierKey": "C",
+    "primaryRmUserId": "user-rm-002",
+    "membersMdmIdsJson": [
+      "mdm-p-159",
+      "mdm-p-160"
+    ],
+    "notesInternal": "Сложная структура владения",
+    "clientSafeSummary": "Следующий обзор запланирован",
+    "clientSafePublished": true,
+    "publishedAt": "2025-02-14T13:21:00Z",
+    "createdAt": "2024-06-03T09:56:00Z",
+    "updatedAt": "2024-06-04T09:56:00Z"
+  },
+  {
+    "id": "rh-040",
+    "clientId": "client-004",
+    "name": "Семья Титовых",
+    "tierKey": "C",
+    "primaryRmUserId": "user-rm-005",
+    "membersMdmIdsJson": [
+      "mdm-p-161",
+      "mdm-p-162",
+      "mdm-p-163",
+      "mdm-p-164"
+    ],
+    "notesInternal": "Консервативный профиль",
+    "clientSafeSummary": null,
+    "clientSafePublished": false,
+    "publishedAt": null,
+    "createdAt": "2024-01-21T14:44:00Z",
+    "updatedAt": "2024-02-07T14:44:00Z"
+  }
+]

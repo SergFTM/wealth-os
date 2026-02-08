@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CreditFacility",
+  "description": "Credit facility (revolver, term, margin, etc.)",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client ID for multi-tenant isolation"
+    },
+    "bankId": {
+      "type": "string",
+      "description": "Reference to creditBanks"
+    },
+    "name": {
+      "type": "string",
+      "description": "Facility name"
+    },
+    "facilityTypeKey": {
+      "type": "string",
+      "enum": ["revolver", "term", "margin", "lombard", "bridge", "construction"],
+      "description": "Type of facility"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Currency code (USD, EUR, etc.)"
+    },
+    "limitAmount": {
+      "type": "number",
+      "description": "Total facility limit"
+    },
+    "drawnAmount": {
+      "type": "number",
+      "description": "Currently drawn amount"
+    },
+    "availableAmount": {
+      "type": "number",
+      "description": "Available to draw"
+    },
+    "borrowerEntityIdsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Borrower entity IDs"
+    },
+    "startAt": {
+      "type": "string",
+      "format": "date",
+      "description": "Facility start date"
+    },
+    "maturityAt": {
+      "type": "string",
+      "format": "date",
+      "description": "Facility maturity date"
+    },
+    "commitmentFeePct": {
+      "type": "number",
+      "description": "Commitment fee percentage on undrawn"
+    },
+    "statusKey": {
+      "type": "string",
+      "enum": ["active", "closed", "pending"],
+      "description": "Facility status"
+    },
+    "termsJson": {
+      "type": "object",
+      "description": "Additional terms and conditions",
+      "properties": {
+        "prepaymentPenalty": { "type": "boolean" },
+        "cleanDownRequired": { "type": "boolean" },
+        "cleanDownDays": { "type": "number" }
+      }
+    },
+    "attachmentDocIdsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Related document IDs (loan agreements, etc.)"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "clientId", "bankId", "name", "facilityTypeKey", "currency", "limitAmount", "statusKey", "createdAt", "updatedAt"]
+}

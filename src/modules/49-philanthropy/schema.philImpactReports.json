@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PhilImpactReport",
+  "description": "Impact reporting for grants",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/family ID" },
+    "grantId": { "type": "string", "description": "Parent grant ID" },
+    "entityId": { "type": "string", "description": "Entity ID" },
+    "programId": { "type": "string", "description": "Program ID" },
+    "periodStart": { "type": "string", "format": "date", "description": "Reporting period start" },
+    "periodEnd": { "type": "string", "format": "date", "description": "Reporting period end" },
+    "statusKey": {
+      "type": "string",
+      "enum": ["draft", "submitted", "published"],
+      "description": "Report status"
+    },
+    "narrativeMdRu": { "type": "string", "description": "Narrative in Russian (markdown)" },
+    "narrativeMdEn": { "type": "string", "description": "Narrative in English (markdown)" },
+    "narrativeMdUk": { "type": "string", "description": "Narrative in Ukrainian (markdown)" },
+    "metricsJson": {
+      "type": "object",
+      "description": "Impact metrics",
+      "properties": {
+        "beneficiaries": { "type": "number" },
+        "projectsCompleted": { "type": "number" },
+        "geographies": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "customMetrics": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "value": { "type": "number" },
+              "unit": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "clientSafePublished": { "type": "boolean", "default": false, "description": "Published to client portal" },
+    "portalPublicationId": { "type": "string", "description": "Portal publication ID (module 45)" },
+    "attachmentDocIdsJson": {
+      "type": "array",
+      "description": "Document vault attachment IDs",
+      "items": { "type": "string" }
+    },
+    "publishedAt": { "type": "string", "format": "date-time" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "grantId", "periodStart", "periodEnd", "statusKey", "createdAt", "updatedAt"]
+}

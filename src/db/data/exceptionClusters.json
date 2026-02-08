@@ -1,0 +1,192 @@
+[
+  {
+    "id": "exc-001",
+    "clientId": "client-1",
+    "type": "type_source",
+    "status": "active",
+    "title": "Кластер синхронизации",
+    "description": "Группировка исключений по ошибкам синхронизации",
+    "exceptionIdsJson": [
+      "ex-001",
+      "ex-008",
+      "ex-015",
+      "ex-022",
+      "ex-029",
+      "ex-036"
+    ],
+    "patternInfoJson": {
+      "commonModule": 14,
+      "errorType": "sync_error",
+      "frequency": 6,
+      "lastOccurrence": "2026-01-13T08:00:00Z"
+    },
+    "createdAt": "2026-01-08T10:00:00Z",
+    "updatedAt": "2026-01-13T08:15:00Z"
+  },
+  {
+    "id": "exc-002",
+    "clientId": "client-1",
+    "type": "type_source",
+    "status": "active",
+    "title": "Кластер сверки",
+    "description": "Группировка исключений по расхождениям при сверке",
+    "exceptionIdsJson": [
+      "ex-002",
+      "ex-009",
+      "ex-016",
+      "ex-023",
+      "ex-030",
+      "ex-037"
+    ],
+    "patternInfoJson": {
+      "commonModule": 2,
+      "errorType": "reconciliation_error",
+      "frequency": 6,
+      "lastOccurrence": "2026-01-12T09:45:00Z"
+    },
+    "createdAt": "2026-01-09T08:00:00Z",
+    "updatedAt": "2026-01-12T11:30:00Z"
+  },
+  {
+    "id": "exc-003",
+    "clientId": "client-1",
+    "type": "type_source",
+    "status": "resolved",
+    "title": "Кластер отсутствия документации",
+    "description": "Исключения, связанные с недостающей документацией",
+    "exceptionIdsJson": [
+      "ex-003",
+      "ex-010",
+      "ex-017",
+      "ex-024",
+      "ex-031",
+      "ex-038"
+    ],
+    "patternInfoJson": {
+      "commonModule": 39,
+      "errorType": "missing_document",
+      "frequency": 6,
+      "lastOccurrence": "2026-01-10T10:40:00Z"
+    },
+    "createdAt": "2026-01-09T14:00:00Z",
+    "updatedAt": "2026-01-10T13:30:00Z"
+  },
+  {
+    "id": "exc-004",
+    "clientId": "client-1",
+    "type": "title_pattern",
+    "status": "active",
+    "title": "Кластер устаревших цен",
+    "description": "Проблемы с устаревшей ценовой информацией",
+    "exceptionIdsJson": [
+      "ex-004",
+      "ex-011",
+      "ex-018",
+      "ex-025",
+      "ex-032",
+      "ex-039"
+    ],
+    "patternInfoJson": {
+      "patternKeyword": "стale_price",
+      "errorType": "data_quality",
+      "frequency": 6,
+      "severity": "mixed"
+    },
+    "createdAt": "2026-01-08T12:00:00Z",
+    "updatedAt": "2026-01-12T08:15:00Z"
+  },
+  {
+    "id": "exc-005",
+    "clientId": "client-1",
+    "type": "type_source",
+    "status": "active",
+    "title": "Кластер одобрений",
+    "description": "Исключения, связанные с процессом одобрения",
+    "exceptionIdsJson": [
+      "ex-005",
+      "ex-012",
+      "ex-019",
+      "ex-026",
+      "ex-033",
+      "ex-040"
+    ],
+    "patternInfoJson": {
+      "commonModule": 5,
+      "errorType": "approval_process",
+      "frequency": 6,
+      "lastOccurrence": "2026-01-13T07:30:00Z"
+    },
+    "createdAt": "2026-01-07T12:00:00Z",
+    "updatedAt": "2026-01-13T08:00:00Z"
+  },
+  {
+    "id": "exc-006",
+    "clientId": "client-1",
+    "type": "temporal",
+    "status": "active",
+    "title": "Кластер SLA нарушений",
+    "description": "Исключения, связанные с нарушениями SLA поставщиков",
+    "exceptionIdsJson": [
+      "ex-006",
+      "ex-013",
+      "ex-020",
+      "ex-027",
+      "ex-034"
+    ],
+    "patternInfoJson": {
+      "timeRange": "last_30_days",
+      "affectedVendors": 3,
+      "frequency": 5,
+      "severity": "critical"
+    },
+    "createdAt": "2026-01-10T08:00:00Z",
+    "updatedAt": "2026-01-13T06:15:00Z"
+  },
+  {
+    "id": "exc-007",
+    "clientId": "client-1",
+    "type": "temporal",
+    "status": "active",
+    "title": "Кластер проблем безопасности",
+    "description": "Исключения, связанные с нарушениями безопасности",
+    "exceptionIdsJson": [
+      "ex-007",
+      "ex-014",
+      "ex-021",
+      "ex-028",
+      "ex-035"
+    ],
+    "patternInfoJson": {
+      "timeRange": "last_7_days",
+      "incidentType": "security",
+      "frequency": 5,
+      "severity": "mixed"
+    },
+    "createdAt": "2026-01-08T14:00:00Z",
+    "updatedAt": "2026-01-13T10:45:00Z"
+  },
+  {
+    "id": "exc-008",
+    "clientId": "client-1",
+    "type": "type_source",
+    "status": "resolved",
+    "title": "Кластер успешных операций",
+    "description": "Исключения с положительным исходом",
+    "exceptionIdsJson": [
+      "ex-001",
+      "ex-009",
+      "ex-017",
+      "ex-026",
+      "ex-029",
+      "ex-030"
+    ],
+    "patternInfoJson": {
+      "status": "ok",
+      "closed": true,
+      "frequency": 6,
+      "resolution_rate": 100
+    },
+    "createdAt": "2026-01-08T09:00:00Z",
+    "updatedAt": "2026-01-09T17:00:00Z"
+  }
+]

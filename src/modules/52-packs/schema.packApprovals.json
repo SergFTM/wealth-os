@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PackApproval",
+  "description": "Approval request for a pack",
+  "type": "object",
+  "required": ["id", "clientId", "packId", "requestedByUserId", "approverRoleKey", "statusKey", "createdAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique approval identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/family identifier"
+    },
+    "packId": {
+      "type": "string",
+      "description": "Pack requiring approval"
+    },
+    "requestedByUserId": {
+      "type": "string",
+      "description": "User who requested approval"
+    },
+    "requestedByName": {
+      "type": "string",
+      "description": "Name of requester"
+    },
+    "approverRoleKey": {
+      "type": "string",
+      "enum": ["admin", "cfo", "controller", "compliance", "legal", "family_office_head"],
+      "description": "Required approver role"
+    },
+    "approverUserId": {
+      "type": "string",
+      "description": "Specific approver user ID if assigned"
+    },
+    "statusKey": {
+      "type": "string",
+      "enum": ["pending", "approved", "rejected", "expired"],
+      "default": "pending",
+      "description": "Approval status"
+    },
+    "decisionByUserId": {
+      "type": "string",
+      "description": "User who made the decision"
+    },
+    "decisionByName": {
+      "type": "string",
+      "description": "Name of decision maker"
+    },
+    "decisionAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Decision timestamp"
+    },
+    "notes": {
+      "type": "string",
+      "maxLength": 1000,
+      "description": "Approval/rejection notes"
+    },
+    "dueAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Approval deadline"
+    },
+    "reminderSentAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last reminder timestamp"
+    },
+    "urgencyKey": {
+      "type": "string",
+      "enum": ["low", "normal", "high", "urgent"],
+      "default": "normal",
+      "description": "Request urgency"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

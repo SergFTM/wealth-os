@@ -1,0 +1,193 @@
+[
+  {
+    "id": "mdmj-001",
+    "clientId": "c1",
+    "duplicateId": "mdd-001",
+    "recordType": "person",
+    "sourceRecordIds": [
+      "mdp-001",
+      "mdp-013"
+    ],
+    "survivorRecordId": "mdp-001",
+    "status": "pending",
+    "survivorshipPlanJson": {
+      "firstName": {
+        "sourceId": "mdp-001",
+        "value": "Александр",
+        "rule": "source_priority"
+      },
+      "lastName": {
+        "sourceId": "mdp-001",
+        "value": "Петров",
+        "rule": "source_priority"
+      },
+      "email": {
+        "sourceId": "mdp-001",
+        "value": "a.petrov@aurora.com",
+        "rule": "most_complete"
+      },
+      "phone": {
+        "sourceId": "mdp-001",
+        "value": "+7 495 123-45-67",
+        "rule": "most_recent"
+      }
+    },
+    "createdBy": "system",
+    "createdAt": "2026-01-27T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdmj-002",
+    "clientId": "c1",
+    "duplicateId": "mdd-002",
+    "recordType": "person",
+    "sourceRecordIds": [
+      "mdp-002",
+      "mdp-014"
+    ],
+    "survivorRecordId": "mdp-002",
+    "status": "pending",
+    "survivorshipPlanJson": {
+      "firstName": {
+        "sourceId": "mdp-002",
+        "value": "Елена",
+        "rule": "source_priority"
+      },
+      "lastName": {
+        "sourceId": "mdp-002",
+        "value": "Петрова",
+        "rule": "source_priority"
+      },
+      "email": {
+        "sourceId": "mdp-002",
+        "value": "e.petrova@aurora.com",
+        "rule": "most_complete"
+      }
+    },
+    "createdBy": "system",
+    "createdAt": "2026-01-27T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdmj-003",
+    "clientId": "c4",
+    "duplicateId": "mdd-006",
+    "recordType": "person",
+    "sourceRecordIds": [
+      "mdp-009",
+      "mdp-028"
+    ],
+    "survivorRecordId": "mdp-009",
+    "status": "approved",
+    "survivorshipPlanJson": {
+      "firstName": {
+        "sourceId": "mdp-009",
+        "value": "Виктор",
+        "rule": "source_priority"
+      },
+      "lastName": {
+        "sourceId": "mdp-009",
+        "value": "Морозов",
+        "rule": "source_priority"
+      },
+      "email": {
+        "sourceId": "mdp-009",
+        "value": "v.morozov@vega.com",
+        "rule": "most_complete"
+      }
+    },
+    "approvedBy": "admin",
+    "approvedAt": "2026-01-28T09:00:00Z",
+    "createdBy": "system",
+    "createdAt": "2026-01-27T11:00:00Z",
+    "updatedAt": "2026-01-28T09:00:00Z"
+  },
+  {
+    "id": "mdmj-004",
+    "clientId": "c1",
+    "duplicateId": "mdd-012",
+    "recordType": "account",
+    "sourceRecordIds": [
+      "mda-001",
+      "mda-016"
+    ],
+    "survivorRecordId": "mda-001",
+    "status": "pending",
+    "survivorshipPlanJson": {
+      "accountNumber": {
+        "sourceId": "mda-001",
+        "value": "SCHW-001",
+        "rule": "source_priority"
+      },
+      "balance": {
+        "sourceId": "mda-001",
+        "value": 25000000,
+        "rule": "most_recent"
+      }
+    },
+    "createdBy": "system",
+    "createdAt": "2026-01-27T12:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdmj-005",
+    "clientId": "c1",
+    "duplicateId": "mdd-014",
+    "recordType": "asset",
+    "sourceRecordIds": [
+      "mdas-001",
+      "mdas-015"
+    ],
+    "survivorRecordId": "mdas-001",
+    "status": "completed",
+    "survivorshipPlanJson": {
+      "ticker": {
+        "sourceId": "mdas-001",
+        "value": "AAPL",
+        "rule": "source_priority"
+      },
+      "isin": {
+        "sourceId": "mdas-001",
+        "value": "US0378331005",
+        "rule": "most_complete"
+      },
+      "quantity": {
+        "sourceId": "mdas-001",
+        "value": 15000,
+        "rule": "most_recent"
+      }
+    },
+    "completedBy": "admin",
+    "completedAt": "2026-01-28T08:00:00Z",
+    "createdBy": "system",
+    "createdAt": "2026-01-27T14:00:00Z",
+    "updatedAt": "2026-01-28T08:00:00Z"
+  },
+  {
+    "id": "mdmj-006",
+    "clientId": "c5",
+    "duplicateId": "mdd-007",
+    "recordType": "person",
+    "sourceRecordIds": [
+      "mdp-011",
+      "mdp-029"
+    ],
+    "survivorRecordId": "mdp-011",
+    "status": "pending",
+    "survivorshipPlanJson": {
+      "firstName": {
+        "sourceId": "mdp-011",
+        "value": "Игорь",
+        "rule": "source_priority"
+      },
+      "lastName": {
+        "sourceId": "mdp-011",
+        "value": "Федоров",
+        "rule": "source_priority"
+      }
+    },
+    "createdBy": "system",
+    "createdAt": "2026-01-27T15:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  }
+]

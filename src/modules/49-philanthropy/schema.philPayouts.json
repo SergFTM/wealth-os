@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PhilPayout",
+  "description": "Grant payout/disbursement",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/family ID" },
+    "grantId": { "type": "string", "description": "Parent grant ID" },
+    "entityId": { "type": "string", "description": "Entity making payment" },
+    "amount": { "type": "number", "description": "Payout amount" },
+    "currency": { "type": "string", "default": "USD" },
+    "payoutDate": { "type": "string", "format": "date", "description": "Scheduled/actual payout date" },
+    "methodKey": {
+      "type": "string",
+      "enum": ["check", "ach", "wire"],
+      "description": "Payment method"
+    },
+    "statusKey": {
+      "type": "string",
+      "enum": ["scheduled", "sent", "confirmed"],
+      "description": "Payout status"
+    },
+    "linkedPaymentId": { "type": "string", "description": "Bill Pay payment ID (module 6)" },
+    "checkNumber": { "type": "string", "description": "Check number if applicable" },
+    "referenceNo": { "type": "string", "description": "Wire/ACH reference" },
+    "approvalsIdsJson": {
+      "type": "array",
+      "description": "Approval record IDs",
+      "items": { "type": "string" }
+    },
+    "notes": { "type": "string", "description": "Payout notes" },
+    "confirmedAt": { "type": "string", "format": "date-time" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "grantId", "amount", "payoutDate", "methodKey", "statusKey", "createdAt", "updatedAt"]
+}

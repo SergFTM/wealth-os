@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CreditCovenant",
+  "description": "Covenant attached to facility or loan",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client ID for multi-tenant isolation"
+    },
+    "linkedType": {
+      "type": "string",
+      "enum": ["facility", "loan"],
+      "description": "Whether linked to facility or loan"
+    },
+    "linkedId": {
+      "type": "string",
+      "description": "Reference to facility or loan ID"
+    },
+    "name": {
+      "type": "string",
+      "description": "Covenant name"
+    },
+    "covenantTypeKey": {
+      "type": "string",
+      "enum": ["min_liquidity", "max_ltv", "min_net_worth", "max_leverage", "min_ebitda", "debt_service_coverage", "other"],
+      "description": "Type of covenant"
+    },
+    "thresholdJson": {
+      "type": "object",
+      "description": "Threshold configuration",
+      "properties": {
+        "operator": { "type": "string", "enum": [">=", "<=", ">", "<", "=="] },
+        "value": { "type": "number" },
+        "unit": { "type": "string" }
+      }
+    },
+    "currentValueJson": {
+      "type": "object",
+      "description": "Current calculated value",
+      "properties": {
+        "value": { "type": "number" },
+        "asOf": { "type": "string", "format": "date" },
+        "source": { "type": "string" }
+      }
+    },
+    "bufferPct": {
+      "type": "number",
+      "description": "Buffer percentage for at_risk threshold"
+    },
+    "statusKey": {
+      "type": "string",
+      "enum": ["ok", "at_risk", "breach"],
+      "description": "Covenant status"
+    },
+    "testFrequencyKey": {
+      "type": "string",
+      "enum": ["monthly", "quarterly", "semi_annual", "annual"],
+      "description": "Test frequency"
+    },
+    "nextTestAt": {
+      "type": "string",
+      "format": "date",
+      "description": "Next test date"
+    },
+    "lastTestAt": {
+      "type": "string",
+      "format": "date",
+      "description": "Last test date"
+    },
+    "waiverStatusKey": {
+      "type": "string",
+      "enum": ["none", "requested", "granted", "denied"],
+      "description": "Waiver status"
+    },
+    "waiverExpiresAt": {
+      "type": "string",
+      "format": "date",
+      "description": "Waiver expiration date"
+    },
+    "calculationMethodDescription": {
+      "type": "string",
+      "description": "How the covenant is calculated"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "clientId", "linkedType", "linkedId", "name", "covenantTypeKey", "thresholdJson", "statusKey", "testFrequencyKey", "createdAt", "updatedAt"]
+}

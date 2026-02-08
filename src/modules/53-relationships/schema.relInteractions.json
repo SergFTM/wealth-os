@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RelInteraction",
+  "description": "Interaction log entry",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "householdId": { "type": "string" },
+    "participantMdmIdsJson": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "interactionTypeKey": {
+      "type": "string",
+      "enum": ["meeting", "call", "message", "note"]
+    },
+    "occurredAt": { "type": "string", "format": "date-time" },
+    "summary": { "type": "string" },
+    "notesInternal": { "type": "string" },
+    "followUpDueAt": { "type": "string", "format": "date-time" },
+    "statusKey": { "type": "string", "enum": ["open", "closed"] },
+    "linkedThreadId": { "type": "string" },
+    "linkedCaseId": { "type": "string" },
+    "linkedTaskIdsJson": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "clientSafeSnippet": { "type": "string" },
+    "createdByUserId": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "participantMdmIdsJson", "interactionTypeKey", "occurredAt", "summary", "statusKey", "createdAt", "updatedAt"]
+}

@@ -1,5 +1,0 @@
-[
-  { "id": "sbpl-001", "clientId": "client-001", "jobId": "sbjob-001", "connectorId": "sbcon-001", "entityType": "transactions", "direction": "inbound", "payloadJson": {"records": [{"txn_id": "TXN-001", "amount_cents": 150000}]}, "payloadSize": 1024, "recordCount": 250, "validationJson": {"valid": true, "errors": []}, "createdAt": "2024-01-25T10:01:00Z" },
-  { "id": "sbpl-002", "clientId": "client-001", "jobId": "sbjob-001", "connectorId": "sbcon-001", "entityType": "transactions", "direction": "inbound", "payloadJson": {"records": [{"txn_id": "TXN-251", "amount_cents": 250000}]}, "payloadSize": 1024, "recordCount": 250, "validationJson": {"valid": true, "errors": []}, "createdAt": "2024-01-25T10:02:00Z" },
-  { "id": "sbpl-003", "clientId": "client-001", "jobId": "sbjob-002", "connectorId": "sbcon-001", "entityType": "accounts", "direction": "inbound", "payloadJson": {"records": [{"account_number": "123456"}]}, "payloadSize": 512, "recordCount": 25, "validationJson": {"valid": true, "errors": []}, "createdAt": "2024-01-24T14:00:30Z" }
-]

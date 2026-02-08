@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CreditLoan",
+  "description": "Individual loan drawn under a facility",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client ID for multi-tenant isolation"
+    },
+    "facilityId": {
+      "type": "string",
+      "description": "Reference to creditFacilities"
+    },
+    "name": {
+      "type": "string",
+      "description": "Loan name/identifier"
+    },
+    "borrowerEntityId": {
+      "type": "string",
+      "description": "Borrower entity ID"
+    },
+    "principalAmount": {
+      "type": "number",
+      "description": "Original principal amount"
+    },
+    "outstandingAmount": {
+      "type": "number",
+      "description": "Current outstanding balance"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Currency code"
+    },
+    "rateTypeKey": {
+      "type": "string",
+      "enum": ["fixed", "floating"],
+      "description": "Interest rate type"
+    },
+    "baseRateKey": {
+      "type": "string",
+      "enum": ["sofr", "euribor", "sonia", "prime", "libor"],
+      "description": "Base rate for floating loans"
+    },
+    "spreadPct": {
+      "type": "number",
+      "description": "Spread over base rate (bps/100)"
+    },
+    "fixedRatePct": {
+      "type": "number",
+      "description": "Fixed interest rate (for fixed rate loans)"
+    },
+    "currentRatePct": {
+      "type": "number",
+      "description": "Current all-in rate"
+    },
+    "amortizationTypeKey": {
+      "type": "string",
+      "enum": ["interest_only", "amortizing", "bullet"],
+      "description": "Amortization type"
+    },
+    "paymentFrequencyKey": {
+      "type": "string",
+      "enum": ["monthly", "quarterly", "semi_annual", "annual"],
+      "description": "Payment frequency"
+    },
+    "startAt": {
+      "type": "string",
+      "format": "date",
+      "description": "Loan start date"
+    },
+    "maturityAt": {
+      "type": "string",
+      "format": "date",
+      "description": "Loan maturity date"
+    },
+    "nextPaymentAt": {
+      "type": "string",
+      "format": "date",
+      "description": "Next payment due date"
+    },
+    "statusKey": {
+      "type": "string",
+      "enum": ["active", "paid_off", "default"],
+      "description": "Loan status"
+    },
+    "purposeDescription": {
+      "type": "string",
+      "description": "Loan purpose"
+    },
+    "attachmentDocIdsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Related document IDs"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "clientId", "facilityId", "name", "principalAmount", "currency", "rateTypeKey", "amortizationTypeKey", "paymentFrequencyKey", "startAt", "maturityAt", "statusKey", "createdAt", "updatedAt"]
+}

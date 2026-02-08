@@ -1,7 +1,0 @@
-[
-  {"id": "b1", "clientId": "c1", "portfolioId": "p1", "rule": "max_equity", "current": 72, "threshold": 70, "severity": "warning", "status": "open", "createdAt": "2026-01-28T08:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "b2", "clientId": "c2", "portfolioId": "p3", "rule": "single_position", "current": 12, "threshold": 10, "severity": "critical", "status": "open", "createdAt": "2026-01-27T14:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "b3", "clientId": "c3", "portfolioId": "p4", "rule": "min_fixed_income", "current": 18, "threshold": 20, "severity": "warning", "status": "open", "createdAt": "2026-01-26T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "b4", "clientId": "c4", "portfolioId": "p5", "rule": "cash_buffer", "current": 2, "threshold": 5, "severity": "critical", "status": "open", "createdAt": "2026-01-28T09:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "b5", "clientId": "c5", "portfolioId": "p6", "rule": "max_intl", "current": 28, "threshold": 30, "severity": "info", "status": "acknowledged", "createdAt": "2026-01-25T11:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"}
-]

@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DataGovernanceRule",
+  "description": "Data governance rule for quality, staleness, and reconciliation thresholds",
+  "type": "object",
+  "required": ["id", "clientId", "name", "ruleTypeKey", "appliesToJson", "configJson", "enabled", "createdAt", "updatedAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "description": { "type": "string", "maxLength": 1000 },
+    "ruleTypeKey": { "type": "string", "enum": ["quality_threshold", "stale_threshold", "recon_threshold", "emit_exception"] },
+    "appliesToJson": {
+      "type": "object",
+      "properties": {
+        "domains": { "type": "array", "items": { "type": "string" } },
+        "collections": { "type": "array", "items": { "type": "string" } },
+        "kpiIds": { "type": "array", "items": { "type": "string" } },
+        "allKpis": { "type": "boolean" }
+      }
+    },
+    "configJson": {
+      "type": "object",
+      "properties": {
+        "threshold": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "days": { "type": "integer", "minimum": 1 },
+        "deltaPercent": { "type": "number", "minimum": 0 },
+        "severity": { "type": "string", "enum": ["info", "warning", "critical"] },
+        "autoEmitException": { "type": "boolean" },
+        "exceptionCategory": { "type": "string" }
+      }
+    },
+    "enabled": { "type": "boolean" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

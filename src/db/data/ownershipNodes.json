@@ -1,0 +1,514 @@
+[
+  {
+    "id": "own-node-001",
+    "clientId": "client-001",
+    "name": "Smith Family Household",
+    "nodeTypeKey": "household",
+    "jurisdiction": "US",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-002",
+    "clientId": "client-001",
+    "name": "Smith Dynasty Trust",
+    "nodeTypeKey": "trust",
+    "jurisdiction": "US-SD",
+    "status": "active",
+    "mdmRefType": "entity",
+    "mdmRefId": "mdm-ent-001",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-003",
+    "clientId": "client-001",
+    "name": "Smith Holdings LLC",
+    "nodeTypeKey": "entity",
+    "jurisdiction": "US-DE",
+    "status": "active",
+    "mdmRefType": "entity",
+    "mdmRefId": "mdm-ent-002",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-004",
+    "clientId": "client-001",
+    "name": "Smith Investment LP",
+    "nodeTypeKey": "partnership",
+    "jurisdiction": "US-DE",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-005",
+    "clientId": "client-001",
+    "name": "Real Estate SPV I",
+    "nodeTypeKey": "spv",
+    "jurisdiction": "US-DE",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-006",
+    "clientId": "client-001",
+    "name": "Smith Checking Account",
+    "nodeTypeKey": "account",
+    "jurisdiction": "US",
+    "status": "active",
+    "mdmRefType": "account",
+    "mdmRefId": "mdm-acc-001",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-007",
+    "clientId": "client-001",
+    "name": "Smith Brokerage Account",
+    "nodeTypeKey": "account",
+    "jurisdiction": "US",
+    "status": "active",
+    "mdmRefType": "account",
+    "mdmRefId": "mdm-acc-002",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-008",
+    "clientId": "client-001",
+    "name": "NYC Apartment",
+    "nodeTypeKey": "asset",
+    "jurisdiction": "US-NY",
+    "status": "active",
+    "mdmRefType": "asset",
+    "mdmRefId": "mdm-ast-001",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-009",
+    "clientId": "client-001",
+    "name": "Miami Beach House",
+    "nodeTypeKey": "asset",
+    "jurisdiction": "US-FL",
+    "status": "active",
+    "mdmRefType": "asset",
+    "mdmRefId": "mdm-ast-002",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-010",
+    "clientId": "client-001",
+    "name": "Private Jet",
+    "nodeTypeKey": "asset",
+    "jurisdiction": "US",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-011",
+    "clientId": "client-001",
+    "name": "Smith GRAT 2020",
+    "nodeTypeKey": "trust",
+    "jurisdiction": "US-DE",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-012",
+    "clientId": "client-001",
+    "name": "Smith QPRT House Trust",
+    "nodeTypeKey": "trust",
+    "jurisdiction": "US-DE",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-013",
+    "clientId": "client-001",
+    "name": "Smith Charity Foundation",
+    "nodeTypeKey": "entity",
+    "jurisdiction": "US-DE",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-014",
+    "clientId": "client-001",
+    "name": "Private Equity Fund I LP",
+    "nodeTypeKey": "partnership",
+    "jurisdiction": "US-DE",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-015",
+    "clientId": "client-001",
+    "name": "Venture Fund LP",
+    "nodeTypeKey": "partnership",
+    "jurisdiction": "Cayman",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-016",
+    "clientId": "client-001",
+    "name": "Tech Startup Investment",
+    "nodeTypeKey": "asset",
+    "jurisdiction": "US-CA",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-017",
+    "clientId": "client-001",
+    "name": "Art Collection LLC",
+    "nodeTypeKey": "entity",
+    "jurisdiction": "US-WY",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-018",
+    "clientId": "client-001",
+    "name": "Classic Car Collection",
+    "nodeTypeKey": "asset",
+    "jurisdiction": "US",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-019",
+    "clientId": "client-001",
+    "name": "Swiss Bank Account",
+    "nodeTypeKey": "account",
+    "jurisdiction": "CH",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-020",
+    "clientId": "client-001",
+    "name": "UK Property Holdings Ltd",
+    "nodeTypeKey": "entity",
+    "jurisdiction": "UK",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-021",
+    "clientId": "client-001",
+    "name": "London Flat",
+    "nodeTypeKey": "asset",
+    "jurisdiction": "UK",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-022",
+    "clientId": "client-001",
+    "name": "Jersey Trust",
+    "nodeTypeKey": "trust",
+    "jurisdiction": "JE",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-023",
+    "clientId": "client-001",
+    "name": "BVI Holding Co",
+    "nodeTypeKey": "entity",
+    "jurisdiction": "BVI",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-024",
+    "clientId": "client-001",
+    "name": "Singapore Bank Account",
+    "nodeTypeKey": "account",
+    "jurisdiction": "SG",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-025",
+    "clientId": "client-001",
+    "name": "Asia Real Estate Fund",
+    "nodeTypeKey": "partnership",
+    "jurisdiction": "SG",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-026",
+    "clientId": "client-002",
+    "name": "Johnson Family Household",
+    "nodeTypeKey": "household",
+    "jurisdiction": "US",
+    "status": "active",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-027",
+    "clientId": "client-002",
+    "name": "Johnson Revocable Trust",
+    "nodeTypeKey": "trust",
+    "jurisdiction": "US-CA",
+    "status": "active",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-028",
+    "clientId": "client-002",
+    "name": "Johnson Investments LLC",
+    "nodeTypeKey": "entity",
+    "jurisdiction": "US-NV",
+    "status": "active",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-029",
+    "clientId": "client-002",
+    "name": "Tech Ventures LP",
+    "nodeTypeKey": "partnership",
+    "jurisdiction": "US-DE",
+    "status": "active",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-030",
+    "clientId": "client-002",
+    "name": "Biotech SPV",
+    "nodeTypeKey": "spv",
+    "jurisdiction": "US-DE",
+    "status": "active",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-031",
+    "clientId": "client-002",
+    "name": "Johnson Checking",
+    "nodeTypeKey": "account",
+    "jurisdiction": "US",
+    "status": "active",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-032",
+    "clientId": "client-002",
+    "name": "Johnson Brokerage",
+    "nodeTypeKey": "account",
+    "jurisdiction": "US",
+    "status": "active",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-033",
+    "clientId": "client-002",
+    "name": "Palo Alto Home",
+    "nodeTypeKey": "asset",
+    "jurisdiction": "US-CA",
+    "status": "active",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-034",
+    "clientId": "client-002",
+    "name": "Napa Vineyard",
+    "nodeTypeKey": "asset",
+    "jurisdiction": "US-CA",
+    "status": "active",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-035",
+    "clientId": "client-002",
+    "name": "Johnson ILIT",
+    "nodeTypeKey": "trust",
+    "jurisdiction": "US-DE",
+    "status": "active",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-036",
+    "clientId": "client-003",
+    "name": "Williams Family Household",
+    "nodeTypeKey": "household",
+    "jurisdiction": "US",
+    "status": "active",
+    "createdAt": "2024-03-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-037",
+    "clientId": "client-003",
+    "name": "Williams Family Trust",
+    "nodeTypeKey": "trust",
+    "jurisdiction": "US-NV",
+    "status": "active",
+    "createdAt": "2024-03-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-038",
+    "clientId": "client-003",
+    "name": "Williams Capital LLC",
+    "nodeTypeKey": "entity",
+    "jurisdiction": "US-WY",
+    "status": "active",
+    "createdAt": "2024-03-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-039",
+    "clientId": "client-003",
+    "name": "Energy Investments LP",
+    "nodeTypeKey": "partnership",
+    "jurisdiction": "US-TX",
+    "status": "active",
+    "createdAt": "2024-03-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-040",
+    "clientId": "client-003",
+    "name": "Oil & Gas SPV",
+    "nodeTypeKey": "spv",
+    "jurisdiction": "US-TX",
+    "status": "active",
+    "createdAt": "2024-03-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-041",
+    "clientId": "client-001",
+    "name": "Smith Family Office",
+    "nodeTypeKey": "entity",
+    "jurisdiction": "US-DE",
+    "status": "active",
+    "createdAt": "2024-01-15T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-042",
+    "clientId": "client-001",
+    "name": "Smith Operating Account",
+    "nodeTypeKey": "account",
+    "jurisdiction": "US",
+    "status": "active",
+    "createdAt": "2024-01-15T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-043",
+    "clientId": "client-001",
+    "name": "Hedge Fund LP",
+    "nodeTypeKey": "partnership",
+    "jurisdiction": "Cayman",
+    "status": "active",
+    "createdAt": "2024-01-20T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-044",
+    "clientId": "client-001",
+    "name": "Credit Fund LP",
+    "nodeTypeKey": "partnership",
+    "jurisdiction": "Cayman",
+    "status": "active",
+    "createdAt": "2024-01-20T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-045",
+    "clientId": "client-001",
+    "name": "Real Estate Fund II",
+    "nodeTypeKey": "partnership",
+    "jurisdiction": "US-DE",
+    "status": "active",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-046",
+    "clientId": "client-001",
+    "name": "Commercial Property SPV",
+    "nodeTypeKey": "spv",
+    "jurisdiction": "US-DE",
+    "status": "active",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-047",
+    "clientId": "client-001",
+    "name": "Office Building A",
+    "nodeTypeKey": "asset",
+    "jurisdiction": "US-NY",
+    "status": "active",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-048",
+    "clientId": "client-001",
+    "name": "Retail Center B",
+    "nodeTypeKey": "asset",
+    "jurisdiction": "US-TX",
+    "status": "active",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-049",
+    "clientId": "client-001",
+    "name": "Industrial Park C",
+    "nodeTypeKey": "asset",
+    "jurisdiction": "US-GA",
+    "status": "active",
+    "createdAt": "2024-02-15T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-node-050",
+    "clientId": "client-001",
+    "name": "Smith Kids Education Trust",
+    "nodeTypeKey": "trust",
+    "jurisdiction": "US-SD",
+    "status": "active",
+    "createdAt": "2024-03-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  }
+]

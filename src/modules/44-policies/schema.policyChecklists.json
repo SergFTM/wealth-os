@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PolicyChecklist",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string" },
+    "linkedSopId": { "type": "string" },
+    "linkedSopTitle": { "type": "string" },
+    "stepsJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "orderIndex": { "type": "integer" },
+          "title": { "type": "string" },
+          "description": { "type": "string" },
+          "responsibleRole": { "type": "string" }
+        },
+        "required": ["orderIndex", "title"]
+      }
+    },
+    "usageCount": { "type": "integer", "default": 0 },
+    "lastUsedAt": { "type": "string", "format": "date-time" },
+    "createdByUserId": { "type": "string" },
+    "createdByName": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "name", "stepsJson"]
+}

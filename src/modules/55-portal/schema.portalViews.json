@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "portalUserId": { "type": "string" },
+    "actionKey": { "type": "string", "enum": ["view", "download"] },
+    "targetRefJson": {
+      "type": "object",
+      "properties": {
+        "collection": { "type": "string" },
+        "id": { "type": "string" }
+      },
+      "required": ["collection", "id"]
+    },
+    "at": { "type": "string", "format": "date-time" },
+    "ipMasked": { "type": "string" },
+    "metaJson": { "type": "object" }
+  },
+  "required": ["id", "portalUserId", "actionKey", "targetRefJson", "at"]
+}

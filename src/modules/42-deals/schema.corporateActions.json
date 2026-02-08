@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CorporateAction",
+  "type": "object",
+  "required": ["clientId", "ticker", "actionType", "effectiveDate", "status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/family ID"
+    },
+    "ticker": {
+      "type": "string",
+      "description": "Security ticker symbol"
+    },
+    "securityName": {
+      "type": "string",
+      "description": "Full security name"
+    },
+    "actionType": {
+      "type": "string",
+      "enum": ["dividend", "split", "reverse_split", "merger", "acquisition", "tender", "spin_off", "rights_issue", "name_change", "symbol_change"],
+      "description": "Type of corporate action"
+    },
+    "effectiveDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the action takes effect"
+    },
+    "recordDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Record date for eligibility"
+    },
+    "exDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Ex-dividend/ex-distribution date"
+    },
+    "paymentDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Payment date (for dividends/distributions)"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["planned", "announced", "processed", "cancelled"],
+      "description": "Processing status"
+    },
+    "detailsJson": {
+      "type": "object",
+      "description": "Action-specific details (ratio, rate, terms)",
+      "properties": {
+        "ratio": { "type": "string" },
+        "rate": { "type": "number" },
+        "currency": { "type": "string" },
+        "cashAmount": { "type": "number" },
+        "newTicker": { "type": "string" },
+        "newName": { "type": "string" },
+        "acquirerTicker": { "type": "string" },
+        "terms": { "type": "string" }
+      }
+    },
+    "impactJson": {
+      "type": "object",
+      "description": "Calculated impact on positions",
+      "properties": {
+        "affectedPositions": { "type": "number" },
+        "affectedShares": { "type": "number" },
+        "estimatedCashImpact": { "type": "number" },
+        "estimatedTaxImpact": { "type": "number" },
+        "newShares": { "type": "number" },
+        "costBasisAdjustment": { "type": "number" }
+      }
+    },
+    "linkedPostingIdsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "GL transaction posting IDs created"
+    },
+    "linkedTaxLotIdsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Tax lot IDs affected"
+    },
+    "attachmentDocIdsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Document vault attachment IDs"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Internal notes"
+    },
+    "processedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the action was processed"
+    },
+    "processedBy": {
+      "type": "string",
+      "description": "User who processed the action"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

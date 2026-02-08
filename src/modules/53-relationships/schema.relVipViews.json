@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RelVipView",
+  "description": "VIP household computed view",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "householdId": { "type": "string" },
+    "computedAt": { "type": "string", "format": "date-time" },
+    "snapshotJson": {
+      "type": "object",
+      "properties": {
+        "openItems": { "type": "integer" },
+        "openInitiatives": { "type": "integer" },
+        "overdueFollowups": { "type": "integer" },
+        "pendingApprovals": { "type": "integer" },
+        "nextMeeting": { "type": "string", "format": "date-time" },
+        "nextMeetingTitle": { "type": "string" },
+        "cashAlertSummary": { "type": "string" },
+        "recentChanges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string" },
+              "summary": { "type": "string" },
+              "timestamp": { "type": "string" }
+            }
+          }
+        },
+        "alerts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "level": { "type": "string" },
+              "message": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "createdAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "householdId", "computedAt", "snapshotJson", "createdAt"]
+}

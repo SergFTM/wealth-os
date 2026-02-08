@@ -1,8 +1,0 @@
-[
-  {"id": "inv1", "clientId": "c1", "number": "INV-2026-001", "amount": 312500, "status": "pending", "dueDate": "2026-02-15", "type": "management_fee", "createdAt": "2026-01-15T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "inv2", "clientId": "c2", "number": "INV-2026-002", "amount": 212500, "status": "paid", "dueDate": "2026-01-15", "type": "management_fee", "createdAt": "2026-01-01T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "inv3", "clientId": "c3", "number": "INV-2026-003", "amount": 135000, "status": "overdue", "dueDate": "2026-01-01", "type": "advisory_fee", "createdAt": "2025-12-15T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "inv4", "clientId": "c4", "number": "INV-2026-004", "amount": 167500, "status": "pending", "dueDate": "2026-02-01", "type": "performance_fee", "createdAt": "2026-01-10T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "inv5", "clientId": "c5", "number": "INV-2026-005", "amount": 22500, "status": "pending", "dueDate": "2026-02-10", "type": "admin_fee", "createdAt": "2026-01-20T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "inv6", "clientId": "c6", "number": "INV-2026-006", "amount": 250000, "status": "draft", "dueDate": "2026-02-20", "type": "management_fee", "createdAt": "2026-01-25T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"}
-]

@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GovernancePolicy",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string" },
+    "categoryKey": {
+      "type": "string",
+      "enum": ["spending", "distribution", "investment", "governance", "succession", "education", "philanthropy", "employment", "conflict", "other"]
+    },
+    "version": { "type": "string" },
+    "bodyMdRu": { "type": "string" },
+    "bodyMdEn": { "type": "string" },
+    "bodyMdUk": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "active", "archived", "under_review"] },
+    "effectiveDate": { "type": "string", "format": "date" },
+    "reviewDate": { "type": "string", "format": "date" },
+    "approvedBy": { "type": "string" },
+    "approvedAt": { "type": "string", "format": "date-time" },
+    "linkedTrustId": { "type": "string" },
+    "linkedIpsId": { "type": "string" },
+    "clientSafePublished": { "type": "boolean", "default": false },
+    "acknowledgementRequired": { "type": "boolean", "default": false },
+    "acknowledgementsJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "userId": { "type": "string" },
+          "acknowledgedAt": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "attachmentDocIds": { "type": "array", "items": { "type": "string" } },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "name", "categoryKey", "status"]
+}

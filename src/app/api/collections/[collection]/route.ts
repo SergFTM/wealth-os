@@ -44,7 +44,33 @@ const VALID_COLLECTIONS: Collection[] = [
   'aiTriageItems', 'aiFeedback', 'aiPolicies',
   // Deals & Corporate Actions collections
   'deals', 'dealStages', 'dealTransactions',
-  'corporateActions', 'capitalEvents', 'dealApprovals', 'dealDocuments'
+  'corporateActions', 'capitalEvents', 'dealApprovals', 'dealDocuments',
+  // Family Governance collections (Module 40)
+  'gvMeetings', 'gvAgendaItems', 'gvDecisions', 'gvVotes',
+  'gvPolicies', 'gvActionItems', 'gvMinutes',
+  // Calendar and Meetings collections (Module 41)
+  'calendarEvents', 'meetingAgenda', 'meetingNotes',
+  'meetingActionItems', 'calendarIntegrations',
+  // Deals and Corporate Actions collections (Module 42)
+  'dlCorporateActions', 'dlPrivateDeals', 'dlFundEvents',
+  'dlChecklists', 'dlApprovals', 'dlDocs',
+  // Vendors and Service Providers collections (Module 43)
+  'vdVendors', 'vdContracts', 'vdSlas',
+  'vdScorecards', 'vdIncidents', 'vdInvoices',
+  // Master Data Management collections (Module 46)
+  'mdmPeople', 'mdmEntities', 'mdmAccounts', 'mdmAssets',
+  'mdmDuplicates', 'mdmMergeJobs', 'mdmStewardQueue', 'mdmRules',
+  // Exception Center collections (Module 48)
+  'exceptions', 'exceptionClusters', 'exceptionRules', 'exceptionSlaPolicies',
+  // Advisor Packs collections (Module 52)
+  'reportPacks', 'packTemplates', 'packItems', 'packShares', 'packApprovals', 'packDownloads',
+  // Relationship Hub collections (Module 53)
+  'relHouseholds', 'relRelationships', 'relInteractions',
+  'relInitiatives', 'relCoverage', 'relVipViews',
+  // Consent & Privacy Center collections (Module 54)
+  'consents', 'consentRequests', 'privacyPolicies', 'accessReviews', 'consentConflicts',
+  // Client Portal & Client Safe Experience collections (Module 55)
+  'portalUsers', 'portalSessions', 'portalViews', 'portalRequests', 'portalAnnouncements'
 ];
 
 type RouteParams = Promise<{ collection: string }>;

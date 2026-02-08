@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vendor",
+  "description": "External vendor or service provider",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/Family office ID" },
+    "name": { "type": "string", "description": "Vendor name" },
+    "vendorType": {
+      "type": "string",
+      "enum": ["bank", "broker", "auditor", "legal", "tax_advisor", "custodian", "it", "insurance", "consultant", "other"],
+      "description": "Type of vendor"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "paused", "onboarding", "terminated"],
+      "description": "Current vendor status"
+    },
+    "primaryContactJson": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "phone": { "type": "string" },
+        "title": { "type": "string" }
+      },
+      "description": "Primary contact information"
+    },
+    "servicesJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Services provided by vendor"
+    },
+    "regionsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Regions/jurisdictions vendor operates in"
+    },
+    "riskRatingKey": {
+      "type": "string",
+      "enum": ["low", "medium", "high"],
+      "description": "Risk rating of vendor"
+    },
+    "onboardingJson": {
+      "type": "object",
+      "properties": {
+        "kycStatus": { "type": "string", "enum": ["pending", "in_progress", "completed", "expired"] },
+        "kybStatus": { "type": "string", "enum": ["pending", "in_progress", "completed", "expired"] },
+        "securityQuestionnaireStatus": { "type": "string", "enum": ["pending", "in_progress", "completed", "expired"] },
+        "accessSetupStatus": { "type": "string", "enum": ["pending", "in_progress", "completed"] },
+        "linkedKycCaseId": { "type": "string" },
+        "linkedSecurityCenterId": { "type": "string" },
+        "completedAt": { "type": "string", "format": "date-time" }
+      },
+      "description": "Onboarding status"
+    },
+    "website": { "type": "string", "format": "uri" },
+    "addressJson": {
+      "type": "object",
+      "properties": {
+        "street": { "type": "string" },
+        "city": { "type": "string" },
+        "state": { "type": "string" },
+        "country": { "type": "string" },
+        "postalCode": { "type": "string" }
+      }
+    },
+    "notes": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["name", "vendorType", "status"]
+}

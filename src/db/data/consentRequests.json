@@ -1,0 +1,2003 @@
+[
+  {
+    "id": "cr-001",
+    "clientId": "client-1",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-6",
+      "label": "Laura Fitzgerald (Goldman Sachs)"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "billing",
+        "tax",
+        "compliance"
+      ],
+      "entityIdsJson": [
+        "entity-9",
+        "entity-4",
+        "entity-3"
+      ],
+      "description": "Export donation receipts for philanthropic records"
+    },
+    "statusKey": "pending",
+    "dueAt": null,
+    "decisionNotes": null,
+    "linkedConsentId": null,
+    "createdAt": "2025-09-26T12:20:00Z",
+    "updatedAt": "2025-10-06T11:31:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-002",
+    "clientId": "client-2",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-8",
+      "label": "BNY Mellon Pershing"
+    },
+    "requestTypeKey": "correct",
+    "scopeJson": {
+      "modulesJson": [
+        "trusts",
+        "compliance",
+        "cash-flow",
+        "portfolios"
+      ],
+      "entityIdsJson": [
+        "entity-6",
+        "entity-9",
+        "entity-8"
+      ],
+      "description": "Grant temporary access for M&A due diligence team"
+    },
+    "statusKey": "fulfilled",
+    "dueAt": "2025-11-24",
+    "decisionNotes": "Approved with restrictions: download disabled, view-only access granted",
+    "linkedConsentId": "co-009",
+    "createdAt": "2024-09-16T15:03:00Z",
+    "updatedAt": "2026-01-23T16:46:00Z",
+    "fulfilledAt": "2025-11-05T16:07:00Z"
+  },
+  {
+    "id": "cr-003",
+    "clientId": "client-3",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-13",
+      "label": "Thomas Keller (BNP Paribas)"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "portfolios",
+        "net-worth",
+        "trusts",
+        "compliance"
+      ],
+      "entityIdsJson": [
+        "entity-4"
+      ],
+      "description": "Correct tax identification numbers across entities"
+    },
+    "statusKey": "approved",
+    "dueAt": "2025-06-24",
+    "decisionNotes": "Approved conditionally: access expires in 90 days",
+    "linkedConsentId": "co-047",
+    "createdAt": "2024-10-12T08:48:00Z",
+    "updatedAt": "2025-10-10T17:58:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-004",
+    "clientId": "client-4",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-5",
+      "label": "Broadridge Financial"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "portfolios"
+      ],
+      "entityIdsJson": [
+        "entity-9",
+        "entity-4",
+        "entity-5"
+      ],
+      "description": "Export AML documentation package for regulator"
+    },
+    "statusKey": "approved",
+    "dueAt": null,
+    "decisionNotes": "Fulfilled within SLA; confirmation sent to requester",
+    "linkedConsentId": "co-114",
+    "createdAt": "2025-12-06T12:53:00Z",
+    "updatedAt": "2026-01-24T09:32:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-005",
+    "clientId": "client-5",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-13",
+      "label": "Patricia Kensington (Admin)"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "trusts",
+        "portfolios"
+      ],
+      "entityIdsJson": [
+        "entity-9"
+      ],
+      "description": "New access request for estate planning counsel"
+    },
+    "statusKey": "pending",
+    "dueAt": "2025-10-13",
+    "decisionNotes": null,
+    "linkedConsentId": "co-174",
+    "createdAt": "2025-03-20T10:17:00Z",
+    "updatedAt": "2026-02-03T14:21:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-006",
+    "clientId": "client-1",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-1",
+      "label": "Addepar Platform Services"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "net-worth",
+        "reporting",
+        "entities",
+        "risk"
+      ],
+      "entityIdsJson": [
+        "entity-10"
+      ],
+      "description": "Export quarterly performance reports for external review"
+    },
+    "statusKey": "pending",
+    "dueAt": "2025-12-13",
+    "decisionNotes": null,
+    "linkedConsentId": "co-152",
+    "createdAt": "2025-01-09T16:19:00Z",
+    "updatedAt": "2026-02-15T09:40:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-007",
+    "clientId": "client-2",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-9",
+      "label": "Susan Brighton (Legal Counsel)"
+    },
+    "requestTypeKey": "export",
+    "scopeJson": {
+      "modulesJson": [
+        "risk"
+      ],
+      "entityIdsJson": [
+        "entity-6"
+      ],
+      "description": "Grant new access for incoming tax advisor for FY2025 planning"
+    },
+    "statusKey": "fulfilled",
+    "dueAt": null,
+    "decisionNotes": "Approved per standard data subject access request procedure",
+    "linkedConsentId": null,
+    "createdAt": "2024-06-07T10:27:00Z",
+    "updatedAt": "2026-02-21T17:32:00Z",
+    "fulfilledAt": "2025-11-17T10:57:00Z"
+  },
+  {
+    "id": "cr-008",
+    "clientId": "client-3",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-14",
+      "label": "Martin Waverly (Analyst)"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "net-worth"
+      ],
+      "entityIdsJson": [
+        "entity-4",
+        "entity-2",
+        "entity-9"
+      ],
+      "description": "New access for real estate management team"
+    },
+    "statusKey": "pending",
+    "dueAt": null,
+    "decisionNotes": null,
+    "linkedConsentId": "co-029",
+    "createdAt": "2025-04-11T13:36:00Z",
+    "updatedAt": "2025-12-01T08:25:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-009",
+    "clientId": "client-4",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-20",
+      "label": "Leonard Alpine (Operations Analyst)"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "billing"
+      ],
+      "entityIdsJson": [
+        "entity-8",
+        "entity-1"
+      ],
+      "description": "Correct accrued interest calculations on bonds"
+    },
+    "statusKey": "approved",
+    "dueAt": null,
+    "decisionNotes": "Approved conditionally: access expires in 90 days",
+    "linkedConsentId": null,
+    "createdAt": "2024-09-29T14:35:00Z",
+    "updatedAt": "2025-12-14T12:35:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-010",
+    "clientId": "client-5",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-24",
+      "label": "Victoria Stanton (Schroders)"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "tax"
+      ],
+      "entityIdsJson": [
+        "entity-5"
+      ],
+      "description": "Delete personal notes from shared workspace"
+    },
+    "statusKey": "fulfilled",
+    "dueAt": "2026-01-10",
+    "decisionNotes": "Approved conditionally: access expires in 90 days",
+    "linkedConsentId": "co-069",
+    "createdAt": "2025-06-08T12:37:00Z",
+    "updatedAt": "2025-12-27T11:12:00Z",
+    "fulfilledAt": "2025-10-13T10:53:00Z"
+  },
+  {
+    "id": "cr-011",
+    "clientId": "client-1",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-9",
+      "label": "Susan Brighton (Legal Counsel)"
+    },
+    "requestTypeKey": "export",
+    "scopeJson": {
+      "modulesJson": [
+        "portfolios"
+      ],
+      "entityIdsJson": [
+        "entity-4",
+        "entity-8",
+        "entity-3"
+      ],
+      "description": "Delete outdated KYC documents per refresh cycle"
+    },
+    "statusKey": "fulfilled",
+    "dueAt": "2026-02-13",
+    "decisionNotes": "Fulfilled within SLA; confirmation sent to requester",
+    "linkedConsentId": null,
+    "createdAt": "2025-09-03T17:53:00Z",
+    "updatedAt": "2026-02-23T11:26:00Z",
+    "fulfilledAt": "2025-11-20T14:49:00Z"
+  },
+  {
+    "id": "cr-012",
+    "clientId": "client-2",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-5",
+      "label": "Broadridge Financial"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "documents",
+        "trusts",
+        "cash-flow",
+        "portfolios"
+      ],
+      "entityIdsJson": [
+        "entity-1",
+        "entity-4",
+        "entity-10"
+      ],
+      "description": "New access for succession planning advisor"
+    },
+    "statusKey": "approved",
+    "dueAt": "2025-08-01",
+    "decisionNotes": "Rejected: duplicate of existing request CR-045",
+    "linkedConsentId": null,
+    "createdAt": "2025-05-30T13:44:00Z",
+    "updatedAt": "2026-02-15T12:47:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-013",
+    "clientId": "client-3",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-15",
+      "label": "Rebecca Sterling (Reporting Lead)"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "trusts",
+        "reporting",
+        "documents"
+      ],
+      "entityIdsJson": [
+        "entity-8",
+        "entity-3",
+        "entity-4"
+      ],
+      "description": "Delete provisional access after audit completion"
+    },
+    "statusKey": "rejected",
+    "dueAt": "2026-02-19",
+    "decisionNotes": "Rejected: insufficient justification provided; please resubmit with manager approval",
+    "linkedConsentId": "co-141",
+    "createdAt": "2025-08-03T15:02:00Z",
+    "updatedAt": "2025-12-02T08:21:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-014",
+    "clientId": "client-4",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-4",
+      "label": "Charles Windsor (Trustee)"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "trusts",
+        "reporting"
+      ],
+      "entityIdsJson": [
+        "entity-4",
+        "entity-6"
+      ],
+      "description": "Correct currency denomination on foreign accounts"
+    },
+    "statusKey": "pending",
+    "dueAt": null,
+    "decisionNotes": null,
+    "linkedConsentId": "co-156",
+    "createdAt": "2025-01-19T14:26:00Z",
+    "updatedAt": "2025-12-25T12:01:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-015",
+    "clientId": "client-5",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-12",
+      "label": "DocuSign CLM"
+    },
+    "requestTypeKey": "export",
+    "scopeJson": {
+      "modulesJson": [
+        "compliance"
+      ],
+      "entityIdsJson": [
+        "entity-1",
+        "entity-2",
+        "entity-3"
+      ],
+      "description": "Grant new access for incoming tax advisor for FY2025 planning"
+    },
+    "statusKey": "approved",
+    "dueAt": "2025-07-21",
+    "decisionNotes": "Approved conditionally: access expires in 90 days",
+    "linkedConsentId": null,
+    "createdAt": "2025-01-09T09:35:00Z",
+    "updatedAt": "2025-12-04T11:01:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-016",
+    "clientId": "client-1",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-1",
+      "label": "Anna Whitfield (Family Principal)"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "net-worth",
+        "portfolios",
+        "entities",
+        "billing"
+      ],
+      "entityIdsJson": [
+        "entity-5",
+        "entity-1",
+        "entity-2"
+      ],
+      "description": "Export trust distribution records for court filing"
+    },
+    "statusKey": "pending",
+    "dueAt": "2026-02-20",
+    "decisionNotes": null,
+    "linkedConsentId": "co-009",
+    "createdAt": "2025-12-15T13:06:00Z",
+    "updatedAt": "2025-11-22T08:53:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-017",
+    "clientId": "client-2",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-7",
+      "label": "James Mortimer (JP Morgan)"
+    },
+    "requestTypeKey": "export",
+    "scopeJson": {
+      "modulesJson": [
+        "trusts",
+        "tax",
+        "billing"
+      ],
+      "entityIdsJson": [
+        "entity-4",
+        "entity-7",
+        "entity-10"
+      ],
+      "description": "Correct accrued interest calculations on bonds"
+    },
+    "statusKey": "pending",
+    "dueAt": "2026-05-08",
+    "decisionNotes": null,
+    "linkedConsentId": null,
+    "createdAt": "2025-01-01T09:43:00Z",
+    "updatedAt": "2025-12-07T10:32:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-018",
+    "clientId": "client-3",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-9",
+      "label": "Refinitiv (LSEG)"
+    },
+    "requestTypeKey": "correct",
+    "scopeJson": {
+      "modulesJson": [
+        "documents",
+        "entities",
+        "transactions"
+      ],
+      "entityIdsJson": [
+        "entity-1",
+        "entity-10"
+      ],
+      "description": "Export all documents tagged as litigation-hold"
+    },
+    "statusKey": "pending",
+    "dueAt": "2026-02-11",
+    "decisionNotes": null,
+    "linkedConsentId": null,
+    "createdAt": "2025-06-20T09:04:00Z",
+    "updatedAt": "2025-10-01T08:01:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-019",
+    "clientId": "client-4",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-14",
+      "label": "Clearwater Analytics"
+    },
+    "requestTypeKey": "correct",
+    "scopeJson": {
+      "modulesJson": [
+        "trusts",
+        "risk",
+        "transactions",
+        "portfolios"
+      ],
+      "entityIdsJson": [
+        "entity-4",
+        "entity-7"
+      ],
+      "description": "Grant vendor access for system migration project"
+    },
+    "statusKey": "approved",
+    "dueAt": "2025-07-08",
+    "decisionNotes": "Approved by compliance officer; evidence pack attached",
+    "linkedConsentId": null,
+    "createdAt": "2025-12-29T12:55:00Z",
+    "updatedAt": "2026-01-28T12:57:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-020",
+    "clientId": "client-5",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-9",
+      "label": "Refinitiv (LSEG)"
+    },
+    "requestTypeKey": "correct",
+    "scopeJson": {
+      "modulesJson": [
+        "net-worth",
+        "reporting",
+        "risk",
+        "compliance"
+      ],
+      "entityIdsJson": [
+        "entity-4",
+        "entity-3"
+      ],
+      "description": "Grant temporary access for M&A due diligence team"
+    },
+    "statusKey": "pending",
+    "dueAt": "2025-09-28",
+    "decisionNotes": null,
+    "linkedConsentId": null,
+    "createdAt": "2024-09-19T14:01:00Z",
+    "updatedAt": "2025-11-01T12:04:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-021",
+    "clientId": "client-1",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-21",
+      "label": "Frederick Hartmann (Deutsche Bank)"
+    },
+    "requestTypeKey": "export",
+    "scopeJson": {
+      "modulesJson": [
+        "cash-flow"
+      ],
+      "entityIdsJson": [
+        "entity-3",
+        "entity-4"
+      ],
+      "description": "Correct beneficiary designation on legacy accounts"
+    },
+    "statusKey": "fulfilled",
+    "dueAt": "2025-08-04",
+    "decisionNotes": "Fulfilled within SLA; confirmation sent to requester",
+    "linkedConsentId": "co-175",
+    "createdAt": "2024-11-29T08:01:00Z",
+    "updatedAt": "2025-09-29T09:53:00Z",
+    "fulfilledAt": "2026-01-07T14:31:00Z"
+  },
+  {
+    "id": "cr-022",
+    "clientId": "client-2",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-3",
+      "label": "Eze Software (SS&C)"
+    },
+    "requestTypeKey": "correct",
+    "scopeJson": {
+      "modulesJson": [
+        "entities",
+        "documents"
+      ],
+      "entityIdsJson": [
+        "entity-7",
+        "entity-1"
+      ],
+      "description": "Correct beneficial owner chain of control data"
+    },
+    "statusKey": "approved",
+    "dueAt": "2025-06-01",
+    "decisionNotes": "Approved per standard data subject access request procedure",
+    "linkedConsentId": null,
+    "createdAt": "2025-03-25T15:41:00Z",
+    "updatedAt": "2025-11-18T12:51:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-023",
+    "clientId": "client-3",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-1",
+      "label": "Addepar Platform Services"
+    },
+    "requestTypeKey": "export",
+    "scopeJson": {
+      "modulesJson": [
+        "compliance",
+        "net-worth",
+        "billing"
+      ],
+      "entityIdsJson": [
+        "entity-7",
+        "entity-5"
+      ],
+      "description": "Export AML documentation package for regulator"
+    },
+    "statusKey": "approved",
+    "dueAt": "2026-06-02",
+    "decisionNotes": "Approved per standard data subject access request procedure",
+    "linkedConsentId": "co-136",
+    "createdAt": "2024-09-28T11:18:00Z",
+    "updatedAt": "2025-11-23T11:02:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-024",
+    "clientId": "client-4",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-5",
+      "label": "Margaret Harrington (COO)"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "compliance",
+        "portfolios",
+        "documents",
+        "cash-flow"
+      ],
+      "entityIdsJson": [
+        "entity-7",
+        "entity-2",
+        "entity-4"
+      ],
+      "description": "Delete duplicate records from data quality cleanup"
+    },
+    "statusKey": "pending",
+    "dueAt": null,
+    "decisionNotes": null,
+    "linkedConsentId": "co-052",
+    "createdAt": "2024-11-20T10:16:00Z",
+    "updatedAt": "2025-10-28T16:31:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-025",
+    "clientId": "client-5",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-1",
+      "label": "Addepar Platform Services"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "risk",
+        "billing"
+      ],
+      "entityIdsJson": [
+        "entity-4"
+      ],
+      "description": "New access request for estate planning counsel"
+    },
+    "statusKey": "pending",
+    "dueAt": "2025-12-09",
+    "decisionNotes": null,
+    "linkedConsentId": "co-046",
+    "createdAt": "2025-11-16T10:17:00Z",
+    "updatedAt": "2025-11-13T09:40:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-026",
+    "clientId": "client-1",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-3",
+      "label": "Eze Software (SS&C)"
+    },
+    "requestTypeKey": "correct",
+    "scopeJson": {
+      "modulesJson": [
+        "transactions"
+      ],
+      "entityIdsJson": [
+        "entity-3"
+      ],
+      "description": "Correct currency denomination on foreign accounts"
+    },
+    "statusKey": "fulfilled",
+    "dueAt": "2025-06-28",
+    "decisionNotes": "Approved by compliance officer; evidence pack attached",
+    "linkedConsentId": null,
+    "createdAt": "2025-06-08T15:04:00Z",
+    "updatedAt": "2025-12-27T13:37:00Z",
+    "fulfilledAt": "2025-12-26T12:29:00Z"
+  },
+  {
+    "id": "cr-027",
+    "clientId": "client-2",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-6",
+      "label": "Edward Lancaster (Controller)"
+    },
+    "requestTypeKey": "export",
+    "scopeJson": {
+      "modulesJson": [
+        "net-worth",
+        "billing",
+        "portfolios",
+        "risk"
+      ],
+      "entityIdsJson": [
+        "entity-8",
+        "entity-4"
+      ],
+      "description": "New access request for estate planning counsel"
+    },
+    "statusKey": "rejected",
+    "dueAt": "2026-05-06",
+    "decisionNotes": "Approved conditionally: access expires in 90 days",
+    "linkedConsentId": null,
+    "createdAt": "2025-03-25T13:23:00Z",
+    "updatedAt": "2026-01-19T10:05:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-028",
+    "clientId": "client-3",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-30",
+      "label": "Anastasia Volkov (Hogan Lovells)"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "risk",
+        "net-worth",
+        "tax"
+      ],
+      "entityIdsJson": [
+        "entity-8",
+        "entity-5",
+        "entity-9"
+      ],
+      "description": "Correct currency denomination on foreign accounts"
+    },
+    "statusKey": "pending",
+    "dueAt": "2026-05-17",
+    "decisionNotes": null,
+    "linkedConsentId": null,
+    "createdAt": "2024-07-28T16:34:00Z",
+    "updatedAt": "2025-11-09T17:17:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-029",
+    "clientId": "client-4",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-21",
+      "label": "Frederick Hartmann (Deutsche Bank)"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "documents",
+        "trusts",
+        "compliance"
+      ],
+      "entityIdsJson": [
+        "entity-6",
+        "entity-10",
+        "entity-1"
+      ],
+      "description": "Correct entity classification from LLC to LP"
+    },
+    "statusKey": "fulfilled",
+    "dueAt": "2025-08-18",
+    "decisionNotes": "Fulfilled within SLA; confirmation sent to requester",
+    "linkedConsentId": "co-093",
+    "createdAt": "2025-08-13T14:58:00Z",
+    "updatedAt": "2025-09-24T13:38:00Z",
+    "fulfilledAt": "2026-01-25T14:46:00Z"
+  },
+  {
+    "id": "cr-030",
+    "clientId": "client-5",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-4",
+      "label": "Charles Windsor (Trustee)"
+    },
+    "requestTypeKey": "correct",
+    "scopeJson": {
+      "modulesJson": [
+        "compliance",
+        "portfolios",
+        "transactions"
+      ],
+      "entityIdsJson": [
+        "entity-8",
+        "entity-10"
+      ],
+      "description": "Grant read-only access to compliance auditor"
+    },
+    "statusKey": "pending",
+    "dueAt": null,
+    "decisionNotes": null,
+    "linkedConsentId": "co-131",
+    "createdAt": "2025-07-15T13:24:00Z",
+    "updatedAt": "2026-02-09T12:07:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-031",
+    "clientId": "client-1",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-13",
+      "label": "Thomas Keller (BNP Paribas)"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "reporting",
+        "trusts",
+        "portfolios",
+        "cash-flow"
+      ],
+      "entityIdsJson": [
+        "entity-1",
+        "entity-8"
+      ],
+      "description": "Export quarterly performance reports for external review"
+    },
+    "statusKey": "pending",
+    "dueAt": "2026-01-13",
+    "decisionNotes": null,
+    "linkedConsentId": null,
+    "createdAt": "2025-06-24T15:04:00Z",
+    "updatedAt": "2026-01-07T10:01:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-032",
+    "clientId": "client-2",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-8",
+      "label": "BNY Mellon Pershing"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "compliance",
+        "entities",
+        "cash-flow"
+      ],
+      "entityIdsJson": [
+        "entity-4",
+        "entity-8"
+      ],
+      "description": "Export all documents tagged as litigation-hold"
+    },
+    "statusKey": "approved",
+    "dueAt": "2026-03-22",
+    "decisionNotes": "Fulfilled: data export delivered via secure file transfer",
+    "linkedConsentId": null,
+    "createdAt": "2024-07-23T15:54:00Z",
+    "updatedAt": "2025-10-19T17:06:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-033",
+    "clientId": "client-3",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-13",
+      "label": "Iron Mountain Digital"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "documents",
+        "portfolios",
+        "billing",
+        "cash-flow"
+      ],
+      "entityIdsJson": [
+        "entity-1",
+        "entity-2"
+      ],
+      "description": "Delete archived communication threads older than 7 years"
+    },
+    "statusKey": "approved",
+    "dueAt": null,
+    "decisionNotes": "Approved conditionally: access expires in 90 days",
+    "linkedConsentId": "co-084",
+    "createdAt": "2024-07-15T13:18:00Z",
+    "updatedAt": "2025-11-30T16:00:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-034",
+    "clientId": "client-4",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-19",
+      "label": "Daniel O'Connor (Allen & Overy)"
+    },
+    "requestTypeKey": "export",
+    "scopeJson": {
+      "modulesJson": [
+        "billing",
+        "risk",
+        "cash-flow",
+        "reporting"
+      ],
+      "entityIdsJson": [
+        "entity-4",
+        "entity-6",
+        "entity-8"
+      ],
+      "description": "New access request for banking relationship team"
+    },
+    "statusKey": "pending",
+    "dueAt": "2025-12-25",
+    "decisionNotes": null,
+    "linkedConsentId": "co-122",
+    "createdAt": "2025-01-04T08:23:00Z",
+    "updatedAt": "2026-02-02T12:28:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-035",
+    "clientId": "client-5",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-29",
+      "label": "Patrick Sullivan (RSM)"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "documents",
+        "portfolios",
+        "net-worth",
+        "risk"
+      ],
+      "entityIdsJson": [
+        "entity-7",
+        "entity-9",
+        "entity-10"
+      ],
+      "description": "Export custodian reconciliation reports"
+    },
+    "statusKey": "pending",
+    "dueAt": "2026-06-16",
+    "decisionNotes": null,
+    "linkedConsentId": "co-022",
+    "createdAt": "2024-10-25T15:16:00Z",
+    "updatedAt": "2026-01-26T10:48:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-036",
+    "clientId": "client-1",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-16",
+      "label": "Jonathan Pemberton (Junior Analyst)"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "risk",
+        "net-worth"
+      ],
+      "entityIdsJson": [
+        "entity-10",
+        "entity-6",
+        "entity-7"
+      ],
+      "description": "New access request for banking relationship team"
+    },
+    "statusKey": "approved",
+    "dueAt": "2025-11-03",
+    "decisionNotes": "Rejected: request conflicts with active legal hold on entity-3",
+    "linkedConsentId": null,
+    "createdAt": "2025-07-18T09:52:00Z",
+    "updatedAt": "2025-10-08T11:57:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-037",
+    "clientId": "client-2",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-1",
+      "label": "John Whitfield (PwC)"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "trusts",
+        "cash-flow",
+        "reporting"
+      ],
+      "entityIdsJson": [
+        "entity-5",
+        "entity-7"
+      ],
+      "description": "New access request for estate planning counsel"
+    },
+    "statusKey": "fulfilled",
+    "dueAt": "2025-06-08",
+    "decisionNotes": "Rejected: request conflicts with active legal hold on entity-3",
+    "linkedConsentId": null,
+    "createdAt": "2024-11-04T17:19:00Z",
+    "updatedAt": "2025-09-02T08:29:00Z",
+    "fulfilledAt": "2025-11-19T11:06:00Z"
+  },
+  {
+    "id": "cr-038",
+    "clientId": "client-3",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-12",
+      "label": "Stephen Beaumont (IT Director)"
+    },
+    "requestTypeKey": "correct",
+    "scopeJson": {
+      "modulesJson": [
+        "risk"
+      ],
+      "entityIdsJson": [
+        "entity-1",
+        "entity-7",
+        "entity-10"
+      ],
+      "description": "Grant new access for incoming tax advisor for FY2025 planning"
+    },
+    "statusKey": "approved",
+    "dueAt": "2025-11-10",
+    "decisionNotes": "Rejected: request conflicts with active legal hold on entity-3",
+    "linkedConsentId": null,
+    "createdAt": "2024-12-01T17:02:00Z",
+    "updatedAt": "2026-01-02T08:56:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-039",
+    "clientId": "client-4",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-5",
+      "label": "Broadridge Financial"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "reporting",
+        "billing",
+        "trusts"
+      ],
+      "entityIdsJson": [
+        "entity-1",
+        "entity-5"
+      ],
+      "description": "Correct entity registration jurisdiction data"
+    },
+    "statusKey": "pending",
+    "dueAt": "2025-12-18",
+    "decisionNotes": null,
+    "linkedConsentId": null,
+    "createdAt": "2025-05-02T11:56:00Z",
+    "updatedAt": "2025-09-14T16:46:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-040",
+    "clientId": "client-5",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-19",
+      "label": "Daniel O'Connor (Allen & Overy)"
+    },
+    "requestTypeKey": "export",
+    "scopeJson": {
+      "modulesJson": [
+        "compliance"
+      ],
+      "entityIdsJson": [
+        "entity-5"
+      ],
+      "description": "Export fee calculation details for client review"
+    },
+    "statusKey": "fulfilled",
+    "dueAt": "2026-01-29",
+    "decisionNotes": "Fulfilled: data export delivered via secure file transfer",
+    "linkedConsentId": "co-084",
+    "createdAt": "2025-06-02T15:19:00Z",
+    "updatedAt": "2025-12-23T14:50:00Z",
+    "fulfilledAt": "2025-12-01T15:05:00Z"
+  },
+  {
+    "id": "cr-041",
+    "clientId": "client-1",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-1",
+      "label": "Anna Whitfield (Family Principal)"
+    },
+    "requestTypeKey": "correct",
+    "scopeJson": {
+      "modulesJson": [
+        "net-worth",
+        "documents",
+        "risk"
+      ],
+      "entityIdsJson": [
+        "entity-3",
+        "entity-2"
+      ],
+      "description": "Grant read-only access to compliance auditor"
+    },
+    "statusKey": "approved",
+    "dueAt": "2025-08-06",
+    "decisionNotes": "Rejected: request conflicts with active legal hold on entity-3",
+    "linkedConsentId": null,
+    "createdAt": "2025-06-19T12:07:00Z",
+    "updatedAt": "2025-09-04T09:51:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-042",
+    "clientId": "client-2",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-10",
+      "label": "Bloomberg Terminal Services"
+    },
+    "requestTypeKey": "export",
+    "scopeJson": {
+      "modulesJson": [
+        "net-worth",
+        "compliance",
+        "entities"
+      ],
+      "entityIdsJson": [
+        "entity-1",
+        "entity-8"
+      ],
+      "description": "Export all documents tagged as litigation-hold"
+    },
+    "statusKey": "approved",
+    "dueAt": "2026-04-28",
+    "decisionNotes": "Rejected: insufficient justification provided; please resubmit with manager approval",
+    "linkedConsentId": null,
+    "createdAt": "2025-03-21T17:31:00Z",
+    "updatedAt": "2025-12-20T17:50:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-043",
+    "clientId": "client-3",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-27",
+      "label": "Christopher Wells (Grant Thornton)"
+    },
+    "requestTypeKey": "export",
+    "scopeJson": {
+      "modulesJson": [
+        "portfolios",
+        "entities",
+        "transactions"
+      ],
+      "entityIdsJson": [
+        "entity-7",
+        "entity-5",
+        "entity-3"
+      ],
+      "description": "Delete historical data per client retention policy"
+    },
+    "statusKey": "approved",
+    "dueAt": "2026-05-14",
+    "decisionNotes": "Approved by compliance officer; evidence pack attached",
+    "linkedConsentId": "co-141",
+    "createdAt": "2024-08-02T15:57:00Z",
+    "updatedAt": "2025-10-29T12:14:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-044",
+    "clientId": "client-4",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-12",
+      "label": "Stephen Beaumont (IT Director)"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "reporting",
+        "net-worth",
+        "billing"
+      ],
+      "entityIdsJson": [
+        "entity-2"
+      ],
+      "description": "Export cash flow projections for liquidity planning"
+    },
+    "statusKey": "pending",
+    "dueAt": "2026-04-14",
+    "decisionNotes": null,
+    "linkedConsentId": null,
+    "createdAt": "2024-06-11T14:11:00Z",
+    "updatedAt": "2026-01-18T12:04:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-045",
+    "clientId": "client-5",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-9",
+      "label": "Susan Brighton (Legal Counsel)"
+    },
+    "requestTypeKey": "correct",
+    "scopeJson": {
+      "modulesJson": [
+        "documents"
+      ],
+      "entityIdsJson": [
+        "entity-6",
+        "entity-1"
+      ],
+      "description": "Grant temporary access for M&A due diligence team"
+    },
+    "statusKey": "pending",
+    "dueAt": "2025-08-28",
+    "decisionNotes": null,
+    "linkedConsentId": null,
+    "createdAt": "2024-06-21T08:54:00Z",
+    "updatedAt": "2025-11-11T11:08:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-046",
+    "clientId": "client-1",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-24",
+      "label": "Victoria Stanton (Schroders)"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "portfolios",
+        "documents",
+        "risk",
+        "billing"
+      ],
+      "entityIdsJson": [
+        "entity-1"
+      ],
+      "description": "Export AML documentation package for regulator"
+    },
+    "statusKey": "approved",
+    "dueAt": "2026-06-05",
+    "decisionNotes": "Rejected: duplicate of existing request CR-045",
+    "linkedConsentId": "co-056",
+    "createdAt": "2025-03-03T09:16:00Z",
+    "updatedAt": "2025-11-04T11:49:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-047",
+    "clientId": "client-2",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-5",
+      "label": "David Tanaka (EY)"
+    },
+    "requestTypeKey": "export",
+    "scopeJson": {
+      "modulesJson": [
+        "documents",
+        "entities"
+      ],
+      "entityIdsJson": [
+        "entity-7",
+        "entity-4"
+      ],
+      "description": "Correct address information on beneficial ownership records"
+    },
+    "statusKey": "rejected",
+    "dueAt": "2025-07-12",
+    "decisionNotes": "Rejected: insufficient justification provided; please resubmit with manager approval",
+    "linkedConsentId": "co-010",
+    "createdAt": "2025-05-07T13:44:00Z",
+    "updatedAt": "2025-12-25T11:01:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-048",
+    "clientId": "client-3",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-30",
+      "label": "Anastasia Volkov (Hogan Lovells)"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "entities"
+      ],
+      "entityIdsJson": [
+        "entity-6",
+        "entity-3",
+        "entity-10"
+      ],
+      "description": "Correct valuation dates on illiquid asset records"
+    },
+    "statusKey": "approved",
+    "dueAt": null,
+    "decisionNotes": "Approved per standard data subject access request procedure",
+    "linkedConsentId": "co-026",
+    "createdAt": "2024-12-01T13:04:00Z",
+    "updatedAt": "2026-02-14T11:08:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-049",
+    "clientId": "client-4",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-13",
+      "label": "Thomas Keller (BNP Paribas)"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "compliance",
+        "entities",
+        "transactions"
+      ],
+      "entityIdsJson": [
+        "entity-4",
+        "entity-6"
+      ],
+      "description": "Export capital call notices for fund investments"
+    },
+    "statusKey": "approved",
+    "dueAt": "2025-07-04",
+    "decisionNotes": "Fulfilled: data export delivered via secure file transfer",
+    "linkedConsentId": "co-010",
+    "createdAt": "2025-09-28T08:03:00Z",
+    "updatedAt": "2026-02-06T17:01:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-050",
+    "clientId": "client-5",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-7",
+      "label": "State Street Alpha"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "entities"
+      ],
+      "entityIdsJson": [
+        "entity-5",
+        "entity-6"
+      ],
+      "description": "Grant vendor access for system migration project"
+    },
+    "statusKey": "pending",
+    "dueAt": "2026-03-16",
+    "decisionNotes": null,
+    "linkedConsentId": null,
+    "createdAt": "2024-07-08T16:27:00Z",
+    "updatedAt": "2025-10-28T17:27:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-051",
+    "clientId": "client-1",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-13",
+      "label": "Iron Mountain Digital"
+    },
+    "requestTypeKey": "correct",
+    "scopeJson": {
+      "modulesJson": [
+        "risk",
+        "billing",
+        "cash-flow"
+      ],
+      "entityIdsJson": [
+        "entity-8"
+      ],
+      "description": "Correct beneficial owner chain of control data"
+    },
+    "statusKey": "rejected",
+    "dueAt": null,
+    "decisionNotes": "Approved conditionally: access expires in 90 days",
+    "linkedConsentId": null,
+    "createdAt": "2025-01-14T15:44:00Z",
+    "updatedAt": "2025-09-14T14:58:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-052",
+    "clientId": "client-2",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-24",
+      "label": "Victoria Stanton (Schroders)"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "documents",
+        "tax"
+      ],
+      "entityIdsJson": [
+        "entity-1",
+        "entity-6",
+        "entity-9"
+      ],
+      "description": "Delete personal data per GDPR erasure request"
+    },
+    "statusKey": "pending",
+    "dueAt": null,
+    "decisionNotes": null,
+    "linkedConsentId": null,
+    "createdAt": "2025-06-21T17:30:00Z",
+    "updatedAt": "2026-02-21T12:48:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-053",
+    "clientId": "client-3",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-18",
+      "label": "Gregory Belmont (Portfolio Manager)"
+    },
+    "requestTypeKey": "correct",
+    "scopeJson": {
+      "modulesJson": [
+        "billing",
+        "risk",
+        "transactions",
+        "tax"
+      ],
+      "entityIdsJson": [
+        "entity-2"
+      ],
+      "description": "Correct currency denomination on foreign accounts"
+    },
+    "statusKey": "pending",
+    "dueAt": "2025-10-16",
+    "decisionNotes": null,
+    "linkedConsentId": null,
+    "createdAt": "2025-05-11T16:55:00Z",
+    "updatedAt": "2026-02-19T13:23:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-054",
+    "clientId": "client-4",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-10",
+      "label": "Bloomberg Terminal Services"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "documents"
+      ],
+      "entityIdsJson": [
+        "entity-5",
+        "entity-9",
+        "entity-4"
+      ],
+      "description": "Correct accrued interest calculations on bonds"
+    },
+    "statusKey": "pending",
+    "dueAt": null,
+    "decisionNotes": null,
+    "linkedConsentId": null,
+    "createdAt": "2024-08-21T11:34:00Z",
+    "updatedAt": "2025-11-12T15:49:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-055",
+    "clientId": "client-5",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-24",
+      "label": "Victoria Stanton (Schroders)"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "portfolios"
+      ],
+      "entityIdsJson": [
+        "entity-4"
+      ],
+      "description": "Correct address information on beneficial ownership records"
+    },
+    "statusKey": "pending",
+    "dueAt": "2025-07-03",
+    "decisionNotes": null,
+    "linkedConsentId": "co-080",
+    "createdAt": "2024-08-10T16:48:00Z",
+    "updatedAt": "2026-02-13T12:24:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-056",
+    "clientId": "client-1",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-15",
+      "label": "William Drake (Linklaters)"
+    },
+    "requestTypeKey": "correct",
+    "scopeJson": {
+      "modulesJson": [
+        "documents",
+        "portfolios",
+        "transactions",
+        "billing"
+      ],
+      "entityIdsJson": [
+        "entity-3"
+      ],
+      "description": "Correct address information on beneficial ownership records"
+    },
+    "statusKey": "pending",
+    "dueAt": "2025-08-06",
+    "decisionNotes": null,
+    "linkedConsentId": "co-028",
+    "createdAt": "2025-08-02T14:47:00Z",
+    "updatedAt": "2026-01-14T16:41:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-057",
+    "clientId": "client-2",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-19",
+      "label": "Daniel O'Connor (Allen & Overy)"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "portfolios",
+        "entities"
+      ],
+      "entityIdsJson": [
+        "entity-8",
+        "entity-6",
+        "entity-2"
+      ],
+      "description": "Correct accrued interest calculations on bonds"
+    },
+    "statusKey": "rejected",
+    "dueAt": "2026-04-19",
+    "decisionNotes": "Approved: scope narrowed to documents module only per policy PP-012",
+    "linkedConsentId": null,
+    "createdAt": "2024-07-10T08:47:00Z",
+    "updatedAt": "2025-09-10T16:23:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-058",
+    "clientId": "client-3",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-10",
+      "label": "Bloomberg Terminal Services"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "transactions",
+        "billing",
+        "entities",
+        "reporting"
+      ],
+      "entityIdsJson": [
+        "entity-1"
+      ],
+      "description": "Export insurance policy summaries"
+    },
+    "statusKey": "pending",
+    "dueAt": "2025-08-06",
+    "decisionNotes": null,
+    "linkedConsentId": "co-041",
+    "createdAt": "2025-11-24T11:38:00Z",
+    "updatedAt": "2026-01-15T14:17:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-059",
+    "clientId": "client-4",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-7",
+      "label": "Helen Ashford (Compliance Officer)"
+    },
+    "requestTypeKey": "correct",
+    "scopeJson": {
+      "modulesJson": [
+        "net-worth",
+        "cash-flow",
+        "documents",
+        "transactions"
+      ],
+      "entityIdsJson": [
+        "entity-2",
+        "entity-4",
+        "entity-1"
+      ],
+      "description": "New access for succession planning advisor"
+    },
+    "statusKey": "approved",
+    "dueAt": "2025-07-09",
+    "decisionNotes": "Approved: scope narrowed to documents module only per policy PP-012",
+    "linkedConsentId": "co-074",
+    "createdAt": "2025-01-13T12:55:00Z",
+    "updatedAt": "2026-01-14T15:41:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-060",
+    "clientId": "client-5",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-9",
+      "label": "Robert Ashworth (Morgan Stanley)"
+    },
+    "requestTypeKey": "export",
+    "scopeJson": {
+      "modulesJson": [
+        "compliance"
+      ],
+      "entityIdsJson": [
+        "entity-6"
+      ],
+      "description": "Correct tax identification numbers across entities"
+    },
+    "statusKey": "pending",
+    "dueAt": null,
+    "decisionNotes": null,
+    "linkedConsentId": "co-143",
+    "createdAt": "2025-06-17T16:35:00Z",
+    "updatedAt": "2025-11-11T16:18:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-061",
+    "clientId": "client-1",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-11",
+      "label": "Alexander Voronov (Baker McKenzie)"
+    },
+    "requestTypeKey": "export",
+    "scopeJson": {
+      "modulesJson": [
+        "net-worth",
+        "tax",
+        "billing"
+      ],
+      "entityIdsJson": [
+        "entity-9"
+      ],
+      "description": "Grant read-only access to compliance auditor"
+    },
+    "statusKey": "pending",
+    "dueAt": "2026-05-05",
+    "decisionNotes": null,
+    "linkedConsentId": null,
+    "createdAt": "2024-06-08T11:07:00Z",
+    "updatedAt": "2026-01-14T14:41:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-062",
+    "clientId": "client-2",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-16",
+      "label": "Jonathan Pemberton (Junior Analyst)"
+    },
+    "requestTypeKey": "correct",
+    "scopeJson": {
+      "modulesJson": [
+        "compliance"
+      ],
+      "entityIdsJson": [
+        "entity-1"
+      ],
+      "description": "Export all portfolio statements for tax filing season 2025"
+    },
+    "statusKey": "fulfilled",
+    "dueAt": "2025-07-05",
+    "decisionNotes": "Approved conditionally: access expires in 90 days",
+    "linkedConsentId": null,
+    "createdAt": "2025-07-06T12:06:00Z",
+    "updatedAt": "2026-02-02T14:18:00Z",
+    "fulfilledAt": "2025-12-29T17:53:00Z"
+  },
+  {
+    "id": "cr-063",
+    "clientId": "client-3",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-3",
+      "label": "Jessica Palmer (CFO)"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "cash-flow"
+      ],
+      "entityIdsJson": [
+        "entity-4",
+        "entity-3",
+        "entity-8"
+      ],
+      "description": "New access for succession planning advisor"
+    },
+    "statusKey": "fulfilled",
+    "dueAt": "2026-02-19",
+    "decisionNotes": "Approved with restrictions: download disabled, view-only access granted",
+    "linkedConsentId": null,
+    "createdAt": "2025-05-07T17:36:00Z",
+    "updatedAt": "2025-12-19T14:45:00Z",
+    "fulfilledAt": "2026-02-10T13:44:00Z"
+  },
+  {
+    "id": "cr-064",
+    "clientId": "client-4",
+    "requesterRefJson": {
+      "type": "advisor",
+      "id": "advisor-6",
+      "label": "Laura Fitzgerald (Goldman Sachs)"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "billing",
+        "net-worth",
+        "reporting",
+        "compliance"
+      ],
+      "entityIdsJson": [
+        "entity-7",
+        "entity-2",
+        "entity-5"
+      ],
+      "description": "New access for real estate management team"
+    },
+    "statusKey": "pending",
+    "dueAt": null,
+    "decisionNotes": null,
+    "linkedConsentId": null,
+    "createdAt": "2024-08-04T12:23:00Z",
+    "updatedAt": "2025-10-03T11:58:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-065",
+    "clientId": "client-5",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-12",
+      "label": "DocuSign CLM"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "portfolios",
+        "net-worth",
+        "billing"
+      ],
+      "entityIdsJson": [
+        "entity-1"
+      ],
+      "description": "Export all portfolio statements for tax filing season 2025"
+    },
+    "statusKey": "pending",
+    "dueAt": "2025-08-24",
+    "decisionNotes": null,
+    "linkedConsentId": "co-135",
+    "createdAt": "2025-02-18T14:42:00Z",
+    "updatedAt": "2026-02-26T11:09:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-066",
+    "clientId": "client-1",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-9",
+      "label": "Refinitiv (LSEG)"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "tax"
+      ],
+      "entityIdsJson": [
+        "entity-6",
+        "entity-9"
+      ],
+      "description": "Export fee calculation details for client review"
+    },
+    "statusKey": "rejected",
+    "dueAt": null,
+    "decisionNotes": "Approved by compliance officer; evidence pack attached",
+    "linkedConsentId": "co-020",
+    "createdAt": "2025-07-07T12:16:00Z",
+    "updatedAt": "2025-09-22T17:56:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-067",
+    "clientId": "client-2",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-10",
+      "label": "Andrew Fairfax (Operations Manager)"
+    },
+    "requestTypeKey": "correct",
+    "scopeJson": {
+      "modulesJson": [
+        "trusts"
+      ],
+      "entityIdsJson": [
+        "entity-6"
+      ],
+      "description": "Delete former vendor data access per contract termination"
+    },
+    "statusKey": "rejected",
+    "dueAt": "2026-05-28",
+    "decisionNotes": "Approved by compliance officer; evidence pack attached",
+    "linkedConsentId": null,
+    "createdAt": "2025-09-22T09:27:00Z",
+    "updatedAt": "2026-02-03T13:25:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-068",
+    "clientId": "client-3",
+    "requesterRefJson": {
+      "type": "vendor",
+      "id": "vendor-13",
+      "label": "Iron Mountain Digital"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "transactions"
+      ],
+      "entityIdsJson": [
+        "entity-1",
+        "entity-2"
+      ],
+      "description": "Delete personal data per GDPR erasure request"
+    },
+    "statusKey": "approved",
+    "dueAt": null,
+    "decisionNotes": "Rejected: request conflicts with active legal hold on entity-3",
+    "linkedConsentId": null,
+    "createdAt": "2025-08-24T17:54:00Z",
+    "updatedAt": "2025-09-05T08:31:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-069",
+    "clientId": "client-4",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-17",
+      "label": "Diane Cavendish (Client Liaison)"
+    },
+    "requestTypeKey": "new_access",
+    "scopeJson": {
+      "modulesJson": [
+        "documents",
+        "billing",
+        "tax"
+      ],
+      "entityIdsJson": [
+        "entity-1"
+      ],
+      "description": "Export custodian reconciliation reports"
+    },
+    "statusKey": "pending",
+    "dueAt": null,
+    "decisionNotes": null,
+    "linkedConsentId": null,
+    "createdAt": "2024-06-24T15:30:00Z",
+    "updatedAt": "2025-10-30T10:26:00Z",
+    "fulfilledAt": null
+  },
+  {
+    "id": "cr-070",
+    "clientId": "client-5",
+    "requesterRefJson": {
+      "type": "client",
+      "id": "user-19",
+      "label": "Victoria Rothschild (Investment Analyst)"
+    },
+    "requestTypeKey": "delete",
+    "scopeJson": {
+      "modulesJson": [
+        "documents",
+        "tax"
+      ],
+      "entityIdsJson": [
+        "entity-1",
+        "entity-5",
+        "entity-4"
+      ],
+      "description": "Export cash flow projections for liquidity planning"
+    },
+    "statusKey": "approved",
+    "dueAt": "2025-12-19",
+    "decisionNotes": "Rejected: insufficient justification provided; please resubmit with manager approval",
+    "linkedConsentId": "co-021",
+    "createdAt": "2025-12-18T17:04:00Z",
+    "updatedAt": "2025-12-31T13:08:00Z",
+    "fulfilledAt": null
+  }
+]

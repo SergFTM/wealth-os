@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ConsentConflict",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string" },
+    "conflictTypeKey": {
+      "type": "string",
+      "enum": ["overlap", "expired_access", "policy_violation", "client_safe_mismatch"]
+    },
+    "severityKey": { "type": "string", "enum": ["ok", "warning", "critical"] },
+    "impactedJson": {
+      "type": "object",
+      "properties": {
+        "consentIdsJson": { "type": "array", "items": { "type": "string" } },
+        "shareIdsJson": { "type": "array", "items": { "type": "string" } },
+        "docIdsJson": { "type": "array", "items": { "type": "string" } },
+        "packIdsJson": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "statusKey": { "type": "string", "enum": ["open", "resolved"] },
+    "suggestedResolutionJson": {
+      "type": "object",
+      "properties": {
+        "action": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    },
+    "resolvedByUserId": { "type": "string" },
+    "resolvedAt": { "type": "string", "format": "date-time" },
+    "createdAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "conflictTypeKey", "severityKey", "impactedJson", "statusKey", "createdAt"]
+}

@@ -1,0 +1,488 @@
+[
+  {
+    "id": "own-link-001",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-001",
+    "toNodeId": "own-node-002",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "sourceRefJson": {
+      "description": "Trust Agreement"
+    },
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-002",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-002",
+    "toNodeId": "own-node-003",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "sourceRefJson": {
+      "description": "Operating Agreement"
+    },
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-003",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-003",
+    "toNodeId": "own-node-004",
+    "ownershipPct": 80,
+    "profitSharePct": 90,
+    "effectiveFrom": "2020-01-01",
+    "sourceRefJson": {
+      "description": "LP Agreement"
+    },
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-004",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-004",
+    "toNodeId": "own-node-005",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-005",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-003",
+    "toNodeId": "own-node-006",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-006",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-003",
+    "toNodeId": "own-node-007",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-007",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-005",
+    "toNodeId": "own-node-008",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-008",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-005",
+    "toNodeId": "own-node-009",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-009",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-003",
+    "toNodeId": "own-node-010",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-010",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-001",
+    "toNodeId": "own-node-011",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-011",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-001",
+    "toNodeId": "own-node-012",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-012",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-002",
+    "toNodeId": "own-node-013",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-013",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-003",
+    "toNodeId": "own-node-014",
+    "ownershipPct": 25,
+    "profitSharePct": 25,
+    "effectiveFrom": "2021-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-014",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-003",
+    "toNodeId": "own-node-015",
+    "ownershipPct": 10,
+    "profitSharePct": 10,
+    "effectiveFrom": "2021-06-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-015",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-015",
+    "toNodeId": "own-node-016",
+    "ownershipPct": 5,
+    "effectiveFrom": "2022-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-016",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-002",
+    "toNodeId": "own-node-017",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-017",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-017",
+    "toNodeId": "own-node-018",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-018",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-003",
+    "toNodeId": "own-node-019",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-019",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-022",
+    "toNodeId": "own-node-020",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-020",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-020",
+    "toNodeId": "own-node-021",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-021",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-002",
+    "toNodeId": "own-node-022",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-022",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-022",
+    "toNodeId": "own-node-023",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-023",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-023",
+    "toNodeId": "own-node-024",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-024",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-023",
+    "toNodeId": "own-node-025",
+    "ownershipPct": 15,
+    "effectiveFrom": "2021-01-01",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-025",
+    "clientId": "client-002",
+    "fromNodeId": "own-node-026",
+    "toNodeId": "own-node-027",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-026",
+    "clientId": "client-002",
+    "fromNodeId": "own-node-027",
+    "toNodeId": "own-node-028",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-027",
+    "clientId": "client-002",
+    "fromNodeId": "own-node-028",
+    "toNodeId": "own-node-029",
+    "ownershipPct": 60,
+    "profitSharePct": 70,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-028",
+    "clientId": "client-002",
+    "fromNodeId": "own-node-029",
+    "toNodeId": "own-node-030",
+    "ownershipPct": 100,
+    "effectiveFrom": "2021-01-01",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-029",
+    "clientId": "client-002",
+    "fromNodeId": "own-node-028",
+    "toNodeId": "own-node-031",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-030",
+    "clientId": "client-002",
+    "fromNodeId": "own-node-028",
+    "toNodeId": "own-node-032",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-031",
+    "clientId": "client-002",
+    "fromNodeId": "own-node-027",
+    "toNodeId": "own-node-033",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-032",
+    "clientId": "client-002",
+    "fromNodeId": "own-node-028",
+    "toNodeId": "own-node-034",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-033",
+    "clientId": "client-002",
+    "fromNodeId": "own-node-026",
+    "toNodeId": "own-node-035",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-034",
+    "clientId": "client-003",
+    "fromNodeId": "own-node-036",
+    "toNodeId": "own-node-037",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-03-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-035",
+    "clientId": "client-003",
+    "fromNodeId": "own-node-037",
+    "toNodeId": "own-node-038",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-03-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-036",
+    "clientId": "client-003",
+    "fromNodeId": "own-node-038",
+    "toNodeId": "own-node-039",
+    "ownershipPct": 50,
+    "profitSharePct": 55,
+    "effectiveFrom": "2020-01-01",
+    "createdAt": "2024-03-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-037",
+    "clientId": "client-003",
+    "fromNodeId": "own-node-039",
+    "toNodeId": "own-node-040",
+    "ownershipPct": 100,
+    "effectiveFrom": "2021-01-01",
+    "createdAt": "2024-03-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-038",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-002",
+    "toNodeId": "own-node-041",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-15",
+    "createdAt": "2024-01-15T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-039",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-041",
+    "toNodeId": "own-node-042",
+    "ownershipPct": 100,
+    "effectiveFrom": "2020-01-15",
+    "createdAt": "2024-01-15T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-040",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-003",
+    "toNodeId": "own-node-043",
+    "ownershipPct": 5,
+    "profitSharePct": 5,
+    "effectiveFrom": "2021-01-20",
+    "createdAt": "2024-01-20T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-041",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-003",
+    "toNodeId": "own-node-044",
+    "ownershipPct": 8,
+    "profitSharePct": 8,
+    "effectiveFrom": "2021-01-20",
+    "createdAt": "2024-01-20T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-042",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-004",
+    "toNodeId": "own-node-045",
+    "ownershipPct": 20,
+    "effectiveFrom": "2022-02-01",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-043",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-045",
+    "toNodeId": "own-node-046",
+    "ownershipPct": 100,
+    "effectiveFrom": "2022-02-01",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-044",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-046",
+    "toNodeId": "own-node-047",
+    "ownershipPct": 100,
+    "effectiveFrom": "2022-02-01",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-045",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-046",
+    "toNodeId": "own-node-048",
+    "ownershipPct": 100,
+    "effectiveFrom": "2022-02-01",
+    "createdAt": "2024-02-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-046",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-046",
+    "toNodeId": "own-node-049",
+    "ownershipPct": 100,
+    "effectiveFrom": "2022-02-15",
+    "createdAt": "2024-02-15T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-link-047",
+    "clientId": "client-001",
+    "fromNodeId": "own-node-001",
+    "toNodeId": "own-node-050",
+    "ownershipPct": 100,
+    "effectiveFrom": "2022-03-01",
+    "createdAt": "2024-03-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  }
+]

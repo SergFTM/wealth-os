@@ -23,6 +23,22 @@ import { casesConfig } from './36-cases/config';
 import { exportsConfig } from './37-exports/config';
 import { ideasConfig } from './38-ideas/config';
 import { liquidityPlanningConfig } from './39-liquidity/config';
+import { governanceConfig } from './40-governance/config';
+import { calendarConfig } from './41-calendar/config';
+import { dealsCorpActionsConfig } from './42-deals/config';
+import { vendorsConfig } from './43-vendors/config';
+import { policiesConfig } from './44-policies/config';
+import { portalConfig as clientPortalConfig } from './45-portal/config';
+import { mdmConfig } from './46-mdm/config';
+import { exceptionsConfig } from './48-exceptions/config';
+import { ownershipConfig } from './47-ownership/config';
+import { philanthropyConfig } from './49-philanthropy/config';
+import { creditConfig } from './50-credit/config';
+import { dataGovernanceConfig } from './51-data-governance/config';
+import { packsConfig } from './52-packs/config';
+import { relationshipsConfig } from './53-relationships/config';
+import { consentPrivacyConfig } from './54-consent/config';
+import { clientPortalSafeConfig } from './55-portal/config';
 
 // 01: dashboard-home
 export const dashboardHome: ModuleConfig = {
@@ -608,3 +624,51 @@ export const ideas = ideasConfig;
 
 // 43: liquidity-planning (Liquidity Planning and Cash Forecast)
 export const liquidityPlanning = liquidityPlanningConfig;
+
+// 44: governance (Family Governance)
+export const governance = governanceConfig;
+
+// 45: calendar (Calendar and Meetings)
+export const calendar = calendarConfig;
+
+// 46: deals-corp-actions (Deals and Corporate Actions - Module 42)
+export const dealsCorpActions = dealsCorpActionsConfig;
+
+// 47: vendors (Vendors and Service Providers - Module 43)
+export const vendors = vendorsConfig;
+
+// 48: policies (Policies and SOP Center - Module 44)
+export const policies = policiesConfig;
+
+// 49: clientPortal (Client Portal - Module 45)
+export const clientPortal = clientPortalConfig;
+
+// 50: mdm (Master Data Management - Module 46)
+export const mdm = mdmConfig;
+
+// 51: exceptions (Exception Center - Module 48)
+export const exceptions = exceptionsConfig;
+
+// 52: ownership (Ownership Map - Module 47)
+export const ownership = ownershipConfig;
+
+// 53: philanthropy (Philanthropy and Charitable Giving - Module 49)
+export const philanthropy = philanthropyConfig;
+
+// 54: credit (Banking and Credit Management - Module 50)
+export const credit = creditConfig;
+
+// 55: dataGovernance (Data Governance, Lineage and Why This Number - Module 51)
+export const dataGovernance = dataGovernanceConfig;
+
+// 56: packs (Advisor Packs and One-Click Reporting - Module 52)
+export const packs = packsConfig;
+
+// 57: relationships (Relationship Hub and CRM - Module 53)
+export const relationships = relationshipsConfig;
+
+// 58: consentPrivacy (Consent & Privacy Center - Module 54)
+export const consentPrivacy = consentPrivacyConfig;
+
+// 59: clientPortalSafe (Client Portal & Client Safe Experience - Module 55)
+export const clientPortalSafe = clientPortalSafeConfig;

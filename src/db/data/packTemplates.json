@@ -1,0 +1,439 @@
+[
+  {
+    "id": "tpl-001",
+    "clientId": "client-001",
+    "name": "Аудиторский пакет (стандартный)",
+    "description": "Полный комплект для внешнего аудита",
+    "audienceKey": "auditor",
+    "defaultClientSafe": true,
+    "defaultSensitivityKey": "high",
+    "defaultWatermarkKey": "on",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "cover_letter",
+        "title": "Сопроводительное письмо",
+        "required": true
+      },
+      {
+        "itemTypeKey": "export",
+        "title": "GL Extract",
+        "required": true
+      },
+      {
+        "itemTypeKey": "export",
+        "title": "Оборотно-сальдовая ведомость",
+        "required": true
+      },
+      {
+        "itemTypeKey": "document",
+        "title": "Банковские выписки",
+        "required": true
+      },
+      {
+        "itemTypeKey": "snapshot",
+        "title": "Структура владения",
+        "required": true
+      }
+    ],
+    "usageCount": 24,
+    "createdAt": "2024-01-15T10:00:00Z"
+  },
+  {
+    "id": "tpl-002",
+    "clientId": "client-001",
+    "name": "Банковский пакет (KYC)",
+    "description": "Документы для банковского KYC",
+    "audienceKey": "bank",
+    "defaultClientSafe": true,
+    "defaultSensitivityKey": "high",
+    "defaultWatermarkKey": "on",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "cover_letter",
+        "title": "Сопроводительное письмо",
+        "required": true
+      },
+      {
+        "itemTypeKey": "export",
+        "title": "Net Worth Report",
+        "required": true
+      },
+      {
+        "itemTypeKey": "export",
+        "title": "Income Statement",
+        "required": true
+      },
+      {
+        "itemTypeKey": "document",
+        "title": "Банковские выписки",
+        "required": true
+      }
+    ],
+    "usageCount": 18,
+    "createdAt": "2024-01-20T10:00:00Z"
+  },
+  {
+    "id": "tpl-003",
+    "clientId": "client-001",
+    "name": "Налоговый пакет",
+    "description": "Документы для налогового консультанта",
+    "audienceKey": "tax",
+    "defaultClientSafe": true,
+    "defaultSensitivityKey": "high",
+    "defaultWatermarkKey": "on",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "cover_letter",
+        "title": "Сопроводительное письмо",
+        "required": true
+      },
+      {
+        "itemTypeKey": "export",
+        "title": "Сводка доходов",
+        "required": true
+      },
+      {
+        "itemTypeKey": "export",
+        "title": "Прирост капитала",
+        "required": true
+      }
+    ],
+    "usageCount": 15,
+    "createdAt": "2024-02-01T10:00:00Z"
+  },
+  {
+    "id": "tpl-004",
+    "clientId": "client-001",
+    "name": "Юридический пакет",
+    "description": "Документы для юридической экспертизы",
+    "audienceKey": "legal",
+    "defaultClientSafe": true,
+    "defaultSensitivityKey": "medium",
+    "defaultWatermarkKey": "on",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "cover_letter",
+        "title": "Сопроводительное письмо",
+        "required": true
+      },
+      {
+        "itemTypeKey": "snapshot",
+        "title": "Структура владения",
+        "required": true
+      },
+      {
+        "itemTypeKey": "document",
+        "title": "Учредительные документы",
+        "required": true
+      }
+    ],
+    "usageCount": 12,
+    "createdAt": "2024-02-15T10:00:00Z"
+  },
+  {
+    "id": "tpl-005",
+    "clientId": "client-001",
+    "name": "Инвестиционный комитет Q1",
+    "description": "Квартальный отчёт для IC",
+    "audienceKey": "committee",
+    "defaultClientSafe": false,
+    "defaultSensitivityKey": "medium",
+    "defaultWatermarkKey": "on",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "cover_letter",
+        "title": "Executive Summary",
+        "required": true
+      },
+      {
+        "itemTypeKey": "export",
+        "title": "Отчёт о доходности",
+        "required": true
+      },
+      {
+        "itemTypeKey": "export",
+        "title": "Чистая стоимость",
+        "required": true
+      }
+    ],
+    "usageCount": 8,
+    "createdAt": "2024-03-01T10:00:00Z"
+  },
+  {
+    "id": "tpl-006",
+    "clientId": "client-001",
+    "name": "Инвестор пакет",
+    "description": "Отчётность для со-инвесторов",
+    "audienceKey": "investor",
+    "defaultClientSafe": true,
+    "defaultSensitivityKey": "medium",
+    "defaultWatermarkKey": "on",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "cover_letter",
+        "title": "Сопроводительное письмо",
+        "required": true
+      },
+      {
+        "itemTypeKey": "export",
+        "title": "Performance Report",
+        "required": true
+      }
+    ],
+    "usageCount": 10,
+    "createdAt": "2024-03-15T10:00:00Z"
+  },
+  {
+    "id": "tpl-007",
+    "clientId": "client-001",
+    "name": "Регуляторный пакет",
+    "description": "Документы для регулятора",
+    "audienceKey": "regulator",
+    "defaultClientSafe": true,
+    "defaultSensitivityKey": "high",
+    "defaultWatermarkKey": "on",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "cover_letter",
+        "title": "Сопроводительное письмо",
+        "required": true
+      },
+      {
+        "itemTypeKey": "export",
+        "title": "AML Report",
+        "required": true
+      },
+      {
+        "itemTypeKey": "document",
+        "title": "KYC Docs",
+        "required": true
+      }
+    ],
+    "usageCount": 6,
+    "createdAt": "2024-04-01T10:00:00Z"
+  },
+  {
+    "id": "tpl-008",
+    "clientId": "client-001",
+    "name": "Общий пакет",
+    "description": "Универсальный шаблон",
+    "audienceKey": "general",
+    "defaultClientSafe": true,
+    "defaultSensitivityKey": "low",
+    "defaultWatermarkKey": "on",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "cover_letter",
+        "title": "Сопроводительное письмо",
+        "required": true
+      },
+      {
+        "itemTypeKey": "export",
+        "title": "Net Worth Summary",
+        "required": false
+      }
+    ],
+    "usageCount": 20,
+    "createdAt": "2024-04-15T10:00:00Z"
+  },
+  {
+    "id": "tpl-009",
+    "clientId": "client-002",
+    "name": "Аудит расширенный",
+    "description": "Расширенный аудиторский пакет",
+    "audienceKey": "auditor",
+    "defaultClientSafe": true,
+    "defaultSensitivityKey": "high",
+    "defaultWatermarkKey": "on",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "cover_letter",
+        "title": "Сопроводительное письмо",
+        "required": true
+      },
+      {
+        "itemTypeKey": "export",
+        "title": "Full GL",
+        "required": true
+      }
+    ],
+    "usageCount": 14,
+    "createdAt": "2024-05-01T10:00:00Z"
+  },
+  {
+    "id": "tpl-010",
+    "clientId": "client-002",
+    "name": "Банк кредитная заявка",
+    "description": "Для кредитной заявки",
+    "audienceKey": "bank",
+    "defaultClientSafe": true,
+    "defaultSensitivityKey": "high",
+    "defaultWatermarkKey": "on",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "cover_letter",
+        "title": "Сопроводительное письмо",
+        "required": true
+      },
+      {
+        "itemTypeKey": "export",
+        "title": "Net Worth",
+        "required": true
+      }
+    ],
+    "usageCount": 9,
+    "createdAt": "2024-05-15T10:00:00Z"
+  },
+  {
+    "id": "tpl-011",
+    "clientId": "client-002",
+    "name": "Налоговый расширенный",
+    "description": "Полный налоговый пакет",
+    "audienceKey": "tax",
+    "defaultClientSafe": true,
+    "defaultSensitivityKey": "high",
+    "defaultWatermarkKey": "on",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "cover_letter",
+        "title": "Сопроводительное письмо",
+        "required": true
+      }
+    ],
+    "usageCount": 7,
+    "createdAt": "2024-06-01T10:00:00Z"
+  },
+  {
+    "id": "tpl-012",
+    "clientId": "client-002",
+    "name": "Due Diligence",
+    "description": "Для юридической проверки",
+    "audienceKey": "legal",
+    "defaultClientSafe": true,
+    "defaultSensitivityKey": "high",
+    "defaultWatermarkKey": "on",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "cover_letter",
+        "title": "Сопроводительное письмо",
+        "required": true
+      }
+    ],
+    "usageCount": 5,
+    "createdAt": "2024-06-15T10:00:00Z"
+  },
+  {
+    "id": "tpl-013",
+    "clientId": "client-003",
+    "name": "Комитет полный",
+    "description": "Полный отчёт для комитета",
+    "audienceKey": "committee",
+    "defaultClientSafe": false,
+    "defaultSensitivityKey": "medium",
+    "defaultWatermarkKey": "on",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "cover_letter",
+        "title": "Executive Summary",
+        "required": true
+      }
+    ],
+    "usageCount": 11,
+    "createdAt": "2024-07-01T10:00:00Z"
+  },
+  {
+    "id": "tpl-014",
+    "clientId": "client-003",
+    "name": "LP отчёт",
+    "description": "Для limited partners",
+    "audienceKey": "investor",
+    "defaultClientSafe": true,
+    "defaultSensitivityKey": "medium",
+    "defaultWatermarkKey": "on",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "cover_letter",
+        "title": "Сопроводительное письмо",
+        "required": true
+      }
+    ],
+    "usageCount": 8,
+    "createdAt": "2024-07-15T10:00:00Z"
+  },
+  {
+    "id": "tpl-015",
+    "clientId": "client-003",
+    "name": "SEC пакет",
+    "description": "Для SEC отчётности",
+    "audienceKey": "regulator",
+    "defaultClientSafe": true,
+    "defaultSensitivityKey": "high",
+    "defaultWatermarkKey": "on",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "cover_letter",
+        "title": "Сопроводительное письмо",
+        "required": true
+      }
+    ],
+    "usageCount": 4,
+    "createdAt": "2024-08-01T10:00:00Z"
+  },
+  {
+    "id": "tpl-016",
+    "clientId": "client-003",
+    "name": "Quick Summary",
+    "description": "Быстрая сводка",
+    "audienceKey": "general",
+    "defaultClientSafe": true,
+    "defaultSensitivityKey": "low",
+    "defaultWatermarkKey": "off",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "export",
+        "title": "Summary",
+        "required": true
+      }
+    ],
+    "usageCount": 25,
+    "createdAt": "2024-08-15T10:00:00Z"
+  },
+  {
+    "id": "tpl-017",
+    "clientId": "client-001",
+    "name": "Банк обновление",
+    "description": "Обновление для банка",
+    "audienceKey": "bank",
+    "defaultClientSafe": true,
+    "defaultSensitivityKey": "medium",
+    "defaultWatermarkKey": "on",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "cover_letter",
+        "title": "Письмо",
+        "required": true
+      }
+    ],
+    "usageCount": 6,
+    "createdAt": "2024-09-01T10:00:00Z"
+  },
+  {
+    "id": "tpl-018",
+    "clientId": "client-002",
+    "name": "Аудит минимальный",
+    "description": "Минимальный аудиторский набор",
+    "audienceKey": "auditor",
+    "defaultClientSafe": true,
+    "defaultSensitivityKey": "medium",
+    "defaultWatermarkKey": "on",
+    "defaultItemsJson": [
+      {
+        "itemTypeKey": "export",
+        "title": "Trial Balance",
+        "required": true
+      }
+    ],
+    "usageCount": 13,
+    "createdAt": "2024-09-15T10:00:00Z"
+  }
+]

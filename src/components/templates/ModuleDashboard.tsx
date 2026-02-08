@@ -31,12 +31,54 @@ interface ModuleSchema {
   };
 }
 
-interface ModuleDashboardProps {
+// Schema-based props (original API)
+interface SchemaBasedProps {
   schema: ModuleSchema;
   primaryCollection: string;
+  moduleSlug?: never;
+  title?: never;
+  subtitle?: never;
+  children?: never;
 }
 
-export function ModuleDashboard({ schema, primaryCollection }: ModuleDashboardProps) {
+// Simple props with children (used by governance, deals, etc.)
+interface SimpleProps {
+  moduleSlug: string;
+  title: string;
+  subtitle?: string;
+  children: React.ReactNode;
+  schema?: never;
+  primaryCollection?: never;
+}
+
+type ModuleDashboardProps = SchemaBasedProps | SimpleProps;
+
+export function ModuleDashboard(props: ModuleDashboardProps) {
+  // If children are provided, render simple wrapper layout
+  if ('children' in props && props.children) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-stone-50 to-stone-100/80">
+        <div className="border-b border-stone-200/50 bg-white/50 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-6 py-4">
+            <h1 className="text-2xl font-bold text-stone-800">{props.title}</h1>
+            {props.subtitle && (
+              <p className="text-stone-500 mt-1">{props.subtitle}</p>
+            )}
+          </div>
+        </div>
+        <div className="max-w-7xl mx-auto px-6 py-6">
+          {props.children}
+        </div>
+      </div>
+    );
+  }
+
+  // Schema-based rendering (original behavior)
+  const { schema, primaryCollection } = props as SchemaBasedProps;
+  return <SchemaBasedDashboard schema={schema} primaryCollection={primaryCollection} />;
+}
+
+function SchemaBasedDashboard({ schema, primaryCollection }: SchemaBasedProps) {
   const { locale } = useApp();
   const router = useRouter();
   const { items, loading, total } = useCollection<BaseRecord & Record<string, unknown>>(primaryCollection, { limit: 5 });

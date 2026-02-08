@@ -1,0 +1,3570 @@
+{
+ "portalUsers": [
+  {
+   "id": "pu-001",
+   "clientId": "c1",
+   "email": "a.petrov@family.ru",
+   "displayName": "Алексей Петров",
+   "pinHash": "pin_a1b2c3",
+   "languageDefaultKey": "ru",
+   "householdId": "hh-001",
+   "status": "active",
+   "createdAt": "2025-03-10T09:00:00Z",
+   "updatedAt": "2025-12-15T14:30:00Z"
+  },
+  {
+   "id": "pu-002",
+   "clientId": "c1",
+   "email": "m.petrova@family.ru",
+   "displayName": "Мария Петрова",
+   "pinHash": "pin_d4e5f6",
+   "languageDefaultKey": "ru",
+   "householdId": "hh-001",
+   "status": "active",
+   "createdAt": "2025-03-10T09:05:00Z",
+   "updatedAt": "2025-11-20T10:00:00Z"
+  },
+  {
+   "id": "pu-003",
+   "clientId": "c1",
+   "email": "d.petrov@family.ru",
+   "displayName": "Дмитрий Петров",
+   "pinHash": "pin_g7h8i9",
+   "languageDefaultKey": "en",
+   "householdId": "hh-001",
+   "status": "active",
+   "createdAt": "2025-06-01T12:00:00Z",
+   "updatedAt": "2026-01-05T08:15:00Z"
+  },
+  {
+   "id": "pu-004",
+   "clientId": "c1",
+   "email": "e.petrova@family.ru",
+   "displayName": "Елена Петрова",
+   "pinHash": "pin_j0k1l2",
+   "languageDefaultKey": "uk",
+   "householdId": "hh-001",
+   "status": "disabled",
+   "createdAt": "2025-03-10T09:10:00Z",
+   "updatedAt": "2025-09-01T16:00:00Z"
+  },
+  {
+   "id": "pu-005",
+   "clientId": "c1",
+   "email": "s.petrov@family.ru",
+   "displayName": "Сергей Петров",
+   "pinHash": "pin_m3n4o5",
+   "languageDefaultKey": "ru",
+   "householdId": "hh-001",
+   "status": "active",
+   "createdAt": "2025-08-15T11:00:00Z",
+   "updatedAt": "2026-01-28T09:45:00Z"
+  }
+ ],
+ "portalSessions": [
+  {
+   "id": "ps-001",
+   "portalUserId": "pu-001",
+   "sessionTokenHash": "tok_sha256_abc123def456",
+   "createdAt": "2026-02-07T08:30:00Z",
+   "expiresAt": "2026-02-07T20:30:00Z",
+   "lastSeenAt": "2026-02-07T15:42:00Z"
+  },
+  {
+   "id": "ps-002",
+   "portalUserId": "pu-002",
+   "sessionTokenHash": "tok_sha256_789ghi012jkl",
+   "createdAt": "2026-02-06T19:10:00Z",
+   "expiresAt": "2026-02-07T07:10:00Z",
+   "lastSeenAt": "2026-02-06T23:58:00Z"
+  },
+  {
+   "id": "ps-003",
+   "portalUserId": "pu-003",
+   "sessionTokenHash": "tok_sha256_mno345pqr678",
+   "createdAt": "2026-02-07T10:05:00Z",
+   "expiresAt": "2026-02-07T22:05:00Z",
+   "lastSeenAt": "2026-02-07T14:20:00Z"
+  }
+ ],
+ "portalAnnouncements": [
+  {
+   "id": "pa-001",
+   "clientId": "c1",
+   "title": "Обзор рынков за январь 2026",
+   "bodyMdRu": "## Итоги января\n\nФондовые рынки продемонстрировали умеренный рост. Индекс S&P 500 прибавил 2.3%. Портфель семьи показал доходность +1.8% за месяц.",
+   "bodyMdEn": "## January Review\n\nEquity markets showed moderate growth. The S&P 500 gained 2.3%. Family portfolio returned +1.8% for the month.",
+   "bodyMdUk": "## Огляд ринків за січень\n\nФондові ринки продемонстрували помірне зростання. Індекс S&P 500 додав 2.3%.",
+   "publishedAt": "2026-02-01T09:00:00Z",
+   "expiresAt": null,
+   "createdAt": "2026-01-31T16:00:00Z",
+   "updatedAt": "2026-02-01T09:00:00Z"
+  },
+  {
+   "id": "pa-002",
+   "clientId": "c1",
+   "title": "Новая функция: отслеживание структуры владения",
+   "bodyMdRu": "Теперь вы можете просматривать полную структуру владения активами в разделе «Структура». Интерактивная диаграмма позволяет анализировать цепочки владения.",
+   "bodyMdEn": "You can now view the full ownership structure in the Structure section. The interactive diagram allows you to analyze ownership chains.",
+   "bodyMdUk": "Тепер ви можете переглядати повну структуру володіння активами у розділі «Структура».",
+   "publishedAt": "2025-12-15T10:00:00Z",
+   "expiresAt": null,
+   "createdAt": "2025-12-14T18:00:00Z",
+   "updatedAt": "2025-12-15T10:00:00Z"
+  },
+  {
+   "id": "pa-003",
+   "clientId": "c1",
+   "title": "Плановое техническое обслуживание 15 февраля",
+   "bodyMdRu": "Уважаемые клиенты, 15 февраля с 02:00 до 06:00 (МСК) будет проведено плановое обновление системы. Портал будет временно недоступен.",
+   "bodyMdEn": "Dear clients, on February 15 from 02:00 to 06:00 (MSK) a scheduled system update will be performed. The portal will be temporarily unavailable.",
+   "bodyMdUk": "Шановні клієнти, 15 лютого з 02:00 до 06:00 (МСК) буде проведено планове оновлення системи.",
+   "publishedAt": "2026-02-05T12:00:00Z",
+   "expiresAt": "2026-02-16T00:00:00Z",
+   "createdAt": "2026-02-05T11:00:00Z",
+   "updatedAt": "2026-02-05T12:00:00Z"
+  },
+  {
+   "id": "pa-004",
+   "clientId": "c1",
+   "title": "С Новым годом!",
+   "bodyMdRu": "Команда Wealth Office поздравляет вас с Новым 2026 годом! Желаем финансового благополучия и успешных инвестиций в наступающем году.",
+   "bodyMdEn": "The Wealth Office team wishes you a Happy New Year 2026! We wish you financial prosperity and successful investments.",
+   "bodyMdUk": "Команда Wealth Office вітає вас з Новим 2026 роком! Бажаємо фінансового добробуту та успішних інвестицій.",
+   "publishedAt": "2025-12-31T09:00:00Z",
+   "expiresAt": "2026-01-15T00:00:00Z",
+   "createdAt": "2025-12-30T15:00:00Z",
+   "updatedAt": "2025-12-31T09:00:00Z"
+  },
+  {
+   "id": "pa-005",
+   "clientId": "c1",
+   "title": "Квартальный отчёт Q4 2025 готов",
+   "bodyMdRu": "Ваш квартальный отчёт за Q4 2025 доступен для скачивания в разделе «Отчёты». Отчёт включает обзор портфеля, анализ доходности и рекомендации.",
+   "bodyMdEn": "Your Q4 2025 quarterly report is available for download in the Reports section. The report includes portfolio overview, performance analysis, and recommendations.",
+   "bodyMdUk": "Ваш квартальний звіт за Q4 2025 доступний для завантаження у розділі «Звіти».",
+   "publishedAt": "2026-01-15T10:00:00Z",
+   "expiresAt": null,
+   "createdAt": "2026-01-14T17:00:00Z",
+   "updatedAt": "2026-01-15T10:00:00Z"
+  },
+  {
+   "id": "pa-006",
+   "clientId": "c1",
+   "title": "Обновление политики конфиденциальности",
+   "bodyMdRu": "В связи с изменениями в законодательстве обновлена политика конфиденциальности. Просим ознакомиться с изменениями в разделе «Документы».",
+   "bodyMdEn": "The privacy policy has been updated due to regulatory changes. Please review the changes in the Documents section.",
+   "bodyMdUk": "У зв'язку зі змінами у законодавстві оновлено політику конфіденційності.",
+   "publishedAt": "2026-01-20T08:00:00Z",
+   "expiresAt": null,
+   "createdAt": "2026-01-19T14:00:00Z",
+   "updatedAt": "2026-01-20T08:00:00Z"
+  },
+  {
+   "id": "pa-007",
+   "clientId": "c1",
+   "title": "Вебинар: инвестиционные перспективы 2026",
+   "bodyMdRu": "Приглашаем вас на вебинар 20 февраля в 15:00 (МСК). Наши аналитики представят прогноз по основным классам активов и обсудят стратегию портфеля.",
+   "bodyMdEn": "We invite you to a webinar on February 20 at 15:00 (MSK). Our analysts will present forecasts for major asset classes and discuss portfolio strategy.",
+   "bodyMdUk": "Запрошуємо вас на вебінар 20 лютого о 15:00 (МСК).",
+   "publishedAt": "2026-02-03T10:00:00Z",
+   "expiresAt": "2026-02-21T00:00:00Z",
+   "createdAt": "2026-02-02T16:00:00Z",
+   "updatedAt": "2026-02-03T10:00:00Z"
+  },
+  {
+   "id": "pa-008",
+   "clientId": "c1",
+   "title": "Рыночная волатильность: комментарий аналитиков",
+   "bodyMdRu": "В связи с повышенной волатильностью на рынках публикуем комментарий нашей аналитической команды. Текущая ситуация не требует изменений в стратегии.",
+   "bodyMdEn": "Due to increased market volatility, we are publishing a commentary from our analytical team. The current situation does not require strategy changes.",
+   "bodyMdUk": "У зв'язку з підвищеною волатильністю на ринках публікуємо коментар нашої аналітичної команди.",
+   "publishedAt": "2026-01-28T14:00:00Z",
+   "expiresAt": null,
+   "createdAt": "2026-01-28T12:00:00Z",
+   "updatedAt": "2026-01-28T14:00:00Z"
+  },
+  {
+   "id": "pa-009",
+   "clientId": "c1",
+   "title": "Новый раздел: благотворительность",
+   "bodyMdRu": "В портале появился новый раздел для отслеживания благотворительной деятельности. Вы можете просматривать историю пожертвований и отчёты о социальном воздействии.",
+   "bodyMdEn": "A new section for tracking charitable activities has been added to the portal. You can view donation history and social impact reports.",
+   "bodyMdUk": "У порталі з'явився новий розділ для відстеження благодійної діяльності.",
+   "publishedAt": "2025-11-10T09:00:00Z",
+   "expiresAt": null,
+   "createdAt": "2025-11-09T17:00:00Z",
+   "updatedAt": "2025-11-10T09:00:00Z"
+  },
+  {
+   "id": "pa-010",
+   "clientId": "c1",
+   "title": "Напоминание: срок подачи налоговой декларации",
+   "bodyMdRu": "Напоминаем, что срок подачи налоговой декларации за 2025 год — 30 апреля 2026. Налоговые документы доступны в разделе «Документы».",
+   "bodyMdEn": "Reminder: the deadline for filing the 2025 tax return is April 30, 2026. Tax documents are available in the Documents section.",
+   "bodyMdUk": "Нагадуємо, що термін подання податкової декларації за 2025 рік — 30 квітня 2026.",
+   "publishedAt": "2026-02-01T08:00:00Z",
+   "expiresAt": "2026-05-01T00:00:00Z",
+   "createdAt": "2026-01-31T15:00:00Z",
+   "updatedAt": "2026-02-01T08:00:00Z"
+  },
+  {
+   "id": "pa-011",
+   "clientId": "c1",
+   "title": "Обновление мобильного приложения",
+   "bodyMdRu": "Доступна новая версия мобильного приложения (v3.2). Обновление включает улучшенную навигацию, тёмную тему и push-уведомления о важных событиях.",
+   "bodyMdEn": "A new version of the mobile app (v3.2) is available. The update includes improved navigation, dark theme, and push notifications for important events.",
+   "bodyMdUk": "Доступна нова версія мобільного додатку (v3.2). Оновлення включає покращену навігацію.",
+   "publishedAt": "2026-01-10T09:00:00Z",
+   "expiresAt": null,
+   "createdAt": "2026-01-09T18:00:00Z",
+   "updatedAt": "2026-01-10T09:00:00Z"
+  },
+  {
+   "id": "pa-012",
+   "clientId": "c1",
+   "title": "Поздравляем с Рождеством!",
+   "bodyMdRu": "Команда Wealth Office поздравляет вас с Рождеством Христовым! Желаем мира, здоровья и благополучия вашей семье.",
+   "bodyMdEn": "The Wealth Office team wishes you a Merry Christmas! We wish peace, health, and prosperity to your family.",
+   "bodyMdUk": "Команда Wealth Office вітає вас з Різдвом Христовим! Бажаємо миру, здоров'я та добробуту вашій родині.",
+   "publishedAt": "2026-01-07T08:00:00Z",
+   "expiresAt": "2026-01-14T00:00:00Z",
+   "createdAt": "2026-01-06T17:00:00Z",
+   "updatedAt": "2026-01-07T08:00:00Z"
+  }
+ ],
+ "portalViews": [
+  {
+   "id": "pv-001",
+   "portalUserId": "pu-001",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-001"
+   },
+   "at": "2026-01-02T06:00:00Z",
+   "ipMasked": "185.12.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-002",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-002"
+   },
+   "at": "2026-01-02T10:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-003",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-003"
+   },
+   "at": "2026-01-02T14:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-004",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-004"
+   },
+   "at": "2026-01-02T19:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-005",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-005"
+   },
+   "at": "2026-01-02T23:00:00Z"
+  },
+  {
+   "id": "pv-006",
+   "portalUserId": "pu-003",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-006"
+   },
+   "at": "2026-01-03T04:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-007",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-007"
+   },
+   "at": "2026-01-03T08:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-008",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-008"
+   },
+   "at": "2026-01-03T12:00:00Z",
+   "ipMasked": "77.88.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-009",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-009"
+   },
+   "at": "2026-01-03T17:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-010",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-010"
+   },
+   "at": "2026-01-03T21:00:00Z"
+  },
+  {
+   "id": "pv-011",
+   "portalUserId": "pu-002",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-011"
+   },
+   "at": "2026-01-04T02:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-012",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-012"
+   },
+   "at": "2026-01-04T06:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-013",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-013"
+   },
+   "at": "2026-01-04T10:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-014",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-014"
+   },
+   "at": "2026-01-04T15:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-015",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-015"
+   },
+   "at": "2026-01-04T19:00:00Z",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-016",
+   "portalUserId": "pu-001",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-016"
+   },
+   "at": "2026-01-05T00:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-017",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-017"
+   },
+   "at": "2026-01-05T04:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-018",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-018"
+   },
+   "at": "2026-01-05T08:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-019",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-019"
+   },
+   "at": "2026-01-05T13:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-020",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-020"
+   },
+   "at": "2026-01-05T17:00:00Z"
+  },
+  {
+   "id": "pv-021",
+   "portalUserId": "pu-003",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-021"
+   },
+   "at": "2026-01-05T22:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-022",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-022"
+   },
+   "at": "2026-01-06T02:00:00Z",
+   "ipMasked": "91.234.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-023",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-023"
+   },
+   "at": "2026-01-06T06:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-024",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-024"
+   },
+   "at": "2026-01-06T11:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-025",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-025"
+   },
+   "at": "2026-01-06T15:00:00Z"
+  },
+  {
+   "id": "pv-026",
+   "portalUserId": "pu-002",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-026"
+   },
+   "at": "2026-01-06T20:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-027",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-027"
+   },
+   "at": "2026-01-07T00:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-028",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-028"
+   },
+   "at": "2026-01-07T04:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-029",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-029"
+   },
+   "at": "2026-01-07T09:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-030",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-030"
+   },
+   "at": "2026-01-07T13:00:00Z"
+  },
+  {
+   "id": "pv-031",
+   "portalUserId": "pu-001",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-031"
+   },
+   "at": "2026-01-07T18:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-032",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-032"
+   },
+   "at": "2026-01-07T22:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-033",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-033"
+   },
+   "at": "2026-01-08T02:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-034",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-034"
+   },
+   "at": "2026-01-08T07:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-035",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-035"
+   },
+   "at": "2026-01-08T11:00:00Z"
+  },
+  {
+   "id": "pv-036",
+   "portalUserId": "pu-003",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-036"
+   },
+   "at": "2026-01-08T16:00:00Z",
+   "ipMasked": "185.12.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-037",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-037"
+   },
+   "at": "2026-01-08T20:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-038",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-038"
+   },
+   "at": "2026-01-09T00:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-039",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-039"
+   },
+   "at": "2026-01-09T05:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-040",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-040"
+   },
+   "at": "2026-01-09T09:00:00Z"
+  },
+  {
+   "id": "pv-041",
+   "portalUserId": "pu-002",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-041"
+   },
+   "at": "2026-01-09T14:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-042",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-042"
+   },
+   "at": "2026-01-09T18:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-043",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-043"
+   },
+   "at": "2026-01-09T22:00:00Z",
+   "ipMasked": "77.88.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-044",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-044"
+   },
+   "at": "2026-01-10T03:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-045",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-045"
+   },
+   "at": "2026-01-10T07:00:00Z"
+  },
+  {
+   "id": "pv-046",
+   "portalUserId": "pu-001",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-046"
+   },
+   "at": "2026-01-10T12:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-047",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-047"
+   },
+   "at": "2026-01-10T16:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-048",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-048"
+   },
+   "at": "2026-01-10T20:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-049",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-049"
+   },
+   "at": "2026-01-11T01:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-050",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-050"
+   },
+   "at": "2026-01-11T05:00:00Z",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-051",
+   "portalUserId": "pu-003",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-051"
+   },
+   "at": "2026-01-11T10:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-052",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-052"
+   },
+   "at": "2026-01-11T14:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-053",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-053"
+   },
+   "at": "2026-01-11T18:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-054",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-054"
+   },
+   "at": "2026-01-11T23:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-055",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-055"
+   },
+   "at": "2026-01-12T03:00:00Z"
+  },
+  {
+   "id": "pv-056",
+   "portalUserId": "pu-002",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-056"
+   },
+   "at": "2026-01-12T08:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-057",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-057"
+   },
+   "at": "2026-01-12T12:00:00Z",
+   "ipMasked": "91.234.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-058",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-058"
+   },
+   "at": "2026-01-12T16:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-059",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-059"
+   },
+   "at": "2026-01-12T21:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-060",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "documents",
+    "id": "doc-060"
+   },
+   "at": "2026-01-13T01:00:00Z"
+  },
+  {
+   "id": "pv-061",
+   "portalUserId": "pu-001",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-001"
+   },
+   "at": "2026-01-13T06:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-062",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-002"
+   },
+   "at": "2026-01-13T10:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-063",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-003"
+   },
+   "at": "2026-01-13T14:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-064",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-004"
+   },
+   "at": "2026-01-13T19:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-065",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-005"
+   },
+   "at": "2026-01-13T23:00:00Z"
+  },
+  {
+   "id": "pv-066",
+   "portalUserId": "pu-003",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-006"
+   },
+   "at": "2026-01-14T04:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-067",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-007"
+   },
+   "at": "2026-01-14T08:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-068",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-008"
+   },
+   "at": "2026-01-14T12:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-069",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-009"
+   },
+   "at": "2026-01-14T17:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-070",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-010"
+   },
+   "at": "2026-01-14T21:00:00Z"
+  },
+  {
+   "id": "pv-071",
+   "portalUserId": "pu-002",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-011"
+   },
+   "at": "2026-01-15T02:00:00Z",
+   "ipMasked": "185.12.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-072",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-012"
+   },
+   "at": "2026-01-15T06:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-073",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-013"
+   },
+   "at": "2026-01-15T10:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-074",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-014"
+   },
+   "at": "2026-01-15T15:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-075",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-015"
+   },
+   "at": "2026-01-15T19:00:00Z"
+  },
+  {
+   "id": "pv-076",
+   "portalUserId": "pu-001",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-016"
+   },
+   "at": "2026-01-16T00:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-077",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-017"
+   },
+   "at": "2026-01-16T04:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-078",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-018"
+   },
+   "at": "2026-01-16T08:00:00Z",
+   "ipMasked": "77.88.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-079",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-019"
+   },
+   "at": "2026-01-16T13:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-080",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-020"
+   },
+   "at": "2026-01-16T17:00:00Z"
+  },
+  {
+   "id": "pv-081",
+   "portalUserId": "pu-003",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-021"
+   },
+   "at": "2026-01-16T22:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-082",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-022"
+   },
+   "at": "2026-01-17T02:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-083",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-023"
+   },
+   "at": "2026-01-17T06:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-084",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-024"
+   },
+   "at": "2026-01-17T11:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-085",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-025"
+   },
+   "at": "2026-01-17T15:00:00Z",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-086",
+   "portalUserId": "pu-002",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-026"
+   },
+   "at": "2026-01-17T20:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-087",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-027"
+   },
+   "at": "2026-01-18T00:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-088",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-028"
+   },
+   "at": "2026-01-18T04:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-089",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-029"
+   },
+   "at": "2026-01-18T09:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-090",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "reportPacks",
+    "id": "rp-030"
+   },
+   "at": "2026-01-18T13:00:00Z"
+  },
+  {
+   "id": "pv-091",
+   "portalUserId": "pu-001",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-001"
+   },
+   "at": "2026-01-18T18:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-092",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-002"
+   },
+   "at": "2026-01-18T22:00:00Z",
+   "ipMasked": "91.234.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-093",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-003"
+   },
+   "at": "2026-01-19T02:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-094",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-004"
+   },
+   "at": "2026-01-19T07:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-095",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-005"
+   },
+   "at": "2026-01-19T11:00:00Z"
+  },
+  {
+   "id": "pv-096",
+   "portalUserId": "pu-003",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-006"
+   },
+   "at": "2026-01-19T16:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-097",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-007"
+   },
+   "at": "2026-01-19T20:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-098",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-008"
+   },
+   "at": "2026-01-20T00:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-099",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-009"
+   },
+   "at": "2026-01-20T05:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-100",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-010"
+   },
+   "at": "2026-01-20T09:00:00Z"
+  },
+  {
+   "id": "pv-101",
+   "portalUserId": "pu-002",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-011"
+   },
+   "at": "2026-01-20T14:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-102",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-012"
+   },
+   "at": "2026-01-20T18:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-103",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-013"
+   },
+   "at": "2026-01-20T22:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-104",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-014"
+   },
+   "at": "2026-01-21T03:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-105",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-015"
+   },
+   "at": "2026-01-21T07:00:00Z"
+  },
+  {
+   "id": "pv-106",
+   "portalUserId": "pu-001",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-016"
+   },
+   "at": "2026-01-21T12:00:00Z",
+   "ipMasked": "185.12.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-107",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-017"
+   },
+   "at": "2026-01-21T16:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-108",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-018"
+   },
+   "at": "2026-01-21T20:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-109",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-019"
+   },
+   "at": "2026-01-22T01:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-110",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "ownershipViews",
+    "id": "ov-020"
+   },
+   "at": "2026-01-22T05:00:00Z"
+  },
+  {
+   "id": "pv-111",
+   "portalUserId": "pu-003",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-001"
+   },
+   "at": "2026-01-22T10:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-112",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-002"
+   },
+   "at": "2026-01-22T14:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-113",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-003"
+   },
+   "at": "2026-01-22T18:00:00Z",
+   "ipMasked": "77.88.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-114",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-004"
+   },
+   "at": "2026-01-22T23:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-115",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-005"
+   },
+   "at": "2026-01-23T03:00:00Z"
+  },
+  {
+   "id": "pv-116",
+   "portalUserId": "pu-002",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-006"
+   },
+   "at": "2026-01-23T08:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-117",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-007"
+   },
+   "at": "2026-01-23T12:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-118",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-008"
+   },
+   "at": "2026-01-23T16:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-119",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-009"
+   },
+   "at": "2026-01-23T21:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-120",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-010"
+   },
+   "at": "2026-01-24T01:00:00Z",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-121",
+   "portalUserId": "pu-001",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-011"
+   },
+   "at": "2026-01-24T06:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-122",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-012"
+   },
+   "at": "2026-01-24T10:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-123",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-013"
+   },
+   "at": "2026-01-24T14:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-124",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-014"
+   },
+   "at": "2026-01-24T19:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-125",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-015"
+   },
+   "at": "2026-01-24T23:00:00Z"
+  },
+  {
+   "id": "pv-126",
+   "portalUserId": "pu-003",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-016"
+   },
+   "at": "2026-01-25T04:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-127",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-017"
+   },
+   "at": "2026-01-25T08:00:00Z",
+   "ipMasked": "91.234.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-128",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-018"
+   },
+   "at": "2026-01-25T12:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-129",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-019"
+   },
+   "at": "2026-01-25T17:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-130",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "philImpactReports",
+    "id": "pir-020"
+   },
+   "at": "2026-01-25T21:00:00Z"
+  },
+  {
+   "id": "pv-131",
+   "portalUserId": "pu-002",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-001"
+   },
+   "at": "2026-01-26T02:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-132",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-002"
+   },
+   "at": "2026-01-26T06:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-133",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-003"
+   },
+   "at": "2026-01-26T10:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-134",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-004"
+   },
+   "at": "2026-01-26T15:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-135",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-005"
+   },
+   "at": "2026-01-26T19:00:00Z"
+  },
+  {
+   "id": "pv-136",
+   "portalUserId": "pu-001",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-006"
+   },
+   "at": "2026-01-27T00:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-137",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-007"
+   },
+   "at": "2026-01-27T04:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-138",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-008"
+   },
+   "at": "2026-01-27T08:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-139",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-009"
+   },
+   "at": "2026-01-27T13:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-140",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-010"
+   },
+   "at": "2026-01-27T17:00:00Z"
+  },
+  {
+   "id": "pv-141",
+   "portalUserId": "pu-003",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-011"
+   },
+   "at": "2026-01-27T22:00:00Z",
+   "ipMasked": "185.12.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-142",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-012"
+   },
+   "at": "2026-01-28T02:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-143",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-013"
+   },
+   "at": "2026-01-28T06:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-144",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-014"
+   },
+   "at": "2026-01-28T11:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-145",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-015"
+   },
+   "at": "2026-01-28T15:00:00Z"
+  },
+  {
+   "id": "pv-146",
+   "portalUserId": "pu-002",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-016"
+   },
+   "at": "2026-01-28T20:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-147",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-017"
+   },
+   "at": "2026-01-29T00:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-148",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-018"
+   },
+   "at": "2026-01-29T04:00:00Z",
+   "ipMasked": "77.88.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-149",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-019"
+   },
+   "at": "2026-01-29T09:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-150",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-020"
+   },
+   "at": "2026-01-29T13:00:00Z"
+  },
+  {
+   "id": "pv-151",
+   "portalUserId": "pu-001",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-021"
+   },
+   "at": "2026-01-29T18:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-152",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-022"
+   },
+   "at": "2026-01-29T22:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-153",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-023"
+   },
+   "at": "2026-01-30T02:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-154",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-024"
+   },
+   "at": "2026-01-30T07:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-155",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "commThreads",
+    "id": "ct-025"
+   },
+   "at": "2026-01-30T11:00:00Z",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-156",
+   "portalUserId": "pu-003",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "consents",
+    "id": "con-001"
+   },
+   "at": "2026-01-30T16:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-157",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "consents",
+    "id": "con-002"
+   },
+   "at": "2026-01-30T20:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-158",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "consents",
+    "id": "con-003"
+   },
+   "at": "2026-01-31T00:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-159",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "consents",
+    "id": "con-004"
+   },
+   "at": "2026-01-31T05:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-160",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "consents",
+    "id": "con-005"
+   },
+   "at": "2026-01-31T09:00:00Z"
+  },
+  {
+   "id": "pv-161",
+   "portalUserId": "pu-002",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "consents",
+    "id": "con-006"
+   },
+   "at": "2026-01-31T14:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-162",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "consents",
+    "id": "con-007"
+   },
+   "at": "2026-01-31T18:00:00Z",
+   "ipMasked": "91.234.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-163",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "consents",
+    "id": "con-008"
+   },
+   "at": "2026-01-31T22:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-164",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "consents",
+    "id": "con-009"
+   },
+   "at": "2026-02-01T03:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-165",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "consents",
+    "id": "con-010"
+   },
+   "at": "2026-02-01T07:00:00Z"
+  },
+  {
+   "id": "pv-166",
+   "portalUserId": "pu-001",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "consents",
+    "id": "con-011"
+   },
+   "at": "2026-02-01T12:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-167",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "consents",
+    "id": "con-012"
+   },
+   "at": "2026-02-01T16:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-168",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "consents",
+    "id": "con-013"
+   },
+   "at": "2026-02-01T20:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-169",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "consents",
+    "id": "con-014"
+   },
+   "at": "2026-02-02T01:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-170",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "consents",
+    "id": "con-015"
+   },
+   "at": "2026-02-02T05:00:00Z"
+  },
+  {
+   "id": "pv-171",
+   "portalUserId": "pu-003",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "relHouseholds",
+    "id": "rh-001"
+   },
+   "at": "2026-02-02T10:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-172",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "relHouseholds",
+    "id": "rh-002"
+   },
+   "at": "2026-02-02T14:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-173",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "relHouseholds",
+    "id": "rh-003"
+   },
+   "at": "2026-02-02T18:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-174",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "relHouseholds",
+    "id": "rh-004"
+   },
+   "at": "2026-02-02T23:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-175",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "relHouseholds",
+    "id": "rh-005"
+   },
+   "at": "2026-02-03T03:00:00Z"
+  },
+  {
+   "id": "pv-176",
+   "portalUserId": "pu-002",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "relHouseholds",
+    "id": "rh-006"
+   },
+   "at": "2026-02-03T08:00:00Z",
+   "ipMasked": "185.12.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-177",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "relHouseholds",
+    "id": "rh-007"
+   },
+   "at": "2026-02-03T12:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-178",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "relHouseholds",
+    "id": "rh-008"
+   },
+   "at": "2026-02-03T16:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-179",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "relHouseholds",
+    "id": "rh-009"
+   },
+   "at": "2026-02-03T21:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-180",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "relHouseholds",
+    "id": "rh-010"
+   },
+   "at": "2026-02-04T01:00:00Z"
+  },
+  {
+   "id": "pv-181",
+   "portalUserId": "pu-001",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "relHouseholds",
+    "id": "rh-011"
+   },
+   "at": "2026-02-04T06:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-182",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "relHouseholds",
+    "id": "rh-012"
+   },
+   "at": "2026-02-04T10:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-183",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "relHouseholds",
+    "id": "rh-013"
+   },
+   "at": "2026-02-04T14:00:00Z",
+   "ipMasked": "77.88.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-184",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "relHouseholds",
+    "id": "rh-014"
+   },
+   "at": "2026-02-04T19:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-185",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "relHouseholds",
+    "id": "rh-015"
+   },
+   "at": "2026-02-04T23:00:00Z"
+  },
+  {
+   "id": "pv-186",
+   "portalUserId": "pu-003",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "portalRequests",
+    "id": "pr-001"
+   },
+   "at": "2026-02-05T04:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-187",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "portalRequests",
+    "id": "pr-002"
+   },
+   "at": "2026-02-05T08:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-188",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "portalRequests",
+    "id": "pr-003"
+   },
+   "at": "2026-02-05T12:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-189",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "portalRequests",
+    "id": "pr-004"
+   },
+   "at": "2026-02-05T17:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-190",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "portalRequests",
+    "id": "pr-005"
+   },
+   "at": "2026-02-05T21:00:00Z",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-191",
+   "portalUserId": "pu-002",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "portalRequests",
+    "id": "pr-006"
+   },
+   "at": "2026-02-06T02:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-192",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "portalRequests",
+    "id": "pr-007"
+   },
+   "at": "2026-02-06T06:00:00Z",
+   "ipMasked": "91.234.xx.xx"
+  },
+  {
+   "id": "pv-193",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "portalRequests",
+    "id": "pr-008"
+   },
+   "at": "2026-02-06T10:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-194",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "portalRequests",
+    "id": "pr-009"
+   },
+   "at": "2026-02-06T15:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-195",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "portalRequests",
+    "id": "pr-010"
+   },
+   "at": "2026-02-06T19:00:00Z"
+  },
+  {
+   "id": "pv-196",
+   "portalUserId": "pu-001",
+   "actionKey": "download",
+   "targetRefJson": {
+    "collection": "portalRequests",
+    "id": "pr-011"
+   },
+   "at": "2026-02-07T00:00:00Z",
+   "ipMasked": "185.12.xx.xx"
+  },
+  {
+   "id": "pv-197",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "portalRequests",
+    "id": "pr-012"
+   },
+   "at": "2026-02-07T04:00:00Z",
+   "ipMasked": "91.234.xx.xx",
+   "metaJson": {
+    "userAgent": "Mozilla/5.0",
+    "screen": "1920x1080"
+   }
+  },
+  {
+   "id": "pv-198",
+   "portalUserId": "pu-003",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "portalRequests",
+    "id": "pr-013"
+   },
+   "at": "2026-02-07T08:00:00Z",
+   "ipMasked": "77.88.xx.xx"
+  },
+  {
+   "id": "pv-199",
+   "portalUserId": "pu-001",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "portalRequests",
+    "id": "pr-014"
+   },
+   "at": "2026-02-07T13:00:00Z",
+   "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+   "id": "pv-200",
+   "portalUserId": "pu-002",
+   "actionKey": "view",
+   "targetRefJson": {
+    "collection": "portalRequests",
+    "id": "pr-015"
+   },
+   "at": "2026-02-07T17:00:00Z"
+  }
+ ],
+ "portalRequests": [
+  {
+   "id": "pr-001",
+   "portalUserId": "pu-001",
+   "categoryKey": "documents",
+   "title": "Запрос копии договора доверительного управления",
+   "description": "Необходима актуальная копия договора для предоставления в банк-партнёр.",
+   "urgencyKey": "low",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-01T08:00:00Z",
+   "updatedAt": "2025-10-01T08:00:00Z"
+  },
+  {
+   "id": "pr-002",
+   "portalUserId": "pu-002",
+   "categoryKey": "documents",
+   "title": "Получение выписки по счёту за декабрь",
+   "description": "Прошу предоставить детализированную выписку по основному инвестиционному счёту.",
+   "urgencyKey": "medium",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-02T14:00:00Z",
+   "updatedAt": "2025-10-02T14:00:00Z"
+  },
+  {
+   "id": "pr-003",
+   "portalUserId": "pu-003",
+   "categoryKey": "documents",
+   "title": "Копия налогового уведомления",
+   "description": "Требуется копия уведомления ФНС для подготовки налоговой декларации.",
+   "urgencyKey": "high",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-03T20:00:00Z",
+   "updatedAt": "2025-10-03T20:00:00Z"
+  },
+  {
+   "id": "pr-004",
+   "portalUserId": "pu-001",
+   "categoryKey": "documents",
+   "title": "Запрос справки о состоянии портфеля",
+   "description": "Нужна справка для предоставления в иностранный банк.",
+   "urgencyKey": "low",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-05T02:00:00Z",
+   "updatedAt": "2025-10-05T02:00:00Z"
+  },
+  {
+   "id": "pr-005",
+   "portalUserId": "pu-002",
+   "categoryKey": "documents",
+   "title": "Получение сертификата о праве собственности",
+   "description": "Запрашиваю сертификат для оформления страхования имущества.",
+   "urgencyKey": "medium",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-06T08:00:00Z",
+   "updatedAt": "2025-10-06T08:00:00Z"
+  },
+  {
+   "id": "pr-006",
+   "portalUserId": "pu-003",
+   "categoryKey": "documents",
+   "title": "Копия акта приёма-передачи активов",
+   "description": "Необходим акт для завершения процедуры передачи активов между структурами.",
+   "urgencyKey": "high",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-07T14:00:00Z",
+   "updatedAt": "2025-10-07T14:00:00Z"
+  },
+  {
+   "id": "pr-007",
+   "portalUserId": "pu-001",
+   "categoryKey": "documents",
+   "title": "Запрос письма-подтверждения от банка",
+   "description": "Прошу подготовить письмо для предоставления контрагенту.",
+   "urgencyKey": "low",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-08T20:00:00Z",
+   "updatedAt": "2025-10-08T20:00:00Z"
+  },
+  {
+   "id": "pr-008",
+   "portalUserId": "pu-002",
+   "categoryKey": "documents",
+   "title": "Получение копии страхового полиса",
+   "description": "Копия полиса необходима для обновления информации у кастодиана.",
+   "urgencyKey": "medium",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-10T02:00:00Z",
+   "updatedAt": "2025-10-10T02:00:00Z"
+  },
+  {
+   "id": "pr-009",
+   "portalUserId": "pu-003",
+   "categoryKey": "documents",
+   "title": "Заверенная копия учредительного договора",
+   "description": "Требуется для регистрации изменений в структуре владения.",
+   "urgencyKey": "high",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-11T08:00:00Z",
+   "updatedAt": "2025-10-11T08:00:00Z"
+  },
+  {
+   "id": "pr-010",
+   "portalUserId": "pu-001",
+   "categoryKey": "documents",
+   "title": "Архивные документы за 2024 год",
+   "description": "Прошу собрать архив документов за прошлый год для внутреннего аудита.",
+   "urgencyKey": "low",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-12T14:00:00Z",
+   "updatedAt": "2025-10-12T14:00:00Z"
+  },
+  {
+   "id": "pr-011",
+   "portalUserId": "pu-002",
+   "categoryKey": "documents",
+   "title": "Справка для визового центра",
+   "description": "Необходима справка о финансовом состоянии для оформления визы.",
+   "urgencyKey": "medium",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-13T20:00:00Z",
+   "updatedAt": "2025-10-13T20:00:00Z"
+  },
+  {
+   "id": "pr-012",
+   "portalUserId": "pu-003",
+   "categoryKey": "documents",
+   "title": "Копия лицензии управляющей компании",
+   "description": "Запрашиваю для проверки соответствия регуляторным требованиям.",
+   "urgencyKey": "high",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-15T02:00:00Z",
+   "updatedAt": "2025-10-15T02:00:00Z"
+  },
+  {
+   "id": "pr-013",
+   "portalUserId": "pu-001",
+   "categoryKey": "documents",
+   "title": "Запрос нотариально заверенной доверенности",
+   "description": "Доверенность необходима для представления интересов в суде.",
+   "urgencyKey": "low",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-16T08:00:00Z",
+   "updatedAt": "2025-10-16T08:00:00Z"
+  },
+  {
+   "id": "pr-014",
+   "portalUserId": "pu-002",
+   "categoryKey": "documents",
+   "title": "Получение инвестиционной декларации",
+   "description": "Прошу предоставить актуальную инвестиционную декларацию.",
+   "urgencyKey": "medium",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-17T14:00:00Z",
+   "updatedAt": "2025-10-17T14:00:00Z"
+  },
+  {
+   "id": "pr-015",
+   "portalUserId": "pu-003",
+   "categoryKey": "documents",
+   "title": "Копия отчёта независимого оценщика",
+   "description": "Отчёт оценщика нужен для пересмотра залоговой стоимости.",
+   "urgencyKey": "high",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-18T20:00:00Z",
+   "updatedAt": "2025-10-18T20:00:00Z"
+  },
+  {
+   "id": "pr-016",
+   "portalUserId": "pu-001",
+   "categoryKey": "documents",
+   "title": "Запрос выписки ЕГРН на объект недвижимости",
+   "description": "Выписка необходима для сделки купли-продажи недвижимости.",
+   "urgencyKey": "low",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-20T02:00:00Z",
+   "updatedAt": "2025-10-20T02:00:00Z"
+  },
+  {
+   "id": "pr-017",
+   "portalUserId": "pu-002",
+   "categoryKey": "documents",
+   "title": "Копия протокола собрания учредителей",
+   "description": "Протокол нужен для оформления банковской карточки подписей.",
+   "urgencyKey": "medium",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-21T08:00:00Z",
+   "updatedAt": "2025-10-21T08:00:00Z"
+  },
+  {
+   "id": "pr-018",
+   "portalUserId": "pu-003",
+   "categoryKey": "documents",
+   "title": "Запрос справки об отсутствии задолженности",
+   "description": "Справка требуется для участия в тендере.",
+   "urgencyKey": "high",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-22T14:00:00Z",
+   "updatedAt": "2025-10-22T14:00:00Z"
+  },
+  {
+   "id": "pr-019",
+   "portalUserId": "pu-001",
+   "categoryKey": "documents",
+   "title": "Получение подтверждения банковского перевода",
+   "description": "Подтверждение нужно для урегулирования спора с контрагентом.",
+   "urgencyKey": "low",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-23T20:00:00Z",
+   "updatedAt": "2025-10-23T20:00:00Z"
+  },
+  {
+   "id": "pr-020",
+   "portalUserId": "pu-002",
+   "categoryKey": "documents",
+   "title": "Заверенная копия паспорта для KYC",
+   "description": "Копия паспорта запрашивается банком для обновления KYC-профиля.",
+   "urgencyKey": "medium",
+   "statusKey": "open",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-25T02:00:00Z",
+   "updatedAt": "2025-10-25T02:00:00Z"
+  },
+  {
+   "id": "pr-021",
+   "portalUserId": "pu-003",
+   "categoryKey": "documents",
+   "title": "Запрос истории операций по трастовому счёту",
+   "description": "Прошу предоставить полную историю за последние 12 месяцев.",
+   "urgencyKey": "high",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [
+    "task-220"
+   ],
+   "createdAt": "2025-10-26T09:00:00Z",
+   "updatedAt": "2025-10-27T17:00:00Z"
+  },
+  {
+   "id": "pr-022",
+   "portalUserId": "pu-001",
+   "categoryKey": "documents",
+   "title": "Получение копии аудиторского заключения",
+   "description": "Заключение необходимо для предоставления регулятору.",
+   "urgencyKey": "low",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-27T15:00:00Z",
+   "updatedAt": "2025-10-29T00:00:00Z"
+  },
+  {
+   "id": "pr-023",
+   "portalUserId": "pu-002",
+   "categoryKey": "documents",
+   "title": "Запрос выписки из реестра акционеров",
+   "description": "Выписка нужна для подтверждения доли участия.",
+   "urgencyKey": "medium",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-28T21:00:00Z",
+   "updatedAt": "2025-10-30T07:00:00Z"
+  },
+  {
+   "id": "pr-024",
+   "portalUserId": "pu-003",
+   "categoryKey": "documents",
+   "title": "Копия соглашения о неразглашении",
+   "description": "NDA необходимо для начала переговоров с потенциальным партнёром.",
+   "urgencyKey": "high",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-10-30T03:00:00Z",
+   "updatedAt": "2025-10-31T14:00:00Z"
+  },
+  {
+   "id": "pr-025",
+   "portalUserId": "pu-001",
+   "categoryKey": "reporting",
+   "title": "Формирование отчёта по доходности портфеля",
+   "description": "Прошу сформировать отчёт по доходности за последний квартал с разбивкой по классам активов.",
+   "urgencyKey": "low",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [
+    "task-224"
+   ],
+   "createdAt": "2025-10-31T09:00:00Z",
+   "updatedAt": "2025-10-31T21:00:00Z"
+  },
+  {
+   "id": "pr-026",
+   "portalUserId": "pu-002",
+   "categoryKey": "reporting",
+   "title": "Запрос аналитического обзора рынка",
+   "description": "Необходим аналитический обзор текущей рыночной ситуации от команды аналитиков.",
+   "urgencyKey": "medium",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-01T15:00:00Z",
+   "updatedAt": "2025-11-02T04:00:00Z"
+  },
+  {
+   "id": "pr-027",
+   "portalUserId": "pu-003",
+   "categoryKey": "reporting",
+   "title": "Консолидированный отчёт по всем структурам",
+   "description": "Прошу подготовить консолидированный отчёт по всем юридическим лицам и трастам.",
+   "urgencyKey": "high",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-02T21:00:00Z",
+   "updatedAt": "2025-11-03T11:00:00Z"
+  },
+  {
+   "id": "pr-028",
+   "portalUserId": "pu-001",
+   "categoryKey": "reporting",
+   "title": "Отчёт о движении денежных средств за январь",
+   "description": "Необходима детализация всех поступлений и списаний за январь 2026.",
+   "urgencyKey": "low",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-04T03:00:00Z",
+   "updatedAt": "2025-11-04T18:00:00Z"
+  },
+  {
+   "id": "pr-029",
+   "portalUserId": "pu-002",
+   "categoryKey": "reporting",
+   "title": "Сравнительный анализ доходности по бенчмарку",
+   "description": "Прошу подготовить сравнение доходности портфеля с индексом MSCI World.",
+   "urgencyKey": "medium",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [
+    "task-228"
+   ],
+   "createdAt": "2025-11-05T09:00:00Z",
+   "updatedAt": "2025-11-06T01:00:00Z"
+  },
+  {
+   "id": "pr-030",
+   "portalUserId": "pu-003",
+   "categoryKey": "reporting",
+   "title": "Запрос кастомного отчёта по недвижимости",
+   "description": "Нужен отдельный отчёт по портфелю недвижимости с оценкой текущей стоимости.",
+   "urgencyKey": "high",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-06T15:00:00Z",
+   "updatedAt": "2025-11-07T08:00:00Z"
+  },
+  {
+   "id": "pr-031",
+   "portalUserId": "pu-001",
+   "categoryKey": "reporting",
+   "title": "Отчёт об аллокации активов",
+   "description": "Прошу предоставить текущую аллокацию с рекомендациями по ребалансировке.",
+   "urgencyKey": "low",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-07T21:00:00Z",
+   "updatedAt": "2025-11-08T15:00:00Z"
+  },
+  {
+   "id": "pr-032",
+   "portalUserId": "pu-002",
+   "categoryKey": "reporting",
+   "title": "Детализация комиссий и расходов",
+   "description": "Необходима полная детализация всех комиссий, уплаченных за 2025 год.",
+   "urgencyKey": "medium",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-09T03:00:00Z",
+   "updatedAt": "2025-11-09T22:00:00Z"
+  },
+  {
+   "id": "pr-033",
+   "portalUserId": "pu-003",
+   "categoryKey": "reporting",
+   "title": "Прогноз денежных потоков на Q1 2026",
+   "description": "Прошу подготовить прогноз входящих и исходящих потоков на ближайший квартал.",
+   "urgencyKey": "high",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [
+    "task-232"
+   ],
+   "createdAt": "2025-11-10T09:00:00Z",
+   "updatedAt": "2025-11-11T05:00:00Z"
+  },
+  {
+   "id": "pr-034",
+   "portalUserId": "pu-001",
+   "categoryKey": "reporting",
+   "title": "Запрос отчёта по альтернативным инвестициям",
+   "description": "Нужен обзор портфеля альтернативных инвестиций: PE, VC, хедж-фонды.",
+   "urgencyKey": "low",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-11T15:00:00Z",
+   "updatedAt": "2025-11-12T12:00:00Z"
+  },
+  {
+   "id": "pr-035",
+   "portalUserId": "pu-002",
+   "categoryKey": "reporting",
+   "title": "Квартальный отчёт по ESG-метрикам",
+   "description": "Прошу предоставить обновлённые ESG-рейтинги и метрики портфеля.",
+   "urgencyKey": "medium",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-12T21:00:00Z",
+   "updatedAt": "2025-11-13T19:00:00Z"
+  },
+  {
+   "id": "pr-036",
+   "portalUserId": "pu-003",
+   "categoryKey": "reporting",
+   "title": "Отчёт о валютных позициях",
+   "description": "Необходим обзор валютных позиций и рекомендации по хеджированию.",
+   "urgencyKey": "high",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-14T03:00:00Z",
+   "updatedAt": "2025-11-15T02:00:00Z"
+  },
+  {
+   "id": "pr-037",
+   "portalUserId": "pu-001",
+   "categoryKey": "reporting",
+   "title": "Детализация процентных доходов по облигациям",
+   "description": "Прошу детализировать купонные доходы по всем облигационным позициям.",
+   "urgencyKey": "low",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [
+    "task-236"
+   ],
+   "createdAt": "2025-11-15T09:00:00Z",
+   "updatedAt": "2025-11-16T09:00:00Z"
+  },
+  {
+   "id": "pr-038",
+   "portalUserId": "pu-002",
+   "categoryKey": "reporting",
+   "title": "Отчёт по ликвидности портфеля",
+   "description": "Нужен анализ ликвидности портфеля с учётом рыночных условий.",
+   "urgencyKey": "medium",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-16T15:00:00Z",
+   "updatedAt": "2025-11-17T16:00:00Z"
+  },
+  {
+   "id": "pr-039",
+   "portalUserId": "pu-003",
+   "categoryKey": "reporting",
+   "title": "Историческая доходность за 5 лет",
+   "description": "Прошу подготовить отчёт по исторической доходности за 5 лет.",
+   "urgencyKey": "high",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-17T21:00:00Z",
+   "updatedAt": "2025-11-18T23:00:00Z"
+  },
+  {
+   "id": "pr-040",
+   "portalUserId": "pu-001",
+   "categoryKey": "reporting",
+   "title": "Отчёт по стресс-тестированию портфеля",
+   "description": "Необходимы результаты стресс-тестирования при различных сценариях.",
+   "urgencyKey": "low",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-19T03:00:00Z",
+   "updatedAt": "2025-11-20T06:00:00Z"
+  },
+  {
+   "id": "pr-041",
+   "portalUserId": "pu-002",
+   "categoryKey": "payments",
+   "title": "Перевод средств между счетами",
+   "description": "Прошу перевести 500,000 USD со счёта в UBS на счёт в Credit Suisse.",
+   "urgencyKey": "medium",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [
+    "task-240"
+   ],
+   "createdAt": "2025-11-20T09:00:00Z",
+   "updatedAt": "2025-11-21T13:00:00Z"
+  },
+  {
+   "id": "pr-042",
+   "portalUserId": "pu-003",
+   "categoryKey": "payments",
+   "title": "Оплата страховой премии",
+   "description": "Необходимо оплатить ежегодную страховую премию по полису имущества.",
+   "urgencyKey": "high",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-21T15:00:00Z",
+   "updatedAt": "2025-11-22T20:00:00Z"
+  },
+  {
+   "id": "pr-043",
+   "portalUserId": "pu-001",
+   "categoryKey": "payments",
+   "title": "Перечисление благотворительного взноса",
+   "description": "Прошу перечислить 100,000 USD в благотворительный фонд согласно плану.",
+   "urgencyKey": "low",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-22T21:00:00Z",
+   "updatedAt": "2025-11-24T03:00:00Z"
+  },
+  {
+   "id": "pr-044",
+   "portalUserId": "pu-002",
+   "categoryKey": "payments",
+   "title": "Оплата услуг управляющей компании",
+   "description": "Оплата ежемесячной комиссии за управление портфелем.",
+   "urgencyKey": "medium",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-24T03:00:00Z",
+   "updatedAt": "2025-11-25T10:00:00Z"
+  },
+  {
+   "id": "pr-045",
+   "portalUserId": "pu-003",
+   "categoryKey": "payments",
+   "title": "Перевод на счёт в иностранном банке",
+   "description": "Прошу инициировать перевод 200,000 EUR на счёт в Deutsche Bank.",
+   "urgencyKey": "high",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [
+    "task-244"
+   ],
+   "createdAt": "2025-11-25T09:00:00Z",
+   "updatedAt": "2025-11-26T17:00:00Z"
+  },
+  {
+   "id": "pr-046",
+   "portalUserId": "pu-001",
+   "categoryKey": "payments",
+   "title": "Оплата налогов за Q4 2025",
+   "description": "Необходимо оплатить налоги за четвёртый квартал 2025 года.",
+   "urgencyKey": "low",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-26T15:00:00Z",
+   "updatedAt": "2025-11-28T00:00:00Z"
+  },
+  {
+   "id": "pr-047",
+   "portalUserId": "pu-002",
+   "categoryKey": "payments",
+   "title": "Регулярный платёж по ипотеке",
+   "description": "Прошу провести очередной платёж по ипотечному кредиту.",
+   "urgencyKey": "medium",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-27T21:00:00Z",
+   "updatedAt": "2025-11-29T07:00:00Z"
+  },
+  {
+   "id": "pr-048",
+   "portalUserId": "pu-003",
+   "categoryKey": "payments",
+   "title": "Оплата юридических услуг",
+   "description": "Оплата счёта юридической фирмы за консультационные услуги.",
+   "urgencyKey": "high",
+   "statusKey": "in_progress",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-29T03:00:00Z",
+   "updatedAt": "2025-11-30T14:00:00Z"
+  },
+  {
+   "id": "pr-049",
+   "portalUserId": "pu-001",
+   "categoryKey": "payments",
+   "title": "Перевод дивидендов на личный счёт",
+   "description": "Прошу перевести начисленные дивиденды на личный расчётный счёт.",
+   "urgencyKey": "low",
+   "statusKey": "resolved",
+   "linkedCaseId": "case-148",
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-11-30T09:00:00Z",
+   "updatedAt": "2025-12-01T09:00:00Z"
+  },
+  {
+   "id": "pr-050",
+   "portalUserId": "pu-002",
+   "categoryKey": "payments",
+   "title": "Оплата коммунальных услуг по объектам",
+   "description": "Необходимо оплатить коммунальные услуги по объектам недвижимости.",
+   "urgencyKey": "medium",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-01T15:00:00Z",
+   "updatedAt": "2025-12-02T16:00:00Z"
+  },
+  {
+   "id": "pr-051",
+   "portalUserId": "pu-003",
+   "categoryKey": "payments",
+   "title": "Перечисление средств в трастовый фонд",
+   "description": "Прошу перечислить средства в трастовый фонд согласно графику.",
+   "urgencyKey": "high",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-02T21:00:00Z",
+   "updatedAt": "2025-12-03T23:00:00Z"
+  },
+  {
+   "id": "pr-052",
+   "portalUserId": "pu-001",
+   "categoryKey": "payments",
+   "title": "Оплата услуг консультантов",
+   "description": "Оплата услуг налоговых и финансовых консультантов.",
+   "urgencyKey": "low",
+   "statusKey": "resolved",
+   "linkedCaseId": "case-151",
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-04T03:00:00Z",
+   "updatedAt": "2025-12-05T06:00:00Z"
+  },
+  {
+   "id": "pr-053",
+   "portalUserId": "pu-002",
+   "categoryKey": "tax",
+   "title": "Подготовка налоговой декларации за 2025",
+   "description": "Прошу начать подготовку налоговой декларации. Все документы загружены в систему.",
+   "urgencyKey": "medium",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-05T09:00:00Z",
+   "updatedAt": "2025-12-06T13:00:00Z"
+  },
+  {
+   "id": "pr-054",
+   "portalUserId": "pu-003",
+   "categoryKey": "tax",
+   "title": "Вопрос по налогообложению дивидендов",
+   "description": "Необходима консультация по порядку налогообложения дивидендов от иностранных компаний.",
+   "urgencyKey": "high",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-06T15:00:00Z",
+   "updatedAt": "2025-12-07T20:00:00Z"
+  },
+  {
+   "id": "pr-055",
+   "portalUserId": "pu-001",
+   "categoryKey": "tax",
+   "title": "Оптимизация налоговой нагрузки",
+   "description": "Прошу рассмотреть варианты оптимизации налоговой нагрузки на 2026 год.",
+   "urgencyKey": "low",
+   "statusKey": "resolved",
+   "linkedCaseId": "case-154",
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-07T21:00:00Z",
+   "updatedAt": "2025-12-09T03:00:00Z"
+  },
+  {
+   "id": "pr-056",
+   "portalUserId": "pu-002",
+   "categoryKey": "tax",
+   "title": "Запрос налогового календаря на 2026",
+   "description": "Необходим календарь ключевых налоговых дат и сроков на текущий год.",
+   "urgencyKey": "medium",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-09T03:00:00Z",
+   "updatedAt": "2025-12-10T10:00:00Z"
+  },
+  {
+   "id": "pr-057",
+   "portalUserId": "pu-003",
+   "categoryKey": "tax",
+   "title": "Консультация по налогам при продаже недвижимости",
+   "description": "Планируется продажа квартиры в Москве. Необходима консультация по НДФЛ.",
+   "urgencyKey": "high",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-10T09:00:00Z",
+   "updatedAt": "2025-12-11T17:00:00Z"
+  },
+  {
+   "id": "pr-058",
+   "portalUserId": "pu-001",
+   "categoryKey": "tax",
+   "title": "Вопрос по двойному налогообложению",
+   "description": "Прошу разъяснить применение соглашения об избежании двойного налогообложения с Кипром.",
+   "urgencyKey": "low",
+   "statusKey": "resolved",
+   "linkedCaseId": "case-157",
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-11T15:00:00Z",
+   "updatedAt": "2025-12-13T00:00:00Z"
+  },
+  {
+   "id": "pr-059",
+   "portalUserId": "pu-002",
+   "categoryKey": "tax",
+   "title": "Анализ налоговых последствий реструктуризации",
+   "description": "Рассматривается реструктуризация холдинга. Нужен анализ налоговых последствий.",
+   "urgencyKey": "medium",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-12T21:00:00Z",
+   "updatedAt": "2025-12-14T07:00:00Z"
+  },
+  {
+   "id": "pr-060",
+   "portalUserId": "pu-003",
+   "categoryKey": "tax",
+   "title": "Запрос справки 2-НДФЛ",
+   "description": "Прошу подготовить справку 2-НДФЛ за 2025 год для предоставления в банк.",
+   "urgencyKey": "high",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-14T03:00:00Z",
+   "updatedAt": "2025-12-15T14:00:00Z"
+  },
+  {
+   "id": "pr-061",
+   "portalUserId": "pu-001",
+   "categoryKey": "tax",
+   "title": "Консультация по налогам при дарении активов",
+   "description": "Планируется дарение доли в компании. Нужна консультация по налоговым последствиям.",
+   "urgencyKey": "low",
+   "statusKey": "resolved",
+   "linkedCaseId": "case-160",
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-15T09:00:00Z",
+   "updatedAt": "2025-12-16T21:00:00Z"
+  },
+  {
+   "id": "pr-062",
+   "portalUserId": "pu-002",
+   "categoryKey": "tax",
+   "title": "Оптимизация налогов по иностранным структурам",
+   "description": "Прошу проанализировать налоговую эффективность текущей структуры иностранных компаний.",
+   "urgencyKey": "medium",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-16T15:00:00Z",
+   "updatedAt": "2025-12-18T04:00:00Z"
+  },
+  {
+   "id": "pr-063",
+   "portalUserId": "pu-003",
+   "categoryKey": "tax",
+   "title": "Вопрос по CRS-отчётности",
+   "description": "Необходима помощь в подготовке CRS-отчётности для иностранных счетов.",
+   "urgencyKey": "high",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-17T21:00:00Z",
+   "updatedAt": "2025-12-19T11:00:00Z"
+  },
+  {
+   "id": "pr-064",
+   "portalUserId": "pu-001",
+   "categoryKey": "tax",
+   "title": "Подготовка документов для налогового резидентства",
+   "description": "Прошу подготовить комплект документов для подтверждения налогового резидентства.",
+   "urgencyKey": "low",
+   "statusKey": "resolved",
+   "linkedCaseId": "case-163",
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-19T03:00:00Z",
+   "updatedAt": "2025-12-20T18:00:00Z"
+  },
+  {
+   "id": "pr-065",
+   "portalUserId": "pu-002",
+   "categoryKey": "trust",
+   "title": "Распределение из семейного траста",
+   "description": "Прошу инициировать распределение средств из траста согласно графику.",
+   "urgencyKey": "medium",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-20T09:00:00Z",
+   "updatedAt": "2025-12-22T01:00:00Z"
+  },
+  {
+   "id": "pr-066",
+   "portalUserId": "pu-003",
+   "categoryKey": "trust",
+   "title": "Изменение бенефициаров траста",
+   "description": "Необходимо внести изменения в список бенефициаров семейного траста.",
+   "urgencyKey": "high",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-21T15:00:00Z",
+   "updatedAt": "2025-12-23T08:00:00Z"
+  },
+  {
+   "id": "pr-067",
+   "portalUserId": "pu-001",
+   "categoryKey": "trust",
+   "title": "Ежегодный обзор трастовой структуры",
+   "description": "Прошу провести ежегодный обзор структуры и деятельности траста.",
+   "urgencyKey": "low",
+   "statusKey": "resolved",
+   "linkedCaseId": "case-166",
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-22T21:00:00Z",
+   "updatedAt": "2025-12-24T15:00:00Z"
+  },
+  {
+   "id": "pr-068",
+   "portalUserId": "pu-002",
+   "categoryKey": "trust",
+   "title": "Назначение нового попечителя",
+   "description": "Рассматривается кандидатура нового попечителя. Прошу подготовить документы.",
+   "urgencyKey": "medium",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-24T03:00:00Z",
+   "updatedAt": "2025-12-25T22:00:00Z"
+  },
+  {
+   "id": "pr-069",
+   "portalUserId": "pu-003",
+   "categoryKey": "trust",
+   "title": "Вопрос по инвестиционной политике траста",
+   "description": "Необходимо обсудить изменение инвестиционной политики траста.",
+   "urgencyKey": "high",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-25T09:00:00Z",
+   "updatedAt": "2025-12-27T05:00:00Z"
+  },
+  {
+   "id": "pr-070",
+   "portalUserId": "pu-001",
+   "categoryKey": "trust",
+   "title": "Передача активов в траст",
+   "description": "Прошу подготовить документы для передачи дополнительных активов в траст.",
+   "urgencyKey": "low",
+   "statusKey": "resolved",
+   "linkedCaseId": "case-169",
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-26T15:00:00Z",
+   "updatedAt": "2025-12-28T12:00:00Z"
+  },
+  {
+   "id": "pr-071",
+   "portalUserId": "pu-002",
+   "categoryKey": "trust",
+   "title": "Запрос копии трастового соглашения",
+   "description": "Необходима заверенная копия трастового соглашения для банка.",
+   "urgencyKey": "medium",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-27T21:00:00Z",
+   "updatedAt": "2025-12-29T19:00:00Z"
+  },
+  {
+   "id": "pr-072",
+   "portalUserId": "pu-003",
+   "categoryKey": "trust",
+   "title": "Консультация по ликвидации траста",
+   "description": "Прошу проконсультировать по процедуре и последствиям ликвидации траста.",
+   "urgencyKey": "high",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-29T03:00:00Z",
+   "updatedAt": "2025-12-31T02:00:00Z"
+  },
+  {
+   "id": "pr-073",
+   "portalUserId": "pu-001",
+   "categoryKey": "other",
+   "title": "Обновление контактных данных",
+   "description": "Прошу обновить номер телефона и адрес электронной почты в профиле.",
+   "urgencyKey": "low",
+   "statusKey": "resolved",
+   "linkedCaseId": "case-172",
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-30T09:00:00Z",
+   "updatedAt": "2026-01-01T09:00:00Z"
+  },
+  {
+   "id": "pr-074",
+   "portalUserId": "pu-002",
+   "categoryKey": "other",
+   "title": "Запрос на добавление пользователя портала",
+   "description": "Необходимо добавить доступ к порталу для нового члена семьи.",
+   "urgencyKey": "medium",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2025-12-31T15:00:00Z",
+   "updatedAt": "2026-01-02T16:00:00Z"
+  },
+  {
+   "id": "pr-075",
+   "portalUserId": "pu-003",
+   "categoryKey": "other",
+   "title": "Настройка уведомлений",
+   "description": "Прошу настроить email-уведомления о важных событиях и документах.",
+   "urgencyKey": "high",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2026-01-01T21:00:00Z",
+   "updatedAt": "2026-01-03T23:00:00Z"
+  },
+  {
+   "id": "pr-076",
+   "portalUserId": "pu-001",
+   "categoryKey": "other",
+   "title": "Вопрос по работе портала",
+   "description": "Не удаётся скачать отчёт в формате PDF. Прошу помочь.",
+   "urgencyKey": "low",
+   "statusKey": "resolved",
+   "linkedCaseId": "case-175",
+   "linkedTaskIdsJson": [],
+   "createdAt": "2026-01-03T03:00:00Z",
+   "updatedAt": "2026-01-05T06:00:00Z"
+  },
+  {
+   "id": "pr-077",
+   "portalUserId": "pu-002",
+   "categoryKey": "other",
+   "title": "Запрос на изменение языка интерфейса",
+   "description": "Прошу переключить язык интерфейса по умолчанию на английский.",
+   "urgencyKey": "medium",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2026-01-04T09:00:00Z",
+   "updatedAt": "2026-01-06T13:00:00Z"
+  },
+  {
+   "id": "pr-078",
+   "portalUserId": "pu-003",
+   "categoryKey": "other",
+   "title": "Обратная связь по новому дизайну",
+   "description": "Хотел бы поделиться замечаниями по новому дизайну портала.",
+   "urgencyKey": "high",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2026-01-05T15:00:00Z",
+   "updatedAt": "2026-01-07T20:00:00Z"
+  },
+  {
+   "id": "pr-079",
+   "portalUserId": "pu-001",
+   "categoryKey": "other",
+   "title": "Запрос на обучение работе с порталом",
+   "description": "Прошу организовать краткое обучение по новым функциям портала.",
+   "urgencyKey": "low",
+   "statusKey": "resolved",
+   "linkedCaseId": "case-178",
+   "linkedTaskIdsJson": [],
+   "createdAt": "2026-01-06T21:00:00Z",
+   "updatedAt": "2026-01-09T03:00:00Z"
+  },
+  {
+   "id": "pr-080",
+   "portalUserId": "pu-002",
+   "categoryKey": "other",
+   "title": "Проблема с авторизацией",
+   "description": "Не удаётся войти в систему после смены пароля.",
+   "urgencyKey": "medium",
+   "statusKey": "resolved",
+   "linkedCaseId": null,
+   "linkedTaskIdsJson": [],
+   "createdAt": "2026-01-08T03:00:00Z",
+   "updatedAt": "2026-01-10T10:00:00Z"
+  }
+ ]
+}

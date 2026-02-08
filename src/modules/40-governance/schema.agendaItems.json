@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GovernanceAgendaItem",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "meetingId": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "orderIndex": { "type": "integer", "minimum": 0 },
+    "status": { "type": "string", "enum": ["planned", "discussed", "deferred", "tabled"] },
+    "ownerUserId": { "type": "string" },
+    "durationMinutes": { "type": "integer", "minimum": 1 },
+    "attachmentDocIdsJson": { "type": "array", "items": { "type": "string" } },
+    "decisionId": { "type": "string" },
+    "notes": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "meetingId", "title", "orderIndex", "status"]
+}

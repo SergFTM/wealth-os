@@ -41,6 +41,22 @@ export const moduleRegistry: ModuleConfig[] = [
   configs.exports,
   configs.ideas,
   configs.liquidityPlanning,
+  configs.governance,
+  configs.calendar,
+  configs.dealsCorpActions,
+  configs.vendors,
+  configs.policies,
+  configs.clientPortal,
+  configs.mdm,
+  configs.exceptions,
+  configs.ownership,
+  configs.philanthropy,
+  configs.credit,
+  configs.dataGovernance,
+  configs.packs,
+  configs.relationships,
+  configs.consentPrivacy,
+  configs.clientPortalSafe,
 ].sort((a, b) => a.order - b.order);
 
 export function getModuleBySlug(slug: string): ModuleConfig | undefined {

@@ -1,0 +1,892 @@
+[
+  {
+    "id": "pp-001",
+    "clientId": "client-1",
+    "name": "Retention: Documents 7yr",
+    "policyTypeKey": "retention",
+    "appliesToJson": {
+      "modulesJson": [
+        "transactions"
+      ],
+      "objectTypesJson": [
+        "document"
+      ]
+    },
+    "configJson": {
+      "maxRetentionDays": 1825,
+      "autoArchive": true,
+      "notifyBeforeExpiryDays": 90,
+      "archiveStorageTier": "standard"
+    },
+    "statusKey": "active",
+    "createdAt": "2024-05-04T14:31:00Z",
+    "updatedAt": "2025-12-29T09:21:00Z"
+  },
+  {
+    "id": "pp-002",
+    "clientId": "client-2",
+    "name": "Retention: Correspondence 5yr",
+    "policyTypeKey": "retention",
+    "appliesToJson": {
+      "modulesJson": [
+        "transactions",
+        "compliance",
+        "cash-flow",
+        "portfolios",
+        "documents"
+      ],
+      "objectTypesJson": [
+        "export",
+        "statement",
+        "pack"
+      ]
+    },
+    "configJson": {
+      "maxRetentionDays": 2555,
+      "autoArchive": true,
+      "notifyBeforeExpiryDays": 90,
+      "archiveStorageTier": "cold"
+    },
+    "statusKey": "active",
+    "createdAt": "2024-01-31T08:12:00Z",
+    "updatedAt": "2025-12-24T15:31:00Z"
+  },
+  {
+    "id": "pp-003",
+    "clientId": "client-3",
+    "name": "Retention: Tax Records 10yr",
+    "policyTypeKey": "retention",
+    "appliesToJson": {
+      "modulesJson": [
+        "transactions",
+        "trusts"
+      ],
+      "objectTypesJson": [
+        "statement"
+      ]
+    },
+    "configJson": {
+      "maxRetentionDays": 2555,
+      "autoArchive": true,
+      "notifyBeforeExpiryDays": 90,
+      "archiveStorageTier": "standard"
+    },
+    "statusKey": "inactive",
+    "createdAt": "2024-10-02T14:35:00Z",
+    "updatedAt": "2025-04-22T08:50:00Z"
+  },
+  {
+    "id": "pp-004",
+    "clientId": "client-4",
+    "name": "Retention: Transaction History 7yr",
+    "policyTypeKey": "retention",
+    "appliesToJson": {
+      "modulesJson": [
+        "risk",
+        "trusts",
+        "documents",
+        "compliance"
+      ],
+      "objectTypesJson": [
+        "pack",
+        "workpaper",
+        "export"
+      ]
+    },
+    "configJson": {
+      "maxRetentionDays": 3650,
+      "autoArchive": true,
+      "notifyBeforeExpiryDays": 90,
+      "archiveStorageTier": "glacier"
+    },
+    "statusKey": "active",
+    "createdAt": "2024-09-12T14:18:00Z",
+    "updatedAt": "2025-09-07T15:05:00Z"
+  },
+  {
+    "id": "pp-005",
+    "clientId": "client-5",
+    "name": "Retention: KYC Materials 6yr",
+    "policyTypeKey": "retention",
+    "appliesToJson": {
+      "modulesJson": [
+        "billing"
+      ],
+      "objectTypesJson": [
+        "export"
+      ]
+    },
+    "configJson": {
+      "maxRetentionDays": 2190,
+      "autoArchive": true,
+      "notifyBeforeExpiryDays": 90,
+      "archiveStorageTier": "cold"
+    },
+    "statusKey": "active",
+    "createdAt": "2024-11-11T09:44:00Z",
+    "updatedAt": "2025-10-02T16:02:00Z"
+  },
+  {
+    "id": "pp-006",
+    "clientId": "client-1",
+    "name": "Retention: Board Minutes 15yr",
+    "policyTypeKey": "retention",
+    "appliesToJson": {
+      "modulesJson": [
+        "cash-flow",
+        "compliance",
+        "risk"
+      ],
+      "objectTypesJson": [
+        "workpaper"
+      ]
+    },
+    "configJson": {
+      "maxRetentionDays": 2190,
+      "autoArchive": true,
+      "notifyBeforeExpiryDays": 90,
+      "archiveStorageTier": "glacier"
+    },
+    "statusKey": "active",
+    "createdAt": "2024-06-15T15:47:00Z",
+    "updatedAt": "2025-06-08T11:49:00Z"
+  },
+  {
+    "id": "pp-007",
+    "clientId": "client-2",
+    "name": "Retention: Compliance Reports 7yr",
+    "policyTypeKey": "retention",
+    "appliesToJson": {
+      "modulesJson": [
+        "entities",
+        "trusts",
+        "billing",
+        "documents"
+      ],
+      "objectTypesJson": [
+        "report",
+        "document"
+      ]
+    },
+    "configJson": {
+      "maxRetentionDays": 5475,
+      "autoArchive": true,
+      "notifyBeforeExpiryDays": 90,
+      "archiveStorageTier": "cold"
+    },
+    "statusKey": "active",
+    "createdAt": "2024-09-23T10:53:00Z",
+    "updatedAt": "2025-09-18T16:45:00Z"
+  },
+  {
+    "id": "pp-008",
+    "clientId": "client-3",
+    "name": "Retention: Audit Workpapers 8yr",
+    "policyTypeKey": "retention",
+    "appliesToJson": {
+      "modulesJson": [
+        "documents",
+        "transactions",
+        "compliance",
+        "tax"
+      ],
+      "objectTypesJson": [
+        "pack",
+        "workpaper",
+        "correspondence"
+      ]
+    },
+    "configJson": {
+      "maxRetentionDays": 5475,
+      "autoArchive": true,
+      "notifyBeforeExpiryDays": 90,
+      "archiveStorageTier": "standard"
+    },
+    "statusKey": "inactive",
+    "createdAt": "2024-10-06T13:26:00Z",
+    "updatedAt": "2025-05-14T16:01:00Z"
+  },
+  {
+    "id": "pp-009",
+    "clientId": "client-4",
+    "name": "Legal Hold: Active Litigation - Smith v. Alpine",
+    "policyTypeKey": "legal_hold",
+    "appliesToJson": {
+      "modulesJson": [
+        "reporting"
+      ],
+      "objectTypesJson": [
+        "record"
+      ]
+    },
+    "configJson": {
+      "holdActive": true,
+      "preventDeletion": true,
+      "preventModification": false,
+      "holdReason": "Legal Hold: Active Litigation - Smith v. Alpine",
+      "custodianUserId": "user-3",
+      "reviewIntervalDays": 60
+    },
+    "statusKey": "active",
+    "createdAt": "2025-03-08T13:32:00Z",
+    "updatedAt": "2025-05-24T14:55:00Z"
+  },
+  {
+    "id": "pp-010",
+    "clientId": "client-5",
+    "name": "Legal Hold: Regulatory Investigation Q3-2025",
+    "policyTypeKey": "legal_hold",
+    "appliesToJson": {
+      "modulesJson": [
+        "billing",
+        "entities",
+        "compliance",
+        "documents"
+      ],
+      "objectTypesJson": [
+        "workpaper",
+        "export"
+      ]
+    },
+    "configJson": {
+      "holdActive": true,
+      "preventDeletion": true,
+      "preventModification": true,
+      "holdReason": "Legal Hold: Regulatory Investigation Q3-2025",
+      "custodianUserId": "user-3",
+      "reviewIntervalDays": 30
+    },
+    "statusKey": "active",
+    "createdAt": "2024-06-10T08:37:00Z",
+    "updatedAt": "2025-07-21T15:11:00Z"
+  },
+  {
+    "id": "pp-011",
+    "clientId": "client-1",
+    "name": "Legal Hold: Estate Dispute - Windsor Trust",
+    "policyTypeKey": "legal_hold",
+    "appliesToJson": {
+      "modulesJson": [
+        "transactions",
+        "net-worth",
+        "tax"
+      ],
+      "objectTypesJson": [
+        "correspondence",
+        "statement"
+      ]
+    },
+    "configJson": {
+      "holdActive": true,
+      "preventDeletion": true,
+      "preventModification": true,
+      "holdReason": "Legal Hold: Estate Dispute - Windsor Trust",
+      "custodianUserId": "user-4",
+      "reviewIntervalDays": 60
+    },
+    "statusKey": "active",
+    "createdAt": "2025-03-25T12:14:00Z",
+    "updatedAt": "2026-01-18T16:06:00Z"
+  },
+  {
+    "id": "pp-012",
+    "clientId": "client-2",
+    "name": "Legal Hold: Tax Audit FY2024",
+    "policyTypeKey": "legal_hold",
+    "appliesToJson": {
+      "modulesJson": [
+        "compliance",
+        "documents"
+      ],
+      "objectTypesJson": [
+        "workpaper"
+      ]
+    },
+    "configJson": {
+      "holdActive": true,
+      "preventDeletion": true,
+      "preventModification": true,
+      "holdReason": "Legal Hold: Tax Audit FY2024",
+      "custodianUserId": "user-2",
+      "reviewIntervalDays": 90
+    },
+    "statusKey": "active",
+    "createdAt": "2024-05-26T10:05:00Z",
+    "updatedAt": "2025-10-20T13:23:00Z"
+  },
+  {
+    "id": "pp-013",
+    "clientId": "client-3",
+    "name": "Legal Hold: Fraud Investigation - Vendor-7",
+    "policyTypeKey": "legal_hold",
+    "appliesToJson": {
+      "modulesJson": [
+        "transactions",
+        "net-worth",
+        "tax",
+        "compliance"
+      ],
+      "objectTypesJson": [
+        "report",
+        "correspondence",
+        "export"
+      ]
+    },
+    "configJson": {
+      "holdActive": true,
+      "preventDeletion": true,
+      "preventModification": true,
+      "holdReason": "Legal Hold: Fraud Investigation - Vendor-7",
+      "custodianUserId": "user-2",
+      "reviewIntervalDays": 90
+    },
+    "statusKey": "active",
+    "createdAt": "2024-02-02T08:39:00Z",
+    "updatedAt": "2025-05-03T09:45:00Z"
+  },
+  {
+    "id": "pp-014",
+    "clientId": "client-4",
+    "name": "Legal Hold: Employment Claim - Former CFO",
+    "policyTypeKey": "legal_hold",
+    "appliesToJson": {
+      "modulesJson": [
+        "risk"
+      ],
+      "objectTypesJson": [
+        "export",
+        "pack"
+      ]
+    },
+    "configJson": {
+      "holdActive": true,
+      "preventDeletion": true,
+      "preventModification": true,
+      "holdReason": "Legal Hold: Employment Claim - Former CFO",
+      "custodianUserId": "user-1",
+      "reviewIntervalDays": 30
+    },
+    "statusKey": "active",
+    "createdAt": "2024-07-17T16:52:00Z",
+    "updatedAt": "2025-10-08T15:42:00Z"
+  },
+  {
+    "id": "pp-015",
+    "clientId": "client-5",
+    "name": "Legal Hold: Insurance Claim - Property Damage",
+    "policyTypeKey": "legal_hold",
+    "appliesToJson": {
+      "modulesJson": [
+        "transactions"
+      ],
+      "objectTypesJson": [
+        "document"
+      ]
+    },
+    "configJson": {
+      "holdActive": true,
+      "preventDeletion": true,
+      "preventModification": true,
+      "holdReason": "Legal Hold: Insurance Claim - Property Damage",
+      "custodianUserId": "user-4",
+      "reviewIntervalDays": 30
+    },
+    "statusKey": "active",
+    "createdAt": "2024-02-23T12:44:00Z",
+    "updatedAt": "2025-09-17T09:49:00Z"
+  },
+  {
+    "id": "pp-016",
+    "clientId": "client-1",
+    "name": "Export: Standard Share TTL 30d",
+    "policyTypeKey": "export_controls",
+    "appliesToJson": {
+      "modulesJson": [
+        "documents"
+      ],
+      "objectTypesJson": [
+        "record",
+        "export",
+        "document"
+      ]
+    },
+    "configJson": {
+      "maxShareTtlDays": 120,
+      "requireDownloadLimit": true,
+      "maxDownloads": 5,
+      "requireWatermark": false,
+      "blockedModules": [],
+      "allowedFormats": [
+        "xlsx"
+      ]
+    },
+    "statusKey": "active",
+    "createdAt": "2024-06-02T12:31:00Z",
+    "updatedAt": "2025-06-15T11:50:00Z"
+  },
+  {
+    "id": "pp-017",
+    "clientId": "client-2",
+    "name": "Export: Advisor Pack TTL 90d",
+    "policyTypeKey": "export_controls",
+    "appliesToJson": {
+      "modulesJson": [
+        "documents",
+        "reporting"
+      ],
+      "objectTypesJson": [
+        "report"
+      ]
+    },
+    "configJson": {
+      "maxShareTtlDays": 30,
+      "requireDownloadLimit": false,
+      "maxDownloads": 3,
+      "requireWatermark": true,
+      "blockedModules": [],
+      "allowedFormats": [
+        "csv",
+        "pdf",
+        "xlsx"
+      ]
+    },
+    "statusKey": "active",
+    "createdAt": "2025-01-30T14:25:00Z",
+    "updatedAt": "2026-01-01T12:04:00Z"
+  },
+  {
+    "id": "pp-018",
+    "clientId": "client-3",
+    "name": "Export: Audit Pack No-Download",
+    "policyTypeKey": "export_controls",
+    "appliesToJson": {
+      "modulesJson": [
+        "compliance"
+      ],
+      "objectTypesJson": [
+        "report",
+        "workpaper",
+        "statement"
+      ]
+    },
+    "configJson": {
+      "maxShareTtlDays": 90,
+      "requireDownloadLimit": true,
+      "maxDownloads": 10,
+      "requireWatermark": true,
+      "blockedModules": [
+        "compliance",
+        "tax"
+      ],
+      "allowedFormats": [
+        "pdf",
+        "csv"
+      ]
+    },
+    "statusKey": "active",
+    "createdAt": "2024-11-05T16:57:00Z",
+    "updatedAt": "2025-12-15T15:41:00Z"
+  },
+  {
+    "id": "pp-019",
+    "clientId": "client-4",
+    "name": "Export: Client Portal Watermarked Only",
+    "policyTypeKey": "export_controls",
+    "appliesToJson": {
+      "modulesJson": [
+        "trusts",
+        "transactions"
+      ],
+      "objectTypesJson": [
+        "record",
+        "document",
+        "export"
+      ]
+    },
+    "configJson": {
+      "maxShareTtlDays": 90,
+      "requireDownloadLimit": true,
+      "maxDownloads": 3,
+      "requireWatermark": true,
+      "blockedModules": [],
+      "allowedFormats": [
+        "pdf",
+        "docx",
+        "xlsx"
+      ]
+    },
+    "statusKey": "active",
+    "createdAt": "2025-01-16T13:16:00Z",
+    "updatedAt": "2025-11-08T12:36:00Z"
+  },
+  {
+    "id": "pp-020",
+    "clientId": "client-5",
+    "name": "Export: Regulator Submission Unredacted",
+    "policyTypeKey": "export_controls",
+    "appliesToJson": {
+      "modulesJson": [
+        "transactions"
+      ],
+      "objectTypesJson": [
+        "document"
+      ]
+    },
+    "configJson": {
+      "maxShareTtlDays": 30,
+      "requireDownloadLimit": true,
+      "maxDownloads": 10,
+      "requireWatermark": true,
+      "blockedModules": [],
+      "allowedFormats": [
+        "csv",
+        "xlsx",
+        "docx"
+      ]
+    },
+    "statusKey": "active",
+    "createdAt": "2024-09-10T08:43:00Z",
+    "updatedAt": "2025-10-26T08:46:00Z"
+  },
+  {
+    "id": "pp-021",
+    "clientId": "client-1",
+    "name": "Export: Banking KYC Package TTL 60d",
+    "policyTypeKey": "export_controls",
+    "appliesToJson": {
+      "modulesJson": [
+        "portfolios",
+        "compliance",
+        "risk",
+        "cash-flow"
+      ],
+      "objectTypesJson": [
+        "correspondence",
+        "document"
+      ]
+    },
+    "configJson": {
+      "maxShareTtlDays": 60,
+      "requireDownloadLimit": false,
+      "maxDownloads": 10,
+      "requireWatermark": true,
+      "blockedModules": [
+        "compliance",
+        "tax"
+      ],
+      "allowedFormats": [
+        "docx"
+      ]
+    },
+    "statusKey": "active",
+    "createdAt": "2024-01-08T10:24:00Z",
+    "updatedAt": "2025-06-19T09:55:00Z"
+  },
+  {
+    "id": "pp-022",
+    "clientId": "client-2",
+    "name": "Export: Tax Filing Season Temporary 120d",
+    "policyTypeKey": "export_controls",
+    "appliesToJson": {
+      "modulesJson": [
+        "entities"
+      ],
+      "objectTypesJson": [
+        "pack",
+        "report"
+      ]
+    },
+    "configJson": {
+      "maxShareTtlDays": 120,
+      "requireDownloadLimit": false,
+      "maxDownloads": null,
+      "requireWatermark": false,
+      "blockedModules": [],
+      "allowedFormats": [
+        "csv",
+        "docx",
+        "pdf"
+      ]
+    },
+    "statusKey": "inactive",
+    "createdAt": "2025-01-21T12:02:00Z",
+    "updatedAt": "2025-09-06T17:23:00Z"
+  },
+  {
+    "id": "pp-023",
+    "clientId": "client-3",
+    "name": "Client-safe: External Advisors",
+    "policyTypeKey": "client_safe",
+    "appliesToJson": {
+      "modulesJson": [
+        "reporting",
+        "risk",
+        "documents",
+        "trusts"
+      ],
+      "objectTypesJson": [
+        "export",
+        "report"
+      ]
+    },
+    "configJson": {
+      "maskSensitiveFields": true,
+      "redactAccountNumbers": false,
+      "redactSSN": true,
+      "redactFeeAmounts": true,
+      "allowedSections": [
+        "allocation",
+        "performance",
+        "summary"
+      ],
+      "blockedSections": [
+        "compliance_flags",
+        "risk_scores"
+      ]
+    },
+    "statusKey": "active",
+    "createdAt": "2024-08-29T13:35:00Z",
+    "updatedAt": "2025-08-27T17:54:00Z"
+  },
+  {
+    "id": "pp-024",
+    "clientId": "client-4",
+    "name": "Client-safe: Portal Publications",
+    "policyTypeKey": "client_safe",
+    "appliesToJson": {
+      "modulesJson": [
+        "portfolios",
+        "compliance",
+        "net-worth",
+        "cash-flow",
+        "reporting"
+      ],
+      "objectTypesJson": [
+        "export",
+        "correspondence"
+      ]
+    },
+    "configJson": {
+      "maskSensitiveFields": true,
+      "redactAccountNumbers": true,
+      "redactSSN": true,
+      "redactFeeAmounts": false,
+      "allowedSections": [
+        "summary",
+        "performance",
+        "allocation"
+      ],
+      "blockedSections": [
+        "risk_scores"
+      ]
+    },
+    "statusKey": "active",
+    "createdAt": "2025-03-10T11:45:00Z",
+    "updatedAt": "2025-04-20T11:16:00Z"
+  },
+  {
+    "id": "pp-025",
+    "clientId": "client-5",
+    "name": "Client-safe: Family Governance Reports",
+    "policyTypeKey": "client_safe",
+    "appliesToJson": {
+      "modulesJson": [
+        "trusts",
+        "transactions"
+      ],
+      "objectTypesJson": [
+        "report",
+        "pack"
+      ]
+    },
+    "configJson": {
+      "maskSensitiveFields": true,
+      "redactAccountNumbers": true,
+      "redactSSN": true,
+      "redactFeeAmounts": true,
+      "allowedSections": [
+        "net_worth",
+        "distributions",
+        "summary",
+        "performance"
+      ],
+      "blockedSections": [
+        "compliance_flags",
+        "risk_scores",
+        "internal_notes"
+      ]
+    },
+    "statusKey": "active",
+    "createdAt": "2024-07-27T11:17:00Z",
+    "updatedAt": "2025-11-19T16:32:00Z"
+  },
+  {
+    "id": "pp-026",
+    "clientId": "client-1",
+    "name": "Client-safe: Beneficiary Statements",
+    "policyTypeKey": "client_safe",
+    "appliesToJson": {
+      "modulesJson": [
+        "entities"
+      ],
+      "objectTypesJson": [
+        "pack"
+      ]
+    },
+    "configJson": {
+      "maskSensitiveFields": true,
+      "redactAccountNumbers": false,
+      "redactSSN": true,
+      "redactFeeAmounts": true,
+      "allowedSections": [
+        "distributions",
+        "allocation",
+        "performance"
+      ],
+      "blockedSections": [
+        "compliance_flags",
+        "internal_notes"
+      ]
+    },
+    "statusKey": "active",
+    "createdAt": "2024-07-31T14:38:00Z",
+    "updatedAt": "2025-07-23T17:45:00Z"
+  },
+  {
+    "id": "pp-027",
+    "clientId": "client-2",
+    "name": "Client-safe: Performance Reports Redacted",
+    "policyTypeKey": "client_safe",
+    "appliesToJson": {
+      "modulesJson": [
+        "tax",
+        "transactions",
+        "compliance"
+      ],
+      "objectTypesJson": [
+        "record",
+        "correspondence"
+      ]
+    },
+    "configJson": {
+      "maskSensitiveFields": true,
+      "redactAccountNumbers": true,
+      "redactSSN": true,
+      "redactFeeAmounts": false,
+      "allowedSections": [
+        "net_worth",
+        "distributions",
+        "allocation",
+        "performance"
+      ],
+      "blockedSections": [
+        "compliance_flags",
+        "risk_scores"
+      ]
+    },
+    "statusKey": "active",
+    "createdAt": "2024-02-22T08:39:00Z",
+    "updatedAt": "2025-08-10T14:45:00Z"
+  },
+  {
+    "id": "pp-028",
+    "clientId": "client-3",
+    "name": "Client-safe: Trust Distribution Notices",
+    "policyTypeKey": "client_safe",
+    "appliesToJson": {
+      "modulesJson": [
+        "cash-flow"
+      ],
+      "objectTypesJson": [
+        "record"
+      ]
+    },
+    "configJson": {
+      "maskSensitiveFields": true,
+      "redactAccountNumbers": true,
+      "redactSSN": true,
+      "redactFeeAmounts": true,
+      "allowedSections": [
+        "summary",
+        "distributions",
+        "net_worth"
+      ],
+      "blockedSections": [
+        "fee_detail",
+        "internal_notes"
+      ]
+    },
+    "statusKey": "active",
+    "createdAt": "2024-01-11T17:09:00Z",
+    "updatedAt": "2025-04-15T11:28:00Z"
+  },
+  {
+    "id": "pp-029",
+    "clientId": "client-4",
+    "name": "Client-safe: Net Worth Summary Masked",
+    "policyTypeKey": "client_safe",
+    "appliesToJson": {
+      "modulesJson": [
+        "billing",
+        "transactions"
+      ],
+      "objectTypesJson": [
+        "document",
+        "report",
+        "pack"
+      ]
+    },
+    "configJson": {
+      "maskSensitiveFields": true,
+      "redactAccountNumbers": false,
+      "redactSSN": true,
+      "redactFeeAmounts": true,
+      "allowedSections": [
+        "net_worth",
+        "summary",
+        "distributions",
+        "allocation"
+      ],
+      "blockedSections": [
+        "compliance_flags",
+        "risk_scores"
+      ]
+    },
+    "statusKey": "active",
+    "createdAt": "2025-01-22T17:53:00Z",
+    "updatedAt": "2025-05-23T13:12:00Z"
+  },
+  {
+    "id": "pp-030",
+    "clientId": "client-5",
+    "name": "Client-safe: Annual Review Deck",
+    "policyTypeKey": "client_safe",
+    "appliesToJson": {
+      "modulesJson": [
+        "portfolios"
+      ],
+      "objectTypesJson": [
+        "statement",
+        "workpaper"
+      ]
+    },
+    "configJson": {
+      "maskSensitiveFields": true,
+      "redactAccountNumbers": true,
+      "redactSSN": true,
+      "redactFeeAmounts": true,
+      "allowedSections": [
+        "distributions",
+        "allocation",
+        "performance"
+      ],
+      "blockedSections": [
+        "fee_detail",
+        "risk_scores"
+      ]
+    },
+    "statusKey": "active",
+    "createdAt": "2024-12-14T11:18:00Z",
+    "updatedAt": "2025-04-20T09:35:00Z"
+  }
+]

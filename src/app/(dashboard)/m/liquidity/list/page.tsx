@@ -32,8 +32,10 @@ export default function LiquidityListPage() {
   const { data: stressTests = [] } = useCollection("cashStressTests");
   const { data: alerts = [] } = useCollection("liquidityAlerts");
 
-  const inflows = flows.filter((f: { flowType: string }) => f.flowType === "inflow");
-  const outflows = flows.filter((f: { flowType: string }) => f.flowType === "outflow");
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const inflows = (flows as any[]).filter((f) => f.flowType === "inflow");
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const outflows = (flows as any[]).filter((f) => f.flowType === "outflow");
 
   const handleTabChange = (tab: TabKey) => {
     setActiveTab(tab);
@@ -79,16 +81,18 @@ export default function LiquidityListPage() {
         </div>
       </div>
 
+      {/* eslint-disable @typescript-eslint/no-explicit-any */}
       <div className="bg-white/80 backdrop-blur-sm rounded-xl border border-stone-200/50 overflow-hidden">
-        {activeTab === "forecasts" && <LqForecastsTable forecasts={forecasts} onOpen={(id) => router.push("/m/liquidity/forecast/" + id)} />}
-        {activeTab === "positions" && <LqCashPositionsTable positions={positions} />}
-        {activeTab === "inflows" && <LqFlowsTable flows={inflows} flowType="inflow" />}
-        {activeTab === "outflows" && <LqFlowsTable flows={outflows} flowType="outflow" />}
-        {activeTab === "scenarios" && <LqScenariosTable scenarios={scenarios} onOpen={(id) => router.push("/m/liquidity/scenario/" + id)} />}
-        {activeTab === "stress" && <LqStressTestsTable tests={stressTests} onOpen={(id) => router.push("/m/liquidity/stress/" + id)} />}
-        {activeTab === "alerts" && <LqAlertsTable alerts={alerts} onOpen={(id) => router.push("/m/liquidity/alert/" + id)} />}
+        {activeTab === "forecasts" && <LqForecastsTable forecasts={forecasts as any} onOpen={(id) => router.push("/m/liquidity/forecast/" + id)} />}
+        {activeTab === "positions" && <LqCashPositionsTable positions={positions as any} onOpen={(id) => router.push("/m/liquidity/position/" + id)} />}
+        {activeTab === "inflows" && <LqFlowsTable flows={inflows as any} flowType="inflow" />}
+        {activeTab === "outflows" && <LqFlowsTable flows={outflows as any} flowType="outflow" />}
+        {activeTab === "scenarios" && <LqScenariosTable scenarios={scenarios as any} onOpen={(id) => router.push("/m/liquidity/scenario/" + id)} />}
+        {activeTab === "stress" && <LqStressTestsTable tests={stressTests as any} onOpen={(id) => router.push("/m/liquidity/stress/" + id)} />}
+        {activeTab === "alerts" && <LqAlertsTable alerts={alerts as any} onOpen={(id) => router.push("/m/liquidity/alert/" + id)} />}
         {activeTab === "audit" && <div className="p-6 text-center text-stone-400">Audit trail будет отображён здесь</div>}
       </div>
+      {/* eslint-enable @typescript-eslint/no-explicit-any */}
     </div>
   );
 }

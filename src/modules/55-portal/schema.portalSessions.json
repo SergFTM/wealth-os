@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "portalUserId": { "type": "string" },
+    "sessionTokenHash": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "expiresAt": { "type": "string", "format": "date-time" },
+    "lastSeenAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "portalUserId", "sessionTokenHash", "createdAt", "expiresAt"]
+}

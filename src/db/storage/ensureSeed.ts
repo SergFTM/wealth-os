@@ -30,14 +30,32 @@ async function performSeed(): Promise<void> {
   try {
     const seedContent = await fs.readFile(SEED_FILE, 'utf-8');
     const seedData = JSON.parse(seedContent);
-    
+
     await fs.mkdir(DATA_DIR, { recursive: true });
-    
+
     for (const [collection, records] of Object.entries(seedData)) {
       const filePath = path.join(DATA_DIR, `${collection}.json`);
       await fs.writeFile(filePath, JSON.stringify(records, null, 2), 'utf-8');
     }
-    
+
+    // Load module-specific seed files
+    const seedDir = path.join(process.cwd(), 'src/db/seed');
+    const seedFiles = await fs.readdir(seedDir);
+    const moduleSeedFiles = seedFiles.filter(f => f.startsWith('seed-module-') && f.endsWith('.json'));
+
+    for (const file of moduleSeedFiles) {
+      try {
+        const content = await fs.readFile(path.join(seedDir, file), 'utf-8');
+        const moduleData = JSON.parse(content);
+        for (const [collection, records] of Object.entries(moduleData)) {
+          const filePath = path.join(DATA_DIR, `${collection}.json`);
+          await fs.writeFile(filePath, JSON.stringify(records, null, 2), 'utf-8');
+        }
+      } catch (err) {
+        console.error(`[FileDB] Failed to seed ${file}:`, err);
+      }
+    }
+
     console.log('[FileDB] Seed completed');
   } catch (error) {
     console.error('[FileDB] Seed failed:', error);

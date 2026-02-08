@@ -1,0 +1,577 @@
+[
+  {
+    "id": "exr-001",
+    "clientId": "client-1",
+    "name": "Автоматическое присвоение критических ошибок",
+    "description": "Назначить критические исключения на на duty командиру",
+    "type": "assign",
+    "enabled": true,
+    "priority": "high",
+    "conditionsJson": {
+      "severity": "critical",
+      "status": "open"
+    },
+    "actionsJson": {
+      "assignTo": "oncall_commander",
+      "notificationMethod": "email_sms"
+    },
+    "createdAt": "2026-01-01T08:00:00Z",
+    "updatedAt": "2026-01-13T10:00:00Z"
+  },
+  {
+    "id": "exr-002",
+    "clientId": "client-1",
+    "name": "Эскалация просроченных исключений",
+    "description": "Эскалировать исключение, если оно остается открытым более 4 часов",
+    "type": "escalate",
+    "enabled": true,
+    "priority": "high",
+    "conditionsJson": {
+      "status": "open",
+      "createdBefore": "4h"
+    },
+    "actionsJson": {
+      "escalateTo": "manager",
+      "notifyLevel": "2"
+    },
+    "createdAt": "2026-01-01T09:00:00Z",
+    "updatedAt": "2026-01-12T14:30:00Z"
+  },
+  {
+    "id": "exr-003",
+    "clientId": "client-1",
+    "name": "Автозакрытие разрешенных исключений",
+    "description": "Закрыть исключение через 24 часа после разрешения",
+    "type": "close",
+    "enabled": true,
+    "priority": "medium",
+    "conditionsJson": {
+      "status": "resolved",
+      "resolvedBefore": "24h"
+    },
+    "actionsJson": {
+      "closeStatus": "auto_resolved",
+      "archiveAfter": "30d"
+    },
+    "createdAt": "2026-01-01T10:00:00Z",
+    "updatedAt": "2026-01-10T11:20:00Z"
+  },
+  {
+    "id": "exr-004",
+    "clientId": "client-1",
+    "name": "Уведомление о нарушении SLA",
+    "description": "Отправить уведомление при нарушении SLA поставщика",
+    "type": "assign",
+    "enabled": true,
+    "priority": "high",
+    "conditionsJson": {
+      "type": "vendor_sla",
+      "severity": "warning"
+    },
+    "actionsJson": {
+      "notifyRole": "vendor_manager",
+      "createTicket": true
+    },
+    "createdAt": "2026-01-02T08:00:00Z",
+    "updatedAt": "2026-01-11T09:45:00Z"
+  },
+  {
+    "id": "exr-005",
+    "clientId": "client-1",
+    "name": "Интеграция с системой безопасности",
+    "description": "Направить проблемы безопасности в систему управления инцидентами",
+    "type": "assign",
+    "enabled": true,
+    "priority": "critical",
+    "conditionsJson": {
+      "type": "security",
+      "severity": [
+        "critical",
+        "warning"
+      ]
+    },
+    "actionsJson": {
+      "routeTo": "security_team",
+      "systemIntegration": "incident_management"
+    },
+    "createdAt": "2026-01-03T08:00:00Z",
+    "updatedAt": "2026-01-13T10:30:00Z"
+  },
+  {
+    "id": "exr-006",
+    "clientId": "client-1",
+    "name": "Автоматическая переоценка цен",
+    "description": "Запустить процесс переоценки при обнаружении устаревших цен",
+    "type": "close",
+    "enabled": true,
+    "priority": "medium",
+    "conditionsJson": {
+      "type": "stale_price",
+      "staleDuration": "48h"
+    },
+    "actionsJson": {
+      "triggerProcess": "price_refresh",
+      "sourceSystem": "pricing_engine"
+    },
+    "createdAt": "2026-01-03T09:00:00Z",
+    "updatedAt": "2026-01-12T07:45:00Z"
+  },
+  {
+    "id": "exr-007",
+    "clientId": "client-1",
+    "name": "Маршрутизация проблем синхронизации",
+    "description": "Маршрутизировать проблемы синхронизации техническому отделу",
+    "type": "assign",
+    "enabled": true,
+    "priority": "high",
+    "conditionsJson": {
+      "type": "sync",
+      "severity": [
+        "critical",
+        "warning"
+      ]
+    },
+    "actionsJson": {
+      "assignTo": "tech_support",
+      "priority": "escalated"
+    },
+    "createdAt": "2026-01-04T08:00:00Z",
+    "updatedAt": "2026-01-13T08:45:00Z"
+  },
+  {
+    "id": "exr-008",
+    "clientId": "client-1",
+    "name": "Группировка аналогичных исключений",
+    "description": "Автоматически группировать связанные исключения",
+    "type": "assign",
+    "enabled": false,
+    "priority": "low",
+    "conditionsJson": {
+      "pattern": "similar_type",
+      "timeWindow": "24h"
+    },
+    "actionsJson": {
+      "createCluster": true,
+      "notifyAnalyst": true
+    },
+    "createdAt": "2026-01-04T09:00:00Z",
+    "updatedAt": "2026-01-08T10:15:00Z"
+  },
+  {
+    "id": "exr-009",
+    "clientId": "client-1",
+    "name": "Эскалация одобрений",
+    "description": "Эскалировать ожидающие одобрения на руководство",
+    "type": "escalate",
+    "enabled": true,
+    "priority": "high",
+    "conditionsJson": {
+      "type": "approval",
+      "status": "pending",
+      "duration": "12h"
+    },
+    "actionsJson": {
+      "escalateTo": "executive",
+      "notifyMethod": "direct_call"
+    },
+    "createdAt": "2026-01-05T08:00:00Z",
+    "updatedAt": "2026-01-13T07:45:00Z"
+  },
+  {
+    "id": "exr-010",
+    "clientId": "client-1",
+    "name": "Отправка отчетов по сверке",
+    "description": "Отправить ежедневный отчет о расхождениях при сверке",
+    "type": "assign",
+    "enabled": true,
+    "priority": "medium",
+    "conditionsJson": {
+      "type": "recon",
+      "reportFrequency": "daily"
+    },
+    "actionsJson": {
+      "generateReport": true,
+      "sendTo": "finance_team"
+    },
+    "createdAt": "2026-01-05T09:00:00Z",
+    "updatedAt": "2026-01-11T14:20:00Z"
+  },
+  {
+    "id": "exr-011",
+    "clientId": "client-1",
+    "name": "Мониторинг отсутствия документов",
+    "description": "Отследить и напомнить о недостающих документах",
+    "type": "assign",
+    "enabled": true,
+    "priority": "medium",
+    "conditionsJson": {
+      "type": "missing_doc",
+      "status": "open"
+    },
+    "actionsJson": {
+      "reminderInterval": "daily",
+      "escalateAfter": "7d"
+    },
+    "createdAt": "2026-01-06T08:00:00Z",
+    "updatedAt": "2026-01-10T12:50:00Z"
+  },
+  {
+    "id": "exr-012",
+    "clientId": "client-1",
+    "name": "Уведомление о критических проблемах",
+    "description": "Незамедлительно уведомить о всех критических исключениях",
+    "type": "assign",
+    "enabled": true,
+    "priority": "critical",
+    "conditionsJson": {
+      "severity": "critical"
+    },
+    "actionsJson": {
+      "notifyMethod": "instant_alert",
+      "recipients": [
+        "cfo",
+        "cto",
+        "compliance_officer"
+      ]
+    },
+    "createdAt": "2026-01-06T09:00:00Z",
+    "updatedAt": "2026-01-13T10:45:00Z"
+  },
+  {
+    "id": "exr-013",
+    "clientId": "client-1",
+    "name": "Автоматическое формирование тикетов",
+    "description": "Создать тикет поддержки для каждого нового исключения",
+    "type": "assign",
+    "enabled": false,
+    "priority": "low",
+    "conditionsJson": {
+      "status": "open",
+      "newlyCreated": true
+    },
+    "actionsJson": {
+      "createTicket": true,
+      "system": "jira"
+    },
+    "createdAt": "2026-01-07T08:00:00Z",
+    "updatedAt": "2026-01-09T11:30:00Z"
+  },
+  {
+    "id": "exr-014",
+    "clientId": "client-1",
+    "name": "Ротация исключений между сотрудниками",
+    "description": "Автоматически распределить нагрузку между сотрудниками",
+    "type": "assign",
+    "enabled": true,
+    "priority": "medium",
+    "conditionsJson": {
+      "assignmentMethod": "round_robin"
+    },
+    "actionsJson": {
+      "distribution": "balanced",
+      "checkInterval": "4h"
+    },
+    "createdAt": "2026-01-07T09:00:00Z",
+    "updatedAt": "2026-01-12T15:10:00Z"
+  },
+  {
+    "id": "exr-015",
+    "clientId": "client-1",
+    "name": "Закрытие неактивных исключений",
+    "description": "Закрыть исключения, не имеющие активности в течение 14 дней",
+    "type": "close",
+    "enabled": true,
+    "priority": "low",
+    "conditionsJson": {
+      "inactiveFor": "14d",
+      "status": "open"
+    },
+    "actionsJson": {
+      "closeReason": "inactivity",
+      "archiveAfter": "7d"
+    },
+    "createdAt": "2026-01-08T08:00:00Z",
+    "updatedAt": "2026-01-13T06:30:00Z"
+  },
+  {
+    "id": "exr-016",
+    "clientId": "client-1",
+    "name": "Проверка соответствия по документам",
+    "description": "Напомнить о необходимости проверки документации",
+    "type": "assign",
+    "enabled": true,
+    "priority": "medium",
+    "conditionsJson": {
+      "type": "missing_doc",
+      "complianceRequired": true
+    },
+    "actionsJson": {
+      "createCompliance Review": true,
+      "deadline": "7d"
+    },
+    "createdAt": "2026-01-08T09:00:00Z",
+    "updatedAt": "2026-01-10T14:25:00Z"
+  },
+  {
+    "id": "exr-017",
+    "clientId": "client-1",
+    "name": "Анализ кластеров исключений",
+    "description": "Анализировать кластеры для выявления тенденций",
+    "type": "assign",
+    "enabled": false,
+    "priority": "low",
+    "conditionsJson": {
+      "clusterSize": ">= 5",
+      "timeWindow": "7d"
+    },
+    "actionsJson": {
+      "analyzePattern": true,
+      "reportTo": "analytics"
+    },
+    "createdAt": "2026-01-09T08:00:00Z",
+    "updatedAt": "2026-01-11T10:40:00Z"
+  },
+  {
+    "id": "exr-018",
+    "clientId": "client-1",
+    "name": "Действия при просрочке SLA исключения",
+    "description": "Эскалировать при выходе за пределы SLA",
+    "type": "escalate",
+    "enabled": true,
+    "priority": "critical",
+    "conditionsJson": {
+      "slaAtRisk": true,
+      "remainingTime": "< 1h"
+    },
+    "actionsJson": {
+      "escalateImmediately": true,
+      "notifyExecutives": true
+    },
+    "createdAt": "2026-01-09T09:00:00Z",
+    "updatedAt": "2026-01-13T10:50:00Z"
+  },
+  {
+    "id": "exr-019",
+    "clientId": "client-1",
+    "name": "Маршрутизация проблем поставщиков",
+    "description": "Направить проблемы SLA поставщиков отделу управления поставщиками",
+    "type": "assign",
+    "enabled": true,
+    "priority": "high",
+    "conditionsJson": {
+      "type": "vendor_sla"
+    },
+    "actionsJson": {
+      "routeTo": "vendor_management",
+      "trackingLevel": "detailed"
+    },
+    "createdAt": "2026-01-10T08:00:00Z",
+    "updatedAt": "2026-01-13T06:45:00Z"
+  },
+  {
+    "id": "exr-020",
+    "clientId": "client-1",
+    "name": "Итоговые отчеты по исключениям",
+    "description": "Отправить еженедельный итоговый отчет",
+    "type": "assign",
+    "enabled": true,
+    "priority": "low",
+    "conditionsJson": {
+      "reportType": "weekly_summary"
+    },
+    "actionsJson": {
+      "scheduleReport": "every_monday_09:00",
+      "recipients": "management_team"
+    },
+    "createdAt": "2026-01-10T09:00:00Z",
+    "updatedAt": "2026-01-12T09:15:00Z"
+  },
+  {
+    "id": "exr-021",
+    "clientId": "client-1",
+    "name": "Связь с аудитом для критических проблем",
+    "description": "Уведомить команду аудита о критических исключениях",
+    "type": "assign",
+    "enabled": true,
+    "priority": "high",
+    "conditionsJson": {
+      "severity": "critical",
+      "complianceImpact": true
+    },
+    "actionsJson": {
+      "notifyAudit": true,
+      "documentationRequired": true
+    },
+    "createdAt": "2026-01-11T08:00:00Z",
+    "updatedAt": "2026-01-13T09:30:00Z"
+  },
+  {
+    "id": "exr-022",
+    "clientId": "client-1",
+    "name": "Стандартная процедура закрытия",
+    "description": "Применить стандартную процедуру закрытия исключения",
+    "type": "close",
+    "enabled": true,
+    "priority": "medium",
+    "conditionsJson": {
+      "resolvedStatus": "verified"
+    },
+    "actionsJson": {
+      "requiresApproval": true,
+      "approverRole": "manager"
+    },
+    "createdAt": "2026-01-11T09:00:00Z",
+    "updatedAt": "2026-01-12T10:45:00Z"
+  },
+  {
+    "id": "exr-023",
+    "clientId": "client-1",
+    "name": "Система голосового оповещения",
+    "description": "Отправить голосовое оповещение для критических исключений",
+    "type": "assign",
+    "enabled": true,
+    "priority": "critical",
+    "conditionsJson": {
+      "severity": "critical",
+      "businessImpact": "high"
+    },
+    "actionsJson": {
+      "voiceAlert": true,
+      "recipients": "senior_management"
+    },
+    "createdAt": "2026-01-12T08:00:00Z",
+    "updatedAt": "2026-01-13T11:00:00Z"
+  },
+  {
+    "id": "exr-024",
+    "clientId": "client-1",
+    "name": "Отслеживание метрик по исключениям",
+    "description": "Собирать метрики по разрешению исключений",
+    "type": "assign",
+    "enabled": true,
+    "priority": "medium",
+    "conditionsJson": {
+      "trackMetrics": true
+    },
+    "actionsJson": {
+      "metricsCollected": [
+        "resolution_time",
+        "severity_distribution"
+      ],
+      "dashboard": "exceptions_metrics"
+    },
+    "createdAt": "2026-01-12T09:00:00Z",
+    "updatedAt": "2026-01-13T12:15:00Z"
+  },
+  {
+    "id": "exr-025",
+    "clientId": "client-1",
+    "name": "Автоматическое присвоение номера ссылки",
+    "description": "Создать уникальный номер ссылки для отслеживания",
+    "type": "assign",
+    "enabled": true,
+    "priority": "low",
+    "conditionsJson": {
+      "newException": true
+    },
+    "actionsJson": {
+      "generateReferenceNumber": true,
+      "format": "EXC-YYYY-MM-DD-XXXX"
+    },
+    "createdAt": "2026-01-13T08:00:00Z",
+    "updatedAt": "2026-01-13T08:30:00Z"
+  },
+  {
+    "id": "exr-026",
+    "clientId": "client-1",
+    "name": "Интеграция с системой CRM",
+    "description": "Синхронизировать исключения с системой управления взаимоотношениями",
+    "type": "assign",
+    "enabled": false,
+    "priority": "low",
+    "conditionsJson": {
+      "customerImpact": true
+    },
+    "actionsJson": {
+      "syncToCRM": true,
+      "updateCustomerRecord": true
+    },
+    "createdAt": "2026-01-13T09:00:00Z",
+    "updatedAt": "2026-01-13T09:15:00Z"
+  },
+  {
+    "id": "exr-027",
+    "clientId": "client-1",
+    "name": "Анализ причин исключений",
+    "description": "Проводить анализ первопричины для критических исключений",
+    "type": "assign",
+    "enabled": true,
+    "priority": "high",
+    "conditionsJson": {
+      "severity": "critical",
+      "closedStatus": "resolved"
+    },
+    "actionsJson": {
+      "performRCA": true,
+      "documentFindings": true
+    },
+    "createdAt": "2026-01-13T10:00:00Z",
+    "updatedAt": "2026-01-13T10:20:00Z"
+  },
+  {
+    "id": "exr-028",
+    "clientId": "client-1",
+    "name": "Расширенная эскалация управления",
+    "description": "Эскалировать на уровень управления при необходимости",
+    "type": "escalate",
+    "enabled": true,
+    "priority": "high",
+    "conditionsJson": {
+      "escalationLevel": "management"
+    },
+    "actionsJson": {
+      "notifyDirector": true,
+      "includeContext": true
+    },
+    "createdAt": "2026-01-13T10:30:00Z",
+    "updatedAt": "2026-01-13T10:45:00Z"
+  },
+  {
+    "id": "exr-029",
+    "clientId": "client-1",
+    "name": "Письмо-подтверждение разрешения",
+    "description": "Отправить письмо-подтверждение при разрешении исключения",
+    "type": "close",
+    "enabled": true,
+    "priority": "medium",
+    "conditionsJson": {
+      "resolvedStatus": "verified",
+      "sendConfirmation": true
+    },
+    "actionsJson": {
+      "emailConfirmation": true,
+      "includeDetails": true
+    },
+    "createdAt": "2026-01-13T11:00:00Z",
+    "updatedAt": "2026-01-13T11:10:00Z"
+  },
+  {
+    "id": "exr-030",
+    "clientId": "client-1",
+    "name": "Регулярная очистка архива",
+    "description": "Архивировать закрытые исключения после 90 дней",
+    "type": "close",
+    "enabled": true,
+    "priority": "low",
+    "conditionsJson": {
+      "closedFor": "90d",
+      "status": "closed"
+    },
+    "actionsJson": {
+      "archiveException": true,
+      "retentionPolicy": "90d"
+    },
+    "createdAt": "2026-01-13T11:30:00Z",
+    "updatedAt": "2026-01-13T11:45:00Z"
+  }
+]

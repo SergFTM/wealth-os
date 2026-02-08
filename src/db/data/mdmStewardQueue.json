@@ -1,0 +1,226 @@
+[
+  {
+    "id": "mdsq-001",
+    "clientId": "c1",
+    "recordType": "person",
+    "recordId": "mdp-001",
+    "issueType": "low_confidence",
+    "field": "phone",
+    "currentValue": "+7 495 123-45-67",
+    "suggestedValue": "+74951234567",
+    "severity": "low",
+    "status": "open",
+    "description": "Низкая уверенность в формате телефона (90%)",
+    "aiSuggestionJson": {
+      "action": "normalize",
+      "confidence": 0.95,
+      "rationale": "Рекомендуется нормализация формата телефона"
+    },
+    "createdAt": "2026-01-26T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdsq-002",
+    "clientId": "c2",
+    "recordType": "person",
+    "recordId": "mdp-005",
+    "issueType": "data_conflict",
+    "field": "firstName",
+    "currentValue": "Николай",
+    "conflictingValues": [
+      "Nikolay",
+      "N."
+    ],
+    "severity": "medium",
+    "status": "open",
+    "description": "Конфликт значений имени из разных источников",
+    "aiSuggestionJson": {
+      "action": "keep_current",
+      "confidence": 0.85,
+      "rationale": "Кириллическое написание предпочтительнее"
+    },
+    "createdAt": "2026-01-26T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdsq-003",
+    "clientId": "c1",
+    "recordType": "entity",
+    "recordId": "mde-002",
+    "issueType": "missing_data",
+    "field": "incorporationDate",
+    "severity": "medium",
+    "status": "open",
+    "description": "Отсутствует дата регистрации компании",
+    "aiSuggestionJson": {
+      "action": "request_data",
+      "confidence": 0.9,
+      "rationale": "Рекомендуется запросить данные из Corporate Registry"
+    },
+    "createdAt": "2026-01-25T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdsq-004",
+    "clientId": "c3",
+    "recordType": "person",
+    "recordId": "mdp-007",
+    "issueType": "stale_data",
+    "field": "email",
+    "currentValue": "o.novikova@northstar.com",
+    "severity": "low",
+    "status": "open",
+    "description": "Данные не обновлялись более 30 дней",
+    "aiSuggestionJson": {
+      "action": "refresh",
+      "confidence": 0.8,
+      "rationale": "Рекомендуется обновить данные из CRM"
+    },
+    "createdAt": "2026-01-20T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdsq-005",
+    "clientId": "c1",
+    "recordType": "account",
+    "recordId": "mda-001",
+    "issueType": "data_conflict",
+    "field": "balance",
+    "currentValue": 25000000,
+    "conflictingValues": [
+      24950000,
+      25100000
+    ],
+    "severity": "high",
+    "status": "open",
+    "description": "Расхождение баланса между источниками",
+    "aiSuggestionJson": {
+      "action": "verify",
+      "confidence": 0.7,
+      "rationale": "Требуется сверка с кастодианом"
+    },
+    "createdAt": "2026-01-27T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdsq-006",
+    "clientId": "c2",
+    "recordType": "entity",
+    "recordId": "mde-005",
+    "issueType": "validation_error",
+    "field": "taxId",
+    "currentValue": "CY-TAX-87654321",
+    "severity": "high",
+    "status": "open",
+    "description": "Формат налогового ID не соответствует стандарту Кипра",
+    "aiSuggestionJson": {
+      "action": "correct",
+      "confidence": 0.85,
+      "rationale": "Формат должен быть CY + 8 цифр"
+    },
+    "createdAt": "2026-01-26T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdsq-007",
+    "clientId": "c4",
+    "recordType": "person",
+    "recordId": "mdp-019",
+    "issueType": "incomplete_record",
+    "severity": "medium",
+    "status": "open",
+    "description": "Неполная запись: отсутствует email и телефон",
+    "aiSuggestionJson": {
+      "action": "enrich",
+      "confidence": 0.9,
+      "rationale": "Рекомендуется дополнить контактные данные"
+    },
+    "createdAt": "2026-01-25T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdsq-008",
+    "clientId": "c1",
+    "recordType": "asset",
+    "recordId": "mdas-006",
+    "issueType": "low_confidence",
+    "field": "price",
+    "currentValue": 95000,
+    "severity": "medium",
+    "status": "open",
+    "description": "Низкая уверенность в цене криптоактива (90%)",
+    "aiSuggestionJson": {
+      "action": "verify",
+      "confidence": 0.85,
+      "rationale": "Криптоцены волатильны, рекомендуется частое обновление"
+    },
+    "createdAt": "2026-01-28T06:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdsq-009",
+    "clientId": "c6",
+    "recordType": "person",
+    "recordId": "mdp-021",
+    "issueType": "relationship_conflict",
+    "severity": "low",
+    "status": "resolved",
+    "description": "Неопределенная связь с родителями",
+    "resolvedBy": "admin",
+    "resolvedAt": "2026-01-27T16:00:00Z",
+    "resolution": "Связь подтверждена документально",
+    "createdAt": "2026-01-24T10:00:00Z",
+    "updatedAt": "2026-01-27T16:00:00Z"
+  },
+  {
+    "id": "mdsq-010",
+    "clientId": "c1",
+    "recordType": "person",
+    "recordId": "mdp-003",
+    "issueType": "age_verification",
+    "severity": "low",
+    "status": "resolved",
+    "description": "Требуется подтверждение возраста бенефициара",
+    "resolvedBy": "admin",
+    "resolvedAt": "2026-01-26T14:00:00Z",
+    "resolution": "Возраст подтвержден паспортом",
+    "createdAt": "2026-01-20T10:00:00Z",
+    "updatedAt": "2026-01-26T14:00:00Z"
+  },
+  {
+    "id": "mdsq-011",
+    "clientId": "c2",
+    "recordType": "account",
+    "recordId": "mda-015",
+    "issueType": "currency_mismatch",
+    "field": "currency",
+    "currentValue": "EUR",
+    "severity": "medium",
+    "status": "open",
+    "description": "Валюта счета не соответствует валюте отчетности клиента",
+    "aiSuggestionJson": {
+      "action": "verify",
+      "confidence": 0.75,
+      "rationale": "Возможно требуется конвертация для отчетности"
+    },
+    "createdAt": "2026-01-26T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdsq-012",
+    "clientId": "c4",
+    "recordType": "entity",
+    "recordId": "mde-008",
+    "issueType": "ownership_unclear",
+    "severity": "high",
+    "status": "open",
+    "description": "Сумма долей партнеров не равна 100%",
+    "aiSuggestionJson": {
+      "action": "investigate",
+      "confidence": 0.95,
+      "rationale": "40% + 30% + 30% = 100%, но записи показывают 40+30"
+    },
+    "createdAt": "2026-01-27T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  }
+]

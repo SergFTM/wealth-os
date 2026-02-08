@@ -22,12 +22,65 @@ interface ModuleSchema {
   createFields?: Array<{ key: string; label: string; type: string; required?: boolean; options?: string[] }>;
 }
 
-interface ModuleListProps {
+// Schema-based props (original API)
+interface SchemaBasedProps {
   schema: ModuleSchema;
   primaryCollection: string;
+  moduleSlug?: never;
+  title?: never;
+  backHref?: never;
+  children?: never;
 }
 
-export function ModuleList({ schema, primaryCollection }: ModuleListProps) {
+// Simple props with children (used by governance, deals, etc.)
+interface SimpleProps {
+  moduleSlug: string;
+  title: string;
+  backHref?: string;
+  children: React.ReactNode;
+  schema?: never;
+  primaryCollection?: never;
+}
+
+type ModuleListProps = SchemaBasedProps | SimpleProps;
+
+export function ModuleList(props: ModuleListProps) {
+  const router = useRouter();
+
+  // If children are provided, render simple wrapper layout
+  if ('children' in props && props.children) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-stone-50 to-stone-100/80">
+        <div className="border-b border-stone-200/50 bg-white/50 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-6 py-4">
+            <div className="flex items-center gap-4">
+              {props.backHref && (
+                <Link href={props.backHref}>
+                  <Button variant="ghost" className="gap-1">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Назад
+                  </Button>
+                </Link>
+              )}
+              <h1 className="text-xl font-semibold text-stone-800">{props.title}</h1>
+            </div>
+          </div>
+        </div>
+        <div className="max-w-7xl mx-auto px-6 py-6">
+          {props.children}
+        </div>
+      </div>
+    );
+  }
+
+  // Schema-based rendering (original behavior)
+  const { schema, primaryCollection } = props as SchemaBasedProps;
+  return <SchemaBasedList schema={schema} primaryCollection={primaryCollection} />;
+}
+
+function SchemaBasedList({ schema, primaryCollection }: SchemaBasedProps) {
   const { locale } = useApp();
   const router = useRouter();
   const searchParams = useSearchParams();

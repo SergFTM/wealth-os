@@ -1,0 +1,75 @@
+import { ModuleConfig } from '../types';
+
+export const governanceConfig: ModuleConfig = {
+  id: '40',
+  slug: 'governance',
+  order: 40,
+  icon: 'users',
+  title: { ru: 'Governance', en: 'Governance', uk: 'Governance' },
+  description: {
+    ru: 'Family Council, голосования, политики, протоколы заседаний и action items',
+    en: 'Family Council, voting, policies, meeting minutes and action items',
+    uk: 'Family Council, голосування, політики, протоколи засідань і action items',
+  },
+  disclaimer: {
+    ru: 'Governance материалы информационные. Trust раздел не является юридической консультацией.',
+    en: 'Governance materials are informational. Trust section is not legal advice.',
+    uk: 'Governance матеріали інформаційні. Trust розділ не є юридичною консультацією.',
+  },
+  color: '#10B981',
+  enabled: true,
+  collections: [
+    'governanceMeetings',
+    'governanceAgendaItems',
+    'governanceDecisions',
+    'governanceVotes',
+    'governancePolicies',
+    'governanceActionItems',
+    'governanceMinutes',
+  ],
+  kpis: [
+    { key: 'upcomingMeetings', title: { ru: 'Предстоящие заседания', en: 'Upcoming Meetings', uk: 'Майбутні засідання' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'pendingDecisions', title: { ru: 'Решения на голосовании', en: 'Decisions Pending Vote', uk: 'Рішення на голосуванні' }, format: 'number', status: 'warning', linkToList: true },
+    { key: 'openVotes', title: { ru: 'Открытые голосования', en: 'Open Votes', uk: 'Відкриті голосування' }, format: 'number', status: 'warning', linkToList: true },
+    { key: 'openActions', title: { ru: 'Открытые action items', en: 'Open Action Items', uk: 'Відкриті action items' }, format: 'number', status: 'warning', linkToList: true },
+    { key: 'activePolicies', title: { ru: 'Активные политики', en: 'Active Policies', uk: 'Активні політики' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'draftedMinutes', title: { ru: 'Протоколы (30д)', en: 'Minutes Drafted 30d', uk: 'Протоколи (30д)' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'clientSafePublished', title: { ru: 'Опубликовано для клиента', en: 'Client-safe Published', uk: 'Опубліковано для клієнта' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'quorumIssues', title: { ru: 'Проблемы кворума', en: 'Quorum Issues', uk: 'Проблеми кворуму' }, format: 'number', status: 'critical', linkToList: true },
+  ],
+  columns: [
+    { key: 'name', header: { ru: 'Название', en: 'Name', uk: 'Назва' } },
+    { key: 'meetingDateTime', header: { ru: 'Дата', en: 'Date', uk: 'Дата' }, type: 'date' },
+    { key: 'status', header: { ru: 'Статус', en: 'Status', uk: 'Статус' }, type: 'status' },
+    { key: 'participantsCount', header: { ru: 'Участников', en: 'Participants', uk: 'Учасників' } },
+    { key: 'clientSafeVisible', header: { ru: 'Client-safe', en: 'Client-safe', uk: 'Client-safe' }, type: 'badge' },
+  ],
+  tabs: [
+    { key: 'meetings', label: { ru: 'Заседания', en: 'Meetings', uk: 'Засідання' } },
+    { key: 'agendas', label: { ru: 'Повестка', en: 'Agendas', uk: 'Порядок денний' } },
+    { key: 'decisions', label: { ru: 'Решения', en: 'Decisions', uk: 'Рішення' } },
+    { key: 'votes', label: { ru: 'Голосования', en: 'Votes', uk: 'Голосування' } },
+    { key: 'policies', label: { ru: 'Политики', en: 'Policies', uk: 'Політики' } },
+    { key: 'actions', label: { ru: 'Action Items', en: 'Action Items', uk: 'Action Items' } },
+    { key: 'minutes', label: { ru: 'Протоколы', en: 'Minutes', uk: 'Протоколи' } },
+    { key: 'audit', label: { ru: 'Audit', en: 'Audit', uk: 'Audit' } },
+  ],
+  actions: [
+    { key: 'createMeeting', label: { ru: 'Создать заседание', en: 'Create Meeting', uk: 'Створити засідання' }, variant: 'primary' },
+    { key: 'addAgenda', label: { ru: 'Добавить повестку', en: 'Add Agenda', uk: 'Додати порядок денний' }, variant: 'secondary' },
+    { key: 'createDecision', label: { ru: 'Создать решение', en: 'Create Decision', uk: 'Створити рішення' }, variant: 'secondary' },
+    { key: 'openVote', label: { ru: 'Открыть голосование', en: 'Open Vote', uk: 'Відкрити голосування' }, variant: 'secondary' },
+    { key: 'generateMinutes', label: { ru: 'Сгенерировать протокол', en: 'Generate Minutes', uk: 'Згенерувати протокол' }, variant: 'ghost' },
+    { key: 'generateDemo', label: { ru: 'Demo governance', en: 'Demo Governance', uk: 'Demo governance' }, variant: 'ghost' },
+  ],
+  routes: {
+    dashboard: '/m/governance',
+    list: '/m/governance/list',
+    meeting: '/m/governance/meeting/[id]',
+    decision: '/m/governance/decision/[id]',
+    policy: '/m/governance/policy/[id]',
+    minutes: '/m/governance/minutes/[id]',
+  },
+};
+
+export const config = governanceConfig;

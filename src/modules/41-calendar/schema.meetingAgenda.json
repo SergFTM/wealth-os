@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MeetingAgenda",
+  "type": "object",
+  "required": ["id", "clientId", "eventId", "title", "orderIndex"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "clientId": { "type": "string" },
+    "eventId": { "type": "string" },
+    "title": { "type": "string", "minLength": 1 },
+    "description": { "type": "string" },
+    "orderIndex": { "type": "integer", "minimum": 0 },
+    "status": {
+      "type": "string",
+      "enum": ["planned", "discussed", "deferred"],
+      "default": "planned"
+    },
+    "ownerUserId": { "type": "string" },
+    "ownerName": { "type": "string" },
+    "durationMinutes": { "type": "integer", "minimum": 0 },
+    "linkedDecisionId": { "type": "string" },
+    "attachmentDocIdsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

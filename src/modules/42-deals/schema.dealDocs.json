@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DealDocument",
+  "type": "object",
+  "required": ["clientId", "linkedType", "linkedId", "docName", "status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/family ID"
+    },
+    "linkedType": {
+      "type": "string",
+      "enum": ["deal", "action", "fund_event"],
+      "description": "Type of linked record"
+    },
+    "linkedId": {
+      "type": "string",
+      "description": "ID of linked deal/action/fund_event"
+    },
+    "linkedName": {
+      "type": "string",
+      "description": "Name of linked record for display"
+    },
+    "docName": {
+      "type": "string",
+      "description": "Document name/title"
+    },
+    "docType": {
+      "type": "string",
+      "enum": ["term_sheet", "subscription_agreement", "side_letter", "ppm", "lpa", "financial_statements", "due_diligence", "legal_opinion", "tax_opinion", "k1", "capital_call_notice", "distribution_notice", "nav_statement", "audit_report", "other"],
+      "description": "Document type"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["missing", "requested", "received", "under_review", "approved", "rejected"],
+      "description": "Document status"
+    },
+    "documentId": {
+      "type": "string",
+      "description": "Link to document vault record"
+    },
+    "required": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether document is required"
+    },
+    "dueDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Document expected date"
+    },
+    "receivedDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date document was received"
+    },
+    "reviewedBy": {
+      "type": "string",
+      "description": "User who reviewed the document"
+    },
+    "reviewedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When document was reviewed"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Notes about the document"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

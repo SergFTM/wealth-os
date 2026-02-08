@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PhilComplianceCheck",
+  "description": "Compliance check for grants",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/family ID" },
+    "grantId": { "type": "string", "description": "Parent grant ID" },
+    "entityId": { "type": "string", "description": "Entity ID" },
+    "checkTypeKey": {
+      "type": "string",
+      "enum": ["sanctions", "kyc", "conflict", "board"],
+      "description": "Type of compliance check"
+    },
+    "statusKey": {
+      "type": "string",
+      "enum": ["open", "cleared", "flagged"],
+      "description": "Check status"
+    },
+    "assigneeUserId": { "type": "string", "description": "Assigned reviewer" },
+    "notes": { "type": "string", "description": "Review notes" },
+    "findingsMarkdown": { "type": "string", "description": "Detailed findings (markdown)" },
+    "evidenceDocIdsJson": {
+      "type": "array",
+      "description": "Evidence document IDs",
+      "items": { "type": "string" }
+    },
+    "exceptionId": { "type": "string", "description": "Exception Center ID if flagged (module 48)" },
+    "reviewedAt": { "type": "string", "format": "date-time" },
+    "reviewedBy": { "type": "string", "description": "Reviewer user ID" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "grantId", "checkTypeKey", "statusKey", "createdAt", "updatedAt"]
+}

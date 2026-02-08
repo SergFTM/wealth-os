@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RelHousehold",
+  "description": "Household entity for relationship management",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string", "minLength": 1 },
+    "tierKey": { "type": "string", "enum": ["A", "B", "C"] },
+    "primaryRmUserId": { "type": "string" },
+    "membersMdmIdsJson": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "notesInternal": { "type": "string" },
+    "clientSafeSummary": { "type": "string" },
+    "clientSafePublished": { "type": "boolean", "default": false },
+    "publishedAt": { "type": "string", "format": "date-time" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "name", "tierKey", "primaryRmUserId", "membersMdmIdsJson", "createdAt", "updatedAt"]
+}

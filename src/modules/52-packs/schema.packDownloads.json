@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PackDownload",
+  "description": "Download/view event for a pack share",
+  "type": "object",
+  "required": ["id", "clientId", "packId", "shareId", "actionKey", "actorLabelMasked", "at"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique event identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/family identifier"
+    },
+    "packId": {
+      "type": "string",
+      "description": "Pack that was accessed"
+    },
+    "shareId": {
+      "type": "string",
+      "description": "Share link used"
+    },
+    "itemId": {
+      "type": "string",
+      "description": "Specific item downloaded if applicable"
+    },
+    "actionKey": {
+      "type": "string",
+      "enum": ["view", "download", "download_all"],
+      "description": "Type of access"
+    },
+    "actorLabelMasked": {
+      "type": "string",
+      "description": "Masked identifier of accessor"
+    },
+    "actorEmail": {
+      "type": "string",
+      "format": "email",
+      "description": "Email if known from share recipient"
+    },
+    "ipMasked": {
+      "type": "string",
+      "description": "Partially masked IP address"
+    },
+    "userAgent": {
+      "type": "string",
+      "description": "Browser/client user agent"
+    },
+    "geoLocation": {
+      "type": "string",
+      "description": "Approximate geo location"
+    },
+    "sessionId": {
+      "type": "string",
+      "description": "Session identifier for grouping"
+    },
+    "at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Access timestamp"
+    }
+  }
+}

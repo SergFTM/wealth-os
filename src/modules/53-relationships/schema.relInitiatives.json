@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RelInitiative",
+  "description": "Initiative pipeline entry",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "householdId": { "type": "string" },
+    "title": { "type": "string", "minLength": 1 },
+    "description": { "type": "string" },
+    "stageKey": {
+      "type": "string",
+      "enum": ["idea", "in_analysis", "in_progress", "done"]
+    },
+    "ownerUserId": { "type": "string" },
+    "dueAt": { "type": "string", "format": "date-time" },
+    "successCriteria": { "type": "string" },
+    "linkedCaseId": { "type": "string" },
+    "linkedTaskIdsJson": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "attachmentsDocIdsJson": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "closedAt": { "type": "string", "format": "date-time" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "householdId", "title", "stageKey", "ownerUserId", "createdAt", "updatedAt"]
+}

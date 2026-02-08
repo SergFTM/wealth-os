@@ -1,0 +1,146 @@
+[
+  {
+    "id": "own-chg-001",
+    "clientId": "client-001",
+    "changeTypeKey": "link_created",
+    "linkId": "own-link-001",
+    "changedFieldsJson": {
+      "ownershipPct": {
+        "old": null,
+        "new": 100
+      }
+    },
+    "changedByUserId": "user-001",
+    "changedAt": "2024-01-01T10:00:00Z",
+    "notes": "Initial setup"
+  },
+  {
+    "id": "own-chg-002",
+    "clientId": "client-001",
+    "changeTypeKey": "link_created",
+    "linkId": "own-link-002",
+    "changedFieldsJson": {
+      "ownershipPct": {
+        "old": null,
+        "new": 100
+      }
+    },
+    "changedByUserId": "user-001",
+    "changedAt": "2024-01-01T10:05:00Z",
+    "notes": "Initial setup"
+  },
+  {
+    "id": "own-chg-003",
+    "clientId": "client-001",
+    "changeTypeKey": "link_created",
+    "linkId": "own-link-003",
+    "changedFieldsJson": {
+      "ownershipPct": {
+        "old": null,
+        "new": 80
+      }
+    },
+    "changedByUserId": "user-001",
+    "changedAt": "2024-01-01T10:10:00Z"
+  },
+  {
+    "id": "own-chg-004",
+    "clientId": "client-001",
+    "changeTypeKey": "pct_changed",
+    "linkId": "own-link-003",
+    "changedFieldsJson": {
+      "ownershipPct": {
+        "old": 75,
+        "new": 80
+      }
+    },
+    "changedByUserId": "user-002",
+    "changedAt": "2024-06-15T14:00:00Z",
+    "notes": "Updated based on new LP agreement"
+  },
+  {
+    "id": "own-chg-005",
+    "clientId": "client-001",
+    "changeTypeKey": "link_created",
+    "linkId": "own-link-040",
+    "changedFieldsJson": {
+      "ownershipPct": {
+        "old": null,
+        "new": 5
+      }
+    },
+    "changedByUserId": "user-001",
+    "changedAt": "2024-01-20T09:00:00Z"
+  },
+  {
+    "id": "own-chg-006",
+    "clientId": "client-002",
+    "changeTypeKey": "link_created",
+    "linkId": "own-link-025",
+    "changedFieldsJson": {
+      "ownershipPct": {
+        "old": null,
+        "new": 100
+      }
+    },
+    "changedByUserId": "user-003",
+    "changedAt": "2024-02-01T11:00:00Z"
+  },
+  {
+    "id": "own-chg-007",
+    "clientId": "client-002",
+    "changeTypeKey": "link_created",
+    "linkId": "own-link-027",
+    "changedFieldsJson": {
+      "ownershipPct": {
+        "old": null,
+        "new": 60
+      }
+    },
+    "changedByUserId": "user-003",
+    "changedAt": "2024-02-01T11:30:00Z"
+  },
+  {
+    "id": "own-chg-008",
+    "clientId": "client-003",
+    "changeTypeKey": "link_created",
+    "linkId": "own-link-034",
+    "changedFieldsJson": {
+      "ownershipPct": {
+        "old": null,
+        "new": 100
+      }
+    },
+    "changedByUserId": "user-004",
+    "changedAt": "2024-03-01T10:00:00Z"
+  },
+  {
+    "id": "own-chg-009",
+    "clientId": "client-001",
+    "changeTypeKey": "effective_date_changed",
+    "linkId": "own-link-013",
+    "changedFieldsJson": {
+      "effectiveFrom": {
+        "old": "2020-01-01",
+        "new": "2021-01-01"
+      }
+    },
+    "changedByUserId": "user-002",
+    "changedAt": "2024-07-01T15:00:00Z"
+  },
+  {
+    "id": "own-chg-010",
+    "clientId": "client-001",
+    "changeTypeKey": "link_created",
+    "linkId": "own-link-047",
+    "changedFieldsJson": {
+      "ownershipPct": {
+        "old": null,
+        "new": 100
+      }
+    },
+    "changedByUserId": "user-001",
+    "changedAt": "2024-03-01T09:00:00Z",
+    "notes": "Kids education trust setup"
+  }
+]

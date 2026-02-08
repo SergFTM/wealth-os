@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AccessReview",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string" },
+    "scopeHouseholdId": { "type": "string" },
+    "statusKey": { "type": "string", "enum": ["open", "closed"] },
+    "dueAt": { "type": "string", "format": "date" },
+    "startedAt": { "type": "string", "format": "date-time" },
+    "closedAt": { "type": "string", "format": "date-time" },
+    "snapshotJson": {
+      "type": "object",
+      "properties": {
+        "grantees": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "granteeId": { "type": "string" },
+              "granteeLabel": { "type": "string" },
+              "granteeType": { "type": "string" },
+              "permissions": { "type": "array", "items": { "type": "string" } },
+              "consentIds": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        }
+      }
+    },
+    "decisionsJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "granteeId": { "type": "string" },
+          "action": { "type": "string", "enum": ["confirm", "revoke", "restrict"] },
+          "notes": { "type": "string" }
+        },
+        "required": ["granteeId", "action"]
+      }
+    },
+    "createdAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "name", "statusKey", "dueAt", "startedAt", "snapshotJson", "createdAt"]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Policy",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "title": { "type": "string" },
+    "categoryKey": {
+      "type": "string",
+      "enum": ["investment", "compliance", "security", "operations", "vendor"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "archived"],
+      "default": "active"
+    },
+    "currentVersionId": { "type": "string" },
+    "currentVersionLabel": { "type": "string" },
+    "ownerUserId": { "type": "string" },
+    "ownerName": { "type": "string" },
+    "bodyMdRu": { "type": "string" },
+    "bodyMdEn": { "type": "string" },
+    "bodyMdUk": { "type": "string" },
+    "clientSafePublished": { "type": "boolean", "default": false },
+    "tagsJson": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "linkedIpsId": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "title", "categoryKey", "status"]
+}

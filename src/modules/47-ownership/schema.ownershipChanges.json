@@ -1,0 +1,15 @@
+{
+  "name": "ownershipChanges",
+  "description": "Audit trail for ownership link changes",
+  "fields": [
+    { "key": "id", "type": "string", "required": true, "description": "Unique change record identifier" },
+    { "key": "clientId", "type": "string", "required": true, "description": "Client/household reference" },
+    { "key": "changeTypeKey", "type": "enum", "required": true, "values": ["link_created", "link_updated", "link_deleted", "pct_changed", "effective_date_changed"], "description": "Type of change" },
+    { "key": "linkId", "type": "string", "required": true, "description": "Affected link ID" },
+    { "key": "changedFieldsJson", "type": "json", "required": false, "description": "Changed fields {field: {old, new}}" },
+    { "key": "changedByUserId", "type": "string", "required": true, "description": "User who made the change" },
+    { "key": "changedAt", "type": "datetime", "required": true, "description": "Change timestamp" },
+    { "key": "notes", "type": "string", "required": false, "description": "Optional notes" }
+  ],
+  "indexes": ["clientId", "linkId", "changedAt"]
+}

@@ -1,0 +1,204 @@
+[
+  {
+    "id": "own-ubo-001",
+    "clientId": "client-001",
+    "personMdmId": "mdm-per-001",
+    "rootHouseholdNodeId": "own-node-001",
+    "targetNodeId": "own-node-003",
+    "computedPct": 100,
+    "pathsJson": [
+      {
+        "nodeIds": [
+          "own-node-001",
+          "own-node-002",
+          "own-node-003"
+        ],
+        "pct": 100
+      }
+    ],
+    "computedAt": "2024-12-01T00:00:00Z",
+    "sourcesJson": [
+      "own-link-001",
+      "own-link-002"
+    ],
+    "createdAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-ubo-002",
+    "clientId": "client-001",
+    "personMdmId": "mdm-per-001",
+    "rootHouseholdNodeId": "own-node-001",
+    "targetNodeId": "own-node-004",
+    "computedPct": 80,
+    "pathsJson": [
+      {
+        "nodeIds": [
+          "own-node-001",
+          "own-node-002",
+          "own-node-003",
+          "own-node-004"
+        ],
+        "pct": 80
+      }
+    ],
+    "computedAt": "2024-12-01T00:00:00Z",
+    "sourcesJson": [
+      "own-link-001",
+      "own-link-002",
+      "own-link-003"
+    ],
+    "createdAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-ubo-003",
+    "clientId": "client-001",
+    "personMdmId": "mdm-per-001",
+    "rootHouseholdNodeId": "own-node-001",
+    "targetNodeId": "own-node-005",
+    "computedPct": 80,
+    "pathsJson": [
+      {
+        "nodeIds": [
+          "own-node-001",
+          "own-node-002",
+          "own-node-003",
+          "own-node-004",
+          "own-node-005"
+        ],
+        "pct": 80
+      }
+    ],
+    "computedAt": "2024-12-01T00:00:00Z",
+    "sourcesJson": [
+      "own-link-001",
+      "own-link-002",
+      "own-link-003",
+      "own-link-004"
+    ],
+    "createdAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-ubo-004",
+    "clientId": "client-001",
+    "personMdmId": "mdm-per-002",
+    "rootHouseholdNodeId": "own-node-001",
+    "targetNodeId": "own-node-003",
+    "computedPct": 50,
+    "pathsJson": [
+      {
+        "nodeIds": [
+          "own-node-001",
+          "own-node-002",
+          "own-node-003"
+        ],
+        "pct": 50
+      }
+    ],
+    "computedAt": "2024-12-01T00:00:00Z",
+    "sourcesJson": [
+      "own-link-001",
+      "own-link-002"
+    ],
+    "createdAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-ubo-005",
+    "clientId": "client-002",
+    "personMdmId": "mdm-per-003",
+    "rootHouseholdNodeId": "own-node-026",
+    "targetNodeId": "own-node-028",
+    "computedPct": 100,
+    "pathsJson": [
+      {
+        "nodeIds": [
+          "own-node-026",
+          "own-node-027",
+          "own-node-028"
+        ],
+        "pct": 100
+      }
+    ],
+    "computedAt": "2024-12-01T00:00:00Z",
+    "sourcesJson": [
+      "own-link-025",
+      "own-link-026"
+    ],
+    "createdAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-ubo-006",
+    "clientId": "client-002",
+    "personMdmId": "mdm-per-003",
+    "rootHouseholdNodeId": "own-node-026",
+    "targetNodeId": "own-node-029",
+    "computedPct": 60,
+    "pathsJson": [
+      {
+        "nodeIds": [
+          "own-node-026",
+          "own-node-027",
+          "own-node-028",
+          "own-node-029"
+        ],
+        "pct": 60
+      }
+    ],
+    "computedAt": "2024-12-01T00:00:00Z",
+    "sourcesJson": [
+      "own-link-025",
+      "own-link-026",
+      "own-link-027"
+    ],
+    "createdAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-ubo-007",
+    "clientId": "client-003",
+    "personMdmId": "mdm-per-004",
+    "rootHouseholdNodeId": "own-node-036",
+    "targetNodeId": "own-node-038",
+    "computedPct": 100,
+    "pathsJson": [
+      {
+        "nodeIds": [
+          "own-node-036",
+          "own-node-037",
+          "own-node-038"
+        ],
+        "pct": 100
+      }
+    ],
+    "computedAt": "2024-12-01T00:00:00Z",
+    "sourcesJson": [
+      "own-link-034",
+      "own-link-035"
+    ],
+    "createdAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "own-ubo-008",
+    "clientId": "client-003",
+    "personMdmId": "mdm-per-004",
+    "rootHouseholdNodeId": "own-node-036",
+    "targetNodeId": "own-node-039",
+    "computedPct": 50,
+    "pathsJson": [
+      {
+        "nodeIds": [
+          "own-node-036",
+          "own-node-037",
+          "own-node-038",
+          "own-node-039"
+        ],
+        "pct": 50
+      }
+    ],
+    "computedAt": "2024-12-01T00:00:00Z",
+    "sourcesJson": [
+      "own-link-034",
+      "own-link-035",
+      "own-link-036"
+    ],
+    "createdAt": "2024-12-01T00:00:00Z"
+  }
+]

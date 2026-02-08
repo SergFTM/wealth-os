@@ -1,0 +1,612 @@
+[
+  {
+    "id": "mdas-001",
+    "clientId": "c1",
+    "accountId": "mda-001",
+    "recordType": "asset",
+    "assetType": "equity",
+    "status": "golden",
+    "chosenJson": {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "isin": "US0378331005",
+      "cusip": "037833100",
+      "quantity": 15000,
+      "price": 185.5,
+      "marketValue": 2782500,
+      "currency": "USD"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-as001",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "ticker": "AAPL",
+          "quantity": 15000,
+          "price": 185.5
+        }
+      },
+      {
+        "sourceSystem": "Bloomberg",
+        "sourceId": "bb-as001",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "name": "Apple Inc.",
+          "isin": "US0378331005"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "ticker": 0.99,
+      "quantity": 0.99,
+      "price": 0.95
+    },
+    "overridesJson": {},
+    "identifiersJson": {
+      "isin": "US0378331005",
+      "cusip": "037833100",
+      "sedol": "2046251"
+    },
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdas-002",
+    "clientId": "c1",
+    "accountId": "mda-001",
+    "recordType": "asset",
+    "assetType": "equity",
+    "status": "golden",
+    "chosenJson": {
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "isin": "US5949181045",
+      "cusip": "594918104",
+      "quantity": 12000,
+      "price": 415.2,
+      "marketValue": 4982400,
+      "currency": "USD"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-as002",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "ticker": "MSFT",
+          "quantity": 12000,
+          "price": 415.2
+        }
+      }
+    ],
+    "confidenceJson": {
+      "ticker": 0.99,
+      "quantity": 0.99,
+      "price": 0.95
+    },
+    "overridesJson": {},
+    "identifiersJson": {
+      "isin": "US5949181045",
+      "cusip": "594918104"
+    },
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdas-003",
+    "clientId": "c1",
+    "accountId": "mda-001",
+    "recordType": "asset",
+    "assetType": "equity",
+    "status": "golden",
+    "chosenJson": {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc. Class A",
+      "isin": "US02079K3059",
+      "quantity": 8000,
+      "price": 175.8,
+      "marketValue": 1406400,
+      "currency": "USD"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-as003",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "ticker": "GOOGL",
+          "quantity": 8000,
+          "price": 175.8
+        }
+      }
+    ],
+    "confidenceJson": {
+      "ticker": 0.99,
+      "quantity": 0.99,
+      "price": 0.95
+    },
+    "overridesJson": {},
+    "identifiersJson": {
+      "isin": "US02079K3059"
+    },
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdas-004",
+    "clientId": "c1",
+    "accountId": "mda-002",
+    "recordType": "asset",
+    "assetType": "fixed_income",
+    "status": "golden",
+    "chosenJson": {
+      "ticker": "UST10Y",
+      "name": "US Treasury 10Y Note",
+      "isin": "US912810TM25",
+      "quantity": 5000000,
+      "price": 98.5,
+      "marketValue": 4925000,
+      "currency": "USD",
+      "maturityDate": "2034-05-15",
+      "coupon": 4.25
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-as004",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "ticker": "UST10Y",
+          "quantity": 5000000,
+          "price": 98.5
+        }
+      }
+    ],
+    "confidenceJson": {
+      "ticker": 0.99,
+      "quantity": 0.99,
+      "price": 0.95
+    },
+    "overridesJson": {},
+    "identifiersJson": {
+      "isin": "US912810TM25"
+    },
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdas-005",
+    "clientId": "c1",
+    "accountId": "mda-003",
+    "recordType": "asset",
+    "assetType": "mutual_fund",
+    "status": "golden",
+    "chosenJson": {
+      "ticker": "VTSAX",
+      "name": "Vanguard Total Stock Market Index Fund",
+      "isin": "US9229087690",
+      "quantity": 50000,
+      "price": 125.4,
+      "marketValue": 6270000,
+      "currency": "USD"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-as005",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "ticker": "VTSAX",
+          "quantity": 50000,
+          "price": 125.4
+        }
+      }
+    ],
+    "confidenceJson": {
+      "ticker": 0.99,
+      "quantity": 0.99,
+      "price": 0.95
+    },
+    "overridesJson": {},
+    "identifiersJson": {
+      "isin": "US9229087690"
+    },
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdas-006",
+    "clientId": "c1",
+    "accountId": "mda-013",
+    "recordType": "asset",
+    "assetType": "crypto",
+    "status": "golden",
+    "chosenJson": {
+      "ticker": "BTC",
+      "name": "Bitcoin",
+      "quantity": 25.5,
+      "price": 95000,
+      "marketValue": 2422500,
+      "currency": "USD"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-as006",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "ticker": "BTC",
+          "quantity": 25.5,
+          "price": 95000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "ticker": 0.99,
+      "quantity": 0.99,
+      "price": 0.9
+    },
+    "overridesJson": {},
+    "identifiersJson": {},
+    "createdAt": "2025-06-01T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdas-007",
+    "clientId": "c1",
+    "accountId": "mda-013",
+    "recordType": "asset",
+    "assetType": "crypto",
+    "status": "golden",
+    "chosenJson": {
+      "ticker": "ETH",
+      "name": "Ethereum",
+      "quantity": 500,
+      "price": 3200,
+      "marketValue": 1600000,
+      "currency": "USD"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-as007",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "ticker": "ETH",
+          "quantity": 500,
+          "price": 3200
+        }
+      }
+    ],
+    "confidenceJson": {
+      "ticker": 0.99,
+      "quantity": 0.99,
+      "price": 0.9
+    },
+    "overridesJson": {},
+    "identifiersJson": {},
+    "createdAt": "2025-06-01T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdas-008",
+    "clientId": "c2",
+    "accountId": "mda-004",
+    "recordType": "asset",
+    "assetType": "real_estate",
+    "status": "golden",
+    "chosenJson": {
+      "name": "Limassol Office Building",
+      "address": "Limassol Marina, Cyprus",
+      "marketValue": 15000000,
+      "currency": "EUR",
+      "acquisitionDate": "2018-06-15"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Appraisal",
+        "sourceId": "apr-as008",
+        "fetchedAt": "2026-01-15T10:00:00Z",
+        "fieldsJson": {
+          "name": "Limassol Office Building",
+          "marketValue": 15000000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.99,
+      "marketValue": 0.85
+    },
+    "overridesJson": {},
+    "identifiersJson": {},
+    "createdAt": "2025-02-20T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdas-009",
+    "clientId": "c2",
+    "accountId": "mda-004",
+    "recordType": "asset",
+    "assetType": "real_estate",
+    "status": "golden",
+    "chosenJson": {
+      "name": "Cyprus Villa Portfolio",
+      "address": "Paphos, Cyprus",
+      "marketValue": 8500000,
+      "currency": "EUR",
+      "acquisitionDate": "2019-03-20"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Appraisal",
+        "sourceId": "apr-as009",
+        "fetchedAt": "2026-01-15T10:00:00Z",
+        "fieldsJson": {
+          "name": "Cyprus Villa Portfolio",
+          "marketValue": 8500000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.99,
+      "marketValue": 0.85
+    },
+    "overridesJson": {},
+    "identifiersJson": {},
+    "createdAt": "2025-02-20T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdas-010",
+    "clientId": "c3",
+    "accountId": "mda-005",
+    "recordType": "asset",
+    "assetType": "equity",
+    "status": "golden",
+    "chosenJson": {
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "isin": "US67066G1040",
+      "quantity": 5000,
+      "price": 875.5,
+      "marketValue": 4377500,
+      "currency": "USD"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-as010",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "ticker": "NVDA",
+          "quantity": 5000,
+          "price": 875.5
+        }
+      }
+    ],
+    "confidenceJson": {
+      "ticker": 0.99,
+      "quantity": 0.99,
+      "price": 0.95
+    },
+    "overridesJson": {},
+    "identifiersJson": {
+      "isin": "US67066G1040"
+    },
+    "createdAt": "2025-03-10T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdas-011",
+    "clientId": "c4",
+    "accountId": "mda-007",
+    "recordType": "asset",
+    "assetType": "private_equity",
+    "status": "golden",
+    "chosenJson": {
+      "name": "Sequoia Capital Fund XVIII",
+      "fundManager": "Sequoia Capital",
+      "commitment": 5000000,
+      "calledCapital": 3500000,
+      "nav": 4200000,
+      "currency": "USD",
+      "vintageYear": 2021
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "PE Admin",
+        "sourceId": "pe-as011",
+        "fetchedAt": "2026-01-20T10:00:00Z",
+        "fieldsJson": {
+          "name": "Sequoia Capital Fund XVIII",
+          "nav": 4200000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.99,
+      "nav": 0.9
+    },
+    "overridesJson": {},
+    "identifiersJson": {},
+    "createdAt": "2025-04-05T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdas-012",
+    "clientId": "c4",
+    "accountId": "mda-007",
+    "recordType": "asset",
+    "assetType": "hedge_fund",
+    "status": "golden",
+    "chosenJson": {
+      "name": "Citadel Wellington Fund",
+      "fundManager": "Citadel",
+      "nav": 8500000,
+      "currency": "USD",
+      "strategy": "multi-strategy"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Fund Admin",
+        "sourceId": "fa-as012",
+        "fetchedAt": "2026-01-25T10:00:00Z",
+        "fieldsJson": {
+          "name": "Citadel Wellington Fund",
+          "nav": 8500000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.99,
+      "nav": 0.9
+    },
+    "overridesJson": {},
+    "identifiersJson": {},
+    "createdAt": "2025-04-05T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdas-013",
+    "clientId": "c5",
+    "accountId": "mda-008",
+    "recordType": "asset",
+    "assetType": "equity",
+    "status": "golden",
+    "chosenJson": {
+      "ticker": "AMZN",
+      "name": "Amazon.com Inc.",
+      "isin": "US0231351067",
+      "quantity": 6000,
+      "price": 185.75,
+      "marketValue": 1114500,
+      "currency": "USD"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-as013",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "ticker": "AMZN",
+          "quantity": 6000,
+          "price": 185.75
+        }
+      }
+    ],
+    "confidenceJson": {
+      "ticker": 0.99,
+      "quantity": 0.99,
+      "price": 0.95
+    },
+    "overridesJson": {},
+    "identifiersJson": {
+      "isin": "US0231351067"
+    },
+    "createdAt": "2025-05-01T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdas-014",
+    "clientId": "c6",
+    "accountId": "mda-010",
+    "recordType": "asset",
+    "assetType": "fixed_income",
+    "status": "golden",
+    "chosenJson": {
+      "name": "Investment Grade Corporate Bond Portfolio",
+      "marketValue": 12000000,
+      "currency": "USD",
+      "yield": 5.25,
+      "duration": 6.5
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-as014",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "name": "IG Corp Bond Portfolio",
+          "marketValue": 12000000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.95,
+      "marketValue": 0.95
+    },
+    "overridesJson": {},
+    "identifiersJson": {},
+    "createdAt": "2025-06-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdas-015",
+    "clientId": "c1",
+    "accountId": "mda-001",
+    "recordType": "asset",
+    "assetType": "equity",
+    "status": "suspect_duplicate",
+    "chosenJson": {
+      "ticker": "AAPL US",
+      "name": "Apple",
+      "quantity": 15000,
+      "price": 185.45,
+      "marketValue": 2781750
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "External",
+        "sourceId": "ext-as015",
+        "fetchedAt": "2026-01-25T10:00:00Z",
+        "fieldsJson": {
+          "ticker": "AAPL US",
+          "quantity": 15000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "ticker": 0.8,
+      "quantity": 0.85
+    },
+    "overridesJson": {},
+    "identifiersJson": {},
+    "createdAt": "2026-01-25T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdas-016",
+    "clientId": "c1",
+    "accountId": "mda-001",
+    "recordType": "asset",
+    "assetType": "equity",
+    "status": "suspect_duplicate",
+    "chosenJson": {
+      "ticker": "MSFT US Equity",
+      "name": "Microsoft Corp",
+      "quantity": 12000,
+      "price": 415.15,
+      "marketValue": 4981800
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Bloomberg",
+        "sourceId": "bb-as016",
+        "fetchedAt": "2026-01-26T10:00:00Z",
+        "fieldsJson": {
+          "ticker": "MSFT US Equity",
+          "quantity": 12000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "ticker": 0.8,
+      "quantity": 0.85
+    },
+    "overridesJson": {},
+    "identifiersJson": {},
+    "createdAt": "2026-01-26T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  }
+]

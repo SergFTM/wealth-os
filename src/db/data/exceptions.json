@@ -1,0 +1,1185 @@
+[
+  {
+    "id": "ex-001",
+    "clientId": "client-1",
+    "type": "sync",
+    "severity": "ok",
+    "status": "closed",
+    "sourceModule": 14,
+    "title": "Синхронизация завершена успешно",
+    "description": "Синхронизация данных портфеля завершилась без ошибок",
+    "assignedTo": "user-1",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-08T08:15:00Z",
+    "updatedAt": "2026-01-08T09:30:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-08T08:15:00Z",
+        "action": "created",
+        "comment": "Исключение создано автоматически"
+      },
+      {
+        "timestamp": "2026-01-08T09:30:00Z",
+        "action": "closed",
+        "comment": "Синхронизация завершена"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Проверка подключения к источнику",
+        "status": "completed"
+      },
+      {
+        "step": 2,
+        "description": "Валидация данных",
+        "status": "completed"
+      }
+    ]
+  },
+  {
+    "id": "ex-002",
+    "clientId": "client-1",
+    "type": "recon",
+    "severity": "warning",
+    "status": "in_progress",
+    "sourceModule": 2,
+    "title": "Расхождение в балансах счетов",
+    "description": "Обнаружено расхождение между системой и кастодианом",
+    "assignedTo": "user-2",
+    "slaAtRisk": true,
+    "createdAt": "2026-01-10T10:20:00Z",
+    "updatedAt": "2026-01-10T14:45:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-10T10:20:00Z",
+        "action": "created",
+        "comment": "Автоматическое обнаружение расхождения"
+      },
+      {
+        "timestamp": "2026-01-10T11:05:00Z",
+        "action": "assigned",
+        "comment": "Назначено пользователю user-2"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Сравнение балансов",
+        "status": "in_progress"
+      },
+      {
+        "step": 2,
+        "description": "Выявление источника расхождения",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "ex-003",
+    "clientId": "client-1",
+    "type": "missing_doc",
+    "severity": "critical",
+    "status": "open",
+    "sourceModule": 39,
+    "title": "Отсутствует документация по соглашению",
+    "description": "Не найдены подписанные копии соглашения с поставщиком",
+    "assignedTo": null,
+    "slaAtRisk": true,
+    "createdAt": "2026-01-09T14:30:00Z",
+    "updatedAt": "2026-01-09T14:30:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-09T14:30:00Z",
+        "action": "created",
+        "comment": "Проверка комплектности документов выявила пропуски"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Связаться с поставщиком",
+        "status": "pending"
+      },
+      {
+        "step": 2,
+        "description": "Получить копии документов",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "ex-004",
+    "clientId": "client-1",
+    "type": "stale_price",
+    "severity": "warning",
+    "status": "triage",
+    "sourceModule": 42,
+    "title": "Устаревшая информация о ценах активов",
+    "description": "Цены активов не обновлялись более 48 часов",
+    "assignedTo": "user-3",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-11T07:00:00Z",
+    "updatedAt": "2026-01-11T09:15:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-11T07:00:00Z",
+        "action": "created",
+        "comment": "Автоматическое обнаружение в процессе валидации цен"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Проверить источник ценовых данных",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "ex-005",
+    "clientId": "client-1",
+    "type": "approval",
+    "severity": "ok",
+    "status": "closed",
+    "sourceModule": 5,
+    "title": "Одобрение сделки завершено",
+    "description": "Все необходимые утверждения получены",
+    "assignedTo": "user-4",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-07T16:45:00Z",
+    "updatedAt": "2026-01-08T10:20:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-07T16:45:00Z",
+        "action": "created",
+        "comment": "Сделка требует одобрения"
+      },
+      {
+        "timestamp": "2026-01-08T10:20:00Z",
+        "action": "closed",
+        "comment": "Все подписи получены"
+      }
+    ],
+    "remediationStepsJson": []
+  },
+  {
+    "id": "ex-006",
+    "clientId": "client-1",
+    "type": "vendor_sla",
+    "severity": "critical",
+    "status": "in_progress",
+    "sourceModule": 16,
+    "title": "Нарушение SLA поставщика по времени отклика",
+    "description": "Среднее время ответа превышает установленный лимит",
+    "assignedTo": "user-5",
+    "slaAtRisk": true,
+    "createdAt": "2026-01-12T11:30:00Z",
+    "updatedAt": "2026-01-12T12:45:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-12T11:30:00Z",
+        "action": "created",
+        "comment": "Мониторинг SLA выявил нарушение"
+      },
+      {
+        "timestamp": "2026-01-12T12:45:00Z",
+        "action": "assigned",
+        "comment": "Назначено на пользователя user-5"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Связаться с поставщиком",
+        "status": "in_progress"
+      }
+    ]
+  },
+  {
+    "id": "ex-007",
+    "clientId": "client-1",
+    "type": "security",
+    "severity": "critical",
+    "status": "open",
+    "sourceModule": 7,
+    "title": "Обнаружена потенциальная угроза безопасности",
+    "description": "Необычная активность в системе доступа",
+    "assignedTo": null,
+    "slaAtRisk": true,
+    "createdAt": "2026-01-13T09:00:00Z",
+    "updatedAt": "2026-01-13T09:00:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-13T09:00:00Z",
+        "action": "created",
+        "comment": "Система безопасности выявила аномалию"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Провести расследование",
+        "status": "pending"
+      },
+      {
+        "step": 2,
+        "description": "Принять меры по снижению рисков",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "ex-008",
+    "clientId": "client-1",
+    "type": "sync",
+    "severity": "warning",
+    "status": "in_progress",
+    "sourceModule": 43,
+    "title": "Частичная синхронизация данных",
+    "description": "Некоторые записи не синхронизировались",
+    "assignedTo": "user-6",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-11T13:20:00Z",
+    "updatedAt": "2026-01-11T15:00:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-11T13:20:00Z",
+        "action": "created",
+        "comment": "Начало синхронизации"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Переотправить неудачные записи",
+        "status": "in_progress"
+      }
+    ]
+  },
+  {
+    "id": "ex-009",
+    "clientId": "client-1",
+    "type": "recon",
+    "severity": "ok",
+    "status": "closed",
+    "sourceModule": 17,
+    "title": "Сверка завершена успешно",
+    "description": "Все элементы сверены и согласованы",
+    "assignedTo": "user-7",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-09T08:30:00Z",
+    "updatedAt": "2026-01-09T09:45:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-09T08:30:00Z",
+        "action": "created",
+        "comment": "Начало процесса сверки"
+      },
+      {
+        "timestamp": "2026-01-09T09:45:00Z",
+        "action": "closed",
+        "comment": "Сверка завершена"
+      }
+    ],
+    "remediationStepsJson": []
+  },
+  {
+    "id": "ex-010",
+    "clientId": "client-1",
+    "type": "missing_doc",
+    "severity": "warning",
+    "status": "triage",
+    "sourceModule": 14,
+    "title": "Неполная документация по сделке",
+    "description": "Отсутствуют некоторые приложения к договору",
+    "assignedTo": "user-8",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-10T15:10:00Z",
+    "updatedAt": "2026-01-10T15:50:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-10T15:10:00Z",
+        "action": "created",
+        "comment": "Аудит документов выявил пропуски"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Запросить недостающие документы",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "ex-011",
+    "clientId": "client-1",
+    "type": "stale_price",
+    "severity": "ok",
+    "status": "closed",
+    "sourceModule": 2,
+    "title": "Цены обновлены",
+    "description": "Все ценовые данные актуальны",
+    "assignedTo": "user-9",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-08T12:00:00Z",
+    "updatedAt": "2026-01-08T12:30:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-08T12:00:00Z",
+        "action": "created",
+        "comment": "Проверка ценовых данных"
+      },
+      {
+        "timestamp": "2026-01-08T12:30:00Z",
+        "action": "closed",
+        "comment": "Обновление завершено"
+      }
+    ],
+    "remediationStepsJson": []
+  },
+  {
+    "id": "ex-012",
+    "clientId": "client-1",
+    "type": "approval",
+    "severity": "warning",
+    "status": "in_progress",
+    "sourceModule": 39,
+    "title": "Ожидание одобрения от финансового директора",
+    "description": "Требуется одобрение для перевода средств",
+    "assignedTo": "user-10",
+    "slaAtRisk": true,
+    "createdAt": "2026-01-12T14:20:00Z",
+    "updatedAt": "2026-01-12T14:50:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-12T14:20:00Z",
+        "action": "created",
+        "comment": "Инициирован процесс одобрения"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Отправить на подпись финансовому директору",
+        "status": "in_progress"
+      }
+    ]
+  },
+  {
+    "id": "ex-013",
+    "clientId": "client-1",
+    "type": "vendor_sla",
+    "severity": "warning",
+    "status": "triage",
+    "sourceModule": 42,
+    "title": "Поставщик приближается к лимиту SLA",
+    "description": "Процент выполнения SLA упал ниже 95%",
+    "assignedTo": "user-11",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-11T10:15:00Z",
+    "updatedAt": "2026-01-11T11:00:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-11T10:15:00Z",
+        "action": "created",
+        "comment": "Предупреждение от системы мониторинга"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Связаться с поставщиком",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "ex-014",
+    "clientId": "client-1",
+    "type": "security",
+    "severity": "warning",
+    "status": "in_progress",
+    "sourceModule": 5,
+    "title": "Подозрительная активность в учетной записи",
+    "description": "Обнаружены попытки несанкционированного доступа",
+    "assignedTo": "user-12",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-13T10:30:00Z",
+    "updatedAt": "2026-01-13T11:45:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-13T10:30:00Z",
+        "action": "created",
+        "comment": "Система безопасности зафиксировала аномалию"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Проверить логи доступа",
+        "status": "in_progress"
+      }
+    ]
+  },
+  {
+    "id": "ex-015",
+    "clientId": "client-1",
+    "type": "sync",
+    "severity": "critical",
+    "status": "open",
+    "sourceModule": 16,
+    "title": "Критическая ошибка синхронизации",
+    "description": "Система не может синхронизировать критические данные",
+    "assignedTo": null,
+    "slaAtRisk": true,
+    "createdAt": "2026-01-13T08:00:00Z",
+    "updatedAt": "2026-01-13T08:00:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-13T08:00:00Z",
+        "action": "created",
+        "comment": "Обнаружена критическая ошибка при синхронизации"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Остановить синхронизацию",
+        "status": "pending"
+      },
+      {
+        "step": 2,
+        "description": "Провести диагностику",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "ex-016",
+    "clientId": "client-1",
+    "type": "recon",
+    "severity": "critical",
+    "status": "in_progress",
+    "sourceModule": 7,
+    "title": "Значительные расхождения при сверке",
+    "description": "Обнаружены крупные несоответствия в данных",
+    "assignedTo": "user-13",
+    "slaAtRisk": true,
+    "createdAt": "2026-01-12T09:45:00Z",
+    "updatedAt": "2026-01-12T11:20:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-12T09:45:00Z",
+        "action": "created",
+        "comment": "Критическое расхождение при сверке"
+      },
+      {
+        "timestamp": "2026-01-12T11:20:00Z",
+        "action": "assigned",
+        "comment": "Назначено пользователю user-13"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Определить источник расхождения",
+        "status": "in_progress"
+      }
+    ]
+  },
+  {
+    "id": "ex-017",
+    "clientId": "client-1",
+    "type": "missing_doc",
+    "severity": "ok",
+    "status": "closed",
+    "sourceModule": 43,
+    "title": "Все документы в наличии",
+    "description": "Проверка документации завершена успешно",
+    "assignedTo": "user-14",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-09T16:20:00Z",
+    "updatedAt": "2026-01-09T17:00:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-09T16:20:00Z",
+        "action": "created",
+        "comment": "Начало проверки документации"
+      },
+      {
+        "timestamp": "2026-01-09T17:00:00Z",
+        "action": "closed",
+        "comment": "Все документы найдены"
+      }
+    ],
+    "remediationStepsJson": []
+  },
+  {
+    "id": "ex-018",
+    "clientId": "client-1",
+    "type": "stale_price",
+    "severity": "critical",
+    "status": "open",
+    "sourceModule": 17,
+    "title": "Критически устаревшие цены активов",
+    "description": "Цены не обновлялись более 72 часов",
+    "assignedTo": null,
+    "slaAtRisk": true,
+    "createdAt": "2026-01-11T06:00:00Z",
+    "updatedAt": "2026-01-11T06:00:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-11T06:00:00Z",
+        "action": "created",
+        "comment": "Обнаружена проблема с источником ценовых данных"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Проверить подключение к источнику",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "ex-019",
+    "clientId": "client-1",
+    "type": "approval",
+    "severity": "critical",
+    "status": "open",
+    "sourceModule": 14,
+    "title": "Критическое одобрение требуется немедленно",
+    "description": "Крупная транзакция ожидает утверждения",
+    "assignedTo": null,
+    "slaAtRisk": true,
+    "createdAt": "2026-01-13T07:30:00Z",
+    "updatedAt": "2026-01-13T07:30:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-13T07:30:00Z",
+        "action": "created",
+        "comment": "Инициирована критическая транзакция"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Уведомить руководство",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "ex-020",
+    "clientId": "client-1",
+    "type": "vendor_sla",
+    "severity": "ok",
+    "status": "closed",
+    "sourceModule": 39,
+    "title": "SLA поставщика в норме",
+    "description": "Все показатели SLA в пределах нормы",
+    "assignedTo": "user-15",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-10T08:00:00Z",
+    "updatedAt": "2026-01-10T08:30:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-10T08:00:00Z",
+        "action": "created",
+        "comment": "Плановая проверка SLA"
+      },
+      {
+        "timestamp": "2026-01-10T08:30:00Z",
+        "action": "closed",
+        "comment": "Проверка завершена, все в порядке"
+      }
+    ],
+    "remediationStepsJson": []
+  },
+  {
+    "id": "ex-021",
+    "clientId": "client-1",
+    "type": "security",
+    "severity": "ok",
+    "status": "closed",
+    "sourceModule": 42,
+    "title": "Проверка безопасности пройдена",
+    "description": "Все контрольные точки безопасности в порядке",
+    "assignedTo": "user-16",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-08T14:00:00Z",
+    "updatedAt": "2026-01-08T14:45:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-08T14:00:00Z",
+        "action": "created",
+        "comment": "Плановая проверка безопасности"
+      },
+      {
+        "timestamp": "2026-01-08T14:45:00Z",
+        "action": "closed",
+        "comment": "Проверка завершена успешно"
+      }
+    ],
+    "remediationStepsJson": []
+  },
+  {
+    "id": "ex-022",
+    "clientId": "client-1",
+    "type": "sync",
+    "severity": "warning",
+    "status": "triage",
+    "sourceModule": 5,
+    "title": "Предупреждение о синхронизации",
+    "description": "Обнаружены незначительные задержки при синхронизации",
+    "assignedTo": "user-17",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-12T15:30:00Z",
+    "updatedAt": "2026-01-12T16:15:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-12T15:30:00Z",
+        "action": "created",
+        "comment": "Мониторинг синхронизации выявил задержку"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Проверить загруженность системы",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "ex-023",
+    "clientId": "client-1",
+    "type": "recon",
+    "severity": "warning",
+    "status": "triage",
+    "sourceModule": 16,
+    "title": "Минорные расхождения при сверке",
+    "description": "Найдены небольшие различия, требующие внимания",
+    "assignedTo": "user-18",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-11T11:45:00Z",
+    "updatedAt": "2026-01-11T12:30:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-11T11:45:00Z",
+        "action": "created",
+        "comment": "Система обнаружила расхождение при сверке"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Провести детальный анализ",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "ex-024",
+    "clientId": "client-1",
+    "type": "missing_doc",
+    "severity": "critical",
+    "status": "in_progress",
+    "sourceModule": 7,
+    "title": "Критический пропуск в документации",
+    "description": "Отсутствует ключевой документ для соответствия",
+    "assignedTo": "user-19",
+    "slaAtRisk": true,
+    "createdAt": "2026-01-10T09:20:00Z",
+    "updatedAt": "2026-01-10T10:40:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-10T09:20:00Z",
+        "action": "created",
+        "comment": "Обнаружен критический пропуск в документации"
+      },
+      {
+        "timestamp": "2026-01-10T10:40:00Z",
+        "action": "assigned",
+        "comment": "Назначено на user-19"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Связаться с ответственным отделом",
+        "status": "in_progress"
+      }
+    ]
+  },
+  {
+    "id": "ex-025",
+    "clientId": "client-1",
+    "type": "stale_price",
+    "severity": "warning",
+    "status": "in_progress",
+    "sourceModule": 43,
+    "title": "Устаревшие цены требуют обновления",
+    "description": "Данные о ценах требуют актуализации",
+    "assignedTo": "user-20",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-12T07:15:00Z",
+    "updatedAt": "2026-01-12T08:00:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-12T07:15:00Z",
+        "action": "created",
+        "comment": "Обнаружены устаревшие цены"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Запросить обновление цен",
+        "status": "in_progress"
+      }
+    ]
+  },
+  {
+    "id": "ex-026",
+    "clientId": "client-1",
+    "type": "approval",
+    "severity": "ok",
+    "status": "closed",
+    "sourceModule": 17,
+    "title": "Одобрение получено",
+    "description": "Все необходимые подписи на месте",
+    "assignedTo": "user-21",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-07T13:00:00Z",
+    "updatedAt": "2026-01-07T14:15:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-07T13:00:00Z",
+        "action": "created",
+        "comment": "Требуется одобрение"
+      },
+      {
+        "timestamp": "2026-01-07T14:15:00Z",
+        "action": "closed",
+        "comment": "Одобрение получено"
+      }
+    ],
+    "remediationStepsJson": []
+  },
+  {
+    "id": "ex-027",
+    "clientId": "client-1",
+    "type": "vendor_sla",
+    "severity": "warning",
+    "status": "in_progress",
+    "sourceModule": 14,
+    "title": "Мониторинг SLA поставщика",
+    "description": "Требуется постоянный контроль метрик SLA",
+    "assignedTo": "user-22",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-11T14:00:00Z",
+    "updatedAt": "2026-01-11T14:45:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-11T14:00:00Z",
+        "action": "created",
+        "comment": "Начало мониторинга SLA"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Еженедельная проверка метрик",
+        "status": "in_progress"
+      }
+    ]
+  },
+  {
+    "id": "ex-028",
+    "clientId": "client-1",
+    "type": "security",
+    "severity": "warning",
+    "status": "triage",
+    "sourceModule": 39,
+    "title": "Возможное нарушение политики безопасности",
+    "description": "Обнаружена активность, требующая проверки",
+    "assignedTo": "user-23",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-13T11:00:00Z",
+    "updatedAt": "2026-01-13T11:45:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-13T11:00:00Z",
+        "action": "created",
+        "comment": "Алерт безопасности"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Провести анализ",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "ex-029",
+    "clientId": "client-1",
+    "type": "sync",
+    "severity": "ok",
+    "status": "closed",
+    "sourceModule": 2,
+    "title": "Успешная синхронизация",
+    "description": "Все данные синхронизированы корректно",
+    "assignedTo": "user-24",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-09T10:30:00Z",
+    "updatedAt": "2026-01-09T11:00:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-09T10:30:00Z",
+        "action": "created",
+        "comment": "Начало синхронизации"
+      },
+      {
+        "timestamp": "2026-01-09T11:00:00Z",
+        "action": "closed",
+        "comment": "Синхронизация завершена"
+      }
+    ],
+    "remediationStepsJson": []
+  },
+  {
+    "id": "ex-030",
+    "clientId": "client-1",
+    "type": "recon",
+    "severity": "ok",
+    "status": "closed",
+    "sourceModule": 42,
+    "title": "Сверка завершена",
+    "description": "Все элементы согласованы и проверены",
+    "assignedTo": "user-25",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-08T15:20:00Z",
+    "updatedAt": "2026-01-08T16:10:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-08T15:20:00Z",
+        "action": "created",
+        "comment": "Начало процесса сверки"
+      },
+      {
+        "timestamp": "2026-01-08T16:10:00Z",
+        "action": "closed",
+        "comment": "Сверка завершена успешно"
+      }
+    ],
+    "remediationStepsJson": []
+  },
+  {
+    "id": "ex-031",
+    "clientId": "client-1",
+    "type": "missing_doc",
+    "severity": "warning",
+    "status": "in_progress",
+    "sourceModule": 5,
+    "title": "Поиск недостающей документации",
+    "description": "Ведется работа по поиску требуемых документов",
+    "assignedTo": "user-26",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-10T11:50:00Z",
+    "updatedAt": "2026-01-10T13:20:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-10T11:50:00Z",
+        "action": "created",
+        "comment": "Обнаружены пропуски в документации"
+      },
+      {
+        "timestamp": "2026-01-10T12:30:00Z",
+        "action": "assigned",
+        "comment": "Назначено пользователю"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Просмотреть архивы",
+        "status": "in_progress"
+      }
+    ]
+  },
+  {
+    "id": "ex-032",
+    "clientId": "client-1",
+    "type": "stale_price",
+    "severity": "ok",
+    "status": "closed",
+    "sourceModule": 16,
+    "title": "Цены актуализированы",
+    "description": "Данные о ценах обновлены и верифицированы",
+    "assignedTo": "user-27",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-09T09:00:00Z",
+    "updatedAt": "2026-01-09T09:30:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-09T09:00:00Z",
+        "action": "created",
+        "comment": "Проверка ценовых данных"
+      },
+      {
+        "timestamp": "2026-01-09T09:30:00Z",
+        "action": "closed",
+        "comment": "Цены обновлены"
+      }
+    ],
+    "remediationStepsJson": []
+  },
+  {
+    "id": "ex-033",
+    "clientId": "client-1",
+    "type": "approval",
+    "severity": "warning",
+    "status": "triage",
+    "sourceModule": 43,
+    "title": "Требуется ревью одобрения",
+    "description": "Документ требует проверки перед финальным одобрением",
+    "assignedTo": "user-28",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-12T12:10:00Z",
+    "updatedAt": "2026-01-12T13:00:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-12T12:10:00Z",
+        "action": "created",
+        "comment": "Документ на ревью"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Провести ревью",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "ex-034",
+    "clientId": "client-1",
+    "type": "vendor_sla",
+    "severity": "critical",
+    "status": "open",
+    "sourceModule": 7,
+    "title": "Критическое нарушение SLA",
+    "description": "Поставщик серьезно нарушил условия SLA",
+    "assignedTo": null,
+    "slaAtRisk": true,
+    "createdAt": "2026-01-13T06:00:00Z",
+    "updatedAt": "2026-01-13T06:00:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-13T06:00:00Z",
+        "action": "created",
+        "comment": "Обнаружено критическое нарушение SLA"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Инициировать пересмотр контракта",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "ex-035",
+    "clientId": "client-1",
+    "type": "security",
+    "severity": "critical",
+    "status": "in_progress",
+    "sourceModule": 17,
+    "title": "Инцидент безопасности требует расследования",
+    "description": "Обнаружена потенциальная утечка данных",
+    "assignedTo": "user-29",
+    "slaAtRisk": true,
+    "createdAt": "2026-01-13T09:45:00Z",
+    "updatedAt": "2026-01-13T10:30:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-13T09:45:00Z",
+        "action": "created",
+        "comment": "Обнаружена утечка данных"
+      },
+      {
+        "timestamp": "2026-01-13T10:30:00Z",
+        "action": "assigned",
+        "comment": "Назначено на user-29"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Провести форензический анализ",
+        "status": "in_progress"
+      }
+    ]
+  },
+  {
+    "id": "ex-036",
+    "clientId": "client-1",
+    "type": "sync",
+    "severity": "critical",
+    "status": "in_progress",
+    "sourceModule": 39,
+    "title": "Критическая ошибка при синхронизации данных",
+    "description": "Система не может продолжить синхронизацию",
+    "assignedTo": "user-30",
+    "slaAtRisk": true,
+    "createdAt": "2026-01-12T08:30:00Z",
+    "updatedAt": "2026-01-12T09:30:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-12T08:30:00Z",
+        "action": "created",
+        "comment": "Критическая ошибка при синхронизации"
+      },
+      {
+        "timestamp": "2026-01-12T09:30:00Z",
+        "action": "assigned",
+        "comment": "Назначено на user-30"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Остановить процесс",
+        "status": "in_progress"
+      },
+      {
+        "step": 2,
+        "description": "Выполнить откат",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "ex-037",
+    "clientId": "client-1",
+    "type": "recon",
+    "severity": "critical",
+    "status": "open",
+    "sourceModule": 14,
+    "title": "Критическое расхождение в сверке",
+    "description": "Обнаружены большие несоответствия в ключевых данных",
+    "assignedTo": null,
+    "slaAtRisk": true,
+    "createdAt": "2026-01-11T07:30:00Z",
+    "updatedAt": "2026-01-11T07:30:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-11T07:30:00Z",
+        "action": "created",
+        "comment": "Критическое расхождение при сверке"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Определить источник",
+        "status": "pending"
+      },
+      {
+        "step": 2,
+        "description": "Исправить данные",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "ex-038",
+    "clientId": "client-1",
+    "type": "missing_doc",
+    "severity": "ok",
+    "status": "closed",
+    "sourceModule": 42,
+    "title": "Документация полная",
+    "description": "Все требуемые документы найдены и проверены",
+    "assignedTo": "user-31",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-09T14:00:00Z",
+    "updatedAt": "2026-01-09T14:30:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-09T14:00:00Z",
+        "action": "created",
+        "comment": "Проверка документации"
+      },
+      {
+        "timestamp": "2026-01-09T14:30:00Z",
+        "action": "closed",
+        "comment": "Документация полная"
+      }
+    ],
+    "remediationStepsJson": []
+  },
+  {
+    "id": "ex-039",
+    "clientId": "client-1",
+    "type": "stale_price",
+    "severity": "warning",
+    "status": "open",
+    "sourceModule": 5,
+    "title": "Требуется обновление цен",
+    "description": "Цены требуют актуализации в системе",
+    "assignedTo": null,
+    "slaAtRisk": true,
+    "createdAt": "2026-01-11T05:00:00Z",
+    "updatedAt": "2026-01-11T05:00:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-11T05:00:00Z",
+        "action": "created",
+        "comment": "Обнаружены устаревшие цены"
+      }
+    ],
+    "remediationStepsJson": [
+      {
+        "step": 1,
+        "description": "Подключиться к источнику цен",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "ex-040",
+    "clientId": "client-1",
+    "type": "approval",
+    "severity": "ok",
+    "status": "closed",
+    "sourceModule": 16,
+    "title": "Одобрение завершено",
+    "description": "Все процедуры одобрения завершены успешно",
+    "assignedTo": "user-32",
+    "slaAtRisk": false,
+    "createdAt": "2026-01-07T11:30:00Z",
+    "updatedAt": "2026-01-07T12:45:00Z",
+    "timelineEventsJson": [
+      {
+        "timestamp": "2026-01-07T11:30:00Z",
+        "action": "created",
+        "comment": "Начало процесса одобрения"
+      },
+      {
+        "timestamp": "2026-01-07T12:45:00Z",
+        "action": "closed",
+        "comment": "Одобрение получено"
+      }
+    ],
+    "remediationStepsJson": []
+  }
+]

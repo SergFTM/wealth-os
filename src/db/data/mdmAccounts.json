@@ -1,0 +1,585 @@
+[
+  {
+    "id": "mda-001",
+    "clientId": "c1",
+    "entityId": "mde-002",
+    "recordType": "account",
+    "accountType": "brokerage",
+    "status": "golden",
+    "chosenJson": {
+      "accountNumber": "SCHW-001",
+      "accountName": "Aurora Growth Primary",
+      "custodian": "Charles Schwab",
+      "currency": "USD",
+      "openDate": "2020-01-15",
+      "balance": 25000000
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-a001",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "accountNumber": "SCHW-001",
+          "balance": 25000000
+        }
+      },
+      {
+        "sourceSystem": "CRM",
+        "sourceId": "crm-a001",
+        "fetchedAt": "2026-01-15T10:00:00Z",
+        "fieldsJson": {
+          "accountName": "Aurora Growth Primary",
+          "custodian": "Charles Schwab"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "accountNumber": 0.99,
+      "balance": 0.95,
+      "custodian": 0.99
+    },
+    "overridesJson": {},
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mda-002",
+    "clientId": "c1",
+    "entityId": "mde-002",
+    "recordType": "account",
+    "accountType": "prime",
+    "status": "golden",
+    "chosenJson": {
+      "accountNumber": "GS-002",
+      "accountName": "Aurora Prime Brokerage",
+      "custodian": "Goldman Sachs",
+      "currency": "USD",
+      "openDate": "2020-03-20",
+      "balance": 20000000
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-a002",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "accountNumber": "GS-002",
+          "balance": 20000000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "accountNumber": 0.99,
+      "balance": 0.95
+    },
+    "overridesJson": {},
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mda-003",
+    "clientId": "c1",
+    "entityId": "mde-003",
+    "recordType": "account",
+    "accountType": "managed",
+    "status": "golden",
+    "chosenJson": {
+      "accountNumber": "UBS-003",
+      "accountName": "Aurora Trust Managed",
+      "custodian": "UBS",
+      "currency": "USD",
+      "openDate": "2018-05-10",
+      "balance": 35000000
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-a003",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "accountNumber": "UBS-003",
+          "balance": 35000000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "accountNumber": 0.99,
+      "balance": 0.95
+    },
+    "overridesJson": {},
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mda-004",
+    "clientId": "c2",
+    "entityId": "mde-004",
+    "recordType": "account",
+    "accountType": "private",
+    "status": "golden",
+    "chosenJson": {
+      "accountNumber": "JPM-004",
+      "accountName": "Limassol Private Banking",
+      "custodian": "JP Morgan",
+      "currency": "EUR",
+      "openDate": "2015-09-15",
+      "balance": 28000000
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-a004",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "accountNumber": "JPM-004",
+          "balance": 28000000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "accountNumber": 0.99,
+      "balance": 0.95
+    },
+    "overridesJson": {},
+    "createdAt": "2025-02-20T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mda-005",
+    "clientId": "c3",
+    "entityId": "mde-006",
+    "recordType": "account",
+    "accountType": "brokerage",
+    "status": "golden",
+    "chosenJson": {
+      "accountNumber": "FID-005",
+      "accountName": "North Star Brokerage",
+      "custodian": "Fidelity",
+      "currency": "USD",
+      "openDate": "2019-02-01",
+      "balance": 15000000
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-a005",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "accountNumber": "FID-005",
+          "balance": 15000000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "accountNumber": 0.99,
+      "balance": 0.95
+    },
+    "overridesJson": {},
+    "createdAt": "2025-03-10T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mda-006",
+    "clientId": "c3",
+    "entityId": "mde-006",
+    "recordType": "account",
+    "accountType": "ira",
+    "status": "golden",
+    "chosenJson": {
+      "accountNumber": "SCHW-006",
+      "accountName": "North Star IRA",
+      "custodian": "Charles Schwab",
+      "currency": "USD",
+      "openDate": "2019-03-15",
+      "balance": 10000000
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-a006",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "accountNumber": "SCHW-006",
+          "balance": 10000000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "accountNumber": 0.99,
+      "balance": 0.95
+    },
+    "overridesJson": {},
+    "createdAt": "2025-03-10T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mda-007",
+    "clientId": "c4",
+    "entityId": "mde-008",
+    "recordType": "account",
+    "accountType": "margin",
+    "status": "golden",
+    "chosenJson": {
+      "accountNumber": "IB-007",
+      "accountName": "Vega Margin Account",
+      "custodian": "Interactive Brokers",
+      "currency": "USD",
+      "openDate": "2017-06-01",
+      "balance": 32000000
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-a007",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "accountNumber": "IB-007",
+          "balance": 32000000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "accountNumber": 0.99,
+      "balance": 0.95
+    },
+    "overridesJson": {},
+    "createdAt": "2025-04-05T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mda-008",
+    "clientId": "c5",
+    "entityId": "mde-011",
+    "recordType": "account",
+    "accountType": "brokerage",
+    "status": "golden",
+    "chosenJson": {
+      "accountNumber": "MS-008",
+      "accountName": "Orion Brokerage",
+      "custodian": "Morgan Stanley",
+      "currency": "USD",
+      "openDate": "2018-08-20",
+      "balance": 20000000
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-a008",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "accountNumber": "MS-008",
+          "balance": 20000000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "accountNumber": 0.99,
+      "balance": 0.95
+    },
+    "overridesJson": {},
+    "createdAt": "2025-05-01T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mda-009",
+    "clientId": "c5",
+    "entityId": "mde-011",
+    "recordType": "account",
+    "accountType": "retirement",
+    "status": "golden",
+    "chosenJson": {
+      "accountNumber": "VAN-009",
+      "accountName": "Orion 401k",
+      "custodian": "Vanguard",
+      "currency": "USD",
+      "openDate": "2015-01-01",
+      "balance": 20000000
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-a009",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "accountNumber": "VAN-009",
+          "balance": 20000000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "accountNumber": 0.99,
+      "balance": 0.95
+    },
+    "overridesJson": {},
+    "createdAt": "2025-05-01T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mda-010",
+    "clientId": "c6",
+    "entityId": "mde-012",
+    "recordType": "account",
+    "accountType": "custody",
+    "status": "golden",
+    "chosenJson": {
+      "accountNumber": "BNY-010",
+      "accountName": "Cedar Trust Custody",
+      "custodian": "BNY Mellon",
+      "currency": "USD",
+      "openDate": "2020-07-01",
+      "balance": 30000000
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-a010",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "accountNumber": "BNY-010",
+          "balance": 30000000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "accountNumber": 0.99,
+      "balance": 0.95
+    },
+    "overridesJson": {},
+    "createdAt": "2025-06-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mda-011",
+    "clientId": "c6",
+    "entityId": "mde-012",
+    "recordType": "account",
+    "accountType": "custody",
+    "status": "golden",
+    "chosenJson": {
+      "accountNumber": "STT-011",
+      "accountName": "Cedar Trust State Street",
+      "custodian": "State Street",
+      "currency": "USD",
+      "openDate": "2020-08-15",
+      "balance": 20000000
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-a011",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "accountNumber": "STT-011",
+          "balance": 20000000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "accountNumber": 0.99,
+      "balance": 0.95
+    },
+    "overridesJson": {},
+    "createdAt": "2025-06-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mda-012",
+    "clientId": "c6",
+    "entityId": "mde-013",
+    "recordType": "account",
+    "accountType": "brokerage",
+    "status": "golden",
+    "chosenJson": {
+      "accountNumber": "PER-012",
+      "accountName": "Cedar Charitable Brokerage",
+      "custodian": "Pershing",
+      "currency": "USD",
+      "openDate": "2021-01-10",
+      "balance": 15000000
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-a012",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "accountNumber": "PER-012",
+          "balance": 15000000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "accountNumber": 0.99,
+      "balance": 0.95
+    },
+    "overridesJson": {},
+    "createdAt": "2025-06-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mda-013",
+    "clientId": "c1",
+    "entityId": "mde-002",
+    "recordType": "account",
+    "accountType": "crypto",
+    "status": "golden",
+    "chosenJson": {
+      "accountNumber": "CB-013",
+      "accountName": "Aurora Crypto",
+      "custodian": "Coinbase",
+      "currency": "USD",
+      "openDate": "2022-06-01",
+      "balance": 5000000
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-a013",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "accountNumber": "CB-013",
+          "balance": 5000000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "accountNumber": 0.99,
+      "balance": 0.9
+    },
+    "overridesJson": {},
+    "createdAt": "2025-06-01T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mda-014",
+    "clientId": "c1",
+    "entityId": "mde-003",
+    "recordType": "account",
+    "accountType": "custody",
+    "status": "pending",
+    "chosenJson": {
+      "accountNumber": "NT-014",
+      "accountName": "Aurora Trust Northern",
+      "custodian": "Northern Trust",
+      "currency": "USD",
+      "balance": 12000000
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Custodian",
+        "sourceId": "cust-a014",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "accountNumber": "NT-014",
+          "balance": 12000000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "accountNumber": 0.99,
+      "balance": 0.95
+    },
+    "overridesJson": {},
+    "createdAt": "2025-08-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mda-015",
+    "clientId": "c2",
+    "entityId": "mde-005",
+    "recordType": "account",
+    "accountType": "deposit",
+    "status": "golden",
+    "chosenJson": {
+      "accountNumber": "BOC-015",
+      "accountName": "Limassol RE Deposit",
+      "custodian": "Bank of Cyprus",
+      "currency": "EUR",
+      "openDate": "2018-03-01",
+      "balance": 8000000
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Banking",
+        "sourceId": "bank-a015",
+        "fetchedAt": "2026-01-28T06:00:00Z",
+        "fieldsJson": {
+          "accountNumber": "BOC-015",
+          "balance": 8000000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "accountNumber": 0.99,
+      "balance": 0.95
+    },
+    "overridesJson": {},
+    "createdAt": "2025-02-20T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mda-016",
+    "clientId": "c1",
+    "entityId": "mde-002",
+    "recordType": "account",
+    "accountType": "brokerage",
+    "status": "suspect_duplicate",
+    "chosenJson": {
+      "accountNumber": "SCHW001",
+      "accountName": "Aurora Growth",
+      "custodian": "Schwab",
+      "balance": 24950000
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "External",
+        "sourceId": "ext-a016",
+        "fetchedAt": "2026-01-25T10:00:00Z",
+        "fieldsJson": {
+          "accountNumber": "SCHW001",
+          "balance": 24950000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "accountNumber": 0.8,
+      "balance": 0.7
+    },
+    "overridesJson": {},
+    "createdAt": "2026-01-25T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mda-017",
+    "clientId": "c2",
+    "entityId": "mde-004",
+    "recordType": "account",
+    "accountType": "private",
+    "status": "suspect_duplicate",
+    "chosenJson": {
+      "accountNumber": "JPM004",
+      "accountName": "Limassol Private",
+      "custodian": "JPMorgan",
+      "balance": 28100000
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "External",
+        "sourceId": "ext-a017",
+        "fetchedAt": "2026-01-24T10:00:00Z",
+        "fieldsJson": {
+          "accountNumber": "JPM004",
+          "balance": 28100000
+        }
+      }
+    ],
+    "confidenceJson": {
+      "accountNumber": 0.8,
+      "balance": 0.7
+    },
+    "overridesJson": {},
+    "createdAt": "2026-01-24T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  }
+]

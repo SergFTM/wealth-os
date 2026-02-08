@@ -155,18 +155,31 @@ export function LqDashboardPage({
   const inflows = flows.filter((f) => f.flowType === 'inflow');
   const outflows = flows.filter((f) => f.flowType === 'outflow');
 
+  // Transform KPI data to array format expected by LqKpiStrip
+  const kpiItems = [
+    { id: 'totalCashToday', label: 'Кэш сегодня', value: `$${(kpis.totalCashToday / 1e6).toFixed(1)}M`, status: 'ok' as const, linkTo: '/m/liquidity/list?tab=positions' },
+    { id: 'forecastsActive', label: 'Прогнозов', value: kpis.forecastsActive, status: 'info' as const, linkTo: '/m/liquidity/list?tab=forecasts' },
+    { id: 'netOutflow30d', label: 'Чист. отток 30д', value: `$${(Math.abs(kpis.netOutflow30d) / 1e6).toFixed(1)}M`, status: kpis.netOutflow30d < 0 ? 'warning' as const : 'ok' as const, linkTo: '/m/liquidity/list?tab=outflows' },
+    { id: 'capitalCalls90d', label: 'Capital calls 90д', value: `$${(kpis.capitalCalls90d / 1e6).toFixed(1)}M`, status: kpis.capitalCalls90d > 0 ? 'warning' as const : 'ok' as const, linkTo: '/m/liquidity/list?tab=outflows' },
+    { id: 'taxPayments90d', label: 'Налоги 90д', value: `$${(kpis.taxPayments90d / 1e6).toFixed(1)}M`, status: 'info' as const, linkTo: '/m/liquidity/list?tab=outflows' },
+    { id: 'alertsCritical', label: 'Алертов', value: kpis.alertsCritical, status: kpis.alertsCritical > 0 ? 'critical' as const : 'ok' as const, linkTo: '/m/liquidity/list?tab=alerts' },
+    { id: 'stressTests30d', label: 'Стресс-тестов', value: kpis.stressTests30d, status: 'info' as const, linkTo: '/m/liquidity/list?tab=stress' },
+    { id: 'scenarioVarianceMax', label: 'Макс. расхождение', value: `${(kpis.scenarioVarianceMax * 100).toFixed(0)}%`, status: kpis.scenarioVarianceMax > 0.2 ? 'warning' as const : 'ok' as const, linkTo: '/m/liquidity/list?tab=scenarios' },
+  ];
+
   return (
     <div className="space-y-6">
       {/* KPI Strip */}
-      <LqKpiStrip kpis={kpis} />
+      <LqKpiStrip kpis={kpiItems} />
 
       {/* Actions Bar */}
       <LqActionsBar
-        onCreateForecast={onCreateForecast}
-        onAddCashFlow={onAddCashFlow}
-        onImportFlows={onImportFlows}
-        onCreateScenario={onCreateScenario}
-        onRunStressTest={onRunStressTest}
+        onCreateForecast={onCreateForecast || (() => {})}
+        onAddCashFlow={onAddCashFlow || (() => {})}
+        onImportFlows={onImportFlows || (() => {})}
+        onCreateScenario={onCreateScenario || (() => {})}
+        onRunStressTest={onRunStressTest || (() => {})}
+        onGenerateDemo={() => {}}
       />
 
       {/* Chart Panel */}
@@ -240,7 +253,7 @@ export function LqDashboardPage({
         )}
 
         {activeTab === 'positions' && (
-          <LqCashPositionsTable positions={positions} />
+          <LqCashPositionsTable positions={positions} onOpen={() => {}} />
         )}
 
         {activeTab === 'inflows' && (

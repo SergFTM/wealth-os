@@ -4,12 +4,13 @@ import { use } from "react";
 import { useRouter } from "next/navigation";
 import { useRecord } from "@/lib/hooks";
 import { LqAlertDetail } from "@/modules/39-liquidity/ui/LqAlertDetail";
+import type { LiquidityAlert } from "@/modules/39-liquidity/engine/types";
 
 export default function AlertDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
   const router = useRouter();
 
-  const { data: alert, isLoading } = useRecord("liquidityAlerts", id);
+  const { data: alert, isLoading } = useRecord("liquidityAlerts", id) as { data: LiquidityAlert | null; isLoading: boolean };
 
   if (isLoading) {
     return (

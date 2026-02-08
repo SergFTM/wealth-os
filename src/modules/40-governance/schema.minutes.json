@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GovernanceMinutes",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "meetingId": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "review", "approved", "published"] },
+    "bodyMdRu": { "type": "string" },
+    "bodyMdEn": { "type": "string" },
+    "bodyMdUk": { "type": "string" },
+    "attendeesJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "userId": { "type": "string" },
+          "name": { "type": "string" },
+          "role": { "type": "string" },
+          "present": { "type": "boolean" }
+        }
+      }
+    },
+    "agendaRecapJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "summary": { "type": "string" },
+          "outcome": { "type": "string" }
+        }
+      }
+    },
+    "decisionsRecapJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "decisionId": { "type": "string" },
+          "title": { "type": "string" },
+          "outcome": { "type": "string" }
+        }
+      }
+    },
+    "votesRecapJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "voteId": { "type": "string" },
+          "decisionTitle": { "type": "string" },
+          "result": { "type": "string" },
+          "tally": { "type": "string" }
+        }
+      }
+    },
+    "actionItemsRecapJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "actionItemId": { "type": "string" },
+          "title": { "type": "string" },
+          "owner": { "type": "string" },
+          "dueDate": { "type": "string" }
+        }
+      }
+    },
+    "clientSafePublished": { "type": "boolean", "default": false },
+    "publishedAt": { "type": "string", "format": "date-time" },
+    "approvedBy": { "type": "string" },
+    "approvedAt": { "type": "string", "format": "date-time" },
+    "aiMetaJson": {
+      "type": "object",
+      "properties": {
+        "generated": { "type": "boolean" },
+        "model": { "type": "string" },
+        "confidence": { "type": "number" },
+        "assumptions": { "type": "array", "items": { "type": "string" } },
+        "sources": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "exportedPdfDocId": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "meetingId", "status"]
+}

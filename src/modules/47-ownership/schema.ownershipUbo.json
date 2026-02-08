@@ -1,0 +1,17 @@
+{
+  "name": "ownershipUbo",
+  "description": "Computed Ultimate Beneficial Owner records",
+  "fields": [
+    { "key": "id", "type": "string", "required": true, "description": "Unique UBO record identifier" },
+    { "key": "clientId", "type": "string", "required": true, "description": "Client/household reference" },
+    { "key": "personMdmId", "type": "string", "required": true, "description": "MDM person ID (beneficiary)" },
+    { "key": "rootHouseholdNodeId", "type": "string", "required": true, "description": "Root household node ID" },
+    { "key": "targetNodeId", "type": "string", "required": true, "description": "Target node (entity/trust) ID" },
+    { "key": "computedPct", "type": "number", "required": true, "description": "Computed beneficial ownership percentage" },
+    { "key": "pathsJson", "type": "json", "required": true, "description": "Array of paths [{nodeIds: [], pct: number}]" },
+    { "key": "computedAt", "type": "datetime", "required": true, "description": "Computation timestamp" },
+    { "key": "sourcesJson", "type": "json", "required": false, "description": "Links used in computation" },
+    { "key": "createdAt", "type": "datetime", "required": true, "description": "Created timestamp" }
+  ],
+  "indexes": ["clientId", "personMdmId", "targetNodeId"]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "ownershipNodes",
+  "description": "Ownership structure nodes: households, trusts, entities, partnerships, SPVs, accounts, assets",
+  "fields": [
+    { "key": "id", "type": "string", "required": true, "description": "Unique node identifier" },
+    { "key": "clientId", "type": "string", "required": true, "description": "Client/household reference" },
+    { "key": "name", "type": "string", "required": true, "description": "Node display name" },
+    { "key": "nodeTypeKey", "type": "enum", "required": true, "values": ["household", "trust", "entity", "partnership", "spv", "account", "asset"], "description": "Type of ownership node" },
+    { "key": "jurisdiction", "type": "string", "required": false, "description": "Legal jurisdiction (e.g., US-DE, UK, Cayman)" },
+    { "key": "mdmRefType", "type": "enum", "required": false, "values": ["person", "entity", "account", "asset"], "description": "MDM reference type for linking" },
+    { "key": "mdmRefId", "type": "string", "required": false, "description": "MDM record ID reference" },
+    { "key": "status", "type": "enum", "required": true, "values": ["active", "inactive"], "description": "Node status" },
+    { "key": "metaJson", "type": "json", "required": false, "description": "Additional metadata" },
+    { "key": "attachmentDocIdsJson", "type": "json", "required": false, "description": "Array of document IDs" },
+    { "key": "sourceRefJson", "type": "json", "required": false, "description": "Source reference {docId, description, url}" },
+    { "key": "asOf", "type": "date", "required": false, "description": "As-of date for the node data" },
+    { "key": "createdAt", "type": "datetime", "required": true, "description": "Created timestamp" },
+    { "key": "updatedAt", "type": "datetime", "required": true, "description": "Last updated timestamp" }
+  ],
+  "indexes": ["clientId", "nodeTypeKey", "status", "mdmRefId"]
+}

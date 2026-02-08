@@ -1,7 +1,0 @@
-[
-  { "id": "sblog-001", "clientId": "client-001", "envId": "sbenv-001", "level": "info", "source": "job", "message": "Starting pull job for transactions", "refsJson": {"jobId": "sbjob-001", "connectorId": "sbcon-001"}, "createdAt": "2024-01-25T10:00:00Z" },
-  { "id": "sblog-002", "clientId": "client-001", "envId": "sbenv-001", "level": "info", "source": "mapping", "message": "Applied mapping rules to 500 records", "refsJson": {"jobId": "sbjob-001", "mappingId": "sbmap-001"}, "createdAt": "2024-01-25T10:01:00Z" },
-  { "id": "sblog-003", "clientId": "client-001", "envId": "sbenv-001", "level": "info", "source": "job", "message": "Job completed: processed 500, created 485, errors 0", "refsJson": {"jobId": "sbjob-001"}, "createdAt": "2024-01-25T10:02:30Z" },
-  { "id": "sblog-004", "clientId": "client-001", "envId": "sbenv-001", "level": "error", "source": "job", "message": "Job failed: MAPPING_ERROR", "refsJson": {"jobId": "sbjob-004"}, "createdAt": "2024-01-23T16:01:30Z" },
-  { "id": "sblog-005", "clientId": "client-001", "envId": "sbenv-001", "level": "info", "source": "replay", "message": "Starting replay: 10 invoice.paid events", "refsJson": {"replayRunId": "sbrep-001"}, "createdAt": "2024-01-24T10:00:00Z" }
-]

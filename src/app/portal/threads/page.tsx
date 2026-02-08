@@ -1,5 +1,7 @@
-import { PtThreadsList } from '@/modules/30-portal/ui';
+'use client';
 
-export default function PortalThreadsPage() {
-  return <PtThreadsList />;
+import { PoMessagesPage } from '@/modules/55-portal/ui/PoMessagesPage';
+
+export default function ThreadsPage() {
+  return <PoMessagesPage />;
 }

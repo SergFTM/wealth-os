@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PhilEntity",
+  "description": "Charitable entity (foundation, DAF, trust, direct giving)",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/family ID" },
+    "name": { "type": "string", "description": "Entity name" },
+    "entityTypeKey": {
+      "type": "string",
+      "enum": ["foundation", "daf", "trust", "direct"],
+      "description": "Type of charitable entity"
+    },
+    "jurisdiction": { "type": "string", "description": "Legal jurisdiction" },
+    "einTaxId": { "type": "string", "description": "EIN/Tax ID (masked)" },
+    "status": {
+      "type": "string",
+      "enum": ["active", "inactive"],
+      "description": "Entity status"
+    },
+    "foundedDate": { "type": "string", "format": "date", "description": "Date founded" },
+    "annualBudget": { "type": "number", "description": "Annual giving budget" },
+    "currency": { "type": "string", "default": "USD", "description": "Currency code" },
+    "officersJson": {
+      "type": "array",
+      "description": "Officers and signers",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "role": { "type": "string" },
+          "email": { "type": "string" },
+          "signatory": { "type": "boolean" }
+        }
+      }
+    },
+    "bankRefsJson": {
+      "type": "array",
+      "description": "Bank account references (masked)",
+      "items": {
+        "type": "object",
+        "properties": {
+          "bankName": { "type": "string" },
+          "accountMasked": { "type": "string" },
+          "accountType": { "type": "string" }
+        }
+      }
+    },
+    "policyLinksJson": {
+      "type": "array",
+      "description": "Links to governance policies (module 44)",
+      "items": {
+        "type": "object",
+        "properties": {
+          "policyId": { "type": "string" },
+          "policyName": { "type": "string" }
+        }
+      }
+    },
+    "descriptionMd": { "type": "string", "description": "Description markdown" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "name", "entityTypeKey", "status", "createdAt", "updatedAt"]
+}

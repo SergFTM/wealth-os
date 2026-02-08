@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vendor SLA",
+  "description": "Service Level Agreement with vendor",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/Family office ID" },
+    "vendorId": { "type": "string", "description": "Related vendor ID" },
+    "contractId": { "type": "string", "description": "Related contract ID" },
+    "serviceKey": { "type": "string", "description": "Service identifier" },
+    "serviceName": { "type": "string", "description": "Service name" },
+    "kpisJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "target": { "type": "number" },
+          "unit": { "type": "string" },
+          "direction": { "type": "string", "enum": ["higher", "lower"] },
+          "weight": { "type": "number" }
+        }
+      },
+      "description": "KPI targets"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["ok", "warning", "breached"],
+      "description": "Current SLA status"
+    },
+    "lastMeasuredAt": { "type": "string", "format": "date-time" },
+    "metricsJson": {
+      "type": "object",
+      "properties": {
+        "responseTimeAvg": { "type": "number" },
+        "uptime": { "type": "number" },
+        "accuracy": { "type": "number" },
+        "resolutionTimeAvg": { "type": "number" },
+        "breachCount": { "type": "integer" },
+        "warningCount": { "type": "integer" }
+      },
+      "description": "Measured metrics"
+    },
+    "breachHistoryJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": { "type": "string", "format": "date-time" },
+          "kpiName": { "type": "string" },
+          "expected": { "type": "number" },
+          "actual": { "type": "number" },
+          "linkedIncidentId": { "type": "string" }
+        }
+      }
+    },
+    "notificationSent": { "type": "boolean" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["vendorId", "serviceKey", "status"]
+}

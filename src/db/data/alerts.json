@@ -1,8 +1,0 @@
-[
-  {"id": "al1", "clientId": "c1", "type": "concentration", "title": "Концентрация AAPL", "message": "Позиция AAPL превышает 10% портфеля", "severity": "critical", "status": "open", "createdAt": "2026-01-28T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "al2", "clientId": "c2", "type": "payment", "title": "Просроченный платеж", "message": "Счет INV-2026-002 просрочен на 13 дней", "severity": "warning", "status": "open", "createdAt": "2026-01-27T16:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "al3", "clientId": "c3", "type": "sync", "title": "Ошибка синхронизации", "message": "Не удалось получить данные из Fidelity", "severity": "critical", "status": "open", "createdAt": "2026-01-27T09:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "al4", "clientId": "c4", "type": "ips", "title": "IPS нарушение", "message": "Нарушен лимит по cash buffer", "severity": "warning", "status": "open", "createdAt": "2026-01-26T14:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "al5", "clientId": "c5", "type": "document", "title": "Документ истекает", "message": "Passport копия истекает через 30 дней", "severity": "info", "status": "open", "createdAt": "2026-01-25T11:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "al6", "clientId": "c6", "type": "compliance", "title": "Требуется annual review", "message": "Годовой compliance review для Cedar Legacy", "severity": "info", "status": "acknowledged", "createdAt": "2026-01-24T09:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"}
-]

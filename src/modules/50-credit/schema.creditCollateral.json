@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CreditCollateral",
+  "description": "Collateral pledged against facilities or loans",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client ID for multi-tenant isolation"
+    },
+    "linkedType": {
+      "type": "string",
+      "enum": ["facility", "loan"],
+      "description": "Whether linked to facility or loan"
+    },
+    "linkedId": {
+      "type": "string",
+      "description": "Reference to facility or loan ID"
+    },
+    "collateralTypeKey": {
+      "type": "string",
+      "enum": ["cash", "securities", "real_estate", "equipment", "inventory", "receivables", "other"],
+      "description": "Type of collateral"
+    },
+    "description": {
+      "type": "string",
+      "description": "Collateral description"
+    },
+    "currentValue": {
+      "type": "number",
+      "description": "Current market value"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Currency code"
+    },
+    "haircutPct": {
+      "type": "number",
+      "description": "Haircut percentage applied"
+    },
+    "pledgedValue": {
+      "type": "number",
+      "description": "Value after haircut"
+    },
+    "targetLtvPct": {
+      "type": "number",
+      "description": "Target LTV threshold"
+    },
+    "currentLtvPct": {
+      "type": "number",
+      "description": "Current LTV"
+    },
+    "statusKey": {
+      "type": "string",
+      "enum": ["ok", "at_risk", "breach"],
+      "description": "LTV status"
+    },
+    "assetRefJson": {
+      "type": "object",
+      "description": "Reference to underlying asset",
+      "properties": {
+        "assetType": { "type": "string" },
+        "assetId": { "type": "string" },
+        "assetModule": { "type": "string" }
+      }
+    },
+    "lastValuedAt": {
+      "type": "string",
+      "format": "date",
+      "description": "Last valuation date"
+    },
+    "valuationSourceKey": {
+      "type": "string",
+      "enum": ["market", "appraisal", "internal", "other"],
+      "description": "Valuation source"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "clientId", "linkedType", "linkedId", "collateralTypeKey", "currentValue", "currency", "haircutPct", "targetLtvPct", "statusKey", "createdAt", "updatedAt"]
+}

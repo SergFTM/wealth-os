@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PackShare",
+  "description": "Secure share link for a pack",
+  "type": "object",
+  "required": ["id", "clientId", "packId", "tokenHash", "statusKey", "expiresAt", "allowDownload", "downloadCount", "createdAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique share identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/family identifier"
+    },
+    "packId": {
+      "type": "string",
+      "description": "Pack being shared"
+    },
+    "tokenHash": {
+      "type": "string",
+      "description": "Hashed share token"
+    },
+    "tokenPreview": {
+      "type": "string",
+      "description": "First 8 chars of token for display"
+    },
+    "statusKey": {
+      "type": "string",
+      "enum": ["active", "expired", "revoked"],
+      "default": "active",
+      "description": "Share status"
+    },
+    "expiresAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Expiration timestamp"
+    },
+    "allowDownload": {
+      "type": "boolean",
+      "default": true,
+      "description": "Allow file downloads"
+    },
+    "maxDownloads": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Optional download limit"
+    },
+    "downloadCount": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "description": "Current download count"
+    },
+    "viewCount": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "description": "Current view count"
+    },
+    "passwordHash": {
+      "type": "string",
+      "description": "Optional password hash"
+    },
+    "watermarkEnabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Watermark on downloads"
+    },
+    "watermarkText": {
+      "type": "string",
+      "description": "Custom watermark text"
+    },
+    "recipientEmail": {
+      "type": "string",
+      "format": "email",
+      "description": "Recipient email for tracking"
+    },
+    "notifyOnAccess": {
+      "type": "boolean",
+      "default": true,
+      "description": "Notify on access"
+    },
+    "createdByUserId": {
+      "type": "string",
+      "description": "User who created the share"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "revokedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Revocation timestamp"
+    },
+    "revokedByUserId": {
+      "type": "string",
+      "description": "User who revoked the share"
+    },
+    "revokeReason": {
+      "type": "string",
+      "description": "Reason for revocation"
+    }
+  }
+}

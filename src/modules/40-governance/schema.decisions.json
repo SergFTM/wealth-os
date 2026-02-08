@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GovernanceDecision",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "meetingId": { "type": "string" },
+    "agendaItemId": { "type": "string" },
+    "title": { "type": "string" },
+    "proposalText": { "type": "string" },
+    "alternativesJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "riskNotes": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "pending_vote", "approved", "rejected", "deferred"] },
+    "outcomeNotes": { "type": "string" },
+    "voteId": { "type": "string" },
+    "categoryKey": { "type": "string", "enum": ["investment", "distribution", "spending", "governance", "trust", "family", "other"] },
+    "impactLevel": { "type": "string", "enum": ["low", "medium", "high", "critical"] },
+    "createdBy": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "title", "proposalText", "status"]
+}

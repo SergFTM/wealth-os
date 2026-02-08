@@ -1,0 +1,15 @@
+{
+  "name": "ownershipViews",
+  "description": "Published client-safe ownership structure snapshots",
+  "fields": [
+    { "key": "id", "type": "string", "required": true, "description": "Unique view identifier" },
+    { "key": "clientId", "type": "string", "required": true, "description": "Client/household reference" },
+    { "key": "scopeHouseholdNodeId", "type": "string", "required": true, "description": "Root household scope" },
+    { "key": "publishedAt", "type": "datetime", "required": true, "description": "Publication timestamp" },
+    { "key": "publishedByUserId", "type": "string", "required": true, "description": "User who published" },
+    { "key": "maskRulesJson", "type": "json", "required": false, "description": "Masking rules {maskAccountNumbers: bool, excludeNodeTypes: []}" },
+    { "key": "snapshotJson", "type": "json", "required": true, "description": "Snapshot {nodes: [], links: []}" },
+    { "key": "clientSafe", "type": "boolean", "required": true, "description": "Client-safe flag (always true)" }
+  ],
+  "indexes": ["clientId", "publishedAt"]
+}

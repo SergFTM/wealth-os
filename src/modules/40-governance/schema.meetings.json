@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GovernanceMeeting",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string" },
+    "meetingDateTime": { "type": "string", "format": "date-time" },
+    "locationType": { "type": "string", "enum": ["virtual", "in_person", "hybrid"] },
+    "locationDetails": { "type": "string" },
+    "status": { "type": "string", "enum": ["planned", "in_progress", "closed"] },
+    "participantIdsJson": { "type": "array", "items": { "type": "string" } },
+    "participantRolesJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "userId": { "type": "string" },
+          "role": { "type": "string", "enum": ["chair", "secretary", "member", "observer", "advisor"] }
+        }
+      }
+    },
+    "quorumPct": { "type": "number", "minimum": 0, "maximum": 100 },
+    "clientSafeVisible": { "type": "boolean", "default": false },
+    "threadId": { "type": "string" },
+    "notes": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "name", "meetingDateTime", "status"]
+}

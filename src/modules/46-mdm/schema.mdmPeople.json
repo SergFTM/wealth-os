@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MDM People Record",
+  "description": "Golden Record for people: family members, trustees, advisors, vendor contacts",
+  "type": "object",
+  "required": ["id", "clientId", "status", "personTypeKey", "chosenJson", "createdAt", "updatedAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/household reference"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "inactive", "merged", "pending_review"],
+      "description": "Record status"
+    },
+    "personTypeKey": {
+      "type": "string",
+      "enum": ["family_member", "trustee", "advisor", "vendor_contact", "beneficiary", "nominee"],
+      "description": "Type of person"
+    },
+    "chosenJson": {
+      "type": "object",
+      "description": "Golden record chosen field values",
+      "properties": {
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "middleName": { "type": "string" },
+        "displayName": { "type": "string" },
+        "dateOfBirth": { "type": "string", "format": "date" },
+        "email": { "type": "string", "format": "email" },
+        "phone": { "type": "string" },
+        "address": { "type": "object" },
+        "taxResidency": { "type": "string" },
+        "nationality": { "type": "string" },
+        "passportNumber": { "type": "string" },
+        "ssn": { "type": "string" },
+        "tin": { "type": "string" }
+      }
+    },
+    "sourcesJson": {
+      "type": "array",
+      "description": "Source system values",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sourceSystem": { "type": "string" },
+          "sourceId": { "type": "string" },
+          "asOf": { "type": "string", "format": "date-time" },
+          "fieldsJson": { "type": "object" }
+        }
+      }
+    },
+    "confidenceJson": {
+      "type": "object",
+      "description": "Confidence scores per field (0-100)",
+      "additionalProperties": { "type": "number" }
+    },
+    "overridesJson": {
+      "type": "object",
+      "description": "Manual override flags and values per field",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "value": {},
+          "overriddenAt": { "type": "string", "format": "date-time" },
+          "overriddenBy": { "type": "string" },
+          "reason": { "type": "string" }
+        }
+      }
+    },
+    "relationshipsJson": {
+      "type": "array",
+      "description": "Links to entities, trusts, roles",
+      "items": {
+        "type": "object",
+        "properties": {
+          "targetType": { "type": "string" },
+          "targetId": { "type": "string" },
+          "relationshipType": { "type": "string" },
+          "role": { "type": "string" }
+        }
+      }
+    },
+    "attachmentDocIdsJson": {
+      "type": "array",
+      "description": "KYC and proof document IDs",
+      "items": { "type": "string" }
+    },
+    "dqScore": {
+      "type": "number",
+      "description": "Data quality score (0-100)"
+    },
+    "mergedIntoId": {
+      "type": "string",
+      "description": "If merged, points to surviving record"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

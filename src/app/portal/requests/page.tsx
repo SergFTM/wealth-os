@@ -1,5 +1,7 @@
-import { PtRequestsTable } from '@/modules/30-portal/ui';
+'use client';
 
-export default function PortalRequestsPage() {
-  return <PtRequestsTable />;
+import { PoRequestsPage } from '@/modules/55-portal/ui/PoRequestsPage';
+
+export default function RequestsPage() {
+  return <PoRequestsPage />;
 }

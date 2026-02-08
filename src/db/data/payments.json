@@ -1,7 +1,0 @@
-[
-  {"id": "pay1", "clientId": "c1", "invoiceId": "inv1", "number": "PAY-2026-001", "payee": "Property Management Co", "amount": 85000, "status": "pending", "dueDate": "2026-02-01", "method": "wire", "createdAt": "2026-01-25T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "pay2", "clientId": "c2", "invoiceId": null, "number": "PAY-2026-002", "payee": "Legal Services LLC", "amount": 45000, "status": "overdue", "dueDate": "2026-01-15", "method": "check", "createdAt": "2026-01-05T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "pay3", "clientId": "c3", "invoiceId": null, "number": "PAY-2026-003", "payee": "Insurance Broker", "amount": 125000, "status": "pending", "dueDate": "2026-02-05", "method": "ach", "createdAt": "2026-01-20T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "pay4", "clientId": "c4", "invoiceId": null, "number": "PAY-2026-004", "payee": "Accounting Firm", "amount": 35000, "status": "paid", "dueDate": "2026-01-20", "method": "wire", "createdAt": "2026-01-10T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "pay5", "clientId": "c5", "invoiceId": null, "number": "PAY-2026-005", "payee": "IT Services", "amount": 18000, "status": "pending", "dueDate": "2026-02-10", "method": "ach", "createdAt": "2026-01-22T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"}
-]

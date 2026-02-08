@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vendor Scorecard",
+  "description": "Periodic vendor performance evaluation",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/Family office ID" },
+    "vendorId": { "type": "string", "description": "Related vendor ID" },
+    "periodStart": { "type": "string", "format": "date", "description": "Evaluation period start" },
+    "periodEnd": { "type": "string", "format": "date", "description": "Evaluation period end" },
+    "criteriaJson": {
+      "type": "object",
+      "properties": {
+        "responsiveness": {
+          "type": "object",
+          "properties": {
+            "score": { "type": "number", "minimum": 0, "maximum": 10 },
+            "weight": { "type": "number" },
+            "computed": { "type": "boolean" },
+            "notes": { "type": "string" }
+          }
+        },
+        "accuracy": {
+          "type": "object",
+          "properties": {
+            "score": { "type": "number", "minimum": 0, "maximum": 10 },
+            "weight": { "type": "number" },
+            "computed": { "type": "boolean" },
+            "notes": { "type": "string" }
+          }
+        },
+        "securityPosture": {
+          "type": "object",
+          "properties": {
+            "score": { "type": "number", "minimum": 0, "maximum": 10 },
+            "weight": { "type": "number" },
+            "computed": { "type": "boolean" },
+            "notes": { "type": "string" }
+          }
+        },
+        "costEfficiency": {
+          "type": "object",
+          "properties": {
+            "score": { "type": "number", "minimum": 0, "maximum": 10 },
+            "weight": { "type": "number" },
+            "computed": { "type": "boolean" },
+            "notes": { "type": "string" }
+          }
+        },
+        "partnership": {
+          "type": "object",
+          "properties": {
+            "score": { "type": "number", "minimum": 0, "maximum": 10 },
+            "weight": { "type": "number" },
+            "computed": { "type": "boolean" },
+            "notes": { "type": "string" }
+          }
+        }
+      },
+      "description": "Evaluation criteria and scores"
+    },
+    "overallScore": { "type": "number", "minimum": 0, "maximum": 10, "description": "Weighted overall score" },
+    "trend": {
+      "type": "string",
+      "enum": ["improving", "stable", "declining"],
+      "description": "Trend compared to previous period"
+    },
+    "notes": { "type": "string" },
+    "recommendationsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Recommendations for improvement"
+    },
+    "linkedIncidentIdsJson": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "linkedInvoiceIdsJson": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "createdBy": { "type": "string" },
+    "approvedBy": { "type": "string" },
+    "approvedAt": { "type": "string", "format": "date-time" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["vendorId", "periodStart", "periodEnd", "overallScore"]
+}

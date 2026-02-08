@@ -1,0 +1,138 @@
+[
+  {
+    "id": "vs-001",
+    "clientId": "c1",
+    "vendorId": "vd-001",
+    "contractId": "vc-001",
+    "serviceKey": "custody_reporting",
+    "serviceName": "Custody Reporting",
+    "kpisJson": [
+      {
+        "name": "Report Delivery",
+        "target": 24,
+        "unit": "hours",
+        "direction": "lower",
+        "weight": 0.4
+      },
+      {
+        "name": "Accuracy",
+        "target": 99.5,
+        "unit": "%",
+        "direction": "higher",
+        "weight": 0.6
+      }
+    ],
+    "status": "ok",
+    "lastMeasuredAt": "2024-12-01T08:00:00Z",
+    "metricsJson": {
+      "responseTimeAvg": 18,
+      "uptime": 99.8,
+      "accuracy": 99.7,
+      "breachCount": 0
+    },
+    "createdAt": "2024-01-15T10:30:00Z",
+    "updatedAt": "2024-12-01T08:00:00Z"
+  },
+  {
+    "id": "vs-002",
+    "clientId": "c1",
+    "vendorId": "vd-003",
+    "contractId": "vc-002",
+    "serviceKey": "trade_execution",
+    "serviceName": "Trade Execution",
+    "kpisJson": [
+      {
+        "name": "Execution Time",
+        "target": 60,
+        "unit": "seconds",
+        "direction": "lower",
+        "weight": 0.5
+      },
+      {
+        "name": "Fill Rate",
+        "target": 98,
+        "unit": "%",
+        "direction": "higher",
+        "weight": 0.5
+      }
+    ],
+    "status": "ok",
+    "lastMeasuredAt": "2024-12-01T09:00:00Z",
+    "metricsJson": {
+      "responseTimeAvg": 45,
+      "uptime": 99.9,
+      "accuracy": 99.2,
+      "breachCount": 0
+    },
+    "createdAt": "2024-02-01T09:00:00Z",
+    "updatedAt": "2024-12-01T09:00:00Z"
+  },
+  {
+    "id": "vs-003",
+    "clientId": "c1",
+    "vendorId": "vd-011",
+    "contractId": "vc-001",
+    "serviceKey": "custody_settlement",
+    "serviceName": "Settlement Services",
+    "kpisJson": [
+      {
+        "name": "Settlement Accuracy",
+        "target": 99.9,
+        "unit": "%",
+        "direction": "higher",
+        "weight": 0.6
+      },
+      {
+        "name": "Settlement Timeliness",
+        "target": 95,
+        "unit": "%",
+        "direction": "higher",
+        "weight": 0.4
+      }
+    ],
+    "status": "ok",
+    "lastMeasuredAt": "2024-12-01T10:00:00Z",
+    "metricsJson": {
+      "responseTimeAvg": 30,
+      "uptime": 99.95,
+      "accuracy": 99.95,
+      "breachCount": 0
+    },
+    "createdAt": "2024-01-08T09:00:00Z",
+    "updatedAt": "2024-12-01T10:00:00Z"
+  },
+  {
+    "id": "vs-004",
+    "clientId": "c1",
+    "vendorId": "vd-014",
+    "contractId": "vc-001",
+    "serviceKey": "cloud_uptime",
+    "serviceName": "Cloud Infrastructure",
+    "kpisJson": [
+      {
+        "name": "Uptime",
+        "target": 99.9,
+        "unit": "%",
+        "direction": "higher",
+        "weight": 0.7
+      },
+      {
+        "name": "Response Time",
+        "target": 100,
+        "unit": "ms",
+        "direction": "lower",
+        "weight": 0.3
+      }
+    ],
+    "status": "ok",
+    "lastMeasuredAt": "2024-12-01T00:00:00Z",
+    "metricsJson": {
+      "responseTimeAvg": 65,
+      "uptime": 99.99,
+      "accuracy": 100,
+      "breachCount": 0
+    },
+    "createdAt": "2024-01-12T10:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  }
+]

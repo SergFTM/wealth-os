@@ -1,7 +1,0 @@
-[
-  {"id": "th1", "clientId": "c1", "subject": "Q4 Report готов", "participants": ["Aurora Family", "Алексей П."], "status": "open", "lastMessageAt": "2026-01-28T10:00:00Z", "messageCount": 3, "createdAt": "2026-01-25T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "th2", "clientId": "c2", "subject": "Вопрос по инвойсу", "participants": ["Limassol Holdings", "Мария К."], "status": "open", "lastMessageAt": "2026-01-27T16:00:00Z", "messageCount": 5, "createdAt": "2026-01-20T10:00:00Z", "updatedAt": "2026-01-27T16:00:00Z"},
-  {"id": "th3", "clientId": "c3", "subject": "Обновление IPS", "participants": ["North Star Trust", "Иван С."], "status": "resolved", "lastMessageAt": "2026-01-26T14:00:00Z", "messageCount": 8, "createdAt": "2026-01-15T10:00:00Z", "updatedAt": "2026-01-26T14:00:00Z"},
-  {"id": "th4", "clientId": "c4", "subject": "Capital call запрос", "participants": ["Vega Partners", "Елена В."], "status": "open", "lastMessageAt": "2026-01-28T09:00:00Z", "messageCount": 2, "createdAt": "2026-01-27T10:00:00Z", "updatedAt": "2026-01-28T09:00:00Z"},
-  {"id": "th5", "clientId": "c5", "subject": "Tax planning 2026", "participants": ["Orion Family", "Дмитрий Н."], "status": "open", "lastMessageAt": "2026-01-28T11:00:00Z", "messageCount": 4, "createdAt": "2026-01-22T10:00:00Z", "updatedAt": "2026-01-28T11:00:00Z"}
-]

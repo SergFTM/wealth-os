@@ -1,5 +1,7 @@
-import { PtDocumentsList } from '@/modules/30-portal/ui';
+'use client';
 
-export default function PortalDocumentsPage() {
-  return <PtDocumentsList />;
+import { PoDocumentsPage } from '@/modules/55-portal/ui/PoDocumentsPage';
+
+export default function DocumentsPage() {
+  return <PoDocumentsPage />;
 }

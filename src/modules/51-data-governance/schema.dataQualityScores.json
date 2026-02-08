@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DataQualityScore",
+  "description": "Data quality score with breakdown by dimensions",
+  "type": "object",
+  "required": ["id", "clientId", "scopeKey", "domainKey", "objectTypeKey", "scoreTotal", "completenessScore", "freshnessScore", "consistencyScore", "coverageScore", "asOf", "computedAt", "createdAt", "updatedAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "scopeKey": { "type": "string", "enum": ["kpi", "collection", "entity", "portfolio"] },
+    "scopeId": { "type": "string" },
+    "domainKey": { "type": "string" },
+    "objectTypeKey": { "type": "string" },
+    "scoreTotal": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "completenessScore": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "freshnessScore": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "consistencyScore": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "coverageScore": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "asOf": { "type": "string", "format": "date" },
+    "computedAt": { "type": "string", "format": "date-time" },
+    "detailsJson": {
+      "type": "object",
+      "properties": {
+        "missingFields": { "type": "array", "items": { "type": "string" } },
+        "staleRecords": { "type": "integer" },
+        "conflictingSources": { "type": "array", "items": { "type": "string" } },
+        "coverageGaps": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

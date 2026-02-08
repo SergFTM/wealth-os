@@ -1,0 +1,66 @@
+import { ModuleConfig } from '../types';
+
+export const calendarConfig: ModuleConfig = {
+  id: '41',
+  slug: 'calendar',
+  order: 41,
+  icon: 'calendar',
+  title: { ru: 'Календарь', en: 'Calendar', uk: 'Календар' },
+  description: {
+    ru: 'Единый календарь встреч с семьёй, советниками, банками, комитетами и governance',
+    en: 'Unified calendar for meetings with family, advisors, banks, committees and governance',
+    uk: 'Єдиний календар зустрічей із сім\'єю, радниками, банками, комітетами та governance',
+  },
+  disclaimer: {
+    ru: 'Календарь в MVP демонстрационный. Для production требуется интеграция Google/Microsoft.',
+    en: 'Calendar in MVP is demo only. Production requires Google/Microsoft integration.',
+    uk: 'Календар у MVP демонстраційний. Для production потрібна інтеграція Google/Microsoft.',
+  },
+  kpis: [
+    { key: 'eventsToday', title: { ru: 'События сегодня', en: 'Events Today', uk: 'Події сьогодні' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'upcoming7d', title: { ru: 'Ближайшие 7 дней', en: 'Upcoming 7d', uk: 'Найближчі 7 днів' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'clientMeetings30d', title: { ru: 'Встречи с клиентами 30д', en: 'Client Meetings 30d', uk: 'Зустрічі з клієнтами 30д' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'committeeMeetings', title: { ru: 'Committee meetings', en: 'Committee Meetings', uk: 'Committee meetings' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'governanceMeetings', title: { ru: 'Governance meetings', en: 'Governance Meetings', uk: 'Governance meetings' }, format: 'number', status: 'ok', linkToList: true },
+    { key: 'actionsDue7d', title: { ru: 'Actions due 7d', en: 'Actions Due 7d', uk: 'Actions due 7d' }, format: 'number', status: 'warning', linkToList: true },
+    { key: 'notesMissing', title: { ru: 'Нет заметок', en: 'Missing Notes', uk: 'Немає нотаток' }, format: 'number', status: 'warning', linkToList: true },
+    { key: 'integrationsConfigured', title: { ru: 'Интеграции', en: 'Integrations', uk: 'Інтеграції' }, format: 'number', status: 'ok', linkToList: true },
+  ],
+  columns: [
+    { key: 'title', header: { ru: 'Название', en: 'Title', uk: 'Назва' } },
+    { key: 'startAt', header: { ru: 'Дата/Время', en: 'Date/Time', uk: 'Дата/Час' }, type: 'date' },
+    { key: 'categoryKey', header: { ru: 'Категория', en: 'Category', uk: 'Категорія' } },
+    { key: 'participants', header: { ru: 'Участники', en: 'Participants', uk: 'Учасники' } },
+    { key: 'status', header: { ru: 'Статус', en: 'Status', uk: 'Статус' }, type: 'status' },
+  ],
+  tabs: [
+    { key: 'calendar', label: { ru: 'Календарь', en: 'Calendar', uk: 'Календар' } },
+    { key: 'meetings', label: { ru: 'Встречи', en: 'Meetings', uk: 'Зустрічі' } },
+    { key: 'agenda', label: { ru: 'Повестка', en: 'Agenda', uk: 'Порядок денний' } },
+    { key: 'notes', label: { ru: 'Заметки', en: 'Notes', uk: 'Нотатки' } },
+    { key: 'actions', label: { ru: 'Action Items', en: 'Action Items', uk: 'Action Items' } },
+    { key: 'integrations', label: { ru: 'Интеграции', en: 'Integrations', uk: 'Інтеграції' } },
+    { key: 'audit', label: { ru: 'Audit', en: 'Audit', uk: 'Audit' } },
+  ],
+  actions: [
+    { key: 'createEvent', label: { ru: 'Создать событие', en: 'Create Event', uk: 'Створити подію' }, variant: 'primary' },
+    { key: 'createMeeting', label: { ru: 'Создать встречу', en: 'Create Meeting', uk: 'Створити зустріч' }, variant: 'secondary' },
+    { key: 'addAgenda', label: { ru: 'Добавить повестку', en: 'Add Agenda', uk: 'Додати порядок' }, variant: 'ghost' },
+    { key: 'addNote', label: { ru: 'Добавить заметку', en: 'Add Note', uk: 'Додати нотатку' }, variant: 'ghost' },
+    { key: 'createAction', label: { ru: 'Создать action item', en: 'Create Action Item', uk: 'Створити action item' }, variant: 'ghost' },
+    { key: 'generateDemo', label: { ru: 'Demo calendar', en: 'Demo Calendar', uk: 'Demo calendar' }, variant: 'ghost' },
+  ],
+  routes: {
+    dashboard: '/m/calendar',
+    list: '/m/calendar/list',
+    detail: '/m/calendar/event/:id',
+    meetingDetail: '/m/calendar/meeting/:id',
+  },
+  collections: [
+    'calendarEvents',
+    'meetingAgenda',
+    'meetingNotes',
+    'meetingActionItems',
+    'calendarIntegrations',
+  ],
+};

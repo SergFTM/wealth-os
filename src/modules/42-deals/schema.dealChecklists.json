@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DealChecklist",
+  "type": "object",
+  "required": ["clientId", "linkedType", "linkedId", "name"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/family ID"
+    },
+    "linkedType": {
+      "type": "string",
+      "enum": ["deal", "action", "fund_event"],
+      "description": "Type of linked record"
+    },
+    "linkedId": {
+      "type": "string",
+      "description": "ID of linked deal/action/fund_event"
+    },
+    "linkedName": {
+      "type": "string",
+      "description": "Name of linked record for display"
+    },
+    "name": {
+      "type": "string",
+      "description": "Checklist name"
+    },
+    "ownerUserId": {
+      "type": "string",
+      "description": "Checklist owner user ID"
+    },
+    "ownerName": {
+      "type": "string",
+      "description": "Owner name for display"
+    },
+    "itemsJson": {
+      "type": "array",
+      "description": "Checklist items",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "status"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "description": { "type": "string" },
+          "ownerRole": {
+            "type": "string",
+            "enum": ["legal", "compliance", "tax", "operations", "cio", "cfo"]
+          },
+          "ownerUserId": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["pending", "in_progress", "completed", "blocked", "na"]
+          },
+          "dueAt": { "type": "string", "format": "date-time" },
+          "completedAt": { "type": "string", "format": "date-time" },
+          "completedBy": { "type": "string" },
+          "notes": { "type": "string" },
+          "linkedTaskId": { "type": "string" },
+          "order": { "type": "number" }
+        }
+      }
+    },
+    "completionPct": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Completion percentage"
+    },
+    "templateId": {
+      "type": "string",
+      "description": "Template ID if generated from template"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

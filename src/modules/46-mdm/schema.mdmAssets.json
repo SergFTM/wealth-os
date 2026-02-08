@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MDM Assets Record",
+  "description": "Golden Record for assets: tickers, funds, private deals, real estate, collectibles",
+  "type": "object",
+  "required": ["id", "clientId", "status", "assetTypeKey", "chosenJson", "createdAt", "updatedAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/household reference"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "inactive", "merged", "pending_review"],
+      "description": "Record status"
+    },
+    "assetTypeKey": {
+      "type": "string",
+      "enum": ["ticker", "fund", "private_deal", "real_estate", "collectible", "crypto", "cash", "loan"],
+      "description": "Type of asset"
+    },
+    "chosenJson": {
+      "type": "object",
+      "description": "Golden record chosen field values",
+      "properties": {
+        "name": { "type": "string" },
+        "displayName": { "type": "string" },
+        "ticker": { "type": "string" },
+        "isin": { "type": "string" },
+        "cusip": { "type": "string" },
+        "sedol": { "type": "string" },
+        "exchange": { "type": "string" },
+        "currency": { "type": "string" },
+        "assetClass": { "type": "string" },
+        "sector": { "type": "string" },
+        "country": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    },
+    "identifiersJson": {
+      "type": "object",
+      "description": "All identifiers for this asset",
+      "properties": {
+        "isin": { "type": "string" },
+        "cusip": { "type": "string" },
+        "sedol": { "type": "string" },
+        "bloomberg": { "type": "string" },
+        "reuters": { "type": "string" },
+        "internalKey": { "type": "string" }
+      }
+    },
+    "sourcesJson": {
+      "type": "array",
+      "description": "Source system values",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sourceSystem": { "type": "string" },
+          "sourceId": { "type": "string" },
+          "asOf": { "type": "string", "format": "date-time" },
+          "fieldsJson": { "type": "object" }
+        }
+      }
+    },
+    "confidenceJson": {
+      "type": "object",
+      "description": "Confidence scores per field (0-100)",
+      "additionalProperties": { "type": "number" }
+    },
+    "overridesJson": {
+      "type": "object",
+      "description": "Manual override flags and values per field",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "value": {},
+          "overriddenAt": { "type": "string", "format": "date-time" },
+          "overriddenBy": { "type": "string" },
+          "reason": { "type": "string" }
+        }
+      }
+    },
+    "dqScore": {
+      "type": "number",
+      "description": "Data quality score (0-100)"
+    },
+    "mergedIntoId": {
+      "type": "string",
+      "description": "If merged, points to surviving record"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

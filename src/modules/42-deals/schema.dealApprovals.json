@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DealApproval",
+  "type": "object",
+  "required": ["clientId", "linkedType", "linkedId", "requestedByUserId", "approverRole", "status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/family ID"
+    },
+    "linkedType": {
+      "type": "string",
+      "enum": ["deal", "action", "fund_event"],
+      "description": "Type of linked record"
+    },
+    "linkedId": {
+      "type": "string",
+      "description": "ID of linked deal/action/fund_event"
+    },
+    "linkedName": {
+      "type": "string",
+      "description": "Name of linked record for display"
+    },
+    "requestedByUserId": {
+      "type": "string",
+      "description": "User who requested approval"
+    },
+    "requestedByName": {
+      "type": "string",
+      "description": "Requester name for display"
+    },
+    "requestedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When approval was requested"
+    },
+    "approverRole": {
+      "type": "string",
+      "enum": ["cio", "cfo", "controller", "compliance", "legal", "ic", "tax"],
+      "description": "Role required for approval"
+    },
+    "approverUserId": {
+      "type": "string",
+      "description": "Specific user assigned (optional)"
+    },
+    "approverName": {
+      "type": "string",
+      "description": "Approver name for display"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "approved", "rejected", "escalated", "expired"],
+      "description": "Approval status"
+    },
+    "dueAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Approval deadline"
+    },
+    "decidedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When decision was made"
+    },
+    "decisionNotes": {
+      "type": "string",
+      "description": "Notes/comments on decision"
+    },
+    "committeeDecisionId": {
+      "type": "string",
+      "description": "Link to committee module decision (optional)"
+    },
+    "escalatedTo": {
+      "type": "string",
+      "description": "Escalation target if escalated"
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["low", "normal", "high", "urgent"],
+      "default": "normal",
+      "description": "Approval priority"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

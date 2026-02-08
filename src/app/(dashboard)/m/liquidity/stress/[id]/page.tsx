@@ -9,7 +9,8 @@ export default function StressTestDetailPage({ params }: { params: Promise<{ id:
   const { id } = use(params);
   const router = useRouter();
 
-  const { data: test, isLoading } = useRecord("cashStressTests", id);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { data: test, isLoading } = useRecord("cashStressTests", id) as { data: any; isLoading: boolean };
 
   if (isLoading) {
     return (

@@ -1,0 +1,168 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Exception",
+  "description": "Unified exception record from any module",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client reference"
+    },
+    "title": {
+      "type": "string",
+      "description": "Exception title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the exception"
+    },
+    "typeKey": {
+      "type": "string",
+      "enum": ["sync", "recon", "missing_doc", "stale_price", "approval", "vendor_sla", "security"],
+      "description": "Exception type"
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["ok", "warning", "critical"],
+      "description": "Severity level"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["open", "triage", "in_progress", "closed"],
+      "description": "Current status"
+    },
+    "sourceModuleKey": {
+      "type": "string",
+      "description": "Source module identifier (e.g., '14' for integrations)"
+    },
+    "sourceCollection": {
+      "type": "string",
+      "description": "Source collection name"
+    },
+    "sourceId": {
+      "type": "string",
+      "description": "Source record ID"
+    },
+    "linkUrl": {
+      "type": "string",
+      "description": "Direct link to source object"
+    },
+    "lineageJson": {
+      "type": "object",
+      "description": "Lineage information explaining why this exception occurred",
+      "properties": {
+        "reason": { "type": "string" },
+        "chain": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "module": { "type": "string" },
+              "collection": { "type": "string" },
+              "id": { "type": "string" },
+              "label": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "sourceAsOf": {
+      "type": "string",
+      "format": "date-time",
+      "description": "As-of date from source"
+    },
+    "assignedToUserId": {
+      "type": "string",
+      "description": "Assigned user ID"
+    },
+    "assignedToRole": {
+      "type": "string",
+      "description": "Assigned role"
+    },
+    "watchersJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of watcher user IDs"
+    },
+    "slaPolicyId": {
+      "type": "string",
+      "description": "Applied SLA policy ID"
+    },
+    "slaDueAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "SLA due date"
+    },
+    "slaAtRisk": {
+      "type": "boolean",
+      "description": "Flag indicating SLA is at risk"
+    },
+    "remediationJson": {
+      "type": "array",
+      "description": "Remediation checklist",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "status": { "type": "string", "enum": ["pending", "in_progress", "completed", "skipped"] },
+          "ownerRole": { "type": "string" },
+          "dueAt": { "type": "string", "format": "date-time" },
+          "completedAt": { "type": "string", "format": "date-time" },
+          "notes": { "type": "string" }
+        },
+        "required": ["title", "status"]
+      }
+    },
+    "timelineJson": {
+      "type": "array",
+      "description": "Timeline of events",
+      "items": {
+        "type": "object",
+        "properties": {
+          "at": { "type": "string", "format": "date-time" },
+          "type": { "type": "string", "enum": ["created", "assigned", "severity_changed", "status_changed", "remediation_updated", "comment", "escalated", "closed", "reopened"] },
+          "by": { "type": "string" },
+          "notes": { "type": "string" }
+        },
+        "required": ["at", "type"]
+      }
+    },
+    "clusterId": {
+      "type": "string",
+      "description": "Associated cluster ID"
+    },
+    "sourceResolved": {
+      "type": "boolean",
+      "description": "Flag indicating source issue is resolved (for auto-close)"
+    },
+    "aiSummary": {
+      "type": "string",
+      "description": "AI-generated summary"
+    },
+    "aiProposedSteps": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "AI-proposed remediation steps"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Creation timestamp"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last update timestamp"
+    },
+    "closedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Closure timestamp"
+    }
+  },
+  "required": ["id", "clientId", "title", "typeKey", "severity", "status", "sourceModuleKey", "createdAt"]
+}

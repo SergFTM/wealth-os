@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Consent",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string" },
+    "grantorRefJson": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string" },
+        "id": { "type": "string" },
+        "label": { "type": "string" }
+      },
+      "required": ["type", "id"]
+    },
+    "granteeRefJson": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "enum": ["user", "advisor", "vendor"] },
+        "id": { "type": "string" },
+        "label": { "type": "string" }
+      },
+      "required": ["type", "id", "label"]
+    },
+    "purposeKey": {
+      "type": "string",
+      "enum": ["audit", "tax", "legal", "advisor_access", "banking", "other"]
+    },
+    "scopeJson": {
+      "type": "object",
+      "properties": {
+        "modulesJson": { "type": "array", "items": { "type": "string" } },
+        "entityIdsJson": { "type": "array", "items": { "type": "string" } },
+        "portfolioIdsJson": { "type": "array", "items": { "type": "string" } },
+        "accountIdsJson": { "type": "array", "items": { "type": "string" } },
+        "docIdsJson": { "type": "array", "items": { "type": "string" } },
+        "packIdsJson": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "restrictionsJson": {
+      "type": "object",
+      "properties": {
+        "viewOnly": { "type": "boolean" },
+        "allowDownload": { "type": "boolean" },
+        "maskRulesJson": { "type": "object" },
+        "clientSafe": { "type": "boolean" }
+      },
+      "required": ["viewOnly", "allowDownload", "clientSafe"]
+    },
+    "effectiveFrom": { "type": "string", "format": "date" },
+    "effectiveTo": { "type": "string", "format": "date" },
+    "statusKey": { "type": "string", "enum": ["active", "revoked", "expired"] },
+    "evidenceDocIdsJson": { "type": "array", "items": { "type": "string" } },
+    "createdByUserId": { "type": "string" },
+    "revokedByUserId": { "type": "string" },
+    "revokedAt": { "type": "string", "format": "date-time" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "grantorRefJson", "granteeRefJson", "purposeKey", "scopeJson", "restrictionsJson", "effectiveFrom", "statusKey", "createdByUserId", "createdAt", "updatedAt"]
+}

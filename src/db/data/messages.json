@@ -1,9 +1,0 @@
-[
-  {"id": "msg1", "threadId": "th1", "sender": "Алексей П.", "senderRole": "advisor", "content": "Добрый день! Ваш Q4 отчет готов к просмотру.", "attachments": ["d2"], "createdAt": "2026-01-25T10:00:00Z", "updatedAt": "2026-01-25T10:00:00Z"},
-  {"id": "msg2", "threadId": "th1", "sender": "Aurora Family", "senderRole": "client", "content": "Спасибо! Посмотрю сегодня.", "attachments": [], "createdAt": "2026-01-25T14:00:00Z", "updatedAt": "2026-01-25T14:00:00Z"},
-  {"id": "msg3", "threadId": "th1", "sender": "Aurora Family", "senderRole": "client", "content": "Отчет выглядит отлично. Есть пара вопросов по performance.", "attachments": [], "createdAt": "2026-01-28T10:00:00Z", "updatedAt": "2026-01-28T10:00:00Z"},
-  {"id": "msg4", "threadId": "th2", "sender": "Limassol Holdings", "senderRole": "client", "content": "Добрый день, получили инвойс INV-2026-002. Можете уточнить breakdown?", "attachments": [], "createdAt": "2026-01-20T10:00:00Z", "updatedAt": "2026-01-20T10:00:00Z"},
-  {"id": "msg5", "threadId": "th2", "sender": "Мария К.", "senderRole": "operations", "content": "Конечно, вот детализация по услугам...", "attachments": [], "createdAt": "2026-01-20T14:00:00Z", "updatedAt": "2026-01-20T14:00:00Z"},
-  {"id": "msg6", "threadId": "th4", "sender": "Vega Partners", "senderRole": "client", "content": "Получили capital call notice. Когда дедлайн?", "attachments": [], "createdAt": "2026-01-27T10:00:00Z", "updatedAt": "2026-01-27T10:00:00Z"},
-  {"id": "msg7", "threadId": "th4", "sender": "Елена В.", "senderRole": "advisor", "content": "Дедлайн 10 февраля. Подготовила wire instructions.", "attachments": ["d5"], "createdAt": "2026-01-28T09:00:00Z", "updatedAt": "2026-01-28T09:00:00Z"}
-]

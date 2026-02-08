@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PolicyLink",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "policyId": { "type": "string" },
+    "policyTitle": { "type": "string" },
+    "sopId": { "type": "string" },
+    "sopTitle": { "type": "string" },
+    "linkedType": {
+      "type": "string",
+      "enum": ["case", "incident", "breach", "ips"]
+    },
+    "linkedId": { "type": "string" },
+    "linkedTitle": { "type": "string" },
+    "notes": { "type": "string" },
+    "createdByUserId": { "type": "string" },
+    "createdByName": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "linkedType", "linkedId"]
+}

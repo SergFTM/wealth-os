@@ -1,0 +1,306 @@
+[
+  {
+    "id": "mdmr-001",
+    "name": "Fuzzy Name Matching",
+    "ruleType": "matching",
+    "entityTypes": [
+      "person"
+    ],
+    "status": "active",
+    "configJson": {
+      "algorithm": "levenshtein",
+      "threshold": 0.85,
+      "fields": [
+        "firstName",
+        "lastName"
+      ],
+      "weights": {
+        "firstName": 0.4,
+        "lastName": 0.6
+      }
+    },
+    "description": "Нечеткое сопоставление имен персон с использованием расстояния Левенштейна",
+    "createdBy": "admin",
+    "createdAt": "2025-01-01T10:00:00Z",
+    "updatedAt": "2026-01-15T10:00:00Z"
+  },
+  {
+    "id": "mdmr-002",
+    "name": "Exact TaxId Matching",
+    "ruleType": "matching",
+    "entityTypes": [
+      "person",
+      "entity"
+    ],
+    "status": "active",
+    "configJson": {
+      "algorithm": "exact",
+      "fields": [
+        "taxId"
+      ],
+      "normalizeFirst": true
+    },
+    "description": "Точное сопоставление по налоговому идентификатору",
+    "createdBy": "admin",
+    "createdAt": "2025-01-01T10:00:00Z",
+    "updatedAt": "2026-01-15T10:00:00Z"
+  },
+  {
+    "id": "mdmr-003",
+    "name": "Email Domain Matching",
+    "ruleType": "matching",
+    "entityTypes": [
+      "person"
+    ],
+    "status": "active",
+    "configJson": {
+      "algorithm": "domain_match",
+      "fields": [
+        "email"
+      ],
+      "threshold": 0.9
+    },
+    "description": "Сопоставление email с учетом домена",
+    "createdBy": "admin",
+    "createdAt": "2025-01-01T10:00:00Z",
+    "updatedAt": "2026-01-15T10:00:00Z"
+  },
+  {
+    "id": "mdmr-004",
+    "name": "Account Number Normalization",
+    "ruleType": "normalization",
+    "entityTypes": [
+      "account"
+    ],
+    "status": "active",
+    "configJson": {
+      "field": "accountNumber",
+      "rules": [
+        {
+          "pattern": "[-\\s]",
+          "replacement": ""
+        },
+        {
+          "pattern": "^0+",
+          "replacement": ""
+        }
+      ]
+    },
+    "description": "Нормализация номеров счетов: удаление дефисов, пробелов, ведущих нулей",
+    "createdBy": "admin",
+    "createdAt": "2025-01-01T10:00:00Z",
+    "updatedAt": "2026-01-15T10:00:00Z"
+  },
+  {
+    "id": "mdmr-005",
+    "name": "Phone Normalization",
+    "ruleType": "normalization",
+    "entityTypes": [
+      "person"
+    ],
+    "status": "active",
+    "configJson": {
+      "field": "phone",
+      "rules": [
+        {
+          "pattern": "[^0-9+]",
+          "replacement": ""
+        },
+        {
+          "pattern": "^8",
+          "replacement": "+7"
+        }
+      ]
+    },
+    "description": "Нормализация телефонных номеров в международный формат",
+    "createdBy": "admin",
+    "createdAt": "2025-01-01T10:00:00Z",
+    "updatedAt": "2026-01-15T10:00:00Z"
+  },
+  {
+    "id": "mdmr-006",
+    "name": "Name Transliteration",
+    "ruleType": "normalization",
+    "entityTypes": [
+      "person"
+    ],
+    "status": "active",
+    "configJson": {
+      "field": "firstName",
+      "transliteration": {
+        "enabled": true,
+        "direction": "both",
+        "standard": "ICAO"
+      }
+    },
+    "description": "Транслитерация имен между кириллицей и латиницей",
+    "createdBy": "admin",
+    "createdAt": "2025-01-01T10:00:00Z",
+    "updatedAt": "2026-01-15T10:00:00Z"
+  },
+  {
+    "id": "mdmr-007",
+    "name": "CRM Priority Survivorship",
+    "ruleType": "survivorship",
+    "entityTypes": [
+      "person"
+    ],
+    "status": "active",
+    "configJson": {
+      "sourcePriority": [
+        "CRM",
+        "KYC",
+        "HR",
+        "External"
+      ],
+      "fields": [
+        "firstName",
+        "lastName",
+        "email"
+      ]
+    },
+    "description": "Правило выживания: приоритет CRM для контактных данных",
+    "createdBy": "admin",
+    "createdAt": "2025-01-01T10:00:00Z",
+    "updatedAt": "2026-01-15T10:00:00Z"
+  },
+  {
+    "id": "mdmr-008",
+    "name": "Most Recent Balance",
+    "ruleType": "survivorship",
+    "entityTypes": [
+      "account"
+    ],
+    "status": "active",
+    "configJson": {
+      "field": "balance",
+      "strategy": "most_recent",
+      "tiebreaker": "source_priority",
+      "sourcePriority": [
+        "Custodian",
+        "Banking",
+        "External"
+      ]
+    },
+    "description": "Правило выживания: последний баланс от приоритетного источника",
+    "createdBy": "admin",
+    "createdAt": "2025-01-01T10:00:00Z",
+    "updatedAt": "2026-01-15T10:00:00Z"
+  },
+  {
+    "id": "mdmr-009",
+    "name": "Most Complete Address",
+    "ruleType": "survivorship",
+    "entityTypes": [
+      "person",
+      "entity"
+    ],
+    "status": "active",
+    "configJson": {
+      "field": "address",
+      "strategy": "most_complete",
+      "completenessFields": [
+        "street",
+        "city",
+        "postalCode",
+        "country"
+      ]
+    },
+    "description": "Правило выживания: наиболее полный адрес",
+    "createdBy": "admin",
+    "createdAt": "2025-01-01T10:00:00Z",
+    "updatedAt": "2026-01-15T10:00:00Z"
+  },
+  {
+    "id": "mdmr-010",
+    "name": "ISIN Asset Matching",
+    "ruleType": "matching",
+    "entityTypes": [
+      "asset"
+    ],
+    "status": "active",
+    "configJson": {
+      "algorithm": "exact",
+      "fields": [
+        "isin"
+      ],
+      "fallbackFields": [
+        "cusip",
+        "sedol",
+        "ticker"
+      ]
+    },
+    "description": "Сопоставление активов по ISIN с fallback на другие идентификаторы",
+    "createdBy": "admin",
+    "createdAt": "2025-01-01T10:00:00Z",
+    "updatedAt": "2026-01-15T10:00:00Z"
+  },
+  {
+    "id": "mdmr-011",
+    "name": "Entity Name Fuzzy",
+    "ruleType": "matching",
+    "entityTypes": [
+      "entity"
+    ],
+    "status": "active",
+    "configJson": {
+      "algorithm": "jaro_winkler",
+      "threshold": 0.88,
+      "fields": [
+        "name",
+        "legalName"
+      ],
+      "stopWords": [
+        "LLC",
+        "Ltd",
+        "Inc",
+        "Corp",
+        "GmbH"
+      ]
+    },
+    "description": "Нечеткое сопоставление названий компаний с удалением стоп-слов",
+    "createdBy": "admin",
+    "createdAt": "2025-01-01T10:00:00Z",
+    "updatedAt": "2026-01-15T10:00:00Z"
+  },
+  {
+    "id": "mdmr-012",
+    "name": "Data Quality Score",
+    "ruleType": "validation",
+    "entityTypes": [
+      "person",
+      "entity",
+      "account",
+      "asset"
+    ],
+    "status": "active",
+    "configJson": {
+      "requiredFields": {
+        "person": [
+          "firstName",
+          "lastName"
+        ],
+        "entity": [
+          "name",
+          "jurisdiction"
+        ],
+        "account": [
+          "accountNumber",
+          "custodian"
+        ],
+        "asset": [
+          "name"
+        ]
+      },
+      "scoringWeights": {
+        "completeness": 0.4,
+        "accuracy": 0.3,
+        "consistency": 0.3
+      }
+    },
+    "description": "Расчет оценки качества данных по полноте, точности и согласованности",
+    "createdBy": "admin",
+    "createdAt": "2025-01-01T10:00:00Z",
+    "updatedAt": "2026-01-15T10:00:00Z"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PrivacyPolicy",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string" },
+    "policyTypeKey": {
+      "type": "string",
+      "enum": ["retention", "legal_hold", "export_controls", "client_safe"]
+    },
+    "appliesToJson": {
+      "type": "object",
+      "properties": {
+        "modulesJson": { "type": "array", "items": { "type": "string" } },
+        "objectTypesJson": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "configJson": { "type": "object" },
+    "statusKey": { "type": "string", "enum": ["active", "inactive"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "name", "policyTypeKey", "appliesToJson", "configJson", "statusKey", "createdAt", "updatedAt"]
+}

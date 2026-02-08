@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MDM Rule",
+  "description": "MDM rule for matching, normalization, or survivorship",
+  "type": "object",
+  "required": ["id", "clientId", "name", "ruleTypeKey", "appliesToKey", "status", "configJson", "createdAt", "updatedAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/household reference"
+    },
+    "name": {
+      "type": "string",
+      "description": "Rule name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Rule description"
+    },
+    "ruleTypeKey": {
+      "type": "string",
+      "enum": ["matching", "normalization", "survivorship"],
+      "description": "Type of rule"
+    },
+    "appliesToKey": {
+      "type": "string",
+      "enum": ["people", "entities", "accounts", "assets"],
+      "description": "Record type this rule applies to"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["enabled", "disabled"],
+      "description": "Rule status"
+    },
+    "priority": {
+      "type": "integer",
+      "description": "Rule priority (lower = higher priority)"
+    },
+    "configJson": {
+      "type": "object",
+      "description": "Rule configuration",
+      "properties": {
+        "matchingWeights": {
+          "type": "object",
+          "additionalProperties": { "type": "number" }
+        },
+        "matchThreshold": { "type": "number" },
+        "fuzzyFields": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "exactFields": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "normalizationRules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "field": { "type": "string" },
+              "transform": { "type": "string" }
+            }
+          }
+        },
+        "sourcePriority": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "preferFreshest": { "type": "boolean" },
+        "preferNonNull": { "type": "boolean" }
+      }
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

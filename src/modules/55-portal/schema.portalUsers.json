@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "displayName": { "type": "string" },
+    "pinHash": { "type": "string" },
+    "languageDefaultKey": { "type": "string", "enum": ["ru", "en", "uk"] },
+    "householdId": { "type": "string" },
+    "status": { "type": "string", "enum": ["active", "disabled"] },
+    "createdAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "email", "displayName", "pinHash", "languageDefaultKey", "status", "createdAt"]
+}

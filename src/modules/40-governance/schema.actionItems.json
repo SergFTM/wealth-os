@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GovernanceActionItem",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "meetingId": { "type": "string" },
+    "decisionId": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "ownerUserId": { "type": "string" },
+    "ownerName": { "type": "string" },
+    "dueAt": { "type": "string", "format": "date-time" },
+    "status": { "type": "string", "enum": ["open", "in_progress", "done", "cancelled", "deferred"] },
+    "priority": { "type": "string", "enum": ["low", "medium", "high", "urgent"] },
+    "linkedTaskId": { "type": "string" },
+    "completedAt": { "type": "string", "format": "date-time" },
+    "completionNotes": { "type": "string" },
+    "reminderSent": { "type": "boolean", "default": false },
+    "source": { "type": "string", "enum": ["meeting", "decision", "manual", "ai_extracted"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "title", "status"]
+}

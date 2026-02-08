@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MeetingNotes",
+  "type": "object",
+  "required": ["id", "clientId", "eventId", "authorUserId"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "clientId": { "type": "string" },
+    "eventId": { "type": "string" },
+    "authorUserId": { "type": "string" },
+    "authorName": { "type": "string" },
+    "bodyMdRu": { "type": "string" },
+    "bodyMdEn": { "type": "string" },
+    "bodyMdUk": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "published"],
+      "default": "draft"
+    },
+    "clientSafePublished": { "type": "boolean", "default": false },
+    "attachmentDocIdsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "aiMetaJson": {
+      "type": "object",
+      "properties": {
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "assumptions": { "type": "array", "items": { "type": "string" } },
+        "sources": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

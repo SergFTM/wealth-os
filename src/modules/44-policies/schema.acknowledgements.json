@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PolicyAcknowledgement",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "docType": {
+      "type": "string",
+      "enum": ["policy", "sop"]
+    },
+    "docId": { "type": "string" },
+    "docTitle": { "type": "string" },
+    "versionId": { "type": "string" },
+    "versionLabel": { "type": "string" },
+    "subjectType": {
+      "type": "string",
+      "enum": ["user", "role"]
+    },
+    "subjectId": { "type": "string" },
+    "subjectName": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["requested", "acknowledged", "overdue"],
+      "default": "requested"
+    },
+    "dueAt": { "type": "string", "format": "date-time" },
+    "acknowledgedAt": { "type": "string", "format": "date-time" },
+    "evidenceJson": {
+      "type": "object",
+      "properties": {
+        "ipAddress": { "type": "string" },
+        "userAgent": { "type": "string" },
+        "signature": { "type": "string" }
+      }
+    },
+    "comment": { "type": "string" },
+    "reminderSentAt": { "type": "string", "format": "date-time" },
+    "reminderCount": { "type": "integer", "default": 0 },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "docType", "docId", "versionId", "subjectType", "subjectId", "status", "dueAt"]
+}

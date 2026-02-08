@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vendor Invoice",
+  "description": "Invoice from vendor",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/Family office ID" },
+    "vendorId": { "type": "string", "description": "Related vendor ID" },
+    "linkedContractId": { "type": "string", "description": "Related contract ID" },
+    "linkedInvoiceId": { "type": "string", "description": "Linked invoice ID from module 13" },
+    "invoiceRef": { "type": "string", "description": "Invoice reference number" },
+    "invoiceDate": { "type": "string", "format": "date", "description": "Invoice date" },
+    "dueDate": { "type": "string", "format": "date", "description": "Payment due date" },
+    "amount": { "type": "number", "description": "Invoice amount" },
+    "currency": { "type": "string", "description": "Currency code" },
+    "categoryKey": {
+      "type": "string",
+      "enum": ["management_fee", "transaction_fee", "custody_fee", "audit_fee", "legal_fee", "tax_fee", "it_services", "consulting", "subscription", "other"],
+      "description": "Fee category"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "approved", "paid", "disputed", "cancelled"],
+      "description": "Invoice status"
+    },
+    "lineItemsJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": { "type": "string" },
+          "quantity": { "type": "number" },
+          "unitPrice": { "type": "number" },
+          "amount": { "type": "number" },
+          "category": { "type": "string" }
+        }
+      }
+    },
+    "anomalyScore": { "type": "number", "minimum": 0, "maximum": 100, "description": "Anomaly detection score" },
+    "anomalyFlag": { "type": "boolean", "description": "Whether flagged as anomaly" },
+    "anomalyReasonsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Reasons for anomaly flag"
+    },
+    "expectedAmount": { "type": "number", "description": "Expected amount based on contract" },
+    "variance": { "type": "number", "description": "Variance from expected" },
+    "verifiedAt": { "type": "string", "format": "date-time" },
+    "verifiedBy": { "type": "string" },
+    "approvedAt": { "type": "string", "format": "date-time" },
+    "approvedBy": { "type": "string" },
+    "paidAt": { "type": "string", "format": "date-time" },
+    "attachmentDocIdsJson": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "notes": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["vendorId", "invoiceRef", "invoiceDate", "amount", "currency"]
+}

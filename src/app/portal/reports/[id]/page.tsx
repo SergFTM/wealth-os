@@ -1,13 +1,9 @@
 'use client';
 
 import { use } from 'react';
-import { PtReportViewer } from '@/modules/30-portal/ui';
+import { PoPackDetail } from '@/modules/55-portal/ui/PoPackDetail';
 
-interface PageProps {
-  params: Promise<{ id: string }>;
-}
-
-export default function PortalReportViewPage({ params }: PageProps) {
+export default function ReportDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
-  return <PtReportViewer reportId={id} />;
+  return <PoPackDetail packId={id} />;
 }

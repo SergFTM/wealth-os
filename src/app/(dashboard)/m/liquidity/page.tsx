@@ -7,21 +7,27 @@ import { LqDashboardPage } from '@/modules/39-liquidity/ui';
 export default function LiquidityDashboardPage() {
   const router = useRouter();
 
-  const { data: forecasts = [] } = useCollection('cashForecasts');
-  const { data: positions = [] } = useCollection('cashPositions');
-  const { data: flows = [] } = useCollection('cashFlows');
-  const { data: scenarios = [] } = useCollection('cashScenarios');
-  const { data: stressTests = [] } = useCollection('cashStressTests');
-  const { data: alerts = [] } = useCollection('liquidityAlerts');
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { data: forecasts = [] } = useCollection('cashForecasts') as { data: any[] };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { data: positions = [] } = useCollection('cashPositions') as { data: any[] };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { data: flows = [] } = useCollection('cashFlows') as { data: any[] };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { data: scenarios = [] } = useCollection('cashScenarios') as { data: any[] };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { data: stressTests = [] } = useCollection('cashStressTests') as { data: any[] };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { data: alerts = [] } = useCollection('liquidityAlerts') as { data: any[] };
 
   // Find active forecast for chart
-  const activeForecast = forecasts.find((f: { status: string }) => f.status === 'active');
+  const activeForecast = forecasts.find((f) => f.status === 'active');
   const dailyBalances = activeForecast?.resultsJson?.dailyBalances || [];
   const minCashThreshold = activeForecast?.assumptionsJson?.minCashThreshold || 0;
 
   // Calculate KPIs
-  const totalCashToday = positions.reduce((sum: number, p: { balance: number }) => sum + p.balance, 0);
-  const forecastsActive = forecasts.filter((f: { status: string }) => f.status === 'active').length;
+  const totalCashToday = positions.reduce((sum: number, p) => sum + (p.balance || 0), 0);
+  const forecastsActive = forecasts.filter((f) => f.status === 'active').length;
 
   const today = new Date();
   const in30Days = new Date(today);
@@ -29,21 +35,21 @@ export default function LiquidityDashboardPage() {
   const in90Days = new Date(today);
   in90Days.setDate(in90Days.getDate() + 90);
 
-  const flows30d = flows.filter((f: { flowDate: string }) => {
+  const flows30d = flows.filter((f) => {
     const flowDate = new Date(f.flowDate);
     return flowDate >= today && flowDate <= in30Days;
   });
 
   const inflows30d = flows30d
-    .filter((f: { flowType: string }) => f.flowType === 'inflow')
-    .reduce((sum: number, f: { amount: number }) => sum + f.amount, 0);
+    .filter((f) => f.flowType === 'inflow')
+    .reduce((sum: number, f) => sum + (f.amount || 0), 0);
   const outflows30d = flows30d
-    .filter((f: { flowType: string }) => f.flowType === 'outflow')
-    .reduce((sum: number, f: { amount: number }) => sum + f.amount, 0);
+    .filter((f) => f.flowType === 'outflow')
+    .reduce((sum: number, f) => sum + (f.amount || 0), 0);
   const netOutflow30d = outflows30d - inflows30d;
 
   const capitalCalls90d = flows
-    .filter((f: { flowType: string; categoryKey: string; flowDate: string }) => {
+    .filter((f) => {
       const flowDate = new Date(f.flowDate);
       return (
         f.flowType === 'outflow' &&
@@ -52,10 +58,10 @@ export default function LiquidityDashboardPage() {
         flowDate <= in90Days
       );
     })
-    .reduce((sum: number, f: { amount: number }) => sum + f.amount, 0);
+    .reduce((sum: number, f) => sum + (f.amount || 0), 0);
 
   const taxPayments90d = flows
-    .filter((f: { flowType: string; categoryKey: string; flowDate: string }) => {
+    .filter((f) => {
       const flowDate = new Date(f.flowDate);
       return (
         f.flowType === 'outflow' &&
@@ -64,15 +70,15 @@ export default function LiquidityDashboardPage() {
         flowDate <= in90Days
       );
     })
-    .reduce((sum: number, f: { amount: number }) => sum + f.amount, 0);
+    .reduce((sum: number, f) => sum + (f.amount || 0), 0);
 
   const alertsCritical = alerts.filter(
-    (a: { severity: string; status: string }) => a.severity === 'critical' && a.status === 'open'
+    (a) => a.severity === 'critical' && a.status === 'open'
   ).length;
 
   const last30Days = new Date(today);
   last30Days.setDate(last30Days.getDate() - 30);
-  const stressTests30d = stressTests.filter((t: { runAt?: string }) => {
+  const stressTests30d = stressTests.filter((t) => {
     if (!t.runAt) return false;
     const runDate = new Date(t.runAt);
     return runDate >= last30Days;

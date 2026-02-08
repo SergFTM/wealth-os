@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MDM Merge Job",
+  "description": "Merge job for combining duplicate records",
+  "type": "object",
+  "required": ["id", "clientId", "recordTypeKey", "primaryId", "mergeIdsJson", "survivorshipPlanJson", "status", "requestedByUserId", "createdAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/household reference"
+    },
+    "recordTypeKey": {
+      "type": "string",
+      "enum": ["people", "entities", "accounts", "assets"],
+      "description": "Type of records being merged"
+    },
+    "primaryId": {
+      "type": "string",
+      "description": "The surviving (golden) record ID"
+    },
+    "mergeIdsJson": {
+      "type": "array",
+      "description": "IDs of records being merged into primary",
+      "items": { "type": "string" }
+    },
+    "survivorshipPlanJson": {
+      "type": "object",
+      "description": "Field-level merge decisions",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "chosenValue": {},
+          "chosenSource": { "type": "string" },
+          "rule": { "type": "string" },
+          "manual": { "type": "boolean" }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "pending_approval", "applied", "cancelled"],
+      "description": "Merge job status"
+    },
+    "requestedByUserId": {
+      "type": "string",
+      "description": "User who initiated the merge"
+    },
+    "approvedByUserId": {
+      "type": "string",
+      "description": "User who approved the merge"
+    },
+    "approvedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "appliedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "cancelledAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "cancelledBy": {
+      "type": "string"
+    },
+    "cancelReason": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

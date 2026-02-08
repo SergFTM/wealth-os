@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CreditPayment",
+  "description": "Scheduled or completed loan payment",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client ID for multi-tenant isolation"
+    },
+    "loanId": {
+      "type": "string",
+      "description": "Reference to creditLoans"
+    },
+    "dueAt": {
+      "type": "string",
+      "format": "date",
+      "description": "Payment due date"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Total payment amount"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Currency code"
+    },
+    "principalPart": {
+      "type": "number",
+      "description": "Principal portion"
+    },
+    "interestPart": {
+      "type": "number",
+      "description": "Interest portion"
+    },
+    "feesPart": {
+      "type": "number",
+      "description": "Fees portion"
+    },
+    "statusKey": {
+      "type": "string",
+      "enum": ["scheduled", "paid", "late", "partial"],
+      "description": "Payment status"
+    },
+    "paidAt": {
+      "type": "string",
+      "format": "date",
+      "description": "Actual payment date"
+    },
+    "paidAmount": {
+      "type": "number",
+      "description": "Amount actually paid"
+    },
+    "linkedGlStubId": {
+      "type": "string",
+      "description": "Reference to GL transaction stub"
+    },
+    "linkedCalendarEventId": {
+      "type": "string",
+      "description": "Reference to calendar reminder"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "clientId", "loanId", "dueAt", "amount", "currency", "statusKey", "createdAt", "updatedAt"]
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PolicyVersion",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "docType": {
+      "type": "string",
+      "enum": ["policy", "sop"]
+    },
+    "docId": { "type": "string" },
+    "docTitle": { "type": "string" },
+    "versionLabel": { "type": "string" },
+    "versionMajor": { "type": "integer", "default": 1 },
+    "versionMinor": { "type": "integer", "default": 0 },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "published", "retired"],
+      "default": "draft"
+    },
+    "snapshotMdRu": { "type": "string" },
+    "snapshotMdEn": { "type": "string" },
+    "snapshotMdUk": { "type": "string" },
+    "changeNotes": { "type": "string" },
+    "previousVersionId": { "type": "string" },
+    "publishedInternal": { "type": "boolean", "default": false },
+    "publishedClientSafe": { "type": "boolean", "default": false },
+    "requiresApproval": { "type": "boolean", "default": false },
+    "approvalItemId": { "type": "string" },
+    "createdByUserId": { "type": "string" },
+    "createdByName": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "publishedAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "docType", "docId", "versionLabel", "status"]
+}

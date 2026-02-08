@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CreditSchedule",
+  "description": "Amortization schedule for a loan",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client ID for multi-tenant isolation"
+    },
+    "loanId": {
+      "type": "string",
+      "description": "Reference to creditLoans"
+    },
+    "scheduleJson": {
+      "type": "array",
+      "description": "Array of scheduled payments",
+      "items": {
+        "type": "object",
+        "properties": {
+          "periodNum": { "type": "number" },
+          "dueAt": { "type": "string", "format": "date" },
+          "openingBalance": { "type": "number" },
+          "principalPayment": { "type": "number" },
+          "interestPayment": { "type": "number" },
+          "totalPayment": { "type": "number" },
+          "closingBalance": { "type": "number" }
+        }
+      }
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When schedule was generated"
+    },
+    "methodKey": {
+      "type": "string",
+      "enum": ["simple", "actual_360", "actual_365", "30_360"],
+      "description": "Interest calculation method"
+    },
+    "assumedRatePct": {
+      "type": "number",
+      "description": "Rate used for schedule generation"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "clientId", "loanId", "scheduleJson", "generatedAt", "methodKey", "createdAt", "updatedAt"]
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PhilBudget",
+  "description": "Annual charitable giving budget by entity",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/family ID" },
+    "entityId": { "type": "string", "description": "Charitable entity ID" },
+    "year": { "type": "integer", "description": "Budget year" },
+    "budgetAmount": { "type": "number", "description": "Total budget for year" },
+    "currency": { "type": "string", "default": "USD" },
+    "committedAmount": { "type": "number", "description": "Committed (approved grants)" },
+    "paidAmount": { "type": "number", "description": "Paid out" },
+    "remainingAmount": { "type": "number", "description": "Remaining budget" },
+    "allocationsJson": {
+      "type": "array",
+      "description": "Budget allocations by program",
+      "items": {
+        "type": "object",
+        "properties": {
+          "programId": { "type": "string" },
+          "programName": { "type": "string" },
+          "allocated": { "type": "number" },
+          "committed": { "type": "number" },
+          "paid": { "type": "number" }
+        }
+      }
+    },
+    "notes": { "type": "string", "description": "Budget notes" },
+    "computedAt": { "type": "string", "format": "date-time", "description": "Last computed timestamp" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "entityId", "year", "budgetAmount", "createdAt", "updatedAt"]
+}

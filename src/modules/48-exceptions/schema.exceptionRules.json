@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExceptionRule",
+  "description": "Automation rule for exception handling",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client reference"
+    },
+    "name": {
+      "type": "string",
+      "description": "Rule name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Rule description"
+    },
+    "ruleTypeKey": {
+      "type": "string",
+      "enum": ["assign", "escalate", "close"],
+      "description": "Rule type: auto-assign, auto-escalate, auto-close"
+    },
+    "enabled": {
+      "type": "boolean",
+      "description": "Whether rule is active"
+    },
+    "priority": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100,
+      "description": "Rule priority (lower = higher priority)"
+    },
+    "conditionsJson": {
+      "type": "object",
+      "description": "Conditions that trigger the rule",
+      "properties": {
+        "sourceModuleKey": { "type": "string" },
+        "typeKey": { "type": "string" },
+        "severityIn": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "titleIncludes": { "type": "string" },
+        "statusIn": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "hoursOpen": { "type": "integer" },
+        "slaAtRisk": { "type": "boolean" },
+        "sourceResolved": { "type": "boolean" }
+      }
+    },
+    "actionsJson": {
+      "type": "object",
+      "description": "Actions to take when rule matches",
+      "properties": {
+        "assignToRole": { "type": "string" },
+        "assignToUserId": { "type": "string" },
+        "setSeverity": { "type": "string" },
+        "setStatus": { "type": "string" },
+        "setSlaHours": { "type": "integer" },
+        "addWatchers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "closeWhen": {
+          "type": "object",
+          "properties": {
+            "sourceState": { "type": "string" }
+          }
+        },
+        "notifyRoles": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "matchCount": {
+      "type": "integer",
+      "description": "Number of exceptions this rule has matched"
+    },
+    "lastRunAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last execution timestamp"
+    },
+    "lastMatchCount": {
+      "type": "integer",
+      "description": "Number of matches in last run"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Creation timestamp"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last update timestamp"
+    }
+  },
+  "required": ["id", "clientId", "name", "ruleTypeKey", "enabled", "conditionsJson", "actionsJson", "createdAt"]
+}

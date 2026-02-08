@@ -9,7 +9,8 @@ export default function ScenarioDetailPage({ params }: { params: Promise<{ id: s
   const { id } = use(params);
   const router = useRouter();
 
-  const { data: scenario, isLoading } = useRecord("cashScenarios", id);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { data: scenario, isLoading } = useRecord("cashScenarios", id) as { data: any; isLoading: boolean };
 
   if (isLoading) {
     return (

@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExceptionSlaPolicy",
+  "description": "SLA policy for exception handling",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client reference"
+    },
+    "name": {
+      "type": "string",
+      "description": "Policy name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Policy description"
+    },
+    "appliesToTypeKey": {
+      "type": "string",
+      "enum": ["sync", "recon", "missing_doc", "stale_price", "approval", "vendor_sla", "security", "all"],
+      "description": "Exception type this policy applies to"
+    },
+    "appliesToSeverity": {
+      "type": "string",
+      "enum": ["ok", "warning", "critical", "all"],
+      "description": "Severity level this policy applies to"
+    },
+    "defaultSlaHours": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Default SLA in hours"
+    },
+    "warningThresholdHours": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Hours before SLA due to mark as at-risk"
+    },
+    "escalationHours": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Hours after which to escalate"
+    },
+    "notifyRolesJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Roles to notify on SLA events"
+    },
+    "escalateToRolesJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Roles to escalate to"
+    },
+    "enabled": {
+      "type": "boolean",
+      "description": "Whether policy is active"
+    },
+    "priority": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100,
+      "description": "Policy priority (lower = higher priority)"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Creation timestamp"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last update timestamp"
+    }
+  },
+  "required": ["id", "clientId", "name", "appliesToTypeKey", "defaultSlaHours", "enabled", "createdAt"]
+}

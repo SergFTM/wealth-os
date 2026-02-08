@@ -1,0 +1,548 @@
+[
+  {
+    "id": "mde-001",
+    "clientId": "c1",
+    "recordType": "entity",
+    "entityType": "household",
+    "status": "golden",
+    "chosenJson": {
+      "name": "Семья Петровых",
+      "legalName": "Petrov Family",
+      "jurisdiction": "RU",
+      "taxId": "7701234567",
+      "incorporationDate": "2010-03-15",
+      "address": "Москва, ул. Тверская, 10"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "CRM",
+        "sourceId": "crm-e001",
+        "fetchedAt": "2026-01-15T10:00:00Z",
+        "fieldsJson": {
+          "name": "Семья Петровых",
+          "legalName": "Petrov Family"
+        }
+      },
+      {
+        "sourceSystem": "Legal",
+        "sourceId": "leg-e001",
+        "fetchedAt": "2026-01-18T10:00:00Z",
+        "fieldsJson": {
+          "taxId": "7701234567",
+          "jurisdiction": "RU"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.99,
+      "legalName": 0.95,
+      "taxId": 0.99
+    },
+    "overridesJson": {},
+    "membersJson": [
+      "mdp-001",
+      "mdp-002",
+      "mdp-003"
+    ],
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mde-002",
+    "clientId": "c1",
+    "recordType": "entity",
+    "entityType": "llc",
+    "status": "golden",
+    "chosenJson": {
+      "name": "Aurora Holdings LLC",
+      "legalName": "Aurora Holdings Limited Liability Company",
+      "jurisdiction": "DE",
+      "taxId": "US-EIN-12-3456789",
+      "incorporationDate": "2015-06-20",
+      "address": "1209 Orange Street, Wilmington, DE"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Corporate",
+        "sourceId": "corp-e002",
+        "fetchedAt": "2026-01-15T10:00:00Z",
+        "fieldsJson": {
+          "name": "Aurora Holdings LLC",
+          "jurisdiction": "DE"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.99,
+      "jurisdiction": 0.99,
+      "taxId": 0.99
+    },
+    "overridesJson": {},
+    "membersJson": [
+      "mdp-001"
+    ],
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mde-003",
+    "clientId": "c1",
+    "recordType": "entity",
+    "entityType": "trust",
+    "status": "golden",
+    "chosenJson": {
+      "name": "Aurora Dynasty Trust",
+      "legalName": "Aurora Dynasty Trust dated March 15, 2018",
+      "jurisdiction": "NV",
+      "incorporationDate": "2018-03-15",
+      "trustType": "dynasty"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Trust",
+        "sourceId": "tr-e003",
+        "fetchedAt": "2026-01-12T10:00:00Z",
+        "fieldsJson": {
+          "name": "Aurora Dynasty Trust",
+          "trustType": "dynasty"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.99,
+      "jurisdiction": 0.99
+    },
+    "overridesJson": {},
+    "membersJson": [
+      "mdp-002",
+      "mdp-003"
+    ],
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mde-004",
+    "clientId": "c2",
+    "recordType": "entity",
+    "entityType": "holding",
+    "status": "golden",
+    "chosenJson": {
+      "name": "Limassol Holdings Ltd",
+      "legalName": "Limassol Holdings Limited",
+      "jurisdiction": "CY",
+      "taxId": "CY-TAX-12345678",
+      "incorporationDate": "2012-09-10",
+      "address": "Limassol, Cyprus"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Corporate",
+        "sourceId": "corp-e004",
+        "fetchedAt": "2026-01-18T10:00:00Z",
+        "fieldsJson": {
+          "name": "Limassol Holdings Ltd",
+          "jurisdiction": "CY"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.99,
+      "jurisdiction": 0.99,
+      "taxId": 0.95
+    },
+    "overridesJson": {},
+    "membersJson": [
+      "mdp-005",
+      "mdp-006"
+    ],
+    "createdAt": "2025-02-20T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mde-005",
+    "clientId": "c2",
+    "recordType": "entity",
+    "entityType": "llc",
+    "status": "pending",
+    "chosenJson": {
+      "name": "Limassol RE LLC",
+      "legalName": "Limassol Real Estate LLC",
+      "jurisdiction": "CY",
+      "taxId": "CY-TAX-87654321"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Corporate",
+        "sourceId": "corp-e005",
+        "fetchedAt": "2026-01-18T10:00:00Z",
+        "fieldsJson": {
+          "name": "Limassol RE LLC"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.95,
+      "jurisdiction": 0.9
+    },
+    "overridesJson": {},
+    "membersJson": [
+      "mdp-005"
+    ],
+    "createdAt": "2025-02-20T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mde-006",
+    "clientId": "c3",
+    "recordType": "entity",
+    "entityType": "trust",
+    "status": "golden",
+    "chosenJson": {
+      "name": "North Star GRAT",
+      "legalName": "North Star Grantor Retained Annuity Trust",
+      "jurisdiction": "SD",
+      "incorporationDate": "2019-01-15",
+      "trustType": "grat"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Trust",
+        "sourceId": "tr-e006",
+        "fetchedAt": "2026-01-12T10:00:00Z",
+        "fieldsJson": {
+          "name": "North Star GRAT",
+          "trustType": "grat"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.99,
+      "trustType": 0.99
+    },
+    "overridesJson": {},
+    "membersJson": [
+      "mdp-007",
+      "mdp-008",
+      "mdp-018"
+    ],
+    "createdAt": "2025-03-10T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mde-007",
+    "clientId": "c3",
+    "recordType": "entity",
+    "entityType": "foundation",
+    "status": "golden",
+    "chosenJson": {
+      "name": "North Star Foundation",
+      "legalName": "North Star Charitable Foundation",
+      "jurisdiction": "DE",
+      "taxId": "US-EIN-98-7654321",
+      "incorporationDate": "2020-06-01"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Corporate",
+        "sourceId": "corp-e007",
+        "fetchedAt": "2026-01-15T10:00:00Z",
+        "fieldsJson": {
+          "name": "North Star Foundation"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.99,
+      "taxId": 0.99
+    },
+    "overridesJson": {},
+    "membersJson": [],
+    "createdAt": "2025-03-10T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mde-008",
+    "clientId": "c4",
+    "recordType": "entity",
+    "entityType": "partnership",
+    "status": "golden",
+    "chosenJson": {
+      "name": "Vega Partners LP",
+      "legalName": "Vega Partners Limited Partnership",
+      "jurisdiction": "DE",
+      "taxId": "US-EIN-55-1234567",
+      "incorporationDate": "2017-04-20"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Partnership",
+        "sourceId": "prt-e008",
+        "fetchedAt": "2026-01-14T10:00:00Z",
+        "fieldsJson": {
+          "name": "Vega Partners LP"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.99,
+      "taxId": 0.99
+    },
+    "overridesJson": {},
+    "membersJson": [
+      "mdp-009",
+      "mdp-010",
+      "mdp-019"
+    ],
+    "createdAt": "2025-04-05T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mde-009",
+    "clientId": "c4",
+    "recordType": "entity",
+    "entityType": "llc",
+    "status": "golden",
+    "chosenJson": {
+      "name": "Vega GP LLC",
+      "legalName": "Vega General Partner LLC",
+      "jurisdiction": "DE",
+      "taxId": "US-EIN-55-7654321"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Partnership",
+        "sourceId": "prt-e009",
+        "fetchedAt": "2026-01-14T10:00:00Z",
+        "fieldsJson": {
+          "name": "Vega GP LLC"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.99,
+      "taxId": 0.99
+    },
+    "overridesJson": {},
+    "membersJson": [
+      "mdp-009"
+    ],
+    "createdAt": "2025-04-05T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mde-010",
+    "clientId": "c5",
+    "recordType": "entity",
+    "entityType": "household",
+    "status": "golden",
+    "chosenJson": {
+      "name": "Семья Федоровых",
+      "legalName": "Fedorov Family",
+      "jurisdiction": "RU"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "CRM",
+        "sourceId": "crm-e010",
+        "fetchedAt": "2026-01-15T10:00:00Z",
+        "fieldsJson": {
+          "name": "Семья Федоровых"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.99
+    },
+    "overridesJson": {},
+    "membersJson": [
+      "mdp-011",
+      "mdp-020"
+    ],
+    "createdAt": "2025-05-01T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mde-011",
+    "clientId": "c5",
+    "recordType": "entity",
+    "entityType": "corp",
+    "status": "golden",
+    "chosenJson": {
+      "name": "Orion Holdings",
+      "legalName": "Orion Holdings Corporation",
+      "jurisdiction": "NV",
+      "taxId": "US-EIN-88-9876543"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Corporate",
+        "sourceId": "corp-e011",
+        "fetchedAt": "2026-01-15T10:00:00Z",
+        "fieldsJson": {
+          "name": "Orion Holdings"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.99,
+      "taxId": 0.99
+    },
+    "overridesJson": {},
+    "membersJson": [
+      "mdp-011"
+    ],
+    "createdAt": "2025-05-01T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mde-012",
+    "clientId": "c6",
+    "recordType": "entity",
+    "entityType": "trust",
+    "status": "golden",
+    "chosenJson": {
+      "name": "Cedar Trust",
+      "legalName": "Cedar Legacy Trust dated June 15, 2020",
+      "jurisdiction": "DE",
+      "incorporationDate": "2020-06-15",
+      "trustType": "irrevocable"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Trust",
+        "sourceId": "tr-e012",
+        "fetchedAt": "2026-01-16T10:00:00Z",
+        "fieldsJson": {
+          "name": "Cedar Trust"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.99
+    },
+    "overridesJson": {},
+    "membersJson": [
+      "mdp-012",
+      "mdp-021",
+      "mdp-022",
+      "mdp-023"
+    ],
+    "createdAt": "2025-06-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mde-013",
+    "clientId": "c6",
+    "recordType": "entity",
+    "entityType": "foundation",
+    "status": "golden",
+    "chosenJson": {
+      "name": "Cedar Charitable",
+      "legalName": "Cedar Charitable Foundation",
+      "jurisdiction": "DE",
+      "taxId": "US-EIN-77-1234567"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Corporate",
+        "sourceId": "corp-e013",
+        "fetchedAt": "2026-01-16T10:00:00Z",
+        "fieldsJson": {
+          "name": "Cedar Charitable"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.99,
+      "taxId": 0.99
+    },
+    "overridesJson": {},
+    "membersJson": [],
+    "createdAt": "2025-06-15T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mde-014",
+    "clientId": "c1",
+    "recordType": "entity",
+    "entityType": "household",
+    "status": "suspect_duplicate",
+    "chosenJson": {
+      "name": "Petrov Family",
+      "legalName": "Petrov Family Office"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "External",
+        "sourceId": "ext-e014",
+        "fetchedAt": "2026-01-25T10:00:00Z",
+        "fieldsJson": {
+          "name": "Petrov Family"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.8
+    },
+    "overridesJson": {},
+    "membersJson": [],
+    "createdAt": "2026-01-25T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mde-015",
+    "clientId": "c2",
+    "recordType": "entity",
+    "entityType": "holding",
+    "status": "suspect_duplicate",
+    "chosenJson": {
+      "name": "Limassol Holdings",
+      "jurisdiction": "CY"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Banking",
+        "sourceId": "bank-e015",
+        "fetchedAt": "2026-01-22T10:00:00Z",
+        "fieldsJson": {
+          "name": "Limassol Holdings"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.85
+    },
+    "overridesJson": {},
+    "membersJson": [],
+    "createdAt": "2026-01-22T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mde-016",
+    "clientId": "c4",
+    "recordType": "entity",
+    "entityType": "partnership",
+    "status": "suspect_duplicate",
+    "chosenJson": {
+      "name": "Vega LP",
+      "jurisdiction": "DE"
+    },
+    "sourcesJson": [
+      {
+        "sourceSystem": "Banking",
+        "sourceId": "bank-e016",
+        "fetchedAt": "2026-01-23T10:00:00Z",
+        "fieldsJson": {
+          "name": "Vega LP"
+        }
+      }
+    ],
+    "confidenceJson": {
+      "name": 0.85
+    },
+    "overridesJson": {},
+    "membersJson": [],
+    "createdAt": "2026-01-23T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  }
+]

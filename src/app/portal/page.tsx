@@ -1,5 +1,7 @@
-import { PtHome } from '@/modules/30-portal/ui';
+'use client';
+
+import { PoHomePage } from '@/modules/55-portal/ui/PoHomePage';
 
 export default function PortalHomePage() {
-  return <PtHome />;
+  return <PoHomePage />;
 }

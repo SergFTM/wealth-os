@@ -1,27 +1,14 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
-import { useApp } from '@/lib/store';
-import { PtShell } from '@/modules/30-portal/ui';
+import React, { useEffect } from 'react';
+import { PoShell } from '@/modules/55-portal/ui/PoShell';
 
-export default function PortalLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const router = useRouter();
-  const { isAuthenticated } = useApp();
-
+export default function PortalLayout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    if (!isAuthenticated) {
-      router.push('/login');
-    }
-  }, [isAuthenticated, router]);
+    // MVP auth mock: set portal cookie
+    document.cookie = 'portal_session_55=demo_session; path=/; SameSite=Strict';
+    document.cookie = 'portal_user_id=pu-001; path=/; SameSite=Strict';
+  }, []);
 
-  if (!isAuthenticated) {
-    return null;
-  }
-
-  return <PtShell>{children}</PtShell>;
+  return <PoShell>{children}</PoShell>;
 }

@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MDM Entities Record",
+  "description": "Golden Record for entities: households, trusts, partnerships, SPVs",
+  "type": "object",
+  "required": ["id", "clientId", "status", "entityTypeKey", "chosenJson", "createdAt", "updatedAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client/household reference"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "inactive", "merged", "pending_review"],
+      "description": "Record status"
+    },
+    "entityTypeKey": {
+      "type": "string",
+      "enum": ["household", "holding", "trust", "partnership", "spv", "foundation", "llc", "corporation"],
+      "description": "Type of entity"
+    },
+    "chosenJson": {
+      "type": "object",
+      "description": "Golden record chosen field values",
+      "properties": {
+        "legalName": { "type": "string" },
+        "displayName": { "type": "string" },
+        "jurisdiction": { "type": "string" },
+        "registrationNumber": { "type": "string" },
+        "taxId": { "type": "string" },
+        "incorporationDate": { "type": "string", "format": "date" },
+        "registeredAddress": { "type": "object" },
+        "operatingAddress": { "type": "object" },
+        "lei": { "type": "string" },
+        "giin": { "type": "string" }
+      }
+    },
+    "sourcesJson": {
+      "type": "array",
+      "description": "Source system values",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sourceSystem": { "type": "string" },
+          "sourceId": { "type": "string" },
+          "asOf": { "type": "string", "format": "date-time" },
+          "fieldsJson": { "type": "object" }
+        }
+      }
+    },
+    "confidenceJson": {
+      "type": "object",
+      "description": "Confidence scores per field (0-100)",
+      "additionalProperties": { "type": "number" }
+    },
+    "overridesJson": {
+      "type": "object",
+      "description": "Manual override flags and values per field",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "value": {},
+          "overriddenAt": { "type": "string", "format": "date-time" },
+          "overriddenBy": { "type": "string" },
+          "reason": { "type": "string" }
+        }
+      }
+    },
+    "relationshipsJson": {
+      "type": "array",
+      "description": "Links to people, other entities, UBOs",
+      "items": {
+        "type": "object",
+        "properties": {
+          "targetType": { "type": "string" },
+          "targetId": { "type": "string" },
+          "relationshipType": { "type": "string" },
+          "ownershipPct": { "type": "number" },
+          "role": { "type": "string" }
+        }
+      }
+    },
+    "dqScore": {
+      "type": "number",
+      "description": "Data quality score (0-100)"
+    },
+    "mergedIntoId": {
+      "type": "string",
+      "description": "If merged, points to surviving record"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

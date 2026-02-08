@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RelCoverage",
+  "description": "Coverage assignment",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "scopeTypeKey": { "type": "string", "enum": ["household", "person"] },
+    "scopeId": { "type": "string" },
+    "primaryUserId": { "type": "string" },
+    "backupUserId": { "type": "string" },
+    "specialistsJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "roleKey": { "type": "string" },
+          "userId": { "type": "string" }
+        },
+        "required": ["roleKey", "userId"]
+      }
+    },
+    "tierKey": { "type": "string", "enum": ["A", "B", "C"] },
+    "slaNotes": { "type": "string" },
+    "hasGaps": { "type": "boolean", "default": false },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "scopeTypeKey", "scopeId", "primaryUserId", "tierKey", "createdAt", "updatedAt"]
+}

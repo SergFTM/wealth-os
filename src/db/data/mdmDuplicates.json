@@ -1,0 +1,371 @@
+[
+  {
+    "id": "mdd-001",
+    "clientId": "c1",
+    "recordType": "person",
+    "sourceRecordId": "mdp-001",
+    "targetRecordId": "mdp-013",
+    "matchScore": 0.92,
+    "status": "pending",
+    "reasonsJson": [
+      "Фамилия: точное совпадение (Петров)",
+      "Имя: высокое сходство (Александр ~ Alex)",
+      "Email: разные домены, но схожие паттерны"
+    ],
+    "suggestedAction": "merge",
+    "aiSuggestionJson": {
+      "recommendation": "merge",
+      "confidence": 0.88,
+      "rationale": "Высокая вероятность дубликата: совпадение ФИО с транслитерацией"
+    },
+    "createdAt": "2026-01-26T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdd-002",
+    "clientId": "c1",
+    "recordType": "person",
+    "sourceRecordId": "mdp-002",
+    "targetRecordId": "mdp-014",
+    "matchScore": 0.89,
+    "status": "pending",
+    "reasonsJson": [
+      "Фамилия: точное совпадение (Петрова)",
+      "Имя: высокое сходство (Елена ~ Elena)"
+    ],
+    "suggestedAction": "merge",
+    "aiSuggestionJson": {
+      "recommendation": "merge",
+      "confidence": 0.85,
+      "rationale": "Вероятный дубликат: транслитерация имени"
+    },
+    "createdAt": "2026-01-26T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdd-003",
+    "clientId": "c1",
+    "recordType": "person",
+    "sourceRecordId": "mdp-003",
+    "targetRecordId": "mdp-026",
+    "matchScore": 0.87,
+    "status": "pending",
+    "reasonsJson": [
+      "Фамилия: точное совпадение (Петров)",
+      "Имя: высокое сходство (Дмитрий ~ Dmitry)"
+    ],
+    "suggestedAction": "merge",
+    "aiSuggestionJson": {
+      "recommendation": "merge",
+      "confidence": 0.82,
+      "rationale": "Вероятный дубликат: транслитерация"
+    },
+    "createdAt": "2026-01-27T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdd-004",
+    "clientId": "c2",
+    "recordType": "person",
+    "sourceRecordId": "mdp-005",
+    "targetRecordId": "mdp-015",
+    "matchScore": 0.78,
+    "status": "pending",
+    "reasonsJson": [
+      "Фамилия: точное совпадение (Kozlov)",
+      "Имя: частичное совпадение (Николай ~ N.)"
+    ],
+    "suggestedAction": "review",
+    "aiSuggestionJson": {
+      "recommendation": "review",
+      "confidence": 0.65,
+      "rationale": "Требуется проверка: инициал вместо полного имени"
+    },
+    "createdAt": "2026-01-26T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdd-005",
+    "clientId": "c3",
+    "recordType": "person",
+    "sourceRecordId": "mdp-007",
+    "targetRecordId": "mdp-027",
+    "matchScore": 0.75,
+    "status": "pending",
+    "reasonsJson": [
+      "Фамилия: точное совпадение (Novikova)",
+      "Имя: частичное совпадение (Ольга ~ O.)"
+    ],
+    "suggestedAction": "review",
+    "aiSuggestionJson": {
+      "recommendation": "review",
+      "confidence": 0.6,
+      "rationale": "Требуется проверка: инициал"
+    },
+    "createdAt": "2026-01-26T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdd-006",
+    "clientId": "c4",
+    "recordType": "person",
+    "sourceRecordId": "mdp-009",
+    "targetRecordId": "mdp-028",
+    "matchScore": 0.91,
+    "status": "pending",
+    "reasonsJson": [
+      "Фамилия: точное совпадение (Morozov)",
+      "Имя: высокое сходство (Виктор ~ Viktor)"
+    ],
+    "suggestedAction": "merge",
+    "aiSuggestionJson": {
+      "recommendation": "merge",
+      "confidence": 0.88,
+      "rationale": "Высокая вероятность дубликата"
+    },
+    "createdAt": "2026-01-26T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdd-007",
+    "clientId": "c5",
+    "recordType": "person",
+    "sourceRecordId": "mdp-011",
+    "targetRecordId": "mdp-029",
+    "matchScore": 0.9,
+    "status": "pending",
+    "reasonsJson": [
+      "Фамилия: точное совпадение (Fedorov)",
+      "Имя: высокое сходство (Игорь ~ Igor)"
+    ],
+    "suggestedAction": "merge",
+    "aiSuggestionJson": {
+      "recommendation": "merge",
+      "confidence": 0.87,
+      "rationale": "Высокая вероятность дубликата"
+    },
+    "createdAt": "2026-01-26T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdd-008",
+    "clientId": "c6",
+    "recordType": "person",
+    "sourceRecordId": "mdp-012",
+    "targetRecordId": "mdp-030",
+    "matchScore": 0.88,
+    "status": "pending",
+    "reasonsJson": [
+      "Фамилия: точное совпадение (Sokolova)",
+      "Имя: высокое сходство (Татьяна ~ Tatiana)"
+    ],
+    "suggestedAction": "merge",
+    "aiSuggestionJson": {
+      "recommendation": "merge",
+      "confidence": 0.85,
+      "rationale": "Высокая вероятность дубликата"
+    },
+    "createdAt": "2026-01-26T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdd-009",
+    "clientId": "c1",
+    "recordType": "entity",
+    "sourceRecordId": "mde-001",
+    "targetRecordId": "mde-014",
+    "matchScore": 0.85,
+    "status": "pending",
+    "reasonsJson": [
+      "Название: высокое сходство (Семья Петровых ~ Petrov Family)"
+    ],
+    "suggestedAction": "merge",
+    "aiSuggestionJson": {
+      "recommendation": "merge",
+      "confidence": 0.8,
+      "rationale": "Вероятный дубликат: перевод названия"
+    },
+    "createdAt": "2026-01-27T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdd-010",
+    "clientId": "c2",
+    "recordType": "entity",
+    "sourceRecordId": "mde-004",
+    "targetRecordId": "mde-015",
+    "matchScore": 0.82,
+    "status": "pending",
+    "reasonsJson": [
+      "Название: высокое сходство (Limassol Holdings Ltd ~ Limassol Holdings)",
+      "Юрисдикция: совпадение (CY)"
+    ],
+    "suggestedAction": "merge",
+    "aiSuggestionJson": {
+      "recommendation": "merge",
+      "confidence": 0.78,
+      "rationale": "Вероятный дубликат: сокращенное название"
+    },
+    "createdAt": "2026-01-27T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdd-011",
+    "clientId": "c4",
+    "recordType": "entity",
+    "sourceRecordId": "mde-008",
+    "targetRecordId": "mde-016",
+    "matchScore": 0.8,
+    "status": "pending",
+    "reasonsJson": [
+      "Название: высокое сходство (Vega Partners LP ~ Vega LP)",
+      "Юрисдикция: совпадение (DE)"
+    ],
+    "suggestedAction": "review",
+    "aiSuggestionJson": {
+      "recommendation": "review",
+      "confidence": 0.7,
+      "rationale": "Требуется проверка: может быть связанная сущность"
+    },
+    "createdAt": "2026-01-27T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdd-012",
+    "clientId": "c1",
+    "recordType": "account",
+    "sourceRecordId": "mda-001",
+    "targetRecordId": "mda-016",
+    "matchScore": 0.88,
+    "status": "pending",
+    "reasonsJson": [
+      "Номер счета: высокое сходство (SCHW-001 ~ SCHW001)",
+      "Баланс: близкие значения"
+    ],
+    "suggestedAction": "merge",
+    "aiSuggestionJson": {
+      "recommendation": "merge",
+      "confidence": 0.85,
+      "rationale": "Высокая вероятность дубликата: разный формат номера"
+    },
+    "createdAt": "2026-01-27T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdd-013",
+    "clientId": "c2",
+    "recordType": "account",
+    "sourceRecordId": "mda-004",
+    "targetRecordId": "mda-017",
+    "matchScore": 0.86,
+    "status": "pending",
+    "reasonsJson": [
+      "Номер счета: высокое сходство (JPM-004 ~ JPM004)",
+      "Кастодиан: схожие названия"
+    ],
+    "suggestedAction": "merge",
+    "aiSuggestionJson": {
+      "recommendation": "merge",
+      "confidence": 0.82,
+      "rationale": "Вероятный дубликат"
+    },
+    "createdAt": "2026-01-27T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdd-014",
+    "clientId": "c1",
+    "recordType": "asset",
+    "sourceRecordId": "mdas-001",
+    "targetRecordId": "mdas-015",
+    "matchScore": 0.94,
+    "status": "pending",
+    "reasonsJson": [
+      "Тикер: высокое сходство (AAPL ~ AAPL US)",
+      "Количество: точное совпадение (15000)"
+    ],
+    "suggestedAction": "merge",
+    "aiSuggestionJson": {
+      "recommendation": "merge",
+      "confidence": 0.92,
+      "rationale": "Высокая вероятность дубликата: разный формат тикера"
+    },
+    "createdAt": "2026-01-27T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdd-015",
+    "clientId": "c1",
+    "recordType": "asset",
+    "sourceRecordId": "mdas-002",
+    "targetRecordId": "mdas-016",
+    "matchScore": 0.93,
+    "status": "pending",
+    "reasonsJson": [
+      "Тикер: высокое сходство (MSFT ~ MSFT US Equity)",
+      "Количество: точное совпадение (12000)"
+    ],
+    "suggestedAction": "merge",
+    "aiSuggestionJson": {
+      "recommendation": "merge",
+      "confidence": 0.9,
+      "rationale": "Высокая вероятность дубликата: Bloomberg формат тикера"
+    },
+    "createdAt": "2026-01-27T10:00:00Z",
+    "updatedAt": "2026-01-28T10:00:00Z"
+  },
+  {
+    "id": "mdd-016",
+    "clientId": "c1",
+    "recordType": "person",
+    "sourceRecordId": "mdp-001",
+    "targetRecordId": "mdp-026",
+    "matchScore": 0.45,
+    "status": "rejected",
+    "reasonsJson": [
+      "Фамилия: совпадение",
+      "Имя: разные (Александр vs Dmitry)"
+    ],
+    "suggestedAction": "not_duplicate",
+    "resolvedBy": "admin",
+    "resolvedAt": "2026-01-27T15:00:00Z",
+    "createdAt": "2026-01-26T10:00:00Z",
+    "updatedAt": "2026-01-27T15:00:00Z"
+  },
+  {
+    "id": "mdd-017",
+    "clientId": "c3",
+    "recordType": "person",
+    "sourceRecordId": "mdp-007",
+    "targetRecordId": "mdp-008",
+    "matchScore": 0.72,
+    "status": "rejected",
+    "reasonsJson": [
+      "Фамилия: совпадение (Новиков/Новикова)",
+      "Разные люди: супруги"
+    ],
+    "suggestedAction": "not_duplicate",
+    "resolvedBy": "admin",
+    "resolvedAt": "2026-01-27T14:00:00Z",
+    "createdAt": "2026-01-25T10:00:00Z",
+    "updatedAt": "2026-01-27T14:00:00Z"
+  },
+  {
+    "id": "mdd-018",
+    "clientId": "c6",
+    "recordType": "person",
+    "sourceRecordId": "mdp-021",
+    "targetRecordId": "mdp-022",
+    "matchScore": 0.68,
+    "status": "rejected",
+    "reasonsJson": [
+      "Фамилия: совпадение (Соколов/Соколова)",
+      "Разные люди: брат и сестра"
+    ],
+    "suggestedAction": "not_duplicate",
+    "resolvedBy": "admin",
+    "resolvedAt": "2026-01-27T14:30:00Z",
+    "createdAt": "2026-01-25T10:00:00Z",
+    "updatedAt": "2026-01-27T14:30:00Z"
+  }
+]

@@ -1,5 +1,7 @@
-import { PtReportsList } from '@/modules/30-portal/ui';
+'use client';
 
-export default function PortalReportsPage() {
-  return <PtReportsList />;
+import { PoPerformancePage } from '@/modules/55-portal/ui/PoPerformancePage';
+
+export default function ReportsPage() {
+  return <PoPerformancePage />;
 }

@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vendor Contract",
+  "description": "Contract with vendor",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/Family office ID" },
+    "vendorId": { "type": "string", "description": "Related vendor ID" },
+    "name": { "type": "string", "description": "Contract name" },
+    "contractNumber": { "type": "string", "description": "Contract reference number" },
+    "startAt": { "type": "string", "format": "date-time", "description": "Contract start date" },
+    "endAt": { "type": "string", "format": "date-time", "description": "Contract end date" },
+    "renewalAt": { "type": "string", "format": "date-time", "description": "Renewal notice deadline" },
+    "autoRenewal": { "type": "boolean", "description": "Auto-renewal clause" },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "active", "expiring", "expired", "terminated"],
+      "description": "Contract status"
+    },
+    "feeModelKey": {
+      "type": "string",
+      "enum": ["fixed", "aum", "hourly", "transaction", "retainer", "hybrid"],
+      "description": "Fee structure model"
+    },
+    "feeRulesJson": {
+      "type": "object",
+      "properties": {
+        "baseFee": { "type": "number" },
+        "currency": { "type": "string" },
+        "frequency": { "type": "string", "enum": ["monthly", "quarterly", "annually", "per_transaction"] },
+        "aumRate": { "type": "number" },
+        "hourlyRate": { "type": "number" },
+        "minimumFee": { "type": "number" },
+        "maximumFee": { "type": "number" },
+        "tiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": { "type": "number" },
+              "to": { "type": "number" },
+              "rate": { "type": "number" }
+            }
+          }
+        }
+      },
+      "description": "Fee calculation rules"
+    },
+    "terminationNotice": { "type": "integer", "description": "Termination notice period in days" },
+    "terminationNotes": { "type": "string", "description": "Termination clause notes" },
+    "scopeOfServices": { "type": "string", "description": "Description of services" },
+    "attachmentDocIdsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Linked document IDs from vault"
+    },
+    "linkedInvoiceIdsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Linked invoice IDs"
+    },
+    "notes": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["vendorId", "name", "status"]
+}

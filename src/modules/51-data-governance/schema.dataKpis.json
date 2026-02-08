@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DataKpi",
+  "description": "KPI definition with lineage and quality tracking",
+  "type": "object",
+  "required": ["id", "clientId", "name", "domainKey", "description", "formulaText", "asOf", "trustBadgeKey", "status", "createdAt", "updatedAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "domainKey": { "type": "string", "enum": ["netWorth", "performance", "liquidity", "gl", "tax", "risk", "compliance"] },
+    "description": { "type": "string", "maxLength": 1000 },
+    "formulaText": { "type": "string", "maxLength": 2000 },
+    "assumptionsText": { "type": "string", "maxLength": 2000 },
+    "lastValueJson": {
+      "type": "object",
+      "properties": {
+        "value": { "type": "number" },
+        "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+        "unit": { "type": "string" },
+        "computedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["value", "computedAt"]
+    },
+    "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+    "asOf": { "type": "string", "format": "date" },
+    "trustBadgeKey": { "type": "string", "enum": ["verified", "estimated", "stale"] },
+    "lineageId": { "type": "string" },
+    "lastQualityScoreId": { "type": "string" },
+    "status": { "type": "string", "enum": ["active", "draft", "archived"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

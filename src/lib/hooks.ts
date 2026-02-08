@@ -6,8 +6,10 @@ import { getCollection, createRecord, updateRecord, deleteRecord, clearCache } f
 
 interface UseCollectionResult<T> {
   items: T[];
+  data: T[]; // Alias for items
   total: number;
   loading: boolean;
+  isLoading: boolean; // Alias for loading
   error: string | null;
   refetch: () => void;
   create: (data: Partial<T>) => Promise<T | null>;
@@ -89,7 +91,18 @@ export function useCollection<T extends BaseRecord>(
     }
   };
 
-  return { items, total, loading, error, refetch: fetchData, create, update, remove };
+  return {
+    items,
+    data: items, // Alias for items
+    total,
+    loading,
+    isLoading: loading, // Alias for loading
+    error,
+    refetch: fetchData,
+    create,
+    update,
+    remove
+  };
 }
 
 export function useRecord<T extends BaseRecord>(collection: string, id: string | null) {
@@ -98,27 +111,73 @@ export function useRecord<T extends BaseRecord>(collection: string, id: string |
   const [error, setError] = useState<string | null>(null);
   const fetchingRef = useRef(false);
 
-  useEffect(() => {
+  const fetchData = useCallback(async () => {
     if (!id) {
       setRecord(null);
       return;
     }
-    
+
     if (fetchingRef.current) return;
     fetchingRef.current = true;
-    
+
     setLoading(true);
-    fetch(`/api/collections/${collection}/${id}`)
-      .then(res => res.ok ? res.json() : null)
-      .then(data => setRecord(data))
-      .catch(e => setError(e.message))
-      .finally(() => {
-        setLoading(false);
-        fetchingRef.current = false;
-      });
+    try {
+      const res = await fetch(`/api/collections/${collection}/${id}`);
+      const data = res.ok ? await res.json() : null;
+      setRecord(data);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Unknown error');
+    } finally {
+      setLoading(false);
+      fetchingRef.current = false;
+    }
   }, [collection, id]);
 
-  return { record, loading, error };
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
+  return {
+    record,
+    data: record, // Alias for record
+    loading,
+    isLoading: loading, // Alias for loading
+    error,
+    refetch: fetchData
+  };
+}
+
+export function useMutateRecord(collection: string, id: string | null) {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const mutate = async (data: Record<string, unknown>): Promise<boolean> => {
+    if (!id) return false;
+
+    setLoading(true);
+    setError(null);
+
+    try {
+      const res = await fetch(`/api/collections/${collection}/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) {
+        throw new Error('Update failed');
+      }
+
+      return true;
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Update failed');
+      return false;
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return { mutate, loading, isLoading: loading, error };
 }
 
 export function useAuditEvents(recordId: string | null) {
@@ -200,6 +259,8 @@ const moduleAccess: Record<string, string[]> = {
   'comms': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm', 'advisor', 'client'],
   'ai': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm', 'advisor', 'client'],
   'security': ['admin'],
+  'consent': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm', 'advisor', 'client'],
+  'client-portal': ['admin', 'cio', 'cfo', 'compliance', 'operations', 'rm'],
 };
 
 // Actions allowed per role for each module type

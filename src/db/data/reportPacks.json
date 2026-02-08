@@ -1,330 +1,2220 @@
 [
   {
     "id": "pack-001",
-    "name": "Q4 2024 Executive Report",
-    "packType": "executive",
-    "status": "published",
-    "version": 2,
-    "periodType": "quarterly",
-    "periodStart": "2024-10-01",
-    "periodEnd": "2024-12-31",
-    "periodLabel": "Q4 2024",
-    "scopeType": "global",
-    "clientSafe": false,
+    "clientId": "client-001",
+    "name": "Аудит FY2024 — KPMG",
+    "recipientJson": {
+      "type": "auditor",
+      "org": "KPMG",
+      "contactEmail": "audit@kpmg.com"
+    },
+    "purpose": "Годовой аудит за 2024 финансовый год",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "label": "FY2024"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "shared",
     "templateId": "tpl-001",
-    "sectionIds": ["sec-001", "sec-002", "sec-003", "sec-004", "sec-005", "sec-006", "sec-007", "sec-008"],
-    "description": "Quarterly executive summary for senior leadership",
-    "notes": "Approved by CFO on Jan 15, 2025",
-    "tags": ["executive", "q4", "2024"],
-    "lockedAt": "2025-01-10T09:00:00Z",
-    "lockedBy": "usr-001",
-    "publishedAt": "2025-01-15T14:30:00Z",
-    "publishedBy": "usr-002",
-    "createdBy": "usr-001",
-    "createdAt": "2025-01-05T10:00:00Z",
-    "updatedAt": "2025-01-15T14:30:00Z"
+    "itemsCount": 8,
+    "createdByUserId": "user-001",
+    "approvedByUserId": "user-002",
+    "approvedAt": "2025-01-10T15:00:00Z",
+    "createdAt": "2025-01-05T10:00:00Z"
   },
   {
     "id": "pack-002",
-    "name": "January 2025 Investment Committee Pack",
-    "packType": "committee",
-    "status": "locked",
-    "version": 1,
-    "periodType": "monthly",
-    "periodStart": "2025-01-01",
-    "periodEnd": "2025-01-31",
-    "periodLabel": "January 2025",
-    "scopeType": "global",
-    "clientSafe": false,
+    "clientId": "client-001",
+    "name": "Банк KYC — UBS",
+    "recipientJson": {
+      "type": "bank",
+      "org": "UBS",
+      "contactEmail": "kyc@ubs.com"
+    },
+    "purpose": "Обновление KYC документации",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "approved",
     "templateId": "tpl-002",
-    "sectionIds": ["sec-009", "sec-010", "sec-011", "sec-012", "sec-013", "sec-014", "sec-015", "sec-016"],
-    "description": "Monthly investment committee meeting materials",
-    "tags": ["committee", "january", "2025"],
-    "lockedAt": "2025-01-18T16:00:00Z",
-    "lockedBy": "usr-002",
-    "createdBy": "usr-002",
-    "createdAt": "2025-01-12T08:00:00Z",
-    "updatedAt": "2025-01-18T16:00:00Z"
+    "itemsCount": 6,
+    "createdByUserId": "user-001",
+    "approvedByUserId": "user-002",
+    "approvedAt": "2025-01-12T10:00:00Z",
+    "createdAt": "2025-01-08T10:00:00Z"
   },
   {
     "id": "pack-003",
-    "name": "Johnson Family Q4 2024 Report",
-    "packType": "client",
-    "status": "published",
-    "version": 1,
-    "periodType": "quarterly",
-    "periodStart": "2024-10-01",
-    "periodEnd": "2024-12-31",
-    "periodLabel": "Q4 2024",
-    "scopeType": "client",
-    "scopeId": "client-001",
     "clientId": "client-001",
+    "name": "Налоговый 2024 — PwC",
+    "recipientJson": {
+      "type": "tax",
+      "org": "PwC",
+      "contactEmail": "tax@pwc.com"
+    },
+    "purpose": "Подготовка налоговой декларации",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "label": "FY2024"
+    },
     "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "pending_approval",
     "templateId": "tpl-003",
-    "sectionIds": ["sec-017", "sec-018", "sec-019", "sec-020", "sec-021", "sec-022", "sec-023"],
-    "description": "Quarterly performance report for Johnson Family",
-    "tags": ["client", "johnson", "q4"],
-    "lockedAt": "2025-01-08T11:00:00Z",
-    "lockedBy": "usr-004",
-    "publishedAt": "2025-01-08T14:00:00Z",
-    "publishedBy": "usr-004",
-    "createdBy": "usr-004",
-    "createdAt": "2025-01-03T09:00:00Z",
-    "updatedAt": "2025-01-08T14:00:00Z"
+    "itemsCount": 5,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-15T10:00:00Z"
   },
   {
     "id": "pack-004",
-    "name": "Q3 2024 Executive Report",
-    "packType": "executive",
-    "status": "archived",
-    "version": 2,
-    "periodType": "quarterly",
-    "periodStart": "2024-07-01",
-    "periodEnd": "2024-09-30",
-    "periodLabel": "Q3 2024",
-    "scopeType": "global",
-    "clientSafe": false,
-    "templateId": "tpl-001",
-    "sectionIds": ["sec-024", "sec-025", "sec-026", "sec-027", "sec-028", "sec-029", "sec-030", "sec-031"],
-    "description": "Quarterly executive summary - Q3 2024",
-    "tags": ["executive", "q3", "2024"],
-    "lockedAt": "2024-10-08T10:00:00Z",
-    "lockedBy": "usr-001",
-    "publishedAt": "2024-10-10T09:00:00Z",
-    "publishedBy": "usr-001",
-    "createdBy": "usr-001",
-    "createdAt": "2024-10-02T08:00:00Z",
-    "updatedAt": "2024-12-31T00:00:00Z"
+    "clientId": "client-001",
+    "name": "Юридический Due Diligence",
+    "recipientJson": {
+      "type": "legal",
+      "org": "Clifford Chance",
+      "contactEmail": "dd@cliffordchance.com"
+    },
+    "purpose": "Due diligence для сделки",
+    "scopeJson": {
+      "scopeType": "entity",
+      "scopeId": "entity-001",
+      "scopeName": "Family Trust"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "draft",
+    "templateId": "tpl-004",
+    "itemsCount": 4,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-18T10:00:00Z"
   },
   {
     "id": "pack-005",
-    "name": "December 2024 Committee Pack",
-    "packType": "committee",
-    "status": "published",
-    "version": 1,
-    "periodType": "monthly",
-    "periodStart": "2024-12-01",
-    "periodEnd": "2024-12-31",
-    "periodLabel": "December 2024",
-    "scopeType": "global",
+    "clientId": "client-001",
+    "name": "IC Q4 2024",
+    "recipientJson": {
+      "type": "committee",
+      "org": "Investment Committee"
+    },
+    "purpose": "Квартальный отчёт Q4",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-10-01",
+      "end": "2024-12-31",
+      "label": "Q4 2024"
+    },
     "clientSafe": false,
-    "templateId": "tpl-002",
-    "sectionIds": ["sec-032", "sec-033", "sec-034", "sec-035", "sec-036", "sec-037", "sec-038", "sec-039"],
-    "description": "Year-end investment committee meeting",
-    "tags": ["committee", "december", "2024", "year-end"],
-    "lockedAt": "2024-12-16T14:00:00Z",
-    "lockedBy": "usr-002",
-    "publishedAt": "2024-12-17T09:00:00Z",
-    "publishedBy": "usr-002",
-    "createdBy": "usr-002",
-    "createdAt": "2024-12-10T08:00:00Z",
-    "updatedAt": "2024-12-17T09:00:00Z"
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "templateId": "tpl-005",
+    "itemsCount": 7,
+    "createdByUserId": "user-001",
+    "approvedByUserId": "user-003",
+    "approvedAt": "2025-01-08T10:00:00Z",
+    "createdAt": "2025-01-02T10:00:00Z"
   },
   {
     "id": "pack-006",
-    "name": "Smith Family Q4 2024 Report",
-    "packType": "client",
-    "status": "published",
-    "version": 1,
-    "periodType": "quarterly",
-    "periodStart": "2024-10-01",
-    "periodEnd": "2024-12-31",
-    "periodLabel": "Q4 2024",
-    "scopeType": "client",
-    "scopeId": "client-002",
-    "clientId": "client-002",
+    "clientId": "client-001",
+    "name": "LP Update January",
+    "recipientJson": {
+      "type": "investor",
+      "org": "Family LP"
+    },
+    "purpose": "Месячное обновление для LP",
+    "scopeJson": {
+      "scopeType": "portfolio",
+      "scopeId": "portfolio-001",
+      "scopeName": "Main Portfolio"
+    },
+    "periodJson": {
+      "start": "2025-01-01",
+      "end": "2025-01-31",
+      "label": "January 2025"
+    },
     "clientSafe": true,
-    "templateId": "tpl-003",
-    "sectionIds": ["sec-040", "sec-041", "sec-042", "sec-043", "sec-044", "sec-045", "sec-046"],
-    "description": "Quarterly statement for Smith Family",
-    "tags": ["client", "smith", "q4"],
-    "lockedAt": "2025-01-06T10:00:00Z",
-    "lockedBy": "usr-004",
-    "publishedAt": "2025-01-06T15:00:00Z",
-    "publishedBy": "usr-004",
-    "createdBy": "usr-004",
-    "createdAt": "2025-01-02T09:00:00Z",
-    "updatedAt": "2025-01-06T15:00:00Z"
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "templateId": "tpl-006",
+    "itemsCount": 4,
+    "createdByUserId": "user-002",
+    "approvedByUserId": "user-001",
+    "approvedAt": "2025-01-20T10:00:00Z",
+    "createdAt": "2025-01-15T10:00:00Z"
   },
   {
     "id": "pack-007",
-    "name": "Williams Trust Q4 2024 Report",
-    "packType": "client",
-    "status": "locked",
-    "version": 1,
-    "periodType": "quarterly",
-    "periodStart": "2024-10-01",
-    "periodEnd": "2024-12-31",
-    "periodLabel": "Q4 2024",
-    "scopeType": "entity",
-    "scopeId": "ent-003",
-    "clientId": "client-003",
+    "clientId": "client-002",
+    "name": "Аудит FY2024 — Deloitte",
+    "recipientJson": {
+      "type": "auditor",
+      "org": "Deloitte"
+    },
+    "purpose": "Годовой аудит",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "label": "FY2024"
+    },
     "clientSafe": true,
-    "templateId": "tpl-007",
-    "sectionIds": ["sec-047", "sec-048", "sec-049", "sec-050", "sec-051"],
-    "description": "Trust distribution report for Williams Trust",
-    "tags": ["client", "trust", "williams", "q4"],
-    "lockedAt": "2025-01-09T11:00:00Z",
-    "lockedBy": "usr-003",
-    "createdBy": "usr-003",
-    "createdAt": "2025-01-04T10:00:00Z",
-    "updatedAt": "2025-01-09T11:00:00Z"
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "templateId": "tpl-009",
+    "itemsCount": 9,
+    "createdByUserId": "user-003",
+    "approvedByUserId": "user-004",
+    "approvedAt": "2025-01-11T10:00:00Z",
+    "createdAt": "2025-01-06T10:00:00Z"
   },
   {
     "id": "pack-008",
-    "name": "Brown Family Q4 2024 Report",
-    "packType": "client",
-    "status": "published",
-    "version": 1,
-    "periodType": "quarterly",
-    "periodStart": "2024-10-01",
-    "periodEnd": "2024-12-31",
-    "periodLabel": "Q4 2024",
-    "scopeType": "client",
-    "scopeId": "client-004",
-    "clientId": "client-004",
+    "clientId": "client-002",
+    "name": "Credit Line — Credit Suisse",
+    "recipientJson": {
+      "type": "bank",
+      "org": "Credit Suisse"
+    },
+    "purpose": "Кредитная линия",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
     "clientSafe": true,
-    "templateId": "tpl-003",
-    "sectionIds": ["sec-052", "sec-053", "sec-054", "sec-055", "sec-056", "sec-057", "sec-058"],
-    "description": "Quarterly statement for Brown Family",
-    "tags": ["client", "brown", "q4"],
-    "lockedAt": "2025-01-07T14:00:00Z",
-    "lockedBy": "usr-004",
-    "publishedAt": "2025-01-07T16:00:00Z",
-    "publishedBy": "usr-004",
-    "createdBy": "usr-004",
-    "createdAt": "2025-01-03T11:00:00Z",
-    "updatedAt": "2025-01-07T16:00:00Z"
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "templateId": "tpl-010",
+    "itemsCount": 7,
+    "createdByUserId": "user-003",
+    "approvedByUserId": "user-004",
+    "approvedAt": "2025-01-14T10:00:00Z",
+    "createdAt": "2025-01-10T10:00:00Z"
   },
   {
     "id": "pack-009",
-    "name": "FY 2024 Compliance Annual Review",
-    "packType": "compliance",
-    "status": "draft",
-    "version": 1,
-    "periodType": "annual",
-    "periodStart": "2024-01-01",
-    "periodEnd": "2024-12-31",
-    "periodLabel": "FY 2024",
-    "scopeType": "global",
-    "clientSafe": false,
-    "templateId": "tpl-004",
-    "sectionIds": ["sec-059", "sec-060", "sec-061", "sec-062", "sec-063", "sec-064"],
-    "description": "Annual compliance review for all clients",
-    "notes": "In progress - IPS breach analysis pending",
-    "tags": ["compliance", "annual", "2024"],
-    "createdBy": "usr-005",
-    "createdAt": "2025-01-10T08:00:00Z",
-    "updatedAt": "2025-01-19T14:00:00Z"
+    "clientId": "client-002",
+    "name": "Tax Planning 2025",
+    "recipientJson": {
+      "type": "tax",
+      "org": "EY"
+    },
+    "purpose": "Налоговое планирование",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "label": "FY2025"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "pending_approval",
+    "templateId": "tpl-011",
+    "itemsCount": 6,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-17T10:00:00Z"
   },
   {
     "id": "pack-010",
-    "name": "Investor Demo Pack - January 2025",
-    "packType": "executive",
-    "status": "published",
-    "version": 1,
-    "periodType": "quarterly",
-    "periodStart": "2024-10-01",
-    "periodEnd": "2024-12-31",
-    "periodLabel": "Q4 2024",
-    "scopeType": "global",
+    "clientId": "client-002",
+    "name": "M&A Due Diligence",
+    "recipientJson": {
+      "type": "legal",
+      "org": "Freshfields"
+    },
+    "purpose": "M&A транзакция",
+    "scopeJson": {
+      "scopeType": "entity",
+      "scopeId": "entity-002"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
     "clientSafe": true,
-    "templateId": "tpl-005",
-    "sectionIds": ["sec-065", "sec-066", "sec-067", "sec-068", "sec-069", "sec-070"],
-    "description": "Demo pack for prospective investors",
-    "tags": ["demo", "investor", "presentation"],
-    "lockedAt": "2025-01-14T10:00:00Z",
-    "lockedBy": "usr-001",
-    "publishedAt": "2025-01-14T12:00:00Z",
-    "publishedBy": "usr-001",
-    "createdBy": "usr-001",
-    "createdAt": "2025-01-13T09:00:00Z",
-    "updatedAt": "2025-01-14T12:00:00Z"
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "draft",
+    "templateId": "tpl-012",
+    "itemsCount": 5,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-19T10:00:00Z"
   },
   {
     "id": "pack-011",
-    "name": "February 2025 Committee Pack",
-    "packType": "committee",
-    "status": "draft",
-    "version": 1,
-    "periodType": "monthly",
-    "periodStart": "2025-02-01",
-    "periodEnd": "2025-02-28",
-    "periodLabel": "February 2025",
-    "scopeType": "global",
+    "clientId": "client-003",
+    "name": "IC Annual Review",
+    "recipientJson": {
+      "type": "committee",
+      "org": "Board"
+    },
+    "purpose": "Годовой обзор",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "label": "FY2024"
+    },
     "clientSafe": false,
-    "templateId": "tpl-002",
-    "sectionIds": ["sec-071", "sec-072", "sec-073", "sec-074", "sec-075", "sec-076", "sec-077", "sec-078"],
-    "description": "February investment committee meeting",
-    "tags": ["committee", "february", "2025"],
-    "createdBy": "usr-002",
-    "createdAt": "2025-01-20T08:00:00Z",
-    "updatedAt": "2025-01-20T08:00:00Z"
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "templateId": "tpl-013",
+    "itemsCount": 10,
+    "createdByUserId": "user-005",
+    "approvedByUserId": "user-006",
+    "approvedAt": "2025-01-09T10:00:00Z",
+    "createdAt": "2025-01-04T10:00:00Z"
   },
   {
     "id": "pack-012",
-    "name": "Davis Holdings Tax Report 2024",
-    "packType": "client",
-    "status": "locked",
-    "version": 1,
-    "periodType": "annual",
-    "periodStart": "2024-01-01",
-    "periodEnd": "2024-12-31",
-    "periodLabel": "Tax Year 2024",
-    "scopeType": "client",
-    "scopeId": "client-005",
-    "clientId": "client-005",
+    "clientId": "client-003",
+    "name": "Co-Investor Report",
+    "recipientJson": {
+      "type": "investor",
+      "org": "Partner Family"
+    },
+    "purpose": "Совместные инвестиции",
+    "scopeJson": {
+      "scopeType": "portfolio"
+    },
+    "periodJson": {
+      "start": "2024-10-01",
+      "end": "2024-12-31",
+      "label": "Q4 2024"
+    },
     "clientSafe": true,
-    "templateId": "tpl-006",
-    "sectionIds": ["sec-079", "sec-080", "sec-081", "sec-082", "sec-083", "sec-084"],
-    "description": "Annual tax planning report for Davis Holdings",
-    "tags": ["client", "tax", "davis", "2024"],
-    "lockedAt": "2025-01-17T15:00:00Z",
-    "lockedBy": "usr-003",
-    "createdBy": "usr-003",
-    "createdAt": "2025-01-11T09:00:00Z",
-    "updatedAt": "2025-01-17T15:00:00Z"
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "templateId": "tpl-014",
+    "itemsCount": 5,
+    "createdByUserId": "user-005",
+    "approvedByUserId": "user-006",
+    "approvedAt": "2025-01-13T10:00:00Z",
+    "createdAt": "2025-01-09T10:00:00Z"
   },
   {
     "id": "pack-013",
-    "name": "Miller Family January 2025",
-    "packType": "client",
-    "status": "draft",
-    "version": 1,
-    "periodType": "monthly",
-    "periodStart": "2025-01-01",
-    "periodEnd": "2025-01-31",
-    "periodLabel": "January 2025",
-    "scopeType": "client",
-    "scopeId": "client-006",
-    "clientId": "client-006",
+    "clientId": "client-001",
+    "name": "Регулятор AML",
+    "recipientJson": {
+      "type": "regulator",
+      "org": "FCA"
+    },
+    "purpose": "AML проверка",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
     "clientSafe": true,
-    "templateId": "tpl-003",
-    "sectionIds": ["sec-085", "sec-086", "sec-087", "sec-088", "sec-089", "sec-090", "sec-091"],
-    "description": "Monthly statement for Miller Family",
-    "tags": ["client", "miller", "january"],
-    "createdBy": "usr-004",
-    "createdAt": "2025-01-18T10:00:00Z",
-    "updatedAt": "2025-01-19T16:00:00Z"
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "closed",
+    "templateId": "tpl-007",
+    "itemsCount": 8,
+    "createdByUserId": "user-001",
+    "approvedByUserId": "user-002",
+    "approvedAt": "2024-12-01T10:00:00Z",
+    "createdAt": "2024-11-15T10:00:00Z"
   },
   {
     "id": "pack-014",
-    "name": "Monthly Performance Flash - January 2025",
-    "packType": "executive",
-    "status": "draft",
-    "version": 1,
-    "periodType": "monthly",
-    "periodStart": "2025-01-01",
-    "periodEnd": "2025-01-31",
-    "periodLabel": "January 2025",
-    "scopeType": "global",
+    "clientId": "client-001",
+    "name": "Quick Net Worth",
+    "recipientJson": {
+      "type": "other",
+      "org": "Family Office"
+    },
+    "purpose": "Быстрая сводка",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2025-01-01",
+      "end": "2025-01-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "low",
+    "watermarkKey": "off",
+    "statusKey": "shared",
+    "itemsCount": 2,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-20T10:00:00Z"
+  },
+  {
+    "id": "pack-015",
+    "clientId": "client-001",
+    "name": "Аудит H1 2024",
+    "recipientJson": {
+      "type": "auditor",
+      "org": "KPMG"
+    },
+    "purpose": "Промежуточный аудит",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-06-30",
+      "label": "H1 2024"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "closed",
+    "itemsCount": 6,
+    "createdByUserId": "user-001",
+    "approvedByUserId": "user-002",
+    "approvedAt": "2024-07-15T10:00:00Z",
+    "createdAt": "2024-07-01T10:00:00Z"
+  },
+  {
+    "id": "pack-016",
+    "clientId": "client-002",
+    "name": "Банк refresh Q4",
+    "recipientJson": {
+      "type": "bank",
+      "org": "JP Morgan"
+    },
+    "purpose": "Квартальное обновление",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-10-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 4,
+    "createdByUserId": "user-003",
+    "approvedByUserId": "user-004",
+    "approvedAt": "2025-01-05T10:00:00Z",
+    "createdAt": "2025-01-02T10:00:00Z"
+  },
+  {
+    "id": "pack-017",
+    "clientId": "client-002",
+    "name": "Tax K-1 Package",
+    "recipientJson": {
+      "type": "tax",
+      "org": "EY"
+    },
+    "purpose": "K-1 формы",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "draft",
+    "itemsCount": 3,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-21T10:00:00Z"
+  },
+  {
+    "id": "pack-018",
+    "clientId": "client-003",
+    "name": "Legal Entity Review",
+    "recipientJson": {
+      "type": "legal",
+      "org": "Linklaters"
+    },
+    "purpose": "Обзор структуры",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "pending_approval",
+    "itemsCount": 6,
+    "createdByUserId": "user-005",
+    "createdAt": "2025-01-16T10:00:00Z"
+  },
+  {
+    "id": "pack-019",
+    "clientId": "client-003",
+    "name": "IC Strategy Review",
+    "recipientJson": {
+      "type": "committee",
+      "org": "Strategy Board"
+    },
+    "purpose": "Стратегический обзор",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
     "clientSafe": false,
-    "templateId": "tpl-008",
-    "sectionIds": ["sec-092", "sec-093", "sec-094", "sec-095"],
-    "description": "Quick monthly performance update",
-    "tags": ["executive", "flash", "january"],
-    "createdBy": "usr-001",
-    "createdAt": "2025-01-19T08:00:00Z",
-    "updatedAt": "2025-01-19T08:00:00Z"
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 8,
+    "createdByUserId": "user-005",
+    "approvedByUserId": "user-006",
+    "approvedAt": "2025-01-18T10:00:00Z",
+    "createdAt": "2025-01-12T10:00:00Z"
+  },
+  {
+    "id": "pack-020",
+    "clientId": "client-001",
+    "name": "LP Q1 2025",
+    "recipientJson": {
+      "type": "investor",
+      "org": "Investors"
+    },
+    "purpose": "Q1 отчёт",
+    "scopeJson": {
+      "scopeType": "portfolio"
+    },
+    "periodJson": {
+      "start": "2025-01-01",
+      "end": "2025-03-31",
+      "label": "Q1 2025"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "draft",
+    "itemsCount": 4,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-22T10:00:00Z"
+  },
+  {
+    "id": "pack-021",
+    "clientId": "client-001",
+    "name": "SEC Filing Support",
+    "recipientJson": {
+      "type": "regulator",
+      "org": "SEC"
+    },
+    "purpose": "Поддержка filing",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "closed",
+    "itemsCount": 7,
+    "createdByUserId": "user-001",
+    "createdAt": "2024-10-01T10:00:00Z"
+  },
+  {
+    "id": "pack-022",
+    "clientId": "client-002",
+    "name": "Аудит Trust A",
+    "recipientJson": {
+      "type": "auditor",
+      "org": "BDO"
+    },
+    "purpose": "Аудит траста",
+    "scopeJson": {
+      "scopeType": "entity",
+      "scopeId": "trust-001",
+      "scopeName": "Trust A"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 5,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-07T10:00:00Z"
+  },
+  {
+    "id": "pack-023",
+    "clientId": "client-002",
+    "name": "Банк Lombard",
+    "recipientJson": {
+      "type": "bank",
+      "org": "Lombard Odier"
+    },
+    "purpose": "Обновление отношений",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-07-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 4,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-11T10:00:00Z"
+  },
+  {
+    "id": "pack-024",
+    "clientId": "client-003",
+    "name": "Tax Offshore Review",
+    "recipientJson": {
+      "type": "tax",
+      "org": "Baker McKenzie"
+    },
+    "purpose": "Оффшорный обзор",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "draft",
+    "itemsCount": 6,
+    "createdByUserId": "user-005",
+    "createdAt": "2025-01-20T10:00:00Z"
+  },
+  {
+    "id": "pack-025",
+    "clientId": "client-001",
+    "name": "Legal IP Review",
+    "recipientJson": {
+      "type": "legal",
+      "org": "Hogan Lovells"
+    },
+    "purpose": "IP обзор",
+    "scopeJson": {
+      "scopeType": "entity"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "pending_approval",
+    "itemsCount": 4,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-19T10:00:00Z"
+  },
+  {
+    "id": "pack-026",
+    "clientId": "client-001",
+    "name": "IC Risk Review",
+    "recipientJson": {
+      "type": "committee",
+      "org": "Risk Committee"
+    },
+    "purpose": "Обзор рисков",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": false,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 6,
+    "createdByUserId": "user-002",
+    "createdAt": "2025-01-03T10:00:00Z"
+  },
+  {
+    "id": "pack-027",
+    "clientId": "client-002",
+    "name": "LP Annual Letter",
+    "recipientJson": {
+      "type": "investor",
+      "org": "LPs"
+    },
+    "purpose": "Годовое письмо",
+    "scopeJson": {
+      "scopeType": "portfolio"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 5,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-08T10:00:00Z"
+  },
+  {
+    "id": "pack-028",
+    "clientId": "client-003",
+    "name": "FCA Report",
+    "recipientJson": {
+      "type": "regulator",
+      "org": "FCA"
+    },
+    "purpose": "Регуляторный отчёт",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "closed",
+    "itemsCount": 8,
+    "createdByUserId": "user-005",
+    "createdAt": "2024-11-01T10:00:00Z"
+  },
+  {
+    "id": "pack-029",
+    "clientId": "client-001",
+    "name": "Summary Feb",
+    "recipientJson": {
+      "type": "other",
+      "org": "Internal"
+    },
+    "purpose": "Месячная сводка",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2025-02-01",
+      "end": "2025-02-28"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "low",
+    "watermarkKey": "off",
+    "statusKey": "draft",
+    "itemsCount": 2,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-25T10:00:00Z"
+  },
+  {
+    "id": "pack-030",
+    "clientId": "client-001",
+    "name": "Audit Special",
+    "recipientJson": {
+      "type": "auditor",
+      "org": "GT"
+    },
+    "purpose": "Специальный аудит",
+    "scopeJson": {
+      "scopeType": "entity"
+    },
+    "periodJson": {
+      "start": "2024-06-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 7,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-04T10:00:00Z"
+  },
+  {
+    "id": "pack-031",
+    "clientId": "client-002",
+    "name": "Bank Annual",
+    "recipientJson": {
+      "type": "bank",
+      "org": "Deutsche Bank"
+    },
+    "purpose": "Годовой отчёт",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "pending_approval",
+    "itemsCount": 6,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-18T10:00:00Z"
+  },
+  {
+    "id": "pack-032",
+    "clientId": "client-002",
+    "name": "Tax Estate",
+    "recipientJson": {
+      "type": "tax",
+      "org": "Withers"
+    },
+    "purpose": "Estate planning",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "draft",
+    "itemsCount": 5,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-22T10:00:00Z"
+  },
+  {
+    "id": "pack-033",
+    "clientId": "client-003",
+    "name": "Legal Contracts",
+    "recipientJson": {
+      "type": "legal",
+      "org": "Allen & Overy"
+    },
+    "purpose": "Обзор контрактов",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 4,
+    "createdByUserId": "user-005",
+    "createdAt": "2025-01-10T10:00:00Z"
+  },
+  {
+    "id": "pack-034",
+    "clientId": "client-001",
+    "name": "IC Allocation",
+    "recipientJson": {
+      "type": "committee",
+      "org": "IC"
+    },
+    "purpose": "Аллокация",
+    "scopeJson": {
+      "scopeType": "portfolio"
+    },
+    "periodJson": {
+      "start": "2024-10-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": false,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 5,
+    "createdByUserId": "user-002",
+    "createdAt": "2025-01-06T10:00:00Z"
+  },
+  {
+    "id": "pack-035",
+    "clientId": "client-002",
+    "name": "LP Distribution",
+    "recipientJson": {
+      "type": "investor",
+      "org": "Partners"
+    },
+    "purpose": "Дистрибуция",
+    "scopeJson": {
+      "scopeType": "portfolio"
+    },
+    "periodJson": {
+      "start": "2024-10-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 3,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-05T10:00:00Z"
+  },
+  {
+    "id": "pack-036",
+    "clientId": "client-003",
+    "name": "FINRA Report",
+    "recipientJson": {
+      "type": "regulator",
+      "org": "FINRA"
+    },
+    "purpose": "FINRA отчёт",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 6,
+    "createdByUserId": "user-005",
+    "createdAt": "2025-01-14T10:00:00Z"
+  },
+  {
+    "id": "pack-037",
+    "clientId": "client-001",
+    "name": "Misc Pack",
+    "recipientJson": {
+      "type": "other",
+      "org": "Misc"
+    },
+    "purpose": "Разное",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2025-01-01",
+      "end": "2025-01-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "low",
+    "watermarkKey": "off",
+    "statusKey": "draft",
+    "itemsCount": 2,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-24T10:00:00Z"
+  },
+  {
+    "id": "pack-038",
+    "clientId": "client-001",
+    "name": "Audit Q1",
+    "recipientJson": {
+      "type": "auditor",
+      "org": "KPMG"
+    },
+    "purpose": "Q1 review",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2025-01-01",
+      "end": "2025-03-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "draft",
+    "itemsCount": 5,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-26T10:00:00Z"
+  },
+  {
+    "id": "pack-039",
+    "clientId": "client-002",
+    "name": "Bank Compliance",
+    "recipientJson": {
+      "type": "bank",
+      "org": "HSBC"
+    },
+    "purpose": "Комплаенс",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 5,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-03T10:00:00Z"
+  },
+  {
+    "id": "pack-040",
+    "clientId": "client-002",
+    "name": "Tax FBAR",
+    "recipientJson": {
+      "type": "tax",
+      "org": "Grant Thornton"
+    },
+    "purpose": "FBAR filing",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "pending_approval",
+    "itemsCount": 4,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-20T10:00:00Z"
+  },
+  {
+    "id": "pack-041",
+    "clientId": "client-003",
+    "name": "Legal M&A",
+    "recipientJson": {
+      "type": "legal",
+      "org": "Skadden"
+    },
+    "purpose": "M&A support",
+    "scopeJson": {
+      "scopeType": "entity"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "draft",
+    "itemsCount": 7,
+    "createdByUserId": "user-005",
+    "createdAt": "2025-01-23T10:00:00Z"
+  },
+  {
+    "id": "pack-042",
+    "clientId": "client-001",
+    "name": "IC Performance",
+    "recipientJson": {
+      "type": "committee",
+      "org": "IC"
+    },
+    "purpose": "Результаты",
+    "scopeJson": {
+      "scopeType": "portfolio"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": false,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 6,
+    "createdByUserId": "user-002",
+    "createdAt": "2025-01-09T10:00:00Z"
+  },
+  {
+    "id": "pack-043",
+    "clientId": "client-002",
+    "name": "LP Capital Call",
+    "recipientJson": {
+      "type": "investor",
+      "org": "LPs"
+    },
+    "purpose": "Capital call",
+    "scopeJson": {
+      "scopeType": "portfolio"
+    },
+    "periodJson": {
+      "start": "2025-01-01",
+      "end": "2025-01-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 3,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-12T10:00:00Z"
+  },
+  {
+    "id": "pack-044",
+    "clientId": "client-003",
+    "name": "CFTC Report",
+    "recipientJson": {
+      "type": "regulator",
+      "org": "CFTC"
+    },
+    "purpose": "CFTC отчёт",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "closed",
+    "itemsCount": 5,
+    "createdByUserId": "user-005",
+    "createdAt": "2024-12-01T10:00:00Z"
+  },
+  {
+    "id": "pack-045",
+    "clientId": "client-001",
+    "name": "Internal Summary",
+    "recipientJson": {
+      "type": "other",
+      "org": "FO"
+    },
+    "purpose": "Внутренняя сводка",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2025-01-01",
+      "end": "2025-01-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "low",
+    "watermarkKey": "off",
+    "statusKey": "shared",
+    "itemsCount": 2,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "pack-046",
+    "clientId": "client-001",
+    "name": "Audit Entity B",
+    "recipientJson": {
+      "type": "auditor",
+      "org": "RSM"
+    },
+    "purpose": "Entity B audit",
+    "scopeJson": {
+      "scopeType": "entity"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "pending_approval",
+    "itemsCount": 6,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-21T10:00:00Z"
+  },
+  {
+    "id": "pack-047",
+    "clientId": "client-002",
+    "name": "Bank Relationship",
+    "recipientJson": {
+      "type": "bank",
+      "org": "Pictet"
+    },
+    "purpose": "Отношения",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-07-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "draft",
+    "itemsCount": 4,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-24T10:00:00Z"
+  },
+  {
+    "id": "pack-048",
+    "clientId": "client-002",
+    "name": "Tax International",
+    "recipientJson": {
+      "type": "tax",
+      "org": "BKD"
+    },
+    "purpose": "Международные налоги",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 5,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-11T10:00:00Z"
+  },
+  {
+    "id": "pack-049",
+    "clientId": "client-003",
+    "name": "Legal Trust",
+    "recipientJson": {
+      "type": "legal",
+      "org": "Weil"
+    },
+    "purpose": "Trust review",
+    "scopeJson": {
+      "scopeType": "entity"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 4,
+    "createdByUserId": "user-005",
+    "createdAt": "2025-01-07T10:00:00Z"
+  },
+  {
+    "id": "pack-050",
+    "clientId": "client-001",
+    "name": "IC Quarterly",
+    "recipientJson": {
+      "type": "committee",
+      "org": "IC"
+    },
+    "purpose": "Квартальный",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-10-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": false,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "closed",
+    "itemsCount": 7,
+    "createdByUserId": "user-002",
+    "createdAt": "2024-12-15T10:00:00Z"
+  },
+  {
+    "id": "pack-051",
+    "clientId": "client-002",
+    "name": "LP Quarterly",
+    "recipientJson": {
+      "type": "investor",
+      "org": "Fund LPs"
+    },
+    "purpose": "Quarterly update",
+    "scopeJson": {
+      "scopeType": "portfolio"
+    },
+    "periodJson": {
+      "start": "2024-10-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 4,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-08T10:00:00Z"
+  },
+  {
+    "id": "pack-052",
+    "clientId": "client-003",
+    "name": "OCC Report",
+    "recipientJson": {
+      "type": "regulator",
+      "org": "OCC"
+    },
+    "purpose": "OCC filing",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 6,
+    "createdByUserId": "user-005",
+    "createdAt": "2025-01-16T10:00:00Z"
+  },
+  {
+    "id": "pack-053",
+    "clientId": "client-001",
+    "name": "Quick Report",
+    "recipientJson": {
+      "type": "other",
+      "org": "Family"
+    },
+    "purpose": "Quick update",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2025-01-15",
+      "end": "2025-01-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "low",
+    "watermarkKey": "off",
+    "statusKey": "draft",
+    "itemsCount": 1,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-27T10:00:00Z"
+  },
+  {
+    "id": "pack-054",
+    "clientId": "client-001",
+    "name": "Audit Interim",
+    "recipientJson": {
+      "type": "auditor",
+      "org": "Mazars"
+    },
+    "purpose": "Interim audit",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-07-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 5,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-02T10:00:00Z"
+  },
+  {
+    "id": "pack-055",
+    "clientId": "client-002",
+    "name": "Bank Update",
+    "recipientJson": {
+      "type": "bank",
+      "org": "Citi"
+    },
+    "purpose": "Periodic update",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-10-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 4,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-13T10:00:00Z"
+  },
+  {
+    "id": "pack-056",
+    "clientId": "client-002",
+    "name": "Tax Trust",
+    "recipientJson": {
+      "type": "tax",
+      "org": "Andersen"
+    },
+    "purpose": "Trust taxation",
+    "scopeJson": {
+      "scopeType": "entity"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "pending_approval",
+    "itemsCount": 5,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-19T10:00:00Z"
+  },
+  {
+    "id": "pack-057",
+    "clientId": "client-003",
+    "name": "Legal Foundation",
+    "recipientJson": {
+      "type": "legal",
+      "org": "DLA Piper"
+    },
+    "purpose": "Foundation review",
+    "scopeJson": {
+      "scopeType": "entity"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "draft",
+    "itemsCount": 4,
+    "createdByUserId": "user-005",
+    "createdAt": "2025-01-25T10:00:00Z"
+  },
+  {
+    "id": "pack-058",
+    "clientId": "client-001",
+    "name": "IC Private Equity",
+    "recipientJson": {
+      "type": "committee",
+      "org": "PE Committee"
+    },
+    "purpose": "PE review",
+    "scopeJson": {
+      "scopeType": "portfolio"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": false,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 6,
+    "createdByUserId": "user-002",
+    "createdAt": "2025-01-10T10:00:00Z"
+  },
+  {
+    "id": "pack-059",
+    "clientId": "client-002",
+    "name": "LP Year End",
+    "recipientJson": {
+      "type": "investor",
+      "org": "All LPs"
+    },
+    "purpose": "Year end",
+    "scopeJson": {
+      "scopeType": "portfolio"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 5,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-06T10:00:00Z"
+  },
+  {
+    "id": "pack-060",
+    "clientId": "client-003",
+    "name": "State Regulator",
+    "recipientJson": {
+      "type": "regulator",
+      "org": "State Authority"
+    },
+    "purpose": "State filing",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "closed",
+    "itemsCount": 5,
+    "createdByUserId": "user-005",
+    "createdAt": "2024-11-15T10:00:00Z"
+  },
+  {
+    "id": "pack-061",
+    "clientId": "client-001",
+    "name": "Dashboard Export",
+    "recipientJson": {
+      "type": "other",
+      "org": "Internal"
+    },
+    "purpose": "Dashboard",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2025-01-01",
+      "end": "2025-01-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "low",
+    "watermarkKey": "off",
+    "statusKey": "shared",
+    "itemsCount": 2,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-18T10:00:00Z"
+  },
+  {
+    "id": "pack-062",
+    "clientId": "client-001",
+    "name": "Audit Subsidiary",
+    "recipientJson": {
+      "type": "auditor",
+      "org": "Crowe"
+    },
+    "purpose": "Subsidiary audit",
+    "scopeJson": {
+      "scopeType": "entity"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 5,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-14T10:00:00Z"
+  },
+  {
+    "id": "pack-063",
+    "clientId": "client-002",
+    "name": "Bank Wealth",
+    "recipientJson": {
+      "type": "bank",
+      "org": "Julius Baer"
+    },
+    "purpose": "Wealth review",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 6,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-04T10:00:00Z"
+  },
+  {
+    "id": "pack-064",
+    "clientId": "client-002",
+    "name": "Tax Gift",
+    "recipientJson": {
+      "type": "tax",
+      "org": "RSM"
+    },
+    "purpose": "Gift tax",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "draft",
+    "itemsCount": 4,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-26T10:00:00Z"
+  },
+  {
+    "id": "pack-065",
+    "clientId": "client-003",
+    "name": "Legal Compliance",
+    "recipientJson": {
+      "type": "legal",
+      "org": "White & Case"
+    },
+    "purpose": "Compliance review",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "pending_approval",
+    "itemsCount": 5,
+    "createdByUserId": "user-005",
+    "createdAt": "2025-01-17T10:00:00Z"
+  },
+  {
+    "id": "pack-066",
+    "clientId": "client-001",
+    "name": "IC Real Estate",
+    "recipientJson": {
+      "type": "committee",
+      "org": "RE Committee"
+    },
+    "purpose": "RE review",
+    "scopeJson": {
+      "scopeType": "portfolio"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": false,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 5,
+    "createdByUserId": "user-002",
+    "createdAt": "2025-01-05T10:00:00Z"
+  },
+  {
+    "id": "pack-067",
+    "clientId": "client-002",
+    "name": "LP Semi-Annual",
+    "recipientJson": {
+      "type": "investor",
+      "org": "LPs"
+    },
+    "purpose": "Semi-annual",
+    "scopeJson": {
+      "scopeType": "portfolio"
+    },
+    "periodJson": {
+      "start": "2024-07-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 4,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-09T10:00:00Z"
+  },
+  {
+    "id": "pack-068",
+    "clientId": "client-003",
+    "name": "EU Regulator",
+    "recipientJson": {
+      "type": "regulator",
+      "org": "ESMA"
+    },
+    "purpose": "EU compliance",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 7,
+    "createdByUserId": "user-005",
+    "createdAt": "2025-01-12T10:00:00Z"
+  },
+  {
+    "id": "pack-069",
+    "clientId": "client-001",
+    "name": "Monthly Brief",
+    "recipientJson": {
+      "type": "other",
+      "org": "Family"
+    },
+    "purpose": "Monthly brief",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2025-01-01",
+      "end": "2025-01-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "low",
+    "watermarkKey": "off",
+    "statusKey": "draft",
+    "itemsCount": 2,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-28T10:00:00Z"
+  },
+  {
+    "id": "pack-070",
+    "clientId": "client-001",
+    "name": "Audit Foundation",
+    "recipientJson": {
+      "type": "auditor",
+      "org": "Moore"
+    },
+    "purpose": "Foundation audit",
+    "scopeJson": {
+      "scopeType": "entity"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "pending_approval",
+    "itemsCount": 5,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-22T10:00:00Z"
+  },
+  {
+    "id": "pack-071",
+    "clientId": "client-002",
+    "name": "Bank Private",
+    "recipientJson": {
+      "type": "bank",
+      "org": "Rothschild"
+    },
+    "purpose": "Private banking",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "draft",
+    "itemsCount": 5,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-25T10:00:00Z"
+  },
+  {
+    "id": "pack-072",
+    "clientId": "client-002",
+    "name": "Tax State",
+    "recipientJson": {
+      "type": "tax",
+      "org": "Local CPA"
+    },
+    "purpose": "State tax",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 4,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "pack-073",
+    "clientId": "client-003",
+    "name": "Legal LP",
+    "recipientJson": {
+      "type": "legal",
+      "org": "Kirkland"
+    },
+    "purpose": "LP agreements",
+    "scopeJson": {
+      "scopeType": "entity"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 4,
+    "createdByUserId": "user-005",
+    "createdAt": "2025-01-08T10:00:00Z"
+  },
+  {
+    "id": "pack-074",
+    "clientId": "client-001",
+    "name": "IC Hedge",
+    "recipientJson": {
+      "type": "committee",
+      "org": "HF Committee"
+    },
+    "purpose": "Hedge fund review",
+    "scopeJson": {
+      "scopeType": "portfolio"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": false,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 5,
+    "createdByUserId": "user-002",
+    "createdAt": "2025-01-11T10:00:00Z"
+  },
+  {
+    "id": "pack-075",
+    "clientId": "client-002",
+    "name": "LP Monthly",
+    "recipientJson": {
+      "type": "investor",
+      "org": "Monthly LPs"
+    },
+    "purpose": "Monthly report",
+    "scopeJson": {
+      "scopeType": "portfolio"
+    },
+    "periodJson": {
+      "start": "2025-01-01",
+      "end": "2025-01-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 3,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-20T10:00:00Z"
+  },
+  {
+    "id": "pack-076",
+    "clientId": "client-003",
+    "name": "Swiss Regulator",
+    "recipientJson": {
+      "type": "regulator",
+      "org": "FINMA"
+    },
+    "purpose": "Swiss compliance",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "closed",
+    "itemsCount": 6,
+    "createdByUserId": "user-005",
+    "createdAt": "2024-10-15T10:00:00Z"
+  },
+  {
+    "id": "pack-077",
+    "clientId": "client-001",
+    "name": "Family Update",
+    "recipientJson": {
+      "type": "other",
+      "org": "Family Members"
+    },
+    "purpose": "Family update",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2025-01-01",
+      "end": "2025-01-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "low",
+    "watermarkKey": "off",
+    "statusKey": "shared",
+    "itemsCount": 2,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-19T10:00:00Z"
+  },
+  {
+    "id": "pack-078",
+    "clientId": "client-001",
+    "name": "Audit SPV",
+    "recipientJson": {
+      "type": "auditor",
+      "org": "Baker Tilly"
+    },
+    "purpose": "SPV audit",
+    "scopeJson": {
+      "scopeType": "entity"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 4,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-03T10:00:00Z"
+  },
+  {
+    "id": "pack-079",
+    "clientId": "client-002",
+    "name": "Bank Trust",
+    "recipientJson": {
+      "type": "bank",
+      "org": "Northern Trust"
+    },
+    "purpose": "Trust account",
+    "scopeJson": {
+      "scopeType": "entity"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 5,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-16T10:00:00Z"
+  },
+  {
+    "id": "pack-080",
+    "clientId": "client-002",
+    "name": "Tax Charitable",
+    "recipientJson": {
+      "type": "tax",
+      "org": "Charitable CPA"
+    },
+    "purpose": "Charitable giving",
+    "scopeJson": {
+      "scopeType": "entity"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "pending_approval",
+    "itemsCount": 4,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-23T10:00:00Z"
+  },
+  {
+    "id": "pack-081",
+    "clientId": "client-003",
+    "name": "Legal Restructure",
+    "recipientJson": {
+      "type": "legal",
+      "org": "Sullivan"
+    },
+    "purpose": "Restructuring",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "draft",
+    "itemsCount": 6,
+    "createdByUserId": "user-005",
+    "createdAt": "2025-01-26T10:00:00Z"
+  },
+  {
+    "id": "pack-082",
+    "clientId": "client-001",
+    "name": "IC Credit",
+    "recipientJson": {
+      "type": "committee",
+      "org": "Credit Committee"
+    },
+    "purpose": "Credit review",
+    "scopeJson": {
+      "scopeType": "portfolio"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": false,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 5,
+    "createdByUserId": "user-002",
+    "createdAt": "2025-01-07T10:00:00Z"
+  },
+  {
+    "id": "pack-083",
+    "clientId": "client-002",
+    "name": "LP Distributions",
+    "recipientJson": {
+      "type": "investor",
+      "org": "LPs"
+    },
+    "purpose": "Distributions",
+    "scopeJson": {
+      "scopeType": "portfolio"
+    },
+    "periodJson": {
+      "start": "2024-10-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 3,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-14T10:00:00Z"
+  },
+  {
+    "id": "pack-084",
+    "clientId": "client-003",
+    "name": "UK Regulator",
+    "recipientJson": {
+      "type": "regulator",
+      "org": "FCA UK"
+    },
+    "purpose": "UK filing",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 6,
+    "createdByUserId": "user-005",
+    "createdAt": "2025-01-18T10:00:00Z"
+  },
+  {
+    "id": "pack-085",
+    "clientId": "client-001",
+    "name": "Weekly Summary",
+    "recipientJson": {
+      "type": "other",
+      "org": "FO"
+    },
+    "purpose": "Weekly",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2025-01-20",
+      "end": "2025-01-26"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "low",
+    "watermarkKey": "off",
+    "statusKey": "draft",
+    "itemsCount": 1,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-27T14:00:00Z"
+  },
+  {
+    "id": "pack-086",
+    "clientId": "client-001",
+    "name": "Audit Partners",
+    "recipientJson": {
+      "type": "auditor",
+      "org": "Partners Audit"
+    },
+    "purpose": "Partners audit",
+    "scopeJson": {
+      "scopeType": "entity"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 5,
+    "createdByUserId": "user-001",
+    "createdAt": "2025-01-17T10:00:00Z"
+  },
+  {
+    "id": "pack-087",
+    "clientId": "client-002",
+    "name": "Bank Family",
+    "recipientJson": {
+      "type": "bank",
+      "org": "Family Bank"
+    },
+    "purpose": "Family banking",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "shared",
+    "itemsCount": 4,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-10T10:00:00Z"
+  },
+  {
+    "id": "pack-088",
+    "clientId": "client-002",
+    "name": "Tax Review",
+    "recipientJson": {
+      "type": "tax",
+      "org": "Tax Review LLP"
+    },
+    "purpose": "Tax review",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "high",
+    "watermarkKey": "on",
+    "statusKey": "draft",
+    "itemsCount": 5,
+    "createdByUserId": "user-003",
+    "createdAt": "2025-01-28T10:00:00Z"
+  },
+  {
+    "id": "pack-089",
+    "clientId": "client-003",
+    "name": "Legal Advisory",
+    "recipientJson": {
+      "type": "legal",
+      "org": "Advisory LLP"
+    },
+    "purpose": "Legal advisory",
+    "scopeJson": {
+      "scopeType": "household"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": true,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "approved",
+    "itemsCount": 4,
+    "createdByUserId": "user-005",
+    "createdAt": "2025-01-13T10:00:00Z"
+  },
+  {
+    "id": "pack-090",
+    "clientId": "client-001",
+    "name": "IC Fixed Income",
+    "recipientJson": {
+      "type": "committee",
+      "org": "FI Committee"
+    },
+    "purpose": "Fixed income",
+    "scopeJson": {
+      "scopeType": "portfolio"
+    },
+    "periodJson": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "clientSafe": false,
+    "sensitivityKey": "medium",
+    "watermarkKey": "on",
+    "statusKey": "pending_approval",
+    "itemsCount": 5,
+    "createdByUserId": "user-002",
+    "createdAt": "2025-01-21T10:00:00Z"
   }
 ]

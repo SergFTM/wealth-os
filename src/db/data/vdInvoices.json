@@ -1,0 +1,156 @@
+[
+  {
+    "id": "vinv-001",
+    "clientId": "c1",
+    "vendorId": "vd-001",
+    "linkedContractId": "vc-001",
+    "invoiceRef": "UBS-INV-2024-Q3",
+    "invoiceDate": "2024-10-01",
+    "dueDate": "2024-10-31",
+    "amount": 156250,
+    "currency": "USD",
+    "categoryKey": "management_fee",
+    "status": "paid",
+    "lineItemsJson": [
+      {
+        "description": "Q3 2024 Management Fee",
+        "quantity": 1,
+        "unitPrice": 156250,
+        "amount": 156250,
+        "category": "management_fee"
+      }
+    ],
+    "anomalyScore": 5,
+    "anomalyFlag": false,
+    "expectedAmount": 150000,
+    "variance": 6250,
+    "paidAt": "2024-10-28T10:00:00Z",
+    "createdAt": "2024-10-01T09:00:00Z",
+    "updatedAt": "2024-10-28T10:00:00Z"
+  },
+  {
+    "id": "vinv-002",
+    "clientId": "c1",
+    "vendorId": "vd-005",
+    "linkedContractId": "vc-003",
+    "invoiceRef": "KPMG-AUD-2024-FINAL",
+    "invoiceDate": "2024-09-15",
+    "dueDate": "2024-10-15",
+    "amount": 175000,
+    "currency": "USD",
+    "categoryKey": "audit_fee",
+    "status": "paid",
+    "lineItemsJson": [
+      {
+        "description": "Annual Audit Fee 2024",
+        "quantity": 1,
+        "unitPrice": 175000,
+        "amount": 175000,
+        "category": "audit_fee"
+      }
+    ],
+    "anomalyScore": 0,
+    "anomalyFlag": false,
+    "expectedAmount": 175000,
+    "variance": 0,
+    "paidAt": "2024-10-10T14:00:00Z",
+    "createdAt": "2024-09-15T10:00:00Z",
+    "updatedAt": "2024-10-10T14:00:00Z"
+  },
+  {
+    "id": "vinv-003",
+    "clientId": "c1",
+    "vendorId": "vd-007",
+    "linkedContractId": "vc-004",
+    "invoiceRef": "BM-2024-NOV",
+    "invoiceDate": "2024-11-01",
+    "dueDate": "2024-11-30",
+    "amount": 15000,
+    "currency": "USD",
+    "categoryKey": "legal_fee",
+    "status": "pending",
+    "lineItemsJson": [
+      {
+        "description": "November 2024 Retainer",
+        "quantity": 1,
+        "unitPrice": 15000,
+        "amount": 15000,
+        "category": "legal_fee"
+      }
+    ],
+    "anomalyScore": 0,
+    "anomalyFlag": false,
+    "expectedAmount": 15000,
+    "variance": 0,
+    "createdAt": "2024-11-01T09:00:00Z",
+    "updatedAt": "2024-11-01T09:00:00Z"
+  },
+  {
+    "id": "vinv-004",
+    "clientId": "c1",
+    "vendorId": "vd-013",
+    "linkedContractId": "vc-003",
+    "invoiceRef": "ACC-SI-2024-M10",
+    "invoiceDate": "2024-10-31",
+    "dueDate": "2024-11-30",
+    "amount": 95000,
+    "currency": "USD",
+    "categoryKey": "consulting",
+    "status": "disputed",
+    "lineItemsJson": [
+      {
+        "description": "System Integration - October milestone",
+        "quantity": 1,
+        "unitPrice": 75000,
+        "amount": 75000,
+        "category": "consulting"
+      },
+      {
+        "description": "Additional resources",
+        "quantity": 1,
+        "unitPrice": 20000,
+        "amount": 20000,
+        "category": "consulting"
+      }
+    ],
+    "anomalyScore": 75,
+    "anomalyFlag": true,
+    "anomalyReasonsJson": [
+      "Exceeds monthly cap by 26%",
+      "Unplanned additional resources charge"
+    ],
+    "expectedAmount": 75000,
+    "variance": 20000,
+    "createdAt": "2024-10-31T10:00:00Z",
+    "updatedAt": "2024-11-15T14:00:00Z"
+  },
+  {
+    "id": "vinv-005",
+    "clientId": "c1",
+    "vendorId": "vd-014",
+    "invoiceRef": "AWS-2024-OCT",
+    "invoiceDate": "2024-11-01",
+    "dueDate": "2024-11-30",
+    "amount": 12450,
+    "currency": "USD",
+    "categoryKey": "it_services",
+    "status": "approved",
+    "lineItemsJson": [
+      {
+        "description": "AWS Services - October 2024",
+        "quantity": 1,
+        "unitPrice": 12450,
+        "amount": 12450,
+        "category": "it_services"
+      }
+    ],
+    "anomalyScore": 15,
+    "anomalyFlag": false,
+    "expectedAmount": 10000,
+    "variance": 2450,
+    "approvedAt": "2024-11-05T10:00:00Z",
+    "approvedBy": "CFO",
+    "createdAt": "2024-11-01T08:00:00Z",
+    "updatedAt": "2024-11-05T10:00:00Z"
+  }
+]

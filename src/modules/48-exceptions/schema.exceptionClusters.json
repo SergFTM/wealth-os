@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExceptionCluster",
+  "description": "Cluster of similar exceptions",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client reference"
+    },
+    "name": {
+      "type": "string",
+      "description": "Cluster name"
+    },
+    "clusterTypeKey": {
+      "type": "string",
+      "enum": ["type_source", "title_pattern", "temporal"],
+      "description": "Clustering method used"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "resolved"],
+      "description": "Cluster status"
+    },
+    "memberIdsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of exception IDs in this cluster"
+    },
+    "topSourceJson": {
+      "type": "object",
+      "description": "Most common source in this cluster",
+      "properties": {
+        "moduleKey": { "type": "string" },
+        "collection": { "type": "string" },
+        "count": { "type": "integer" }
+      }
+    },
+    "patternJson": {
+      "type": "object",
+      "description": "Pattern that defines this cluster",
+      "properties": {
+        "typeKey": { "type": "string" },
+        "sourceModuleKey": { "type": "string" },
+        "titleTokens": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "openCount": {
+      "type": "integer",
+      "description": "Number of open exceptions in cluster"
+    },
+    "totalCount": {
+      "type": "integer",
+      "description": "Total exceptions in cluster"
+    },
+    "lastExceptionAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last exception added timestamp"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Creation timestamp"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last update timestamp"
+    }
+  },
+  "required": ["id", "clientId", "name", "clusterTypeKey", "status", "memberIdsJson", "createdAt"]
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DataReconciliation",
+  "description": "Reconciliation between two data sources",
+  "type": "object",
+  "required": ["id", "clientId", "reconTypeKey", "scopeJson", "asOf", "leftSourceJson", "rightSourceJson", "deltaValueJson", "statusKey", "computedAt", "createdAt", "updatedAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "name": { "type": "string" },
+    "reconTypeKey": { "type": "string", "enum": ["ibor_abor", "cash_bank", "positions_custodian", "gl_subledger"] },
+    "scopeJson": {
+      "type": "object",
+      "properties": {
+        "entityId": { "type": "string" },
+        "portfolioId": { "type": "string" },
+        "accountId": { "type": "string" },
+        "currency": { "type": "string" }
+      }
+    },
+    "asOf": { "type": "string", "format": "date" },
+    "leftSourceJson": {
+      "type": "object",
+      "required": ["name", "system", "value", "asOf"],
+      "properties": {
+        "name": { "type": "string" },
+        "system": { "type": "string" },
+        "value": { "type": "number" },
+        "currency": { "type": "string" },
+        "asOf": { "type": "string", "format": "date-time" },
+        "recordCount": { "type": "integer" }
+      }
+    },
+    "rightSourceJson": {
+      "type": "object",
+      "required": ["name", "system", "value", "asOf"],
+      "properties": {
+        "name": { "type": "string" },
+        "system": { "type": "string" },
+        "value": { "type": "number" },
+        "currency": { "type": "string" },
+        "asOf": { "type": "string", "format": "date-time" },
+        "recordCount": { "type": "integer" }
+      }
+    },
+    "deltaValueJson": {
+      "type": "object",
+      "required": ["amount", "percent"],
+      "properties": {
+        "amount": { "type": "number" },
+        "percent": { "type": "number" },
+        "currency": { "type": "string" }
+      }
+    },
+    "statusKey": { "type": "string", "enum": ["ok", "break", "pending"] },
+    "breakdownJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category", "leftValue", "rightValue", "delta", "status"],
+        "properties": {
+          "category": { "type": "string" },
+          "leftValue": { "type": "number" },
+          "rightValue": { "type": "number" },
+          "delta": { "type": "number" },
+          "status": { "type": "string", "enum": ["ok", "break"] }
+        }
+      }
+    },
+    "computedAt": { "type": "string", "format": "date-time" },
+    "linkedExceptionId": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

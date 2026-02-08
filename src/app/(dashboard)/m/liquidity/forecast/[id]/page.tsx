@@ -4,12 +4,13 @@ import { use } from "react";
 import { useRouter } from "next/navigation";
 import { useRecord, useCollection } from "@/lib/hooks";
 import { LqForecastDetail } from "@/modules/39-liquidity/ui/LqForecastDetail";
+import type { CashForecast } from "@/modules/39-liquidity/engine/types";
 
 export default function ForecastDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
   const router = useRouter();
 
-  const { data: forecast, isLoading } = useRecord("cashForecasts", id);
+  const { data: forecast, isLoading } = useRecord("cashForecasts", id) as { data: CashForecast | null; isLoading: boolean };
   const { data: allFlows = [] } = useCollection("cashFlows");
   const { data: allScenarios = [] } = useCollection("cashScenarios");
   const { data: allStressTests = [] } = useCollection("cashStressTests");
@@ -44,10 +45,14 @@ export default function ForecastDetailPage({ params }: { params: Promise<{ id: s
     );
   }
 
-  const flows = allFlows.filter((f: { forecastId?: string }) => f.forecastId === id);
-  const scenarios = allScenarios.filter((s: { forecastId?: string }) => s.forecastId === id || !s.forecastId);
-  const stressTests = allStressTests.filter((t: { forecastId: string }) => t.forecastId === id);
-  const alerts = allAlerts.filter((a: { forecastId: string }) => a.forecastId === id);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const flows = (allFlows as any[]).filter((f) => f.forecastId === id);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const scenarios = (allScenarios as any[]).filter((s) => s.forecastId === id || !s.forecastId);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const stressTests = (allStressTests as any[]).filter((t) => t.forecastId === id);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const alerts = (allAlerts as any[]).filter((a) => a.forecastId === id);
 
   return (
     <div className="p-6">

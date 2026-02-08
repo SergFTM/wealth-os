@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vendor Incident",
+  "description": "Incident or issue with vendor",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/Family office ID" },
+    "vendorId": { "type": "string", "description": "Related vendor ID" },
+    "contractId": { "type": "string", "description": "Related contract ID" },
+    "slaId": { "type": "string", "description": "Related SLA ID" },
+    "severity": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "Incident severity"
+    },
+    "title": { "type": "string", "description": "Incident title" },
+    "description": { "type": "string", "description": "Detailed description" },
+    "status": {
+      "type": "string",
+      "enum": ["open", "in_progress", "resolved", "closed"],
+      "description": "Current status"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["service_outage", "data_breach", "sla_breach", "billing_error", "communication", "quality", "compliance", "other"],
+      "description": "Incident category"
+    },
+    "linkedCaseId": { "type": "string", "description": "Linked case ID from module 36" },
+    "linkedSecurityIncidentId": { "type": "string", "description": "Linked security incident ID from module 17" },
+    "impactJson": {
+      "type": "object",
+      "properties": {
+        "financialImpact": { "type": "number" },
+        "affectedServices": { "type": "array", "items": { "type": "string" } },
+        "affectedUsers": { "type": "integer" },
+        "downtimeMinutes": { "type": "integer" },
+        "reputationalRisk": { "type": "string", "enum": ["low", "medium", "high"] }
+      }
+    },
+    "timelineJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "timestamp": { "type": "string", "format": "date-time" },
+          "action": { "type": "string" },
+          "actor": { "type": "string" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "rootCause": { "type": "string" },
+    "resolution": { "type": "string" },
+    "preventiveMeasures": { "type": "string" },
+    "reportedAt": { "type": "string", "format": "date-time" },
+    "resolvedAt": { "type": "string", "format": "date-time" },
+    "assignedTo": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["vendorId", "severity", "title", "status"]
+}

@@ -1,5 +1,7 @@
-import { PtProfile } from '@/modules/30-portal/ui';
+'use client';
 
-export default function PortalProfilePage() {
-  return <PtProfile />;
+import { PoAuditPage } from '@/modules/55-portal/ui/PoAuditPage';
+
+export default function ProfilePage() {
+  return <PoAuditPage />;
 }

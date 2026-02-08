@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GovernanceVote",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "decisionId": { "type": "string" },
+    "meetingId": { "type": "string" },
+    "opensAt": { "type": "string", "format": "date-time" },
+    "closesAt": { "type": "string", "format": "date-time" },
+    "status": { "type": "string", "enum": ["open", "closed", "cancelled"] },
+    "quorumPct": { "type": "number", "minimum": 0, "maximum": 100 },
+    "eligibleVotersJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "userId": { "type": "string" },
+          "name": { "type": "string" },
+          "weight": { "type": "number", "default": 1 }
+        }
+      }
+    },
+    "delegationJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fromUserId": { "type": "string" },
+          "toUserId": { "type": "string" },
+          "scope": { "type": "string", "enum": ["all", "this_vote"] }
+        }
+      }
+    },
+    "votesCastJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "odUserId": { "type": "string" },
+          "vote": { "type": "string", "enum": ["yes", "no", "abstain"] },
+          "castAt": { "type": "string", "format": "date-time" },
+          "delegatedFrom": { "type": "string" },
+          "comment": { "type": "string" }
+        }
+      }
+    },
+    "tallyJson": {
+      "type": "object",
+      "properties": {
+        "yes": { "type": "number" },
+        "no": { "type": "number" },
+        "abstain": { "type": "number" },
+        "notVoted": { "type": "number" },
+        "quorumReached": { "type": "boolean" },
+        "passed": { "type": "boolean" }
+      }
+    },
+    "resultNotes": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "decisionId", "status", "quorumPct"]
+}

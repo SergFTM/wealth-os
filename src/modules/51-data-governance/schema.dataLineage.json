@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DataLineage",
+  "description": "Data lineage definition showing data flow from sources to KPI",
+  "type": "object",
+  "required": ["id", "clientId", "kpiId", "inputsJson", "transformsJson", "outputsJson", "createdAt", "updatedAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "kpiId": { "type": "string" },
+    "kpiName": { "type": "string" },
+    "inputsJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["collection", "fields"],
+        "properties": {
+          "collection": { "type": "string" },
+          "fields": { "type": "array", "items": { "type": "string" } },
+          "sourceNotes": { "type": "string" }
+        }
+      }
+    },
+    "transformsJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["stepNo", "title", "description"],
+        "properties": {
+          "stepNo": { "type": "integer", "minimum": 1 },
+          "title": { "type": "string" },
+          "description": { "type": "string" },
+          "formula": { "type": "string" },
+          "riskKey": { "type": "string", "enum": ["low", "medium", "high"] }
+        }
+      }
+    },
+    "outputsJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["field", "type"],
+        "properties": {
+          "field": { "type": "string" },
+          "type": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

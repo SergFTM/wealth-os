@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "portalUserId": { "type": "string" },
+    "categoryKey": { "type": "string", "enum": ["documents", "payments", "reporting", "tax", "trust", "other"] },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "urgencyKey": { "type": "string", "enum": ["low", "medium", "high"] },
+    "statusKey": { "type": "string", "enum": ["open", "in_progress", "resolved"] },
+    "linkedCaseId": { "type": "string" },
+    "linkedTaskIdsJson": { "type": "array", "items": { "type": "string" } },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "portalUserId", "categoryKey", "title", "description", "urgencyKey", "statusKey", "createdAt", "updatedAt"]
+}

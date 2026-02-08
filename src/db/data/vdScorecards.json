@@ -1,0 +1,148 @@
+[
+  {
+    "id": "vsc-001",
+    "clientId": "c1",
+    "vendorId": "vd-001",
+    "periodStart": "2024-07-01",
+    "periodEnd": "2024-09-30",
+    "criteriaJson": {
+      "responsiveness": {
+        "score": 9,
+        "weight": 0.25,
+        "computed": true,
+        "notes": "Excellent response times"
+      },
+      "accuracy": {
+        "score": 9.5,
+        "weight": 0.25,
+        "computed": true,
+        "notes": "Minimal errors"
+      },
+      "securityPosture": {
+        "score": 9,
+        "weight": 0.2,
+        "computed": true,
+        "notes": "Strong security controls"
+      },
+      "costEfficiency": {
+        "score": 7.5,
+        "weight": 0.15,
+        "computed": true,
+        "notes": "Competitive pricing"
+      },
+      "partnership": {
+        "score": 8.5,
+        "weight": 0.15,
+        "computed": true,
+        "notes": "Proactive engagement"
+      }
+    },
+    "overallScore": 8.7,
+    "trend": "stable",
+    "notes": "Excellent overall performance.",
+    "recommendationsJson": [
+      "Consider expanding custody services",
+      "Schedule annual review meeting"
+    ],
+    "createdBy": "admin",
+    "createdAt": "2024-10-15T10:00:00Z",
+    "updatedAt": "2024-10-15T10:00:00Z"
+  },
+  {
+    "id": "vsc-002",
+    "clientId": "c1",
+    "vendorId": "vd-003",
+    "periodStart": "2024-07-01",
+    "periodEnd": "2024-09-30",
+    "criteriaJson": {
+      "responsiveness": {
+        "score": 8,
+        "weight": 0.25,
+        "computed": true,
+        "notes": "Good response times"
+      },
+      "accuracy": {
+        "score": 8.5,
+        "weight": 0.25,
+        "computed": true,
+        "notes": "Few execution issues"
+      },
+      "securityPosture": {
+        "score": 8,
+        "weight": 0.2,
+        "computed": true,
+        "notes": "Adequate security"
+      },
+      "costEfficiency": {
+        "score": 6.5,
+        "weight": 0.15,
+        "computed": true,
+        "notes": "Premium pricing"
+      },
+      "partnership": {
+        "score": 7,
+        "weight": 0.15,
+        "computed": true,
+        "notes": "Reactive engagement"
+      }
+    },
+    "overallScore": 7.7,
+    "trend": "stable",
+    "notes": "Good performance but premium pricing.",
+    "recommendationsJson": [
+      "Negotiate better rates at renewal"
+    ],
+    "createdBy": "admin",
+    "createdAt": "2024-10-15T11:00:00Z",
+    "updatedAt": "2024-10-15T11:00:00Z"
+  },
+  {
+    "id": "vsc-003",
+    "clientId": "c1",
+    "vendorId": "vd-013",
+    "periodStart": "2024-07-01",
+    "periodEnd": "2024-09-30",
+    "criteriaJson": {
+      "responsiveness": {
+        "score": 5,
+        "weight": 0.25,
+        "computed": true,
+        "notes": "Slow response to issues"
+      },
+      "accuracy": {
+        "score": 6,
+        "weight": 0.25,
+        "computed": true,
+        "notes": "Multiple rework cycles"
+      },
+      "securityPosture": {
+        "score": 7,
+        "weight": 0.2,
+        "computed": true,
+        "notes": "Adequate security"
+      },
+      "costEfficiency": {
+        "score": 4,
+        "weight": 0.15,
+        "computed": true,
+        "notes": "Significant budget overruns"
+      },
+      "partnership": {
+        "score": 5,
+        "weight": 0.15,
+        "computed": true,
+        "notes": "Poor communication"
+      }
+    },
+    "overallScore": 5.5,
+    "trend": "declining",
+    "notes": "Performance issues need to be addressed.",
+    "recommendationsJson": [
+      "Schedule urgent review meeting",
+      "Consider penalty clauses"
+    ],
+    "createdBy": "admin",
+    "createdAt": "2024-10-15T14:00:00Z",
+    "updatedAt": "2024-10-15T14:00:00Z"
+  }
+]

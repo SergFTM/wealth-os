@@ -1,0 +1,438 @@
+[
+  {
+    "id": "vd-001",
+    "clientId": "c1",
+    "name": "UBS Wealth Management",
+    "vendorType": "bank",
+    "status": "active",
+    "primaryContactJson": {
+      "name": "Marcus Weber",
+      "email": "m.weber@ubs.com",
+      "phone": "+41 44 234 5678",
+      "title": "Relationship Manager"
+    },
+    "servicesJson": [
+      "Private Banking",
+      "Investment Advisory",
+      "Custody"
+    ],
+    "regionsJson": [
+      "Switzerland",
+      "EU"
+    ],
+    "riskRatingKey": "low",
+    "onboardingJson": {
+      "kycStatus": "completed",
+      "kybStatus": "completed",
+      "securityQuestionnaireStatus": "completed",
+      "accessSetupStatus": "completed"
+    },
+    "website": "https://ubs.com",
+    "createdAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2024-12-01T14:30:00Z"
+  },
+  {
+    "id": "vd-002",
+    "clientId": "c1",
+    "name": "Credit Suisse",
+    "vendorType": "bank",
+    "status": "active",
+    "primaryContactJson": {
+      "name": "Anna Müller",
+      "email": "a.mueller@credit-suisse.com",
+      "title": "Senior Banker"
+    },
+    "servicesJson": [
+      "Lending",
+      "FX Services"
+    ],
+    "regionsJson": [
+      "Switzerland",
+      "Asia"
+    ],
+    "riskRatingKey": "low",
+    "onboardingJson": {
+      "kycStatus": "completed",
+      "kybStatus": "completed",
+      "securityQuestionnaireStatus": "completed",
+      "accessSetupStatus": "completed"
+    },
+    "createdAt": "2024-02-10T09:00:00Z",
+    "updatedAt": "2024-11-15T11:20:00Z"
+  },
+  {
+    "id": "vd-003",
+    "clientId": "c1",
+    "name": "Goldman Sachs PWM",
+    "vendorType": "broker",
+    "status": "active",
+    "primaryContactJson": {
+      "name": "James Chen",
+      "email": "j.chen@gs.com",
+      "title": "Managing Director"
+    },
+    "servicesJson": [
+      "Brokerage",
+      "IPO Access",
+      "Research"
+    ],
+    "regionsJson": [
+      "US",
+      "EU",
+      "Asia"
+    ],
+    "riskRatingKey": "medium",
+    "onboardingJson": {
+      "kycStatus": "completed",
+      "kybStatus": "completed",
+      "securityQuestionnaireStatus": "completed",
+      "accessSetupStatus": "completed"
+    },
+    "createdAt": "2024-01-20T08:00:00Z",
+    "updatedAt": "2024-10-20T16:45:00Z"
+  },
+  {
+    "id": "vd-004",
+    "clientId": "c1",
+    "name": "Morgan Stanley",
+    "vendorType": "broker",
+    "status": "active",
+    "primaryContactJson": {
+      "name": "Sarah Williams",
+      "email": "s.williams@morganstanley.com",
+      "title": "Vice President"
+    },
+    "servicesJson": [
+      "Brokerage",
+      "Alternative Investments"
+    ],
+    "regionsJson": [
+      "US",
+      "UK"
+    ],
+    "riskRatingKey": "low",
+    "onboardingJson": {
+      "kycStatus": "completed",
+      "kybStatus": "completed",
+      "securityQuestionnaireStatus": "completed",
+      "accessSetupStatus": "completed"
+    },
+    "createdAt": "2024-03-01T10:30:00Z",
+    "updatedAt": "2024-09-15T09:00:00Z"
+  },
+  {
+    "id": "vd-005",
+    "clientId": "c1",
+    "name": "KPMG",
+    "vendorType": "auditor",
+    "status": "active",
+    "primaryContactJson": {
+      "name": "Michael Brown",
+      "email": "m.brown@kpmg.com",
+      "title": "Audit Partner"
+    },
+    "servicesJson": [
+      "External Audit",
+      "Tax Compliance"
+    ],
+    "regionsJson": [
+      "Global"
+    ],
+    "riskRatingKey": "low",
+    "onboardingJson": {
+      "kycStatus": "completed",
+      "kybStatus": "completed",
+      "securityQuestionnaireStatus": "completed",
+      "accessSetupStatus": "completed"
+    },
+    "createdAt": "2024-01-05T11:00:00Z",
+    "updatedAt": "2024-08-20T14:15:00Z"
+  },
+  {
+    "id": "vd-006",
+    "clientId": "c1",
+    "name": "Deloitte",
+    "vendorType": "auditor",
+    "status": "active",
+    "primaryContactJson": {
+      "name": "Emily Davis",
+      "email": "e.davis@deloitte.com",
+      "title": "Manager"
+    },
+    "servicesJson": [
+      "Internal Audit",
+      "Risk Advisory"
+    ],
+    "regionsJson": [
+      "US",
+      "EU"
+    ],
+    "riskRatingKey": "low",
+    "onboardingJson": {
+      "kycStatus": "completed",
+      "kybStatus": "completed",
+      "securityQuestionnaireStatus": "completed",
+      "accessSetupStatus": "completed"
+    },
+    "createdAt": "2024-02-15T09:30:00Z",
+    "updatedAt": "2024-07-10T10:45:00Z"
+  },
+  {
+    "id": "vd-007",
+    "clientId": "c1",
+    "name": "Baker McKenzie",
+    "vendorType": "legal",
+    "status": "active",
+    "primaryContactJson": {
+      "name": "Robert Johnson",
+      "email": "r.johnson@bakermckenzie.com",
+      "title": "Partner"
+    },
+    "servicesJson": [
+      "Corporate Law",
+      "M&A",
+      "Estate Planning"
+    ],
+    "regionsJson": [
+      "US",
+      "EU",
+      "Asia"
+    ],
+    "riskRatingKey": "low",
+    "onboardingJson": {
+      "kycStatus": "completed",
+      "kybStatus": "completed",
+      "securityQuestionnaireStatus": "completed",
+      "accessSetupStatus": "completed"
+    },
+    "createdAt": "2024-01-10T14:00:00Z",
+    "updatedAt": "2024-11-05T16:30:00Z"
+  },
+  {
+    "id": "vd-008",
+    "clientId": "c1",
+    "name": "Clifford Chance",
+    "vendorType": "legal",
+    "status": "active",
+    "primaryContactJson": {
+      "name": "Victoria Adams",
+      "email": "v.adams@cliffordchance.com",
+      "title": "Senior Associate"
+    },
+    "servicesJson": [
+      "Banking Law",
+      "Real Estate"
+    ],
+    "regionsJson": [
+      "UK",
+      "EU"
+    ],
+    "riskRatingKey": "low",
+    "onboardingJson": {
+      "kycStatus": "completed",
+      "kybStatus": "completed",
+      "securityQuestionnaireStatus": "completed",
+      "accessSetupStatus": "completed"
+    },
+    "createdAt": "2024-04-01T08:45:00Z",
+    "updatedAt": "2024-10-01T11:00:00Z"
+  },
+  {
+    "id": "vd-009",
+    "clientId": "c1",
+    "name": "PwC Tax Advisory",
+    "vendorType": "tax_advisor",
+    "status": "active",
+    "primaryContactJson": {
+      "name": "Thomas Anderson",
+      "email": "t.anderson@pwc.com",
+      "title": "Tax Partner"
+    },
+    "servicesJson": [
+      "International Tax",
+      "Transfer Pricing",
+      "Tax Planning"
+    ],
+    "regionsJson": [
+      "Global"
+    ],
+    "riskRatingKey": "low",
+    "onboardingJson": {
+      "kycStatus": "completed",
+      "kybStatus": "completed",
+      "securityQuestionnaireStatus": "completed",
+      "accessSetupStatus": "completed"
+    },
+    "createdAt": "2024-01-25T10:15:00Z",
+    "updatedAt": "2024-09-20T13:45:00Z"
+  },
+  {
+    "id": "vd-010",
+    "clientId": "c1",
+    "name": "EY Tax",
+    "vendorType": "tax_advisor",
+    "status": "active",
+    "primaryContactJson": {
+      "name": "Lisa Martinez",
+      "email": "l.martinez@ey.com",
+      "title": "Director"
+    },
+    "servicesJson": [
+      "US Tax",
+      "FATCA Compliance"
+    ],
+    "regionsJson": [
+      "US"
+    ],
+    "riskRatingKey": "low",
+    "onboardingJson": {
+      "kycStatus": "completed",
+      "kybStatus": "completed",
+      "securityQuestionnaireStatus": "completed",
+      "accessSetupStatus": "completed"
+    },
+    "createdAt": "2024-02-20T09:00:00Z",
+    "updatedAt": "2024-08-15T10:30:00Z"
+  },
+  {
+    "id": "vd-011",
+    "clientId": "c1",
+    "name": "Northern Trust",
+    "vendorType": "custodian",
+    "status": "active",
+    "primaryContactJson": {
+      "name": "David Wilson",
+      "email": "d.wilson@ntrs.com",
+      "title": "Client Service Manager"
+    },
+    "servicesJson": [
+      "Global Custody",
+      "Fund Administration"
+    ],
+    "regionsJson": [
+      "Global"
+    ],
+    "riskRatingKey": "low",
+    "onboardingJson": {
+      "kycStatus": "completed",
+      "kybStatus": "completed",
+      "securityQuestionnaireStatus": "completed",
+      "accessSetupStatus": "completed"
+    },
+    "createdAt": "2024-01-08T08:30:00Z",
+    "updatedAt": "2024-12-01T09:15:00Z"
+  },
+  {
+    "id": "vd-012",
+    "clientId": "c1",
+    "name": "State Street",
+    "vendorType": "custodian",
+    "status": "active",
+    "primaryContactJson": {
+      "name": "Jennifer Taylor",
+      "email": "j.taylor@statestreet.com",
+      "title": "Relationship Manager"
+    },
+    "servicesJson": [
+      "Custody",
+      "Securities Lending"
+    ],
+    "regionsJson": [
+      "US",
+      "EU"
+    ],
+    "riskRatingKey": "low",
+    "onboardingJson": {
+      "kycStatus": "completed",
+      "kybStatus": "completed",
+      "securityQuestionnaireStatus": "completed",
+      "accessSetupStatus": "completed"
+    },
+    "createdAt": "2024-03-10T11:45:00Z",
+    "updatedAt": "2024-10-25T14:00:00Z"
+  },
+  {
+    "id": "vd-013",
+    "clientId": "c1",
+    "name": "Accenture Technology",
+    "vendorType": "it",
+    "status": "active",
+    "primaryContactJson": {
+      "name": "Chris Lee",
+      "email": "c.lee@accenture.com",
+      "title": "Engagement Manager"
+    },
+    "servicesJson": [
+      "System Integration",
+      "Cloud Services"
+    ],
+    "regionsJson": [
+      "Global"
+    ],
+    "riskRatingKey": "medium",
+    "onboardingJson": {
+      "kycStatus": "completed",
+      "kybStatus": "completed",
+      "securityQuestionnaireStatus": "completed",
+      "accessSetupStatus": "completed"
+    },
+    "createdAt": "2024-02-01T10:00:00Z",
+    "updatedAt": "2024-11-10T15:30:00Z"
+  },
+  {
+    "id": "vd-014",
+    "clientId": "c1",
+    "name": "AWS",
+    "vendorType": "it",
+    "status": "active",
+    "primaryContactJson": {
+      "name": "Mark Thompson",
+      "email": "m.thompson@aws.com",
+      "title": "Solutions Architect"
+    },
+    "servicesJson": [
+      "Cloud Infrastructure",
+      "Data Services"
+    ],
+    "regionsJson": [
+      "Global"
+    ],
+    "riskRatingKey": "low",
+    "onboardingJson": {
+      "kycStatus": "completed",
+      "kybStatus": "completed",
+      "securityQuestionnaireStatus": "completed",
+      "accessSetupStatus": "completed"
+    },
+    "createdAt": "2024-01-12T09:30:00Z",
+    "updatedAt": "2024-09-30T11:45:00Z"
+  },
+  {
+    "id": "vd-015",
+    "clientId": "c1",
+    "name": "Bloomberg",
+    "vendorType": "it",
+    "status": "active",
+    "primaryContactJson": {
+      "name": "Kevin White",
+      "email": "k.white@bloomberg.com",
+      "title": "Account Executive"
+    },
+    "servicesJson": [
+      "Market Data",
+      "Trading Terminal"
+    ],
+    "regionsJson": [
+      "Global"
+    ],
+    "riskRatingKey": "low",
+    "onboardingJson": {
+      "kycStatus": "completed",
+      "kybStatus": "completed",
+      "securityQuestionnaireStatus": "completed",
+      "accessSetupStatus": "completed"
+    },
+    "createdAt": "2024-01-18T08:00:00Z",
+    "updatedAt": "2024-10-05T10:00:00Z"
+  }
+]

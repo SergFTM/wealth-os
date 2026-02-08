@@ -1,0 +1,19 @@
+{
+  "name": "ownershipLinks",
+  "description": "Ownership links between nodes with ownership and profit share percentages",
+  "fields": [
+    { "key": "id", "type": "string", "required": true, "description": "Unique link identifier" },
+    { "key": "clientId", "type": "string", "required": true, "description": "Client/household reference" },
+    { "key": "fromNodeId", "type": "string", "required": true, "description": "Source node ID (parent/owner)" },
+    { "key": "toNodeId", "type": "string", "required": true, "description": "Target node ID (child/owned)" },
+    { "key": "ownershipPct", "type": "number", "required": true, "description": "Ownership percentage (0-100)" },
+    { "key": "profitSharePct", "type": "number", "required": false, "description": "Profit share percentage (0-100), may differ from ownership" },
+    { "key": "effectiveFrom", "type": "date", "required": true, "description": "Effective start date" },
+    { "key": "effectiveTo", "type": "date", "required": false, "description": "Effective end date (null if current)" },
+    { "key": "sourceRefJson", "type": "json", "required": false, "description": "Source reference {docId, description, url}" },
+    { "key": "attachmentDocIdsJson", "type": "json", "required": false, "description": "Array of document IDs" },
+    { "key": "createdAt", "type": "datetime", "required": true, "description": "Created timestamp" },
+    { "key": "updatedAt", "type": "datetime", "required": true, "description": "Last updated timestamp" }
+  ],
+  "indexes": ["clientId", "fromNodeId", "toNodeId", "effectiveFrom"]
+}

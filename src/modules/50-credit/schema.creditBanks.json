@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CreditBank",
+  "description": "Banking relationship for credit management",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Client ID for multi-tenant isolation"
+    },
+    "name": {
+      "type": "string",
+      "description": "Bank name"
+    },
+    "regionKey": {
+      "type": "string",
+      "enum": ["us", "eu", "uk", "ch", "sg", "other"],
+      "description": "Bank region"
+    },
+    "contactsJson": {
+      "type": "object",
+      "description": "Relationship manager and contacts",
+      "properties": {
+        "relationshipManager": { "type": "string" },
+        "rmEmail": { "type": "string" },
+        "rmPhone": { "type": "string" },
+        "creditOfficer": { "type": "string" },
+        "coEmail": { "type": "string" }
+      }
+    },
+    "addressJson": {
+      "type": "object",
+      "description": "Bank address",
+      "properties": {
+        "street": { "type": "string" },
+        "city": { "type": "string" },
+        "country": { "type": "string" }
+      }
+    },
+    "swiftCode": {
+      "type": "string",
+      "description": "SWIFT/BIC code"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    },
+    "attachmentDocIdsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Related document IDs"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "clientId", "name", "regionKey", "createdAt", "updatedAt"]
+}

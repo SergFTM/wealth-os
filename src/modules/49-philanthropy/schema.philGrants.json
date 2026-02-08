@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PhilGrant",
+  "description": "Grant application and lifecycle",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "clientId": { "type": "string", "description": "Client/family ID" },
+    "entityId": { "type": "string", "description": "Charitable entity ID" },
+    "programId": { "type": "string", "description": "Program ID" },
+    "granteeJson": {
+      "type": "object",
+      "description": "Grantee organization details",
+      "properties": {
+        "name": { "type": "string" },
+        "country": { "type": "string" },
+        "regNo": { "type": "string" },
+        "einTaxId": { "type": "string" },
+        "address": { "type": "string" },
+        "contacts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "role": { "type": "string" },
+              "email": { "type": "string" },
+              "phone": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "requestedAmount": { "type": "number", "description": "Requested grant amount" },
+    "approvedAmount": { "type": "number", "description": "Approved grant amount" },
+    "currency": { "type": "string", "default": "USD" },
+    "stageKey": {
+      "type": "string",
+      "enum": ["draft", "submitted", "in_review", "approved", "rejected", "paid", "closed"],
+      "description": "Grant lifecycle stage"
+    },
+    "purpose": { "type": "string", "description": "Grant purpose description" },
+    "purposeMarkdown": { "type": "string", "description": "Detailed purpose (markdown)" },
+    "timelineJson": {
+      "type": "object",
+      "description": "Project timeline",
+      "properties": {
+        "startDate": { "type": "string", "format": "date" },
+        "endDate": { "type": "string", "format": "date" },
+        "milestones": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": { "type": "string" },
+              "dueDate": { "type": "string", "format": "date" },
+              "completed": { "type": "boolean" }
+            }
+          }
+        }
+      }
+    },
+    "ddChecklistJson": {
+      "type": "array",
+      "description": "Due diligence checklist items",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["pending", "in_progress", "completed", "na"]
+          },
+          "ownerRole": { "type": "string" },
+          "dueAt": { "type": "string", "format": "date" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "complianceStatusKey": {
+      "type": "string",
+      "enum": ["pending", "cleared", "flagged"],
+      "description": "Overall compliance status"
+    },
+    "docsStatusKey": {
+      "type": "string",
+      "enum": ["complete", "incomplete", "pending"],
+      "description": "Documentation status"
+    },
+    "approvalsIdsJson": {
+      "type": "array",
+      "description": "Approval record IDs (module 7/28)",
+      "items": { "type": "string" }
+    },
+    "threadId": { "type": "string", "description": "Communication thread ID (module 15)" },
+    "attachmentDocIdsJson": {
+      "type": "array",
+      "description": "Document vault attachment IDs",
+      "items": { "type": "string" }
+    },
+    "submittedAt": { "type": "string", "format": "date-time" },
+    "approvedAt": { "type": "string", "format": "date-time" },
+    "closedAt": { "type": "string", "format": "date-time" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "clientId", "entityId", "programId", "stageKey", "createdAt", "updatedAt"]
+}

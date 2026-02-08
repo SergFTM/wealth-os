@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CalendarEvent",
+  "type": "object",
+  "required": ["id", "clientId", "title", "eventType", "startAt", "endAt", "status"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "clientId": { "type": "string" },
+    "title": { "type": "string", "minLength": 1 },
+    "description": { "type": "string" },
+    "eventType": {
+      "type": "string",
+      "enum": ["event", "meeting"],
+      "default": "event"
+    },
+    "categoryKey": {
+      "type": "string",
+      "enum": ["family", "advisor", "bank", "committee", "governance", "ops", "other"],
+      "default": "other"
+    },
+    "startAt": { "type": "string", "format": "date-time" },
+    "endAt": { "type": "string", "format": "date-time" },
+    "timezone": { "type": "string", "default": "Europe/Moscow" },
+    "location": { "type": "string" },
+    "videoUrl": { "type": "string", "format": "uri" },
+    "participantIdsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "participantTypesJson": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "userId": { "type": "string" },
+          "name": { "type": "string" },
+          "role": { "type": "string", "enum": ["organizer", "attendee", "optional"] },
+          "status": { "type": "string", "enum": ["pending", "accepted", "declined", "tentative"] }
+        }
+      },
+      "default": []
+    },
+    "tagsJson": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "status": {
+      "type": "string",
+      "enum": ["planned", "done", "cancelled"],
+      "default": "planned"
+    },
+    "clientSafeVisible": { "type": "boolean", "default": false },
+    "linkedGovernanceMeetingId": { "type": "string" },
+    "linkedCommitteeMeetingId": { "type": "string" },
+    "recurrenceRule": { "type": "string" },
+    "reminderMinutes": { "type": "integer", "default": 30 },
+    "createdByUserId": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

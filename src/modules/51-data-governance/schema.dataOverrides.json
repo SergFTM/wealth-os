@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DataOverride",
+  "description": "Manual override for KPI or data values with approval workflow",
+  "type": "object",
+  "required": ["id", "clientId", "targetTypeKey", "targetId", "overrideTypeKey", "valueJson", "reason", "statusKey", "requestedByUserId", "createdAt", "updatedAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "clientId": { "type": "string" },
+    "targetTypeKey": { "type": "string", "enum": ["kpi", "object", "recon"] },
+    "targetId": { "type": "string" },
+    "targetName": { "type": "string" },
+    "overrideTypeKey": { "type": "string", "enum": ["adjustment", "reclass", "mapping_fix"] },
+    "valueJson": {
+      "type": "object",
+      "properties": {
+        "field": { "type": "string" },
+        "oldValue": { "oneOf": [{ "type": "number" }, { "type": "string" }] },
+        "newValue": { "oneOf": [{ "type": "number" }, { "type": "string" }] },
+        "adjustmentAmount": { "type": "number" },
+        "currency": { "type": "string" }
+      }
+    },
+    "reason": { "type": "string", "minLength": 10, "maxLength": 2000 },
+    "statusKey": { "type": "string", "enum": ["draft", "pending", "approved", "rejected", "applied"] },
+    "requestedByUserId": { "type": "string" },
+    "requestedByName": { "type": "string" },
+    "approvedByUserId": { "type": "string" },
+    "approvedByName": { "type": "string" },
+    "appliedAt": { "type": "string", "format": "date-time" },
+    "rejectionReason": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}
