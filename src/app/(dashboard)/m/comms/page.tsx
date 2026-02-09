@@ -48,11 +48,15 @@ export default function CommsPage() {
           fetch('/api/collections/commThreadPins'),
         ]);
 
-        const [threadsData, policiesData, pinsData] = await Promise.all([
+        const [threadsRaw, policiesRaw, pinsRaw] = await Promise.all([
           threadsRes.json(),
           policiesRes.json(),
           pinsRes.json(),
         ]);
+
+        const threadsData = threadsRaw.items ?? threadsRaw ?? [];
+        const policiesData = policiesRaw.items ?? policiesRaw ?? [];
+        const pinsData = pinsRaw.items ?? pinsRaw ?? [];
 
         setThreads(threadsData);
         setSlaPolicies(policiesData);

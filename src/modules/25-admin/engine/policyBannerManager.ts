@@ -17,7 +17,7 @@ export interface ResolvedBanner {
 export function getBannersForModule(
   banners: PolicyBanner[],
   moduleKey: PolicyModuleKey,
-  lang: SupportedLanguage = 'ru'
+  lang: SupportedLanguage = 'en'
 ): ResolvedBanner[] {
   const activeBanners = banners.filter(
     b => b.status === 'active' && (b.moduleKey === moduleKey || b.moduleKey === 'global')
@@ -45,15 +45,15 @@ export function getBannerText(
 ): string {
   switch (lang) {
     case 'ru': return banner.textRu;
-    case 'en': return banner.textEn || banner.textRu;
     case 'uk': return banner.textUk || banner.textRu;
+    default: return banner.textEn || banner.textRu;
   }
 }
 
 export function getTopBanners(
   banners: PolicyBanner[],
   moduleKey: PolicyModuleKey,
-  lang: SupportedLanguage = 'ru'
+  lang: SupportedLanguage = 'en'
 ): ResolvedBanner[] {
   return getBannersForModule(banners, moduleKey, lang)
     .filter(b => b.placement === 'top-banner');
@@ -62,7 +62,7 @@ export function getTopBanners(
 export function getFooterBanners(
   banners: PolicyBanner[],
   moduleKey: PolicyModuleKey,
-  lang: SupportedLanguage = 'ru'
+  lang: SupportedLanguage = 'en'
 ): ResolvedBanner[] {
   return getBannersForModule(banners, moduleKey, lang)
     .filter(b => b.placement === 'section-footer');
@@ -70,7 +70,7 @@ export function getFooterBanners(
 
 export function getGlobalBanners(
   banners: PolicyBanner[],
-  lang: SupportedLanguage = 'ru'
+  lang: SupportedLanguage = 'en'
 ): ResolvedBanner[] {
   return getBannersForModule(banners, 'global', lang);
 }

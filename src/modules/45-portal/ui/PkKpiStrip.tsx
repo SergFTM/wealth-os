@@ -32,7 +32,7 @@ export function PkKpiStrip({ kpis, locale = 'ru' }: PkKpiStripProps) {
     });
   };
 
-  const labels: Record<string, Record<Locale, string>> = {
+  const labels: Record<string, Record<string, string>> = {
     netWorth: { ru: 'Капитал', en: 'Net Worth', uk: 'Капітал' },
     ytd: { ru: 'YTD', en: 'YTD', uk: 'YTD' },
     cash: { ru: 'Денежные средства', en: 'Cash', uk: 'Грошові кошти' },

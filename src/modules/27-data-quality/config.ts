@@ -14,7 +14,7 @@ export const dataQualityConfig: ModuleConfig = {
     en: 'Data integrity control and sync monitoring',
     uk: 'Контроль цілісності даних та моніторинг синхронізацій',
   },
-  icon: '🔍',
+  icon: 'clipboard-check',
   color: 'emerald',
   order: 27,
   enabled: true,

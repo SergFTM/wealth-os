@@ -86,7 +86,7 @@ function detectQueryIntent(queryText: string): string {
 
 // Generate insufficient data response
 function createInsufficientDataResponse(locale: Locale): CopilotResponse {
-  const messages: Record<Locale, string> = {
+  const messages: Record<string, string> = {
     ru: 'Недостаточно данных для формирования ответа. Пожалуйста, попробуйте позже.',
     en: 'Insufficient data to generate a response. Please try again later.',
     uk: 'Недостатньо даних для формування відповіді. Будь ласка, спробуйте пізніше.',
@@ -113,7 +113,7 @@ function generateNetWorthChangeResponse(context: CopilotContext, locale: Locale)
   const changeAbs = Math.abs(nw.change30d);
   const changePercent = Math.abs(nw.changePercent30d).toFixed(1);
 
-  const answers: Record<Locale, string> = {
+  const answers: Record<string, string> = {
     ru: `За последние 30 дней ваш капитал ${changeDirection} на ${formatNumber(changeAbs)} (${changePercent}%). ` +
         `Текущая стоимость составляет ${formatNumber(nw.total)}. ` +
         `Основные изменения произошли в следующих классах активов: ${nw.byAssetClass.slice(0, 3).map(a => a.name).join(', ')}.`,
@@ -157,7 +157,7 @@ function generatePerformanceResponse(context: CopilotContext, locale: Locale): C
     ? `${perfData.benchmark >= 0 ? '+' : ''}${perfData.benchmark.toFixed(2)}%`
     : null;
 
-  const answers: Record<Locale, string> = {
+  const answers: Record<string, string> = {
     ru: `Доходность вашего портфеля за период ${perfData.period}: ${returnStr}. ` +
         (benchmarkStr ? `Бенчмарк (${perf.benchmarkName}): ${benchmarkStr}. ` : '') +
         `Данные актуальны на ${formatDate(perf.asOfDate, locale)}.`,
@@ -197,7 +197,7 @@ function generateLiquidityResponse(context: CopilotContext, locale: Locale): Cop
     : locale === 'ru' ? 'Нет критических уведомлений' :
       locale === 'en' ? 'No critical alerts' : 'Немає критичних повідомлень';
 
-  const answers: Record<Locale, string> = {
+  const answers: Record<string, string> = {
     ru: `Текущие денежные средства: ${formatNumber(liq.cashToday)}. ` +
         `Прогноз на 30 дней: ${formatNumber(liq.cashForecast30d)}. ` +
         `Ожидаемые поступления: ${formatNumber(liq.inflows30d)}, расходы: ${formatNumber(liq.outflows30d)}. ` +
@@ -304,7 +304,7 @@ function formatNumber(value: number): string {
 // Helper: Format date
 function formatDate(dateStr: string, locale: Locale): string {
   const date = new Date(dateStr);
-  const localeMap: Record<Locale, string> = {
+  const localeMap: Record<string, string> = {
     ru: 'ru-RU',
     en: 'en-US',
     uk: 'uk-UA',

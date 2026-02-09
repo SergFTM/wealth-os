@@ -16,7 +16,7 @@ export function translate(
   defaultValues: { ru: string; en?: string; uk?: string },
   lang?: SupportedLanguage
 ): TranslationResult {
-  const currentLang = lang || config?.defaultLanguage || 'ru';
+  const currentLang = lang || config?.defaultLanguage || 'en';
 
   // Check for override first
   if (config?.overrides) {
@@ -27,9 +27,7 @@ export function translate(
   }
 
   // Return default value
-  const defaultValue = currentLang === 'ru' ? defaultValues.ru :
-                       currentLang === 'en' ? (defaultValues.en || defaultValues.ru) :
-                       (defaultValues.uk || defaultValues.ru);
+  const defaultValue = (defaultValues as Record<string, string | undefined>)[currentLang] || defaultValues.en || defaultValues.ru;
 
   return { value: defaultValue, isOverridden: false };
 }
@@ -38,12 +36,12 @@ export function isLanguageEnabled(
   config: LanguageConfig | null,
   lang: SupportedLanguage
 ): boolean {
-  if (!config) return lang === 'ru'; // Default to RU only
+  if (!config) return lang === 'en'; // Default to EN only
   return config.enabledLanguages?.includes(lang) ?? false;
 }
 
 export function getEnabledLanguages(config: LanguageConfig | null): SupportedLanguage[] {
-  return config?.enabledLanguages || ['ru'];
+  return config?.enabledLanguages || ['en'];
 }
 
 export function countOverrides(config: LanguageConfig | null): number {
@@ -74,8 +72,8 @@ export function importOverridesFromJson(json: string): LanguageOverride[] | null
 export function getDefaultLanguageConfig(): LanguageConfig {
   return {
     id: 'default',
-    defaultLanguage: 'ru',
-    enabledLanguages: ['ru', 'en', 'uk'],
+    defaultLanguage: 'en',
+    enabledLanguages: ['en', 'ru', 'uk', 'es', 'de', 'it', 'fr', 'el'],
     overrides: [],
     updatedAt: new Date().toISOString(),
   };

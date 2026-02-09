@@ -37,10 +37,12 @@ export function MbDeviceDetail({ deviceId }: MbDeviceDetailProps) {
     Promise.all([
       fetch('/api/collections/mobileDevices').then(r => r.json()),
       fetch('/api/collections/pushSubscriptions').then(r => r.json()),
-    ]).then(([devices, subs]) => {
-      const found = (devices || []).find((d: MobileDevice) => d.id === deviceId);
+    ]).then(([devicesRaw, subsRaw]) => {
+      const devices = devicesRaw.items ?? devicesRaw ?? [];
+      const subs = subsRaw.items ?? subsRaw ?? [];
+      const found = devices.find((d: MobileDevice) => d.id === deviceId);
       setDevice(found || null);
-      setSubscriptions((subs || []).filter((s: PushSubscription) => s.deviceId === deviceId));
+      setSubscriptions(subs.filter((s: PushSubscription) => s.deviceId === deviceId));
       setLoading(false);
     }).catch(() => setLoading(false));
   }, [deviceId]);

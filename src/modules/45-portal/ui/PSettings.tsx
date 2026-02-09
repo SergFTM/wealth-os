@@ -17,7 +17,7 @@ export function PSettings({ preferences, locale = 'ru', onSave, onLanguageChange
   const [pushNotifications, setPushNotifications] = useState(preferences.pushNotifications);
   const [digestFrequency, setDigestFrequency] = useState(preferences.digestFrequency);
 
-  const labels: Record<string, Record<Locale, string>> = {
+  const labels: Record<string, Record<string, string>> = {
     title: { ru: 'Настройки', en: 'Settings', uk: 'Налаштування' },
     profile: { ru: 'Профиль', en: 'Profile', uk: 'Профіль' },
     language: { ru: 'Язык интерфейса', en: 'Interface Language', uk: 'Мова інтерфейсу' },

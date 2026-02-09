@@ -57,12 +57,19 @@ export default function SecurityDashboardPage() {
         fetch("/api/collections/accessReviews"),
       ]);
 
-      const usersData = await usersRes.json();
-      const incidentsData = await incidentsRes.json();
-      const sessionsData = await sessionsRes.json();
-      const rolesData = await rolesRes.json();
-      const mfaData = await mfaRes.json();
-      const reviewsData = await reviewsRes.json();
+      const usersRaw = await usersRes.json();
+      const incidentsRaw = await incidentsRes.json();
+      const sessionsRaw = await sessionsRes.json();
+      const rolesRaw = await rolesRes.json();
+      const mfaRaw = await mfaRes.json();
+      const reviewsRaw = await reviewsRes.json();
+
+      const usersData = usersRaw.items ?? usersRaw ?? [];
+      const incidentsData = incidentsRaw.items ?? incidentsRaw ?? [];
+      const sessionsData = sessionsRaw.items ?? sessionsRaw ?? [];
+      const rolesData = rolesRaw.items ?? rolesRaw ?? [];
+      const mfaData = mfaRaw.items ?? mfaRaw ?? [];
+      const reviewsData = reviewsRaw.items ?? reviewsRaw ?? [];
 
       setUsers(usersData);
       setIncidents(incidentsData);

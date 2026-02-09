@@ -40,8 +40,7 @@ export default function CommitteeMeetingDetailPage({ params }: PageProps) {
       if (!meetingRes.ok) {
         throw new Error('Meeting not found');
       }
-      const meetingData = await meetingRes.json();
-      setMeeting(meetingData.data);
+      setMeeting(await meetingRes.json());
 
       const [agendaRes, decisionsRes, votesRes, followUpsRes] = await Promise.all([
         fetch('/api/collections/committeeAgendaItems'),
@@ -57,10 +56,10 @@ export default function CommitteeMeetingDetailPage({ params }: PageProps) {
         followUpsRes.json(),
       ]);
 
-      setAgendaItems(agendaData.data || []);
-      setDecisions(decisionsData.data || []);
-      setVotes(votesData.data || []);
-      setFollowUps(followUpsData.data || []);
+      setAgendaItems(agendaData.items ?? []);
+      setDecisions(decisionsData.items ?? []);
+      setVotes(votesData.items ?? []);
+      setFollowUps(followUpsData.items ?? []);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Error loading meeting');
     } finally {

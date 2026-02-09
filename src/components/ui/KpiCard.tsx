@@ -25,34 +25,33 @@ export function KpiCard({
   className,
 }: KpiCardProps) {
   const statusColors = {
-    ok: 'border-l-emerald-500',
+    ok: 'border-l-primary',
     warning: 'border-l-amber-500',
-    critical: 'border-l-rose-400',
-    info: 'border-l-sky-400',
+    critical: 'border-l-destructive',
+    info: 'border-l-secondary',
   };
 
   return (
     <div
       className={cn(
-        "bg-white/80 backdrop-blur-sm rounded-xl p-5 border border-stone-200/50 shadow-sm",
-        "transition-all duration-200 hover:shadow-md hover:bg-white/90",
-        status && `border-l-4 ${statusColors[status]}`,
+        "glass-card p-5 border-l-4 border-transparent",
         onClick && "cursor-pointer hover:scale-[1.02]",
+        status && statusColors[status],
         className
       )}
       onClick={onClick}
     >
       <div className="flex items-start justify-between">
         <div className="flex-1">
-          <p className="text-sm font-medium text-stone-500 mb-1">{title}</p>
-          <p className="text-2xl font-bold text-stone-800">{value}</p>
+          <p className="text-sm font-medium text-muted-foreground mb-1">{title}</p>
+          <p className="text-2xl font-bold text-foreground tracking-tight">{value}</p>
           {subtitle && (
-            <p className="text-xs text-stone-400 mt-1">{subtitle}</p>
+            <p className="text-xs text-muted-foreground/80 mt-1">{subtitle}</p>
           )}
           {trend && (
             <div className={cn(
               "flex items-center gap-1 mt-2 text-xs font-medium",
-              trend.positive ? "text-emerald-600" : "text-rose-500"
+              trend.positive ? "text-primary" : "text-destructive"
             )}>
               <svg
                 className={cn("w-3 h-3", !trend.positive && "rotate-180")}
@@ -67,7 +66,7 @@ export function KpiCard({
           )}
         </div>
         {icon && (
-          <div className="p-2 rounded-lg bg-gradient-to-br from-emerald-50 to-amber-50 text-emerald-600">
+          <div className="p-2 rounded-lg bg-primary/10 text-primary">
             {icon}
           </div>
         )}

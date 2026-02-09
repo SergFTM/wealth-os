@@ -5,6 +5,7 @@ import { useApp } from '@/lib/store';
 import { useCollection } from '@/lib/hooks';
 import { createRecord } from '@/lib/apiClient';
 import { HelpPanel } from '@/components/templates/HelpPanel';
+import { ModuleAiPanel } from '@/components/shell/ModuleAiPanel';
 
 import {
   NetWorthKpiStrip,
@@ -81,7 +82,7 @@ interface Liability {
 }
 
 export function NetWorthDashboardPage() {
-  const { user, locale } = useApp();
+  const { user, locale, aiPanelOpen } = useApp();
   const clientSafe = user?.role === 'client';
 
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -270,12 +271,14 @@ export function NetWorthDashboardPage() {
         <NetWorthEntityDrilldown entities={entities} loading={loading} />
       </div>
 
-      {/* Help Panel */}
-      {helpOpen && (
+      {/* AI Panel or Help Panel */}
+      {aiPanelOpen ? (
+        <ModuleAiPanel />
+      ) : helpOpen ? (
         <div className="w-80 border-l border-stone-200 bg-white/80 backdrop-blur-sm p-6">
           <HelpPanel content={helpContent} onClose={() => setHelpOpen(false)} />
         </div>
-      )}
+      ) : null}
 
       {/* Detail Drawer */}
       <NetWorthDetailDrawer

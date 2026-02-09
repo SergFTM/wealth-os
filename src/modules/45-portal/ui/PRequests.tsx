@@ -21,7 +21,7 @@ export function PRequests({ requests, locale = 'ru', onCreateRequest }: PRequest
   const [formSubject, setFormSubject] = useState('');
   const [formDescription, setFormDescription] = useState('');
 
-  const labels: Record<string, Record<Locale, string>> = {
+  const labels: Record<string, Record<string, string>> = {
     title: { ru: 'Запросы', en: 'Requests', uk: 'Запити' },
     createRequest: { ru: 'Создать запрос', en: 'Create Request', uk: 'Створити запит' },
     newRequest: { ru: 'Новый запрос', en: 'New Request', uk: 'Новий запит' },

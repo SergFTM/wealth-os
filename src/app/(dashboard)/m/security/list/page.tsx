@@ -64,7 +64,8 @@ function SecurityListContent() {
       ];
 
       const responses = await Promise.all(endpoints.map((e) => fetch(e)));
-      const data = await Promise.all(responses.map((r) => r.json()));
+      const raw = await Promise.all(responses.map((r) => r.json()));
+      const data = raw.map((d) => d.items ?? d ?? []);
 
       setUsers(data[0]);
       setRoles(data[1]);
@@ -74,7 +75,7 @@ function SecurityListContent() {
       setReviews(data[5]);
       setIncidents(data[6]);
       setAuditEvents(data[7]);
-      setSettings(data[8]?.[0] || null);
+      setSettings(Array.isArray(data[8]) ? data[8][0] || null : null);
 
       if (data[1]?.length > 0 && !selectedRoleId) {
         setSelectedRoleId(data[1][0].id);

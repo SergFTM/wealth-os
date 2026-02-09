@@ -278,5 +278,105 @@
     "newValue": "open",
     "ipAddress": "192.168.1.100",
     "userAgent": "system-service/1.0"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "create",
+    "collection": "securityIncidents",
+    "recordId": "1770659630968-aokcwegny",
+    "summary": "Created securityIncidents record",
+    "id": "1770659630984-cp1wrtnrz",
+    "ts": "2026-02-09T17:53:50.984Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "create",
+    "collection": "securityIncidents",
+    "recordId": "1770659631107-lrdhsfn4h",
+    "summary": "Created securityIncidents record",
+    "id": "1770659631117-a4xlxv6vt",
+    "ts": "2026-02-09T17:53:51.117Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "create",
+    "collection": "securityIncidents",
+    "recordId": "1770659631158-i80e6aljr",
+    "summary": "Created securityIncidents record",
+    "id": "1770659631168-nulj41i3k",
+    "ts": "2026-02-09T17:53:51.168Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "create",
+    "collection": "securityIncidents",
+    "recordId": "1770659631214-gci0p76e7",
+    "summary": "Created securityIncidents record",
+    "id": "1770659631225-83jqcbrnk",
+    "ts": "2026-02-09T17:53:51.225Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "create",
+    "collection": "securityIncidents",
+    "recordId": "1770659631271-k9pb788kk",
+    "summary": "Created securityIncidents record",
+    "id": "1770659631282-8szs2rv7g",
+    "ts": "2026-02-09T17:53:51.282Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "create",
+    "collection": "securityIncidents",
+    "recordId": "1770659631319-d3ikth3dg",
+    "summary": "Created securityIncidents record",
+    "id": "1770659631330-801yj16i9",
+    "ts": "2026-02-09T17:53:51.330Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "create",
+    "collection": "securityIncidents",
+    "recordId": "1770659631369-71l6cg28z",
+    "summary": "Created securityIncidents record",
+    "id": "1770659631381-ilruc6grh",
+    "ts": "2026-02-09T17:53:51.382Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "create",
+    "collection": "securityIncidents",
+    "recordId": "1770659631439-2qpyfl0fz",
+    "summary": "Created securityIncidents record",
+    "id": "1770659631450-snhs8hupl",
+    "ts": "2026-02-09T17:53:51.450Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "create",
+    "collection": "securityIncidents",
+    "recordId": "1770659631491-pe2flq7w3",
+    "summary": "Created securityIncidents record",
+    "id": "1770659631502-af7khwb5v",
+    "ts": "2026-02-09T17:53:51.502Z"
+  },
+  {
+    "actorRole": "admin",
+    "actorName": "System",
+    "action": "create",
+    "collection": "securityIncidents",
+    "recordId": "1770659631545-vb8pjojrj",
+    "summary": "Created securityIncidents record",
+    "id": "1770659631554-bhi3kz7c9",
+    "ts": "2026-02-09T17:53:51.554Z"
   }
 ]

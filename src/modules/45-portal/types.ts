@@ -11,7 +11,7 @@ export const PortalRole = {
 
 export type PortalRoleKey = typeof PortalRole[keyof typeof PortalRole];
 
-export const PortalRoleLabels: Record<PortalRoleKey, Record<Locale, string>> = {
+export const PortalRoleLabels: Record<PortalRoleKey, Record<string, string>> = {
   client_owner: { ru: 'Владелец', en: 'Owner', uk: 'Власник' },
   client_family: { ru: 'Член семьи', en: 'Family Member', uk: 'Член сім\'ї' },
   client_advisor: { ru: 'Консультант', en: 'Advisor', uk: 'Консультант' },
@@ -27,7 +27,7 @@ export const RequestStatus = {
 
 export type RequestStatusKey = typeof RequestStatus[keyof typeof RequestStatus];
 
-export const RequestStatusLabels: Record<RequestStatusKey, Record<Locale, string>> = {
+export const RequestStatusLabels: Record<RequestStatusKey, Record<string, string>> = {
   open: { ru: 'Открыт', en: 'Open', uk: 'Відкрито' },
   in_progress: { ru: 'В работе', en: 'In Progress', uk: 'В роботі' },
   awaiting_client: { ru: 'Ожидает вас', en: 'Awaiting You', uk: 'Очікує вас' },
@@ -49,7 +49,7 @@ export const RequestCategory = {
 
 export type RequestCategoryKey = typeof RequestCategory[keyof typeof RequestCategory];
 
-export const RequestCategoryLabels: Record<RequestCategoryKey, Record<Locale, string>> = {
+export const RequestCategoryLabels: Record<RequestCategoryKey, Record<string, string>> = {
   general: { ru: 'Общий вопрос', en: 'General', uk: 'Загальне питання' },
   documents: { ru: 'Документы', en: 'Documents', uk: 'Документи' },
   transactions: { ru: 'Транзакции', en: 'Transactions', uk: 'Транзакції' },
@@ -75,7 +75,7 @@ export const PortalDocType = {
 
 export type PortalDocTypeKey = typeof PortalDocType[keyof typeof PortalDocType];
 
-export const PortalDocTypeLabels: Record<PortalDocTypeKey, Record<Locale, string>> = {
+export const PortalDocTypeLabels: Record<PortalDocTypeKey, Record<string, string>> = {
   report: { ru: 'Отчёт', en: 'Report', uk: 'Звіт' },
   statement: { ru: 'Выписка', en: 'Statement', uk: 'Виписка' },
   contract: { ru: 'Договор', en: 'Contract', uk: 'Договір' },
@@ -108,7 +108,7 @@ export const ConsentScope = {
 
 export type ConsentScopeKey = typeof ConsentScope[keyof typeof ConsentScope];
 
-export const ConsentScopeLabels: Record<ConsentScopeKey, Record<Locale, string>> = {
+export const ConsentScopeLabels: Record<ConsentScopeKey, Record<string, string>> = {
   view_networth: { ru: 'Просмотр капитала', en: 'View Net Worth', uk: 'Перегляд капіталу' },
   view_portfolios: { ru: 'Просмотр портфелей', en: 'View Portfolios', uk: 'Перегляд портфелів' },
   view_performance: { ru: 'Просмотр доходности', en: 'View Performance', uk: 'Перегляд дохідності' },
@@ -122,7 +122,7 @@ export const ConsentScopeLabels: Record<ConsentScopeKey, Record<Locale, string>>
 export interface PortalNavItem {
   key: string;
   path: string;
-  label: Record<Locale, string>;
+  label: Record<string, string>;
   icon: string;
 }
 

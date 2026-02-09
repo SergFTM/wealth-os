@@ -1,0 +1,2278 @@
+[
+  {
+    "id": "pv-001",
+    "portalUserId": "pu-001",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-001"
+    },
+    "at": "2026-01-02T06:00:00Z",
+    "ipMasked": "185.12.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-002",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-002"
+    },
+    "at": "2026-01-02T10:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-003",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-003"
+    },
+    "at": "2026-01-02T14:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-004",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-004"
+    },
+    "at": "2026-01-02T19:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-005",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-005"
+    },
+    "at": "2026-01-02T23:00:00Z"
+  },
+  {
+    "id": "pv-006",
+    "portalUserId": "pu-003",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-006"
+    },
+    "at": "2026-01-03T04:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-007",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-007"
+    },
+    "at": "2026-01-03T08:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-008",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-008"
+    },
+    "at": "2026-01-03T12:00:00Z",
+    "ipMasked": "77.88.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-009",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-009"
+    },
+    "at": "2026-01-03T17:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-010",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-010"
+    },
+    "at": "2026-01-03T21:00:00Z"
+  },
+  {
+    "id": "pv-011",
+    "portalUserId": "pu-002",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-011"
+    },
+    "at": "2026-01-04T02:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-012",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-012"
+    },
+    "at": "2026-01-04T06:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-013",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-013"
+    },
+    "at": "2026-01-04T10:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-014",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-014"
+    },
+    "at": "2026-01-04T15:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-015",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-015"
+    },
+    "at": "2026-01-04T19:00:00Z",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-016",
+    "portalUserId": "pu-001",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-016"
+    },
+    "at": "2026-01-05T00:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-017",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-017"
+    },
+    "at": "2026-01-05T04:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-018",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-018"
+    },
+    "at": "2026-01-05T08:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-019",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-019"
+    },
+    "at": "2026-01-05T13:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-020",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-020"
+    },
+    "at": "2026-01-05T17:00:00Z"
+  },
+  {
+    "id": "pv-021",
+    "portalUserId": "pu-003",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-021"
+    },
+    "at": "2026-01-05T22:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-022",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-022"
+    },
+    "at": "2026-01-06T02:00:00Z",
+    "ipMasked": "91.234.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-023",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-023"
+    },
+    "at": "2026-01-06T06:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-024",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-024"
+    },
+    "at": "2026-01-06T11:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-025",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-025"
+    },
+    "at": "2026-01-06T15:00:00Z"
+  },
+  {
+    "id": "pv-026",
+    "portalUserId": "pu-002",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-026"
+    },
+    "at": "2026-01-06T20:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-027",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-027"
+    },
+    "at": "2026-01-07T00:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-028",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-028"
+    },
+    "at": "2026-01-07T04:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-029",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-029"
+    },
+    "at": "2026-01-07T09:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-030",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-030"
+    },
+    "at": "2026-01-07T13:00:00Z"
+  },
+  {
+    "id": "pv-031",
+    "portalUserId": "pu-001",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-031"
+    },
+    "at": "2026-01-07T18:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-032",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-032"
+    },
+    "at": "2026-01-07T22:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-033",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-033"
+    },
+    "at": "2026-01-08T02:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-034",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-034"
+    },
+    "at": "2026-01-08T07:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-035",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-035"
+    },
+    "at": "2026-01-08T11:00:00Z"
+  },
+  {
+    "id": "pv-036",
+    "portalUserId": "pu-003",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-036"
+    },
+    "at": "2026-01-08T16:00:00Z",
+    "ipMasked": "185.12.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-037",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-037"
+    },
+    "at": "2026-01-08T20:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-038",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-038"
+    },
+    "at": "2026-01-09T00:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-039",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-039"
+    },
+    "at": "2026-01-09T05:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-040",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-040"
+    },
+    "at": "2026-01-09T09:00:00Z"
+  },
+  {
+    "id": "pv-041",
+    "portalUserId": "pu-002",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-041"
+    },
+    "at": "2026-01-09T14:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-042",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-042"
+    },
+    "at": "2026-01-09T18:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-043",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-043"
+    },
+    "at": "2026-01-09T22:00:00Z",
+    "ipMasked": "77.88.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-044",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-044"
+    },
+    "at": "2026-01-10T03:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-045",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-045"
+    },
+    "at": "2026-01-10T07:00:00Z"
+  },
+  {
+    "id": "pv-046",
+    "portalUserId": "pu-001",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-046"
+    },
+    "at": "2026-01-10T12:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-047",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-047"
+    },
+    "at": "2026-01-10T16:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-048",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-048"
+    },
+    "at": "2026-01-10T20:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-049",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-049"
+    },
+    "at": "2026-01-11T01:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-050",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-050"
+    },
+    "at": "2026-01-11T05:00:00Z",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-051",
+    "portalUserId": "pu-003",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-051"
+    },
+    "at": "2026-01-11T10:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-052",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-052"
+    },
+    "at": "2026-01-11T14:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-053",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-053"
+    },
+    "at": "2026-01-11T18:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-054",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-054"
+    },
+    "at": "2026-01-11T23:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-055",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-055"
+    },
+    "at": "2026-01-12T03:00:00Z"
+  },
+  {
+    "id": "pv-056",
+    "portalUserId": "pu-002",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-056"
+    },
+    "at": "2026-01-12T08:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-057",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-057"
+    },
+    "at": "2026-01-12T12:00:00Z",
+    "ipMasked": "91.234.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-058",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-058"
+    },
+    "at": "2026-01-12T16:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-059",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-059"
+    },
+    "at": "2026-01-12T21:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-060",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "documents",
+      "id": "doc-060"
+    },
+    "at": "2026-01-13T01:00:00Z"
+  },
+  {
+    "id": "pv-061",
+    "portalUserId": "pu-001",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-001"
+    },
+    "at": "2026-01-13T06:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-062",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-002"
+    },
+    "at": "2026-01-13T10:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-063",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-003"
+    },
+    "at": "2026-01-13T14:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-064",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-004"
+    },
+    "at": "2026-01-13T19:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-065",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-005"
+    },
+    "at": "2026-01-13T23:00:00Z"
+  },
+  {
+    "id": "pv-066",
+    "portalUserId": "pu-003",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-006"
+    },
+    "at": "2026-01-14T04:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-067",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-007"
+    },
+    "at": "2026-01-14T08:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-068",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-008"
+    },
+    "at": "2026-01-14T12:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-069",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-009"
+    },
+    "at": "2026-01-14T17:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-070",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-010"
+    },
+    "at": "2026-01-14T21:00:00Z"
+  },
+  {
+    "id": "pv-071",
+    "portalUserId": "pu-002",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-011"
+    },
+    "at": "2026-01-15T02:00:00Z",
+    "ipMasked": "185.12.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-072",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-012"
+    },
+    "at": "2026-01-15T06:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-073",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-013"
+    },
+    "at": "2026-01-15T10:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-074",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-014"
+    },
+    "at": "2026-01-15T15:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-075",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-015"
+    },
+    "at": "2026-01-15T19:00:00Z"
+  },
+  {
+    "id": "pv-076",
+    "portalUserId": "pu-001",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-016"
+    },
+    "at": "2026-01-16T00:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-077",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-017"
+    },
+    "at": "2026-01-16T04:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-078",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-018"
+    },
+    "at": "2026-01-16T08:00:00Z",
+    "ipMasked": "77.88.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-079",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-019"
+    },
+    "at": "2026-01-16T13:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-080",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-020"
+    },
+    "at": "2026-01-16T17:00:00Z"
+  },
+  {
+    "id": "pv-081",
+    "portalUserId": "pu-003",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-021"
+    },
+    "at": "2026-01-16T22:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-082",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-022"
+    },
+    "at": "2026-01-17T02:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-083",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-023"
+    },
+    "at": "2026-01-17T06:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-084",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-024"
+    },
+    "at": "2026-01-17T11:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-085",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-025"
+    },
+    "at": "2026-01-17T15:00:00Z",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-086",
+    "portalUserId": "pu-002",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-026"
+    },
+    "at": "2026-01-17T20:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-087",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-027"
+    },
+    "at": "2026-01-18T00:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-088",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-028"
+    },
+    "at": "2026-01-18T04:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-089",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-029"
+    },
+    "at": "2026-01-18T09:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-090",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "reportPacks",
+      "id": "rp-030"
+    },
+    "at": "2026-01-18T13:00:00Z"
+  },
+  {
+    "id": "pv-091",
+    "portalUserId": "pu-001",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-001"
+    },
+    "at": "2026-01-18T18:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-092",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-002"
+    },
+    "at": "2026-01-18T22:00:00Z",
+    "ipMasked": "91.234.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-093",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-003"
+    },
+    "at": "2026-01-19T02:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-094",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-004"
+    },
+    "at": "2026-01-19T07:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-095",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-005"
+    },
+    "at": "2026-01-19T11:00:00Z"
+  },
+  {
+    "id": "pv-096",
+    "portalUserId": "pu-003",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-006"
+    },
+    "at": "2026-01-19T16:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-097",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-007"
+    },
+    "at": "2026-01-19T20:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-098",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-008"
+    },
+    "at": "2026-01-20T00:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-099",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-009"
+    },
+    "at": "2026-01-20T05:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-100",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-010"
+    },
+    "at": "2026-01-20T09:00:00Z"
+  },
+  {
+    "id": "pv-101",
+    "portalUserId": "pu-002",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-011"
+    },
+    "at": "2026-01-20T14:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-102",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-012"
+    },
+    "at": "2026-01-20T18:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-103",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-013"
+    },
+    "at": "2026-01-20T22:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-104",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-014"
+    },
+    "at": "2026-01-21T03:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-105",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-015"
+    },
+    "at": "2026-01-21T07:00:00Z"
+  },
+  {
+    "id": "pv-106",
+    "portalUserId": "pu-001",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-016"
+    },
+    "at": "2026-01-21T12:00:00Z",
+    "ipMasked": "185.12.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-107",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-017"
+    },
+    "at": "2026-01-21T16:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-108",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-018"
+    },
+    "at": "2026-01-21T20:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-109",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-019"
+    },
+    "at": "2026-01-22T01:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-110",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "ownershipViews",
+      "id": "ov-020"
+    },
+    "at": "2026-01-22T05:00:00Z"
+  },
+  {
+    "id": "pv-111",
+    "portalUserId": "pu-003",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-001"
+    },
+    "at": "2026-01-22T10:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-112",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-002"
+    },
+    "at": "2026-01-22T14:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-113",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-003"
+    },
+    "at": "2026-01-22T18:00:00Z",
+    "ipMasked": "77.88.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-114",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-004"
+    },
+    "at": "2026-01-22T23:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-115",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-005"
+    },
+    "at": "2026-01-23T03:00:00Z"
+  },
+  {
+    "id": "pv-116",
+    "portalUserId": "pu-002",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-006"
+    },
+    "at": "2026-01-23T08:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-117",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-007"
+    },
+    "at": "2026-01-23T12:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-118",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-008"
+    },
+    "at": "2026-01-23T16:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-119",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-009"
+    },
+    "at": "2026-01-23T21:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-120",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-010"
+    },
+    "at": "2026-01-24T01:00:00Z",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-121",
+    "portalUserId": "pu-001",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-011"
+    },
+    "at": "2026-01-24T06:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-122",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-012"
+    },
+    "at": "2026-01-24T10:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-123",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-013"
+    },
+    "at": "2026-01-24T14:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-124",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-014"
+    },
+    "at": "2026-01-24T19:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-125",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-015"
+    },
+    "at": "2026-01-24T23:00:00Z"
+  },
+  {
+    "id": "pv-126",
+    "portalUserId": "pu-003",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-016"
+    },
+    "at": "2026-01-25T04:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-127",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-017"
+    },
+    "at": "2026-01-25T08:00:00Z",
+    "ipMasked": "91.234.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-128",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-018"
+    },
+    "at": "2026-01-25T12:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-129",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-019"
+    },
+    "at": "2026-01-25T17:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-130",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "philImpactReports",
+      "id": "pir-020"
+    },
+    "at": "2026-01-25T21:00:00Z"
+  },
+  {
+    "id": "pv-131",
+    "portalUserId": "pu-002",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-001"
+    },
+    "at": "2026-01-26T02:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-132",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-002"
+    },
+    "at": "2026-01-26T06:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-133",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-003"
+    },
+    "at": "2026-01-26T10:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-134",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-004"
+    },
+    "at": "2026-01-26T15:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-135",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-005"
+    },
+    "at": "2026-01-26T19:00:00Z"
+  },
+  {
+    "id": "pv-136",
+    "portalUserId": "pu-001",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-006"
+    },
+    "at": "2026-01-27T00:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-137",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-007"
+    },
+    "at": "2026-01-27T04:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-138",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-008"
+    },
+    "at": "2026-01-27T08:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-139",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-009"
+    },
+    "at": "2026-01-27T13:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-140",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-010"
+    },
+    "at": "2026-01-27T17:00:00Z"
+  },
+  {
+    "id": "pv-141",
+    "portalUserId": "pu-003",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-011"
+    },
+    "at": "2026-01-27T22:00:00Z",
+    "ipMasked": "185.12.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-142",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-012"
+    },
+    "at": "2026-01-28T02:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-143",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-013"
+    },
+    "at": "2026-01-28T06:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-144",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-014"
+    },
+    "at": "2026-01-28T11:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-145",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-015"
+    },
+    "at": "2026-01-28T15:00:00Z"
+  },
+  {
+    "id": "pv-146",
+    "portalUserId": "pu-002",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-016"
+    },
+    "at": "2026-01-28T20:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-147",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-017"
+    },
+    "at": "2026-01-29T00:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-148",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-018"
+    },
+    "at": "2026-01-29T04:00:00Z",
+    "ipMasked": "77.88.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-149",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-019"
+    },
+    "at": "2026-01-29T09:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-150",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-020"
+    },
+    "at": "2026-01-29T13:00:00Z"
+  },
+  {
+    "id": "pv-151",
+    "portalUserId": "pu-001",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-021"
+    },
+    "at": "2026-01-29T18:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-152",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-022"
+    },
+    "at": "2026-01-29T22:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-153",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-023"
+    },
+    "at": "2026-01-30T02:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-154",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-024"
+    },
+    "at": "2026-01-30T07:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-155",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "commThreads",
+      "id": "ct-025"
+    },
+    "at": "2026-01-30T11:00:00Z",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-156",
+    "portalUserId": "pu-003",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "consents",
+      "id": "con-001"
+    },
+    "at": "2026-01-30T16:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-157",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "consents",
+      "id": "con-002"
+    },
+    "at": "2026-01-30T20:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-158",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "consents",
+      "id": "con-003"
+    },
+    "at": "2026-01-31T00:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-159",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "consents",
+      "id": "con-004"
+    },
+    "at": "2026-01-31T05:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-160",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "consents",
+      "id": "con-005"
+    },
+    "at": "2026-01-31T09:00:00Z"
+  },
+  {
+    "id": "pv-161",
+    "portalUserId": "pu-002",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "consents",
+      "id": "con-006"
+    },
+    "at": "2026-01-31T14:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-162",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "consents",
+      "id": "con-007"
+    },
+    "at": "2026-01-31T18:00:00Z",
+    "ipMasked": "91.234.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-163",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "consents",
+      "id": "con-008"
+    },
+    "at": "2026-01-31T22:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-164",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "consents",
+      "id": "con-009"
+    },
+    "at": "2026-02-01T03:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-165",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "consents",
+      "id": "con-010"
+    },
+    "at": "2026-02-01T07:00:00Z"
+  },
+  {
+    "id": "pv-166",
+    "portalUserId": "pu-001",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "consents",
+      "id": "con-011"
+    },
+    "at": "2026-02-01T12:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-167",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "consents",
+      "id": "con-012"
+    },
+    "at": "2026-02-01T16:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-168",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "consents",
+      "id": "con-013"
+    },
+    "at": "2026-02-01T20:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-169",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "consents",
+      "id": "con-014"
+    },
+    "at": "2026-02-02T01:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-170",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "consents",
+      "id": "con-015"
+    },
+    "at": "2026-02-02T05:00:00Z"
+  },
+  {
+    "id": "pv-171",
+    "portalUserId": "pu-003",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "relHouseholds",
+      "id": "rh-001"
+    },
+    "at": "2026-02-02T10:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-172",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "relHouseholds",
+      "id": "rh-002"
+    },
+    "at": "2026-02-02T14:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-173",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "relHouseholds",
+      "id": "rh-003"
+    },
+    "at": "2026-02-02T18:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-174",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "relHouseholds",
+      "id": "rh-004"
+    },
+    "at": "2026-02-02T23:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-175",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "relHouseholds",
+      "id": "rh-005"
+    },
+    "at": "2026-02-03T03:00:00Z"
+  },
+  {
+    "id": "pv-176",
+    "portalUserId": "pu-002",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "relHouseholds",
+      "id": "rh-006"
+    },
+    "at": "2026-02-03T08:00:00Z",
+    "ipMasked": "185.12.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-177",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "relHouseholds",
+      "id": "rh-007"
+    },
+    "at": "2026-02-03T12:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-178",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "relHouseholds",
+      "id": "rh-008"
+    },
+    "at": "2026-02-03T16:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-179",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "relHouseholds",
+      "id": "rh-009"
+    },
+    "at": "2026-02-03T21:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-180",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "relHouseholds",
+      "id": "rh-010"
+    },
+    "at": "2026-02-04T01:00:00Z"
+  },
+  {
+    "id": "pv-181",
+    "portalUserId": "pu-001",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "relHouseholds",
+      "id": "rh-011"
+    },
+    "at": "2026-02-04T06:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-182",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "relHouseholds",
+      "id": "rh-012"
+    },
+    "at": "2026-02-04T10:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-183",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "relHouseholds",
+      "id": "rh-013"
+    },
+    "at": "2026-02-04T14:00:00Z",
+    "ipMasked": "77.88.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-184",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "relHouseholds",
+      "id": "rh-014"
+    },
+    "at": "2026-02-04T19:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-185",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "relHouseholds",
+      "id": "rh-015"
+    },
+    "at": "2026-02-04T23:00:00Z"
+  },
+  {
+    "id": "pv-186",
+    "portalUserId": "pu-003",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "portalRequests",
+      "id": "pr-001"
+    },
+    "at": "2026-02-05T04:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-187",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "portalRequests",
+      "id": "pr-002"
+    },
+    "at": "2026-02-05T08:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-188",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "portalRequests",
+      "id": "pr-003"
+    },
+    "at": "2026-02-05T12:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-189",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "portalRequests",
+      "id": "pr-004"
+    },
+    "at": "2026-02-05T17:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-190",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "portalRequests",
+      "id": "pr-005"
+    },
+    "at": "2026-02-05T21:00:00Z",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-191",
+    "portalUserId": "pu-002",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "portalRequests",
+      "id": "pr-006"
+    },
+    "at": "2026-02-06T02:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-192",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "portalRequests",
+      "id": "pr-007"
+    },
+    "at": "2026-02-06T06:00:00Z",
+    "ipMasked": "91.234.xx.xx"
+  },
+  {
+    "id": "pv-193",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "portalRequests",
+      "id": "pr-008"
+    },
+    "at": "2026-02-06T10:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-194",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "portalRequests",
+      "id": "pr-009"
+    },
+    "at": "2026-02-06T15:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-195",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "portalRequests",
+      "id": "pr-010"
+    },
+    "at": "2026-02-06T19:00:00Z"
+  },
+  {
+    "id": "pv-196",
+    "portalUserId": "pu-001",
+    "actionKey": "download",
+    "targetRefJson": {
+      "collection": "portalRequests",
+      "id": "pr-011"
+    },
+    "at": "2026-02-07T00:00:00Z",
+    "ipMasked": "185.12.xx.xx"
+  },
+  {
+    "id": "pv-197",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "portalRequests",
+      "id": "pr-012"
+    },
+    "at": "2026-02-07T04:00:00Z",
+    "ipMasked": "91.234.xx.xx",
+    "metaJson": {
+      "userAgent": "Mozilla/5.0",
+      "screen": "1920x1080"
+    }
+  },
+  {
+    "id": "pv-198",
+    "portalUserId": "pu-003",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "portalRequests",
+      "id": "pr-013"
+    },
+    "at": "2026-02-07T08:00:00Z",
+    "ipMasked": "77.88.xx.xx"
+  },
+  {
+    "id": "pv-199",
+    "portalUserId": "pu-001",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "portalRequests",
+      "id": "pr-014"
+    },
+    "at": "2026-02-07T13:00:00Z",
+    "ipMasked": "2a02:6b8:xx::xx"
+  },
+  {
+    "id": "pv-200",
+    "portalUserId": "pu-002",
+    "actionKey": "view",
+    "targetRefJson": {
+      "collection": "portalRequests",
+      "id": "pr-015"
+    },
+    "at": "2026-02-07T17:00:00Z"
+  }
+]

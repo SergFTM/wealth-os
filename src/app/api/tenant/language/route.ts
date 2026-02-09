@@ -24,8 +24,8 @@ async function writeData(data: unknown[]) {
 
 const DEFAULT_LANGUAGE = {
   id: 'lang_001',
-  defaultLanguage: 'ru',
-  enabledLanguages: ['ru', 'en', 'uk'],
+  defaultLanguage: 'en',
+  enabledLanguages: ['en', 'ru', 'uk', 'es', 'de', 'it', 'fr', 'el'],
   overrides: [],
 };
 

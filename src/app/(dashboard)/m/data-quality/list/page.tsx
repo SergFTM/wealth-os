@@ -27,7 +27,7 @@ type TabKey = 'health' | 'rules' | 'exceptions' | 'conflicts' | 'jobs' | 'recon'
 
 interface Tab {
   key: string;
-  label: { ru: string; en: string; uk: string };
+  label: Record<string, string>;
 }
 
 export default function DataQualityListPage() {
@@ -75,12 +75,12 @@ export default function DataQualityListPage() {
         metricsRes.json(),
       ]);
 
-      setRules(rulesData.data || []);
-      setExceptions(exceptionsData.data || []);
-      setConflicts(conflictsData.data || []);
-      setSyncJobs(jobsData.data || []);
-      setReconChecks(reconData.data || []);
-      setMetrics(metricsData.data || []);
+      setRules(rulesData.items ?? []);
+      setExceptions(exceptionsData.items ?? []);
+      setConflicts(conflictsData.items ?? []);
+      setSyncJobs(jobsData.items ?? []);
+      setReconChecks(reconData.items ?? []);
+      setMetrics(metricsData.items ?? []);
     } catch (error) {
       console.error('Error fetching data:', error);
     } finally {

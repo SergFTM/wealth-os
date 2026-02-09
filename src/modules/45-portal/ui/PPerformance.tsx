@@ -10,7 +10,7 @@ interface PPerformanceProps {
 }
 
 export function PPerformance({ data, locale = 'ru' }: PPerformanceProps) {
-  const labels: Record<string, Record<Locale, string>> = {
+  const labels: Record<string, Record<string, string>> = {
     title: { ru: 'Доходность портфеля', en: 'Portfolio Performance', uk: 'Дохідність портфеля' },
     period: { ru: 'Период', en: 'Period', uk: 'Період' },
     return: { ru: 'Доходность', en: 'Return', uk: 'Дохідність' },
@@ -20,7 +20,7 @@ export function PPerformance({ data, locale = 'ru' }: PPerformanceProps) {
     chartPlaceholder: { ru: 'График доходности', en: 'Performance Chart', uk: 'Графік дохідності' },
   };
 
-  const periodLabels: Record<string, Record<Locale, string>> = {
+  const periodLabels: Record<string, Record<string, string>> = {
     '1M': { ru: '1 мес', en: '1M', uk: '1 міс' },
     '3M': { ru: '3 мес', en: '3M', uk: '3 міс' },
     '6M': { ru: '6 мес', en: '6M', uk: '6 міс' },

@@ -10,7 +10,7 @@ interface PLiquidityProps {
 }
 
 export function PLiquidity({ data, locale = 'ru' }: PLiquidityProps) {
-  const labels: Record<string, Record<Locale, string>> = {
+  const labels: Record<string, Record<string, string>> = {
     title: { ru: 'Ликвидность', en: 'Liquidity', uk: 'Ліквідність' },
     cashToday: { ru: 'Денежные средства сегодня', en: 'Cash Today', uk: 'Грошові кошти сьогодні' },
     forecast: { ru: 'Прогноз', en: 'Forecast', uk: 'Прогноз' },

@@ -38,23 +38,20 @@ export default function CommitteeDecisionDetailPage({ params }: PageProps) {
       if (!decisionRes.ok) {
         throw new Error('Decision not found');
       }
-      const decisionData = await decisionRes.json();
-      const dec = decisionData.data as CommitteeDecision;
+      const dec = await decisionRes.json() as CommitteeDecision;
       setDecision(dec);
 
       // Fetch meeting
       const meetingRes = await fetch(`/api/collections/committeeMeetings/${dec.meetingId}`);
       if (meetingRes.ok) {
-        const meetingData = await meetingRes.json();
-        setMeeting(meetingData.data);
+        setMeeting(await meetingRes.json());
       }
 
       // Fetch linked vote if exists
       if (dec.voteId) {
         const voteRes = await fetch(`/api/collections/committeeVotes/${dec.voteId}`);
         if (voteRes.ok) {
-          const voteData = await voteRes.json();
-          setLinkedVote(voteData.data);
+          setLinkedVote(await voteRes.json());
         }
       }
 
@@ -62,7 +59,7 @@ export default function CommitteeDecisionDetailPage({ params }: PageProps) {
       const followUpsRes = await fetch('/api/collections/committeeFollowUps');
       if (followUpsRes.ok) {
         const followUpsData = await followUpsRes.json();
-        setFollowUps(followUpsData.data || []);
+        setFollowUps(followUpsData.items ?? []);
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Error loading decision');

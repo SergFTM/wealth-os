@@ -100,7 +100,8 @@ export default function ShareDetailPage({ params }: { params: Promise<{ id: stri
         // Load files for the pack
         const filesRes = await fetch('/api/collections/exportFiles');
         if (filesRes.ok) {
-          const allFiles = await filesRes.json();
+          const filesRaw = await filesRes.json();
+          const allFiles = filesRaw.items ?? filesRaw ?? [];
           setFiles(allFiles.filter((f: { packId: string }) => f.packId === shareData.packId).slice(0, 10));
         }
       } else {

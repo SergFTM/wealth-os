@@ -2,7 +2,9 @@
 
 import { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
+import { useApp } from '@/lib/store';
 import { HelpPanel } from '@/components/ui/HelpPanel';
+import { ModuleAiPanel } from '@/components/shell/ModuleAiPanel';
 import { PerfKpiStrip } from './PerfKpiStrip';
 import { PerfTimeframeSwitcher } from './PerfTimeframeSwitcher';
 import { PerfOverviewCharts } from './PerfOverviewCharts';
@@ -71,6 +73,7 @@ interface Advisor {
 
 export function PerfDashboardPage() {
   const router = useRouter();
+  const { aiPanelOpen } = useApp();
   const [timeframe, setTimeframe] = useState('YTD');
   const [showHelp, setShowHelp] = useState(false);
   const [showReportBuilder, setShowReportBuilder] = useState(false);
@@ -278,8 +281,10 @@ export function PerfDashboardPage() {
             />
           </div>
 
-          {/* Help panel */}
-          {showHelp && (
+          {/* AI Panel or Help panel */}
+          {aiPanelOpen ? (
+            <ModuleAiPanel />
+          ) : showHelp ? (
             <div className="w-80 flex-shrink-0">
               <HelpPanel
                 title="Эффективность портфеля"
@@ -305,7 +310,7 @@ export function PerfDashboardPage() {
                 ]}
               />
             </div>
-          )}
+          ) : null}
         </div>
       </div>
 

@@ -25,7 +25,7 @@ const statusColors: Record<string, { bg: string; text: string; dot: string }> = 
 
 export function PStatusPill({ status, locale = 'ru', size = 'md' }: PStatusPillProps) {
   const colors = statusColors[status] || statusColors.pending;
-  const label = (RequestStatusLabels as Record<string, Record<Locale, string>>)[status]?.[locale] || status;
+  const label = (RequestStatusLabels as Record<string, Record<string, string>>)[status]?.[locale] || status;
 
   const sizeClasses = size === 'sm' ? 'px-2 py-0.5 text-xs' : 'px-2.5 py-1 text-xs';
 

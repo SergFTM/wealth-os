@@ -67,7 +67,8 @@ export default function ExportDetailPage({ params }: { params: Promise<{ id: str
       // Load files for this run
       const filesRes = await fetch('/api/collections/exportFiles');
       if (filesRes.ok) {
-        const allFiles = await filesRes.json();
+        const filesRaw = await filesRes.json();
+        const allFiles = filesRaw.items ?? filesRaw ?? [];
         setFiles(allFiles.filter((f: { runId: string }) => f.runId === resolvedParams.id));
       }
     } catch (err) {

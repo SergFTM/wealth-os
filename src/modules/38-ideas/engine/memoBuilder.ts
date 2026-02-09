@@ -321,7 +321,7 @@ export function generateAiMeta(
   if (notes.length > 0) confidence += 10;
   confidence = Math.min(confidence, 95);
 
-  const disclaimers: Record<Locale, string> = {
+  const disclaimers: Record<string, string> = {
     ru: 'Данный документ сгенерирован автоматически и носит информационный характер. Не является индивидуальной инвестиционной рекомендацией.',
     en: 'This document was auto-generated and is for informational purposes only. This does not constitute individual investment advice.',
     uk: 'Цей документ згенеровано автоматично і має інформаційний характер. Не є індивідуальною інвестиційною рекомендацією.'

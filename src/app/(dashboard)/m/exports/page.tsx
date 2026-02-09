@@ -29,7 +29,8 @@ export default function ExportsDashboardPage() {
       setLoading(true);
       const res = await fetch('/api/collections/exportPacks');
       if (res.ok) {
-        const data = await res.json();
+        const raw = await res.json();
+        const data: ExportPack[] = raw.items ?? raw ?? [];
         setPacks(data.slice(0, 10));
 
         // Calculate stats

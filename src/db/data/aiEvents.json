@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1770662978234-nj0uptz1y",
+    "promptType": "general_query",
+    "promptText": "Platform capabilities overview",
+    "responseText": "## Резюме\n\nЗапрос обработан. Результаты основаны на доступных данных платформы.\n\n## Ключевые моменты\n\n• Анализ выполнен по текущим данным\n• Для уточнения используйте специализированные запросы\n\n## Источники\n\n• [Net Worth Summary](/m/net-worth/item/nw-001) — $45.2M\n\n## Предположения\n\n• Контекст определен автоматически\n• Данные актуальны на момент запроса\n\n---\n\n**Уверенность:** 40%\n\n_Низкая уверенность — требуется дополнительная проверка_",
+    "confidencePct": 40,
+    "sourcesJson": "[{\"module\":\"net-worth\",\"recordType\":\"summary\",\"recordId\":\"nw-001\",\"label\":\"Net Worth Summary\",\"value\":\"$45.2M\",\"url\":\"/m/net-worth/item/nw-001\"}]",
+    "clientSafe": false,
+    "blocked": false,
+    "blockReason": null,
+    "userId": "user-rm-001",
+    "clientId": "client-001",
+    "createdAt": "2026-02-09T18:49:38.234Z",
+    "updatedAt": "2026-02-09T18:49:38.234Z"
+  },
+  {
+    "id": "1770663020232-4hp0iyxgk",
+    "promptType": "general_query",
+    "promptText": "есть доступ к бащзе знаний?",
+    "responseText": "## Резюме\n\nЗапрос обработан. Результаты основаны на доступных данных платформы.\n\n## Ключевые моменты\n\n• Анализ выполнен по текущим данным\n• Для уточнения используйте специализированные запросы\n\n## Источники\n\n• [Net Worth Summary](/m/net-worth/item/nw-001) — $45.2M\n\n## Предположения\n\n• Контекст определен автоматически\n• Данные актуальны на момент запроса\n\n---\n\n**Уверенность:** 40%\n\n_Низкая уверенность — требуется дополнительная проверка_",
+    "confidencePct": 40,
+    "sourcesJson": "[{\"module\":\"net-worth\",\"recordType\":\"summary\",\"recordId\":\"nw-001\",\"label\":\"Net Worth Summary\",\"value\":\"$45.2M\",\"url\":\"/m/net-worth/item/nw-001\"}]",
+    "clientSafe": false,
+    "blocked": false,
+    "blockReason": null,
+    "userId": "user-rm-001",
+    "clientId": "client-001",
+    "createdAt": "2026-02-09T18:50:20.232Z",
+    "updatedAt": "2026-02-09T18:50:20.232Z"
+  },
+  {
+    "id": "1770668479476-s7lq7ga06",
+    "promptType": "general_query",
+    "promptText": "Platform capabilities overview",
+    "responseText": "## Резюме\n\nЗапрос обработан. Результаты основаны на доступных данных платформы.\n\n## Ключевые моменты\n\n• Анализ выполнен по текущим данным\n• Для уточнения используйте специализированные запросы\n\n## Источники\n\n• [Net Worth Summary](/m/net-worth/item/nw-001) — $45.2M\n\n## Предположения\n\n• Контекст определен автоматически\n• Данные актуальны на момент запроса\n\n---\n\n**Уверенность:** 40%\n\n_Низкая уверенность — требуется дополнительная проверка_",
+    "confidencePct": 40,
+    "sourcesJson": "[{\"module\":\"net-worth\",\"recordType\":\"summary\",\"recordId\":\"nw-001\",\"label\":\"Net Worth Summary\",\"value\":\"$45.2M\",\"url\":\"/m/net-worth/item/nw-001\"}]",
+    "clientSafe": false,
+    "blocked": false,
+    "blockReason": null,
+    "userId": "user-rm-001",
+    "clientId": "client-001",
+    "createdAt": "2026-02-09T20:21:19.476Z",
+    "updatedAt": "2026-02-09T20:21:19.476Z"
+  }
+]

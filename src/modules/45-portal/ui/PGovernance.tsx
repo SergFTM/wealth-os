@@ -14,7 +14,7 @@ interface PGovernanceProps {
 export function PGovernance({ minutes, locale = 'ru', onExportPdf }: PGovernanceProps) {
   const [selectedMinutes, setSelectedMinutes] = useState<PortalMinutes | null>(null);
 
-  const labels: Record<string, Record<Locale, string>> = {
+  const labels: Record<string, Record<string, string>> = {
     title: { ru: 'Governance', en: 'Governance', uk: 'Governance' },
     minutes: { ru: 'Протоколы заседаний', en: 'Meeting Minutes', uk: 'Протоколи засідань' },
     noMinutes: { ru: 'Нет опубликованных протоколов', en: 'No published minutes', uk: 'Немає опублікованих протоколів' },

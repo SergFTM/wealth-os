@@ -8,6 +8,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useI18n } from '@/lib/i18n';
+import { useApp } from '@/lib/store';
+import { ModuleAiPanel } from '@/components/shell/ModuleAiPanel';
 import { CmKpiStrip } from '@/modules/28-committee/ui/CmKpiStrip';
 import { CmMeetingsTable } from '@/modules/28-committee/ui/CmMeetingsTable';
 import { CmDecisionsTable } from '@/modules/28-committee/ui/CmDecisionsTable';
@@ -21,6 +23,7 @@ import { committeeConfig } from '@/modules/28-committee/config';
 
 export default function CommitteeDashboardPage() {
   const { lang } = useI18n();
+  const { aiPanelOpen } = useApp();
   const [meetings, setMeetings] = useState<CommitteeMeeting[]>([]);
   const [agendaItems, setAgendaItems] = useState<CommitteeAgendaItem[]>([]);
   const [decisions, setDecisions] = useState<CommitteeDecision[]>([]);
@@ -50,11 +53,11 @@ export default function CommitteeDashboardPage() {
         followUpsRes.json(),
       ]);
 
-      setMeetings(meetingsData.data || []);
-      setAgendaItems(agendaData.data || []);
-      setDecisions(decisionsData.data || []);
-      setVotes(votesData.data || []);
-      setFollowUps(followUpsData.data || []);
+      setMeetings(meetingsData.items ?? []);
+      setAgendaItems(agendaData.items ?? []);
+      setDecisions(decisionsData.items ?? []);
+      setVotes(votesData.items ?? []);
+      setFollowUps(followUpsData.items ?? []);
     } catch (error) {
       console.error('Error fetching committee data:', error);
     } finally {
@@ -117,7 +120,8 @@ export default function CommitteeDashboardPage() {
   );
 
   return (
-    <div className="space-y-6">
+    <div className="flex gap-6">
+      <div className="flex-1 min-w-0 space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold text-gray-900">{labels.title[lang]}</h1>
@@ -194,6 +198,10 @@ export default function CommitteeDashboardPage() {
           />
         </div>
       </div>
+      </div>
+
+      {/* AI Panel */}
+      {aiPanelOpen && <ModuleAiPanel />}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState, ReactNode, useCallback, useEffect } from 'react';
-import { Locale, dictionaries, Dictionary } from '@/lib/i18n';
+import { Locale, DisplayLocale, coreLocale, dictionaries, Dictionary } from '@/lib/i18n';
 import { UserRole } from '@/lib/data';
 
 type Scope = 'household' | 'entity' | 'portfolio' | 'account';
@@ -21,6 +21,7 @@ interface AppState {
   clientSafe: boolean;
   // Locale
   locale: Locale;
+  displayLocale: DisplayLocale;
   t: Dictionary;
   // Theme
   theme: Theme;
@@ -29,13 +30,16 @@ interface AppState {
   asOfDate: string;
   // UI
   copilotOpen: boolean;
+  aiPanelOpen: boolean;
   createModalOpen: boolean;
+  // Navigation
+  activeCluster: number;
 }
 
 interface AppContextType extends AppState {
   login: (role: UserRole, name?: string) => void;
   logout: () => void;
-  setLocale: (locale: Locale) => void;
+  setLocale: (locale: DisplayLocale) => void;
   setTheme: (theme: Theme) => void;
   toggleTheme: () => void;
   setScope: (scope: Scope) => void;
@@ -43,8 +47,10 @@ interface AppContextType extends AppState {
   toggleClientSafe: () => void;
   openCopilot: () => void;
   closeCopilot: () => void;
+  toggleAiPanel: () => void;
   openCreateModal: () => void;
   closeCreateModal: () => void;
+  setActiveCluster: (clusterId: number) => void;
 }
 
 const roleNames: Record<UserRole, string> = {
@@ -69,13 +75,16 @@ export function AppProvider({ children }: { children: ReactNode }) {
     userName: '',
     user: null,
     clientSafe: false,
-    locale: 'ru',
-    t: dictionaries.ru,
+    locale: 'en',
+    displayLocale: 'en',
+    t: dictionaries.en,
     theme: 'light',
     scope: 'household',
     asOfDate: today,
     copilotOpen: false,
+    aiPanelOpen: false,
     createModalOpen: false,
+    activeCluster: 1,
   });
 
   // Initialize theme from localStorage (default to light)
@@ -85,6 +94,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
     setState(prev => ({ ...prev, theme: initialTheme }));
     document.documentElement.classList.toggle('dark', initialTheme === 'dark');
+
+    const storedCluster = localStorage.getItem('wealth-os-active-cluster');
+    if (storedCluster) {
+      const parsed = parseInt(storedCluster, 10);
+      if (parsed >= 1 && parsed <= 6) {
+        setState(prev => ({ ...prev, activeCluster: parsed }));
+      }
+    }
   }, []);
 
   const login = useCallback((role: UserRole, name?: string) => {
@@ -110,11 +127,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
     }));
   }, []);
 
-  const setLocale = useCallback((locale: Locale) => {
+  const setLocale = useCallback((dl: DisplayLocale) => {
     setState(prev => ({
       ...prev,
-      locale,
-      t: dictionaries[locale],
+      locale: coreLocale(dl),
+      displayLocale: dl,
+      t: dictionaries[dl],
     }));
   }, []);
 
@@ -153,12 +171,21 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setState(prev => ({ ...prev, copilotOpen: false }));
   }, []);
 
+  const toggleAiPanel = useCallback(() => {
+    setState(prev => ({ ...prev, aiPanelOpen: !prev.aiPanelOpen }));
+  }, []);
+
   const openCreateModal = useCallback(() => {
     setState(prev => ({ ...prev, createModalOpen: true }));
   }, []);
 
   const closeCreateModal = useCallback(() => {
     setState(prev => ({ ...prev, createModalOpen: false }));
+  }, []);
+
+  const setActiveCluster = useCallback((clusterId: number) => {
+    localStorage.setItem('wealth-os-active-cluster', String(clusterId));
+    setState(prev => ({ ...prev, activeCluster: clusterId }));
   }, []);
 
   return (
@@ -175,8 +202,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
         toggleClientSafe,
         openCopilot,
         closeCopilot,
+        toggleAiPanel,
         openCreateModal,
         closeCreateModal,
+        setActiveCluster,
       }}
     >
       {children}

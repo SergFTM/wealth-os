@@ -27,7 +27,7 @@ type TabKey = 'meetings' | 'agenda' | 'decisions' | 'votes' | 'followups' | 'tem
 
 interface Tab {
   key: string;
-  label: { ru: string; en: string; uk: string };
+  label: Record<string, string>;
 }
 
 export default function CommitteeListPage() {
@@ -74,12 +74,12 @@ export default function CommitteeListPage() {
         templatesRes.json(),
       ]);
 
-      setMeetings(meetingsData.data || []);
-      setAgendaItems(agendaData.data || []);
-      setDecisions(decisionsData.data || []);
-      setVotes(votesData.data || []);
-      setFollowUps(followUpsData.data || []);
-      setTemplates(templatesData.data || []);
+      setMeetings(meetingsData.items ?? []);
+      setAgendaItems(agendaData.items ?? []);
+      setDecisions(decisionsData.items ?? []);
+      setVotes(votesData.items ?? []);
+      setFollowUps(followUpsData.items ?? []);
+      setTemplates(templatesData.items ?? []);
     } catch (error) {
       console.error('Error fetching committee data:', error);
     } finally {

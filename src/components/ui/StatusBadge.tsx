@@ -11,19 +11,19 @@ interface StatusBadgeProps {
 }
 
 const statusConfig: Record<Status, { bg: string; text: string; label: string }> = {
-  ok: { bg: 'bg-emerald-100', text: 'text-emerald-700', label: 'OK' },
-  success: { bg: 'bg-emerald-100', text: 'text-emerald-700', label: 'Успешно' },
-  active: { bg: 'bg-emerald-100', text: 'text-emerald-700', label: 'Активно' },
-  completed: { bg: 'bg-emerald-100', text: 'text-emerald-700', label: 'Завершено' },
-  paid: { bg: 'bg-emerald-100', text: 'text-emerald-700', label: 'Оплачено' },
-  warning: { bg: 'bg-amber-100', text: 'text-amber-700', label: 'Внимание' },
-  pending: { bg: 'bg-amber-100', text: 'text-amber-700', label: 'Ожидает' },
-  in_progress: { bg: 'bg-blue-100', text: 'text-blue-700', label: 'В работе' },
-  draft: { bg: 'bg-stone-100', text: 'text-stone-600', label: 'Черновик' },
-  info: { bg: 'bg-sky-100', text: 'text-sky-700', label: 'Инфо' },
-  critical: { bg: 'bg-rose-100', text: 'text-rose-700', label: 'Критично' },
-  overdue: { bg: 'bg-rose-100', text: 'text-rose-700', label: 'Просрочено' },
-  error: { bg: 'bg-rose-100', text: 'text-rose-700', label: 'Ошибка' },
+  ok: { bg: 'bg-primary/15', text: 'text-primary', label: 'OK' },
+  success: { bg: 'bg-primary/15', text: 'text-primary', label: 'Успешно' },
+  active: { bg: 'bg-primary/15', text: 'text-primary', label: 'Активно' },
+  completed: { bg: 'bg-primary/15', text: 'text-primary', label: 'Завершено' },
+  paid: { bg: 'bg-primary/15', text: 'text-primary', label: 'Оплачено' },
+  warning: { bg: 'bg-amber-500/15', text: 'text-amber-600 dark:text-amber-400', label: 'Внимание' },
+  pending: { bg: 'bg-amber-500/15', text: 'text-amber-600 dark:text-amber-400', label: 'Ожидает' },
+  in_progress: { bg: 'bg-blue-500/15', text: 'text-blue-600 dark:text-blue-400', label: 'В работе' },
+  draft: { bg: 'bg-muted', text: 'text-muted-foreground', label: 'Черновик' },
+  info: { bg: 'bg-secondary/15', text: 'text-secondary', label: 'Инфо' },
+  critical: { bg: 'bg-destructive/15', text: 'text-destructive', label: 'Критично' },
+  overdue: { bg: 'bg-destructive/15', text: 'text-destructive', label: 'Просрочено' },
+  error: { bg: 'bg-destructive/15', text: 'text-destructive', label: 'Ошибка' },
 };
 
 export function StatusBadge({ status, label, size = 'md' }: StatusBadgeProps) {

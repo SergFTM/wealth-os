@@ -10,7 +10,7 @@ interface PNetWorthProps {
 }
 
 export function PNetWorth({ data, locale = 'ru' }: PNetWorthProps) {
-  const labels: Record<string, Record<Locale, string>> = {
+  const labels: Record<string, Record<string, string>> = {
     title: { ru: 'Чистый капитал', en: 'Net Worth', uk: 'Чистий капітал' },
     byAssetClass: { ru: 'По классам активов', en: 'By Asset Class', uk: 'За класами активів' },
     assetClass: { ru: 'Класс активов', en: 'Asset Class', uk: 'Клас активів' },

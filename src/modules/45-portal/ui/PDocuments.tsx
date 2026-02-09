@@ -17,7 +17,7 @@ export function PDocuments({ documents, locale = 'ru', onDownload, onOpen }: PDo
   const [selectedType, setSelectedType] = useState<PortalDocTypeKey | 'all'>('all');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
-  const labels: Record<string, Record<Locale, string>> = {
+  const labels: Record<string, Record<string, string>> = {
     title: { ru: 'Документы', en: 'Documents', uk: 'Документи' },
     search: { ru: 'Поиск документов...', en: 'Search documents...', uk: 'Пошук документів...' },
     allTypes: { ru: 'Все типы', en: 'All types', uk: 'Усі типи' },

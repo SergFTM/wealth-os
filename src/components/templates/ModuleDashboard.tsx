@@ -10,6 +10,7 @@ import { StatusBadge } from '@/components/ui/StatusBadge';
 import { Button } from '@/components/ui/Button';
 import { HelpPanel } from '@/components/ui/HelpPanel';
 import { EmptyState } from '@/components/ui/EmptyState';
+import { ModuleAiPanel } from '@/components/shell/ModuleAiPanel';
 import { useState } from 'react';
 import { DetailDrawer } from './DetailDrawer';
 import { BaseRecord } from '@/db/storage/storage.types';
@@ -79,7 +80,7 @@ export function ModuleDashboard(props: ModuleDashboardProps) {
 }
 
 function SchemaBasedDashboard({ schema, primaryCollection }: SchemaBasedProps) {
-  const { locale } = useApp();
+  const { locale, aiPanelOpen } = useApp();
   const router = useRouter();
   const { items, loading, total } = useCollection<BaseRecord & Record<string, unknown>>(primaryCollection, { limit: 5 });
   const [selectedItem, setSelectedItem] = useState<(BaseRecord & Record<string, unknown>) | null>(null);
@@ -108,8 +109,8 @@ function SchemaBasedDashboard({ schema, primaryCollection }: SchemaBasedProps) {
         </div>
       )}
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-        <div className="lg:col-span-3 space-y-6">
+      <div className="flex gap-6">
+        <div className="flex-1 min-w-0 space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {schema.kpis.slice(0, 4).map((kpi) => (
               <KpiCard
@@ -153,15 +154,20 @@ function SchemaBasedDashboard({ schema, primaryCollection }: SchemaBasedProps) {
           )}
         </div>
 
-        <div className="space-y-4">
-          <HelpPanel
-            title={schema.help.title}
-            description={schema.help.description}
-            features={schema.help.features}
-            scenarios={schema.help.scenarios}
-            dataSources={schema.help.dataSources}
-          />
-        </div>
+        {/* Right side: AI Panel (when open) or HelpPanel */}
+        {aiPanelOpen ? (
+          <ModuleAiPanel />
+        ) : (
+          <div className="hidden lg:block w-80 flex-shrink-0 space-y-4">
+            <HelpPanel
+              title={schema.help.title}
+              description={schema.help.description}
+              features={schema.help.features}
+              scenarios={schema.help.scenarios}
+              dataSources={schema.help.dataSources}
+            />
+          </div>
+        )}
       </div>
 
       <DetailDrawer

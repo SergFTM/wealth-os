@@ -1,0 +1,26 @@
+[
+  {
+    "caseId": "1770633848027-a5ynv5r08",
+    "formType": "advisor",
+    "status": "draft",
+    "completionPct": 0,
+    "payloadJson": {},
+    "sentAt": null,
+    "completedAt": null,
+    "id": "1770633848086-codxsji18",
+    "createdAt": "2026-02-09T10:44:08.086Z",
+    "updatedAt": "2026-02-09T10:44:08.086Z"
+  },
+  {
+    "caseId": "1770656046209-1pqj0kenw",
+    "formType": "household",
+    "status": "draft",
+    "completionPct": 0,
+    "payloadJson": {},
+    "sentAt": null,
+    "completedAt": null,
+    "id": "1770656046252-cdfnadomb",
+    "createdAt": "2026-02-09T16:54:06.252Z",
+    "updatedAt": "2026-02-09T16:54:06.252Z"
+  }
+]

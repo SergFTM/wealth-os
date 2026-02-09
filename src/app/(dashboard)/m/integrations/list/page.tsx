@@ -95,12 +95,15 @@ function IntegrationsListContent() {
   }, []);
 
   // Build name maps
-  const connectorNames = connectors.reduce((acc, c) => {
+  const safeConnectors = Array.isArray(connectors) ? connectors : [];
+  const safeJobs = Array.isArray(jobs) ? jobs : [];
+
+  const connectorNames = safeConnectors.reduce((acc, c) => {
     acc[c.id] = c.name;
     return acc;
   }, {} as Record<string, string>);
 
-  const jobNames = jobs.reduce((acc, j) => {
+  const jobNames = safeJobs.reduce((acc, j) => {
     acc[j.id] = j.name;
     return acc;
   }, {} as Record<string, string>);

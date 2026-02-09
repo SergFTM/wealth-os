@@ -18,7 +18,7 @@ export function PThreads({ threads, locale = 'ru', onSendMessage, onCreateThread
   const [newSubject, setNewSubject] = useState('');
   const [newMessage, setNewMessage] = useState('');
 
-  const labels: Record<string, Record<Locale, string>> = {
+  const labels: Record<string, Record<string, string>> = {
     title: { ru: 'Сообщения', en: 'Messages', uk: 'Повідомлення' },
     newMessage: { ru: 'Новое сообщение', en: 'New Message', uk: 'Нове повідомлення' },
     subject: { ru: 'Тема', en: 'Subject', uk: 'Тема' },

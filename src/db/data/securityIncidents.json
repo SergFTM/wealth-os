@@ -1,0 +1,102 @@
+[
+  {
+    "incidentType": "suspicious_login",
+    "severity": "high",
+    "status": "open",
+    "title": "New device login detected",
+    "description": "Demo incident generated: New device login detected",
+    "id": "1770659630968-aokcwegny",
+    "createdAt": "2026-02-09T17:53:50.968Z",
+    "updatedAt": "2026-02-09T17:53:50.968Z"
+  },
+  {
+    "incidentType": "suspicious_login",
+    "severity": "medium",
+    "status": "open",
+    "title": "Unusual login location",
+    "description": "Demo incident generated: Unusual login location",
+    "id": "1770659631107-lrdhsfn4h",
+    "createdAt": "2026-02-09T17:53:51.107Z",
+    "updatedAt": "2026-02-09T17:53:51.107Z"
+  },
+  {
+    "incidentType": "suspicious_login",
+    "severity": "high",
+    "status": "open",
+    "title": "Login from VPN detected",
+    "description": "Demo incident generated: Login from VPN detected",
+    "id": "1770659631158-i80e6aljr",
+    "createdAt": "2026-02-09T17:53:51.158Z",
+    "updatedAt": "2026-02-09T17:53:51.158Z"
+  },
+  {
+    "incidentType": "policy_violation",
+    "severity": "high",
+    "status": "open",
+    "title": "Mass data export attempt",
+    "description": "Demo incident generated: Mass data export attempt",
+    "id": "1770659631214-gci0p76e7",
+    "createdAt": "2026-02-09T17:53:51.214Z",
+    "updatedAt": "2026-02-09T17:53:51.214Z"
+  },
+  {
+    "incidentType": "policy_violation",
+    "severity": "medium",
+    "status": "open",
+    "title": "After-hours access",
+    "description": "Demo incident generated: After-hours access",
+    "id": "1770659631271-k9pb788kk",
+    "createdAt": "2026-02-09T17:53:51.271Z",
+    "updatedAt": "2026-02-09T17:53:51.271Z"
+  },
+  {
+    "incidentType": "role_change",
+    "severity": "low",
+    "status": "open",
+    "title": "Role binding modified",
+    "description": "Demo incident generated: Role binding modified",
+    "id": "1770659631319-d3ikth3dg",
+    "createdAt": "2026-02-09T17:53:51.319Z",
+    "updatedAt": "2026-02-09T17:53:51.319Z"
+  },
+  {
+    "incidentType": "role_change",
+    "severity": "medium",
+    "status": "open",
+    "title": "Admin role assigned",
+    "description": "Demo incident generated: Admin role assigned",
+    "id": "1770659631369-71l6cg28z",
+    "createdAt": "2026-02-09T17:53:51.369Z",
+    "updatedAt": "2026-02-09T17:53:51.369Z"
+  },
+  {
+    "incidentType": "mfa_bypass",
+    "severity": "medium",
+    "status": "open",
+    "title": "MFA not verified",
+    "description": "Demo incident generated: MFA not verified",
+    "id": "1770659631439-2qpyfl0fz",
+    "createdAt": "2026-02-09T17:53:51.439Z",
+    "updatedAt": "2026-02-09T17:53:51.439Z"
+  },
+  {
+    "incidentType": "mfa_bypass",
+    "severity": "high",
+    "status": "open",
+    "title": "MFA disabled by user",
+    "description": "Demo incident generated: MFA disabled by user",
+    "id": "1770659631491-pe2flq7w3",
+    "createdAt": "2026-02-09T17:53:51.491Z",
+    "updatedAt": "2026-02-09T17:53:51.491Z"
+  },
+  {
+    "incidentType": "mfa_bypass",
+    "severity": "low",
+    "status": "open",
+    "title": "Client login without MFA",
+    "description": "Demo incident generated: Client login without MFA",
+    "id": "1770659631545-vb8pjojrj",
+    "createdAt": "2026-02-09T17:53:51.545Z",
+    "updatedAt": "2026-02-09T17:53:51.545Z"
+  }
+]

@@ -22,7 +22,7 @@ export function PCopilotPanel({ locale = 'ru', context, isOpen = false, onClose 
   const [isLoading, setIsLoading] = useState(false);
   const [history, setHistory] = useState<Array<{ query: string; response: CopilotResponse }>>([]);
 
-  const labels: Record<string, Record<Locale, string>> = {
+  const labels: Record<string, Record<string, string>> = {
     title: { ru: 'AI-ассистент', en: 'AI Assistant', uk: 'AI-асистент' },
     placeholder: { ru: 'Задайте вопрос о вашем капитале...', en: 'Ask a question about your wealth...', uk: 'Задайте питання про ваш капітал...' },
     send: { ru: 'Спросить', en: 'Ask', uk: 'Запитати' },

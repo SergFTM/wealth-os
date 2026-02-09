@@ -14,7 +14,7 @@ export const committeeConfig: ModuleConfig = {
     en: 'Investment Committee and Decisions Log',
     uk: 'Інвестиційний комітет, рішення та журнал рішень',
   },
-  icon: '⚖️',
+  icon: 'people',
   color: 'emerald',
   order: 28,
   enabled: true,

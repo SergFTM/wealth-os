@@ -12,7 +12,7 @@ interface PPortfoliosProps {
 export function PPortfolios({ portfolios, locale = 'ru' }: PPortfoliosProps) {
   const [selectedPortfolio, setSelectedPortfolio] = useState<PortfolioSummary | null>(null);
 
-  const labels: Record<string, Record<Locale, string>> = {
+  const labels: Record<string, Record<string, string>> = {
     portfolios: { ru: 'Портфели', en: 'Portfolios', uk: 'Портфелі' },
     custodian: { ru: 'Кастодиан', en: 'Custodian', uk: 'Кастодіан' },
     account: { ru: 'Счёт', en: 'Account', uk: 'Рахунок' },

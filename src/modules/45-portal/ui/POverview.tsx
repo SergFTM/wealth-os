@@ -24,7 +24,7 @@ export function POverview({
   locale = 'ru',
   onAskCopilot,
 }: POverviewProps) {
-  const labels: Record<string, Record<Locale, string>> = {
+  const labels: Record<string, Record<string, string>> = {
     quickActions: { ru: 'Быстрые действия', en: 'Quick Actions', uk: 'Швидкі дії' },
     createRequest: { ru: 'Создать запрос', en: 'Create Request', uk: 'Створити запит' },
     openPacks: { ru: 'Пакеты отчётов', en: 'Report Packs', uk: 'Пакети звітів' },

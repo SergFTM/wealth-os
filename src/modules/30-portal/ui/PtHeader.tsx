@@ -3,28 +3,33 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useApp } from '@/lib/store';
-import { Locale } from '@/lib/i18n';
+import { DisplayLocale, lm } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
 
 const labels = {
-  search: { ru: 'Поиск по порталу...', en: 'Search portal...', uk: 'Пошук по порталу...' },
-  notifications: { ru: 'Уведомления', en: 'Notifications', uk: 'Сповіщення' },
-  profile: { ru: 'Профиль', en: 'Profile', uk: 'Профіль' },
-  settings: { ru: 'Настройки', en: 'Settings', uk: 'Налаштування' },
-  logout: { ru: 'Выход', en: 'Logout', uk: 'Вихід' },
-  asOf: { ru: 'Данные на', en: 'As of', uk: 'Дані на' },
+  search: lm({ en: 'Search portal...', ru: 'Поиск по порталу...', uk: 'Пошук по порталу...' }),
+  notifications: lm({ en: 'Notifications', ru: 'Уведомления', uk: 'Сповіщення' }),
+  profile: lm({ en: 'Profile', ru: 'Профиль', uk: 'Профіль' }),
+  settings: lm({ en: 'Settings', ru: 'Настройки', uk: 'Налаштування' }),
+  logout: lm({ en: 'Logout', ru: 'Выход', uk: 'Вихід' }),
+  asOf: lm({ en: 'As of', ru: 'Данные на', uk: 'Дані на' }),
 };
 
 export function PtHeader() {
-  const { locale, setLocale, user, logout, asOfDate } = useApp();
+  const { locale, displayLocale, setLocale, user, logout, asOfDate } = useApp();
   const [showLangMenu, setShowLangMenu] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
 
-  const languages: { code: Locale; label: string }[] = [
-    { code: 'ru', label: 'Русский' },
+  const languages: { code: DisplayLocale; label: string }[] = [
     { code: 'en', label: 'English' },
+    { code: 'ru', label: 'Русский' },
     { code: 'uk', label: 'Українська' },
+    { code: 'es', label: 'Espanol' },
+    { code: 'de', label: 'Deutsch' },
+    { code: 'it', label: 'Italiano' },
+    { code: 'fr', label: 'Francais' },
+    { code: 'el', label: 'Ellinika' },
   ];
 
   const notifications = [
@@ -92,7 +97,7 @@ export function PtHeader() {
             onClick={() => setShowLangMenu(!showLangMenu)}
             className="px-3 py-2 rounded-lg text-sm font-medium text-stone-600 hover:bg-emerald-50 transition-all"
           >
-            {locale.toUpperCase()}
+            {displayLocale.toUpperCase()}
           </button>
 
           {showLangMenu && (
@@ -105,7 +110,7 @@ export function PtHeader() {
                     onClick={() => { setLocale(lang.code); setShowLangMenu(false); }}
                     className={cn(
                       "w-full text-left px-4 py-2 text-sm text-stone-700 hover:bg-emerald-50",
-                      locale === lang.code && "bg-emerald-50 text-emerald-700"
+                      displayLocale === lang.code && "bg-emerald-50 text-emerald-700"
                     )}
                   >
                     {lang.label}

@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { AlertTriangle, Info } from 'lucide-react';
+import { useApp } from '@/lib/store';
+import { ModuleAiPanel } from '@/components/shell/ModuleAiPanel';
 import { RkKpiStrip } from './RkKpiStrip';
 import { RkExposurePanel } from './RkExposurePanel';
 import { RkVarWidget } from './RkVarWidget';
@@ -85,6 +87,7 @@ export function RkDashboardPage({
   alerts,
   onNavigate
 }: RkDashboardPageProps) {
+  const { aiPanelOpen } = useApp();
   const [selectedPortfolio, setSelectedPortfolio] = useState('pf-001');
   const [selectedDimension, setSelectedDimension] = useState('assetClass');
   const [isLoading, setIsLoading] = useState(false);
@@ -122,7 +125,8 @@ export function RkDashboardPage({
   };
 
   return (
-    <div className="space-y-6">
+    <div className="flex gap-6">
+      <div className="flex-1 min-w-0 space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
@@ -226,6 +230,10 @@ export function RkDashboardPage({
           />
         </div>
       </div>
+      </div>
+
+      {/* AI Panel */}
+      {aiPanelOpen && <ModuleAiPanel />}
     </div>
   );
 }

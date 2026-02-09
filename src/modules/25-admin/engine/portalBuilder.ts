@@ -24,7 +24,7 @@ const moduleToRoute: Record<PortalModule, { href: string; icon: string }> = {
 
 export function buildPortalMenu(
   config: PortalConfig | null,
-  lang: SupportedLanguage = 'ru'
+  lang: SupportedLanguage = 'en'
 ): PortalMenuItem[] {
   if (!config || !config.portalEnabled) {
     return [];
@@ -42,8 +42,8 @@ export function buildPortalMenu(
               lang === 'uk' ? customLabel.labelUk :
               customLabel.labelEn;
     } else {
-      const defaultLabels = portalModuleLabels[moduleKey];
-      label = defaultLabels[lang];
+      const defaultLabels = portalModuleLabels[moduleKey] as Record<string, string>;
+      label = defaultLabels[lang] || defaultLabels['en'];
     }
 
     const route = moduleToRoute[moduleKey];
@@ -69,7 +69,7 @@ export function isModuleAllowed(
 
 export function getWelcomeMessage(
   config: PortalConfig | null,
-  lang: SupportedLanguage = 'ru'
+  lang: SupportedLanguage = 'en'
 ): string | null {
   if (!config || !config.showWelcomeMessage) {
     return null;
@@ -77,8 +77,8 @@ export function getWelcomeMessage(
 
   switch (lang) {
     case 'ru': return config.welcomeMessageRu || null;
-    case 'en': return config.welcomeMessageEn || null;
     case 'uk': return config.welcomeMessageUk || null;
+    default: return config.welcomeMessageEn || null;
   }
 }
 

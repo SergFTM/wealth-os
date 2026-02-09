@@ -1,0 +1,62 @@
+[
+  {
+    "id": "pu-001",
+    "clientId": "c1",
+    "email": "a.petrov@family.ru",
+    "displayName": "Алексей Петров",
+    "pinHash": "pin_a1b2c3",
+    "languageDefaultKey": "ru",
+    "householdId": "hh-001",
+    "status": "active",
+    "createdAt": "2025-03-10T09:00:00Z",
+    "updatedAt": "2025-12-15T14:30:00Z"
+  },
+  {
+    "id": "pu-002",
+    "clientId": "c1",
+    "email": "m.petrova@family.ru",
+    "displayName": "Мария Петрова",
+    "pinHash": "pin_d4e5f6",
+    "languageDefaultKey": "ru",
+    "householdId": "hh-001",
+    "status": "active",
+    "createdAt": "2025-03-10T09:05:00Z",
+    "updatedAt": "2025-11-20T10:00:00Z"
+  },
+  {
+    "id": "pu-003",
+    "clientId": "c1",
+    "email": "d.petrov@family.ru",
+    "displayName": "Дмитрий Петров",
+    "pinHash": "pin_g7h8i9",
+    "languageDefaultKey": "en",
+    "householdId": "hh-001",
+    "status": "active",
+    "createdAt": "2025-06-01T12:00:00Z",
+    "updatedAt": "2026-01-05T08:15:00Z"
+  },
+  {
+    "id": "pu-004",
+    "clientId": "c1",
+    "email": "e.petrova@family.ru",
+    "displayName": "Елена Петрова",
+    "pinHash": "pin_j0k1l2",
+    "languageDefaultKey": "uk",
+    "householdId": "hh-001",
+    "status": "disabled",
+    "createdAt": "2025-03-10T09:10:00Z",
+    "updatedAt": "2025-09-01T16:00:00Z"
+  },
+  {
+    "id": "pu-005",
+    "clientId": "c1",
+    "email": "s.petrov@family.ru",
+    "displayName": "Сергей Петров",
+    "pinHash": "pin_m3n4o5",
+    "languageDefaultKey": "ru",
+    "householdId": "hh-001",
+    "status": "active",
+    "createdAt": "2025-08-15T11:00:00Z",
+    "updatedAt": "2026-01-28T09:45:00Z"
+  }
+]

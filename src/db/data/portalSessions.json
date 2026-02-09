@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ps-001",
+    "portalUserId": "pu-001",
+    "sessionTokenHash": "tok_sha256_abc123def456",
+    "createdAt": "2026-02-07T08:30:00Z",
+    "expiresAt": "2026-02-07T20:30:00Z",
+    "lastSeenAt": "2026-02-07T15:42:00Z"
+  },
+  {
+    "id": "ps-002",
+    "portalUserId": "pu-002",
+    "sessionTokenHash": "tok_sha256_789ghi012jkl",
+    "createdAt": "2026-02-06T19:10:00Z",
+    "expiresAt": "2026-02-07T07:10:00Z",
+    "lastSeenAt": "2026-02-06T23:58:00Z"
+  },
+  {
+    "id": "ps-003",
+    "portalUserId": "pu-003",
+    "sessionTokenHash": "tok_sha256_mno345pqr678",
+    "createdAt": "2026-02-07T10:05:00Z",
+    "expiresAt": "2026-02-07T22:05:00Z",
+    "lastSeenAt": "2026-02-07T14:20:00Z"
+  }
+]

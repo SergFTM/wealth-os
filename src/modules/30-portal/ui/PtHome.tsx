@@ -42,11 +42,15 @@ export function PtHome() {
       fetch('/api/collections/documents').then(r => r.json()),
       fetch('/api/collections/feeInvoices').then(r => r.json()),
       fetch('/api/collections/reportShares').then(r => r.json()),
-    ]).then(([requests, docs, invoices, reports]) => {
-      const openReqs = (requests || []).filter((r: { status: string }) => !['completed', 'cancelled'].includes(r.status));
-      const unpaid = (invoices || []).filter((i: { status: string }) => i.status !== 'paid');
-      const clientDocs = (docs || []).filter((d: { clientVisible?: boolean }) => d.clientVisible !== false).slice(0, 5);
-      const publishedReports = (reports || []).filter((r: { status: string }) => r.status === 'published');
+    ]).then(([requestsRaw, docsRaw, invoicesRaw, reportsRaw]) => {
+      const requests = requestsRaw.items ?? requestsRaw ?? [];
+      const docs = docsRaw.items ?? docsRaw ?? [];
+      const invoices = invoicesRaw.items ?? invoicesRaw ?? [];
+      const reports = reportsRaw.items ?? reportsRaw ?? [];
+      const openReqs = requests.filter((r: { status: string }) => !['completed', 'cancelled'].includes(r.status));
+      const unpaid = invoices.filter((i: { status: string }) => i.status !== 'paid');
+      const clientDocs = docs.filter((d: { clientVisible?: boolean }) => d.clientVisible !== false).slice(0, 5);
+      const publishedReports = reports.filter((r: { status: string }) => r.status === 'published');
 
       setData({
         netWorth: 47250000,

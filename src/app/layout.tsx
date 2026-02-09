@@ -1,30 +1,31 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { AppProvider } from "@/lib/store";
 
 const inter = Inter({
-  subsets: ["latin", "cyrillic"],
+  subsets: ["latin", "latin-ext", "cyrillic", "greek"],
   variable: "--font-sans",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
+  themeColor: "#10B981",
+};
 
 export const metadata: Metadata = {
   title: "Wealth OS - Multi Family Office",
   description: "Premium wealth management platform for multi-family offices",
   manifest: "/manifest.webmanifest",
-  themeColor: "#10B981",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
     title: "Wealth OS",
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-    viewportFit: "cover",
   },
   other: {
     "mobile-web-app-capable": "yes",
@@ -39,8 +40,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ru" className={inter.variable}>
-      <body className="font-sans antialiased bg-gradient-to-br from-stone-50 via-white to-amber-50/30 min-h-screen">
+    <html lang="en" className={inter.variable}>
+      <body className="font-sans antialiased min-h-screen">
         <AppProvider>
           {children}
         </AppProvider>

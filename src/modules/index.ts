@@ -1,5 +1,6 @@
 import { ModuleConfig } from './types';
 import * as configs from './configs';
+import { SIDEBAR_CLUSTERS, SLUG_TO_CLUSTER, FALLBACK_CLUSTER_ID, type SidebarCluster } from './clusters';
 
 export const moduleRegistry: ModuleConfig[] = [
   configs.dashboardHome,
@@ -70,5 +71,31 @@ export function getVisibleModules(clientSafe: boolean): ModuleConfig[] {
   return moduleRegistry;
 }
 
+export interface ClusteredGroup {
+  cluster: SidebarCluster;
+  modules: ModuleConfig[];
+}
+
+export function getClusteredModules(clientSafe: boolean): ClusteredGroup[] {
+  const visible = getVisibleModules(clientSafe);
+  const groups: Map<number, ModuleConfig[]> = new Map();
+
+  for (const mod of visible) {
+    const clusterId = SLUG_TO_CLUSTER[mod.slug] ?? FALLBACK_CLUSTER_ID;
+    if (!groups.has(clusterId)) groups.set(clusterId, []);
+    groups.get(clusterId)!.push(mod);
+  }
+
+  return SIDEBAR_CLUSTERS
+    .filter(c => groups.has(c.id))
+    .map(c => ({ cluster: c, modules: groups.get(c.id)! }));
+}
+
+export function getModulesForCluster(clusterId: number, clientSafe: boolean): ModuleConfig[] {
+  const visible = getVisibleModules(clientSafe);
+  return visible.filter(mod => (SLUG_TO_CLUSTER[mod.slug] ?? FALLBACK_CLUSTER_ID) === clusterId);
+}
+
 export * from './types';
 export * from './configs';
+export * from './clusters';

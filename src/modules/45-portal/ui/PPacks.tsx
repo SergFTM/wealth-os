@@ -16,7 +16,7 @@ interface PPacksProps {
 export function PPacks({ packs, documents, locale = 'ru', onDownloadPack, onOpenPack }: PPacksProps) {
   const [selectedPack, setSelectedPack] = useState<PortalPack | null>(null);
 
-  const labels: Record<string, Record<Locale, string>> = {
+  const labels: Record<string, Record<string, string>> = {
     title: { ru: 'Пакеты отчётов', en: 'Report Packs', uk: 'Пакети звітів' },
     documents: { ru: 'документов', en: 'documents', uk: 'документів' },
     document: { ru: 'документ', en: 'document', uk: 'документ' },

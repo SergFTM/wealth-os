@@ -18,7 +18,8 @@ export default function ApiEventDetailPage({ params }: { params: Promise<{ id: s
     try {
       // Load delivery
       const deliveriesRes = await fetch('/api/collections/webhookDeliveries');
-      const deliveries = await deliveriesRes.json();
+      const deliveriesRaw = await deliveriesRes.json();
+      const deliveries = deliveriesRaw.items ?? deliveriesRaw ?? [];
       const foundDelivery = deliveries.find((d: any) => d.id === id);
 
       if (foundDelivery) {
@@ -26,7 +27,8 @@ export default function ApiEventDetailPage({ params }: { params: Promise<{ id: s
 
         // Load event
         const eventsRes = await fetch('/api/collections/webhookEvents');
-        const events = await eventsRes.json();
+        const eventsRaw = await eventsRes.json();
+        const events = eventsRaw.items ?? eventsRaw ?? [];
         const foundEvent = events.find((e: any) => e.id === foundDelivery.eventId);
         setEvent(foundEvent);
 

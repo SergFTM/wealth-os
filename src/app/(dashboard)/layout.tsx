@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { Sidebar } from "@/components/shell/Sidebar";
 import { Header } from "@/components/shell/Header";
 import { CreateModal } from "@/components/shell/CreateModal";
-import { CopilotDrawer } from "@/components/shell/CopilotDrawer";
+// CopilotDrawer removed — AI panel is now inline within each module page
 import { useApp } from "@/lib/store";
 import { useEffect } from "react";
 
@@ -36,7 +36,6 @@ export default function DashboardLayout({
         </main>
       </div>
       <CreateModal />
-      <CopilotDrawer />
     </div>
   );
 }

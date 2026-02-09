@@ -7,6 +7,8 @@
 
 import { useState, useEffect } from 'react';
 import { useI18n } from '@/lib/i18n';
+import { useApp } from '@/lib/store';
+import { ModuleAiPanel } from '@/components/shell/ModuleAiPanel';
 import { DqKpiStrip } from '@/modules/27-data-quality/ui/DqKpiStrip';
 import { DqHealthDashboard } from '@/modules/27-data-quality/ui/DqHealthDashboard';
 import { DqAIInsightsPanel } from '@/modules/27-data-quality/ui/DqAIInsightsPanel';
@@ -22,6 +24,7 @@ import { dataQualityConfig, DqDomain } from '@/modules/27-data-quality/config';
 
 export default function DataQualityDashboardPage() {
   const { lang } = useI18n();
+  const { aiPanelOpen } = useApp();
   const [metrics, setMetrics] = useState<DqMetric[]>([]);
   const [exceptions, setExceptions] = useState<DqException[]>([]);
   const [conflicts, setConflicts] = useState<DqConflict[]>([]);
@@ -53,11 +56,11 @@ export default function DataQualityDashboardPage() {
         reconRes.json(),
       ]);
 
-      const metricsArr = metricsData.data || [];
-      const exceptionsArr = exceptionsData.data || [];
-      const conflictsArr = conflictsData.data || [];
-      const jobsArr = jobsData.data || [];
-      const reconArr = reconData.data || [];
+      const metricsArr = metricsData.items ?? [];
+      const exceptionsArr = exceptionsData.items ?? [];
+      const conflictsArr = conflictsData.items ?? [];
+      const jobsArr = jobsData.items ?? [];
+      const reconArr = reconData.items ?? [];
 
       setMetrics(metricsArr);
       setExceptions(exceptionsArr);
@@ -161,72 +164,77 @@ export default function DataQualityDashboardPage() {
   }
 
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-gray-900">{labels.title[lang]}</h1>
-      </div>
+    <div className="flex gap-6">
+      <div className="flex-1 min-w-0 space-y-6">
+        {/* Header */}
+        <div className="flex items-center justify-between">
+          <h1 className="text-2xl font-bold text-gray-900">{labels.title[lang]}</h1>
+        </div>
 
-      {/* Disclaimer Banner */}
-      <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl">
-        <p className="text-sm text-amber-800">
-          ⚠️ {labels.disclaimer[lang]}
-        </p>
-      </div>
+        {/* Disclaimer Banner */}
+        <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl">
+          <p className="text-sm text-amber-800">
+            ⚠️ {labels.disclaimer[lang]}
+          </p>
+        </div>
 
-      {/* Actions Bar */}
-      <DqActionsBar
-        onRunChecks={handleRunChecks}
-        onCreateRule={handleCreateRule}
-        onGenerateDemo={handleGenerateDemo}
-        onExportReport={handleExportReport}
-        loading={runningChecks}
-        lang={lang}
-      />
+        {/* Actions Bar */}
+        <DqActionsBar
+          onRunChecks={handleRunChecks}
+          onCreateRule={handleCreateRule}
+          onGenerateDemo={handleGenerateDemo}
+          onExportReport={handleExportReport}
+          loading={runningChecks}
+          lang={lang}
+        />
 
-      {/* KPI Strip */}
-      <DqKpiStrip
-        healthScore={healthScore}
-        openExceptions={openExceptions}
-        criticalExceptions={criticalExceptions}
-        unresolvedConflicts={unresolvedConflicts}
-        failedJobs24h={failedJobs24h}
-        reconBreaks={reconBreaks}
-        staleRules={staleRules}
-        tasksFromDq={tasksFromDq}
-        lang={lang}
-      />
+        {/* KPI Strip */}
+        <DqKpiStrip
+          healthScore={healthScore}
+          openExceptions={openExceptions}
+          criticalExceptions={criticalExceptions}
+          unresolvedConflicts={unresolvedConflicts}
+          failedJobs24h={failedJobs24h}
+          reconBreaks={reconBreaks}
+          staleRules={staleRules}
+          tasksFromDq={tasksFromDq}
+          lang={lang}
+        />
 
-      {/* Main Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Health Dashboard */}
-        <div className="lg:col-span-2">
-          <div className="bg-white rounded-xl border border-gray-200 p-6">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">
-              {lang === 'ru' ? 'Здоровье по доменам' : 'Health by Domain'}
-            </h2>
-            <DqHealthDashboard
-              metrics={metrics}
+        {/* Main Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* Health Dashboard */}
+          <div className="lg:col-span-2">
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h2 className="text-lg font-semibold text-gray-900 mb-4">
+                {lang === 'ru' ? 'Здоровье по доменам' : 'Health by Domain'}
+              </h2>
+              <DqHealthDashboard
+                metrics={metrics}
+                lang={lang}
+                onDomainClick={handleDomainClick}
+              />
+            </div>
+          </div>
+
+          {/* AI Insights */}
+          <div className="lg:col-span-1">
+            <DqAIInsightsPanel
+              insights={insights}
+              summaryText={summaryText}
               lang={lang}
-              onDomainClick={handleDomainClick}
+              onInsightClick={(insight) => {
+                if (insight.domain) {
+                  window.location.href = `/m/data-quality/list?tab=exceptions&domain=${insight.domain}`;
+                }
+              }}
             />
           </div>
         </div>
-
-        {/* AI Insights */}
-        <div className="lg:col-span-1">
-          <DqAIInsightsPanel
-            insights={insights}
-            summaryText={summaryText}
-            lang={lang}
-            onInsightClick={(insight) => {
-              if (insight.domain) {
-                window.location.href = `/m/data-quality/list?tab=exceptions&domain=${insight.domain}`;
-              }
-            }}
-          />
-        </div>
       </div>
+
+      {/* Module AI Panel */}
+      {aiPanelOpen && <ModuleAiPanel />}
     </div>
   );
 }

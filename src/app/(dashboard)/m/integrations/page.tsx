@@ -74,17 +74,17 @@ export default function IntegrationsDashboardPage() {
           fetch('/api/collections/dataQualityIssues'),
         ]);
 
-        const [connectorsData, jobsData, runsData, issuesData] = await Promise.all([
+        const [connectorsRaw, jobsRaw, runsRaw, issuesRaw] = await Promise.all([
           connectorsRes.json(),
           jobsRes.json(),
           runsRes.json(),
           issuesRes.json(),
         ]);
 
-        setConnectors(connectorsData);
-        setJobs(jobsData);
-        setRuns(runsData);
-        setIssues(issuesData);
+        setConnectors(connectorsRaw.items ?? connectorsRaw ?? []);
+        setJobs(jobsRaw.items ?? jobsRaw ?? []);
+        setRuns(runsRaw.items ?? runsRaw ?? []);
+        setIssues(issuesRaw.items ?? issuesRaw ?? []);
       } catch (error) {
         console.error('Failed to fetch integrations data:', error);
       } finally {

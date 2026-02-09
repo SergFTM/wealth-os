@@ -34,10 +34,12 @@ export default function ApiDashboardPage() {
 
       setKpis(await kpisRes.json());
       setApiKeys(await keysRes.json());
-      setScopes(await scopesRes.json());
+      const scopesRaw = await scopesRes.json();
+      setScopes(scopesRaw.items ?? scopesRaw ?? []);
       setWebhooks(await webhooksRes.json());
       setDeliveries(await deliveriesRes.json());
-      setEvents(await eventsRes.json());
+      const eventsRaw = await eventsRes.json();
+      setEvents(eventsRaw.items ?? eventsRaw ?? []);
     } catch (error) {
       console.error('Error loading data:', error);
     } finally {

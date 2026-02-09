@@ -17,10 +17,10 @@ export function Button({
   ...props
 }: ButtonProps) {
   const variants = {
-    primary: "bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:from-emerald-600 hover:to-emerald-700 shadow-sm",
-    secondary: "bg-white border border-stone-300 text-stone-700 hover:bg-stone-50",
-    ghost: "text-stone-600 hover:bg-stone-100",
-    danger: "bg-rose-500 text-white hover:bg-rose-600",
+    primary: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/25 active:scale-[0.98]",
+    secondary: "bg-background border border-border text-foreground hover:bg-muted/50 hover:border-muted-foreground/30 active:scale-[0.98]",
+    ghost: "text-muted-foreground hover:bg-muted/50 hover:text-foreground active:scale-[0.98]",
+    danger: "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-lg shadow-destructive/25 active:scale-[0.98]",
   };
 
   const sizes = {

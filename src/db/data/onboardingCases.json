@@ -1,0 +1,32 @@
+[
+  {
+    "clientId": "client-001",
+    "name": "Advisor Intake — 09.02.2026",
+    "caseType": "advisor",
+    "stage": "intake",
+    "status": "active",
+    "assignee": "compliance@wealth.os",
+    "slaDueAt": "2026-03-11T10:44:08.004Z",
+    "riskTier": null,
+    "linkedEntityId": null,
+    "notes": null,
+    "id": "1770633848027-a5ynv5r08",
+    "createdAt": "2026-02-09T10:44:08.027Z",
+    "updatedAt": "2026-02-09T10:44:08.027Z"
+  },
+  {
+    "clientId": "client-001",
+    "name": "Household Intake — 09.02.2026",
+    "caseType": "household",
+    "stage": "intake",
+    "status": "active",
+    "assignee": "compliance@wealth.os",
+    "slaDueAt": "2026-03-11T16:54:06.190Z",
+    "riskTier": null,
+    "linkedEntityId": null,
+    "notes": null,
+    "id": "1770656046209-1pqj0kenw",
+    "createdAt": "2026-02-09T16:54:06.209Z",
+    "updatedAt": "2026-02-09T16:54:06.209Z"
+  }
+]

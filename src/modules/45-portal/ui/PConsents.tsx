@@ -15,7 +15,7 @@ export function PConsents({ consents, locale = 'ru', onRevoke }: PConsentsProps)
   const [selectedConsent, setSelectedConsent] = useState<PortalConsent | null>(null);
   const [showRevokeConfirm, setShowRevokeConfirm] = useState(false);
 
-  const labels: Record<string, Record<Locale, string>> = {
+  const labels: Record<string, Record<string, string>> = {
     title: { ru: 'Управление доступами', en: 'Access Management', uk: 'Управління доступами' },
     advisors: { ru: 'Консультанты с доступом', en: 'Advisors with Access', uk: 'Консультанти з доступом' },
     noConsents: { ru: 'Нет активных доступов', en: 'No active consents', uk: 'Немає активних доступів' },

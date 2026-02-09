@@ -66,7 +66,7 @@ export function IdIdeaDetail({
     { key: 'outcomes', label: { ru: 'Результаты', en: 'Outcomes', uk: 'Результати' } },
   ];
 
-  const getLabel = (obj: Record<string, Record<Locale, string>>, key: string) => {
+  const getLabel = (obj: Record<string, Record<string, string>>, key: string) => {
     const config = obj[key as keyof typeof obj];
     return config?.[locale] || config?.ru || key;
   };

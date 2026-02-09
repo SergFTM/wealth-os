@@ -1,10 +1,11 @@
 "use client";
 
 import { useApp } from "@/lib/store";
+import { DisplayLocale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 export function PfSettingsPanel() {
-  const { locale, theme, toggleTheme, setLocale } = useApp();
+  const { locale, displayLocale, theme, toggleTheme, setLocale } = useApp();
 
   const t = {
     title: locale === "ru" ? "Настройки платформы" : "Platform Settings",
@@ -24,9 +25,14 @@ export function PfSettingsPanel() {
   };
 
   const languages = [
-    { code: "ru", label: "Русский" },
     { code: "en", label: "English" },
+    { code: "ru", label: "Русский" },
     { code: "uk", label: "Українська" },
+    { code: "es", label: "Espanol" },
+    { code: "de", label: "Deutsch" },
+    { code: "it", label: "Italiano" },
+    { code: "fr", label: "Francais" },
+    { code: "el", label: "Ellinika" },
   ];
 
   return (
@@ -84,10 +90,10 @@ export function PfSettingsPanel() {
               {languages.map((lang) => (
                 <button
                   key={lang.code}
-                  onClick={() => setLocale(lang.code as "ru" | "en" | "uk")}
+                  onClick={() => setLocale(lang.code as DisplayLocale)}
                   className={cn(
                     "px-4 py-2 rounded-lg border transition-all",
-                    locale === lang.code
+                    displayLocale === lang.code
                       ? "border-emerald-500 bg-emerald-50 text-emerald-700"
                       : "border-stone-200 hover:border-stone-300 text-stone-600"
                   )}

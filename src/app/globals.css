@@ -1,12 +1,16 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: var(--font-sans), system-ui, sans-serif;
-  
+
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
   --color-secondary: hsl(var(--secondary));
@@ -24,69 +28,111 @@
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
+
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite;
+  --animate-gradient: gradient 3s linear infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  @keyframes glow {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 }
 
 @layer base {
   :root {
-    --background: 60 30% 98%;
-    --foreground: 30 10% 15%;
+    /* 
+      Modern Ultra Light Theme 
+      Clean, crisp, high contrast with subtle cool tones.
+    */
+    --background: 210 40% 98%; /* Cool off-white */
+    --foreground: 222 47% 11%; /* Deep slate text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 30 10% 15%;
+    --card: 0 0% 100%; /* Pure white cards */
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 30 10% 15%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 152 45% 40%;
-    --primary-foreground: 60 30% 98%;
+    --primary: 160 84% 39%; /* Vibrant Emerald/Teal */
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 42 35% 88%;
-    --secondary-foreground: 30 10% 25%;
+    --secondary: 221 83% 53%; /* Premium Tech Blue */
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 60 20% 94%;
-    --muted-foreground: 30 10% 45%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 42 45% 75%;
-    --accent-foreground: 30 10% 20%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
-    --destructive: 12 60% 55%;
-    --destructive-foreground: 60 30% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 40 20% 88%;
-    --input: 40 20% 88%;
-    --ring: 152 45% 40%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 160 84% 39%;
 
-    --radius: 0.625rem;
+    --radius: 0.75rem;
   }
 
   .dark {
-    --background: 220 15% 10%;
-    --foreground: 60 10% 92%;
+    /* 
+      Modern Ultra Dark Theme
+      Deep, rich, OLED-friendly blacks with neon accents.
+    */
+    --background: 222 47% 11%; /* Deep rich slate/navy */
+    --foreground: 210 40% 98%; /* Off-white text */
 
-    --card: 220 15% 13%;
-    --card-foreground: 60 10% 92%;
+    --card: 217 33% 17%; /* Slightly lighter slate for cards */
+    --card-foreground: 210 40% 98%;
 
-    --popover: 220 15% 13%;
-    --popover-foreground: 60 10% 92%;
+    --popover: 217 33% 17%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 152 45% 45%;
-    --primary-foreground: 220 15% 10%;
+    --primary: 160 84% 45%; /* Electric Emerald */
+    --primary-foreground: 222 47% 11%; /* Dark text on primary */
 
-    --secondary: 220 12% 22%;
-    --secondary-foreground: 60 10% 85%;
+    --secondary: 217 91% 60%; /* Electric Blue */
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 220 12% 18%;
-    --muted-foreground: 60 10% 60%;
+    --muted: 217 33% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 42 40% 35%;
-    --accent-foreground: 60 10% 92%;
+    --accent: 217 33% 17.5%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 12 55% 50%;
-    --destructive-foreground: 60 10% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 220 12% 22%;
-    --input: 220 12% 22%;
-    --ring: 152 45% 45%;
+    --border: 217 33% 17.5%;
+    --input: 217 33% 17.5%;
+    --ring: 160 84% 45%;
   }
 }
 
@@ -94,64 +140,78 @@
   * {
     @apply border-border;
   }
-  
+
   html {
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
   }
-  
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
     font-family: inherit;
-    background: linear-gradient(135deg,
-      hsl(150, 30%, 97%) 0%,
-      hsl(45, 40%, 97%) 50%,
-      hsl(40, 35%, 96%) 100%
-    );
-    min-height: 100vh;
+    /* Subtle mesh gradient overlay for depth */
+    background-image:
+      radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 0.15) 0, transparent 50%),
+      radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 0.1) 0, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 0.1) 0, transparent 50%);
   }
 
   .dark body {
-    background: linear-gradient(135deg,
-      hsl(220, 15%, 10%) 0%,
-      hsl(220, 12%, 11%) 50%,
-      hsl(220, 15%, 10%) 100%
-    );
+    /* Darker, richer gradient in dark mode */
+    background-image:
+      radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 0.4) 0, transparent 50%),
+      radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 0.1) 0, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 0.1) 0, transparent 50%);
   }
 
-  input, button, textarea, select {
+  /* Improved Typography */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
     font-family: inherit;
+    @apply focus:ring-2 focus:ring-ring focus:ring-offset-2 outline-none transition-all duration-200;
   }
 }
 
-/* ── Wealth-OS shared component utilities ── */
-.glass-card {
-  background: rgb(255 255 255 / 0.8);
-  backdrop-filter: blur(4px);
-  border-radius: 0.75rem;
-  border: 1px solid rgb(214 211 209 / 0.5);
-}
+/* ── Modern Ultra Utilities ── */
 
-.kpi-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-}
+@layer utilities {
+  .glass {
+    @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border border-white/20 dark:border-slate-700/30;
+  }
 
-@media (min-width: 640px) {
+  .glass-card {
+    @apply bg-white/80 dark:bg-slate-800/50 backdrop-blur-lg border border-white/20 dark:border-slate-700/30 shadow-lg dark:shadow-slate-900/50 rounded-xl transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5;
+  }
+
+  .glass-input {
+    @apply bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/50 rounded-lg focus:ring-2 focus:ring-primary/50 transition-all;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] animate-gradient;
+  }
+
+  /* KPI Grid Layout */
   .kpi-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    @apply grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3;
   }
 }
 
-@media (min-width: 1024px) {
-  .kpi-grid {
-    grid-template-columns: repeat(8, minmax(0, 1fr));
-  }
-}
-
+/* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -162,18 +222,5 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(30, 10%, 80%);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(30, 10%, 70%);
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: hsl(220, 12%, 30%);
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: hsl(220, 12%, 40%);
+  @apply bg-slate-300 dark:bg-slate-700 rounded-full hover:bg-slate-400 dark:hover:bg-slate-600 transition-colors;
 }

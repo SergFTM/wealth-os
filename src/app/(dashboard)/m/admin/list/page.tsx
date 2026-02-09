@@ -67,7 +67,7 @@ export default function AdminListPage() {
       fetch('/api/tenant/language').then(r => r.json()).then(d => setLanguageConfig(d.data));
     }
     if (activeTab === 'notifications') {
-      fetch('/api/collections/notificationTemplates').then(r => r.json()).then(d => setTemplates(d.data || []));
+      fetch('/api/collections/notificationTemplates').then(r => r.json()).then(d => setTemplates(d.items ?? []));
     }
     if (activeTab === 'policies') {
       fetch('/api/tenant/policies').then(r => r.json()).then(d => setBanners(d.data || []));
@@ -77,10 +77,10 @@ export default function AdminListPage() {
     }
     if (activeTab === 'tenant') {
       fetch('/api/tenant/profile').then(r => r.json()).then(d => setProfile(d.data));
-      fetch('/api/collections/tenantDomains').then(r => r.json()).then(d => setDomains(d.data?.[0] || null));
+      fetch('/api/collections/tenantDomains').then(r => r.json()).then(d => setDomains(d.items?.[0] || null));
     }
     if (activeTab === 'data') {
-      fetch('/api/collections/dataPolicies').then(r => r.json()).then(d => setDataPolicy(d.data?.[0] || null));
+      fetch('/api/collections/dataPolicies').then(r => r.json()).then(d => setDataPolicy(d.items?.[0] || null));
     }
   }, [activeTab]);
 
@@ -134,7 +134,7 @@ export default function AdminListPage() {
       });
     }
     const res = await fetch('/api/collections/notificationTemplates');
-    setTemplates((await res.json()).data || []);
+    setTemplates((await res.json()).items ?? []);
   };
 
   const toggleBanner = async (id: string, status: 'active' | 'inactive') => {
@@ -175,7 +175,7 @@ export default function AdminListPage() {
       fetch('/api/collections/tenantDomains'),
     ]);
     setProfile((await profRes.json()).data);
-    setDomains((await domRes.json()).data?.[0] || null);
+    setDomains((await domRes.json()).items?.[0] || null);
   };
 
   const saveDataPolicy = async (data: Partial<DataPolicy>) => {
@@ -193,7 +193,7 @@ export default function AdminListPage() {
       });
     }
     const res = await fetch('/api/collections/dataPolicies');
-    setDataPolicy((await res.json()).data?.[0] || null);
+    setDataPolicy((await res.json()).items?.[0] || null);
   };
 
   return (

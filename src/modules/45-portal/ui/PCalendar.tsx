@@ -14,7 +14,7 @@ export function PCalendar({ events, locale = 'ru' }: PCalendarProps) {
   const [view, setView] = useState<'list' | 'month'>('list');
   const [selectedEvent, setSelectedEvent] = useState<PortalEvent | null>(null);
 
-  const labels: Record<string, Record<Locale, string>> = {
+  const labels: Record<string, Record<string, string>> = {
     title: { ru: 'Календарь', en: 'Calendar', uk: 'Календар' },
     upcoming: { ru: 'Предстоящие события', en: 'Upcoming Events', uk: 'Найближчі події' },
     noEvents: { ru: 'Нет предстоящих событий', en: 'No upcoming events', uk: 'Немає найближчих подій' },
@@ -27,7 +27,7 @@ export function PCalendar({ events, locale = 'ru' }: PCalendarProps) {
     close: { ru: 'Закрыть', en: 'Close', uk: 'Закрити' },
   };
 
-  const eventTypeLabels: Record<string, Record<Locale, string>> = {
+  const eventTypeLabels: Record<string, Record<string, string>> = {
     meeting: { ru: 'Встреча', en: 'Meeting', uk: 'Зустріч' },
     call: { ru: 'Звонок', en: 'Call', uk: 'Дзвінок' },
     deadline: { ru: 'Дедлайн', en: 'Deadline', uk: 'Дедлайн' },
